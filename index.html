@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Muntaner336 | Vinilos Europeos de Segunda Mano | Barcelona → México</title>
+    <meta name="description" content="Vinilos de House, Techno y música electrónica seleccionados en Barcelona. Envíos a todo México. Escucha antes de comprar. Condiciones VG+ y Mint.">
+    <meta name="keywords" content="vinilos, vinyl, house, techno, minimal, disco, electro, barcelona, méxico, segunda mano, used vinyl, dj, coleccionista, deep house, cdmx">
+    <meta name="author" content="Muntaner336">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://muntaner336.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muntaner336.com/">
+    <meta property="og:title" content="Muntaner336 | Vinilos Europeos de Segunda Mano">
+    <meta property="og:description" content="Vinilos seleccionados en Barcelona para coleccionistas en México. House, Techno, Minimal, Disco.">
+    <meta property="og:image" content="https://muntaner336.com/images/og-image.jpg">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Muntaner336">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://muntaner336.com/">
+    <meta name="twitter:title" content="Muntaner336 | Vinilos Europeos">
+    <meta name="twitter:description" content="Del underground europeo a tu tornamesa. Vinilos de Barcelona para México.">
+    <meta name="twitter:image" content="https://muntaner336.com/images/twitter-card.jpg">
+
+    <!-- Language -->
+    <link rel="alternate" hreflang="es-MX" href="https://muntaner336.com/">
+    <link rel="alternate" hreflang="es" href="https://muntaner336.com/">
+    <link rel="alternate" hreflang="x-default" href="https://muntaner336.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff4d00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://api.discogs.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'cookie_flags': 'SameSite=None;Secure',
+            'send_page_view': true
+        });
+    </script>
+
+    <!-- Mercado Pago SDK -->
+    <script src="https://sdk.mercadopago.com/js/v2" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicStore",
+        "name": "Muntaner336",
+        "description": "Vinilos europeos de segunda mano. House, Techno, Minimal, Disco. Seleccionados en Barcelona, enviados a México.",
+        "url": "https://muntaner336.com",
+        "logo": "https://muntaner336.com/images/logo.png",
+        "image": "https://muntaner336.com/images/store.jpg",
+        "telephone": "+52-55-XXXX-XXXX",
+        "email": "hola@muntaner336.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ciudad de México",
+            "addressRegion": "CDMX",
+            "addressCountry": "MX"
+        },
+        "priceRange": "$500-$2000 MXN",
+        "currenciesAccepted": "MXN",
+        "paymentAccepted": "Mercado Pago, PayPal, Transferencia Bancaria",
+        "sameAs": [
+            "https://instagram.com/muntaner336",
+            "https://www.discogs.com/seller/muntaner336",
+            "https://youtube.com/@muntaner336"
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Floating Audio Controls (Always Visible) -->
+    <div class="audio-controls visible" id="audioControls">
+        <button class="audio-toggle muted" id="audioToggle" aria-label="Toggle audio">
+            <svg class="icon-playing" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+            <svg class="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+            </svg>
+        </button>
+        <div class="now-playing-bar">
+            <span class="pulse"></span>
+            <span class="track-info">Click para activar música</span>
+        </div>
+    </div>
+
+    <!-- Hidden YouTube Audio Player -->
+    <div class="audio-player-hidden" style="position:absolute;left:-9999px;">
+        <iframe id="bgMusicPlayer" src="" allow="autoplay; encrypted-media" width="1" height="1"></iframe>
+    </div>
+
+    <!-- Top Banner with Ticker Animation -->
+    <div class="top-banner">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span class="ticker-item">🎵 Vinilos europeos directo de Barcelona</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">📦 Envíos a todo México</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">💳 Paga con Mercado Pago</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🎧 Escucha antes de comprar</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">✨ Nuevas llegadas cada semana</span>
+                <span class="ticker-separator">•</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="ticker-item">🎵 Vinilos europeos directo de Barcelona</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">📦 Envíos a todo México</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">💳 Paga con Mercado Pago</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🎧 Escucha antes de comprar</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">✨ Nuevas llegadas cada semana</span>
+                <span class="ticker-separator">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <a href="/" class="logo" aria-label="Muntaner336 Home">
+                <span class="logo-text">MUNTANER336</span>
+                <span class="logo-subtitle">BCN → MX</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+                <a href="#catalogo" class="nav-item">CATÁLOGO</a>
+                <a href="#especiales" class="nav-item">ESPECIALES</a>
+                <a href="#calendario" class="nav-item">CALENDARIO</a>
+                <a href="#instagram" class="nav-item">INSTAGRAM</a>
+                <a href="#nosotros" class="nav-item">NOSOTROS</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://www.discogs.com/seller/muntaner336" target="_blank" rel="noopener" class="discogs-link">
+                    Discogs
+                </a>
+                <a href="#" class="cart-icon" id="cartIcon" aria-label="Carrito">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="m1 1 4 4h16l-2.5 9H7.5"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#especiales">Especiales</a>
+            <a href="#calendario">Calendario</a>
+            <a href="#instagram">Instagram</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="https://www.discogs.com/seller/muntaner336" target="_blank" rel="noopener">Discogs</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Featured Playlist -->
+    <section class="hero" aria-label="Introducción">
+        <div class="hero-content">
+            <h1>Sonidos del Underground Europeo</h1>
+            <p>Vinilos seleccionados en Barcelona, para coleccionistas en México.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="cta-button">Explorar Catálogo</a>
+                <a href="#escucha" class="cta-button-secondary">Agendar Escucha</a>
+            </div>
+        </div>
+        
+        <!-- Featured Playlist (Specials) in Hero -->
+        <div class="hero-playlist" id="heroPlaylist">
+            <div class="playlist-header">
+                <div class="playlist-cover">
+                    <div class="playlist-cover-art">
+                        <span>🔥</span>
+                    </div>
+                </div>
+                <div class="playlist-info">
+                    <span class="playlist-label">PLAYLIST</span>
+                    <h2 class="playlist-title">"Especiales de la Semana"</h2>
+                    <p class="playlist-artist">by Muntaner336</p>
+                    <div class="playlist-controls">
+                        <button class="playlist-play-btn" id="playlistPlayBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <span class="playlist-duration">00:00</span>
+                        <div class="playlist-progress">
+                            <div class="playlist-progress-bar"></div>
+                        </div>
+                        <span class="playlist-duration">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist-tracks" id="playlistTracks">
+                <!-- Tracks loaded dynamically -->
+                <div class="playlist-track" data-index="1" data-audio="https://youtube.com/watch?v=example1">
+                    <span class="track-number">1.</span>
+                    <a href="#product-1" class="track-title">"Atmosphere EP" — by Kerri Chandler</a>
+                    <span class="track-duration">0:16</span>
+                </div>
+                <div class="playlist-track" data-index="2" data-audio="https://youtube.com/watch?v=example2">
+                    <span class="track-number">2.</span>
+                    <a href="#product-2" class="track-title">"Minimal Nation" — by Robert Hood</a>
+                    <span class="track-duration">0:11</span>
+                </div>
+                <div class="playlist-track" data-index="3" data-audio="https://youtube.com/watch?v=example3">
+                    <span class="track-number">3.</span>
+                    <a href="#product-3" class="track-title">"Falling Up" — by Theo Parrish</a>
+                    <span class="track-duration">0:11</span>
+                </div>
+                <div class="playlist-track" data-index="4" data-audio="https://youtube.com/watch?v=example4">
+                    <span class="track-number">4.</span>
+                    <a href="#product-4" class="track-title">"Neptune's Lair" — by Drexciya</a>
+                    <span class="track-duration">0:11</span>
+                </div>
+                <div class="playlist-track" data-index="5" data-audio="https://youtube.com/watch?v=example5">
+                    <span class="track-number">5.</span>
+                    <a href="#product-5" class="track-title">"Missing You" — by Larry Heard</a>
+                    <span class="track-duration">0:11</span>
+                </div>
+                <div class="playlist-track" data-index="6" data-audio="https://youtube.com/watch?v=example6">
+                    <span class="track-number">6.</span>
+                    <a href="#product-6" class="track-title">"I Feel Love" — by Donna Summer</a>
+                    <span class="track-duration">0:10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section class="section specials-section" id="especiales" aria-label="Vinilos en Especial">
+        <div class="section-header">
+            <h2>🔥 Especiales de la Semana</h2>
+            <span class="section-subtitle">Precios reducidos por tiempo limitado</span>
+        </div>
+        
+        <div class="specials-grid" id="specialsGrid">
+            <!-- Special 1 -->
+            <article class="special-card" data-product-id="sp1">
+                <div class="special-badge">-20%</div>
+                <div class="special-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23111' width='300' height='300'/%3E%3Ctext fill='%23444' x='150' y='150' text-anchor='middle' font-size='50'%3E🎵%3C/text%3E%3C/svg%3E" alt="Vinyl cover" loading="lazy">
+                </div>
+                <div class="special-info">
+                    <h3>Kerri Chandler – Atmosphere EP</h3>
+                    <p class="special-label">Madhouse Records · 1996</p>
+                    <div class="special-pricing">
+                        <span class="original-price">$690 MXN</span>
+                        <span class="sale-price">$550 MXN</span>
+                    </div>
+                    <button class="add-to-cart-btn" data-id="sp1" data-title="Kerri Chandler – Atmosphere EP" data-price="550">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </article>
+            
+            <!-- Special 2 -->
+            <article class="special-card" data-product-id="sp2">
+                <div class="special-badge">-15%</div>
+                <div class="special-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23111' width='300' height='300'/%3E%3Ctext fill='%23444' x='150' y='150' text-anchor='middle' font-size='50'%3E🎵%3C/text%3E%3C/svg%3E" alt="Vinyl cover" loading="lazy">
+                </div>
+                <div class="special-info">
+                    <h3>Theo Parrish – Falling Up</h3>
+                    <p class="special-label">Sound Signature · 2001</p>
+                    <div class="special-pricing">
+                        <span class="original-price">$850 MXN</span>
+                        <span class="sale-price">$720 MXN</span>
+                    </div>
+                    <button class="add-to-cart-btn" data-id="sp2" data-title="Theo Parrish – Falling Up" data-price="720">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </article>
+            
+            <!-- Special 3 -->
+            <article class="special-card" data-product-id="sp3">
+                <div class="special-badge">-25%</div>
+                <div class="special-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23111' width='300' height='300'/%3E%3Ctext fill='%23444' x='150' y='150' text-anchor='middle' font-size='50'%3E🎵%3C/text%3E%3C/svg%3E" alt="Vinyl cover" loading="lazy">
+                </div>
+                <div class="special-info">
+                    <h3>Ricardo Villalobos – Alcachofa</h3>
+                    <p class="special-label">Playhouse · 2003</p>
+                    <div class="special-pricing">
+                        <span class="original-price">$900 MXN</span>
+                        <span class="sale-price">$680 MXN</span>
+                    </div>
+                    <button class="add-to-cart-btn" data-id="sp3" data-title="Ricardo Villalobos – Alcachofa" data-price="680">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section class="section catalog-section" id="catalogo" aria-label="Catálogo de vinilos">
+        <div class="section-header">
+            <h2>Catálogo</h2>
+            <div class="catalog-filters" role="tablist" aria-label="Filtrar por género">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                <button class="filter-btn" data-filter="house" role="tab" aria-selected="false">House</button>
+                <button class="filter-btn" data-filter="techno" role="tab" aria-selected="false">Techno</button>
+                <button class="filter-btn" data-filter="minimal" role="tab" aria-selected="false">Minimal</button>
+                <button class="filter-btn" data-filter="disco" role="tab" aria-selected="false">Disco</button>
+                <button class="filter-btn" data-filter="electro" role="tab" aria-selected="false">Electro</button>
+            </div>
+        </div>
+        
+        <div class="product-grid" id="productGrid" role="list">
+            <!-- Products loaded dynamically from Discogs API -->
+            <div class="loading-products" id="loadingProducts">
+                <div class="spinner"></div>
+                <p>Cargando catálogo desde Discogs...</p>
+            </div>
+        </div>
+
+        <div class="catalog-footer">
+            <a href="https://www.discogs.com/seller/muntaner336/profile" target="_blank" rel="noopener" class="view-all-btn">
+                Ver catálogo completo en Discogs →
+            </a>
+        </div>
+    </section>
+
+    <!-- Weekly Calendar Section -->
+    <section class="section calendar-section" id="calendario" aria-label="Calendario de eventos">
+        <div class="section-header">
+            <h2>Esta Semana</h2>
+            <span class="section-subtitle">Eventos y sets en CDMX</span>
+        </div>
+
+        <div class="weekly-calendar">
+            <div class="calendar-header-row">
+                <div class="calendar-day-header">LUN<span>06</span></div>
+                <div class="calendar-day-header">MAR<span>07</span></div>
+                <div class="calendar-day-header">MIÉ<span>08</span></div>
+                <div class="calendar-day-header">JUE<span>09</span></div>
+                <div class="calendar-day-header">VIE<span>10</span></div>
+                <div class="calendar-day-header weekend">SÁB<span>11</span></div>
+                <div class="calendar-day-header weekend">DOM<span>12</span></div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-day"><div class="no-events">—</div></div>
+                <div class="calendar-day"><div class="no-events">—</div></div>
+                <div class="calendar-day">
+                    <div class="calendar-event" data-event="vinyl-session">
+                        <span class="event-time">20:00</span>
+                        <span class="event-name">Vinyl Session</span>
+                        <span class="event-venue">Muntaner336 Live</span>
+                        <span class="event-genre">Deep House</span>
+                    </div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-event" data-event="warm-up">
+                        <span class="event-time">22:00</span>
+                        <span class="event-name">Warm Up</span>
+                        <span class="event-venue">Departamento</span>
+                        <span class="event-genre">House / Disco</span>
+                    </div>
+                </div>
+                <div class="calendar-day has-events">
+                    <div class="calendar-event featured" data-event="noche-minima">
+                        <span class="event-time">23:00</span>
+                        <span class="event-name">Noche Mínima</span>
+                        <span class="event-venue">Foro Normandie</span>
+                        <span class="event-genre">Minimal / Techno</span>
+                    </div>
+                </div>
+                <div class="calendar-day has-events">
+                    <div class="calendar-event featured" data-event="barcelona-nights">
+                        <span class="event-time">22:00</span>
+                        <span class="event-name">Barcelona Nights</span>
+                        <span class="event-venue">AM Local</span>
+                        <span class="event-genre">Techno / Electro</span>
+                    </div>
+                    <div class="calendar-event" data-event="vinyl-market">
+                        <span class="event-time">15:00</span>
+                        <span class="event-name">Vinyl Market</span>
+                        <span class="event-venue">Roma Norte</span>
+                        <span class="event-genre">All Genres</span>
+                    </div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-event" data-event="brunch-beats">
+                        <span class="event-time">13:00</span>
+                        <span class="event-name">Brunch & Beats</span>
+                        <span class="event-venue">Café Toscano</span>
+                        <span class="event-genre">Jazz / Soul</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-legend">
+            <span><span class="legend-dot featured"></span> Evento destacado</span>
+            <span><span class="legend-dot regular"></span> Evento regular</span>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="section instagram-section" id="instagram" aria-label="Instagram">
+        <div class="section-header">
+            <h2>@muntaner336</h2>
+            <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="follow-btn">
+                Seguir en Instagram →
+            </a>
+        </div>
+
+        <div class="instagram-feed">
+            <!-- Unique Instagram Posts Grid -->
+            <div class="instagram-grid" id="instagramGrid">
+                <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="instagram-post" data-post="1">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E📀%3C/text%3E%3C/svg%3E" alt="Post 1" loading="lazy">
+                    <div class="instagram-overlay">
+                        <span>❤️ 124</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="instagram-post" data-post="2">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🎧%3C/text%3E%3C/svg%3E" alt="Post 2" loading="lazy">
+                    <div class="instagram-overlay">
+                        <span>❤️ 89</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="instagram-post" data-post="3">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🇪🇸%3C/text%3E%3C/svg%3E" alt="Post 3" loading="lazy">
+                    <div class="instagram-overlay">
+                        <span>❤️ 156</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="instagram-post" data-post="4">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🎵%3C/text%3E%3C/svg%3E" alt="Post 4" loading="lazy">
+                    <div class="instagram-overlay">
+                        <span>❤️ 203</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="instagram-post" data-post="5">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🎹%3C/text%3E%3C/svg%3E" alt="Post 5" loading="lazy">
+                    <div class="instagram-overlay">
+                        <span>❤️ 78</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener" class="instagram-post" data-post="6">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🇲🇽%3C/text%3E%3C/svg%3E" alt="Post 6" loading="lazy">
+                    <div class="instagram-overlay">
+                        <span>❤️ 167</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localized Info Section (CDMX focused) -->
+    <section class="section info-banner" id="info" aria-label="Información">
+        <div class="info-banner-title">QUEREMOS QUE VUELVAS Y VUELVAS</div>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="info-icon">📦 📬</span>
+                <h3>ENVÍOS A TODO MX</h3>
+                <p>En cualquier parte que te encuentres de México puedes recibir bien empaquetados cualquiera de los vinilos disponibles.</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📀</span>
+                <h3>SOLO SEGUNDA MANO</h3>
+                <p>Encuentra en Muntaner336 vinilos de segunda mano cuidadosamente seleccionados. En cada descripción viene el estado del vinilo y la funda.</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">💳</span>
+                <h3>PAGA SEGURO Y FÁCIL</h3>
+                <p>Aceptamos todos los métodos de pago. Elige el que más te convenga y recibe en casa en pocos días.</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🏠</span>
+                <h3>¿EN CDMX? ¡VISÍTANOS!</h3>
+                <p>Contáctanos por <a href="https://instagram.com/muntaner336" target="_blank">INSTAGRAM</a> o <a href="https://wa.me/521XXXXXXXXXX" target="_blank">WHATSAPP</a> para agendar visita en nuestro estudio y que compres en físico.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section" id="newsletter" aria-label="Newsletter">
+        <div class="newsletter-container">
+            <h2>Mantente al día</h2>
+            <p>Nuevas llegadas, eventos exclusivos y descuentos. Sin spam.</p>
+            <form id="footerNewsletterForm" class="newsletter-form">
+                <input type="email" name="email" placeholder="tu@email.com" required aria-label="Tu email">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Home Listening CTA -->
+    <section class="section cta-section" id="escucha" aria-label="Agendar sesión de escucha">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>¿Quieres escucharlo antes de comprarlo?</h2>
+                <p>
+                    Agenda una sesión en casa. Turntable Technics, sistema de sonido de calidad, 
+                    y todos los vinilos que quieras probar antes de decidir.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/521XXXXXXXXXX?text=Hola!%20Quiero%20agendar%20una%20sesión%20de%20escucha" 
+                       class="whatsapp-btn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Agendar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="nosotros" aria-label="Sobre nosotros">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>La Conexión Barcelona</h2>
+                <p>
+                    Muntaner336 nace de una obsesión simple: traer el sonido del underground europeo 
+                    a México. Cada vinilo en nuestra colección fue seleccionado a mano en las tiendas 
+                    de discos de Barcelona — Discos Paradiso, Way Out, Ultra-Local Records.
+                </p>
+                <p>
+                    No somos una tienda más. Somos curadores. Cada disco tiene una historia, 
+                    un origen, una razón para estar aquí.
+                </p>
+                <p class="about-tagline">
+                    De Barcelona para México. Del underground a tu tornamesa.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23111' width='400' height='300'/%3E%3Ctext fill='%23333' x='200' y='150' text-anchor='middle' dy='.3em' font-size='16'%3EBarcelona Record Shop%3C/text%3E%3C/svg%3E" 
+                     alt="Tienda de discos en Barcelona" 
+                     loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">MUNTANER336</span>
+                <p>Vinilos europeos de segunda mano<br>Barcelona → México</p>
+                <div class="payment-methods">
+                    <span>Métodos de pago:</span>
+                    <div class="payment-icons">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%2300bcff' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E" alt="Mercado Pago" width="60" height="40">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%23003087' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3EPayPal%3C/text%3E%3C/svg%3E" alt="PayPal" width="60" height="40">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%23333' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3ETrans%3C/text%3E%3C/svg%3E" alt="Transferencia" width="60" height="40">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Catálogo</h4>
+                    <a href="#catalogo">House</a>
+                    <a href="#catalogo">Techno</a>
+                    <a href="#catalogo">Minimal</a>
+                    <a href="#catalogo">Disco</a>
+                    <a href="#catalogo">Electro</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Info</h4>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="/condiciones">Condición de Vinilos</a>
+                    <a href="/envios">Envíos</a>
+                    <a href="/contacto">Contacto</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Síguenos</h4>
+                    <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.discogs.com/seller/muntaner336" target="_blank" rel="noopener">Discogs</a>
+                    <a href="https://youtube.com/@muntaner336" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Muntaner336. Hecho con 🎵 en CDMX.</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items dynamically added -->
+            <div class="cart-empty">Tu carrito está vacío</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0 MXN</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceder al Pago</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Checkout Modal (Shopify-style) -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <button class="checkout-close" id="checkoutClose">×</button>
+            
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">1. Información</div>
+                <div class="step" data-step="2">2. Envío</div>
+                <div class="step" data-step="3">3. Pago</div>
+            </div>
+
+            <!-- Step 1: Information -->
+            <div class="checkout-step-content active" id="step1">
+                <h2>Información de Contacto</h2>
+                <form id="checkoutInfoForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="checkoutEmail" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+52 55 1234 5678">
+                    </div>
+                    <button type="submit" class="checkout-next-btn">Continuar a Envío</button>
+                </form>
+            </div>
+
+            <!-- Step 2: Shipping -->
+            <div class="checkout-step-content" id="step2">
+                <h2>Dirección de Envío</h2>
+                <form id="checkoutShippingForm">
+                    <div class="form-group">
+                        <label for="address">Dirección</label>
+                        <input type="text" id="address" name="address" required placeholder="Calle y número">
+                    </div>
+                    <div class="form-group">
+                        <label for="apartment">Apartamento, suite, etc. (opcional)</label>
+                        <input type="text" id="apartment" name="apartment">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">Estado</label>
+                            <select id="state" name="state" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="CDMX">Ciudad de México</option>
+                                <option value="JAL">Jalisco</option>
+                                <option value="NL">Nuevo León</option>
+                                <option value="PUE">Puebla</option>
+                                <option value="QRO">Querétaro</option>
+                                <!-- More states -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Código Postal</label>
+                        <input type="text" id="zip" name="zip" required placeholder="00000">
+                    </div>
+                    
+                    <div class="shipping-options">
+                        <h3>Método de Envío</h3>
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping" value="standard" checked>
+                            <span class="option-info">
+                                <span class="option-name">Envío Estándar (5-7 días)</span>
+                                <span class="option-price">$99 MXN</span>
+                            </span>
+                        </label>
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping" value="express">
+                            <span class="option-info">
+                                <span class="option-name">Envío Express (2-3 días)</span>
+                                <span class="option-price">$199 MXN</span>
+                            </span>
+                        </label>
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping" value="pickup">
+                            <span class="option-info">
+                                <span class="option-name">Recoger en CDMX (Gratis)</span>
+                                <span class="option-price">$0 MXN</span>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkout-nav">
+                        <button type="button" class="checkout-back-btn" data-back="1">← Volver</button>
+                        <button type="submit" class="checkout-next-btn">Continuar a Pago</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Payment -->
+            <div class="checkout-step-content" id="step3">
+                <h2>Método de Pago</h2>
+                
+                <div class="order-summary">
+                    <h3>Resumen del Pedido</h3>
+                    <div id="orderSummaryItems"></div>
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="summarySubtotal">$0 MXN</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Envío</span>
+                        <span id="summaryShipping">$99 MXN</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span id="summaryTotal">$0 MXN</span>
+                    </div>
+                </div>
+                
+                <div class="payment-methods-checkout">
+                    <h3>Elige tu método de pago</h3>
+                    
+                    <button class="payment-method-btn mercadopago" id="payWithMP">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect fill='white' width='30' height='30' rx='4'/%3E%3Ctext fill='%2300bcff' x='15' y='20' text-anchor='middle' font-size='12' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E" alt="" width="30" height="30">
+                        Pagar con Mercado Pago
+                    </button>
+                    
+                    <button class="payment-method-btn paypal" id="payWithPayPal">
+                        <span>Pagar con PayPal</span>
+                    </button>
+                    
+                    <button class="payment-method-btn transfer" id="payWithTransfer">
+                        <span>Transferencia Bancaria</span>
+                        <small>Te contactaremos por WhatsApp</small>
+                    </button>
+                </div>
+                
+                <div class="checkout-nav">
+                    <button type="button" class="checkout-back-btn" data-back="2">← Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal with Audio Preview -->
+    <div class="modal" id="quickViewModal" role="dialog" aria-labelledby="quickViewTitle" aria-hidden="true">
+        <div class="modal-content modal-large">
+            <button class="modal-close" id="closeQuickView" aria-label="Cerrar">×</button>
+            <div class="quick-view-content">
+                <div class="quick-view-image">
+                    <img src="" alt="" id="quickViewImage">
+                </div>
+                <div class="quick-view-info">
+                    <span class="product-genre" id="quickViewGenre">—</span>
+                    <h2 id="quickViewTitle">—</h2>
+                    <p class="product-label" id="quickViewLabel">—</p>
+                    
+                    <!-- Audio Preview Section -->
+                    <div class="audio-preview" id="audioPreview">
+                        <h4>🎧 Escucha antes de comprar</h4>
+                        <div class="audio-embed" id="audioEmbed">
+                            <!-- YouTube/SoundCloud embed will be inserted here -->
+                            <p class="no-preview">No hay preview disponible</p>
+                        </div>
+                    </div>
+                    
+                    <p class="quick-view-description" id="quickViewDescription">
+                        Información detallada del vinilo...
+                    </p>
+                    <div class="quick-view-details">
+                        <div><strong>Condición Vinilo:</strong> <span id="quickViewCondition">—</span></div>
+                        <div><strong>Condición Funda:</strong> <span id="quickViewSleeveCondition">—</span></div>
+                        <div><strong>Origen:</strong> Barcelona</div>
+                    </div>
+                    <div class="quick-view-footer">
+                        <span class="quick-view-price" id="quickViewPrice">$0 MXN</span>
+                        <button class="add-to-cart-btn-large" id="quickViewAddToCart">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup" role="dialog" aria-labelledby="exitPopupTitle" aria-hidden="true">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" id="closeExitPopup" aria-label="Cerrar">×</button>
+            
+            <div class="exit-popup-body">
+                <h2 id="exitPopupTitle">¡Espera! 🎵</h2>
+                <p>Antes de irte, únete a nuestra lista y recibe:</p>
+                
+                <ul class="exit-benefits">
+                    <li>✓ Nuevas llegadas antes que nadie</li>
+                    <li>✓ 10% de descuento en tu primera compra</li>
+                    <li>✓ Eventos exclusivos en CDMX</li>
+                </ul>
+                
+                <form id="exitPopupForm" class="exit-form">
+                    <input type="email" name="email" placeholder="tu@email.com" required aria-label="Tu email">
+                    <button type="submit">Obtener 10% OFF</button>
+                </form>
+                
+                <p class="exit-disclaimer">
+                    Sin spam. Solo lo bueno. Puedes cancelar cuando quieras.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>
