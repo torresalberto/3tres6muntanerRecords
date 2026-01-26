@@ -65,6 +65,113 @@ button {
 }
 
 /* ========================================
+   Welcome Screen (Audio Entry Gate)
+   ======================================== */
+
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.welcome-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.welcome-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.welcome-logo {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-tagline {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    margin-bottom: 5px;
+}
+
+.welcome-sub {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.welcome-enter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 0 auto 20px;
+}
+
+.welcome-enter-btn:hover {
+    background: var(--color-accent-hover);
+    transform: scale(1.05);
+}
+
+.welcome-enter-btn .play-icon {
+    font-size: 20px;
+}
+
+.welcome-skip-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.welcome-skip-btn:hover {
+    color: var(--color-text);
+}
+
+/* YouTube Audio Container */
+.youtube-audio-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ========================================
    Audio Controls (Always Visible)
    ======================================== */
 

@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     
     const CONFIG = {
-        // Discogs API Credentials
+        // Discogs API Credentials (REAL)
         discogs: {
-            consumerKey: 'YOUR_CONSUMER_KEY',      // Replace with your key
-            consumerSecret: 'YOUR_CONSUMER_SECRET', // Replace with your secret
-            username: 'muntaner336',
+            consumerKey: 'sBEuWoUkdolwupCMeLjk',
+            consumerSecret: 'OmvmhuqzJAPBwxYadiczZMsHaLQJoAsw',
+            username: '3tres6records',
             baseUrl: 'https://api.discogs.com'
         },
         
-        // YouTube video/playlist for background music (Mountain Air Radio)
-        youtubeVideoId: 'qfF19hUzLo0',
+        // YouTube video for background music (Lofi Girl - known to allow embedding)
+        youtubeVideoId: 'jfKfPfyJRdk',
         
         // Mercado Pago Public Key
         mercadoPagoPublicKey: 'YOUR_MERCADO_PAGO_PUBLIC_KEY',
@@ -799,61 +799,120 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
-    // Background Audio (No Welcome Screen)
+    // Background Audio - Simple YouTube Embed
     // ========================================
     
     const AudioPlayer = {
+        isPlaying: false,
+        
         init() {
+            const welcomeScreen = document.getElementById('welcomeScreen');
+            const welcomeEnterBtn = document.getElementById('welcomeEnterBtn');
+            const welcomeSkipBtn = document.getElementById('welcomeSkipBtn');
             const audioToggle = document.getElementById('audioToggle');
-            const audioControls = document.getElementById('audioControls');
-            const bgMusicPlayer = document.getElementById('bgMusicPlayer');
-            const trackInfo = document.querySelector('.track-info');
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
             
-            if (!audioToggle) return;
+            // Check if user already entered this session
+            if (sessionStorage.getItem('muntaner336_entered')) {
+                welcomeScreen?.classList.add('hidden');
+                // If they had music on, start it
+                if (sessionStorage.getItem('muntaner336_music') === 'on') {
+                    this.startMusic();
+                }
+            }
             
-            audioToggle.addEventListener('click', () => {
-                if (state.isPlaying) {
-                    this.pause();
+            // ENTER WITH MUSIC
+            welcomeEnterBtn?.addEventListener('click', () => {
+                console.log('Entering with music...');
+                sessionStorage.setItem('muntaner336_entered', 'true');
+                sessionStorage.setItem('muntaner336_music', 'on');
+                welcomeScreen?.classList.add('hidden');
+                this.startMusic();
+                trackEvent('site_enter', { with_music: true });
+            });
+            
+            // ENTER WITHOUT MUSIC
+            welcomeSkipBtn?.addEventListener('click', () => {
+                console.log('Entering without music...');
+                sessionStorage.setItem('muntaner336_entered', 'true');
+                sessionStorage.setItem('muntaner336_music', 'off');
+                welcomeScreen?.classList.add('hidden');
+                trackEvent('site_enter', { with_music: false });
+            });
+            
+            // TOGGLE BUTTON
+            audioToggle?.addEventListener('click', () => {
+                if (this.isPlaying) {
+                    this.stopMusic();
                 } else {
-                    this.play();
+                    this.startMusic();
                 }
             });
         },
         
-        play() {
-            const bgMusicPlayer = document.getElementById('bgMusicPlayer');
-            const audioToggle = document.getElementById('audioToggle');
-            const audioControls = document.getElementById('audioControls');
-            const trackInfo = document.querySelector('.track-info');
-            
-            if (bgMusicPlayer) {
-                bgMusicPlayer.src = `https://www.youtube.com/embed/${CONFIG.youtubeVideoId}?autoplay=1&mute=0&loop=1&playlist=${CONFIG.youtubeVideoId}&controls=0&showinfo=0&rel=0&modestbranding=1`;
+        startMusic() {
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
+            if (!youtubeContainer) {
+                console.error('YouTube container not found!');
+                return;
             }
             
-            state.isPlaying = true;
-            audioToggle?.classList.add('playing');
-            audioControls?.classList.add('playing');
-            if (trackInfo) trackInfo.textContent = 'Muntaner336 Radio';
+            // YouTube video ID for Mountain Air Radio
+            const videoId = CONFIG.youtubeVideoId;
+            console.log('Starting music with video ID:', videoId);
             
-            trackEvent('audio_play', { source: 'floating_controls' });
+            // Create iframe with autoplay - using allow="autoplay" is crucial
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+            
+            // Note: iframe needs decent size for YouTube to allow playback
+            youtubeContainer.innerHTML = `
+                <iframe 
+                    id="ytPlayer"
+                    width="200" 
+                    height="200" 
+                    src="${iframeSrc}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    frameborder="0">
+                </iframe>
+            `;
+            
+            this.isPlaying = true;
+            state.isPlaying = true;
+            this.updateUI(true);
+            sessionStorage.setItem('muntaner336_music', 'on');
+            
+            console.log('Music iframe created:', iframeSrc);
+            trackEvent('audio_play', { source: 'mountain_air_radio' });
         },
         
-        pause() {
-            const bgMusicPlayer = document.getElementById('bgMusicPlayer');
+        stopMusic() {
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
+            youtubeContainer.innerHTML = '';
+            
+            this.isPlaying = false;
+            state.isPlaying = false;
+            this.updateUI(false);
+            sessionStorage.setItem('muntaner336_music', 'off');
+            
+            console.log('Music stopped');
+            trackEvent('audio_pause', {});
+        },
+        
+        updateUI(playing) {
             const audioToggle = document.getElementById('audioToggle');
             const audioControls = document.getElementById('audioControls');
             const trackInfo = document.querySelector('.track-info');
             
-            if (bgMusicPlayer) {
-                bgMusicPlayer.src = '';
+            if (playing) {
+                audioToggle?.classList.add('playing');
+                audioControls?.classList.add('playing');
+                if (trackInfo) trackInfo.textContent = 'Lofi Radio 🎵';
+            } else {
+                audioToggle?.classList.remove('playing');
+                audioControls?.classList.remove('playing');
+                if (trackInfo) trackInfo.textContent = 'Click para música';
             }
-            
-            state.isPlaying = false;
-            audioToggle?.classList.remove('playing');
-            audioControls?.classList.remove('playing');
-            if (trackInfo) trackInfo.textContent = 'Click para activar música';
-            
-            trackEvent('audio_pause', {});
         }
     };
 

@@ -96,7 +96,7 @@
         "paymentAccepted": "Mercado Pago, PayPal, Transferencia Bancaria",
         "sameAs": [
             "https://instagram.com/muntaner336",
-            "https://www.discogs.com/seller/muntaner336",
+            "https://www.discogs.com/seller/3tres6records",
             "https://youtube.com/@muntaner336"
         ]
     }
@@ -105,8 +105,8 @@
 <body>
 
     <!-- Floating Audio Controls (Always Visible) -->
-    <div class="audio-controls visible" id="audioControls">
-        <button class="audio-toggle muted" id="audioToggle" aria-label="Toggle audio">
+    <div class="audio-controls" id="audioControls">
+        <button class="audio-toggle" id="audioToggle" aria-label="Toggle audio">
             <svg class="icon-playing" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
             </svg>
@@ -116,14 +116,26 @@
         </button>
         <div class="now-playing-bar">
             <span class="pulse"></span>
-            <span class="track-info">Click para activar música</span>
+            <span class="track-info">Lofi Radio 🎵</span>
         </div>
     </div>
 
-    <!-- Hidden YouTube Audio Player -->
-    <div class="audio-player-hidden" style="position:absolute;left:-9999px;">
-        <iframe id="bgMusicPlayer" src="" allow="autoplay; encrypted-media" width="1" height="1"></iframe>
+    <!-- Welcome Screen (Required for Audio Autoplay) -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <div class="welcome-logo">MUNTANER336</div>
+            <p class="welcome-tagline">Vinilos del Underground Europeo</p>
+            <p class="welcome-sub">Barcelona → México</p>
+            <button class="welcome-enter-btn" id="welcomeEnterBtn">
+                <span class="play-icon">▶</span>
+                ENTRAR CON MÚSICA
+            </button>
+            <button class="welcome-skip-btn" id="welcomeSkipBtn">entrar sin música</button>
+        </div>
     </div>
+
+    <!-- YouTube Audio Player Container (hidden - audio only) -->
+    <div id="youtubeAudioContainer" style="position:fixed;bottom:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;pointer-events:none;"></div>
 
     <!-- Top Banner with Ticker Animation -->
     <div class="top-banner">
@@ -178,7 +190,7 @@
             </nav>
 
             <div class="header-actions">
-                <a href="https://www.discogs.com/seller/muntaner336" target="_blank" rel="noopener" class="discogs-link">
+                <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">
                     Discogs
                 </a>
                 <a href="#" class="cart-icon" id="cartIcon" aria-label="Carrito">
@@ -199,7 +211,7 @@
             <a href="#calendario">Calendario</a>
             <a href="#instagram">Instagram</a>
             <a href="#nosotros">Nosotros</a>
-            <a href="https://www.discogs.com/seller/muntaner336" target="_blank" rel="noopener">Discogs</a>
+            <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
         </nav>
     </header>
 
@@ -364,7 +376,7 @@
         </div>
 
         <div class="catalog-footer">
-            <a href="https://www.discogs.com/seller/muntaner336/profile" target="_blank" rel="noopener" class="view-all-btn">
+            <a href="https://www.discogs.com/seller/3tres6records/profile" target="_blank" rel="noopener" class="view-all-btn">
                 Ver catálogo completo en Discogs →
             </a>
         </div>
@@ -504,7 +516,7 @@
             <div class="info-item">
                 <span class="info-icon">📦 📬</span>
                 <h3>ENVÍOS A TODO MX</h3>
-                <p>En cualquier parte que te encuentres de México puedes recibir bien empaquetados cualquiera de los vinilos disponibles.</p>
+                <p>Nacional: $99 MXN (1er disco) + $30 c/adicional.<br>Express: $180 MXN (2-3 días).<br>Latinoamérica: $350 MXN.</p>
             </div>
             <div class="info-item">
                 <span class="info-icon">📀</span>
@@ -619,7 +631,7 @@
                 <div class="footer-column">
                     <h4>Síguenos</h4>
                     <a href="https://instagram.com/muntaner336" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https://www.discogs.com/seller/muntaner336" target="_blank" rel="noopener">Discogs</a>
+                    <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
                     <a href="https://youtube.com/@muntaner336" target="_blank" rel="noopener">YouTube</a>
                 </div>
             </div>
@@ -851,7 +863,7 @@
                 <ul class="exit-benefits">
                     <li>✓ Nuevas llegadas antes que nadie</li>
                     <li>✓ 10% de descuento en tu primera compra</li>
-                    <li>✓ Eventos exclusivos en CDMX</li>
+                    <li>✓ Sets exclusivos con los vinilos que vendemos</li>
                 </ul>
                 
                 <form id="exitPopupForm" class="exit-form">
