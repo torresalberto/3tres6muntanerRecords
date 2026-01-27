@@ -76,10 +76,7 @@ discogs: {
     username: 'muntaner336',
 ```
 
-Edit `index.html` line 57:
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA4_ID"></script>
-```
+GA4 is pre-configured with ID: `G-G042PFG6TG`
 
 ### Step 3: Configure Backend (Optional but Recommended)
 

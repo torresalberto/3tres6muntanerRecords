@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
             baseUrl: 'https://api.discogs.com'
         },
         
-        // YouTube video for background music (Lofi Girl - known to allow embedding)
-        youtubeVideoId: 'jfKfPfyJRdk',
+        // YouTube video for background music
+        youtubeVideoId: 'qfF19hUzLo0',
         
         // Mercado Pago Public Key
         mercadoPagoPublicKey: 'YOUR_MERCADO_PAGO_PUBLIC_KEY',
         
         // WhatsApp number (with country code)
-        whatsappNumber: '521XXXXXXXXXX',
+        whatsappNumber: '5255879475564',
         
         // Exit Intent
         exitIntent: {
@@ -45,7 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
         cart: JSON.parse(localStorage.getItem('muntaner336_cart')) || [],
         products: [],
         isPlaying: false,
-        currentTrack: null
+        currentTrack: null,
+        playlist: [],
+        playlistIndex: 0,
+        playlistMode: 'radio' // 'radio' = default track, 'vinyl' = inventory tracks
     };
 
     // ========================================
@@ -159,6 +162,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (cached && cacheTime && (Date.now() - parseInt(cacheTime)) < 3600000) {
                     const data = JSON.parse(cached);
                     this.renderProducts(data);
+                    // Populate hero playlist with cached data
+                    HeroPlaylist.populateFromInventory(data);
                     return data;
                 }
                 
@@ -178,12 +183,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const data = await response.json();
                 
+                // Debug log to see actual API response structure
+                console.log('Discogs API Response:', data);
+                if (data.listings && data.listings[0]) {
+                    console.log('First listing structure:', data.listings[0]);
+                    console.log('Release structure:', data.listings[0].release);
+                }
+                
                 // Cache the result
                 localStorage.setItem('discogs_inventory', JSON.stringify(data.listings));
                 localStorage.setItem('discogs_inventory_time', Date.now().toString());
                 
                 state.products = data.listings;
                 this.renderProducts(data.listings);
+                
+                // Populate hero playlist with inventory
+                HeroPlaylist.populateFromInventory(data.listings);
                 
                 return data.listings;
                 
@@ -203,13 +218,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 const genres = release.genres || ['Electronic'];
                 const genre = genres[0]?.toLowerCase() || 'electronic';
                 const images = release.images || [];
-                const imageUrl = images[0]?.uri || this.getPlaceholderImage();
+                const imageUrl = images[0]?.uri || release.thumbnail || this.getPlaceholderImage();
                 const condition = listing.condition || 'VG+';
                 const price = listing.price?.value || 500;
                 const currency = listing.price?.currency || 'MXN';
-                const artists = release.artists || [{ name: 'Unknown Artist' }];
-                const title = release.title || 'Unknown Title';
-                const labels = release.labels || [{ name: 'Unknown Label' }];
+                
+                // Extract artist - Discogs uses release.artist (string) in inventory API
+                let artistName = 'Artista';
+                if (release.artist) {
+                    artistName = release.artist;
+                } else if (release.artists && release.artists[0]) {
+                    artistName = release.artists[0].name;
+                } else if (release.description) {
+                    const parts = release.description.split(' - ');
+                    if (parts.length >= 2) artistName = parts[0].trim();
+                }
+                
+                const title = release.title || 'Sin título';
+                const labels = release.labels || [{ name: release.label || '' }];
                 const year = release.year || '';
                 const audioUrl = listing.audio_url || release.videos?.[0]?.uri || '';
                 
@@ -217,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <article class="product-card" data-genre="${genre}" data-product-id="${listing.id}">
                         <div class="product-image">
                             <img src="${imageUrl}" 
-                                 alt="${artists[0].name} – ${title}"
+                                 alt="${artistName} – ${title}"
                                  loading="lazy"
                                  onerror="this.src='${this.getPlaceholderImage()}'">
                             <div class="product-badges">
@@ -227,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="product-overlay">
                                 <button class="quick-view-btn" 
                                         data-product="${listing.id}"
-                                        data-title="${artists[0].name} – ${title}"
+                                        data-title="${artistName} – ${title}"
                                         data-genre="${genres[0] || 'Electronic'}"
                                         data-label="${labels[0]?.name || ''} · ${year}"
                                         data-price="${price}"
@@ -241,13 +267,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <div class="product-info">
                             <span class="product-genre">${genres[0] || 'Electronic'}</span>
-                            <h3 class="product-title">${artists[0].name} – ${title}</h3>
+                            <h3 class="product-title">${artistName} – ${title}</h3>
                             <p class="product-label">${labels[0]?.name || ''} · ${year}</p>
                             <div class="product-footer">
-                                <span class="product-price">$${price} ${currency}</span>
+                                <span class="product-price">${price} ${currency}</span>
                                 <button class="buy-btn" 
                                         data-id="${listing.id}"
-                                        data-title="${artists[0].name} – ${title}"
+                                        data-title="${artistName} – ${title}"
                                         data-price="${price}"
                                         data-image="${imageUrl}">
                                     Agregar
@@ -264,14 +290,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         loadFallbackProducts() {
             const fallbackProducts = [
-                { id: 1, title: 'Atmosphere EP', artist: 'Kerri Chandler', label: 'Madhouse Records', year: 1996, genre: 'Deep House', price: 550, condition: 'VG+', audio: 'https://www.youtube.com/watch?v=4K1hoMlxQmg' },
+                { id: 1, title: 'Atmosphere EP', artist: 'Kerri Chandler', label: 'Madhouse Records', year: 1996, genre: 'Deep House', price: 550, condition: 'VG+', audio: 'https://www.youtube.com/watch?v=JvVw1XFBL7c' },
                 { id: 2, title: 'Minimal Nation', artist: 'Robert Hood', label: 'M-Plant', year: 1994, genre: 'Techno', price: 850, condition: 'M', audio: 'https://www.youtube.com/watch?v=DwjfXA5SC8w' },
-                { id: 3, title: 'Falling Up', artist: 'Theo Parrish', label: 'Sound Signature', year: 2001, genre: 'House', price: 720, condition: 'VG+', audio: '' },
-                { id: 4, title: 'Alcachofa', artist: 'Ricardo Villalobos', label: 'Playhouse', year: 2003, genre: 'Minimal', price: 680, condition: 'VG', audio: '' },
-                { id: 5, title: 'I Feel Love', artist: 'Donna Summer', label: 'Casablanca', year: 1977, genre: 'Disco', price: 480, condition: 'VG+', audio: '' },
-                { id: 6, title: "Neptune's Lair", artist: 'Drexciya', label: 'Tresor', year: 1999, genre: 'Electro', price: 1200, condition: 'M', audio: '' },
-                { id: 7, title: 'Missing You', artist: 'Larry Heard', label: 'Alleviated Records', year: 1991, genre: 'Deep House', price: 950, condition: 'VG+', audio: '' },
-                { id: 8, title: 'Waveform Transmission Vol. 1', artist: 'Jeff Mills', label: 'Tresor', year: 1992, genre: 'Techno', price: 780, condition: 'VG', audio: '' }
+                { id: 3, title: 'Falling Up', artist: 'Theo Parrish', label: 'Sound Signature', year: 2001, genre: 'House', price: 720, condition: 'VG+', audio: 'https://www.youtube.com/watch?v=6TJR6szPHxk' },
+                { id: 4, title: 'Alcachofa', artist: 'Ricardo Villalobos', label: 'Playhouse', year: 2003, genre: 'Minimal', price: 680, condition: 'VG', audio: 'https://www.youtube.com/watch?v=JaU4V0rQF_Y' },
+                { id: 5, title: 'I Feel Love', artist: 'Donna Summer', label: 'Casablanca', year: 1977, genre: 'Disco', price: 480, condition: 'VG+', audio: 'https://www.youtube.com/watch?v=Nm-ISatLDG0' },
+                { id: 6, title: "Neptune's Lair", artist: 'Drexciya', label: 'Tresor', year: 1999, genre: 'Electro', price: 1200, condition: 'M', audio: 'https://www.youtube.com/watch?v=cZ2RYr_E8SE' },
+                { id: 7, title: 'Missing You', artist: 'Larry Heard', label: 'Alleviated Records', year: 1991, genre: 'Deep House', price: 950, condition: 'VG+', audio: 'https://www.youtube.com/watch?v=wKpmFSfA59c' },
+                { id: 8, title: 'The Bells', artist: 'Jeff Mills', label: 'Tresor', year: 1992, genre: 'Techno', price: 780, condition: 'VG', audio: 'https://www.youtube.com/watch?v=DwFs1PNz0fc' }
             ];
             
             const gridEl = document.getElementById('productGrid');
@@ -313,6 +339,19 @@ document.addEventListener('DOMContentLoaded', function() {
             `).join('');
             
             this.attachProductListeners();
+            
+            // Populate hero playlist with fallback data
+            const playlistData = fallbackProducts.map((p, i) => ({
+                release: {
+                    artist: p.artist,
+                    artists: [{ name: p.artist }],
+                    title: p.title,
+                    videos: p.audio ? [{ uri: p.audio }] : [],
+                    thumbnail: DiscogsAPI.getPlaceholderImage()
+                },
+                id: p.id
+            }));
+            HeroPlaylist.populateFromInventory(playlistData);
         },
         
         getPlaceholderImage() {
@@ -806,46 +845,18 @@ document.addEventListener('DOMContentLoaded', function() {
         isPlaying: false,
         
         init() {
-            const welcomeScreen = document.getElementById('welcomeScreen');
-            const welcomeEnterBtn = document.getElementById('welcomeEnterBtn');
-            const welcomeSkipBtn = document.getElementById('welcomeSkipBtn');
             const audioToggle = document.getElementById('audioToggle');
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
             
-            // Check if user already entered this session
-            if (sessionStorage.getItem('muntaner336_entered')) {
-                welcomeScreen?.classList.add('hidden');
-                // If they had music on, start it
-                if (sessionStorage.getItem('muntaner336_music') === 'on') {
-                    this.startMusic();
-                }
-            }
+            // Don't auto-start (browsers block autoplay without interaction)
+            // Music will start when user clicks the audio toggle button
             
-            // ENTER WITH MUSIC
-            welcomeEnterBtn?.addEventListener('click', () => {
-                console.log('Entering with music...');
-                sessionStorage.setItem('muntaner336_entered', 'true');
-                sessionStorage.setItem('muntaner336_music', 'on');
-                welcomeScreen?.classList.add('hidden');
-                this.startMusic();
-                trackEvent('site_enter', { with_music: true });
-            });
-            
-            // ENTER WITHOUT MUSIC
-            welcomeSkipBtn?.addEventListener('click', () => {
-                console.log('Entering without music...');
-                sessionStorage.setItem('muntaner336_entered', 'true');
-                sessionStorage.setItem('muntaner336_music', 'off');
-                welcomeScreen?.classList.add('hidden');
-                trackEvent('site_enter', { with_music: false });
-            });
-            
-            // TOGGLE BUTTON
+            // TOGGLE BUTTON - starts/stops music
             audioToggle?.addEventListener('click', () => {
                 if (this.isPlaying) {
                     this.stopMusic();
                 } else {
                     this.startMusic();
+                    trackEvent('site_enter', { with_music: true });
                 }
             });
         },
@@ -857,19 +868,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // YouTube video ID for Mountain Air Radio
             const videoId = CONFIG.youtubeVideoId;
             console.log('Starting music with video ID:', videoId);
             
-            // Create iframe with autoplay - using allow="autoplay" is crucial
-            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+            // Create iframe with autoplay - controls=1 helps with autoplay policy
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=1&playlist=${videoId}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
             
-            // Note: iframe needs decent size for YouTube to allow playback
+            // Minimal player positioned mostly off-screen
             youtubeContainer.innerHTML = `
                 <iframe 
                     id="ytPlayer"
-                    width="200" 
-                    height="200" 
+                    width="100" 
+                    height="60" 
                     src="${iframeSrc}"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -880,20 +890,18 @@ document.addEventListener('DOMContentLoaded', function() {
             this.isPlaying = true;
             state.isPlaying = true;
             this.updateUI(true);
-            sessionStorage.setItem('muntaner336_music', 'on');
             
             console.log('Music iframe created:', iframeSrc);
-            trackEvent('audio_play', { source: 'mountain_air_radio' });
+            trackEvent('audio_play', { source: '3tres6_radio' });
         },
         
         stopMusic() {
             const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            youtubeContainer.innerHTML = '';
+            if (youtubeContainer) youtubeContainer.innerHTML = '';
             
             this.isPlaying = false;
             state.isPlaying = false;
             this.updateUI(false);
-            sessionStorage.setItem('muntaner336_music', 'off');
             
             console.log('Music stopped');
             trackEvent('audio_pause', {});
@@ -907,12 +915,309 @@ document.addEventListener('DOMContentLoaded', function() {
             if (playing) {
                 audioToggle?.classList.add('playing');
                 audioControls?.classList.add('playing');
-                if (trackInfo) trackInfo.textContent = 'Lofi Radio 🎵';
+                if (trackInfo) trackInfo.textContent = '3TRES6 Radio 🎵';
             } else {
                 audioToggle?.classList.remove('playing');
                 audioControls?.classList.remove('playing');
                 if (trackInfo) trackInfo.textContent = 'Click para música';
             }
+        }
+    };
+
+    // ========================================
+    // Hero Playlist - Dynamic Vinyl Audio Player
+    // ========================================
+    
+    const HeroPlaylist = {
+        currentIndex: -1, // -1 means playing default radio
+        isPlaying: false,
+        
+        init() {
+            // Play button for the playlist
+            document.getElementById('playlistPlayBtn')?.addEventListener('click', () => {
+                if (this.isPlaying && state.playlistMode === 'vinyl') {
+                    this.pause();
+                } else {
+                    this.playCurrentOrFirst();
+                }
+            });
+            
+            // Track click listeners (will be reattached when tracks render)
+            this.attachTrackListeners();
+        },
+        
+        // Populate playlist from inventory data
+        populateFromInventory(listings) {
+            const tracksContainer = document.getElementById('playlistTracks');
+            if (!tracksContainer) return;
+            
+            console.log('Populating playlist from listings:', listings);
+            
+            // Take first 8 items for the playlist
+            const playlistItems = listings.slice(0, 8).map((listing, index) => {
+                const release = listing.release || {};
+                
+                // Discogs inventory API returns artist as string in release.artist
+                // or as array in release.artists, or in description
+                let artistName = 'Artista';
+                if (release.artist) {
+                    artistName = release.artist;
+                } else if (release.artists && release.artists[0]) {
+                    artistName = release.artists[0].name;
+                } else if (release.description) {
+                    // Parse from "Artist - Title" format
+                    const parts = release.description.split(' - ');
+                    if (parts.length >= 2) {
+                        artistName = parts[0].trim();
+                    }
+                }
+                
+                const title = release.title || 'Sin título';
+                const videos = release.videos || [];
+                const audioUrl = videos[0]?.uri || '';
+                const fullTitle = `${artistName} – ${title}`;
+                
+                // Get image URL from listing
+                const images = release.images || [];
+                const imageUrl = images[0]?.uri || release.thumbnail || DiscogsAPI.getPlaceholderImage();
+                
+                console.log(`Track ${index + 1}:`, { artistName, title, audioUrl, imageUrl });
+                
+                return {
+                    index: index + 1,
+                    title: fullTitle,
+                    artist: artistName,
+                    trackTitle: title,
+                    audioUrl: audioUrl,
+                    imageUrl: imageUrl,
+                    productId: listing.id
+                };
+            });
+            
+            // Store in state
+            state.playlist = playlistItems;
+            
+            // Render tracks
+            tracksContainer.innerHTML = playlistItems.map(track => `
+                <div class="playlist-track" 
+                     data-index="${track.index}" 
+                     data-audio="${track.audioUrl}"
+                     data-title="${track.title}"
+                     data-artist="${track.artist}"
+                     data-track-title="${track.trackTitle}"
+                     data-image="${track.imageUrl}">
+                    <span class="track-number">${track.index}.</span>
+                    <a href="#product-${track.productId}" class="track-title">"${track.trackTitle}" — by ${track.artist}</a>
+                    <span class="track-play-icon">▶</span>
+                </div>
+            `).join('');
+            
+            // Update playlist title
+            const playlistTitle = document.querySelector('.playlist-title');
+            if (playlistTitle) {
+                playlistTitle.textContent = '"En Stock Ahora"';
+            }
+            
+            // Set initial cover art to first track's image
+            if (playlistItems.length > 0) {
+                this.updateCoverArt(playlistItems[0].imageUrl);
+            }
+            
+            // Reattach listeners
+            this.attachTrackListeners();
+            
+            console.log('Hero playlist populated with', playlistItems.length, 'tracks');
+        },
+        
+        attachTrackListeners() {
+            document.querySelectorAll('.playlist-track').forEach(track => {
+                track.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const index = parseInt(track.dataset.index) - 1;
+                    this.playTrack(index);
+                });
+            });
+        },
+        
+        playCurrentOrFirst() {
+            if (state.playlist.length === 0) {
+                // No inventory, play default radio
+                this.playDefaultRadio();
+                return;
+            }
+            
+            // Play first track or current
+            const index = this.currentIndex >= 0 ? this.currentIndex : 0;
+            this.playTrack(index);
+        },
+        
+        playTrack(index) {
+            if (index < 0 || index >= state.playlist.length) return;
+            
+            const track = state.playlist[index];
+            this.currentIndex = index;
+            state.playlistMode = 'vinyl';
+            
+            // Update cover art with track image
+            if (track.imageUrl) {
+                this.updateCoverArt(track.imageUrl);
+            }
+            
+            // Get YouTube URL - either from Discogs or search
+            let videoId = null;
+            
+            if (track.audioUrl) {
+                videoId = this.extractYouTubeId(track.audioUrl);
+            }
+            
+            if (!videoId) {
+                // No direct video, use YouTube search embed
+                this.playWithYouTubeSearch(track);
+                return;
+            }
+            
+            // Play the video
+            this.playYouTubeVideo(videoId, track.title);
+            
+            // Update UI
+            this.highlightTrack(index);
+            this.updateNowPlaying(track.title);
+            
+            trackEvent('playlist_track_play', {
+                track_name: track.title,
+                track_index: index + 1,
+                source: 'discogs_video'
+            });
+        },
+        
+        playWithYouTubeSearch(track) {
+            // Construct search query
+            const searchQuery = encodeURIComponent(`${track.artist} ${track.trackTitle} full`);
+            
+            // Use YouTube's nocookie embed with search results playlist
+            // This is a workaround - opens search in embedded player
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
+            if (!youtubeContainer) return;
+            
+            // For now, use a search URL approach that triggers YouTube search
+            // The user can then select from results
+            const searchUrl = `https://www.youtube.com/results?search_query=${searchQuery}`;
+            
+            // Show a mini player with search suggestion
+            youtubeContainer.innerHTML = `
+                <div style="padding:10px;background:#111;border-radius:8px;position:fixed;bottom:80px;right:20px;z-index:1000;max-width:300px;">
+                    <p style="color:#fff;font-size:12px;margin:0 0 10px 0;">🎵 Buscando: ${track.title}</p>
+                    <a href="${searchUrl}" target="_blank" 
+                       style="display:inline-block;background:#ff4d00;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;font-size:12px;">
+                        Escuchar en YouTube →
+                    </a>
+                </div>
+            `;
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                if (youtubeContainer.querySelector('div')) {
+                    youtubeContainer.innerHTML = '';
+                }
+            }, 5000);
+            
+            this.highlightTrack(this.currentIndex);
+            this.updateNowPlaying(track.title);
+            
+            trackEvent('playlist_track_play', {
+                track_name: track.title,
+                track_index: this.currentIndex + 1,
+                source: 'youtube_search'
+            });
+        },
+        
+        playYouTubeVideo(videoId, trackTitle) {
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
+            if (!youtubeContainer) return;
+            
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=0&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+            
+            youtubeContainer.innerHTML = `
+                <iframe 
+                    id="ytPlayer"
+                    width="100" 
+                    height="60" 
+                    src="${iframeSrc}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    frameborder="0">
+                </iframe>
+            `;
+            
+            this.isPlaying = true;
+            state.isPlaying = true;
+            AudioPlayer.updateUI(true);
+        },
+        
+        playDefaultRadio() {
+            state.playlistMode = 'radio';
+            this.currentIndex = -1;
+            AudioPlayer.startMusic();
+            this.clearTrackHighlights();
+        },
+        
+        pause() {
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
+            youtubeContainer.innerHTML = '';
+            
+            this.isPlaying = false;
+            state.isPlaying = false;
+            AudioPlayer.updateUI(false);
+        },
+        
+        highlightTrack(index) {
+            // Remove all highlights
+            this.clearTrackHighlights();
+            
+            // Add highlight to current
+            const tracks = document.querySelectorAll('.playlist-track');
+            if (tracks[index]) {
+                tracks[index].classList.add('playing');
+            }
+            
+            // Update play button icon
+            const playBtn = document.getElementById('playlistPlayBtn');
+            if (playBtn) {
+                playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+            }
+        },
+        
+        clearTrackHighlights() {
+            document.querySelectorAll('.playlist-track').forEach(t => t.classList.remove('playing'));
+            
+            const playBtn = document.getElementById('playlistPlayBtn');
+            if (playBtn) {
+                playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            }
+        },
+        
+        updateNowPlaying(title) {
+            const trackInfo = document.querySelector('.track-info');
+            if (trackInfo) {
+                // Truncate if too long
+                const displayTitle = title.length > 30 ? title.substring(0, 27) + '...' : title;
+                trackInfo.textContent = `🎵 ${displayTitle}`;
+            }
+        },
+        
+        updateCoverArt(imageUrl) {
+            const coverArt = document.querySelector('.playlist-cover-art');
+            if (coverArt && imageUrl) {
+                // Replace emoji with actual image
+                coverArt.innerHTML = `<img src="${imageUrl}" alt="Album cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">`;
+            }
+        },
+        
+        extractYouTubeId(url) {
+            if (!url) return null;
+            const regExp = /^.*((youtu.be\/)|(v\/)|(\/.+\/watch\/)|(embed\/)|(watch\?)|(v=))([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[8]?.length === 11) ? match[8] : null;
         }
     };
 
@@ -1150,6 +1455,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Checkout.init();
     QuickView.init();
     AudioPlayer.init();
+    HeroPlaylist.init();
     CatalogFilters.init();
     MobileNav.init();
     ExitIntent.init();
@@ -1158,7 +1464,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Console Branding
     // ========================================
     
-    console.log('%c🎵 MUNTANER336', 'font-size: 24px; font-weight: bold; color: #ff4d00;');
+    console.log('%c🎵 3TRES6 RECORDS', 'font-size: 24px; font-weight: bold; color: #ff4d00;');
     console.log('%cBarcelona → México', 'font-size: 14px; color: #888;');
 
 });
