@@ -315,13 +315,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span class="badge origin">BCN</span>
                         </div>
                         <div class="product-overlay">
-                            <button class="quick-view-btn" 
+                            <button class="quick-view-btn"
                                     data-product="${product.id}"
                                     data-title="${product.artist} – ${product.title}"
                                     data-genre="${product.genre}"
                                     data-label="${product.label} · ${product.year}"
                                     data-price="${product.price}"
                                     data-condition="${product.condition}"
+                                    data-image="${this.getPlaceholderImage()}"
                                     data-audio="${product.audio}">
                                 Vista Rápida
                             </button>
@@ -1360,9 +1361,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         extractYouTubeId(url) {
             if (!url) return null;
-            const regExp = /^.*((youtu.be\/)|(v\/)|(\/.+\/watch\/)|(embed\/)|(watch\?)|(v=))([^#&?]*).*/;
+            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
             const match = url.match(regExp);
-            return (match && match[8]?.length === 11) ? match[8] : null;
+            return (match && match[7]?.length === 11) ? match[7] : null;
         }
     };
 

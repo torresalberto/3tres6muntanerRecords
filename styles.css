@@ -760,7 +760,7 @@ button {
    ======================================== */
 
 .section {
-    padding: 100px 40px;
+    padding: 80px 40px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -1022,7 +1022,7 @@ button {
 .calendar-section {
     background: var(--color-bg-light);
     max-width: 100%;
-    padding: 100px 40px;
+    padding: 80px 40px;
 }
 
 .calendar-section .section-header {
@@ -3041,7 +3041,7 @@ body.checkout-open {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -3197,11 +3197,11 @@ body.checkout-open {
 }
 
 .carousel-prev {
-    left: 10px;
+    left: 0;
 }
 
 .carousel-next {
-    right: 10px;
+    right: 0;
 }
 
 /* Carousel Dots */
@@ -3283,6 +3283,7 @@ body.checkout-open {
     gap: 24px;
     max-width: 1400px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .blog-card {
@@ -3299,6 +3300,9 @@ a.blog-card-image {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 a.blog-card-image:hover {
@@ -3432,7 +3436,7 @@ a.blog-card-image:hover {
     }
     
     .instagram-carousel-wrapper {
-        padding: 0 50px;
+        padding: 0;
     }
     
     .blog-grid {
@@ -3458,7 +3462,7 @@ a.blog-card-image:hover {
 
 @media (max-width: 480px) {
     .instagram-carousel-wrapper {
-        padding: 0 40px;
+        padding: 0;
     }
     
     .ig-post-image {
