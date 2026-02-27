@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // YouTube video for background music (main radio)
         youtubeVideoId: 'qfF19hUzLo0',
         
+        // YouTube Data API v3 key — used to search for vinyl tracks on YouTube
+        // Get a free key at: https://console.cloud.google.com/apis/library/youtube.googleapis.com
+        // Free quota: 10,000 units/day. Each search costs 100 units = 100 searches/day free.
+        // Leave empty ('') to disable YouTube search (tracks without Discogs videos will show "no preview")
+        youtubeApiKey: '',
+        
         // Mercado Pago Public Key
         mercadoPagoPublicKey: 'YOUR_MERCADO_PAGO_PUBLIC_KEY',
         
@@ -1356,15 +1362,84 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
         
+        // Tier 3: YouTube Data API v3 search
+        // Searches YouTube for "Artist Title" and returns the first video ID
+        // Requires CONFIG.youtubeApiKey to be set
+        async searchYouTube(artist, title) {
+            if (!CONFIG.youtubeApiKey) return null;
+            
+            const query = `${artist} ${title} vinyl`;
+            const cacheKey = `yt_search_${query}`;
+            const cached = sessionStorage.getItem(cacheKey);
+            if (cached) {
+                try { return JSON.parse(cached); } catch(e) {}
+            }
+            
+            try {
+                const params = new URLSearchParams({
+                    part: 'id,snippet',
+                    q: query,
+                    type: 'video',
+                    maxResults: 5,
+                    videoCategoryId: '10', // Music category
+                    key: CONFIG.youtubeApiKey
+                });
+                
+                const response = await fetch(`https://www.googleapis.com/youtube/v3/search?${params}`);
+                
+                if (!response.ok) {
+                    const err = await response.json();
+                    console.warn('YouTube search API error:', err?.error?.message);
+                    return null;
+                }
+                
+                const data = await response.json();
+                const items = data.items || [];
+                
+                // Find the best match — prefer official/music videos
+                // Filter out playlists and channels
+                const videoItems = items.filter(item => item.id?.kind === 'youtube#video');
+                
+                if (videoItems.length === 0) {
+                    sessionStorage.setItem(cacheKey, JSON.stringify(null));
+                    return null;
+                }
+                
+                // Score results: prefer items with artist name in title
+                const artistLower = artist.toLowerCase();
+                const titleLower = title.toLowerCase();
+                
+                let bestItem = videoItems[0];
+                for (const item of videoItems) {
+                    const videoTitle = (item.snippet?.title || '').toLowerCase();
+                    if (videoTitle.includes(artistLower) && videoTitle.includes(titleLower)) {
+                        bestItem = item;
+                        break;
+                    }
+                }
+                
+                const videoId = bestItem.id.videoId;
+                sessionStorage.setItem(cacheKey, JSON.stringify(videoId));
+                console.log(`YouTube search found: "${bestItem.snippet?.title}" for "${query}"`);
+                return videoId;
+                
+            } catch (err) {
+                console.warn('YouTube search failed:', err);
+                return null;
+            }
+        },
+        
         // Main resolve function — returns { type: 'youtube'|'none', id, searchQuery }
         async resolve(track) {
             const cacheKey = `track_${track.productId || track.title}`;
             if (this._cache[cacheKey]) return this._cache[cacheKey];
             
+            const searchQuery = `${track.artist} ${track.trackTitle}`;
+            
             // Tier 1: Direct YouTube ID from Discogs videos field
             const directId = this.resolveFromUrl(track.audioUrl);
             if (directId) {
-                const result = { type: 'youtube', id: directId };
+                const result = { type: 'youtube', id: directId, source: 'discogs_direct' };
                 this._cache[cacheKey] = result;
                 return result;
             }
@@ -1375,15 +1450,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (const video of videos) {
                     const videoId = this.extractYouTubeId(video.uri);
                     if (videoId) {
-                        const result = { type: 'youtube', id: videoId, title: video.title };
+                        const result = { type: 'youtube', id: videoId, title: video.title, source: 'discogs_release' };
                         this._cache[cacheKey] = result;
                         return result;
                     }
                 }
             }
             
-            // Tier 3: No audio found — return graceful no-preview state
-            const searchQuery = `${track.artist} ${track.trackTitle}`;
+            // Tier 3: YouTube Data API v3 search (if API key is configured)
+            if (CONFIG.youtubeApiKey) {
+                const videoId = await this.searchYouTube(track.artist, track.trackTitle);
+                if (videoId) {
+                    const result = { type: 'youtube', id: videoId, source: 'youtube_search' };
+                    this._cache[cacheKey] = result;
+                    return result;
+                }
+            }
+            
+            // Tier 4: No audio found — return graceful no-preview state with YouTube search link
             const result = { type: 'none', searchQuery };
             this._cache[cacheKey] = result;
             return result;
