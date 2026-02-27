@@ -841,10 +841,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const videoId = this.extractYouTubeId(audioUrl);
                 if (videoId) {
                     embedEl.innerHTML = `
-                        <iframe 
-                            src="https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                        <iframe
+                            src="https://www.youtube.com/embed/${videoId}?autoplay=0&modestbranding=1&rel=0&playsinline=1"
+                            width="100%"
+                            height="200"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            frameborder="0">
                         </iframe>
                     `;
                     return;
@@ -885,11 +888,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Unknown format - show link
+            // Unknown format - show message (no external redirect)
             embedEl.innerHTML = `
-                <a href="${audioUrl}" target="_blank" class="audio-link">
-                    🎧 Escuchar en fuente externa →
-                </a>
+                <p class="no-preview">🎧 Preview no disponible para este formato</p>
             `;
         },
         
@@ -948,6 +949,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Make sure the container is visible (it may have been hidden by close button)
+            youtubeContainer.style.display = '';
+            
             const vid = videoId || CONFIG.youtubeVideoId;
             this.currentVideoId = vid;
             this.currentTitle = title || '3TRES6 Radio';
@@ -963,12 +967,14 @@ document.addEventListener('DOMContentLoaded', function() {
             youtubeContainer.innerHTML = `
                 <div class="mini-player-inner">
                     <div class="mini-player-info">
+                        <span class="mini-player-now-playing">▶ Now Playing</span>
                         <span class="mini-player-title">${this.currentTitle}</span>
+                        <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
                     </div>
-                    <iframe 
+                    <iframe
                         id="ytPlayer"
-                        width="200" 
-                        height="113" 
+                        width="240"
+                        height="135"
                         src="${iframeSrc}"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
@@ -976,6 +982,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     </iframe>
                 </div>
             `;
+            
+            // Attach close button handler
+            document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                youtubeContainer.style.display = 'none';
+            });
             
             this.isPlaying = true;
             state.isPlaying = true;
