@@ -900,41 +900,47 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
-    // Background Audio - YouTube Embed with Mini Player
+    // Background Audio - YouTube Embed (Autoplay with Sound)
     // ========================================
     
     const AudioPlayer = {
         isPlaying: false,
+        isMuted: false,
         currentVideoId: null,
         currentTitle: '3TRES6 Radio',
+        ytPlayer: null,
         
         init() {
             const audioToggle = document.getElementById('audioToggle');
             
-            // TOGGLE BUTTON - starts/stops music
+            // TOGGLE BUTTON - mutes/unmutes (not stops)
             audioToggle?.addEventListener('click', () => {
-                if (this.isPlaying) {
-                    this.stopMusic();
+                if (this.isMuted) {
+                    this.unmute();
                 } else {
-                    this.startMusic();
-                    trackEvent('site_enter', { with_music: true });
+                    this.mute();
                 }
             });
             
-            // Auto-start radio after first user interaction (click anywhere)
-            const autoStartHandler = () => {
-                if (!this.isPlaying && !state.isPlaying) {
-                    this.startMusic();
+            // Start music immediately on page load (muted to satisfy autoplay policy)
+            // Then unmute after first user interaction
+            this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', true);
+            
+            // Unmute on first user interaction
+            const unmuteHandler = () => {
+                if (this.isMuted) {
+                    this.unmute();
                 }
-                document.removeEventListener('click', autoStartHandler);
+                document.removeEventListener('click', unmuteHandler);
+                document.removeEventListener('keydown', unmuteHandler);
+                document.removeEventListener('touchstart', unmuteHandler);
             };
-            // Delay auto-start to allow page to load
-            setTimeout(() => {
-                document.addEventListener('click', autoStartHandler, { once: true });
-            }, 1000);
+            document.addEventListener('click', unmuteHandler, { once: true });
+            document.addEventListener('keydown', unmuteHandler, { once: true });
+            document.addEventListener('touchstart', unmuteHandler, { once: true });
         },
         
-        startMusic(videoId = null, title = null) {
+        startMusic(videoId = null, title = null, startMuted = false) {
             const youtubeContainer = document.getElementById('youtubeAudioContainer');
             if (!youtubeContainer) {
                 console.error('YouTube container not found!');
@@ -944,11 +950,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const vid = videoId || CONFIG.youtubeVideoId;
             this.currentVideoId = vid;
             this.currentTitle = title || '3TRES6 Radio';
+            this.isMuted = startMuted;
             
-            console.log('Starting music with video ID:', vid);
+            console.log('Starting music with video ID:', vid, 'muted:', startMuted);
             
-            // Create iframe with autoplay
-            const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=0&loop=1&playlist=${vid}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+            // autoplay=1 + mute=1 works in all browsers
+            // autoplay=1 + mute=0 only works after user interaction
+            const muteParam = startMuted ? 1 : 0;
+            const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=${muteParam}&loop=1&playlist=${vid}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
             
             youtubeContainer.innerHTML = `
                 <div class="mini-player-inner">
@@ -969,10 +978,40 @@ document.addEventListener('DOMContentLoaded', function() {
             
             this.isPlaying = true;
             state.isPlaying = true;
-            this.updateUI(true, this.currentTitle);
+            this.updateUI(true, this.currentTitle, startMuted);
             
-            console.log('Music iframe created:', iframeSrc);
+            console.log('Music iframe created');
             trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: this.currentTitle });
+        },
+        
+        mute() {
+            const iframe = document.getElementById('ytPlayer');
+            if (iframe) {
+                // Post message to YouTube iframe to mute
+                iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
+                // Also reload with mute=1 as fallback
+                const src = iframe.src;
+                if (src.includes('mute=0')) {
+                    iframe.src = src.replace('mute=0', 'mute=1');
+                }
+            }
+            this.isMuted = true;
+            this.updateUI(true, this.currentTitle, true);
+        },
+        
+        unmute() {
+            const iframe = document.getElementById('ytPlayer');
+            if (iframe) {
+                // Post message to YouTube iframe to unmute
+                iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+                // Also reload with mute=0 as fallback
+                const src = iframe.src;
+                if (src.includes('mute=1')) {
+                    iframe.src = src.replace('mute=1', 'mute=0');
+                }
+            }
+            this.isMuted = false;
+            this.updateUI(true, this.currentTitle, false);
         },
         
         stopMusic() {
@@ -988,7 +1027,7 @@ document.addEventListener('DOMContentLoaded', function() {
             trackEvent('audio_pause', {});
         },
         
-        updateUI(playing, title = null) {
+        updateUI(playing, title = null, muted = false) {
             const audioToggle = document.getElementById('audioToggle');
             const audioControls = document.getElementById('audioControls');
             const trackInfo = document.querySelector('.track-info');
@@ -999,12 +1038,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (trackInfo) {
                     const displayTitle = title || '3TRES6 Radio';
                     const truncated = displayTitle.length > 25 ? displayTitle.substring(0, 22) + '...' : displayTitle;
-                    trackInfo.textContent = `🎵 ${truncated}`;
+                    trackInfo.textContent = muted ? `🔇 ${truncated}` : `🎵 ${truncated}`;
                 }
             } else {
                 audioToggle?.classList.remove('playing');
                 audioControls?.classList.remove('playing');
-                if (trackInfo) trackInfo.textContent = 'Click para música';
+                if (trackInfo) trackInfo.textContent = '🎵 3TRES6 Radio';
             }
         }
     };
@@ -1192,8 +1231,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Play via AudioPlayer (switches main player)
-            AudioPlayer.startMusic(videoId, track.title);
+            // Play via AudioPlayer (switches main player, preserve mute state)
+            AudioPlayer.startMusic(videoId, track.title, AudioPlayer.isMuted);
             this.isPlaying = true;
             
             // Update UI
@@ -1209,49 +1248,41 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         playWithYouTubeSearch(track) {
-            // Construct search query
-            const searchQuery = encodeURIComponent(`${track.artist} ${track.trackTitle} vinyl full`);
-            const searchUrl = `https://www.youtube.com/results?search_query=${searchQuery}`;
+            // No YouTube URL available - play the default radio instead
+            // and show a toast notification about the track
+            AudioPlayer.startMusic(CONFIG.youtubeVideoId, track.title, AudioPlayer.isMuted);
+            this.isPlaying = true;
             
-            // Show notification with search link
+            // Show brief notification
             const toast = document.createElement('div');
             toast.className = 'toast-notification';
-            toast.innerHTML = `
-                <div style="display:flex;flex-direction:column;gap:8px;">
-                    <span>🎵 ${track.title}</span>
-                    <a href="${searchUrl}" target="_blank" rel="noopener" 
-                       style="color:#fff;text-decoration:underline;font-size:12px;">
-                        Buscar en YouTube →
-                    </a>
-                </div>
-            `;
+            toast.textContent = `🎵 ${track.title}`;
             toast.style.cssText = `
                 position:fixed;bottom:100px;right:30px;background:var(--color-accent,#ff4d00);
-                color:white;padding:15px 20px;border-radius:8px;font-size:14px;
+                color:white;padding:12px 20px;border-radius:8px;font-size:13px;
                 font-weight:500;z-index:9999;animation:slideIn 0.3s ease;max-width:280px;
             `;
             document.body.appendChild(toast);
             setTimeout(() => {
                 toast.style.animation = 'slideOut 0.3s ease';
                 setTimeout(() => toast.remove(), 300);
-            }, 4000);
+            }, 2500);
             
             this.highlightTrack(this.currentIndex);
             this.updateNowPlaying(track.title);
             this.updatePlayPauseBtn(true);
-            this.isPlaying = true;
             
             trackEvent('playlist_track_play', {
                 track_name: track.title,
                 track_index: this.currentIndex + 1,
-                source: 'youtube_search'
+                source: 'radio_fallback'
             });
         },
         
         playDefaultRadio() {
             state.playlistMode = 'radio';
             this.currentIndex = -1;
-            AudioPlayer.startMusic();
+            AudioPlayer.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', AudioPlayer.isMuted);
             this.clearTrackHighlights();
             this.isPlaying = true;
             this.updatePlayPauseBtn(true);
