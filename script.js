@@ -1004,8 +1004,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show "Click to play" overlay — user must explicitly start audio
             this._showClickToPlay();
             
-            // On first user interaction (not on the toggle button), start music
-            const unmuteHandler = (e) => {
+            // On first user interaction (not on the toggle button), start the radio
+            // Store handler reference so it can be removed from startMusic() too
+            this._unmuteHandler = (e) => {
                 // Don't trigger if clicking the audio toggle or controls themselves
                 const target = e.target;
                 if (target && typeof target.closest === 'function') {
@@ -1014,17 +1015,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (!this.userHasInteracted) {
                     this.userHasInteracted = true;
+                    this._removeUnmuteListeners();
                     this._hideClickToPlay();
                     // Initialize the YT player now that we have user interaction
                     this._initYTPlayer(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
                 }
-                document.removeEventListener('click', unmuteHandler);
-                document.removeEventListener('keydown', unmuteHandler);
-                document.removeEventListener('touchstart', unmuteHandler);
             };
-            document.addEventListener('click', unmuteHandler);
-            document.addEventListener('keydown', unmuteHandler);
-            document.addEventListener('touchstart', unmuteHandler, { passive: true });
+            document.addEventListener('click', this._unmuteHandler);
+            document.addEventListener('keydown', this._unmuteHandler);
+            document.addEventListener('touchstart', this._unmuteHandler, { passive: true });
+        },
+        
+        _removeUnmuteListeners() {
+            if (this._unmuteHandler) {
+                document.removeEventListener('click', this._unmuteHandler);
+                document.removeEventListener('keydown', this._unmuteHandler);
+                document.removeEventListener('touchstart', this._unmuteHandler);
+                this._unmuteHandler = null;
+            }
         },
         
         _showClickToPlay() {
@@ -1180,9 +1188,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const muted = startMuted !== null ? startMuted : this.isMuted;
             
             if (!this.userHasInteracted) {
-                // User hasn't interacted yet — queue the video
-                this.pendingVideoId = vid;
-                this.pendingTitle = ttl;
+                // This call IS a user interaction (e.g. clicking a playlist track)
+                // Mark as interacted, remove the document listeners, and initialize the player
+                this.userHasInteracted = true;
+                this._removeUnmuteListeners();
+                this._hideClickToPlay();
+                this._initYTPlayer(vid, ttl, muted);
                 return;
             }
             
@@ -1237,6 +1248,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!this.userHasInteracted) {
                 // First interaction via the toggle button — start the player
                 this.userHasInteracted = true;
+                this._removeUnmuteListeners();
                 this._hideClickToPlay();
                 this._initYTPlayer(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
                 return;
