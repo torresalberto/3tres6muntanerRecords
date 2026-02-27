@@ -2592,6 +2592,15 @@ body.checkout-open {
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+/* Collapsed state — hide the video, show only the info bar */
+.mini-player-inner.collapsed .yt-player-div,
+.mini-player-inner.collapsed iframe {
+    height: 0 !important;
+    overflow: hidden;
+    display: block;
 }
 
 .mini-player-info {
@@ -2618,21 +2627,29 @@ body.checkout-open {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 190px;
+    max-width: 170px;
     display: block;
 }
 
-.mini-player-close {
+/* Action buttons container (collapse + close) */
+.mini-player-actions {
     position: absolute;
     top: 6px;
-    right: 8px;
+    right: 6px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.mini-player-close,
+.mini-player-collapse {
     background: rgba(255,255,255,0.1);
     border: none;
     color: #aaa;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -2647,25 +2664,180 @@ body.checkout-open {
     color: white;
 }
 
-.youtube-mini-player iframe {
+.mini-player-collapse:hover {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* YT Player div — the official API attaches an iframe here */
+.yt-player-div {
+    display: block;
+    width: 240px;
+    height: 135px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.yt-player-div iframe {
     display: block;
     width: 240px !important;
     height: 135px !important;
 }
 
-@media (max-width: 480px) {
+/* Click-to-play overlay */
+.mini-player-click-to-play .click-to-play-body {
+    padding: 12px;
+    text-align: center;
+    background: #111;
+}
+
+.mini-player-click-to-play .vinyl-spin-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 4px;
+    animation: vinylSpin 3s linear infinite;
+}
+
+.mini-player-click-to-play .click-to-play-body p {
+    font-size: 11px;
+    color: #888;
+    margin: 0;
+}
+
+@keyframes vinylSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Mobile: hide video, show audio-only bar */
+@media (max-width: 768px) {
     .youtube-mini-player {
         width: 200px;
         bottom: 80px;
         right: 10px;
     }
-    .youtube-mini-player iframe {
-        width: 200px !important;
-        height: 113px !important;
+    
+    /* Hide the video iframe on mobile — audio still plays */
+    .yt-player-div,
+    .yt-player-div iframe {
+        height: 0 !important;
+        overflow: hidden;
+    }
+    
+    .mini-player-title {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-mini-player {
+        width: 180px;
+        bottom: 75px;
+        right: 8px;
     }
     .mini-player-title {
-        max-width: 150px;
+        max-width: 120px;
     }
+}
+
+/* ========================================
+   Quick Preview Audio States
+   ======================================== */
+
+.audio-preview-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 8px;
+    background: #111;
+    border-radius: 8px;
+    min-height: 80px;
+}
+
+.audio-preview-loading .vinyl-spin-preview {
+    font-size: 32px;
+    animation: vinylSpin 2s linear infinite;
+}
+
+.audio-preview-loading p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.audio-preview-embed {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.audio-preview-embed iframe {
+    display: block;
+    border: none;
+}
+
+.no-preview-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    background: #111;
+    border-radius: 8px;
+    min-height: 80px;
+    text-align: center;
+}
+
+.no-preview-icon {
+    font-size: 28px;
+}
+
+.no-preview-text {
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+}
+
+.search-youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #ff4d00;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search-youtube-btn:hover {
+    background: #e04400;
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   Playlist Track States
+   ======================================== */
+
+.track-loading-icon,
+.track-no-audio-icon {
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.track-no-audio-icon {
+    opacity: 0.6;
+}
+
+.playlist-track .track-title-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* ========================================

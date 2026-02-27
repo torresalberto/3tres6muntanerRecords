@@ -3,6 +3,17 @@
    Discogs API, Cart, Checkout, Audio Preview
    ======================================== */
 
+// YouTube IFrame API global callback — must be defined BEFORE DOMContentLoaded
+// because the YT API script (loaded in <head>) may fire this before DOM is ready.
+window.onYouTubeIframeAPIReady = function() {
+    console.log('YouTube IFrame API ready (global)');
+    window._ytApiReady = true;
+    if (window._ytPlayerPendingInit) {
+        window._ytPlayerPendingInit();
+        window._ytPlayerPendingInit = null;
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // ========================================
@@ -774,7 +785,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
-    // Quick View Modal with Audio Preview
+    // Quick View Modal with Audio Preview (Improved)
     // ========================================
     
     const QuickView = {
@@ -808,8 +819,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('quickViewSleeveCondition').textContent = product.condition;
             document.getElementById('quickViewImage').src = product.image || DiscogsAPI.getPlaceholderImage();
             
-            // Audio Preview
-            this.renderAudioPreview(product.audio);
+            // Show loading state immediately, then resolve audio
+            this._showAudioLoading();
+            this._resolveAndRenderAudio(product);
             
             document.getElementById('quickViewModal')?.classList.add('active');
             
@@ -822,101 +834,166 @@ document.addEventListener('DOMContentLoaded', function() {
         
         close() {
             document.getElementById('quickViewModal')?.classList.remove('active');
-            // Stop any playing audio
             const embedEl = document.getElementById('audioEmbed');
             if (embedEl) embedEl.innerHTML = '';
         },
         
-        renderAudioPreview(audioUrl) {
+        _showAudioLoading() {
+            const embedEl = document.getElementById('audioEmbed');
+            if (!embedEl) return;
+            embedEl.innerHTML = `
+                <div class="audio-preview-loading">
+                    <div class="vinyl-spin-preview">🎵</div>
+                    <p>Buscando preview...</p>
+                </div>
+            `;
+        },
+        
+        async _resolveAndRenderAudio(product) {
             const embedEl = document.getElementById('audioEmbed');
             if (!embedEl) return;
             
-            if (!audioUrl) {
-                embedEl.innerHTML = '<p class="no-preview">No hay preview de audio disponible</p>';
-                return;
+            // Build a track object for TrackResolver
+            const track = {
+                audioUrl: product.audio || '',
+                artist: product.title ? product.title.split(' – ')[0] : '',
+                trackTitle: product.title ? (product.title.split(' – ')[1] || product.title) : product.title,
+                productId: product.id,
+                releaseId: product.releaseId || null
+            };
+            
+            try {
+                // Tier 1: Try direct URL first (fast path)
+                if (product.audio) {
+                    const rendered = this._tryRenderDirectUrl(product.audio, embedEl);
+                    if (rendered) return;
+                }
+                
+                // Tier 2: Use TrackResolver (may call Discogs Release API)
+                const resolved = await TrackResolver.resolve(track);
+                
+                if (resolved.type === 'youtube') {
+                    embedEl.innerHTML = `
+                        <div class="audio-preview-embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/${resolved.id}?autoplay=0&modestbranding=1&rel=0&playsinline=1"
+                                width="100%"
+                                height="180"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    `;
+                } else {
+                    // No preview available — graceful state
+                    const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(resolved.searchQuery)}`;
+                    embedEl.innerHTML = `
+                        <div class="no-preview-state">
+                            <div class="no-preview-icon">🎧</div>
+                            <p class="no-preview-text">Preview no disponible</p>
+                            <a href="${searchUrl}" target="_blank" rel="noopener" class="search-youtube-btn">
+                                🔍 Buscar en YouTube
+                            </a>
+                        </div>
+                    `;
+                }
+            } catch (err) {
+                console.error('QuickView audio resolution error:', err);
+                embedEl.innerHTML = `<div class="no-preview-state"><p class="no-preview-text">No se pudo cargar el preview</p></div>`;
             }
+        },
+        
+        _tryRenderDirectUrl(audioUrl, embedEl) {
+            if (!audioUrl) return false;
             
             // YouTube
             if (audioUrl.includes('youtube.com') || audioUrl.includes('youtu.be')) {
-                const videoId = this.extractYouTubeId(audioUrl);
+                const videoId = TrackResolver.extractYouTubeId(audioUrl);
                 if (videoId) {
                     embedEl.innerHTML = `
-                        <iframe
-                            src="https://www.youtube.com/embed/${videoId}?autoplay=0&modestbranding=1&rel=0&playsinline=1"
-                            width="100%"
-                            height="200"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            frameborder="0">
-                        </iframe>
+                        <div class="audio-preview-embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/${videoId}?autoplay=0&modestbranding=1&rel=0&playsinline=1"
+                                width="100%"
+                                height="180"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                            </iframe>
+                        </div>
                     `;
-                    return;
+                    return true;
                 }
             }
             
             // SoundCloud
             if (audioUrl.includes('soundcloud.com')) {
                 embedEl.innerHTML = `
-                    <iframe 
-                        src="https://w.soundcloud.com/player/?url=${encodeURIComponent(audioUrl)}&color=%23ff4d00&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
-                        scrolling="no" frameborder="no" allow="autoplay">
-                    </iframe>
+                    <div class="audio-preview-embed">
+                        <iframe
+                            src="https://w.soundcloud.com/player/?url=${encodeURIComponent(audioUrl)}&color=%23ff4d00&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+                            width="100%" height="120"
+                            scrolling="no" frameborder="no" allow="autoplay">
+                        </iframe>
+                    </div>
                 `;
-                return;
+                return true;
             }
             
             // Spotify
             if (audioUrl.includes('spotify.com')) {
                 const spotifyId = audioUrl.split('/').pop().split('?')[0];
                 embedEl.innerHTML = `
-                    <iframe 
-                        src="https://open.spotify.com/embed/track/${spotifyId}" 
-                        allow="encrypted-media">
-                    </iframe>
+                    <div class="audio-preview-embed">
+                        <iframe
+                            src="https://open.spotify.com/embed/track/${spotifyId}"
+                            width="100%" height="80"
+                            allow="encrypted-media">
+                        </iframe>
+                    </div>
                 `;
-                return;
+                return true;
             }
             
             // Direct audio file
             if (audioUrl.match(/\.(mp3|wav|ogg)$/i)) {
                 embedEl.innerHTML = `
-                    <audio controls style="width:100%;">
+                    <audio controls style="width:100%;margin-top:8px;">
                         <source src="${audioUrl}" type="audio/mpeg">
                         Tu navegador no soporta audio.
                     </audio>
                 `;
-                return;
+                return true;
             }
             
-            // Unknown format - show message (no external redirect)
-            embedEl.innerHTML = `
-                <p class="no-preview">🎧 Preview no disponible para este formato</p>
-            `;
-        },
-        
-        extractYouTubeId(url) {
-            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-            const match = url.match(regExp);
-            return (match && match[7].length === 11) ? match[7] : null;
+            return false;
         }
     };
 
     // ========================================
-    // Background Audio - YouTube Embed (Autoplay with Sound)
+    // Background Audio - YouTube IFrame API (Reliable Mute/Unmute)
     // ========================================
     
     const AudioPlayer = {
         isPlaying: false,
-        isMuted: false,
+        isMuted: true,  // Start muted (autoplay policy)
         currentVideoId: null,
         currentTitle: '3TRES6 Radio',
-        ytPlayer: null,
+        ytPlayer: null,         // YT.Player instance (official API)
+        ytPlayerReady: false,   // True once onReady fires
+        pendingVideoId: null,   // Video to play once player is ready
+        pendingTitle: null,
+        userHasInteracted: false,
         
         init() {
             const audioToggle = document.getElementById('audioToggle');
             
-            // TOGGLE BUTTON - mutes/unmutes (not stops)
-            audioToggle?.addEventListener('click', () => {
+            // TOGGLE BUTTON - mutes/unmutes using official YT API
+            audioToggle?.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent triggering the document click handler
                 if (this.isMuted) {
                     this.unmute();
                 } else {
@@ -924,127 +1001,77 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Start music immediately on page load (muted to satisfy autoplay policy)
-            // Then unmute after first user interaction
-            this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', true);
+            // Show "Click to play" overlay — user must explicitly start audio
+            this._showClickToPlay();
             
-            // Unmute on first user interaction
-            const unmuteHandler = () => {
-                if (this.isMuted) {
-                    this.unmute();
+            // On first user interaction (not on the toggle button), start music
+            const unmuteHandler = (e) => {
+                // Don't trigger if clicking the audio toggle or controls themselves
+                const target = e.target;
+                if (target && typeof target.closest === 'function') {
+                    if (target.closest('#audioToggle') || target.closest('#audioControls')) return;
+                }
+                
+                if (!this.userHasInteracted) {
+                    this.userHasInteracted = true;
+                    this._hideClickToPlay();
+                    // Initialize the YT player now that we have user interaction
+                    this._initYTPlayer(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
                 }
                 document.removeEventListener('click', unmuteHandler);
                 document.removeEventListener('keydown', unmuteHandler);
                 document.removeEventListener('touchstart', unmuteHandler);
             };
-            document.addEventListener('click', unmuteHandler, { once: true });
-            document.addEventListener('keydown', unmuteHandler, { once: true });
-            document.addEventListener('touchstart', unmuteHandler, { once: true });
+            document.addEventListener('click', unmuteHandler);
+            document.addEventListener('keydown', unmuteHandler);
+            document.addEventListener('touchstart', unmuteHandler, { passive: true });
         },
         
-        startMusic(videoId = null, title = null, startMuted = false) {
+        _showClickToPlay() {
             const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            if (!youtubeContainer) {
-                console.error('YouTube container not found!');
-                return;
-            }
-            
-            // Make sure the container is visible (it may have been hidden by close button)
+            if (!youtubeContainer) return;
             youtubeContainer.style.display = '';
-            
-            const vid = videoId || CONFIG.youtubeVideoId;
-            this.currentVideoId = vid;
-            this.currentTitle = title || '3TRES6 Radio';
-            this.isMuted = startMuted;
-            
-            console.log('Starting music with video ID:', vid, 'muted:', startMuted);
-            
-            // autoplay=1 + mute=1 works in all browsers
-            // autoplay=1 + mute=0 only works after user interaction
-            const muteParam = startMuted ? 1 : 0;
-            const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=${muteParam}&loop=1&playlist=${vid}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
-            
             youtubeContainer.innerHTML = `
-                <div class="mini-player-inner">
+                <div class="mini-player-inner mini-player-click-to-play" id="clickToPlayOverlay">
                     <div class="mini-player-info">
-                        <span class="mini-player-now-playing">▶ Now Playing</span>
-                        <span class="mini-player-title">${this.currentTitle}</span>
-                        <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
+                        <span class="mini-player-now-playing">🎵 3TRES6 RADIO</span>
+                        <span class="mini-player-title">Haz clic en cualquier lugar para escuchar</span>
                     </div>
-                    <iframe
-                        id="ytPlayer"
-                        width="240"
-                        height="135"
-                        src="${iframeSrc}"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        frameborder="0">
-                    </iframe>
+                    <div class="click-to-play-body">
+                        <div class="vinyl-spin-icon">🎵</div>
+                        <p>Música de fondo</p>
+                    </div>
                 </div>
             `;
-            
-            // Attach close button handler
-            document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
-                e.stopPropagation();
-                youtubeContainer.style.display = 'none';
-            });
-            
-            this.isPlaying = true;
-            state.isPlaying = true;
-            this.updateUI(true, this.currentTitle, startMuted);
-            
-            console.log('Music iframe created');
-            trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: this.currentTitle });
+            this.updateUI(false, '3TRES6 Radio', true);
         },
         
-        mute() {
-            const iframe = document.getElementById('ytPlayer');
-            if (iframe) {
-                // Use postMessage only — modifying iframe.src would restart the video
-                iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
-            }
-            this.isMuted = true;
-            this.updateUI(true, this.currentTitle, true);
+        _hideClickToPlay() {
+            const overlay = document.getElementById('clickToPlayOverlay');
+            if (overlay) overlay.closest('.mini-player-inner')?.remove();
         },
         
-        unmute() {
-            const iframe = document.getElementById('ytPlayer');
-            if (iframe) {
-                // Use postMessage only — modifying iframe.src would restart the video
-                iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-            }
-            this.isMuted = false;
-            this.updateUI(true, this.currentTitle, false);
-        },
-        
-        startMusicSearch(searchSrc, title) {
-            // Starts the mini-player with a pre-built iframe src (e.g. YouTube search embed)
+        _initYTPlayer(videoId, title, startMuted) {
             const youtubeContainer = document.getElementById('youtubeAudioContainer');
             if (!youtubeContainer) return;
             
-            // Make sure the container is visible
             youtubeContainer.style.display = '';
-            
+            this.currentVideoId = videoId || CONFIG.youtubeVideoId;
             this.currentTitle = title || '3TRES6 Radio';
-            this.isPlaying = true;
-            state.isPlaying = true;
+            this.isMuted = startMuted !== false ? false : false; // default unmuted after interaction
             
+            // Create a div for YT.Player to attach to
             youtubeContainer.innerHTML = `
-                <div class="mini-player-inner">
+                <div class="mini-player-inner" id="miniPlayerInner">
                     <div class="mini-player-info">
                         <span class="mini-player-now-playing">▶ Now Playing</span>
-                        <span class="mini-player-title">${this.currentTitle}</span>
-                        <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
+                        <span class="mini-player-title" id="miniPlayerTitle">${this.currentTitle}</span>
+                        <div class="mini-player-actions">
+                            <button class="mini-player-collapse" id="miniPlayerCollapse" title="Minimizar" aria-label="Minimizar reproductor">▼</button>
+                            <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
+                        </div>
                     </div>
-                    <iframe
-                        id="ytPlayer"
-                        width="240"
-                        height="135"
-                        src="${searchSrc}"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        frameborder="0">
-                    </iframe>
+                    <div id="ytPlayerDiv" class="yt-player-div"></div>
                 </div>
             `;
             
@@ -1052,22 +1079,188 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
                 e.stopPropagation();
                 youtubeContainer.style.display = 'none';
+                if (this.ytPlayer) {
+                    try { this.ytPlayer.pauseVideo(); } catch(err) {}
+                }
+                this.isPlaying = false;
+                state.isPlaying = false;
             });
             
-            this.updateUI(true, this.currentTitle, this.isMuted);
-            console.log('Music search iframe created for:', title);
+            // Collapse/expand toggle
+            document.getElementById('miniPlayerCollapse')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const inner = document.getElementById('miniPlayerInner');
+                const btn = document.getElementById('miniPlayerCollapse');
+                if (inner) {
+                    const isCollapsed = inner.classList.toggle('collapsed');
+                    if (btn) btn.textContent = isCollapsed ? '▲' : '▼';
+                    localStorage.setItem('3tres6_player_collapsed', isCollapsed ? '1' : '0');
+                }
+            });
+            
+            // Restore collapsed state
+            if (localStorage.getItem('3tres6_player_collapsed') === '1') {
+                const inner = document.getElementById('miniPlayerInner');
+                const btn = document.getElementById('miniPlayerCollapse');
+                if (inner) inner.classList.add('collapsed');
+                if (btn) btn.textContent = '▲';
+            }
+            
+            // Initialize YT.Player via official API
+            if (window._ytApiReady && typeof YT !== 'undefined' && YT.Player) {
+                this._createYTPlayer(this.currentVideoId);
+            } else {
+                // YT API not ready yet — queue the init
+                window._ytPlayerPendingInit = () => this._createYTPlayer(this.currentVideoId);
+                // The API script is already loaded in <head>, so it will call onYouTubeIframeAPIReady
+                // when ready. No need to inject another script tag.
+            }
+            
+            this.isPlaying = true;
+            state.isPlaying = true;
+            this.updateUI(true, this.currentTitle, false);
+            trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: this.currentTitle });
+        },
+        
+        _createYTPlayer(videoId) {
+            if (!document.getElementById('ytPlayerDiv')) return;
+            
+            this.ytPlayer = new YT.Player('ytPlayerDiv', {
+                height: '135',
+                width: '240',
+                videoId: videoId,
+                playerVars: {
+                    autoplay: 1,
+                    mute: 0,
+                    loop: 1,
+                    playlist: videoId,
+                    controls: 1,
+                    rel: 0,
+                    modestbranding: 1,
+                    playsinline: 1,
+                    origin: window.location.origin || 'https://3tres6records.com'
+                },
+                events: {
+                    onReady: (event) => {
+                        this.ytPlayerReady = true;
+                        event.target.setVolume(80);
+                        if (this.isMuted) {
+                            event.target.mute();
+                        } else {
+                            event.target.unMute();
+                        }
+                        event.target.playVideo();
+                        console.log('YT Player ready, videoId:', videoId);
+                    },
+                    onStateChange: (event) => {
+                        if (event.data === YT.PlayerState.ENDED) {
+                            // Loop: restart the video
+                            event.target.playVideo();
+                        }
+                        if (event.data === YT.PlayerState.PLAYING) {
+                            this.isPlaying = true;
+                            state.isPlaying = true;
+                        }
+                    },
+                    onError: (event) => {
+                        console.warn('YT Player error:', event.data, 'for videoId:', videoId);
+                        // If a vinyl track fails, fall back to radio
+                        if (videoId !== CONFIG.youtubeVideoId) {
+                            console.log('Falling back to radio...');
+                            this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', this.isMuted);
+                        }
+                    }
+                }
+            });
+        },
+        
+        startMusic(videoId = null, title = null, startMuted = null) {
+            const vid = videoId || CONFIG.youtubeVideoId;
+            const ttl = title || '3TRES6 Radio';
+            const muted = startMuted !== null ? startMuted : this.isMuted;
+            
+            if (!this.userHasInteracted) {
+                // User hasn't interacted yet — queue the video
+                this.pendingVideoId = vid;
+                this.pendingTitle = ttl;
+                return;
+            }
+            
+            // If YT player exists and is ready, just load the new video
+            if (this.ytPlayer && this.ytPlayerReady) {
+                this.currentVideoId = vid;
+                this.currentTitle = ttl;
+                this.isMuted = muted;
+                
+                try {
+                    this.ytPlayer.loadVideoById(vid);
+                    if (muted) {
+                        this.ytPlayer.mute();
+                    } else {
+                        this.ytPlayer.unMute();
+                    }
+                    // Update title in mini-player
+                    const titleEl = document.getElementById('miniPlayerTitle');
+                    if (titleEl) titleEl.textContent = ttl;
+                    
+                    // Make sure container is visible
+                    const youtubeContainer = document.getElementById('youtubeAudioContainer');
+                    if (youtubeContainer) youtubeContainer.style.display = '';
+                    
+                    this.isPlaying = true;
+                    state.isPlaying = true;
+                    this.updateUI(true, ttl, muted);
+                    trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: ttl });
+                } catch (err) {
+                    console.error('YT player loadVideoById error:', err);
+                    // Re-init the player
+                    this._initYTPlayer(vid, ttl, muted);
+                }
+            } else {
+                // Player not ready yet — init it
+                this._initYTPlayer(vid, ttl, muted);
+            }
+        },
+        
+        mute() {
+            this.isMuted = true;
+            if (this.ytPlayer && this.ytPlayerReady) {
+                try { this.ytPlayer.mute(); } catch(e) {}
+            }
+            // If player not started yet, just update state — don't start music on mute click
+            this.updateUI(this.isPlaying, this.currentTitle, true);
+            trackEvent('audio_mute', {});
+        },
+        
+        unmute() {
+            this.isMuted = false;
+            if (!this.userHasInteracted) {
+                // First interaction via the toggle button — start the player
+                this.userHasInteracted = true;
+                this._hideClickToPlay();
+                this._initYTPlayer(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
+                return;
+            }
+            if (this.ytPlayer && this.ytPlayerReady) {
+                try {
+                    this.ytPlayer.unMute();
+                    this.ytPlayer.setVolume(80);
+                } catch(e) {}
+            }
+            this.updateUI(true, this.currentTitle, false);
+            trackEvent('audio_unmute', {});
         },
         
         stopMusic() {
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            if (youtubeContainer) youtubeContainer.innerHTML = '';
+            if (this.ytPlayer && this.ytPlayerReady) {
+                try { this.ytPlayer.pauseVideo(); } catch(e) {}
+            }
             
             this.isPlaying = false;
             state.isPlaying = false;
-            this.currentVideoId = null;
             this.updateUI(false);
             
-            console.log('Music stopped');
+            console.log('Music paused');
             trackEvent('audio_pause', {});
         },
         
@@ -1091,14 +1284,101 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     };
+    
+    // ========================================
+    // TrackResolver — Multi-tier audio lookup for vinyl tracks
+    // ========================================
+    
+    const TrackResolver = {
+        // Cache resolved tracks to avoid repeated API calls
+        _cache: {},
+        
+        extractYouTubeId(url) {
+            if (!url) return null;
+            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[7]?.length === 11) ? match[7] : null;
+        },
+        
+        // Tier 1: Direct YouTube ID from existing audioUrl
+        resolveFromUrl(audioUrl) {
+            if (!audioUrl) return null;
+            return this.extractYouTubeId(audioUrl);
+        },
+        
+        // Tier 2: Fetch Discogs Release Detail API to get videos
+        async fetchDiscogsVideos(releaseId) {
+            if (!releaseId) return [];
+            
+            const cacheKey = `discogs_release_${releaseId}`;
+            const cached = sessionStorage.getItem(cacheKey);
+            if (cached) {
+                try { return JSON.parse(cached); } catch(e) {}
+            }
+            
+            try {
+                const url = `${CONFIG.discogs.baseUrl}/releases/${releaseId}`;
+                const response = await fetch(url, {
+                    headers: {
+                        'Authorization': `Discogs key=${CONFIG.discogs.consumerKey}, secret=${CONFIG.discogs.consumerSecret}`,
+                        'User-Agent': 'Muntaner336WebStore/1.0'
+                    }
+                });
+                
+                if (!response.ok) throw new Error(`Discogs release API error: ${response.status}`);
+                
+                const data = await response.json();
+                const videos = data.videos || [];
+                sessionStorage.setItem(cacheKey, JSON.stringify(videos));
+                return videos;
+            } catch (err) {
+                console.warn('Discogs release fetch failed:', err);
+                return [];
+            }
+        },
+        
+        // Main resolve function — returns { type: 'youtube'|'none', id, searchQuery }
+        async resolve(track) {
+            const cacheKey = `track_${track.productId || track.title}`;
+            if (this._cache[cacheKey]) return this._cache[cacheKey];
+            
+            // Tier 1: Direct YouTube ID from Discogs videos field
+            const directId = this.resolveFromUrl(track.audioUrl);
+            if (directId) {
+                const result = { type: 'youtube', id: directId };
+                this._cache[cacheKey] = result;
+                return result;
+            }
+            
+            // Tier 2: Discogs Release Detail API (fetch release to get videos)
+            if (track.releaseId) {
+                const videos = await this.fetchDiscogsVideos(track.releaseId);
+                for (const video of videos) {
+                    const videoId = this.extractYouTubeId(video.uri);
+                    if (videoId) {
+                        const result = { type: 'youtube', id: videoId, title: video.title };
+                        this._cache[cacheKey] = result;
+                        return result;
+                    }
+                }
+            }
+            
+            // Tier 3: No audio found — return graceful no-preview state
+            const searchQuery = `${track.artist} ${track.trackTitle}`;
+            const result = { type: 'none', searchQuery };
+            this._cache[cacheKey] = result;
+            return result;
+        }
+    };
 
     // ========================================
-    // Hero Playlist - Dynamic Vinyl Audio Player
+    // Hero Playlist - Dynamic Vinyl Audio Player (Fixed)
     // ========================================
     
     const HeroPlaylist = {
         currentIndex: -1, // -1 means playing default radio
         isPlaying: false,
+        _resolving: false,
         
         init() {
             // Play/Pause button
@@ -1128,13 +1408,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Volume slider
+            // Volume slider — control YT player volume via official API
             document.getElementById('volumeSlider')?.addEventListener('input', (e) => {
-                // Volume control via postMessage to YouTube iframe
-                const iframe = document.getElementById('ytPlayer');
-                if (iframe) {
-                    // Store volume preference
-                    localStorage.setItem('3tres6_volume', e.target.value);
+                const vol = parseInt(e.target.value);
+                localStorage.setItem('3tres6_volume', vol);
+                if (AudioPlayer.ytPlayer && AudioPlayer.ytPlayerReady) {
+                    try {
+                        AudioPlayer.ytPlayer.setVolume(vol);
+                        if (vol === 0) {
+                            AudioPlayer.ytPlayer.mute();
+                            AudioPlayer.isMuted = true;
+                        } else if (AudioPlayer.isMuted) {
+                            AudioPlayer.ytPlayer.unMute();
+                            AudioPlayer.isMuted = false;
+                        }
+                        AudioPlayer.updateUI(AudioPlayer.isPlaying, AudioPlayer.currentTitle, vol === 0);
+                    } catch(err) {}
                 }
             });
             
@@ -1147,25 +1436,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const tracksContainer = document.getElementById('playlistTracks');
             if (!tracksContainer) return;
             
-            console.log('Populating playlist from listings:', listings);
+            console.log('Populating playlist from listings:', listings.length);
             
             // Take first 8 items for the playlist
             const playlistItems = listings.slice(0, 8).map((listing, index) => {
                 const release = listing.release || {};
                 
-                // Discogs inventory API returns artist as string in release.artist
-                // or as array in release.artists, or in description
                 let artistName = 'Artista';
                 if (release.artist) {
                     artistName = release.artist;
                 } else if (release.artists && release.artists[0]) {
                     artistName = release.artists[0].name;
                 } else if (release.description) {
-                    // Parse from "Artist - Title" format
                     const parts = release.description.split(' - ');
-                    if (parts.length >= 2) {
-                        artistName = parts[0].trim();
-                    }
+                    if (parts.length >= 2) artistName = parts[0].trim();
                 }
                 
                 const title = release.title || 'Sin título';
@@ -1173,11 +1457,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const audioUrl = videos[0]?.uri || '';
                 const fullTitle = `${artistName} – ${title}`;
                 
-                // Get image URL from listing
                 const images = release.images || [];
                 const imageUrl = images[0]?.uri || release.thumbnail || DiscogsAPI.getPlaceholderImage();
                 
-                console.log(`Track ${index + 1}:`, { artistName, title, audioUrl, imageUrl });
+                // Extract release ID for Tier 2 fallback
+                const releaseId = release.id || listing.release_id || null;
                 
                 return {
                     index: index + 1,
@@ -1186,42 +1470,38 @@ document.addEventListener('DOMContentLoaded', function() {
                     trackTitle: title,
                     audioUrl: audioUrl,
                     imageUrl: imageUrl,
-                    productId: listing.id
+                    productId: listing.id,
+                    releaseId: releaseId
                 };
             });
             
-            // Store in state
             state.playlist = playlistItems;
             
-            // Render tracks
             tracksContainer.innerHTML = playlistItems.map(track => `
-                <div class="playlist-track" 
-                     data-index="${track.index}" 
+                <div class="playlist-track"
+                     data-index="${track.index}"
                      data-audio="${track.audioUrl}"
                      data-title="${track.title}"
                      data-artist="${track.artist}"
                      data-track-title="${track.trackTitle}"
-                     data-image="${track.imageUrl}">
+                     data-image="${track.imageUrl}"
+                     data-release-id="${track.releaseId || ''}">
                     <span class="track-number">${track.index}.</span>
-                    <a href="#product-${track.productId}" class="track-title">"${track.trackTitle}" — by ${track.artist}</a>
+                    <span class="track-title-text">"${track.trackTitle}" — by ${track.artist}</span>
                     <span class="track-play-icon">▶</span>
+                    <span class="track-loading-icon" style="display:none">⏳</span>
+                    <span class="track-no-audio-icon" style="display:none" title="Sin preview disponible">🔇</span>
                 </div>
             `).join('');
             
-            // Update playlist title
             const playlistTitle = document.getElementById('playlistTitle');
-            if (playlistTitle) {
-                playlistTitle.textContent = '"En Stock Ahora"';
-            }
+            if (playlistTitle) playlistTitle.textContent = '"En Stock Ahora"';
             
-            // Set initial cover art to first track's image
             if (playlistItems.length > 0) {
                 this.updateCoverArt(playlistItems[0].imageUrl);
             }
             
-            // Reattach listeners
             this.attachTrackListeners();
-            
             console.log('Hero playlist populated with', playlistItems.length, 'tracks');
         },
         
@@ -1237,78 +1517,100 @@ document.addEventListener('DOMContentLoaded', function() {
         
         playCurrentOrFirst() {
             if (state.playlist.length === 0) {
-                // No inventory, play default radio
                 this.playDefaultRadio();
                 return;
             }
-            
-            // Play first track or current
             const index = this.currentIndex >= 0 ? this.currentIndex : 0;
             this.playTrack(index);
         },
         
-        playTrack(index) {
+        async playTrack(index) {
             if (index < 0 || index >= state.playlist.length) return;
+            if (this._resolving) return; // Prevent double-click during resolution
             
             const track = state.playlist[index];
             this.currentIndex = index;
             state.playlistMode = 'vinyl';
             
-            // Update cover art with track image
-            if (track.imageUrl) {
-                this.updateCoverArt(track.imageUrl);
-            }
-            
-            // Update now playing display
+            if (track.imageUrl) this.updateCoverArt(track.imageUrl);
             this.updateNowPlayingDisplay(track);
-            
-            // Get YouTube URL - either from Discogs or search
-            let videoId = null;
-            
-            if (track.audioUrl) {
-                videoId = this.extractYouTubeId(track.audioUrl);
-            }
-            
-            if (!videoId) {
-                // No direct video, use YouTube search embed
-                this.playWithYouTubeSearch(track);
-                return;
-            }
-            
-            // Play via AudioPlayer (switches main player, preserve mute state)
-            AudioPlayer.startMusic(videoId, track.title, AudioPlayer.isMuted);
-            this.isPlaying = true;
-            
-            // Update UI
             this.highlightTrack(index);
-            this.updateNowPlaying(track.title);
             this.updatePlayPauseBtn(true);
+            this._setTrackLoadingState(index, 'loading');
             
-            trackEvent('playlist_track_play', {
-                track_name: track.title,
-                track_index: index + 1,
-                source: 'discogs_video'
-            });
+            this._resolving = true;
+            try {
+                const resolved = await TrackResolver.resolve(track);
+                
+                if (resolved.type === 'youtube') {
+                    AudioPlayer.startMusic(resolved.id, track.title, AudioPlayer.isMuted);
+                    this.isPlaying = true;
+                    this.updateNowPlaying(track.title);
+                    this._setTrackLoadingState(index, 'ready');
+                    
+                    trackEvent('playlist_track_play', {
+                        track_name: track.title,
+                        track_index: index + 1,
+                        source: track.audioUrl ? 'discogs_video' : 'discogs_release_api'
+                    });
+                } else {
+                    // No audio found — show graceful state
+                    this._setTrackLoadingState(index, 'no-audio');
+                    this.isPlaying = false;
+                    this.updatePlayPauseBtn(false);
+                    this._showNoPreviewInPlaylist(track, resolved.searchQuery);
+                    
+                    trackEvent('playlist_track_no_preview', {
+                        track_name: track.title,
+                        track_index: index + 1
+                    });
+                }
+            } catch (err) {
+                console.error('Track resolution error:', err);
+                this._setTrackLoadingState(index, 'no-audio');
+                this.isPlaying = false;
+                this.updatePlayPauseBtn(false);
+            } finally {
+                this._resolving = false;
+            }
         },
         
-        playWithYouTubeSearch(track) {
-            // No direct YouTube URL — use YouTube search embed to find the track
-            const searchQuery = encodeURIComponent(`${track.artist} ${track.trackTitle}`);
-            const muteParam = AudioPlayer.isMuted ? 1 : 0;
-            const searchSrc = `https://www.youtube.com/embed?listType=search&list=${searchQuery}&autoplay=1&mute=${muteParam}&controls=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
+        _setTrackLoadingState(index, state) {
+            const tracks = document.querySelectorAll('.playlist-track');
+            const track = tracks[index];
+            if (!track) return;
             
-            AudioPlayer.startMusicSearch(searchSrc, track.title);
-            this.isPlaying = true;
+            const loadingIcon = track.querySelector('.track-loading-icon');
+            const noAudioIcon = track.querySelector('.track-no-audio-icon');
+            const playIcon = track.querySelector('.track-play-icon');
             
-            this.highlightTrack(this.currentIndex);
-            this.updateNowPlaying(track.title);
-            this.updatePlayPauseBtn(true);
-            
-            trackEvent('playlist_track_play', {
-                track_name: track.title,
-                track_index: this.currentIndex + 1,
-                source: 'youtube_search'
-            });
+            if (state === 'loading') {
+                if (loadingIcon) loadingIcon.style.display = 'inline';
+                if (noAudioIcon) noAudioIcon.style.display = 'none';
+                if (playIcon) playIcon.style.display = 'none';
+            } else if (state === 'no-audio') {
+                if (loadingIcon) loadingIcon.style.display = 'none';
+                if (noAudioIcon) noAudioIcon.style.display = 'inline';
+                if (playIcon) playIcon.style.display = 'none';
+            } else {
+                if (loadingIcon) loadingIcon.style.display = 'none';
+                if (noAudioIcon) noAudioIcon.style.display = 'none';
+                if (playIcon) playIcon.style.display = 'inline';
+            }
+        },
+        
+        _showNoPreviewInPlaylist(track, searchQuery) {
+            const nowPlayingName = document.getElementById('nowPlayingName');
+            if (nowPlayingName) {
+                nowPlayingName.innerHTML = `
+                    <span style="color:#888;font-size:0.85em;">Sin preview — </span>
+                    <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery)}"
+                       target="_blank" rel="noopener"
+                       style="color:#ff4d00;text-decoration:underline;font-size:0.85em;">
+                       Buscar en YouTube ↗
+                    </a>
+                `;
+            }
         },
         
         playDefaultRadio() {
@@ -1319,14 +1621,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.isPlaying = true;
             this.updatePlayPauseBtn(true);
             
-            // Reset now playing display
             const nowPlayingName = document.getElementById('nowPlayingName');
             if (nowPlayingName) nowPlayingName.textContent = '3TRES6 Radio';
         },
         
         pause() {
             AudioPlayer.stopMusic();
-            
             this.isPlaying = false;
             this.updatePlayPauseBtn(false);
         },
@@ -1348,35 +1648,25 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         highlightTrack(index) {
-            // Remove all highlights
             this.clearTrackHighlights();
-            
-            // Add highlight to current
             const tracks = document.querySelectorAll('.playlist-track');
-            if (tracks[index]) {
-                tracks[index].classList.add('playing');
-            }
-            
-            // Update play button icon
-            const playBtn = document.getElementById('playlistPlayBtn');
-            if (playBtn) {
-                playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
-            }
+            if (tracks[index]) tracks[index].classList.add('playing');
         },
         
         clearTrackHighlights() {
             document.querySelectorAll('.playlist-track').forEach(t => t.classList.remove('playing'));
-            
             const playBtn = document.getElementById('playlistPlayBtn');
             if (playBtn) {
-                playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+                const playIcon = playBtn.querySelector('.play-icon');
+                const pauseIcon = playBtn.querySelector('.pause-icon');
+                if (playIcon) playIcon.style.display = 'block';
+                if (pauseIcon) pauseIcon.style.display = 'none';
             }
         },
         
         updateNowPlaying(title) {
             const trackInfo = document.querySelector('.track-info');
             if (trackInfo) {
-                // Truncate if too long
                 const displayTitle = title.length > 30 ? title.substring(0, 27) + '...' : title;
                 trackInfo.textContent = `🎵 ${displayTitle}`;
             }
@@ -1385,16 +1675,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCoverArt(imageUrl) {
             const coverArt = document.getElementById('playlistCoverArt');
             if (coverArt && imageUrl) {
-                // Replace emoji with actual image
                 coverArt.innerHTML = `<img src="${imageUrl}" alt="Album cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" onerror="this.parentElement.innerHTML='<span>🔥</span>'">`;
             }
-        },
-        
-        extractYouTubeId(url) {
-            if (!url) return null;
-            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-            const match = url.match(regExp);
-            return (match && match[7]?.length === 11) ? match[7] : null;
         }
     };
 
