@@ -2653,6 +2653,21 @@ body.checkout-open {
     height: 135px !important;
 }
 
+@media (max-width: 480px) {
+    .youtube-mini-player {
+        width: 200px;
+        bottom: 80px;
+        right: 10px;
+    }
+    .youtube-mini-player iframe {
+        width: 200px !important;
+        height: 113px !important;
+    }
+    .mini-player-title {
+        max-width: 150px;
+    }
+}
+
 /* ========================================
    Improved Playlist Controls
    ======================================== */

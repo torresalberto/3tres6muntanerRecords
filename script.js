@@ -1000,13 +1000,8 @@ document.addEventListener('DOMContentLoaded', function() {
         mute() {
             const iframe = document.getElementById('ytPlayer');
             if (iframe) {
-                // Post message to YouTube iframe to mute
+                // Use postMessage only — modifying iframe.src would restart the video
                 iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
-                // Also reload with mute=1 as fallback
-                const src = iframe.src;
-                if (src.includes('mute=0')) {
-                    iframe.src = src.replace('mute=0', 'mute=1');
-                }
             }
             this.isMuted = true;
             this.updateUI(true, this.currentTitle, true);
@@ -1015,16 +1010,52 @@ document.addEventListener('DOMContentLoaded', function() {
         unmute() {
             const iframe = document.getElementById('ytPlayer');
             if (iframe) {
-                // Post message to YouTube iframe to unmute
+                // Use postMessage only — modifying iframe.src would restart the video
                 iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-                // Also reload with mute=0 as fallback
-                const src = iframe.src;
-                if (src.includes('mute=1')) {
-                    iframe.src = src.replace('mute=1', 'mute=0');
-                }
             }
             this.isMuted = false;
             this.updateUI(true, this.currentTitle, false);
+        },
+        
+        startMusicSearch(searchSrc, title) {
+            // Starts the mini-player with a pre-built iframe src (e.g. YouTube search embed)
+            const youtubeContainer = document.getElementById('youtubeAudioContainer');
+            if (!youtubeContainer) return;
+            
+            // Make sure the container is visible
+            youtubeContainer.style.display = '';
+            
+            this.currentTitle = title || '3TRES6 Radio';
+            this.isPlaying = true;
+            state.isPlaying = true;
+            
+            youtubeContainer.innerHTML = `
+                <div class="mini-player-inner">
+                    <div class="mini-player-info">
+                        <span class="mini-player-now-playing">▶ Now Playing</span>
+                        <span class="mini-player-title">${this.currentTitle}</span>
+                        <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
+                    </div>
+                    <iframe
+                        id="ytPlayer"
+                        width="240"
+                        height="135"
+                        src="${searchSrc}"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        frameborder="0">
+                    </iframe>
+                </div>
+            `;
+            
+            // Attach close button handler
+            document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                youtubeContainer.style.display = 'none';
+            });
+            
+            this.updateUI(true, this.currentTitle, this.isMuted);
+            console.log('Music search iframe created for:', title);
         },
         
         stopMusic() {
@@ -1261,25 +1292,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         playWithYouTubeSearch(track) {
-            // No YouTube URL available - play the default radio instead
-            // and show a toast notification about the track
-            AudioPlayer.startMusic(CONFIG.youtubeVideoId, track.title, AudioPlayer.isMuted);
-            this.isPlaying = true;
+            // No direct YouTube URL — use YouTube search embed to find the track
+            const searchQuery = encodeURIComponent(`${track.artist} ${track.trackTitle}`);
+            const muteParam = AudioPlayer.isMuted ? 1 : 0;
+            const searchSrc = `https://www.youtube.com/embed?listType=search&list=${searchQuery}&autoplay=1&mute=${muteParam}&controls=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
             
-            // Show brief notification
-            const toast = document.createElement('div');
-            toast.className = 'toast-notification';
-            toast.textContent = `🎵 ${track.title}`;
-            toast.style.cssText = `
-                position:fixed;bottom:100px;right:30px;background:var(--color-accent,#ff4d00);
-                color:white;padding:12px 20px;border-radius:8px;font-size:13px;
-                font-weight:500;z-index:9999;animation:slideIn 0.3s ease;max-width:280px;
-            `;
-            document.body.appendChild(toast);
-            setTimeout(() => {
-                toast.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => toast.remove(), 300);
-            }, 2500);
+            AudioPlayer.startMusicSearch(searchSrc, track.title);
+            this.isPlaying = true;
             
             this.highlightTrack(this.currentIndex);
             this.updateNowPlaying(track.title);
@@ -1288,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', function() {
             trackEvent('playlist_track_play', {
                 track_name: track.title,
                 track_index: this.currentIndex + 1,
-                source: 'radio_fallback'
+                source: 'youtube_search'
             });
         },
         
