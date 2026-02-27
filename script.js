@@ -1268,19 +1268,26 @@ document.addEventListener('DOMContentLoaded', function() {
             const audioToggle = document.getElementById('audioToggle');
             const audioControls = document.getElementById('audioControls');
             const trackInfo = document.querySelector('.track-info');
+            const coverEl = document.getElementById('playlistCoverArt')?.closest('.playlist-cover');
             
             if (playing) {
                 audioToggle?.classList.add('playing');
                 audioControls?.classList.add('playing');
+                if (!muted) {
+                    coverEl?.classList.add('is-playing');
+                } else {
+                    coverEl?.classList.remove('is-playing');
+                }
                 if (trackInfo) {
                     const displayTitle = title || '3TRES6 Radio';
-                    const truncated = displayTitle.length > 25 ? displayTitle.substring(0, 22) + '...' : displayTitle;
-                    trackInfo.textContent = muted ? `🔇 ${truncated}` : `🎵 ${truncated}`;
+                    const truncated = displayTitle.length > 28 ? displayTitle.substring(0, 25) + '...' : displayTitle;
+                    trackInfo.textContent = muted ? `🔇 ${truncated}` : truncated;
                 }
             } else {
                 audioToggle?.classList.remove('playing');
                 audioControls?.classList.remove('playing');
-                if (trackInfo) trackInfo.textContent = '🎵 3TRES6 Radio';
+                coverEl?.classList.remove('is-playing');
+                if (trackInfo) trackInfo.textContent = '3TRES6 Radio';
             }
         }
     };
