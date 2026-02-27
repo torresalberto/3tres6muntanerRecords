@@ -18,11 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
             baseUrl: 'https://api.discogs.com'
         },
         
-        // YouTube video for background music
+        // YouTube video for background music (main radio)
         youtubeVideoId: 'qfF19hUzLo0',
         
         // Mercado Pago Public Key
         mercadoPagoPublicKey: 'YOUR_MERCADO_PAGO_PUBLIC_KEY',
+        
+        // Stripe Public Key
+        stripePublicKey: 'YOUR_STRIPE_PUBLIC_KEY',
         
         // WhatsApp number (with country code)
         whatsappNumber: '5255879475564',
@@ -599,6 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Payment buttons
             document.getElementById('payWithMP')?.addEventListener('click', () => this.payWithMercadoPago());
+            document.getElementById('payWithStripe')?.addEventListener('click', () => this.payWithStripe());
             document.getElementById('payWithPayPal')?.addEventListener('click', () => this.payWithPayPal());
             document.getElementById('payWithTransfer')?.addEventListener('click', () => this.payWithTransfer());
         },
@@ -707,6 +711,64 @@ document.addEventListener('DOMContentLoaded', function() {
             
             window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${message}`, '_blank');
             this.close();
+        },
+        
+        async payWithStripe() {
+            const total = Cart.getTotal() + this.shippingCost;
+            
+            trackEvent('payment_method_selected', { method: 'stripe', value: total });
+            
+            // Check if Stripe is loaded
+            if (typeof Stripe === 'undefined') {
+                Cart.showNotification('Stripe no está disponible. Intenta otro método de pago.');
+                return;
+            }
+            
+            // In production, call backend to create a PaymentIntent
+            // For now, show instructions
+            Cart.showNotification('Stripe: Configura tu clave pública en CONFIG.stripePublicKey');
+            
+            /* Production implementation:
+            try {
+                const stripe = Stripe(CONFIG.stripePublicKey);
+                
+                const response = await fetch('/api/create-payment-intent', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        amount: total * 100, // Stripe uses cents
+                        currency: 'mxn',
+                        items: state.cart,
+                        customer: this.customerData
+                    })
+                });
+                
+                const { clientSecret } = await response.json();
+                
+                const result = await stripe.confirmCardPayment(clientSecret, {
+                    payment_method: {
+                        card: cardElement,
+                        billing_details: {
+                            name: `${this.customerData.firstName} ${this.customerData.lastName}`,
+                            email: this.customerData.email
+                        }
+                    }
+                });
+                
+                if (result.error) {
+                    Cart.showNotification('Error: ' + result.error.message);
+                } else {
+                    Cart.showNotification('¡Pago exitoso! 🎉');
+                    state.cart = [];
+                    Cart.save();
+                    Cart.updateCount();
+                    this.close();
+                }
+            } catch (error) {
+                console.error('Stripe error:', error);
+                Cart.showNotification('Error al procesar el pago');
+            }
+            */
         }
     };
 
@@ -838,17 +900,16 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
-    // Background Audio - Simple YouTube Embed
+    // Background Audio - YouTube Embed with Mini Player
     // ========================================
     
     const AudioPlayer = {
         isPlaying: false,
+        currentVideoId: null,
+        currentTitle: '3TRES6 Radio',
         
         init() {
             const audioToggle = document.getElementById('audioToggle');
-            
-            // Don't auto-start (browsers block autoplay without interaction)
-            // Music will start when user clicks the audio toggle button
             
             // TOGGLE BUTTON - starts/stops music
             audioToggle?.addEventListener('click', () => {
@@ -859,40 +920,59 @@ document.addEventListener('DOMContentLoaded', function() {
                     trackEvent('site_enter', { with_music: true });
                 }
             });
+            
+            // Auto-start radio after first user interaction (click anywhere)
+            const autoStartHandler = () => {
+                if (!this.isPlaying && !state.isPlaying) {
+                    this.startMusic();
+                }
+                document.removeEventListener('click', autoStartHandler);
+            };
+            // Delay auto-start to allow page to load
+            setTimeout(() => {
+                document.addEventListener('click', autoStartHandler, { once: true });
+            }, 1000);
         },
         
-        startMusic() {
+        startMusic(videoId = null, title = null) {
             const youtubeContainer = document.getElementById('youtubeAudioContainer');
             if (!youtubeContainer) {
                 console.error('YouTube container not found!');
                 return;
             }
             
-            const videoId = CONFIG.youtubeVideoId;
-            console.log('Starting music with video ID:', videoId);
+            const vid = videoId || CONFIG.youtubeVideoId;
+            this.currentVideoId = vid;
+            this.currentTitle = title || '3TRES6 Radio';
             
-            // Create iframe with autoplay - controls=1 helps with autoplay policy
-            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=1&playlist=${videoId}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+            console.log('Starting music with video ID:', vid);
             
-            // Minimal player positioned mostly off-screen
+            // Create iframe with autoplay
+            const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=0&loop=1&playlist=${vid}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+            
             youtubeContainer.innerHTML = `
-                <iframe 
-                    id="ytPlayer"
-                    width="100" 
-                    height="60" 
-                    src="${iframeSrc}"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    frameborder="0">
-                </iframe>
+                <div class="mini-player-inner">
+                    <div class="mini-player-info">
+                        <span class="mini-player-title">${this.currentTitle}</span>
+                    </div>
+                    <iframe 
+                        id="ytPlayer"
+                        width="200" 
+                        height="113" 
+                        src="${iframeSrc}"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        frameborder="0">
+                    </iframe>
+                </div>
             `;
             
             this.isPlaying = true;
             state.isPlaying = true;
-            this.updateUI(true);
+            this.updateUI(true, this.currentTitle);
             
             console.log('Music iframe created:', iframeSrc);
-            trackEvent('audio_play', { source: '3tres6_radio' });
+            trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: this.currentTitle });
         },
         
         stopMusic() {
@@ -901,13 +981,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             this.isPlaying = false;
             state.isPlaying = false;
+            this.currentVideoId = null;
             this.updateUI(false);
             
             console.log('Music stopped');
             trackEvent('audio_pause', {});
         },
         
-        updateUI(playing) {
+        updateUI(playing, title = null) {
             const audioToggle = document.getElementById('audioToggle');
             const audioControls = document.getElementById('audioControls');
             const trackInfo = document.querySelector('.track-info');
@@ -915,7 +996,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (playing) {
                 audioToggle?.classList.add('playing');
                 audioControls?.classList.add('playing');
-                if (trackInfo) trackInfo.textContent = '3TRES6 Radio 🎵';
+                if (trackInfo) {
+                    const displayTitle = title || '3TRES6 Radio';
+                    const truncated = displayTitle.length > 25 ? displayTitle.substring(0, 22) + '...' : displayTitle;
+                    trackInfo.textContent = `🎵 ${truncated}`;
+                }
             } else {
                 audioToggle?.classList.remove('playing');
                 audioControls?.classList.remove('playing');
@@ -933,12 +1018,40 @@ document.addEventListener('DOMContentLoaded', function() {
         isPlaying: false,
         
         init() {
-            // Play button for the playlist
+            // Play/Pause button
             document.getElementById('playlistPlayBtn')?.addEventListener('click', () => {
-                if (this.isPlaying && state.playlistMode === 'vinyl') {
+                if (this.isPlaying) {
                     this.pause();
                 } else {
                     this.playCurrentOrFirst();
+                }
+            });
+            
+            // Previous button
+            document.getElementById('playlistPrevBtn')?.addEventListener('click', () => {
+                if (this.currentIndex > 0) {
+                    this.playTrack(this.currentIndex - 1);
+                } else if (state.playlist.length > 0) {
+                    this.playTrack(state.playlist.length - 1);
+                }
+            });
+            
+            // Next button
+            document.getElementById('playlistNextBtn')?.addEventListener('click', () => {
+                if (this.currentIndex < state.playlist.length - 1) {
+                    this.playTrack(this.currentIndex + 1);
+                } else {
+                    this.playTrack(0);
+                }
+            });
+            
+            // Volume slider
+            document.getElementById('volumeSlider')?.addEventListener('input', (e) => {
+                // Volume control via postMessage to YouTube iframe
+                const iframe = document.getElementById('ytPlayer');
+                if (iframe) {
+                    // Store volume preference
+                    localStorage.setItem('3tres6_volume', e.target.value);
                 }
             });
             
@@ -1013,7 +1126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `).join('');
             
             // Update playlist title
-            const playlistTitle = document.querySelector('.playlist-title');
+            const playlistTitle = document.getElementById('playlistTitle');
             if (playlistTitle) {
                 playlistTitle.textContent = '"En Stock Ahora"';
             }
@@ -1063,6 +1176,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.updateCoverArt(track.imageUrl);
             }
             
+            // Update now playing display
+            this.updateNowPlayingDisplay(track);
+            
             // Get YouTube URL - either from Discogs or search
             let videoId = null;
             
@@ -1076,12 +1192,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Play the video
-            this.playYouTubeVideo(videoId, track.title);
+            // Play via AudioPlayer (switches main player)
+            AudioPlayer.startMusic(videoId, track.title);
+            this.isPlaying = true;
             
             // Update UI
             this.highlightTrack(index);
             this.updateNowPlaying(track.title);
+            this.updatePlayPauseBtn(true);
             
             trackEvent('playlist_track_play', {
                 track_name: track.title,
@@ -1092,37 +1210,36 @@ document.addEventListener('DOMContentLoaded', function() {
         
         playWithYouTubeSearch(track) {
             // Construct search query
-            const searchQuery = encodeURIComponent(`${track.artist} ${track.trackTitle} full`);
-            
-            // Use YouTube's nocookie embed with search results playlist
-            // This is a workaround - opens search in embedded player
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            if (!youtubeContainer) return;
-            
-            // For now, use a search URL approach that triggers YouTube search
-            // The user can then select from results
+            const searchQuery = encodeURIComponent(`${track.artist} ${track.trackTitle} vinyl full`);
             const searchUrl = `https://www.youtube.com/results?search_query=${searchQuery}`;
             
-            // Show a mini player with search suggestion
-            youtubeContainer.innerHTML = `
-                <div style="padding:10px;background:#111;border-radius:8px;position:fixed;bottom:80px;right:20px;z-index:1000;max-width:300px;">
-                    <p style="color:#fff;font-size:12px;margin:0 0 10px 0;">🎵 Buscando: ${track.title}</p>
-                    <a href="${searchUrl}" target="_blank" 
-                       style="display:inline-block;background:#ff4d00;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;font-size:12px;">
-                        Escuchar en YouTube →
+            // Show notification with search link
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.innerHTML = `
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                    <span>🎵 ${track.title}</span>
+                    <a href="${searchUrl}" target="_blank" rel="noopener" 
+                       style="color:#fff;text-decoration:underline;font-size:12px;">
+                        Buscar en YouTube →
                     </a>
                 </div>
             `;
-            
-            // Auto-hide after 5 seconds
+            toast.style.cssText = `
+                position:fixed;bottom:100px;right:30px;background:var(--color-accent,#ff4d00);
+                color:white;padding:15px 20px;border-radius:8px;font-size:14px;
+                font-weight:500;z-index:9999;animation:slideIn 0.3s ease;max-width:280px;
+            `;
+            document.body.appendChild(toast);
             setTimeout(() => {
-                if (youtubeContainer.querySelector('div')) {
-                    youtubeContainer.innerHTML = '';
-                }
-            }, 5000);
+                toast.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
             
             this.highlightTrack(this.currentIndex);
             this.updateNowPlaying(track.title);
+            this.updatePlayPauseBtn(true);
+            this.isPlaying = true;
             
             trackEvent('playlist_track_play', {
                 track_name: track.title,
@@ -1131,43 +1248,40 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         },
         
-        playYouTubeVideo(videoId, trackTitle) {
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            if (!youtubeContainer) return;
-            
-            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=0&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
-            
-            youtubeContainer.innerHTML = `
-                <iframe 
-                    id="ytPlayer"
-                    width="100" 
-                    height="60" 
-                    src="${iframeSrc}"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    frameborder="0">
-                </iframe>
-            `;
-            
-            this.isPlaying = true;
-            state.isPlaying = true;
-            AudioPlayer.updateUI(true);
-        },
-        
         playDefaultRadio() {
             state.playlistMode = 'radio';
             this.currentIndex = -1;
             AudioPlayer.startMusic();
             this.clearTrackHighlights();
+            this.isPlaying = true;
+            this.updatePlayPauseBtn(true);
+            
+            // Reset now playing display
+            const nowPlayingName = document.getElementById('nowPlayingName');
+            if (nowPlayingName) nowPlayingName.textContent = '3TRES6 Radio';
         },
         
         pause() {
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            youtubeContainer.innerHTML = '';
+            AudioPlayer.stopMusic();
             
             this.isPlaying = false;
-            state.isPlaying = false;
-            AudioPlayer.updateUI(false);
+            this.updatePlayPauseBtn(false);
+        },
+        
+        updatePlayPauseBtn(playing) {
+            const playBtn = document.getElementById('playlistPlayBtn');
+            if (!playBtn) return;
+            const playIcon = playBtn.querySelector('.play-icon');
+            const pauseIcon = playBtn.querySelector('.pause-icon');
+            if (playIcon) playIcon.style.display = playing ? 'none' : 'block';
+            if (pauseIcon) pauseIcon.style.display = playing ? 'block' : 'none';
+        },
+        
+        updateNowPlayingDisplay(track) {
+            const nowPlayingName = document.getElementById('nowPlayingName');
+            const playlistArtist = document.getElementById('playlistArtist');
+            if (nowPlayingName) nowPlayingName.textContent = track.title;
+            if (playlistArtist) playlistArtist.textContent = `by ${track.artist}`;
         },
         
         highlightTrack(index) {
@@ -1206,10 +1320,10 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         updateCoverArt(imageUrl) {
-            const coverArt = document.querySelector('.playlist-cover-art');
+            const coverArt = document.getElementById('playlistCoverArt');
             if (coverArt && imageUrl) {
                 // Replace emoji with actual image
-                coverArt.innerHTML = `<img src="${imageUrl}" alt="Album cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">`;
+                coverArt.innerHTML = `<img src="${imageUrl}" alt="Album cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" onerror="this.parentElement.innerHTML='<span>🔥</span>'">`;
             }
         },
         
@@ -1218,6 +1332,176 @@ document.addEventListener('DOMContentLoaded', function() {
             const regExp = /^.*((youtu.be\/)|(v\/)|(\/.+\/watch\/)|(embed\/)|(watch\?)|(v=))([^#&?]*).*/;
             const match = url.match(regExp);
             return (match && match[8]?.length === 11) ? match[8] : null;
+        }
+    };
+
+    // ========================================
+    // Instagram Carousel
+    // ========================================
+    
+    const InstagramCarousel = {
+        currentSlide: 0,
+        totalSlides: 6,
+        autoPlayInterval: null,
+        
+        init() {
+            const prevBtn = document.getElementById('instagramPrev');
+            const nextBtn = document.getElementById('instagramNext');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            prevBtn?.addEventListener('click', () => this.prev());
+            nextBtn?.addEventListener('click', () => this.next());
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => this.goTo(index));
+            });
+            
+            // Auto-play carousel
+            this.startAutoPlay();
+            
+            // Pause on hover
+            const carousel = document.getElementById('instagramCarousel');
+            carousel?.addEventListener('mouseenter', () => this.stopAutoPlay());
+            carousel?.addEventListener('mouseleave', () => this.startAutoPlay());
+            
+            // Touch/swipe support
+            this.initSwipe();
+        },
+        
+        goTo(index) {
+            const slides = document.querySelectorAll('.instagram-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            slides[this.currentSlide]?.classList.remove('active');
+            dots[this.currentSlide]?.classList.remove('active');
+            
+            this.currentSlide = (index + this.totalSlides) % this.totalSlides;
+            
+            slides[this.currentSlide]?.classList.add('active');
+            dots[this.currentSlide]?.classList.add('active');
+        },
+        
+        next() {
+            this.goTo(this.currentSlide + 1);
+        },
+        
+        prev() {
+            this.goTo(this.currentSlide - 1);
+        },
+        
+        startAutoPlay() {
+            this.stopAutoPlay();
+            this.autoPlayInterval = setInterval(() => this.next(), 4000);
+        },
+        
+        stopAutoPlay() {
+            if (this.autoPlayInterval) {
+                clearInterval(this.autoPlayInterval);
+                this.autoPlayInterval = null;
+            }
+        },
+        
+        initSwipe() {
+            const carousel = document.getElementById('instagramCarousel');
+            if (!carousel) return;
+            
+            let startX = 0;
+            let isDragging = false;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }, { passive: true });
+            
+            carousel.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                const endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) this.next();
+                    else this.prev();
+                }
+                isDragging = false;
+            }, { passive: true });
+        }
+    };
+
+    // ========================================
+    // Calendar Live Tabs
+    // ========================================
+    
+    const CalendarLiveTabs = {
+        init() {
+            const ytTab = document.getElementById('ytLiveTab');
+            const tiktokTab = document.getElementById('tiktokLiveTab');
+            const embedFrame = document.getElementById('liveEmbedFrame');
+            
+            ytTab?.addEventListener('click', () => {
+                this.switchTab('youtube');
+                trackEvent('live_tab_switch', { platform: 'youtube' });
+            });
+            
+            tiktokTab?.addEventListener('click', () => {
+                this.switchTab('tiktok');
+                trackEvent('live_tab_switch', { platform: 'tiktok' });
+            });
+        },
+        
+        switchTab(platform) {
+            const tabs = document.querySelectorAll('.live-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            
+            const activeTab = document.querySelector(`.live-tab[data-platform="${platform}"]`);
+            activeTab?.classList.add('active');
+            
+            const embedFrame = document.getElementById('liveEmbedFrame');
+            if (!embedFrame) return;
+            
+            // Remove existing iframe
+            const existingIframe = embedFrame.querySelector('iframe');
+            if (existingIframe) existingIframe.remove();
+            
+            const placeholder = document.getElementById('liveEmbedPlaceholder');
+            
+            if (platform === 'youtube') {
+                // YouTube live embed
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxxxxx&autoplay=0&rel=0&modestbranding=1`;
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                iframe.title = '3TRES6 Records YouTube Live';
+                embedFrame.insertBefore(iframe, placeholder);
+                
+                // Update placeholder follow button
+                if (placeholder) {
+                    placeholder.querySelector('.follow-live-btn.yt')?.style.setProperty('display', 'inline-flex');
+                    placeholder.querySelector('.follow-live-btn.tt')?.style.setProperty('display', 'none');
+                }
+            } else if (platform === 'tiktok') {
+                // TikTok doesn't support direct live embeds, show redirect
+                if (placeholder) {
+                    placeholder.style.display = 'flex';
+                    const icon = placeholder.querySelector('svg');
+                    if (icon) {
+                        icon.innerHTML = '<path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>';
+                    }
+                    const p = placeholder.querySelector('p');
+                    if (p) p.textContent = 'TikTok no permite embeds directos de live';
+                    const sub = placeholder.querySelector('.placeholder-sub');
+                    if (sub) sub.textContent = 'Haz click para ver nuestro live en TikTok';
+                    
+                    // Update buttons
+                    const ytBtn = placeholder.querySelector('.follow-live-btn.yt');
+                    const ttBtn = placeholder.querySelector('.follow-live-btn.tt');
+                    if (ytBtn) ytBtn.style.display = 'none';
+                    if (ttBtn) {
+                        ttBtn.style.display = 'inline-flex';
+                        ttBtn.href = 'https://www.tiktok.com/@3tres6records/live';
+                        ttBtn.textContent = 'Ver en TikTok Live';
+                    }
+                }
+            }
         }
     };
 
@@ -1459,6 +1743,13 @@ document.addEventListener('DOMContentLoaded', function() {
     CatalogFilters.init();
     MobileNav.init();
     ExitIntent.init();
+    InstagramCarousel.init();
+    CalendarLiveTabs.init();
+    
+    // Re-process Instagram embeds if SDK loaded
+    if (window.instgrm) {
+        window.instgrm.Embeds.process();
+    }
 
     // ========================================
     // Console Branding

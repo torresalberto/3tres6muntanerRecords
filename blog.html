@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Blog | 3TRES6 Records – Aprende sobre Vinilos, Tornamesas y DJ</title>
+    <meta name="description" content="Aprende todo sobre vinilos: cómo empezar tu colección, tipos de tornamesas, técnicas de DJ, crate digging y más. Blog educativo de 3TRES6 Records.">
+    <meta name="keywords" content="vinilos, vinyl, tornamesa, technics, dj, crate digging, house, techno, coleccionista, guía vinilos, cómo usar tornamesa">
+    <meta name="author" content="3TRES6 Records">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://3tres6records.com/blog">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://3tres6records.com/blog">
+    <meta property="og:title" content="Blog 3TRES6 Records – Educación Vinyl">
+    <meta property="og:description" content="Aprende sobre vinilos, tornamesas, técnicas de DJ y más. Contenido educativo para coleccionistas.">
+    <meta property="og:image" content="https://3tres6records.com/images/blog-og.jpg">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Blog CSS -->
+    <style>
+        /* ========================================
+           Blog Page Styles
+           ======================================== */
+        
+        .blog-hero {
+            background: linear-gradient(180deg, var(--color-bg-light) 0%, var(--color-bg) 100%);
+            padding: 80px 40px 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .blog-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .blog-hero p {
+            font-size: 18px;
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .blog-categories {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .blog-cat-btn {
+            padding: 8px 20px;
+            border: 1px solid var(--color-border);
+            border-radius: 50px;
+            background: none;
+            color: var(--color-text-muted);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-main);
+        }
+        
+        .blog-cat-btn:hover,
+        .blog-cat-btn.active {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            background: var(--color-accent-light);
+        }
+        
+        .blog-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .blog-featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .blog-article {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .blog-article:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+        
+        .blog-article-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--color-bg-light), var(--color-bg-card));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-article-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 50%, var(--color-bg-card));
+        }
+        
+        .blog-article-cat {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--color-accent);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            z-index: 1;
+        }
+        
+        .blog-article-body {
+            padding: 24px;
+        }
+        
+        .blog-article-body h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .blog-article-body h2 a {
+            color: var(--color-text);
+            transition: var(--transition);
+        }
+        
+        .blog-article-body h2 a:hover {
+            color: var(--color-accent);
+        }
+        
+        .blog-article-body p {
+            color: var(--color-text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .blog-article-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: var(--color-text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .blog-article-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--color-accent);
+            font-size: 13px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .blog-article-read-more:hover {
+            gap: 10px;
+        }
+        
+        /* Full Article Styles */
+        .blog-article-full {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+        
+        .article-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--color-text-muted);
+            font-size: 13px;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        .article-content h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 40px 0 16px;
+            color: var(--color-text);
+        }
+        
+        .article-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 12px;
+            color: var(--color-text);
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+            color: var(--color-text-muted);
+        }
+        
+        .article-content ul,
+        .article-content ol {
+            margin: 0 0 20px 24px;
+            color: var(--color-text-muted);
+        }
+        
+        .article-content li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+        
+        .article-content strong {
+            color: var(--color-text);
+        }
+        
+        .article-content .highlight-box {
+            background: var(--color-bg-card);
+            border-left: 4px solid var(--color-accent);
+            padding: 20px 24px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+        }
+        
+        .article-content .highlight-box p {
+            margin: 0;
+            color: var(--color-text);
+        }
+        
+        .article-content .product-recommendation {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin: 30px 0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .article-content .product-recommendation .rec-emoji {
+            font-size: 48px;
+            flex-shrink: 0;
+        }
+        
+        .article-content .product-recommendation h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .article-content .product-recommendation p {
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .article-content .product-recommendation a {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+        
+        .article-divider {
+            border: none;
+            border-top: 1px solid var(--color-border);
+            margin: 60px 0;
+        }
+        
+        .blog-grid-section {
+            margin-bottom: 60px;
+        }
+        
+        .blog-grid-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .blog-articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .blog-article-small {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .blog-article-small:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-3px);
+        }
+        
+        .blog-article-small .blog-article-image {
+            height: 160px;
+            font-size: 60px;
+        }
+        
+        .blog-article-small .blog-article-body {
+            padding: 20px;
+        }
+        
+        .blog-article-small .blog-article-body h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .blog-article-small .blog-article-body h3 a {
+            color: var(--color-text);
+            transition: var(--transition);
+        }
+        
+        .blog-article-small .blog-article-body h3 a:hover {
+            color: var(--color-accent);
+        }
+        
+        .blog-article-small .blog-article-body p {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        /* Back to store CTA */
+        .blog-store-cta {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .blog-store-cta h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .blog-store-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 24px;
+        }
+        
+        .blog-store-cta .cta-button {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        
+        .blog-store-cta .cta-button:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .blog-hero {
+                padding: 60px 20px 40px;
+            }
+            
+            .blog-hero h1 {
+                font-size: 32px;
+            }
+            
+            .blog-main {
+                padding: 40px 20px;
+            }
+            
+            .blog-featured {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .blog-articles-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .blog-article-full {
+                padding: 40px 20px;
+            }
+            
+            .article-header h1 {
+                font-size: 26px;
+            }
+            
+            .article-content {
+                font-size: 15px;
+            }
+            
+            .article-content .product-recommendation {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .blog-articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G042PFG6TG');
+    </script>
+    
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "3TRES6 Records Blog",
+        "description": "Blog educativo sobre vinilos, tornamesas, técnicas de DJ y cultura del vinilo",
+        "url": "https://3tres6records.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "3TRES6 Records",
+            "logo": "https://3tres6records.com/images/logo.png"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span class="ticker-item">🎵 Blog de Educación Vinyl</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">📚 Aprende a usar tu tornamesa</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🎧 Técnicas de DJ para principiantes</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🔍 Crate Digging: encuentra joyas ocultas</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🎵 Blog de Educación Vinyl</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">📚 Aprende a usar tu tornamesa</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🎧 Técnicas de DJ para principiantes</span>
+                <span class="ticker-separator">•</span>
+                <span class="ticker-item">🔍 Crate Digging: encuentra joyas ocultas</span>
+                <span class="ticker-separator">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <a href="/" class="logo" aria-label="3TRES6 Records Home">
+                <span class="logo-text">3TRES6</span>
+                <span class="logo-subtitle">RECORDS</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+                <a href="/#catalogo" class="nav-item">CATÁLOGO</a>
+                <a href="/#calendario" class="nav-item">CALENDARIO</a>
+                <a href="/#instagram" class="nav-item">INSTAGRAM</a>
+                <a href="blog.html" class="nav-item" style="color:var(--color-accent)">BLOG</a>
+                <a href="/#nosotros" class="nav-item">NOSOTROS</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">
+                    Discogs
+                </a>
+                <a href="/" class="cart-icon" aria-label="Tienda">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+            <a href="/#catalogo">Catálogo</a>
+            <a href="/#calendario">Calendario</a>
+            <a href="/#instagram">Instagram</a>
+            <a href="blog.html" style="color:var(--color-accent)">Blog</a>
+            <a href="/#nosotros">Nosotros</a>
+            <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+        </nav>
+    </header>
+
+    <!-- Blog Hero -->
+    <div class="blog-hero">
+        <h1>Blog & Educación Vinyl</h1>
+        <p>Aprende todo sobre vinilos, tornamesas, técnicas de DJ y la cultura del vinilo. Contenido educativo para coleccionistas y DJs de todos los niveles.</p>
+        
+        <div class="blog-categories">
+            <button class="blog-cat-btn active" data-cat="all">Todos</button>
+            <button class="blog-cat-btn" data-cat="guia">Guías Básicas</button>
+            <button class="blog-cat-btn" data-cat="tecnica">Técnica DJ</button>
+            <button class="blog-cat-btn" data-cat="crate">Crate Digging</button>
+            <button class="blog-cat-btn" data-cat="historia">Historia</button>
+            <button class="blog-cat-btn" data-cat="equipo">Equipo</button>
+        </div>
+    </div>
+
+    <!-- Blog Main Content -->
+    <main class="blog-main">
+        
+        <!-- Featured Articles -->
+        <div class="blog-featured">
+            <article class="blog-article" id="guia-vinilos" data-cat="guia">
+                <div class="blog-article-image">
+                    <span class="blog-article-cat">Guía Básica</span>
+                    🎵
+                </div>
+                <div class="blog-article-body">
+                    <div class="blog-article-meta">
+                        <span>📅 Febrero 2026</span>
+                        <span>⏱️ 8 min lectura</span>
+                        <span>👁️ 1.2k vistas</span>
+                    </div>
+                    <h2><a href="#guia-vinilos-full">Guía Completa para Principiantes: Cómo Empezar con los Vinilos</a></h2>
+                    <p>Todo lo que necesitas saber para comenzar tu colección de vinilos: qué tornamesa comprar, cómo cuidar tus discos, dónde encontrar las mejores piezas y cómo limpiarlos correctamente.</p>
+                    <a href="#guia-vinilos-full" class="blog-article-read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+            
+            <article class="blog-article" id="tipos-controladores" data-cat="equipo">
+                <div class="blog-article-image">
+                    <span class="blog-article-cat">Equipo</span>
+                    🎛️
+                </div>
+                <div class="blog-article-body">
+                    <div class="blog-article-meta">
+                        <span>📅 Febrero 2026</span>
+                        <span>⏱️ 6 min lectura</span>
+                        <span>👁️ 890 vistas</span>
+                    </div>
+                    <h2><a href="#controladores-full">Tipos de Controladores y Tornamesas: Guía Completa 2026</a></h2>
+                    <p>Comparativa completa de los mejores controladores y tornamesas del mercado. Desde los legendarios Technics SL-1200 hasta los modelos modernos de Pioneer y Rane.</p>
+                    <a href="#controladores-full" class="blog-article-read-more">Leer artículo completo →</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Full Article: Guía para Principiantes -->
+        <div id="guia-vinilos-full" class="blog-article-full">
+            <div class="article-header">
+                <span class="article-category">Guía Básica</span>
+                <h1>Guía Completa para Principiantes: Cómo Empezar con los Vinilos</h1>
+                <div class="article-meta">
+                    <span>📅 Febrero 2026</span>
+                    <span>✍️ 3TRES6 Records</span>
+                    <span>⏱️ 8 min lectura</span>
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <p>El mundo del vinilo puede parecer intimidante al principio, pero una vez que entras, es difícil salir. En esta guía completa te explicamos todo lo que necesitas saber para comenzar tu colección y disfrutar de la mejor experiencia de audio analógico.</p>
+                
+                <div class="highlight-box">
+                    <p>💡 <strong>¿Por qué vinilo?</strong> El vinilo ofrece una calidez y profundidad sonora que los formatos digitales no pueden replicar. Además, es una experiencia táctil y visual única: el ritual de sacar el disco, limpiar la aguja y escuchar el crujido antes de que empiece la música es incomparable.</p>
+                </div>
+                
+                <h2>1. Tu Primera Tornamesa: ¿Qué Comprar?</h2>
+                
+                <p>La tornamesa es el corazón de tu sistema de vinilo. Hay tres categorías principales:</p>
+                
+                <h3>Tornamesas de Entrada (Principiantes)</h3>
+                <ul>
+                    <li><strong>Audio-Technica AT-LP120XUSB</strong> – La mejor opción para principiantes. Tiene tracción directa, salida USB y viene con cápsula AT-VM95E. Precio: ~$5,000-7,000 MXN.</li>
+                    <li><strong>Pro-Ject Debut Carbon EVO</strong> – Excelente calidad de sonido para su precio. Tracción por correa, muy silenciosa. Precio: ~$8,000-10,000 MXN.</li>
+                    <li><strong>Rega Planar 1</strong> – Sonido excepcional, diseño minimalista. Ideal si priorizas la calidad de audio. Precio: ~$9,000-12,000 MXN.</li>
+                </ul>
+                
+                <h3>Tornamesas Profesionales (DJ)</h3>
+                <ul>
+                    <li><strong>Technics SL-1200MK7</strong> – El estándar de la industria. Tracción directa, motor de alta torque, construcción indestructible. Precio: ~$25,000-30,000 MXN.</li>
+                    <li><strong>Pioneer PLX-1000</strong> – Alternativa más accesible al Technics. Excelente para DJ. Precio: ~$15,000-18,000 MXN.</li>
+                </ul>
+                
+                <div class="product-recommendation">
+                    <span class="rec-emoji">🎵</span>
+                    <div>
+                        <h4>¿Buscas vinilos para tu nueva tornamesa?</h4>
+                        <p>En 3TRES6 Records tenemos una selección curada de vinilos de House, Techno, Minimal y Disco seleccionados en Barcelona. <a href="/#catalogo">Ver catálogo →</a></p>
+                    </div>
+                </div>
+                
+                <h2>2. El Sistema de Sonido</h2>
+                
+                <p>Una tornamesa sola no es suficiente. Necesitas:</p>
+                
+                <ul>
+                    <li><strong>Preamplificador Phono (Phono Preamp)</strong> – La señal del vinilo es muy débil y necesita amplificarse. Muchas tornamesas modernas tienen uno integrado, pero uno externo mejora la calidad. Recomendamos el <strong>Pro-Ject Phono Box S2</strong> (~$2,500 MXN).</li>
+                    <li><strong>Amplificador</strong> – Para conectar el preamp y las bocinas. El <strong>Yamaha A-S301</strong> es una excelente opción de entrada (~$8,000 MXN).</li>
+                    <li><strong>Bocinas</strong> – Las <strong>Klipsch R-51M</strong> son perfectas para vinilo: eficientes, con buen rango dinámico (~$6,000 MXN el par).</li>
+                </ul>
+                
+                <h2>3. Cómo Cuidar tus Vinilos</h2>
+                
+                <p>El cuidado adecuado de tus vinilos es fundamental para preservar su calidad sonora:</p>
+                
+                <h3>Limpieza</h3>
+                <ul>
+                    <li>Usa siempre un <strong>cepillo antiestático</strong> antes de reproducir cada disco</li>
+                    <li>Para limpieza profunda, invierte en una <strong>máquina limpiadora de vinilos</strong> o usa el método de limpieza con agua destilada y jabón neutro</li>
+                    <li>Nunca toques la superficie del disco con los dedos; siempre tómalo por los bordes</li>
+                </ul>
+                
+                <h3>Almacenamiento</h3>
+                <ul>
+                    <li>Guarda los vinilos <strong>verticalmente</strong>, nunca apilados horizontalmente</li>
+                    <li>Usa <strong>fundas internas de polietileno</strong> para proteger el disco</li>
+                    <li>Mantén los discos en un lugar fresco, seco y alejado de la luz solar directa</li>
+                    <li>La temperatura ideal es entre 18-22°C con humedad relativa del 45-50%</li>
+                </ul>
+                
+                <h2>4. Entendiendo las Condiciones del Vinilo</h2>
+                
+                <p>Cuando compras vinilos de segunda mano, verás estas clasificaciones:</p>
+                
+                <ul>
+                    <li><strong>M (Mint)</strong> – Perfecto, sin usar. Como nuevo.</li>
+                    <li><strong>VG+ (Very Good Plus)</strong> – Excelente condición. Puede tener marcas muy leves que no afectan la reproducción.</li>
+                    <li><strong>VG (Very Good)</strong> – Buena condición. Puede tener algo de ruido de superficie.</li>
+                    <li><strong>G+ (Good Plus)</strong> – Condición aceptable. Ruido de superficie notable.</li>
+                    <li><strong>G (Good)</strong> – Solo para coleccionistas. Mucho ruido de superficie.</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p>🎯 <strong>Consejo de 3TRES6:</strong> En nuestra tienda solo vendemos vinilos en condición VG+ o Mint. Cada disco es inspeccionado y limpiado antes de ser listado. Siempre incluimos la condición tanto del vinilo como de la funda.</p>
+                </div>
+                
+                <h2>5. Dónde Comprar Vinilos</h2>
+                
+                <p>Hay varias opciones para encontrar vinilos:</p>
+                
+                <ul>
+                    <li><strong>Tiendas especializadas</strong> – La mejor experiencia. Puedes escuchar antes de comprar.</li>
+                    <li><strong>Discogs.com</strong> – El marketplace más grande del mundo para vinilos. Millones de listados de vendedores de todo el mundo.</li>
+                    <li><strong>Mercados de pulgas y tianguis</strong> – Puedes encontrar joyas a precios increíbles si sabes qué buscar.</li>
+                    <li><strong>3TRES6 Records</strong> – Vinilos seleccionados en Barcelona, enviados a México. Especialistas en House, Techno, Minimal y Disco.</li>
+                </ul>
+                
+                <div class="product-recommendation">
+                    <span class="rec-emoji">📦</span>
+                    <div>
+                        <h4>Envíos a todo México</h4>
+                        <p>Compramos y seleccionamos vinilos en las mejores tiendas de Barcelona y los enviamos directamente a tu puerta. Envío estándar desde $99 MXN. <a href="/#catalogo">Explorar catálogo →</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="article-divider">
+
+        <!-- Full Article: Controladores -->
+        <div id="controladores-full" class="blog-article-full">
+            <div class="article-header">
+                <span class="article-category">Equipo</span>
+                <h1>Tipos de Controladores y Tornamesas: Guía Completa 2026</h1>
+                <div class="article-meta">
+                    <span>📅 Febrero 2026</span>
+                    <span>✍️ 3TRES6 Records</span>
+                    <span>⏱️ 6 min lectura</span>
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <p>El mundo del DJ ha evolucionado enormemente en los últimos años. Desde los clásicos Technics hasta los modernos controladores digitales, hay opciones para todos los estilos y presupuestos. En esta guía te explicamos las diferencias y cuál es la mejor opción para ti.</p>
+                
+                <h2>Tornamesas de Vinilo (Turntables)</h2>
+                
+                <p>Las tornamesas son el instrumento original del DJ. Hay dos tipos principales:</p>
+                
+                <h3>Tracción Directa (Direct Drive)</h3>
+                <p>El motor está directamente conectado al plato. Ventajas:</p>
+                <ul>
+                    <li>Arranque rápido (ideal para scratching)</li>
+                    <li>Torque alto y constante</li>
+                    <li>Más durables para uso profesional</li>
+                    <li>Mejor para técnicas de DJ como scratching y beatmatching manual</li>
+                </ul>
+                <p><strong>Modelos recomendados:</strong> Technics SL-1200MK7, Pioneer PLX-1000, Reloop RP-8000 MK2</p>
+                
+                <h3>Tracción por Correa (Belt Drive)</h3>
+                <p>El motor está conectado al plato mediante una correa. Ventajas:</p>
+                <ul>
+                    <li>Menos vibración del motor (mejor para escucha crítica)</li>
+                    <li>Más económicas</li>
+                    <li>Ideales para coleccionistas y audiófilos</li>
+                </ul>
+                <p><strong>Modelos recomendados:</strong> Pro-Ject Debut Carbon EVO, Rega Planar 1, Audio-Technica AT-LP120</p>
+                
+                <h2>Controladores DJ</h2>
+                
+                <p>Los controladores son dispositivos que combinan jog wheels (ruedas que simulan platos de tornamesa), mezcladora y efectos en un solo equipo. Se conectan a una computadora y usan software como Serato DJ, Traktor o rekordbox.</p>
+                
+                <h3>Controladores de Entrada</h3>
+                <ul>
+                    <li><strong>Pioneer DDJ-400</strong> – El más popular para principiantes. Compatible con rekordbox. ~$8,000 MXN</li>
+                    <li><strong>Hercules DJControl Inpulse 500</strong> – Excelente relación calidad-precio. ~$5,000 MXN</li>
+                    <li><strong>Numark Mixtrack Platinum FX</strong> – Buenas jog wheels, efectos integrados. ~$7,000 MXN</li>
+                </ul>
+                
+                <h3>Controladores Profesionales</h3>
+                <ul>
+                    <li><strong>Pioneer DDJ-1000</strong> – El estándar profesional. Jog wheels de 7 pulgadas con pantalla. ~$25,000 MXN</li>
+                    <li><strong>Rane One</strong> – Diseñado para Serato DJ. Excelente para scratching. ~$22,000 MXN</li>
+                    <li><strong>Native Instruments Traktor Kontrol S4 MK3</strong> – Perfecto para Traktor. ~$20,000 MXN</li>
+                </ul>
+                
+                <h2>Mezcladoras (Mixers)</h2>
+                
+                <p>Si usas tornamesas, necesitas una mezcladora. Las más populares son:</p>
+                
+                <ul>
+                    <li><strong>Pioneer DJM-250MK2</strong> – Perfecta para principiantes con tornamesas. ~$8,000 MXN</li>
+                    <li><strong>Allen &amp; Heath Xone:23</strong> – Sonido analógico excepcional. ~$12,000 MXN</li>
+                    <li><strong>Pioneer DJM-900NXS2</strong> – El estándar de los clubs. ~$45,000 MXN</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p>🎯 <strong>Nuestra recomendación:</strong> Si quieres aprender a mezclar con vinilo de verdad, empieza con dos tornamesas de tracción directa (Pioneer PLX-500 o Audio-Technica AT-LP120) y una mezcladora básica (Pioneer DJM-250MK2). Es la configuración más auténtica y te enseñará las bases del DJing.</p>
+                </div>
+                
+                <div class="product-recommendation">
+                    <span class="rec-emoji">🎵</span>
+                    <div>
+                        <h4>¿Ya tienes tu setup? Ahora necesitas los discos</h4>
+                        <p>Tenemos vinilos de House, Techno, Minimal y Disco perfectos para practicar y mezclar. Todos en condición VG+ o Mint. <a href="/#catalogo">Ver catálogo →</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="article-divider">
+
+        <!-- More Articles Grid -->
+        <div class="blog-grid-section">
+            <h2>Más Artículos</h2>
+            <div class="blog-articles-grid">
+                
+                <article class="blog-article-small" id="crate-digging" data-cat="crate">
+                    <div class="blog-article-image">
+                        <span class="blog-article-cat">Crate Digging</span>
+                        🔍
+                    </div>
+                    <div class="blog-article-body">
+                        <div class="blog-article-meta">
+                            <span>📅 Ene 2026</span>
+                            <span>⏱️ 5 min</span>
+                        </div>
+                        <h3><a href="#crate-digging-full">El Arte del Crate Digging: Cómo Encontrar Joyas Ocultas</a></h3>
+                        <p>Técnicas y consejos para encontrar los mejores vinilos en tiendas de segunda mano, mercados y tiendas especializadas.</p>
+                        <a href="#crate-digging-full" class="blog-article-read-more">Leer →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-article-small" id="historia-house" data-cat="historia">
+                    <div class="blog-article-image">
+                        <span class="blog-article-cat">Historia</span>
+                        🏛️
+                    </div>
+                    <div class="blog-article-body">
+                        <div class="blog-article-meta">
+                            <span>📅 Ene 2026</span>
+                            <span>⏱️ 7 min</span>
+                        </div>
+                        <h3><a href="#historia-house-full">La Historia del House Music: De Chicago al Mundo</a></h3>
+                        <p>Cómo nació el House Music en los clubs de Chicago en los años 80 y cómo conquistó el mundo entero.</p>
+                        <a href="#historia-house-full" class="blog-article-read-more">Leer →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-article-small" id="tecnicas-dj" data-cat="tecnica">
+                    <div class="blog-article-image">
+                        <span class="blog-article-cat">Técnica DJ</span>
+                        🎚️
+                    </div>
+                    <div class="blog-article-body">
+                        <div class="blog-article-meta">
+                            <span>📅 Ene 2026</span>
+                            <span>⏱️ 6 min</span>
+                        </div>
+                        <h3><a href="#tecnicas-dj-full">Técnicas Básicas de DJ: Beatmatching, Mixing y Scratching</a></h3>
+                        <p>Aprende las técnicas fundamentales del DJing con vinilo: cómo hacer beatmatching manual, mezclas suaves y scratching básico.</p>
+                        <a href="#tecnicas-dj-full" class="blog-article-read-more">Leer →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-article-small" id="limpiar-vinilos" data-cat="guia">
+                    <div class="blog-article-image">
+                        <span class="blog-article-cat">Guía Básica</span>
+                        🧹
+                    </div>
+                    <div class="blog-article-body">
+                        <div class="blog-article-meta">
+                            <span>📅 Dic 2025</span>
+                            <span>⏱️ 4 min</span>
+                        </div>
+                        <h3><a href="#limpiar-vinilos-full">Cómo Limpiar tus Vinilos: Guía Paso a Paso</a></h3>
+                        <p>Métodos caseros y profesionales para limpiar tus vinilos y mantenerlos en perfectas condiciones.</p>
+                        <a href="#limpiar-vinilos-full" class="blog-article-read-more">Leer →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-article-small" id="historia-techno" data-cat="historia">
+                    <div class="blog-article-image">
+                        <span class="blog-article-cat">Historia</span>
+                        🤖
+                    </div>
+                    <div class="blog-article-body">
+                        <div class="blog-article-meta">
+                            <span>📅 Dic 2025</span>
+                            <span>⏱️ 8 min</span>
+                        </div>
+                        <h3><a href="#historia-techno-full">Techno de Detroit: La Música del Futuro que Nació en el Pasado</a></h3>
+                        <p>La historia del Techno de Detroit, sus pioneros (Juan Atkins, Derrick May, Kevin Saunderson) y su influencia global.</p>
+                        <a href="#historia-techno-full" class="blog-article-read-more">Leer →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-article-small" id="discogs-guia" data-cat="guia">
+                    <div class="blog-article-image">
+                        <span class="blog-article-cat">Guía Básica</span>
+                        💻
+                    </div>
+                    <div class="blog-article-body">
+                        <div class="blog-article-meta">
+                            <span>📅 Nov 2025</span>
+                            <span>⏱️ 5 min</span>
+                        </div>
+                        <h3><a href="#discogs-guia-full">Cómo Usar Discogs: La Biblia del Coleccionista de Vinilos</a></h3>
+                        <p>Guía completa para usar Discogs: cómo buscar, comprar, vender y valorar tu colección de vinilos.</p>
+                        <a href="#discogs-guia-full" class="blog-article-read-more">Leer →</a>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+
+        <!-- Article: Crate Digging -->
+        <div id="crate-digging-full" class="blog-article-full">
+            <div class="article-header">
+                <span class="article-category">Crate Digging</span>
+                <h1>El Arte del Crate Digging: Cómo Encontrar Joyas Ocultas</h1>
+                <div class="article-meta">
+                    <span>📅 Enero 2026</span>
+                    <span>✍️ 3TRES6 Records</span>
+                    <span>⏱️ 5 min lectura</span>
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <p>El "crate digging" (literalmente "excavar en cajas") es el arte de buscar vinilos raros y valiosos en tiendas de segunda mano, mercados de pulgas y tiendas especializadas. Es una habilidad que se desarrolla con el tiempo y la experiencia.</p>
+                
+                <h2>¿Qué es el Crate Digging?</h2>
+                
+                <p>El término viene de las cajas de madera (crates) donde se almacenaban los vinilos en las tiendas de discos. Los DJs y coleccionistas pasaban horas revisando estas cajas en busca de piezas raras, ediciones limitadas o simplemente buenos discos a precios bajos.</p>
+                
+                <h2>Dónde Hacer Crate Digging en México</h2>
+                
+                <ul>
+                    <li><strong>Tianguis del Chopo (CDMX)</strong> – El mercado de música alternativa más famoso de México. Sábados en la colonia Santa María la Ribera.</li>
+                    <li><strong>Lagunilla (CDMX)</strong> – Mercado de antigüedades donde puedes encontrar vinilos de todas las épocas.</li>
+                    <li><strong>Mercado de Medellín (CDMX)</strong> – Algunos puestos tienen vinilos a precios muy accesibles.</li>
+                    <li><strong>Tiendas especializadas</strong> – Hay varias tiendas de vinilos en CDMX, Guadalajara y Monterrey.</li>
+                </ul>
+                
+                <h2>Consejos para Encontrar Joyas</h2>
+                
+                <ul>
+                    <li><strong>Conoce tu música</strong> – Antes de ir, investiga qué artistas, sellos y géneros son valiosos. Discogs es tu mejor herramienta.</li>
+                    <li><strong>Revisa el estado</strong> – Siempre inspecciona el vinilo bajo buena luz. Busca rayaduras profundas, marcas de agua o deformaciones.</li>
+                    <li><strong>Busca primeras ediciones</strong> – Las primeras prensadas de un álbum suelen sonar mejor y valer más.</li>
+                    <li><strong>Llega temprano</strong> – Los mejores discos se van rápido. En los mercados, llega cuando abren.</li>
+                    <li><strong>Negocia con respeto</strong> – En los mercados, el regateo es normal, pero hazlo con respeto.</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p>🌍 <strong>Crate Digging en Barcelona:</strong> En 3TRES6 Records hacemos crate digging profesional en las mejores tiendas de Barcelona: Discos Paradiso, Way Out Records, Ultra-Local Records. Seleccionamos solo lo mejor y lo traemos a México.</p>
+                </div>
+                
+                <div class="product-recommendation">
+                    <span class="rec-emoji">🇪🇸</span>
+                    <div>
+                        <h4>Vinilos seleccionados en Barcelona</h4>
+                        <p>Nosotros hacemos el crate digging por ti. Cada semana traemos nuevas llegadas del underground europeo. <a href="/#catalogo">Ver nuevas llegadas →</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="article-divider">
+
+        <!-- Article: Técnicas DJ -->
+        <div id="tecnicas-dj-full" class="blog-article-full">
+            <div class="article-header">
+                <span class="article-category">Técnica DJ</span>
+                <h1>Técnicas Básicas de DJ: Beatmatching, Mixing y Scratching</h1>
+                <div class="article-meta">
+                    <span>📅 Enero 2026</span>
+                    <span>✍️ 3TRES6 Records</span>
+                    <span>⏱️ 6 min lectura</span>
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <p>Aprender a mezclar con vinilo es una de las experiencias más satisfactorias en la música. A diferencia del DJing digital, el vinilo requiere habilidades manuales que se desarrollan con práctica constante.</p>
+                
+                <h2>Beatmatching Manual</h2>
+                
+                <p>El beatmatching es la técnica de sincronizar el tempo de dos canciones para hacer una mezcla suave. Con vinilo, se hace manualmente:</p>
+                
+                <ol>
+                    <li><strong>Escucha el beat</strong> – Usa los auriculares para escuchar la canción que vas a mezclar (cue).</li>
+                    <li><strong>Ajusta el pitch</strong> – Usa el control de pitch (±8% o ±16%) para ajustar el tempo.</li>
+                    <li><strong>Sincroniza manualmente</strong> – Toca el plato con el dedo para acelerar o frenar el disco hasta que los beats coincidan.</li>
+                    <li><strong>Mezcla</strong> – Cuando los beats estén sincronizados, sube el fader del canal nuevo.</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <p>⏱️ <strong>Tiempo de práctica:</strong> El beatmatching manual toma tiempo. No te desesperes si al principio no te sale. Con 30 minutos de práctica diaria, en 2-3 semanas empezarás a sentirte cómodo.</p>
+                </div>
+                
+                <h2>Técnicas de Mezcla</h2>
+                
+                <h3>Mezcla Suave (Smooth Mix)</h3>
+                <p>La técnica más básica: subir gradualmente el fader del canal nuevo mientras bajas el del canal actual. Ideal para House y Techno.</p>
+                
+                <h3>Cut Mix</h3>
+                <p>Cambio abrupto de una canción a otra en el beat. Muy usado en Hip-Hop y Techno duro.</p>
+                
+                <h3>Loop Mix</h3>
+                <p>Crear un loop de 4 u 8 beats al final de una canción para tener más tiempo de mezclar.</p>
+                
+                <h2>Scratching Básico</h2>
+                
+                <p>El scratching es mover el disco hacia adelante y atrás mientras el fader de la mezcladora está abierto. Técnicas básicas:</p>
+                
+                <ul>
+                    <li><strong>Baby Scratch</strong> – El más básico: mover el disco hacia adelante y atrás sin usar el fader.</li>
+                    <li><strong>Forward Scratch</strong> – Mover el disco hacia adelante con el fader abierto, cerrarlo al regresar.</li>
+                    <li><strong>Transformer Scratch</strong> – Abrir y cerrar el fader rápidamente mientras mueves el disco.</li>
+                </ul>
+                
+                <div class="product-recommendation">
+                    <span class="rec-emoji">🎚️</span>
+                    <div>
+                        <h4>Practica con los mejores vinilos</h4>
+                        <p>Para aprender a mezclar, necesitas buenos discos. Tenemos vinilos de House y Techno perfectos para practicar. <a href="/#catalogo">Ver catálogo →</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Store CTA -->
+        <div class="blog-store-cta">
+            <h3>¿Listo para empezar tu colección?</h3>
+            <p>Tenemos vinilos de House, Techno, Minimal y Disco seleccionados en Barcelona. Envíos a todo México.</p>
+            <a href="/#catalogo" class="cta-button">Explorar Catálogo →</a>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">3TRES6 RECORDS</span>
+                <p>Vinilos europeos de segunda mano<br>Barcelona → México</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Tienda</h4>
+                    <a href="/#catalogo">Catálogo</a>
+                    <a href="/#calendario">Calendario</a>
+                    <a href="/#instagram">Instagram</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Blog</h4>
+                    <a href="#guia-vinilos">Guía Principiantes</a>
+                    <a href="#tipos-controladores">Controladores</a>
+                    <a href="#crate-digging">Crate Digging</a>
+                    <a href="#tecnicas-dj">Técnicas DJ</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Síguenos</h4>
+                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+                    <a href="https://youtube.com/@3tres6records" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://www.tiktok.com/@3tres6records" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 3TRES6 Records. Hecho con 🎵 en CDMX.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobileNav');
+            const isOpen = mobileNav.classList.toggle('active');
+            this.classList.toggle('active');
+            this.setAttribute('aria-expanded', isOpen);
+        });
+        
+        // Blog category filter
+        document.querySelectorAll('.blog-cat-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.blog-cat-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const cat = this.dataset.cat;
+                document.querySelectorAll('[data-cat]').forEach(article => {
+                    if (cat === 'all' || article.dataset.cat === cat) {
+                        article.style.display = '';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (header) {
+                header.classList.toggle('scrolled', window.pageYOffset > 50);
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

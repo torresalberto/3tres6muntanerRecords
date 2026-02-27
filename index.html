@@ -72,6 +72,12 @@
 
     <!-- Mercado Pago SDK -->
     <script src="https://sdk.mercadopago.com/js/v2" defer></script>
+    
+    <!-- Stripe SDK -->
+    <script src="https://js.stripe.com/v3/" defer></script>
+    
+    <!-- Instagram Embed SDK -->
+    <script async defer src="https://www.instagram.com/embed.js"></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -116,12 +122,14 @@
         </button>
         <div class="now-playing-bar">
             <span class="pulse"></span>
-            <span class="track-info">3TRES6 Radio 🎵</span>
+            <span class="track-info">Click para música 🎵</span>
         </div>
     </div>
 
-    <!-- YouTube Audio Player Container (minimal visibility for playback) -->
-    <div id="youtubeAudioContainer" style="position:fixed;bottom:-50px;right:10px;width:100px;height:60px;z-index:1;overflow:hidden;"></div>
+    <!-- YouTube Audio Player Container - Mini Player -->
+    <div id="youtubeAudioContainer" class="youtube-mini-player">
+        <!-- YouTube iframe injected here by JS -->
+    </div>
 
     <!-- Top Banner with Ticker Animation -->
     <div class="top-banner">
@@ -171,6 +179,7 @@
                 <a href="#catalogo" class="nav-item">CATÁLOGO</a>
                 <a href="#calendario" class="nav-item">CALENDARIO</a>
                 <a href="#instagram" class="nav-item">INSTAGRAM</a>
+                <a href="blog.html" class="nav-item">BLOG</a>
                 <a href="#nosotros" class="nav-item">NOSOTROS</a>
             </nav>
 
@@ -194,6 +203,7 @@
             <a href="#catalogo">Catálogo</a>
             <a href="#calendario">Calendario</a>
             <a href="#instagram">Instagram</a>
+            <a href="blog.html">Blog</a>
             <a href="#nosotros">Nosotros</a>
             <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
         </nav>
@@ -214,29 +224,42 @@
         <div class="hero-playlist" id="heroPlaylist">
             <div class="playlist-header">
                 <div class="playlist-cover">
-                    <div class="playlist-cover-art">
+                    <div class="playlist-cover-art" id="playlistCoverArt">
                         <span>🔥</span>
                     </div>
                 </div>
                 <div class="playlist-info">
-                    <span class="playlist-label">PLAYLIST</span>
-                    <h2 class="playlist-title">"Especiales de la Semana"</h2>
-                    <p class="playlist-artist">by 3TRES6 Records</p>
+                    <span class="playlist-label">🎙️ 3TRES6 RADIO</span>
+                    <h2 class="playlist-title" id="playlistTitle">"En Stock Ahora"</h2>
+                    <p class="playlist-artist" id="playlistArtist">by 3TRES6 Records</p>
                     <div class="playlist-controls">
-                        <button class="playlist-play-btn" id="playlistPlayBtn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <button class="playlist-prev-btn" id="playlistPrevBtn" title="Anterior">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
                         </button>
-                        <span class="playlist-duration">00:00</span>
-                        <div class="playlist-progress">
-                            <div class="playlist-progress-bar"></div>
+                        <button class="playlist-play-btn" id="playlistPlayBtn" title="Play/Pause">
+                            <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        </button>
+                        <button class="playlist-next-btn" id="playlistNextBtn" title="Siguiente">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2.5-6 5.5 4V8z"/><path d="M16 6h2v12h-2z"/></svg>
+                        </button>
+                        <div class="playlist-volume">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="80" class="volume-slider">
                         </div>
-                        <span class="playlist-duration">00:00</span>
+                    </div>
+                    <div class="now-playing-track" id="nowPlayingTrack">
+                        <span class="now-playing-label">▶ REPRODUCIENDO:</span>
+                        <span class="now-playing-name" id="nowPlayingName">3TRES6 Radio</span>
                     </div>
                 </div>
             </div>
             <div class="playlist-tracks" id="playlistTracks">
                 <!-- Tracks loaded dynamically from Discogs inventory -->
-                <div class="playlist-loading">Cargando playlist...</div>
+                <div class="playlist-loading">
+                    <div class="loading-spinner"></div>
+                    <span>Cargando playlist...</span>
+                </div>
             </div>
         </div>
     </section>
@@ -274,7 +297,64 @@
     <section class="section calendar-section" id="calendario" aria-label="Calendario de eventos">
         <div class="section-header">
             <h2>Esta Semana</h2>
-            <span class="section-subtitle">Eventos y sets en CDMX</span>
+            <span class="section-subtitle">Eventos, Lives y Sets en CDMX</span>
+        </div>
+
+        <!-- Live Streams Banner -->
+        <div class="live-streams-banner">
+            <div class="live-stream-card tiktok-live">
+                <div class="live-badge">🔴 LIVE</div>
+                <div class="live-stream-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+                </div>
+                <div class="live-stream-info">
+                    <h4>TikTok Live</h4>
+                    <p>Vinyl Sessions en vivo</p>
+                    <a href="https://www.tiktok.com/@3tres6records/live" target="_blank" rel="noopener" class="live-watch-btn tiktok-btn">
+                        Ver en TikTok →
+                    </a>
+                </div>
+            </div>
+            <div class="live-stream-card youtube-live">
+                <div class="live-badge">▶ STREAM</div>
+                <div class="live-stream-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </div>
+                <div class="live-stream-info">
+                    <h4>YouTube Live</h4>
+                    <p>Sets y eventos en vivo</p>
+                    <a href="https://www.youtube.com/@3tres6records/live" target="_blank" rel="noopener" class="live-watch-btn youtube-btn">
+                        Ver en YouTube →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Embedded Live Player -->
+        <div class="live-embed-container" id="liveEmbedContainer">
+            <div class="live-embed-tabs">
+                <button class="live-tab active" data-platform="youtube" id="ytLiveTab">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    YouTube
+                </button>
+                <button class="live-tab" data-platform="tiktok" id="tiktokLiveTab">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+                    TikTok
+                </button>
+            </div>
+            <div class="live-embed-frame" id="liveEmbedFrame">
+                <div class="live-embed-placeholder" id="liveEmbedPlaceholder">
+                    <div class="placeholder-content">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" style="color:#ff4d00;opacity:0.5"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <p>No hay transmisión en vivo ahora mismo</p>
+                        <p class="placeholder-sub">Síguenos para recibir notificaciones cuando estemos en vivo</p>
+                        <div class="follow-live-btns">
+                            <a href="https://www.youtube.com/@3tres6records" target="_blank" rel="noopener" class="follow-live-btn yt">Seguir en YouTube</a>
+                            <a href="https://www.tiktok.com/@3tres6records" target="_blank" rel="noopener" class="follow-live-btn tt">Seguir en TikTok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="weekly-calendar">
@@ -291,48 +371,59 @@
                 <div class="calendar-day"><div class="no-events">—</div></div>
                 <div class="calendar-day"><div class="no-events">—</div></div>
                 <div class="calendar-day">
-                    <div class="calendar-event" data-event="vinyl-session">
+                    <div class="calendar-event tiktok-event" data-event="vinyl-session">
+                        <span class="event-platform tiktok-tag">TikTok Live</span>
                         <span class="event-time">20:00</span>
                         <span class="event-name">Vinyl Session</span>
-                        <span class="event-venue">Muntaner336 Live</span>
+                        <span class="event-venue">🎵 3TRES6 Live</span>
                         <span class="event-genre">Deep House</span>
+                        <a href="https://www.tiktok.com/@3tres6records/live" target="_blank" rel="noopener" class="event-watch-link">Ver Live →</a>
                     </div>
                 </div>
                 <div class="calendar-day">
-                    <div class="calendar-event" data-event="warm-up">
+                    <div class="calendar-event youtube-event" data-event="warm-up">
+                        <span class="event-platform youtube-tag">YouTube Live</span>
                         <span class="event-time">22:00</span>
-                        <span class="event-name">Warm Up</span>
-                        <span class="event-venue">Departamento</span>
+                        <span class="event-name">Warm Up Set</span>
+                        <span class="event-venue">▶ 3TRES6 Channel</span>
                         <span class="event-genre">House / Disco</span>
+                        <a href="https://www.youtube.com/@3tres6records/live" target="_blank" rel="noopener" class="event-watch-link">Ver Live →</a>
                     </div>
                 </div>
                 <div class="calendar-day has-events">
-                    <div class="calendar-event featured" data-event="noche-minima">
+                    <div class="calendar-event featured physical-event" data-event="noche-minima">
+                        <span class="event-platform physical-tag">Evento Físico</span>
                         <span class="event-time">23:00</span>
                         <span class="event-name">Noche Mínima</span>
-                        <span class="event-venue">Foro Normandie</span>
+                        <span class="event-venue">🏛️ Foro Normandie</span>
                         <span class="event-genre">Minimal / Techno</span>
+                        <a href="https://www.youtube.com/watch?v=qfF19hUzLo0" target="_blank" rel="noopener" class="event-watch-link">Ver Set →</a>
                     </div>
                 </div>
                 <div class="calendar-day has-events">
-                    <div class="calendar-event featured" data-event="barcelona-nights">
+                    <div class="calendar-event featured youtube-event" data-event="barcelona-nights">
+                        <span class="event-platform youtube-tag">YouTube Live</span>
                         <span class="event-time">22:00</span>
                         <span class="event-name">Barcelona Nights</span>
-                        <span class="event-venue">AM Local</span>
+                        <span class="event-venue">▶ 3TRES6 Channel</span>
                         <span class="event-genre">Techno / Electro</span>
+                        <a href="https://www.youtube.com/@3tres6records/live" target="_blank" rel="noopener" class="event-watch-link">Ver Live →</a>
                     </div>
-                    <div class="calendar-event" data-event="vinyl-market">
+                    <div class="calendar-event tiktok-event" data-event="vinyl-market">
+                        <span class="event-platform tiktok-tag">TikTok Live</span>
                         <span class="event-time">15:00</span>
                         <span class="event-name">Vinyl Market</span>
-                        <span class="event-venue">Roma Norte</span>
+                        <span class="event-venue">🎵 3TRES6 Live</span>
                         <span class="event-genre">All Genres</span>
+                        <a href="https://www.tiktok.com/@3tres6records/live" target="_blank" rel="noopener" class="event-watch-link">Ver Live →</a>
                     </div>
                 </div>
                 <div class="calendar-day">
-                    <div class="calendar-event" data-event="brunch-beats">
+                    <div class="calendar-event physical-event" data-event="brunch-beats">
+                        <span class="event-platform physical-tag">Evento Físico</span>
                         <span class="event-time">13:00</span>
-                        <span class="event-name">Brunch & Beats</span>
-                        <span class="event-venue">Café Toscano</span>
+                        <span class="event-name">Brunch &amp; Beats</span>
+                        <span class="event-venue">☕ Café Toscano</span>
                         <span class="event-genre">Jazz / Soul</span>
                     </div>
                 </div>
@@ -341,7 +432,9 @@
 
         <div class="calendar-legend">
             <span><span class="legend-dot featured"></span> Evento destacado</span>
-            <span><span class="legend-dot regular"></span> Evento regular</span>
+            <span><span class="legend-dot tiktok-dot"></span> TikTok Live</span>
+            <span><span class="legend-dot youtube-dot"></span> YouTube Live</span>
+            <span><span class="legend-dot physical-dot"></span> Evento físico</span>
         </div>
     </section>
 
@@ -354,46 +447,153 @@
             </a>
         </div>
 
-        <div class="instagram-feed">
-            <!-- Unique Instagram Posts Grid -->
-            <div class="instagram-grid" id="instagramGrid">
-                <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-post" data-post="1">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E📀%3C/text%3E%3C/svg%3E" alt="Post 1" loading="lazy">
-                    <div class="instagram-overlay">
-                        <span>❤️ 124</span>
+        <!-- Instagram Carousel -->
+        <div class="instagram-carousel-wrapper">
+            <button class="carousel-btn carousel-prev" id="instagramPrev" aria-label="Post anterior">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            
+            <div class="instagram-carousel" id="instagramCarousel">
+                <!-- Instagram Embed Posts -->
+                <div class="instagram-slide active" data-slide="1">
+                    <div class="instagram-embed-wrapper">
+                        <blockquote 
+                            class="instagram-media" 
+                            data-instgrm-permalink="https://www.instagram.com/3tres6records/"
+                            data-instgrm-version="14"
+                            style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:540px;min-width:326px;padding:0;width:99.375%;width:-webkit-calc(100% - 2px);width:calc(100% - 2px);">
+                        </blockquote>
                     </div>
-                </a>
-                <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-post" data-post="2">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🎧%3C/text%3E%3C/svg%3E" alt="Post 2" loading="lazy">
-                    <div class="instagram-overlay">
-                        <span>❤️ 89</span>
+                    <div class="instagram-post-fallback">
+                        <div class="ig-post-card">
+                            <div class="ig-post-header">
+                                <div class="ig-avatar">3T6</div>
+                                <div class="ig-username">@3tres6records</div>
+                            </div>
+                            <div class="ig-post-image">
+                                <span class="ig-emoji">📀</span>
+                                <div class="ig-post-overlay">
+                                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="ig-view-btn">Ver en Instagram</a>
+                                </div>
+                            </div>
+                            <div class="ig-post-caption">Nueva llegada desde Barcelona 🇪🇸 House clásico en perfecto estado VG+. ¿Quién lo quiere? #vinyl #house #barcelona</div>
+                            <div class="ig-post-stats"><span>❤️ 124</span><span>💬 18</span></div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-post" data-post="3">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🇪🇸%3C/text%3E%3C/svg%3E" alt="Post 3" loading="lazy">
-                    <div class="instagram-overlay">
-                        <span>❤️ 156</span>
+                </div>
+                <div class="instagram-slide" data-slide="2">
+                    <div class="instagram-post-fallback">
+                        <div class="ig-post-card">
+                            <div class="ig-post-header">
+                                <div class="ig-avatar">3T6</div>
+                                <div class="ig-username">@3tres6records</div>
+                            </div>
+                            <div class="ig-post-image">
+                                <span class="ig-emoji">🎧</span>
+                                <div class="ig-post-overlay">
+                                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="ig-view-btn">Ver en Instagram</a>
+                                </div>
+                            </div>
+                            <div class="ig-post-caption">Sesión de escucha en casa 🏠 Technics 1200 + sistema de sonido de calidad. Agenda la tuya. #vinylsession #technics #cdmx</div>
+                            <div class="ig-post-stats"><span>❤️ 89</span><span>💬 12</span></div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-post" data-post="4">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🎵%3C/text%3E%3C/svg%3E" alt="Post 4" loading="lazy">
-                    <div class="instagram-overlay">
-                        <span>❤️ 203</span>
+                </div>
+                <div class="instagram-slide" data-slide="3">
+                    <div class="instagram-post-fallback">
+                        <div class="ig-post-card">
+                            <div class="ig-post-header">
+                                <div class="ig-avatar">3T6</div>
+                                <div class="ig-username">@3tres6records</div>
+                            </div>
+                            <div class="ig-post-image">
+                                <span class="ig-emoji">🇪🇸</span>
+                                <div class="ig-post-overlay">
+                                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="ig-view-btn">Ver en Instagram</a>
+                                </div>
+                            </div>
+                            <div class="ig-post-caption">Crate digging en Barcelona 🔍 Cada semana seleccionamos lo mejor del underground europeo para traerlo a México. #crateddigging #barcelona #underground</div>
+                            <div class="ig-post-stats"><span>❤️ 156</span><span>💬 24</span></div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-post" data-post="5">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🎹%3C/text%3E%3C/svg%3E" alt="Post 5" loading="lazy">
-                    <div class="instagram-overlay">
-                        <span>❤️ 78</span>
+                </div>
+                <div class="instagram-slide" data-slide="4">
+                    <div class="instagram-post-fallback">
+                        <div class="ig-post-card">
+                            <div class="ig-post-header">
+                                <div class="ig-avatar">3T6</div>
+                                <div class="ig-username">@3tres6records</div>
+                            </div>
+                            <div class="ig-post-image">
+                                <span class="ig-emoji">🎵</span>
+                                <div class="ig-post-overlay">
+                                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="ig-view-btn">Ver en Instagram</a>
+                                </div>
+                            </div>
+                            <div class="ig-post-caption">Techno de Detroit en nuestra colección 🔊 Robert Hood, Jeff Mills, Underground Resistance. Lo mejor del techno original. #techno #detroit #vinyl</div>
+                            <div class="ig-post-stats"><span>❤️ 203</span><span>💬 31</span></div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-post" data-post="6">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23161616' width='300' height='300'/%3E%3Ctext fill='%23333' x='150' y='150' text-anchor='middle' font-size='40'%3E🇲🇽%3C/text%3E%3C/svg%3E" alt="Post 6" loading="lazy">
-                    <div class="instagram-overlay">
-                        <span>❤️ 167</span>
+                </div>
+                <div class="instagram-slide" data-slide="5">
+                    <div class="instagram-post-fallback">
+                        <div class="ig-post-card">
+                            <div class="ig-post-header">
+                                <div class="ig-avatar">3T6</div>
+                                <div class="ig-username">@3tres6records</div>
+                            </div>
+                            <div class="ig-post-image">
+                                <span class="ig-emoji">🎹</span>
+                                <div class="ig-post-overlay">
+                                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="ig-view-btn">Ver en Instagram</a>
+                                </div>
+                            </div>
+                            <div class="ig-post-caption">Minimal techno de los 90s 🎛️ Ricardo Villalobos, Plastikman, Basic Channel. Colección curada para los verdaderos amantes del sonido. #minimal #techno #90s</div>
+                            <div class="ig-post-stats"><span>❤️ 78</span><span>💬 9</span></div>
+                        </div>
                     </div>
-                </a>
+                </div>
+                <div class="instagram-slide" data-slide="6">
+                    <div class="instagram-post-fallback">
+                        <div class="ig-post-card">
+                            <div class="ig-post-header">
+                                <div class="ig-avatar">3T6</div>
+                                <div class="ig-username">@3tres6records</div>
+                            </div>
+                            <div class="ig-post-image">
+                                <span class="ig-emoji">🇲🇽</span>
+                                <div class="ig-post-overlay">
+                                    <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="ig-view-btn">Ver en Instagram</a>
+                                </div>
+                            </div>
+                            <div class="ig-post-caption">Del underground europeo a tu tornamesa en México 🌎 Envíos a todo el país. Paga con Mercado Pago. #vinyl #mexico #cdmx #envios</div>
+                            <div class="ig-post-stats"><span>❤️ 167</span><span>💬 22</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <button class="carousel-btn carousel-next" id="instagramNext" aria-label="Post siguiente">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+        </div>
+        
+        <!-- Carousel Dots -->
+        <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" data-slide="0"></button>
+            <button class="carousel-dot" data-slide="1"></button>
+            <button class="carousel-dot" data-slide="2"></button>
+            <button class="carousel-dot" data-slide="3"></button>
+            <button class="carousel-dot" data-slide="4"></button>
+            <button class="carousel-dot" data-slide="5"></button>
+        </div>
+
+        <div class="instagram-cta">
+            <p>Síguenos para ver nuestras últimas llegadas, sets y eventos</p>
+            <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener" class="instagram-follow-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Seguir @3tres6records
+            </a>
         </div>
     </section>
 
@@ -458,6 +658,63 @@
         </div>
     </section>
 
+    <!-- Blog Preview Section -->
+    <section class="section blog-section" id="blog" aria-label="Blog">
+        <div class="section-header">
+            <h2>Blog & Educación Vinyl</h2>
+            <a href="blog.html" class="view-all-btn">Ver todos los artículos →</a>
+        </div>
+        <p class="section-description">Aprende sobre vinilos, tornamesas, técnicas de DJ y más. Contenido educativo para coleccionistas y DJs.</p>
+        
+        <div class="blog-grid">
+            <article class="blog-card featured-blog">
+                <div class="blog-card-image">
+                    <span class="blog-emoji">🎵</span>
+                    <span class="blog-category">Guía Básica</span>
+                </div>
+                <div class="blog-card-content">
+                    <h3><a href="blog.html#guia-vinilos">Guía Completa para Principiantes: Cómo Empezar con los Vinilos</a></h3>
+                    <p>Todo lo que necesitas saber para comenzar tu colección de vinilos: qué tornamesa comprar, cómo cuidar tus discos y dónde encontrar las mejores piezas.</p>
+                    <div class="blog-meta">
+                        <span>📅 Feb 2026</span>
+                        <span>⏱️ 8 min lectura</span>
+                    </div>
+                    <a href="blog.html#guia-vinilos" class="blog-read-more">Leer artículo →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <span class="blog-emoji">🎛️</span>
+                    <span class="blog-category">Técnica DJ</span>
+                </div>
+                <div class="blog-card-content">
+                    <h3><a href="blog.html#tipos-controladores">Tipos de Controladores: Desde Technics hasta Modelos Modernos</a></h3>
+                    <p>Comparativa completa de los mejores controladores y tornamesas del mercado. ¿Cuál es el adecuado para ti?</p>
+                    <div class="blog-meta">
+                        <span>📅 Feb 2026</span>
+                        <span>⏱️ 6 min lectura</span>
+                    </div>
+                    <a href="blog.html#tipos-controladores" class="blog-read-more">Leer artículo →</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <span class="blog-emoji">🔍</span>
+                    <span class="blog-category">Crate Digging</span>
+                </div>
+                <div class="blog-card-content">
+                    <h3><a href="blog.html#crate-digging">El Arte del Crate Digging: Cómo Encontrar Joyas Ocultas</a></h3>
+                    <p>Técnicas y consejos para encontrar los mejores vinilos en tiendas de segunda mano, mercados y tiendas especializadas.</p>
+                    <div class="blog-meta">
+                        <span>📅 Ene 2026</span>
+                        <span>⏱️ 5 min lectura</span>
+                    </div>
+                    <a href="blog.html#crate-digging" class="blog-read-more">Leer artículo →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="section about-section" id="nosotros" aria-label="Sobre nosotros">
         <div class="about-container">
@@ -494,6 +751,7 @@
                     <span>Métodos de pago:</span>
                     <div class="payment-icons">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%2300bcff' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E" alt="Mercado Pago" width="60" height="40">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%23635bff' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3EStripe%3C/text%3E%3C/svg%3E" alt="Stripe" width="60" height="40">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%23003087' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3EPayPal%3C/text%3E%3C/svg%3E" alt="PayPal" width="60" height="40">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect fill='%23333' width='60' height='40' rx='4'/%3E%3Ctext fill='white' x='30' y='24' text-anchor='middle' font-size='10' font-weight='bold'%3ETrans%3C/text%3E%3C/svg%3E" alt="Transferencia" width="60" height="40">
                     </div>
@@ -681,6 +939,12 @@
                     <button class="payment-method-btn mercadopago" id="payWithMP">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect fill='white' width='30' height='30' rx='4'/%3E%3Ctext fill='%2300bcff' x='15' y='20' text-anchor='middle' font-size='12' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E" alt="" width="30" height="30">
                         Pagar con Mercado Pago
+                    </button>
+                    
+                    <button class="payment-method-btn stripe" id="payWithStripe">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect fill='%23635bff' width='30' height='30' rx='4'/%3E%3Ctext fill='white' x='15' y='20' text-anchor='middle' font-size='10' font-weight='bold'%3ES%3C/text%3E%3C/svg%3E" alt="" width="30" height="30">
+                        Pagar con Stripe
+                        <small>Tarjeta de crédito/débito</small>
                     </button>
                     
                     <button class="payment-method-btn paypal" id="payWithPayPal">

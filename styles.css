@@ -598,49 +598,7 @@ button {
     opacity: 0.8;
 }
 
-.playlist-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.playlist-play-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: var(--transition);
-}
-
-.playlist-play-btn:hover {
-    transform: scale(1.1);
-    background: var(--color-accent-hover);
-}
-
-.playlist-duration {
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-.playlist-progress {
-    flex: 1;
-    height: 4px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 2px;
-}
-
-.playlist-progress-bar {
-    width: 0%;
-    height: 100%;
-    background: var(--color-yellow);
-    border-radius: 2px;
-}
+/* Playlist controls are defined in the new section below */
 
 .playlist-tracks {
     background: var(--color-bg);
@@ -2594,4 +2552,934 @@ body.checkout-open {
     text-align: center;
     color: #666;
     font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,77,0,0.3);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   YouTube Mini Player
+   ======================================== */
+
+.youtube-mini-player {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    transition: var(--transition);
+}
+
+.mini-player-inner {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.mini-player-info {
+    padding: 8px 12px;
+    background: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.mini-player-title {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    display: block;
+}
+
+/* ========================================
+   Improved Playlist Controls
+   ======================================== */
+
+.playlist-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.playlist-prev-btn,
+.playlist-next-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.playlist-prev-btn:hover,
+.playlist-next-btn:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+}
+
+.playlist-play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.playlist-play-btn:hover {
+    background: var(--color-accent-hover);
+    transform: scale(1.05);
+}
+
+.playlist-volume {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text-muted);
+    flex: 1;
+}
+
+.volume-slider {
+    flex: 1;
+    height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+}
+
+.now-playing-track {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgba(255,77,0,0.1);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-accent);
+}
+
+.now-playing-label {
+    font-size: 10px;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.now-playing-name {
+    font-size: 12px;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 200px;
+}
+
+/* ========================================
+   Calendar - Live Streams
+   ======================================== */
+
+.live-streams-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+.live-stream-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.live-stream-card:hover {
+    transform: translateY(-3px);
+}
+
+.live-stream-card.tiktok-live {
+    border-color: rgba(105, 201, 208, 0.3);
+}
+
+.live-stream-card.tiktok-live:hover {
+    border-color: #69c9d0;
+    box-shadow: 0 4px 20px rgba(105, 201, 208, 0.15);
+}
+
+.live-stream-card.youtube-live {
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.live-stream-card.youtube-live:hover {
+    border-color: #ff0000;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.15);
+}
+
+.live-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 50px;
+    background: rgba(255,77,0,0.2);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+.live-stream-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tiktok-live .live-stream-icon {
+    background: rgba(105, 201, 208, 0.15);
+    color: #69c9d0;
+}
+
+.youtube-live .live-stream-icon {
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff0000;
+}
+
+.live-stream-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.live-stream-info p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.live-watch-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.tiktok-btn {
+    background: rgba(105, 201, 208, 0.15);
+    color: #69c9d0;
+    border: 1px solid rgba(105, 201, 208, 0.3);
+}
+
+.tiktok-btn:hover {
+    background: #69c9d0;
+    color: #000;
+}
+
+.youtube-btn {
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff4444;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.youtube-btn:hover {
+    background: #ff0000;
+    color: white;
+}
+
+/* Live Embed Container */
+.live-embed-container {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 0 40px;
+}
+
+.live-embed-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.live-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: none;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-main);
+}
+
+.live-tab:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+}
+
+.live-tab.active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-accent-light);
+}
+
+.live-embed-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 40%;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.live-embed-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.live-embed-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-card);
+}
+
+.placeholder-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.placeholder-content p {
+    color: var(--color-text-muted);
+    margin: 16px 0 8px;
+    font-size: 16px;
+}
+
+.placeholder-sub {
+    font-size: 13px !important;
+    margin-bottom: 24px !important;
+}
+
+.follow-live-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.follow-live-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.follow-live-btn.yt {
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff4444;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.follow-live-btn.yt:hover {
+    background: #ff0000;
+    color: white;
+}
+
+.follow-live-btn.tt {
+    background: rgba(105, 201, 208, 0.15);
+    color: #69c9d0;
+    border: 1px solid rgba(105, 201, 208, 0.3);
+}
+
+.follow-live-btn.tt:hover {
+    background: #69c9d0;
+    color: #000;
+}
+
+/* Calendar Event Platform Tags */
+.event-platform {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 50px;
+    margin-bottom: 4px;
+}
+
+.tiktok-tag {
+    background: rgba(105, 201, 208, 0.2);
+    color: #69c9d0;
+    border: 1px solid rgba(105, 201, 208, 0.3);
+}
+
+.youtube-tag {
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff4444;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.physical-tag {
+    background: rgba(255, 200, 0, 0.15);
+    color: #ffc800;
+    border: 1px solid rgba(255, 200, 0, 0.2);
+}
+
+.event-watch-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.event-watch-link:hover {
+    color: var(--color-accent-hover);
+}
+
+.tiktok-event {
+    border-left: 3px solid #69c9d0 !important;
+}
+
+.youtube-event {
+    border-left: 3px solid #ff4444 !important;
+}
+
+.physical-event {
+    border-left: 3px solid #ffc800 !important;
+}
+
+/* Calendar Legend Dots */
+.legend-dot.tiktok-dot {
+    background: #69c9d0;
+}
+
+.legend-dot.youtube-dot {
+    background: #ff4444;
+}
+
+.legend-dot.physical-dot {
+    background: #ffc800;
+}
+
+/* ========================================
+   Instagram Carousel
+   ======================================== */
+
+.instagram-carousel-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    overflow: hidden;
+}
+
+.instagram-carousel {
+    display: flex;
+    transition: transform 0.4s ease;
+    position: relative;
+    min-height: 400px;
+}
+
+.instagram-slide {
+    min-width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram-slide.active {
+    display: flex;
+}
+
+.instagram-embed-wrapper {
+    max-width: 540px;
+    width: 100%;
+}
+
+.instagram-post-fallback {
+    width: 100%;
+    max-width: 400px;
+}
+
+.ig-post-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.ig-post-card:hover {
+    border-color: rgba(225, 48, 108, 0.5);
+    box-shadow: 0 8px 30px rgba(225, 48, 108, 0.1);
+}
+
+.ig-post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ig-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.ig-username {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.ig-post-image {
+    height: 280px;
+    background: linear-gradient(135deg, var(--color-bg-light), var(--color-bg-card));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ig-post-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.ig-post-image:hover .ig-post-overlay {
+    opacity: 1;
+}
+
+.ig-view-btn {
+    background: white;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.ig-view-btn:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+.ig-post-caption {
+    padding: 16px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ig-post-stats {
+    padding: 12px 16px;
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-border);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: var(--color-accent);
+    transform: scale(1.3);
+}
+
+/* Instagram CTA */
+.instagram-cta {
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 40px;
+}
+
+.instagram-cta p {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.instagram-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    padding: 12px 28px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.instagram-follow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
+}
+
+/* ========================================
+   Blog Section (on index.html)
+   ======================================== */
+
+.blog-section {
+    background: var(--color-bg-light);
+}
+
+.section-description {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.blog-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.blog-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.blog-card-image {
+    height: 180px;
+    background: linear-gradient(135deg, var(--color-bg-light), var(--color-bg-card));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    position: relative;
+}
+
+.featured-blog .blog-card-image {
+    height: 220px;
+    font-size: 80px;
+}
+
+.blog-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--color-accent);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.blog-card-content {
+    padding: 20px;
+}
+
+.blog-card-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.blog-card-content h3 a {
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.blog-card-content h3 a:hover {
+    color: var(--color-accent);
+}
+
+.blog-card-content p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.blog-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.blog-read-more:hover {
+    gap: 8px;
+}
+
+/* ========================================
+   Stripe Payment Button
+   ======================================== */
+
+.payment-method-btn.stripe {
+    background: linear-gradient(135deg, #635bff, #7c73ff);
+    border-color: #635bff;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-method-btn.stripe:hover {
+    background: linear-gradient(135deg, #5248e8, #6b63e8);
+}
+
+.payment-method-btn.stripe small {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* ========================================
+   Responsive Updates for New Sections
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .live-streams-banner {
+        padding: 0 20px;
+    }
+    
+    .live-embed-container {
+        padding: 0 20px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 20px;
+    }
+    
+    .featured-blog {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .live-streams-banner {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .live-embed-frame {
+        padding-bottom: 56.25%;
+    }
+    
+    .live-embed-container {
+        padding: 0 20px;
+    }
+    
+    .instagram-carousel-wrapper {
+        padding: 0 50px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .featured-blog {
+        grid-column: auto;
+    }
+    
+    .now-playing-name {
+        max-width: 150px;
+    }
+    
+    .playlist-volume {
+        display: none;
+    }
+    
+    .live-embed-tabs {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-carousel-wrapper {
+        padding: 0 40px;
+    }
+    
+    .ig-post-image {
+        height: 220px;
+    }
+    
+    .live-stream-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .live-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
 }
