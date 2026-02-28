@@ -2946,9 +2946,15 @@ body.checkout-open {
         right: 10px;
     }
     
-    /* Hide the video iframe on mobile — audio still plays */
-    .yt-player-div,
-    .yt-player-div iframe {
+    /* Hide the video iframe on mobile — audio still plays via inline style="display:none" set by JS */
+    /* CSS backup: also hide via display:none */
+    .yt-player-div iframe,
+    #ytIframe {
+        display: none !important;
+    }
+    
+    /* Collapse the player div so it takes no space */
+    .yt-player-div {
         height: 0 !important;
         overflow: hidden;
     }

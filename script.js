@@ -980,83 +980,80 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ========================================
-    // Background Audio - YouTube IFrame API (Reliable Mute/Unmute)
+    // Background Audio Player — Simple iframe approach
+    // Uses plain YouTube iframes with URL params for reliable cross-browser playback
     // ========================================
     
     const AudioPlayer = {
         isPlaying: false,
-        isMuted: true,  // Start muted (autoplay policy)
+        isMuted: false,
         currentVideoId: null,
         currentTitle: '3TRES6 Radio',
-        ytPlayer: null,         // YT.Player instance (official API)
-        ytPlayerReady: false,   // True once onReady fires
-        pendingVideoId: null,   // Video to play once player is ready
-        pendingTitle: null,
         userHasInteracted: false,
+        _isMobile: window.innerWidth <= 768,
         
         init() {
             const audioToggle = document.getElementById('audioToggle');
             
-            // TOGGLE BUTTON - mutes/unmutes using official YT API
+            // Update mobile flag on resize
+            window.addEventListener('resize', () => {
+                this._isMobile = window.innerWidth <= 768;
+            });
+            
+            // TOGGLE BUTTON — mute/unmute
             audioToggle?.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent triggering the document click handler
-                if (this.isMuted) {
+                e.stopPropagation();
+                if (!this.userHasInteracted) {
+                    // First interaction via toggle — start the radio
+                    this.userHasInteracted = true;
+                    this._removeFirstClickListeners();
+                    this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
+                } else if (this.isMuted) {
                     this.unmute();
                 } else {
                     this.mute();
                 }
             });
             
-            // Show "Click to play" overlay — user must explicitly start audio
+            // Show "Click to play" overlay
             this._showClickToPlay();
             
-            // On first user interaction (not on the toggle button), start the radio
-            // Store handler reference so it can be removed from startMusic() too
-            this._unmuteHandler = (e) => {
-                // Don't trigger if clicking the audio toggle, controls, or playlist buttons
-                // (those have their own handlers that call startMusic() directly)
+            // On first click anywhere (except playlist/controls), start the radio
+            this._firstClickHandler = (e) => {
                 const target = e.target;
                 if (target && typeof target.closest === 'function') {
                     if (target.closest('#audioToggle') ||
                         target.closest('#audioControls') ||
-                        target.closest('#playlistPlayBtn') ||
-                        target.closest('#playlistPrevBtn') ||
-                        target.closest('#playlistNextBtn') ||
-                        target.closest('.playlist-track') ||
                         target.closest('#heroPlaylist')) return;
                 }
-                
                 if (!this.userHasInteracted) {
                     this.userHasInteracted = true;
-                    this._removeUnmuteListeners();
+                    this._removeFirstClickListeners();
                     this._hideClickToPlay();
-                    // Initialize the YT player now that we have user interaction
-                    this._initYTPlayer(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
+                    this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
                 }
             };
-            document.addEventListener('click', this._unmuteHandler);
-            document.addEventListener('keydown', this._unmuteHandler);
-            document.addEventListener('touchstart', this._unmuteHandler, { passive: true });
+            document.addEventListener('click', this._firstClickHandler);
+            document.addEventListener('touchstart', this._firstClickHandler, { passive: true });
         },
         
-        _removeUnmuteListeners() {
-            if (this._unmuteHandler) {
-                document.removeEventListener('click', this._unmuteHandler);
-                document.removeEventListener('keydown', this._unmuteHandler);
-                document.removeEventListener('touchstart', this._unmuteHandler);
-                this._unmuteHandler = null;
+        _removeFirstClickListeners() {
+            if (this._firstClickHandler) {
+                document.removeEventListener('click', this._firstClickHandler);
+                document.removeEventListener('touchstart', this._firstClickHandler);
+                this._firstClickHandler = null;
             }
         },
         
         _showClickToPlay() {
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            if (!youtubeContainer) return;
-            youtubeContainer.style.display = '';
-            youtubeContainer.innerHTML = `
+            const container = document.getElementById('youtubeAudioContainer');
+            if (!container) return;
+            container.style.display = '';
+            container.innerHTML = `
                 <div class="mini-player-inner mini-player-click-to-play" id="clickToPlayOverlay">
                     <div class="mini-player-info">
                         <span class="mini-player-now-playing">🎵 3TRES6 RADIO</span>
-                        <span class="mini-player-title">Haz clic en cualquier lugar para escuchar</span>
+                        <span class="mini-player-title">Clic para escuchar música</span>
                     </div>
                     <div class="click-to-play-body">
                         <div class="vinyl-spin-icon">🎵</div>
@@ -1072,42 +1069,59 @@ document.addEventListener('DOMContentLoaded', function() {
             if (overlay) overlay.closest('.mini-player-inner')?.remove();
         },
         
-        _initYTPlayer(videoId, title, startMuted) {
-            const youtubeContainer = document.getElementById('youtubeAudioContainer');
-            if (!youtubeContainer) return;
+        // Build the iframe src URL with the given params
+        _buildIframeSrc(videoId, muted) {
+            const muteParam = muted ? 1 : 0;
+            const origin = encodeURIComponent(window.location.origin || 'https://3tres6records.com');
+            return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${muteParam}&loop=1&playlist=${videoId}&controls=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${origin}`;
+        },
+        
+        // Render the mini-player with an iframe
+        _renderPlayer(videoId, title, muted) {
+            const container = document.getElementById('youtubeAudioContainer');
+            if (!container) return;
             
-            youtubeContainer.style.display = '';
-            this.currentVideoId = videoId || CONFIG.youtubeVideoId;
-            this.currentTitle = title || '3TRES6 Radio';
-            this.isMuted = startMuted !== false ? false : false; // default unmuted after interaction
+            container.style.display = '';
+            const iframeSrc = this._buildIframeSrc(videoId, muted);
             
-            // Create a div for YT.Player to attach to
-            youtubeContainer.innerHTML = `
+            // On mobile, hide the video iframe (audio still plays)
+            const iframeStyle = this._isMobile ? 'style="display:none;"' : '';
+            
+            container.innerHTML = `
                 <div class="mini-player-inner" id="miniPlayerInner">
                     <div class="mini-player-info">
                         <span class="mini-player-now-playing">▶ Now Playing</span>
-                        <span class="mini-player-title" id="miniPlayerTitle">${this.currentTitle}</span>
+                        <span class="mini-player-title" id="miniPlayerTitle">${title}</span>
                         <div class="mini-player-actions">
-                            <button class="mini-player-collapse" id="miniPlayerCollapse" title="Minimizar" aria-label="Minimizar reproductor">▼</button>
-                            <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
+                            <button class="mini-player-collapse" id="miniPlayerCollapse" title="Minimizar" aria-label="Minimizar">▼</button>
+                            <button class="mini-player-close" id="miniPlayerClose" title="Cerrar" aria-label="Cerrar">×</button>
                         </div>
                     </div>
-                    <div id="ytPlayerDiv" class="yt-player-div"></div>
+                    <div class="yt-player-div" id="ytPlayerDiv">
+                        <iframe
+                            id="ytIframe"
+                            width="240"
+                            height="135"
+                            src="${iframeSrc}"
+                            ${iframeStyle}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            frameborder="0">
+                        </iframe>
+                    </div>
                 </div>
             `;
             
-            // Attach close button handler
+            // Close button
             document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
                 e.stopPropagation();
-                youtubeContainer.style.display = 'none';
-                if (this.ytPlayer) {
-                    try { this.ytPlayer.pauseVideo(); } catch(err) {}
-                }
+                container.style.display = 'none';
                 this.isPlaying = false;
                 state.isPlaying = false;
+                this.updateUI(false);
             });
             
-            // Collapse/expand toggle
+            // Collapse/expand
             document.getElementById('miniPlayerCollapse')?.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const inner = document.getElementById('miniPlayerInner');
@@ -1126,73 +1140,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (inner) inner.classList.add('collapsed');
                 if (btn) btn.textContent = '▲';
             }
-            
-            // Initialize YT.Player via official API
-            if (window._ytApiReady && typeof YT !== 'undefined' && YT.Player) {
-                this._createYTPlayer(this.currentVideoId);
-            } else {
-                // YT API not ready yet — queue the init
-                window._ytPlayerPendingInit = () => this._createYTPlayer(this.currentVideoId);
-                // The API script is already loaded in <head>, so it will call onYouTubeIframeAPIReady
-                // when ready. No need to inject another script tag.
-            }
-            
-            this.isPlaying = true;
-            state.isPlaying = true;
-            this.updateUI(true, this.currentTitle, false);
-            trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: this.currentTitle });
-        },
-        
-        _createYTPlayer(videoId) {
-            if (!document.getElementById('ytPlayerDiv')) return;
-            
-            this.ytPlayer = new YT.Player('ytPlayerDiv', {
-                height: '135',
-                width: '240',
-                videoId: videoId,
-                playerVars: {
-                    autoplay: 1,
-                    mute: 0,
-                    loop: 1,
-                    playlist: videoId,
-                    controls: 1,
-                    rel: 0,
-                    modestbranding: 1,
-                    playsinline: 1,
-                    origin: window.location.origin || 'https://3tres6records.com'
-                },
-                events: {
-                    onReady: (event) => {
-                        this.ytPlayerReady = true;
-                        event.target.setVolume(80);
-                        if (this.isMuted) {
-                            event.target.mute();
-                        } else {
-                            event.target.unMute();
-                        }
-                        event.target.playVideo();
-                        console.log('YT Player ready, videoId:', videoId);
-                    },
-                    onStateChange: (event) => {
-                        if (event.data === YT.PlayerState.ENDED) {
-                            // Loop: restart the video
-                            event.target.playVideo();
-                        }
-                        if (event.data === YT.PlayerState.PLAYING) {
-                            this.isPlaying = true;
-                            state.isPlaying = true;
-                        }
-                    },
-                    onError: (event) => {
-                        console.warn('YT Player error:', event.data, 'for videoId:', videoId);
-                        // If a vinyl track fails, fall back to radio
-                        if (videoId !== CONFIG.youtubeVideoId) {
-                            console.log('Falling back to radio...');
-                            this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', this.isMuted);
-                        }
-                    }
-                }
-            });
         },
         
         startMusic(videoId = null, title = null, startMuted = null) {
@@ -1200,58 +1147,32 @@ document.addEventListener('DOMContentLoaded', function() {
             const ttl = title || '3TRES6 Radio';
             const muted = startMuted !== null ? startMuted : this.isMuted;
             
+            // Mark as interacted (this call IS a user interaction)
             if (!this.userHasInteracted) {
-                // This call IS a user interaction (e.g. clicking a playlist track)
-                // Mark as interacted, remove the document listeners, and initialize the player
                 this.userHasInteracted = true;
-                this._removeUnmuteListeners();
+                this._removeFirstClickListeners();
                 this._hideClickToPlay();
-                this._initYTPlayer(vid, ttl, muted);
-                return;
             }
             
-            // If YT player exists and is ready, just load the new video
-            if (this.ytPlayer && this.ytPlayerReady) {
-                this.currentVideoId = vid;
-                this.currentTitle = ttl;
-                this.isMuted = muted;
-                
-                try {
-                    this.ytPlayer.loadVideoById(vid);
-                    if (muted) {
-                        this.ytPlayer.mute();
-                    } else {
-                        this.ytPlayer.unMute();
-                    }
-                    // Update title in mini-player
-                    const titleEl = document.getElementById('miniPlayerTitle');
-                    if (titleEl) titleEl.textContent = ttl;
-                    
-                    // Make sure container is visible
-                    const youtubeContainer = document.getElementById('youtubeAudioContainer');
-                    if (youtubeContainer) youtubeContainer.style.display = '';
-                    
-                    this.isPlaying = true;
-                    state.isPlaying = true;
-                    this.updateUI(true, ttl, muted);
-                    trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: ttl });
-                } catch (err) {
-                    console.error('YT player loadVideoById error:', err);
-                    // Re-init the player
-                    this._initYTPlayer(vid, ttl, muted);
-                }
-            } else {
-                // Player not ready yet — init it
-                this._initYTPlayer(vid, ttl, muted);
-            }
+            this.currentVideoId = vid;
+            this.currentTitle = ttl;
+            this.isMuted = muted;
+            
+            // Render the player with the new video
+            this._renderPlayer(vid, ttl, muted);
+            
+            this.isPlaying = true;
+            state.isPlaying = true;
+            this.updateUI(true, ttl, muted);
+            trackEvent('audio_play', { source: videoId ? 'vinyl_track' : '3tres6_radio', title: ttl });
         },
         
         mute() {
             this.isMuted = true;
-            if (this.ytPlayer && this.ytPlayerReady) {
-                try { this.ytPlayer.mute(); } catch(e) {}
+            // Rebuild iframe with mute=1 (only way to reliably mute without YT API)
+            if (this.isPlaying && this.currentVideoId) {
+                this._renderPlayer(this.currentVideoId, this.currentTitle, true);
             }
-            // If player not started yet, just update state — don't start music on mute click
             this.updateUI(this.isPlaying, this.currentTitle, true);
             trackEvent('audio_mute', {});
         },
@@ -1259,33 +1180,27 @@ document.addEventListener('DOMContentLoaded', function() {
         unmute() {
             this.isMuted = false;
             if (!this.userHasInteracted) {
-                // First interaction via the toggle button — start the player
                 this.userHasInteracted = true;
-                this._removeUnmuteListeners();
+                this._removeFirstClickListeners();
                 this._hideClickToPlay();
-                this._initYTPlayer(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
+                this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', false);
                 return;
             }
-            if (this.ytPlayer && this.ytPlayerReady) {
-                try {
-                    this.ytPlayer.unMute();
-                    this.ytPlayer.setVolume(80);
-                } catch(e) {}
+            // Rebuild iframe with mute=0
+            if (this.isPlaying && this.currentVideoId) {
+                this._renderPlayer(this.currentVideoId, this.currentTitle, false);
             }
             this.updateUI(true, this.currentTitle, false);
             trackEvent('audio_unmute', {});
         },
         
         stopMusic() {
-            if (this.ytPlayer && this.ytPlayerReady) {
-                try { this.ytPlayer.pauseVideo(); } catch(e) {}
-            }
+            const container = document.getElementById('youtubeAudioContainer');
+            if (container) container.innerHTML = '';
             
             this.isPlaying = false;
             state.isPlaying = false;
             this.updateUI(false);
-            
-            console.log('Music paused');
             trackEvent('audio_pause', {});
         },
         
@@ -1518,22 +1433,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Volume slider — control YT player volume via official API
+            // Volume slider — mute/unmute based on slider value
             document.getElementById('volumeSlider')?.addEventListener('input', (e) => {
                 const vol = parseInt(e.target.value);
                 localStorage.setItem('3tres6_volume', vol);
-                if (AudioPlayer.ytPlayer && AudioPlayer.ytPlayerReady) {
-                    try {
-                        AudioPlayer.ytPlayer.setVolume(vol);
-                        if (vol === 0) {
-                            AudioPlayer.ytPlayer.mute();
-                            AudioPlayer.isMuted = true;
-                        } else if (AudioPlayer.isMuted) {
-                            AudioPlayer.ytPlayer.unMute();
-                            AudioPlayer.isMuted = false;
-                        }
-                        AudioPlayer.updateUI(AudioPlayer.isPlaying, AudioPlayer.currentTitle, vol === 0);
-                    } catch(err) {}
+                if (vol === 0) {
+                    AudioPlayer.mute();
+                } else if (AudioPlayer.isMuted) {
+                    AudioPlayer.unmute();
                 }
             });
             
