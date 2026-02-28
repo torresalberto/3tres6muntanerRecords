@@ -984,6 +984,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Uses plain YouTube iframes with URL params for reliable cross-browser playback
     // ========================================
     
+    console.log('🎵 3TRES6 AudioPlayer v2 loading...');
+    
     const AudioPlayer = {
         isPlaying: false,
         isMuted: false,
@@ -1146,6 +1148,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const vid = videoId || CONFIG.youtubeVideoId;
             const ttl = title || '3TRES6 Radio';
             const muted = startMuted !== null ? startMuted : this.isMuted;
+            
+            console.log('🎵 AudioPlayer.startMusic:', { vid, ttl, muted, userHasInteracted: this.userHasInteracted });
             
             // Mark as interacted (this call IS a user interaction)
             if (!this.userHasInteracted) {
@@ -1542,10 +1546,17 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         async playTrack(index) {
-            if (index < 0 || index >= state.playlist.length) return;
-            if (this._resolving) return; // Prevent double-click during resolution
+            if (index < 0 || index >= state.playlist.length) {
+                console.warn('playTrack: invalid index', index, 'playlist length:', state.playlist.length);
+                return;
+            }
+            if (this._resolving) {
+                console.log('playTrack: already resolving, skipping');
+                return;
+            }
             
             const track = state.playlist[index];
+            console.log('🎵 playTrack:', index, track.title, 'audioUrl:', track.audioUrl, 'releaseId:', track.releaseId);
             this.currentIndex = index;
             state.playlistMode = 'vinyl';
             
@@ -1558,6 +1569,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this._resolving = true;
             try {
                 const resolved = await TrackResolver.resolve(track);
+                console.log('🎵 TrackResolver result:', resolved);
                 
                 if (resolved.type === 'youtube') {
                     AudioPlayer.startMusic(resolved.id, track.title, AudioPlayer.isMuted);
