@@ -2533,11 +2533,12 @@ button {
     }
     
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
     
     .specials-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .instagram-grid {
@@ -2545,8 +2546,8 @@ button {
     }
     
     .info-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     
     .footer-container {
@@ -3961,4 +3962,527 @@ a.blog-card-image:hover {
         display: inline-block;
         margin-bottom: 8px;
     }
+}
+
+/* ========================================
+   COMPREHENSIVE UX/UI & RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+/* ---- Product Cards: Touch-friendly & Mobile ---- */
+
+/* Always show quick-view button on touch devices */
+@media (hover: none) {
+    .product-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(transparent 40%, rgba(0,0,0,0.75));
+    }
+    
+    .product-card:hover {
+        transform: none;
+    }
+}
+
+/* Buy button: touch-friendly minimum size */
+.buy-btn {
+    min-height: 36px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Product card: 2 columns on mobile instead of 1 */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .product-info {
+        padding: 12px;
+    }
+    
+    .product-title {
+        font-size: 12px;
+        margin: 5px 0 3px;
+    }
+    
+    .product-label {
+        font-size: 11px;
+    }
+    
+    .product-price {
+        font-size: 14px;
+    }
+    
+    .buy-btn {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+    
+    .product-footer {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    
+    .badge {
+        font-size: 9px;
+        padding: 3px 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .product-info {
+        padding: 10px;
+    }
+    
+    .product-title {
+        font-size: 11px;
+    }
+    
+    .product-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .buy-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ---- Catalog Filters: Horizontal scroll on mobile ---- */
+@media (max-width: 768px) {
+    .catalog-filters {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+    }
+    
+    .catalog-filters::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+/* ---- Quick View Modal: Mobile improvements ---- */
+@media (max-width: 768px) {
+    .modal {
+        padding: 10px;
+    }
+    
+    .quick-view-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .quick-view-image {
+        max-height: 220px;
+    }
+    
+    .quick-view-info h2 {
+        font-size: 18px;
+    }
+    
+    .quick-view-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quick-view-footer .buy-btn,
+    #quickViewAddToCart {
+        width: 100%;
+        padding: 14px;
+        font-size: 14px;
+        min-height: 48px;
+    }
+}
+
+/* ---- Info Banner: 2 columns on mobile ---- */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .info-item {
+        padding: 20px 16px;
+    }
+    
+    .info-icon {
+        font-size: 24px;
+    }
+    
+    .info-item h3 {
+        font-size: 13px;
+    }
+    
+    .info-item p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Calendar: Better mobile layout ---- */
+@media (max-width: 768px) {
+    .weekly-calendar {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: var(--radius-md);
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,77,0,0.3) transparent;
+    }
+    
+    .weekly-calendar::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .weekly-calendar::-webkit-scrollbar-thumb {
+        background: rgba(255,77,0,0.3);
+        border-radius: 2px;
+    }
+    
+    .live-streams-banner {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .live-embed-tabs {
+        gap: 8px;
+    }
+    
+    .live-tab {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+/* ---- Newsletter: Better mobile ---- */
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        border-radius: var(--radius-sm);
+    }
+    
+    .newsletter-form button {
+        padding: 14px;
+        min-height: 48px;
+    }
+}
+
+/* ---- CTA Section: Better mobile ---- */
+@media (max-width: 768px) {
+    .cta-content h2 {
+        font-size: 24px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .whatsapp-btn {
+        justify-content: center;
+        padding: 14px 20px;
+        min-height: 52px;
+    }
+}
+
+/* ---- Blog Section: Better mobile ---- */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .blog-card-image {
+        height: 160px;
+    }
+    
+    .blog-card-content {
+        padding: 16px;
+    }
+    
+    .blog-card-content h3 {
+        font-size: 15px;
+    }
+}
+
+/* ---- About Section: Better mobile ---- */
+@media (max-width: 768px) {
+    .about-container {
+        gap: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 26px;
+    }
+    
+    .about-image {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        max-height: 200px;
+    }
+    
+    .about-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* ---- Footer: Better mobile ---- */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 20px 30px;
+    }
+    
+    .footer-container {
+        gap: 40px;
+    }
+    
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .payment-methods {
+        justify-content: center;
+    }
+    
+    .payment-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---- Header: Better mobile ---- */
+@media (max-width: 768px) {
+    .header-logo {
+        font-size: 18px;
+    }
+    
+    .cart-btn {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ---- Section headers: Better mobile ---- */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 22px;
+    }
+    
+    .section-description {
+        font-size: 14px;
+    }
+}
+
+/* ---- General touch improvements ---- */
+@media (hover: none) {
+    /* Increase tap target sizes */
+    .filter-btn {
+        min-height: 40px;
+        padding: 8px 16px;
+    }
+    
+    .carousel-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .event-watch-link {
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+/* ---- Smooth scrolling for sections ---- */
+.section {
+    scroll-margin-top: 80px;
+}
+
+/* ---- Loading states: Better UX ---- */
+.loading-products {
+    min-height: 200px;
+}
+
+/* ---- Product card: Subtle glow on hover ---- */
+.product-card:hover {
+    box-shadow: 0 8px 30px rgba(255, 77, 0, 0.1);
+}
+
+/* ---- Buy button: Active state ---- */
+.buy-btn:active {
+    transform: scale(0.97);
+    background: var(--color-accent-hover);
+}
+
+/* ---- Quick view button: Better visibility ---- */
+.quick-view-btn {
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+/* ---- Catalog section: Better spacing ---- */
+@media (max-width: 768px) {
+    .catalog-section {
+        padding: 50px 16px 80px; /* extra bottom for audio bar */
+    }
+    
+    .catalog-footer {
+        margin-top: 30px;
+    }
+    
+    .view-all-btn {
+        padding: 12px 28px;
+        font-size: 13px;
+    }
+}
+
+/* ---- Section padding: Account for bottom audio bar ---- */
+@media (max-width: 768px) {
+    .footer {
+        padding-bottom: 80px; /* space for audio controls bar */
+    }
+}
+
+/* ---- Instagram carousel: Better mobile ---- */
+@media (max-width: 480px) {
+    .ig-post-image {
+        height: 180px;
+    }
+    
+    .ig-post-caption {
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+/* ---- Specials grid: Better mobile ---- */
+@media (max-width: 480px) {
+    .specials-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* ---- Cart sidebar: Better mobile ---- */
+@media (max-width: 480px) {
+    .cart-sidebar {
+        width: 100%;
+    }
+    
+    .cart-header {
+        padding: 16px 20px;
+    }
+    
+    .cart-item {
+        padding: 12px 20px;
+    }
+}
+
+/* ---- Exit popup: Better mobile ---- */
+@media (max-width: 480px) {
+    .exit-popup-content {
+        margin: 10px;
+        border-radius: var(--radius-lg);
+    }
+    
+    .exit-benefits li {
+        font-size: 13px;
+    }
+}
+
+/* ---- Accessibility: Focus styles ---- */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ---- Smooth transitions for interactive elements ---- */
+.product-card,
+.blog-card,
+.special-card,
+.info-item {
+    will-change: transform;
+}
+
+/* ---- Text overflow protection ---- */
+.product-title,
+.blog-card-content h3,
+.playlist-title {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* ---- Image loading placeholder ---- */
+img[loading="lazy"] {
+    background: var(--color-bg-card);
+}
+
+/* ---- Scrollbar: Global thin style ---- */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,77,0,0.2) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(255,77,0,0.2);
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,77,0,0.4);
 }
