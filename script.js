@@ -1013,10 +1013,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // On first user interaction (not on the toggle button), start the radio
             // Store handler reference so it can be removed from startMusic() too
             this._unmuteHandler = (e) => {
-                // Don't trigger if clicking the audio toggle or controls themselves
+                // Don't trigger if clicking the audio toggle, controls, or playlist buttons
+                // (those have their own handlers that call startMusic() directly)
                 const target = e.target;
                 if (target && typeof target.closest === 'function') {
-                    if (target.closest('#audioToggle') || target.closest('#audioControls')) return;
+                    if (target.closest('#audioToggle') ||
+                        target.closest('#audioControls') ||
+                        target.closest('#playlistPlayBtn') ||
+                        target.closest('#playlistPrevBtn') ||
+                        target.closest('#playlistNextBtn') ||
+                        target.closest('.playlist-track') ||
+                        target.closest('#heroPlaylist')) return;
                 }
                 
                 if (!this.userHasInteracted) {
