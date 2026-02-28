@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get a free key at: https://console.cloud.google.com/apis/library/youtube.googleapis.com
         // Free quota: 10,000 units/day. Each search costs 100 units = 100 searches/day free.
         // Leave empty ('') to disable YouTube search (tracks without Discogs videos will show "no preview")
-        youtubeApiKey: '',
+        youtubeApiKey: 'AIzaSyDosmEru-UgmeRaLV7zoJar39VqS6pEiAA',
         
         // Mercado Pago Public Key
         mercadoPagoPublicKey: 'YOUR_MERCADO_PAGO_PUBLIC_KEY',
