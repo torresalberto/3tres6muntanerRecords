@@ -8,7 +8,7 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 const axios = require('axios');
 const cheerio = require('cheerio');
-const youtubedl = require('youtube-dl-exec');
+const ytdl = require('ytdl-core');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -72,41 +72,6 @@ function cleanupOldFiles() {
 
 setInterval(cleanupOldFiles, 15 * 60 * 1000);
 
-async function getYoutubeInfo(url) {
-    try {
-        const result = await youtubedl(url, {
-            dumpSingleJson: true,
-            noCheckCertificates: true,
-            noWarnings: true,
-            preferFreeFormats: true,
-            addHeader: ['referer:youtube.com', 'user-agent:Mozilla/5.0']
-        });
-
-        const video = result;
-        const formats = video.formats || [];
-        
-        let bestAudio = formats.find(f => f.audio_ext === 'm4a' && f.format_note === 'high') 
-            || formats.find(f => f.audio_ext === 'm4a')
-            || formats.find(f => f.audio_ext === 'webm' && f.audio_codec?.includes('opus'));
-
-        return {
-            success: true,
-            id: video.id,
-            title: video.title,
-            description: video.description?.substring(0, 500) || '',
-            uploader: video.uploader || video.channel_id || 'Unknown',
-            duration: video.duration,
-            thumbnail: video.thumbnail || video.thumbnails?.[0]?.url,
-            platform: 'youtube',
-            bestAudioUrl: bestAudio?.url || null,
-            bestAudioFormat: bestAudio?.ext || 'm4a'
-        };
-    } catch (error) {
-        console.error('YouTube info error:', error.message);
-        throw new Error('Failed to fetch YouTube video information');
-    }
-}
-
 async function downloadYoutube(url) {
     let tempDir = null;
     
@@ -115,50 +80,47 @@ async function downloadYoutube(url) {
         tempDir = path.join(DOWNLOAD_DIR, tempId);
         fs.mkdirSync(tempDir, { recursive: true });
 
-        await youtubedl(url, {
-            output: path.join(tempDir, '%(title)s.%(ext)s'),
-            format: 'bestaudio[ext=m4a]/bestaudio/best',
-            embedThumbnail: true,
-            addMetadata: true,
-            noCheckCertificates: true,
-            noWarnings: true,
-            preferFreeFormats: true,
-            addHeader: ['referer:youtube.com', 'user-agent:Mozilla/5.0']
+        const videoId = ytdl.getVideoID(url);
+        const videoInfo = await ytdl.getInfo(videoId);
+        
+        const title = videoInfo.videoDetails.title;
+        const sanitizedTitle = title.replace(/[<>:"/\\|?*]/g, '').trim().substring(0, 100);
+        
+        const audioStream = ytdl(url, {
+            quality: 'highestaudio',
+            filter: 'audioonly'
         });
 
-        const files = fs.readdirSync(tempDir);
-        const audioFile = files.find(f => f.endsWith('.mp3') || f.endsWith('.m4a') || f.endsWith('.webm'));
+        const filepath = path.join(tempDir, `${sanitizedTitle}.mp4`);
+        const writeStream = fs.createWriteStream(filepath);
+
+        await new Promise((resolve, reject) => {
+            audioStream.pipe(writeStream);
+            audioStream.on('end', resolve);
+            audioStream.on('error', reject);
+        });
+
+        const mp3Path = filepath.replace('.mp4', '.mp3');
         
-        if (!audioFile) {
-            throw new Error('No audio file found');
+        try {
+            const ffmpeg = require('fluent-ffmpeg');
+            await new Promise((resolve, reject) => {
+                ffmpeg(filepath)
+                    .toFormat('mp3')
+                    .audioBitrate(320)
+                    .on('end', resolve)
+                    .on('error', reject)
+                    .save(mp3Path);
+            });
+            fs.unlinkSync(filepath);
+        } catch (ffmpegError) {
+            console.warn('FFmpeg conversion failed, keeping original');
         }
 
-        let originalPath = path.join(tempDir, audioFile);
-        let finalPath = originalPath;
-        let tempTitle = audioFile.replace(/\.[^.]+$/, '');
-        
-        if (!audioFile.endsWith('.mp3')) {
-            finalPath = originalPath.replace(/\.[^.]+$/, '.mp3');
-            try {
-                const ffmpeg = require('fluent-ffmpeg');
-                await new Promise((resolve, reject) => {
-                    ffmpeg(originalPath)
-                        .toFormat('mp3')
-                        .audioBitrate(320)
-                        .on('end', resolve)
-                        .on('error', reject)
-                        .save(finalPath);
-                });
-                fs.unlinkSync(originalPath);
-            } catch (ffmpegError) {
-                console.warn('FFmpeg conversion failed, keeping original');
-                finalPath = originalPath;
-            }
-        }
-
+        const finalPath = fs.existsSync(mp3Path) ? mp3Path : filepath;
         const analysis = analyzeTrackSimple();
         
-        const djFilename = `${tempTitle} [${analysis.bpm} BPM] [${analysis.key}].mp3`;
+        const djFilename = `${sanitizedTitle} [${analysis.bpm} BPM] [${analysis.key}].mp3`;
         const destPath = path.join(DOWNLOAD_DIR, djFilename);
         
         fs.renameSync(finalPath, destPath);
@@ -166,7 +128,7 @@ async function downloadYoutube(url) {
         try {
             const NodeID3 = require('node-id3');
             const tags = {
-                title: tempTitle,
+                title: sanitizedTitle,
                 artist: '3TRES6 Downloads',
                 album: 'Downloaded',
                 comment: `Key: ${analysis.key} | Energy: ${analysis.energy}/10 | BPM: ${analysis.bpm}`,
@@ -188,7 +150,7 @@ async function downloadYoutube(url) {
             success: true,
             filename: djFilename,
             filepath: `/downloads/${djFilename}`,
-            title: tempTitle,
+            title: sanitizedTitle,
             size: fs.statSync(destPath).size,
             format: 'mp3',
             platform: 'youtube',
@@ -304,13 +266,7 @@ async function downloadSpotify(url) {
 
 async function downloadSoundcloud(url) {
     try {
-        const scInfo = await youtubedl(url, {
-            dumpSingleJson: true,
-            noCheckCertificates: true,
-            noWarnings: true
-        });
-
-        const searchQuery = `${scInfo.title} ${scInfo.uploader || ''} audio`.trim();
+        const searchQuery = `soundcloud ${url} audio`;
         const youtubeUrl = await searchYoutube(searchQuery);
         
         if (!youtubeUrl) {
@@ -319,7 +275,6 @@ async function downloadSoundcloud(url) {
 
         const downloadResult = await downloadYoutube(youtubeUrl);
         downloadResult.platform = 'soundcloud';
-        downloadResult.title = scInfo.title || downloadResult.title;
         
         return downloadResult;
     } catch (error) {
