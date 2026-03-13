@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3TRES6 Downloads | Descarga Música para DJ</title>
+    <meta name="description" content="Descarga música gratuita de YouTube, Spotify y SoundCloud. Análisis automático de BPM, Key y Energy. Herramienta gratuita para DJs.">
+    
+    <link rel="canonical" href="https://muntaner336.com/downloads/">
+    <link rel="alternate" hreflang="es-MX" href="https://muntaner336.com/downloads/">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="downloads-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo" aria-label="3TRES6 Records Home">
+                <span class="logo-text">3TRES6</span>
+                <span class="logo-subtitle">RECORDS</span>
+            </a>
+            <nav class="main-nav">
+                <a href="/">CATÁLOGO</a>
+                <a href="/#calendario">CALENDARIO</a>
+                <a href="/#instagram">INSTAGRAM</a>
+                <a href="/blog.html">BLOG</a>
+                <a href="/downloads/" class="nav-item active">DESCARGAS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-downloads">
+        <div class="hero-content">
+            <span class="hero-badge">🎧 3TRES6 Downloads</span>
+            <h1>Descarga Música para DJ</h1>
+            <p>Obtén pistas de YouTube, Spotify y SoundCloud con análisis automático de BPM, Key y Energy. Totalmente gratis.</p>
+            
+            <div class="download-counter">
+                <span class="counter-label">Tus descargas gratis:</span>
+                <span class="counter-number" id="downloadCount">0</span>
+                <span class="counter-divider">/</span>
+                <span class="counter-limit">3</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Tool -->
+    <section class="download-tool">
+        <div class="tool-container">
+            <!-- URL Input -->
+            <div class="input-section">
+                <div class="platform-tabs">
+                    <button class="platform-tab active" data-platform="youtube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        YouTube
+                    </button>
+                    <button class="platform-tab" data-platform="spotify">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Spotify
+                    </button>
+                    <button class="platform-tab" data-platform="soundcloud">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.052-.1-.084-.1zm-.899 1.624c-.059 0-.085.037-.094.1l-.156 1.53.156 1.492c.009.063.035.1.094.1.05 0 .09-.037.099-.1l.178-1.492-.178-1.53c-.009-.063-.049-.1-.099-.1zm1.83-1.779c-.059 0-.104.046-.112.1l-.21 2.262.21 2.164c.008.058.053.1.112.1.05 0 .095-.042.103-.1l.233-2.164-.233-2.262c-.008-.054-.053-.1-.103-.1zm.91-.119c-.068 0-.12.054-.124.12l-.186 2.381.186 2.2c.004.072.056.124.124.124.063 0 .116-.052.12-.124l.21-2.2-.21-2.381c-.004-.066-.057-.12-.12-.12zm.91-.091c-.072 0-.128.06-.128.127l-.165 2.472.165 2.217c0 .072.056.127.128.127.067 0 .123-.055.128-.127l.185-2.217-.185-2.472c-.005-.067-.061-.127-.128-.127zm.91-.11c-.076 0-.135.063-.135.135l-.15 2.582.15 2.2c0 .076.059.135.135.135.072 0 .131-.059.135-.135l.165-2.2-.165-2.582c-.004-.072-.063-.135-.135-.135zm.917-.089c-.08 0-.143.067-.143.143l-.135 2.671.135 2.2c0 .08.063.143.143.143.075 0 .138-.063.143-.143l.15-2.2-.15-2.671c-.005-.076-.068-.143-.143-.143zm.917-.067c-.084 0-.152.072-.152.152l-.12 2.738.12 2.2c0 .084.068.152.152.152.08 0 .147-.068.152-.152l.135-2.2-.135-2.738c-.005-.08-.072-.152-.152-.152zm.926-.054c-.088 0-.16.076-.16.16l-.105 2.792.105 2.2c0 .088.072.16.16.16.084 0 .156-.072.16-.16l.12-2.2-.12-2.792c-.004-.084-.076-.16-.16-.16zm.926-.04c-.092 0-.168.08-.168.168l-.09 2.832.09 2.2c0 .092.076.168.168.168.088 0 .164-.076.168-.168l.105-2.2-.105-2.832c-.004-.088-.08-.168-.168-.168zm.934-.025c-.097 0-.175.083-.175.175l-.075 2.859.075 2.2c0 .097.078.175.175.175.092 0 .17-.078.175-.175l.09-2.2-.09-2.859c-.005-.092-.083-.175-.175-.175zm.934-.014c-.101 0-.184.087-.184.184l-.06 2.873.06 2.167c0 .101.083.184.184.184.097 0 .18-.083.184-.184l.075-2.167-.075-2.873c-.004-.097-.087-.184-.184-.184zm.934 0c-.105 0-.191.091-.191.191l-.045 2.886.045 2.167c0 .105.086.191.191.191.101 0 .187-.086.191-.191l.06-2.167-.06-2.886c-.004-.1-.09-.191-.191-.191zm.941.01c-.11 0-.2.094-.2.2l-.03 2.886.03 2.167c0 .11.09.2.2.2.105 0 .195-.09.2-.2l.045-2.167-.045-2.886c-.005-.106-.095-.2-.2-.2zm.184 2.896c-.115 0-.21.1-.21.21v.15c0 .115.095.21.21.21h.061v2.167H9.258V15.54c0-.115-.095-.21-.21-.21h-.061V15.18h7.258v.21h-.061z"/></svg>
+                        SoundCloud
+                    </button>
+                </div>
+                
+                <div class="url-input-wrapper">
+                    <input type="text" id="urlInput" class="url-input" placeholder="Pega el enlace de YouTube, Spotify o SoundCloud..." autocomplete="off">
+                    <button class="paste-btn" id="pasteBtn" title="Pegar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    </button>
+                </div>
+                
+                <button class="download-btn" id="downloadBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>Descargar</span>
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Analizando pista...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-status" id="progressStatus">Obteniendo información</p>
+            </div>
+
+            <!-- Result Card -->
+            <div class="result-card" id="resultCard" style="display: none;">
+                <div class="result-header">
+                    <div class="result-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                    </div>
+                    <div class="result-info">
+                        <h3 id="resultTitle">Track Title</h3>
+                        <p id="resultArtist">Artist Name</p>
+                    </div>
+                </div>
+                
+                <div class="dj-analysis">
+                    <div class="analysis-item">
+                        <span class="analysis-label">BPM</span>
+                        <span class="analysis-value" id="bpmValue">128</span>
+                    </div>
+                    <div class="analysis-item">
+                        <span class="analysis-label">KEY</span>
+                        <span class="analysis-value" id="keyValue">8B</span>
+                    </div>
+                    <div class="analysis-item">
+                        <span class="analysis-label">ENERGY</span>
+                        <div class="energy-meter">
+                            <div class="energy-fill" id="energyFill"></div>
+                        </div>
+                        <span class="analysis-value" id="energyValue">8/10</span>
+                    </div>
+                </div>
+
+                <div class="compatible-keys" id="compatibleKeys">
+                    <span class="keys-label">Compatible:</span>
+                    <div class="key-tags" id="keyTags"></div>
+                </div>
+
+                <a href="#" class="download-link-btn" id="downloadLinkBtn" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Descargar MP3 (320 kbps)
+                </a>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-state" id="errorState" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h3>Error al descargar</h3>
+                <p id="errorMessage">El enlace no es válido o el video no está disponible.</p>
+                <button class="retry-btn" id="retryBtn">Intentar de nuevo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Section -->
+    <section class="affiliate-section">
+        <div class="section-header">
+            <h2>🎧 Equipa Tu Set</h2>
+            <p>Herramientas profesionales para DJs</p>
+        </div>
+        
+        <div class="affiliate-grid">
+            <a href="https://www.amazon.es/dp/B07XD5RDKF?tag=3tres6-21" target="_blank" rel="nofollow" class="affiliate-card">
+                <div class="affiliate-image">
+                    <span class="affiliate-badge">🎧</span>
+                </div>
+                <div class="affiliate-info">
+                    <h4>DJ Headphones</h4>
+                    <p>Alta calidad para monitoreo</p>
+                    <span class="affiliate-price">Ver precio →</span>
+                </div>
+            </a>
+            
+            <a href="https://www.amazon.es/dp/B08J4CRY5P?tag=3tres6-21" target="_blank" rel="nofollow" class="affiliate-card">
+                <div class="affiliate-image">
+                    <span class="affiliate-badge">🎛️</span>
+                </div>
+                <div class="affiliate-info">
+                    <h4>Controller DJ</h4>
+                    <p>Compatible con rekordbox</p>
+                    <span class="affiliate-price">Ver precio →</span>
+                </div>
+            </a>
+            
+            <a href="https://www.amazon.es/dp/B0BYNPT7SS?tag=3tres6-21" target="_blank" rel="nofollow" class="affiliate-card">
+                <div class="affiliate-image">
+                    <span class="affiliate-badge">🔊</span>
+                </div>
+                <div class="affiliate-info">
+                    <h4>Audio Interface</h4>
+                    <p>Sonido profesional</p>
+                    <span class="affiliate-price">Ver precio →</span>
+                </div>
+            </a>
+            
+            <a href="https://www.amazon.es/dp/B09JQMJHXY?tag=3tres6-21" target="_blank" rel="nofollow" class="affiliate-card">
+                <div class="affiliate-image">
+                    <span class="affiliate-badge">💿</span>
+                </div>
+                <div class="affiliate-info">
+                    <h4>Pack Vinilos</h4>
+                    <p>Deep House Selection</p>
+                    <span class="affiliate-price">Ver precio →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">3TRES6 RECORDS</span>
+                <p>Vinilos europeos de segunda mano<br>Barcelona → México</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Catálogo</h4>
+                    <a href="/#catalogo">House</a>
+                    <a href="/#catalogo">Techno</a>
+                    <a href="/#catalogo">Minimal</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Info</h4>
+                    <a href="/#nosotros">Nosotros</a>
+                    <a href="/downloads/">Descargas</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 3TRES6 Records. Hecho con 🎵 en CDMX.</p>
+        </div>
+    </footer>
+
+    <!-- Email Modal -->
+    <div class="modal-overlay" id="emailModal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            
+            <div class="modal-icon">🎉</div>
+            <h2>¡Ya has usado 3 descargas gratuitas!</h2>
+            <p>Únete a nuestra newsletter para descargas ilimitadas, pistas exclusivas y ofertas en vinilos.</p>
+            
+            <form class="email-form" id="emailForm">
+                <input type="email" id="emailInput" placeholder="tu@email.com" required>
+                <button type="submit" class="submit-btn">
+                    <span>¡Unirme y seguir descargando!</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+            </form>
+            
+            <p class="modal-note">No spam. Solo contenido útil para DJs. Cancela cuando quieras.</p>
+            
+            <button class="skip-btn" id="skipBtn">Omitir por ahora</button>
+        </div>
+    </div>
+
+    <script>
+        window.API_BASE = '/api';
+        window.DOWNLOAD_API_BASE = '/api';
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>
