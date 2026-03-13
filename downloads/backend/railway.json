@@ -5,8 +5,8 @@
     "nixpacks": {
       "install": ["python3", "npm"]
     },
-    "buildCommand": "YOUTUBE_DL_SKIP_PYTHON_CHECK=1 npm install",
-    "startCommand": "YOUTUBE_DL_SKIP_PYTHON_CHECK=1 npm start"
+    "buildCommand": "npm install --ignore-scripts && npm install yt-dlp --ignore-scripts",
+    "startCommand": "npm start"
   },
   "deploy": {
     "numReplicas": 1,
