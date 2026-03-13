@@ -333,7 +333,43 @@ app.get('/api/health', (req, res) => {
     });
 });
 
+app.get('/health', (req, res) => {
+    res.json({
+        status: 'ok',
+        platforms: ['youtube', 'soundcloud', 'spotify'],
+        uptime: process.uptime()
+    });
+});
+
 app.post('/api/download', async (req, res) => {
+    try {
+        const { url, platform } = req.body;
+        
+        if (!url) {
+            return res.status(400).json({ error: 'URL is required' });
+        }
+
+        let result;
+        
+        if (isValidYoutubeUrl(url)) {
+            result = await downloadYoutube(url);
+        } else if (isValidSpotifyUrl(url)) {
+            result = await downloadSpotify(url);
+        } else if (isValidSoundcloudUrl(url)) {
+            result = await downloadSoundcloud(url);
+        } else {
+            return res.status(400).json({ error: 'Invalid URL. Use YouTube, Spotify, or SoundCloud links.' });
+        }
+
+        res.json(result);
+        
+    } catch (error) {
+        console.error('Download error:', error.message);
+        res.status(500).json({ error: error.message || 'Download failed' });
+    }
+});
+
+app.post('/download', async (req, res) => {
     try {
         const { url, platform } = req.body;
         
