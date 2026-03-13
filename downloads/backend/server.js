@@ -19,8 +19,11 @@ if (!fs.existsSync(DOWNLOAD_DIR)) {
 }
 
 app.use(helmet());
+const allowedOrigins = process.env.ALLOWED_ORIGINS 
+    ? process.env.ALLOWED_ORIGINS.split(',')
+    : ['https://3tres6records.albto.me', 'https://muntaner336.com', 'http://localhost:3000'];
 app.use(cors({
-    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['*'],
+    origin: allowedOrigins,
     methods: ['GET', 'POST'],
     credentials: true
 }));
