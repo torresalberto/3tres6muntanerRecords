@@ -192,6 +192,7 @@ const App = {
         setTimeout(() => {
             window.location.href = downloader.url;
         }, 1500);
+    },
 
     validateUrl(url) {
         return this.isYouTubeUrl(url) || 
