@@ -158,7 +158,7 @@ const App = {
         this.showLoading();
 
         try {
-            const response = await fetch(`${this.DOWNLOAD_API_BASE}/download`, {
+            const response = await fetch(`${this.DOWNLOAD_API_BASE}/api/download`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
