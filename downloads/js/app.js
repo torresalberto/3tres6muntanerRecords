@@ -155,34 +155,43 @@ const App = {
             return;
         }
 
-        this.showLoading();
-
-        try {
-            const response = await fetch(`${this.DOWNLOAD_API_BASE}/api/download`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    url: url,
-                    platform: this.state.platform
-                })
-            });
-
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(data.message || 'Error al descargar');
-            }
-
-            this.showResult(data);
-            this.incrementDownloadCount();
-            this.checkEmailCapture();
-
-        } catch (error) {
-            this.showError(error.message);
-        }
+        // Redirect to external downloader with URL pre-filled
+        this.redirectToDownloader(url);
     },
+
+    redirectToDownloader(url) {
+        // Encode the URL for the redirect
+        const encodedUrl = encodeURIComponent(url);
+        
+        // List of free downloaders to try
+        const downloaders = [
+            { name: 'Y2Meta', url: `https://www.y2meta.mobi/youtube-to-mp3?url=${encodedUrl}` },
+            { name: 'YTMate', url: `https://ytmate.dev/search?url=${encodedUrl}` },
+            { name: 'SaveFrom', url: `https://savefrom.net/youtube-to-mp3?url=${url}` }
+        ];
+
+        // Try the first one
+        const downloader = downloaders[0];
+        
+        // Show a message before redirecting
+        const message = 'Te redireccionamos a un descargador externo...';
+        
+        // Update UI to show redirect message
+        document.getElementById('loadingState').style.display = 'block';
+        document.getElementById('resultCard').style.display = 'none';
+        document.getElementById('errorState').style.display = 'none';
+        document.getElementById('downloadBtn').disabled = true;
+        
+        this.updateProgress(50, message);
+        
+        // Increment download count and check email capture
+        this.incrementDownloadCount();
+        this.checkEmailCapture();
+        
+        // Redirect after a short delay
+        setTimeout(() => {
+            window.location.href = downloader.url;
+        }, 1500);
 
     validateUrl(url) {
         return this.isYouTubeUrl(url) || 
@@ -234,7 +243,13 @@ const App = {
         ).join('');
 
         const downloadLinkBtn = document.getElementById('downloadLinkBtn');
-        downloadLinkBtn.href = data.filepath || '#';
+        
+        // Redirect to external downloader instead of direct download
+        downloadLinkBtn.onclick = (e) => {
+            e.preventDefault();
+            const encodedUrl = encodeURIComponent(data.originalUrl || `https://youtube.com/watch?v=test`);
+            window.location.href = `https://www.y2meta.mobi/youtube-to-mp3?url=${encodedUrl}`;
+        };
 
         this.simulateProgress();
     },
