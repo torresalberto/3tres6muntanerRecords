@@ -23,6 +23,7 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
     : ['https://3tres6records.albto.me', 'https://muntaner336.com', 'http://localhost:3000'];
 
 app.use(helmet());
+app.set('trust proxy', 1);
 app.use(cors({
     origin: allowedOrigins,
     methods: ['GET', 'POST', 'OPTIONS'],
@@ -74,7 +75,16 @@ setInterval(cleanupOldFiles, 15 * 60 * 1000);
 async function downloadYoutube(url) {
     try {
         const videoId = ytdl.getVideoID(url);
-        const videoInfo = await ytdl.getInfo(videoId);
+        
+        const videoInfo = await ytdl.getInfo(videoId, {
+            requestOptions: {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept-Language': 'en-US,en;q=0.9',
+                    'Referer': 'https://www.youtube.com/'
+                }
+            }
+        });
         
         const title = videoInfo.videoDetails.title;
         const sanitizedTitle = title.replace(/[<>:"/\\|?*]/g, '').trim().substring(0, 80);
@@ -82,8 +92,21 @@ async function downloadYoutube(url) {
         const tempId = uuidv4();
         const tempPath = path.join(DOWNLOAD_DIR, `${tempId}.mp4`);
         
+        const format = ytdl.chooseFormat(videoInfo.formats, { quality: '18' });
+        if (!format) {
+            throw new Error('No suitable format found');
+        }
+        
         await new Promise((resolve, reject) => {
-            const stream = ytdl(url, { quality: 'highest' });
+            const stream = ytdl.downloadFromInfo(videoInfo, {
+                format: format,
+                requestOptions: {
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                        'Referer': 'https://www.youtube.com/'
+                    }
+                }
+            });
             const writeStream = fs.createWriteStream(tempPath);
             
             stream.pipe(writeStream);
