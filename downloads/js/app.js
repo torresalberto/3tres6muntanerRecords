@@ -160,23 +160,17 @@ const App = {
     },
 
     redirectToDownloader(url) {
-        // Encode the URL for the redirect
         const encodedUrl = encodeURIComponent(url);
         
-        // List of free downloaders to try
         const downloaders = [
-            { name: 'Y2Meta', url: `https://www.y2meta.mobi/youtube-to-mp3?url=${encodedUrl}` },
-            { name: 'YTMate', url: `https://ytmate.dev/search?url=${encodedUrl}` },
+            { name: 'FastYTM', url: `https://fastytm.com/?video=${encodedUrl}` },
             { name: 'SaveFrom', url: `https://savefrom.net/youtube-to-mp3?url=${url}` }
         ];
 
-        // Try the first one
         const downloader = downloaders[0];
         
-        // Show a message before redirecting
         const message = 'Te redireccionamos a un descargador externo...';
         
-        // Update UI to show redirect message
         document.getElementById('loadingState').style.display = 'block';
         document.getElementById('resultCard').style.display = 'none';
         document.getElementById('errorState').style.display = 'none';
@@ -184,11 +178,9 @@ const App = {
         
         this.updateProgress(50, message);
         
-        // Increment download count and check email capture
         this.incrementDownloadCount();
         this.checkEmailCapture();
         
-        // Redirect after a short delay
         setTimeout(() => {
             window.location.href = downloader.url;
         }, 1500);
@@ -249,7 +241,7 @@ const App = {
         downloadLinkBtn.onclick = (e) => {
             e.preventDefault();
             const encodedUrl = encodeURIComponent(data.originalUrl || `https://youtube.com/watch?v=test`);
-            window.location.href = `https://www.y2meta.mobi/youtube-to-mp3?url=${encodedUrl}`;
+            window.location.href = `https://fastytm.com/?video=${encodedUrl}`;
         };
 
         this.simulateProgress();
