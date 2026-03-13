@@ -18,13 +18,14 @@ if (!fs.existsSync(DOWNLOAD_DIR)) {
     fs.mkdirSync(DOWNLOAD_DIR, { recursive: true });
 }
 
-app.use(helmet());
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
     ? process.env.ALLOWED_ORIGINS.split(',')
     : ['https://3tres6records.albto.me', 'https://muntaner336.com', 'http://localhost:3000'];
+
+app.use(helmet());
 app.use(cors({
     origin: allowedOrigins,
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'OPTIONS'],
     credentials: true
 }));
 app.use(express.json());
@@ -62,100 +63,48 @@ function cleanupOldFiles() {
                 const stats = fs.statSync(filepath);
                 if (stats.isFile() && now - stats.mtimeMs > maxAge) {
                     fs.unlinkSync(filepath);
-                    console.log('Cleaned up:', file);
                 }
-            } catch (err) {
-                console.warn('Cleanup skip:', file);
-            }
+            } catch (err) {}
         });
-    } catch (err) {
-        console.error('Cleanup error:', err.message);
-    }
+    } catch (err) {}
 }
 
 setInterval(cleanupOldFiles, 15 * 60 * 1000);
 
 async function downloadYoutube(url) {
-    let tempDir = null;
-    
     try {
-        const tempId = uuidv4();
-        tempDir = path.join(DOWNLOAD_DIR, tempId);
-        fs.mkdirSync(tempDir, { recursive: true });
-
         const videoId = ytdl.getVideoID(url);
         const videoInfo = await ytdl.getInfo(videoId);
         
         const title = videoInfo.videoDetails.title;
-        const sanitizedTitle = title.replace(/[<>:"/\\|?*]/g, '').trim().substring(0, 100);
+        const sanitizedTitle = title.replace(/[<>:"/\\|?*]/g, '').trim().substring(0, 80);
         
-        const audioStream = ytdl(url, {
-            quality: 'highestaudio',
-            filter: 'audioonly'
-        });
-
-        const filepath = path.join(tempDir, `${sanitizedTitle}.mp4`);
-        const writeStream = fs.createWriteStream(filepath);
-
+        const tempId = uuidv4();
+        const tempPath = path.join(DOWNLOAD_DIR, `${tempId}.mp4`);
+        
         await new Promise((resolve, reject) => {
-            audioStream.pipe(writeStream);
-            audioStream.on('end', resolve);
-            audioStream.on('error', reject);
+            const stream = ytdl(url, { quality: 'highest' });
+            const writeStream = fs.createWriteStream(tempPath);
+            
+            stream.pipe(writeStream);
+            stream.on('end', resolve);
+            stream.on('error', reject);
         });
 
-        const mp3Path = filepath.replace('.mp4', '.mp3');
-        
-        try {
-            const ffmpeg = require('fluent-ffmpeg');
-            await new Promise((resolve, reject) => {
-                ffmpeg(filepath)
-                    .toFormat('mp3')
-                    .audioBitrate(320)
-                    .on('end', resolve)
-                    .on('error', reject)
-                    .save(mp3Path);
-            });
-            fs.unlinkSync(filepath);
-        } catch (ffmpegError) {
-            console.warn('FFmpeg conversion failed, keeping original');
-        }
-
-        const finalPath = fs.existsSync(mp3Path) ? mp3Path : filepath;
         const analysis = analyzeTrackSimple();
         
-        const djFilename = `${sanitizedTitle} [${analysis.bpm} BPM] [${analysis.key}].mp3`;
-        const destPath = path.join(DOWNLOAD_DIR, djFilename);
+        const filename = `${sanitizedTitle} [${analysis.bpm}BPM] [${analysis.key}].mp4`;
+        const finalPath = path.join(DOWNLOAD_DIR, filename);
         
-        fs.renameSync(finalPath, destPath);
-        
-        try {
-            const NodeID3 = require('node-id3');
-            const tags = {
-                title: sanitizedTitle,
-                artist: '3TRES6 Downloads',
-                album: 'Downloaded',
-                comment: `Key: ${analysis.key} | Energy: ${analysis.energy}/10 | BPM: ${analysis.bpm}`,
-                TBPM: analysis.bpm.toString(),
-                TKEY: analysis.key
-            };
-            NodeID3.update(tags, destPath);
-        } catch (tagError) {
-            console.warn('ID3 tags failed:', tagError.message);
-        }
-
-        if (tempDir && fs.existsSync(tempDir)) {
-            try {
-                fs.rmSync(tempDir, { recursive: true, force: true });
-            } catch (e) {}
-        }
+        fs.renameSync(tempPath, finalPath);
 
         return {
             success: true,
-            filename: djFilename,
-            filepath: `/downloads/${djFilename}`,
+            filename: filename,
+            filepath: `/downloads/${filename}`,
             title: sanitizedTitle,
-            size: fs.statSync(destPath).size,
-            format: 'mp3',
+            size: fs.statSync(finalPath).size,
+            format: 'mp4',
             platform: 'youtube',
             analysis: {
                 bpm: analysis.bpm,
@@ -166,34 +115,22 @@ async function downloadYoutube(url) {
             }
         };
     } catch (error) {
-        if (tempDir) {
-            try {
-                if (fs.existsSync(tempDir)) {
-                    fs.rmSync(tempDir, { recursive: true, force: true });
-                }
-            } catch (e) {}
-        }
-        throw error;
+        console.error('YouTube download error:', error.message);
+        throw new Error('Failed to download: ' + error.message);
     }
 }
 
 async function getSpotifyInfo(url) {
     try {
         const match = url.match(/spotify\.com\/(track|playlist|album|episode)\/([a-zA-Z0-9]+)/);
-        if (!match) {
-            throw new Error('Invalid Spotify URL');
-        }
+        if (!match) throw new Error('Invalid Spotify URL');
         
         const type = match[1];
-        const id = match[2];
+        if (type !== 'track') throw new Error('Only Spotify tracks can be downloaded');
         
-        if (type !== 'track') {
-            throw new Error('Only Spotify tracks can be downloaded');
-        }
-        
-        const embedUrl = `https://open.spotify.com/embed/${type}/${id}`;
+        const embedUrl = `https://open.spotify.com/embed/${type}/${match[2]}`;
         const response = await axios.get(embedUrl, {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+            headers: { 'User-Agent': 'Mozilla/5.0' },
             timeout: 15000
         });
         
@@ -201,17 +138,11 @@ async function getSpotifyInfo(url) {
         
         return {
             success: true,
-            id: id,
-            type: type,
-            url: url,
             title: $('meta[property="og:title"]').attr('content') || '',
-            artist: $('meta[property="og:description"]').attr('content')?.split('•')[0]?.trim() || '',
-            image: $('meta[property="og:image"]').attr('content') || '',
-            platform: 'spotify'
+            artist: $('meta[property="og:description"]').attr('content')?.split('•')[0]?.trim() || ''
         };
     } catch (error) {
-        console.error('Spotify info error:', error.message);
-        throw new Error('Failed to fetch Spotify information');
+        throw new Error('Failed to get Spotify info');
     }
 }
 
@@ -222,77 +153,47 @@ async function searchYoutube(query) {
             headers: { 'User-Agent': 'Mozilla/5.0' },
             timeout: 10000
         });
-
         const match = response.data.match(/"videoId":"([a-zA-Z0-9_-]{11})"/);
-        if (match) {
-            return `https://www.youtube.com/watch?v=${match[1]}`;
-        }
-        return null;
+        return match ? `https://www.youtube.com/watch?v=${match[1]}` : null;
     } catch (error) {
         return null;
     }
 }
 
 async function downloadSpotify(url) {
-    try {
-        const spotifyInfo = await getSpotifyInfo(url);
-        
-        if (!spotifyInfo.success) {
-            throw new Error('Failed to get Spotify info');
-        }
-
-        let searchQuery = `${spotifyInfo.title} ${spotifyInfo.artist} extended mix official audio`.trim();
-        let youtubeUrl = await searchYoutube(searchQuery);
-
-        if (!youtubeUrl) {
-            searchQuery = `${spotifyInfo.title} ${spotifyInfo.artist}`;
-            youtubeUrl = await searchYoutube(searchQuery);
-        }
-
-        if (!youtubeUrl) {
-            throw new Error('Could not find matching video on YouTube');
-        }
-
-        const downloadResult = await downloadYoutube(youtubeUrl);
-        
-        downloadResult.platform = 'spotify';
-        downloadResult.title = spotifyInfo.title || downloadResult.title;
-        downloadResult.analysis.artist = spotifyInfo.artist;
-        
-        return downloadResult;
-        
-    } catch (error) {
-        console.error('Spotify download error:', error.message);
-        throw error;
+    const spotifyInfo = await getSpotifyInfo(url);
+    const searchQuery = `${spotifyInfo.title} ${spotifyInfo.artist}`;
+    const youtubeUrl = await searchYoutube(searchQuery);
+    
+    if (!youtubeUrl) {
+        throw new Error('Could not find on YouTube');
     }
+    
+    const result = await downloadYoutube(youtubeUrl);
+    result.platform = 'spotify';
+    result.analysis.artist = spotifyInfo.artist;
+    return result;
 }
 
 async function downloadSoundcloud(url) {
-    try {
-        const searchQuery = `soundcloud ${url} audio`;
-        const youtubeUrl = await searchYoutube(searchQuery);
-        
-        if (!youtubeUrl) {
-            throw new Error('Could not find track on YouTube');
-        }
-
-        const downloadResult = await downloadYoutube(youtubeUrl);
-        downloadResult.platform = 'soundcloud';
-        
-        return downloadResult;
-    } catch (error) {
-        console.error('SoundCloud download error:', error.message);
-        throw new Error('SoundCloud download failed. Try searching on YouTube instead.');
+    const searchQuery = `soundcloud ${url}`;
+    const youtubeUrl = await searchYoutube(searchQuery);
+    
+    if (!youtubeUrl) {
+        throw new Error('Could not find on YouTube');
     }
+    
+    const result = await downloadYoutube(youtubeUrl);
+    result.platform = 'soundcloud';
+    return result;
 }
 
 function analyzeTrackSimple() {
-    const bpmOptions = [120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 124, 126, 128, 127, 125, 126, 127, 126, 128];
-    const keyOptions = ['8B', '9B', '7B', '8A', '9A', '10A', '11A', '5B', '6B', '7A', '8A', '9A', '10B', '11B', '12B', '1B', '2B', '3B', '4B', '5A', '6A', '7A', '8A'];
+    const bpmOptions = [120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130];
+    const keyOptions = ['8B', '9B', '7B', '8A', '9A', '10A', '5B', '6B', '7A', '10B', '11B'];
     
     const bpm = bpmOptions[Math.floor(Math.random() * bpmOptions.length)];
     const key = keyOptions[Math.floor(Math.random() * keyOptions.length)];
-    
     const energy = Math.floor(Math.random() * 5) + 5;
     
     const keyNum = parseInt(key.replace(/[A-B]/, ''));
@@ -302,43 +203,24 @@ function analyzeTrackSimple() {
         key,
         `${keyNum === 12 ? 1 : keyNum + 1}${keyLetter}`,
         `${keyNum === 1 ? 12 : keyNum - 1}${keyLetter}`,
-        `${keyNum}${keyLetter === 'A' ? 'B' : 'A'}`,
-        `${keyNum === 12 ? 1 : keyNum + 1}${keyLetter === 'A' ? 'B' : 'A'}`,
-        `${keyNum === 1 ? 12 : keyNum - 1}${keyLetter === 'A' ? 'B' : 'A'}`
-    ].slice(0, 4);
-
-    const camelotToStandard = {
-        '1A': 'C', '1B': 'C#', '2A': 'D', '2B': 'D#', '3A': 'E', '3B': 'F',
-        '4A': 'F#', '4B': 'G', '5A': 'G#', '5B': 'A', '6A': 'A#', '6B': 'B',
-        '7A': 'C', '7B': 'C#', '8A': 'D', '8B': 'D#', '9A': 'E', '9B': 'F',
-        '10A': 'F#', '10B': 'G', '11A': 'G#', '11B': 'A', '12A': 'A#', '12B': 'B'
-    };
+        `${keyNum}${keyLetter === 'A' ? 'B' : 'A'}`
+    ];
 
     return {
         bpm,
-        bpmConfidence: 0.85 + Math.random() * 0.1,
         key,
-        standardKey: camelotToStandard[key] || 'C',
-        keyConfidence: 0.75 + Math.random() * 0.15,
+        standardKey: key,
         energy,
         compatibleKeys
     };
 }
 
 app.get('/api/health', (req, res) => {
-    res.json({
-        status: 'ok',
-        platforms: ['youtube', 'soundcloud', 'spotify'],
-        uptime: process.uptime()
-    });
+    res.json({ status: 'ok', platforms: ['youtube', 'spotify', 'soundcloud'], uptime: process.uptime() });
 });
 
 app.get('/health', (req, res) => {
-    res.json({
-        status: 'ok',
-        platforms: ['youtube', 'soundcloud', 'spotify'],
-        uptime: process.uptime()
-    });
+    res.json({ status: 'ok', platforms: ['youtube', 'spotify', 'soundcloud'], uptime: process.uptime() });
 });
 
 app.post('/api/download', async (req, res) => {
@@ -365,7 +247,7 @@ app.post('/api/download', async (req, res) => {
         
     } catch (error) {
         console.error('Download error:', error.message);
-        res.status(500).json({ error: error.message || 'Download failed' });
+        res.status(500).json({ error: error.message });
     }
 });
 
@@ -393,7 +275,7 @@ app.post('/download', async (req, res) => {
         
     } catch (error) {
         console.error('Download error:', error.message);
-        res.status(500).json({ error: error.message || 'Download failed' });
+        res.status(500).json({ error: error.message });
     }
 });
 
@@ -412,14 +294,8 @@ app.use((req, res) => {
     res.status(404).json({ error: 'Route not found' });
 });
 
-app.use((err, req, res, next) => {
-    console.error('Server error:', err.message);
-    res.status(500).json({ error: 'Internal server error' });
-});
-
 app.listen(PORT, () => {
-    console.log(`🎧 3TRES6 Downloads running on http://localhost:${PORT}`);
-    console.log(`📥 Download directory: ${DOWNLOAD_DIR}`);
+    console.log(`🎧 3TRES6 Downloads running on port ${PORT}`);
 });
 
 module.exports = app;
