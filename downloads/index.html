@@ -1,617 +1,901 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3TRES6 Downloads | Descarga Música para DJ</title>
-    <meta
-      name="description"
-      content="Descarga música gratuita de YouTube, Spotify y SoundCloud. Análisis automático de BPM, Key y Energy. Herramienta gratuita para DJs."
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>336Lab | DJ Tools</title>
+  <meta name="description" content="Your DJ toolkit. Download, prepare USBs, mix in key, discover music.">
+  
+  <link rel="canonical" href="https://muntaner336.com/downloads/" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface-hover: #1a1a1a;
+      --border: #222;
+      --text: #fff;
+      --text-secondary: #888;
+      --text-muted: #555;
+      --accent: #ff4d00;
+      --accent-dim: rgba(255, 77, 0, 0.2);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
 
-    <link rel="canonical" href="https://muntaner336.com/downloads/" />
-    <link rel="alternate" hreflang="es-MX" href="https://muntaner336.com/downloads/" />
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="downloads-page">
-    <!-- Header -->
-    <header class="header">
-      <div class="header-container">
-        <a href="/" class="logo" aria-label="3TRES6 Records Home">
-          <span class="logo-text">3TRES6</span>
-          <span class="logo-subtitle">RECORDS</span>
-        </a>
-        <nav class="main-nav">
-          <a href="/">CATÁLOGO</a>
-          <a href="/#calendario">CALENDARIO</a>
-          <a href="/#instagram">INSTAGRAM</a>
-          <a href="/blog.html">BLOG</a>
-          <a href="/downloads/" class="nav-item active">DESCARGAS</a>
-        </nav>
-      </div>
-    </header>
+    /* Subtle animated background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 77, 0, 0.08), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(255, 77, 0, 0.05), transparent),
+        var(--bg);
+    }
 
-    <!-- Hero Section -->
-    <section class="hero-downloads">
-      <div class="hero-content">
-        <span class="hero-badge">🎧 3TRES6 Downloads</span>
-        <h1>Descarga Música para DJ</h1>
-        <p>
-          Obtén pistas de YouTube, Spotify y SoundCloud con análisis automático de BPM, Key y
-          Energy. Totalmente gratis.
-        </p>
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+      background-size: 40px 40px;
+      animation: drift 60s linear infinite;
+    }
 
-        <div class="download-counter">
-          <span class="counter-label">Tus descargas gratis:</span>
-          <span class="counter-number" id="downloadCount">0</span>
-          <span class="counter-divider">/</span>
-          <span class="counter-limit">3</span>
-        </div>
-      </div>
+    @keyframes drift {
+      from { background-position: 0 0; }
+      to { background-position: 40px 40px; }
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .logo-text {
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span { color: var(--accent); }
+
+    /* Main */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 2rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 3rem 0 4rem;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Tool Navigation - Horizontal scroll */
+    .tools-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      animation: fadeIn 0.8s ease 0.1s backwards;
+    }
+
+    .tool-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .tool-btn:hover {
+      background: var(--surface-hover);
+      border-color: var(--text-muted);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .tool-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .tool-btn-icon {
+      font-size: 1.1rem;
+    }
+
+    /* Tool Panels */
+    .tool-panel {
+      display: none;
+      animation: panelIn 0.4s ease;
+    }
+
+    .tool-panel.active { display: block; }
+
+    @keyframes panelIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .card-badge {
+      padding: 0.3rem 0.75rem;
+      background: var(--accent-dim);
+      border-radius: 50px;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* Form elements */
+    .input-group {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .input {
+      flex: 1;
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .input::placeholder { color: var(--text-muted); }
+
+    .btn {
+      padding: 1rem 2rem;
+      background: var(--accent);
+      border: none;
+      border-radius: var(--radius-sm);
+      color: white;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #ff6a2a;
+      transform: translateY(-1px);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Music Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .source-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .source-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .source-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.6rem;
+    }
+
+    .source-name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .source-tier {
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .tier-best { background: rgba(0, 200, 83, 0.15); color: #00c853; }
+    .tier-good { background: rgba(255, 152, 0, 0.15); color: #ff9800; }
+    .tier-special { background: rgba(0, 200, 255, 0.15); color: #00d4ff; }
+
+    .source-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .source-genres {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .genre-tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+
+    .source-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .quality-badges {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .quality {
+      font-size: 0.6rem;
+      font-weight: 600;
+      padding: 0.15rem 0.35rem;
+      border-radius: 3px;
+    }
+
+    .ql-lossless { background: rgba(0, 200, 83, 0.15); color: #00c853; }
+    .ql-320 { background: rgba(33, 150, 243, 0.15); color: #2196f3; }
+    .ql-yt { background: rgba(244, 67, 54, 0.15); color: #f44336; }
+
+    .source-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .source-link:hover { color: #ff6a2a; }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .search {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.75rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    .search:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .filter-chips {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chip:hover { border-color: var(--text-muted); color: var(--text); }
+    .chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+    /* Result display */
+    .result {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      display: none;
+    }
+
+    .result.show { display: block; }
+
+    .result-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .result-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .result-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--accent);
+      border-radius: var(--radius-sm);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .result-link:hover { background: #ff6a2a; }
+
+    /* Placeholder states */
+    .placeholder {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-muted);
+    }
+
+    .placeholder-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    /* USB Guide Styles */
+    .usb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .usb-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .usb-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .usb-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .usb-name {
+      font-weight: 600;
+    }
+
+    .usb-badge {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      color: var(--text-muted);
+    }
+
+    .usb-brand {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .usb-card-content {
+      display: none;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .usb-card.expanded .usb-card-content { display: block; }
+
+    .usb-section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .usb-steps {
+      padding-left: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .usb-steps li { margin-bottom: 0.35rem; }
+
+    /* Camelot Wheel placeholder */
+    .wheel-container {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .wheel-preview {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto 2rem;
+      background: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wheel-preview::before {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      border-radius: 50%;
+      border: 1px dashed var(--border);
+    }
+
+    .wheel-text {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      main { padding: 100px 1rem 3rem; }
+      .hero { padding: 2rem 0; }
+      .input-group { flex-direction: column; }
+      .tools-nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.5rem; }
+      .tool-btn { flex-shrink: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">3</div>
+        <div class="logo-text">336<span>Lab</span></div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Your <span>DJ Toolkit</span></h1>
+      <p>Download tracks, prepare USBs, mix in key, discover new music. Everything you need for your sets.</p>
     </section>
+
+    <!-- Tool Navigation -->
+    <nav class="tools-nav">
+      <button class="tool-btn active" data-tool="download">
+        <span class="tool-btn-icon">↓</span>
+        <span>Download</span>
+      </button>
+      <button class="tool-btn" data-tool="usb">
+        <span class="tool-btn-icon">💾</span>
+        <span>USB Guide</span>
+      </button>
+      <button class="tool-btn" data-tool="wheel">
+        <span class="tool-btn-icon">◎</span>
+        <span>Camelot</span>
+      </button>
+      <button class="tool-btn" data-tool="music">
+        <span class="tool-btn-icon">♫</span>
+        <span>Free Music</span>
+      </button>
+    </nav>
 
     <!-- Download Tool -->
-    <section class="download-tool">
-      <div class="tool-container">
-        <!-- URL Input -->
-        <div class="input-section">
-          <div class="platform-tabs">
-            <button class="platform-tab active" data-platform="youtube">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                />
-              </svg>
-              YouTube
-            </button>
-            <button class="platform-tab" data-platform="spotify">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
-                />
-              </svg>
-              Spotify
-            </button>
-            <button class="platform-tab" data-platform="soundcloud">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.052-.1-.084-.1zm-.899 1.624c-.059 0-.085.037-.094.1l-.156 1.53.156 1.492c.009.063.035.1.094.1.05 0 .09-.037.099-.1l.178-1.492-.178-1.53c-.009-.063-.049-.1-.099-.1zm1.83-1.779c-.059 0-.104.046-.112.1l-.21 2.262.21 2.164c.008.058.053.1.112.1.05 0 .095-.042.103-.1l.233-2.164-.233-2.262c-.008-.054-.053-.1-.103-.1zm.91-.119c-.068 0-.12.054-.124.12l-.186 2.381.186 2.2c.004.072.056.124.124.124.063 0 .116-.052.12-.124l.21-2.2-.21-2.381c-.004-.066-.057-.12-.12-.12zm.91-.091c-.072 0-.128.06-.128.127l-.165 2.472.165 2.217c0 .072.056.127.128.127.067 0 .123-.055.128-.127l.185-2.217-.185-2.472c-.005-.067-.061-.127-.128-.127zm.91-.11c-.076 0-.135.063-.135.135l-.15 2.582.15 2.2c0 .076.059.135.135.135.072 0 .131-.059.135-.135l.165-2.2-.165-2.582c-.004-.072-.063-.135-.135-.135zm.917-.089c-.08 0-.143.067-.143.143l-.135 2.671.135 2.2c0 .08.063.143.143.143.075 0 .138-.063.143-.143l.15-2.2-.15-2.671c-.005-.076-.068-.143-.143-.143zm.917-.067c-.084 0-.152.072-.152.152l-.12 2.738.12 2.2c0 .084.068.152.152.152.08 0 .147-.068.152-.152l.135-2.2-.135-2.738c-.005-.08-.072-.152-.152-.152zm.926-.054c-.088 0-.16.076-.16.16l-.105 2.792.105 2.2c0 .088.072.16.16.16.084 0 .156-.072.16-.16l.12-2.2-.12-2.792c-.004-.084-.076-.16-.16-.16zm.926-.04c-.092 0-.168.08-.168.168l-.09 2.832.09 2.2c0 .092.076.168.168.168.088 0 .164-.076.168-.168l.105-2.2-.105-2.832c-.004-.088-.08-.168-.168-.168zm.934-.025c-.097 0-.175.083-.175.175l-.075 2.859.075 2.2c0 .097.078.175.175.175.092 0 .17-.078.175-.175l.09-2.2-.09-2.859c-.005-.092-.083-.175-.175-.175zm.934-.014c-.101 0-.184.087-.184.184l-.06 2.873.06 2.167c0 .101.083.184.184.184.097 0 .18-.083.184-.184l.075-2.167-.075-2.873c-.004-.097-.087-.184-.184-.184zm.934 0c-.105 0-.191.091-.191.191l-.045 2.886.045 2.167c0 .105.086.191.191.191.101 0 .187-.086.191-.191l.06-2.167-.06-2.886c-.004-.1-.09-.191-.191-.191zm.941.01c-.11 0-.2.094-.2.2l-.03 2.886.03 2.167c0 .11.09.2.2.2.105 0 .195-.09.2-.2l.045-2.167-.045-2.886c-.005-.106-.095-.2-.2-.2zm.184 2.896c-.115 0-.21.1-.21.21v.15c0 .115.095.21.21.21h.061v2.167H9.258V15.54c0-.115-.095-.21-.21-.21h-.061V15.18h7.258v.21h-.061z"
-                />
-              </svg>
-              SoundCloud
-            </button>
-          </div>
-
-          <div class="url-input-wrapper">
-            <input
-              type="text"
-              id="urlInput"
-              class="url-input"
-              placeholder="Pega el enlace de YouTube, Spotify o SoundCloud..."
-              autocomplete="off"
-            />
-            <button class="paste-btn" id="pasteBtn" title="Pegar">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
-                />
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-              </svg>
-            </button>
-          </div>
-
-          <button class="download-btn" id="downloadBtn">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            <span>Obtener Enlace de Descarga</span>
-          </button>
+    <section class="tool-panel active" id="tool-download">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">MP3 Downloader</h2>
+          <span class="card-badge">YouTube • Spotify • SoundCloud</span>
+        </div>
+        
+        <div class="input-group">
+          <input type="text" class="input" id="downloadUrl" placeholder="Paste any track URL...">
+          <button class="btn" id="downloadBtn" onclick="handleDownload()">Get Link</button>
         </div>
 
-        <!-- Loading State -->
-        <div class="loading-state" id="loadingState" style="display: none">
-          <div class="loading-spinner"></div>
-          <p class="loading-text">Preparando enlace de descarga...</p>
-          <div class="progress-bar">
-            <div class="progress-fill" id="progressFill"></div>
-          </div>
-          <p class="progress-status" id="progressStatus">Redireccionando</p>
-        </div>
-
-        <!-- Result Card -->
-        <div class="result-card" id="resultCard" style="display: none">
-          <div class="result-header">
-            <div class="result-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
-                />
-              </svg>
-            </div>
-            <div class="result-info">
-              <h3 id="resultTitle">Track Title</h3>
-              <p id="resultArtist">Artist Name</p>
-            </div>
-          </div>
-
-          <div class="dj-analysis">
-            <div class="analysis-item">
-              <span class="analysis-label">BPM</span>
-              <span class="analysis-value" id="bpmValue">128</span>
-            </div>
-            <div class="analysis-item">
-              <span class="analysis-label">KEY</span>
-              <span class="analysis-value" id="keyValue">8B</span>
-            </div>
-            <div class="analysis-item">
-              <span class="analysis-label">ENERGY</span>
-              <div class="energy-meter">
-                <div class="energy-fill" id="energyFill"></div>
-              </div>
-              <span class="analysis-value" id="energyValue">8/10</span>
-            </div>
-          </div>
-
-          <div class="compatible-keys" id="compatibleKeys">
-            <span class="keys-label">Compatible:</span>
-            <div class="key-tags" id="keyTags"></div>
-          </div>
-
-          <a href="#" class="download-link-btn" id="downloadLinkBtn" target="_blank" rel="noopener noreferrer">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            Descargar MP3
+        <div class="result" id="downloadResult">
+          <div class="result-title" id="resultTitle"></div>
+          <div class="result-desc" id="resultDesc"></div>
+          <a href="#" class="result-link" id="resultLink" target="_blank" rel="noopener">
+            Continue to Download →
           </a>
-          <p class="download-note">Serás redirigido al servicio de conversión</p>
-        </div>
-
-        <!-- Error State -->
-        <div class="error-state" id="errorState" style="display: none">
-          <div class="error-icon">⚠️</div>
-          <h3>Error al descargar</h3>
-          <p id="errorMessage">El enlace no es válido o el video no está disponible.</p>
-          <button class="retry-btn" id="retryBtn">Intentar de nuevo</button>
         </div>
       </div>
     </section>
 
-    <!-- DJ Tools Hub Tabs -->
-    <section class="tools-hub">
-      <div class="tool-tabs">
-        <button class="tool-tab active" data-tool="downloader">
-          <span class="tab-icon">⬇️</span>
-          <span class="tab-label">MP3 Downloader</span>
-        </button>
-        <button class="tool-tab" data-tool="hardware">
-          <span class="tab-icon">💾</span>
-          <span class="tab-label">USB Export Guide</span>
-        </button>
-        <button class="tool-tab" data-tool="wheel">
-          <span class="tab-icon">🎡</span>
-          <span class="tab-label">Camelot Wheel</span>
-        </button>
-        <button class="tool-tab" data-tool="music">
-          <span class="tab-icon">🎵</span>
-          <span class="tab-label">Free Music</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Hardware Guide Section -->
-    <section class="hardware-guide" id="hardwareSection" style="display: none;">
-      <div class="section-header">
-        <h2>💾 USB Export Guide</h2>
-        <p>Configuración exacta para tu equipo DJ</p>
-      </div>
-
-      <!-- Search and Filters -->
-      <div class="hardware-filters">
-        <div class="search-wrapper">
-          <input 
-            type="text" 
-            id="hardwareSearch" 
-            class="hardware-search"
-            placeholder="Buscar dispositivo... (ej: CDJ-3000, SC6000)"
-          />
+    <!-- USB Guide -->
+    <section class="tool-panel" id="tool-usb">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">USB Export Guide</h2>
+          <span class="card-badge">20+ Devices</span>
         </div>
         
-        <div class="filter-group">
-          <span class="filter-label">Marca:</span>
-          <button class="brand-filter-btn active" data-brand="all">Todos</button>
-          <button class="brand-filter-btn" data-brand="pioneer">Pioneer</button>
-          <button class="brand-filter-btn" data-brand="denon">Denon</button>
-          <button class="brand-filter-btn" data-brand="technics">Technics</button>
-          <button class="brand-filter-btn" data-brand="reloop">Reloop</button>
-          <button class="brand-filter-btn" data-brand="ni">Native Instruments</button>
-          <button class="brand-filter-btn" data-brand="rane">Rane</button>
-          <button class="brand-filter-btn" data-brand="numark">Numark</button>
-        </div>
-
-        <div class="filter-group">
-          <span class="filter-label">Tipo:</span>
-          <button class="type-filter-btn active" data-type="all">Todos</button>
-          <button class="type-filter-btn" data-type="cdj">CDJs</button>
-          <button class="type-filter-btn" data-type="controller">Controllers</button>
-          <button class="type-filter-btn" data-type="all-in-one">All-in-One</button>
-          <button class="type-filter-btn" data-type="turntable">Turntables</button>
-        </div>
-      </div>
-
-      <!-- Hardware Grid -->
-      <div class="hardware-grid" id="hardwareGrid">
-        <!-- Cards rendered by JavaScript -->
-      </div>
-
-      <!-- Compare Bar -->
-      <div class="compare-bar" id="compareBar" style="display: none;">
-        <div class="compare-info">
-          <span class="compare-count">Comparando <span id="compareCount">2</span> dispositivos:</span>
-          <span class="compare-text" id="compareText"></span>
-        </div>
-        <div class="compare-actions">
-          <button class="btn-compare-modal" onclick="HardwareGuide.showCompareModal()">
-            Ver Comparación
-          </button>
-          <button class="btn-clear" id="closeCompareBar" onclick="HardwareGuide.clearCompare()">
-            ✕
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Compare Modal -->
-    <div class="compare-modal" id="compareModal">
-      <div class="compare-modal-content">
-        <div class="compare-modal-header">
-          <h3>Comparación de Dispositivos</h3>
-          <button class="modal-close" id="closeCompareModal">✕</button>
-        </div>
-        <div class="compare-table-wrapper">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th id="compareDevice1Name">Device 1</th>
-                <th id="compareDevice2Name">Device 2</th>
-              </tr>
-            </thead>
-            <tbody id="compareTableBody">
-              <!-- Comparison rows -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Free Music Directory Section -->
-    <section class="music-directory" id="musicSection" style="display: none;">
-      <div class="section-header">
-        <h2>🎵 Free Music Directory</h2>
-        <p>Fuentes legales para descargar música electrónica gratis</p>
-      </div>
-
-      <!-- Search and Filters -->
-      <div class="music-filters">
-        <div class="search-wrapper">
-          <input 
-            type="text" 
-            id="musicSearch" 
-            class="music-search"
-            placeholder="Buscar fuente... (ej: techno, house, psytrance)"
-          />
-        </div>
-        
-        <div class="genre-filters" id="genreFilters">
-          <!-- Rendered by JavaScript -->
-        </div>
-      </div>
-
-      <!-- Source Count -->
-      <div class="source-count">
-        <span id="sourceCount">0</span> fuentes encontradas
-      </div>
-
-      <!-- Music Grid -->
-      <div class="music-grid" id="musicGrid">
-        <!-- Cards rendered by JavaScript -->
-      </div>
-    </section>
-
-    <!-- Camelot Wheel Section -->
-    <section class="camelot-wheel-section" id="wheelSection" style="display: none;">
-      <div class="section-header">
-        <h2>🎡 Camelot Wheel</h2>
-        <p>Mejora tus transiciones con mixing armónico</p>
-      </div>
-
-      <div class="wheel-container">
-        <div class="wheel-panel">
-          <div id="camelotWheel" class="wheel-wrapper"></div>
-        </div>
-
-        <div class="info-panel">
-          <div class="key-info" id="keyInfo">
-            <p class="placeholder-text">Click en una tecla de la rueda para ver compatibilidad</p>
-          </div>
-
-          <div class="compatible-keys-section" id="compatibleKeys">
-            <!-- Rendered by JavaScript -->
-          </div>
-        </div>
-      </div>
-
-      <!-- BPM Converter -->
-      <div class="bpm-converter">
-        <h3>🎵 BPM to Genre</h3>
-        <div class="bpm-input-wrapper">
-          <input 
-            type="number" 
-            id="bpmInput" 
-            class="bpm-input"
-            placeholder="Enter BPM (ej: 128)"
-            min="60"
-            max="200"
-          />
-          <span class="bpm-label">BPM</span>
-        </div>
-        <div id="genreSuggestions"></div>
-      </div>
-
-      <!-- Legend -->
-      <div class="wheel-legend">
-        <div class="legend-item">
-          <span class="legend-color" style="background: linear-gradient(135deg, #ff6b35, #ffd166)"></span>
-          <span class="legend-text">A Keys (Minor - Energetic)</span>
-        </div>
-        <div class="legend-item">
-          <span class="legend-color" style="background: linear-gradient(135deg, #00d4ff, #023e8a)"></span>
-          <span class="legend-text">B Keys (Major - Atmospheric)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Affiliate Section -->
-    <section class="affiliate-section">
-      <div class="section-header">
-        <h2>🎧 Equipa Tu Set</h2>
-        <p>Herramientas profesionales para DJs</p>
-      </div>
-
-      <div class="affiliate-grid">
-        <a
-          href="https://www.amazon.es/dp/B07XD5RDKF?tag=3tres6-21"
-          target="_blank"
-          rel="nofollow"
-          class="affiliate-card"
-        >
-          <div class="affiliate-image">
-            <span class="affiliate-badge">🎧</span>
-          </div>
-          <div class="affiliate-info">
-            <h4>DJ Headphones</h4>
-            <p>Alta calidad para monitoreo</p>
-            <span class="affiliate-price">Ver precio →</span>
-          </div>
-        </a>
-
-        <a
-          href="https://www.amazon.es/dp/B08J4CRY5P?tag=3tres6-21"
-          target="_blank"
-          rel="nofollow"
-          class="affiliate-card"
-        >
-          <div class="affiliate-image">
-            <span class="affiliate-badge">🎛️</span>
-          </div>
-          <div class="affiliate-info">
-            <h4>Controller DJ</h4>
-            <p>Compatible con rekordbox</p>
-            <span class="affiliate-price">Ver precio →</span>
-          </div>
-        </a>
-
-        <a
-          href="https://www.amazon.es/dp/B0BYNPT7SS?tag=3tres6-21"
-          target="_blank"
-          rel="nofollow"
-          class="affiliate-card"
-        >
-          <div class="affiliate-image">
-            <span class="affiliate-badge">🔊</span>
-          </div>
-          <div class="affiliate-info">
-            <h4>Audio Interface</h4>
-            <p>Sonido profesional</p>
-            <span class="affiliate-price">Ver precio →</span>
-          </div>
-        </a>
-
-        <a
-          href="https://www.amazon.es/dp/B09JQMJHXY?tag=3tres6-21"
-          target="_blank"
-          rel="nofollow"
-          class="affiliate-card"
-        >
-          <div class="affiliate-image">
-            <span class="affiliate-badge">💿</span>
-          </div>
-          <div class="affiliate-info">
-            <h4>Pack Vinilos</h4>
-            <p>Deep House Selection</p>
-            <span class="affiliate-price">Ver precio →</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <span class="footer-logo">3TRES6 RECORDS</span>
-          <p>Vinilos europeos de segunda mano<br />Barcelona → México</p>
-        </div>
-
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Catálogo</h4>
-            <a href="/#catalogo">House</a>
-            <a href="/#catalogo">Techno</a>
-            <a href="/#catalogo">Minimal</a>
-          </div>
-          <div class="footer-column">
-            <h4>Info</h4>
-            <a href="/#nosotros">Nosotros</a>
-            <a href="/downloads/">Descargas</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 3TRES6 Records. Hecho con 🎵 en CDMX.</p>
-      </div>
-    </footer>
-
-    <!-- Email Modal -->
-    <div class="modal-overlay" id="emailModal" style="display: none">
-      <div class="modal-content">
-        <button class="modal-close" id="modalClose">×</button>
-
-        <div class="modal-icon">🎉</div>
-        <h2>¡Ya has usado 3 descargas gratuitas!</h2>
-        <p>
-          Únete a nuestra newsletter para descargas ilimitadas, pistas exclusivas y ofertas en
-          vinilos.
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Select your device to see export steps and settings.
         </p>
 
-        <form class="email-form" id="emailForm">
-          <input type="email" id="emailInput" placeholder="tu@email.com" required />
-          <button type="submit" class="submit-btn">
-            <span>¡Unirme y seguir descargando!</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
-          </button>
-        </form>
+        <div class="filters">
+          <input type="text" class="search" id="usbSearch" placeholder="Search devices..." oninput="filterUSB()">
+          <div class="filter-chips">
+            <button class="chip active" data-brand="all">All</button>
+            <button class="chip" data-brand="pioneer">Pioneer</button>
+            <button class="chip" data-brand="denon">Denon</button>
+            <button class="chip" data-brand="technics">Technics</button>
+          </div>
+        </div>
 
-        <p class="modal-note">No spam. Solo contenido útil para DJs. Cancela cuando quieras.</p>
-
-        <button class="skip-btn" id="skipBtn">Omitir por ahora</button>
+        <div class="usb-grid" id="usbGrid"></div>
       </div>
-    </div>
+    </section>
 
-    <script>
-      window.API_BASE = 'https://3tres6muntanerrecords-production.up.railway.app';
-      window.DOWNLOAD_API_BASE = 'https://3tres6muntanerrecords-production.up.railway.app';
-    </script>
-    <script src="js/hardware-db.js"></script>
-    <script src="js/hardware-guide.js"></script>
-    <script src="js/music-db.js"></script>
-    <script src="js/music-directory.js"></script>
-    <script src="js/camelot-db.js"></script>
-    <script src="js/camelot-wheel.js"></script>
-    <script src="js/app.js"></script>
-    <script>
-      // Tool Tab Switching
-      document.addEventListener('DOMContentLoaded', function() {
-        const toolTabs = document.querySelectorAll('.tool-tab');
-        const downloadTool = document.querySelector('.download-tool');
-        const hardwareSection = document.getElementById('hardwareSection');
-        const musicSection = document.getElementById('musicSection');
-        const wheelSection = document.getElementById('wheelSection');
+    <!-- Camelot Wheel -->
+    <section class="tool-panel" id="tool-wheel">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Camelot Wheel</h2>
+          <span class="card-badge">24 Keys</span>
+        </div>
 
-        toolTabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            if (this.disabled) return;
+        <div class="wheel-container">
+          <div class="wheel-preview">
+            <span class="wheel-text">Interactive Wheel</span>
+          </div>
+          <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">
+            Harmonic mixing tool with 24 keys. Click any key to see compatible tracks and energy levels.
+          </p>
+        </div>
+      </div>
+    </section>
 
-            const tool = this.dataset.tool;
+    <!-- Free Music -->
+    <section class="tool-panel" id="tool-music">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Free Music Directory</h2>
+          <span class="card-badge">18 Sources</span>
+        </div>
 
-            // Update active tab
-            toolTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
+        <div class="filters">
+          <input type="text" class="search" id="musicSearch" placeholder="Search sources..." oninput="filterMusic()">
+          <div class="filter-chips">
+            <button class="chip active" data-tier="all">All</button>
+            <button class="chip" data-tier="1">Best</button>
+            <button class="chip" data-tier="2">Labels</button>
+            <button class="chip" data-tier="3">YouTube</button>
+          </div>
+        </div>
 
-            // Show/hide sections
-            if (tool === 'downloader') {
-              downloadTool.style.display = 'block';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-            } else if (tool === 'hardware') {
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'block';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-              // Initialize hardware guide if not already
-              if (!HardwareGuide.state.devices.length) {
-                HardwareGuide.init();
-              }
-            } else if (tool === 'music') {
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'block';
-              wheelSection.style.display = 'none';
-              // Initialize music directory if not already
-              if (!MusicDirectory.state.sources.length) {
-                MusicDirectory.init();
-              }
-            } else if (tool === 'wheel') {
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'block';
-              // Initialize camelot wheel if not already
-              if (!document.getElementById('wheelSvg')) {
-                CamelotWheel.init();
-              }
-            } else {
-              // Future tools
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-            }
-          });
-        });
+        <div class="grid" id="musicGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/music-db.js"></script>
+  <script src="js/hardware-db.js"></script>
+  <script>
+    // Tool Navigation
+    const toolBtns = document.querySelectorAll('.tool-btn');
+    const toolPanels = document.querySelectorAll('.tool-panel');
+
+    toolBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tool = btn.dataset.tool;
+        
+        toolBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        toolPanels.forEach(p => p.classList.remove('active'));
+        document.getElementById('tool-' + tool).classList.add('active');
       });
-    </script>
-  </body>
+    });
+
+    // Download Tool
+    function handleDownload() {
+      const url = document.getElementById('downloadUrl').value.trim();
+      const result = document.getElementById('downloadResult');
+      
+      if (!url) return;
+
+      // Show result
+      document.getElementById('resultTitle').textContent = 'Redirecting to download service...';
+      document.getElementById('resultDesc').textContent = 'You\'ll be redirected to y2mate.com to complete the download.';
+      document.getElementById('resultLink').href = 'https://www.y2mate.com/?q=' + encodeURIComponent(url);
+      result.classList.add('show');
+
+      // Auto-redirect after 2 seconds
+      setTimeout(() => {
+        window.open('https://www.y2mate.com/?q=' + encodeURIComponent(url), '_blank');
+      }, 1500);
+    }
+
+    // Music Sources
+    const musicGrid = document.getElementById('musicGrid');
+    let musicSources = [...MusicDB.sources];
+
+    function renderMusic(sources) {
+      if (!sources.length) {
+        musicGrid.innerHTML = '<div class="placeholder"><div class="placeholder-icon">🔍</div><p>No sources found</p></div>';
+        return;
+      }
+
+      musicGrid.innerHTML = sources.map(source => {
+        const qualityBadges = MusicDB.getQualityBadges(source.quality);
+        const tierClass = source.tier === 1 ? 'tier-best' : source.tier === 2 ? 'tier-good' : 'tier-special';
+        
+        return `
+          <div class="source-card" data-tier="${source.tier}">
+            <div class="source-header">
+              <span class="source-name">${source.name}</span>
+              <span class="source-tier ${tierClass}">${source.tier === 1 ? 'Best' : source.tier === 2 ? 'Label' : 'YouTube'}</span>
+            </div>
+            <p class="source-desc">${source.description}</p>
+            <div class="source-genres">
+              ${source.genres.slice(0, 4).map(g => `<span class="genre-tag">${g}</span>`).join('')}
+            </div>
+            <div class="source-footer">
+              <div class="quality-badges">
+                ${qualityBadges.map(q => `<span class="quality ${q.text === 'Lossless' ? 'ql-lossless' : q.text === '320kbps' ? 'ql-320' : 'ql-yt'}">${q.text}</span>`).join('')}
+              </div>
+              <a href="${source.url}" target="_blank" class="source-link">Visit →</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterMusic() {
+      const query = document.getElementById('musicSearch').value.toLowerCase();
+      const activeTier = document.querySelector('.chip[data-tier].active')?.dataset.tier || 'all';
+      
+      let filtered = musicSources;
+      
+      if (activeTier !== 'all') {
+        filtered = filtered.filter(s => s.tier === parseInt(activeTier));
+      }
+      
+      if (query) {
+        filtered = filtered.filter(s => 
+          s.name.toLowerCase().includes(query) ||
+          s.description.toLowerCase().includes(query) ||
+          s.genres.some(g => g.toLowerCase().includes(query))
+        );
+      }
+      
+      renderMusic(filtered);
+    }
+
+    // Music tier filter chips
+    document.querySelectorAll('.chip[data-tier]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip[data-tier]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        filterMusic();
+      });
+    });
+
+    // Initial render
+    renderMusic(musicSources);
+
+    // USB Guide
+    const usbGrid = document.getElementById('usbGrid');
+    let usbDevices = [...HardwareDB.devices];
+
+    function renderUSB(devices) {
+      if (!devices.length) {
+        usbGrid.innerHTML = '<div class="placeholder"><div class="placeholder-icon">🔍</div><p>No devices found</p></div>';
+        return;
+      }
+
+      usbGrid.innerHTML = devices.slice(0, 12).map(device => `
+        <div class="usb-card" onclick="this.classList.toggle('expanded')">
+          <div class="usb-card-header">
+            <span class="usb-name">${device.name}</span>
+            <span class="usb-badge">${device.typeLabel}</span>
+          </div>
+          <div class="usb-brand">${device.brand}</div>
+          <div class="usb-card-content">
+            <div class="usb-section-title">USB Format</div>
+            <p style="font-size: 0.9rem;">${device.usb?.format || 'N/A'}</p>
+            
+            <div class="usb-section-title">Export Steps</div>
+            <ol class="usb-steps">
+              ${device.exportSteps?.slice(0, 4).map(step => `<li>${step}</li>`).join('') || '<li>See software for details</li>'}
+            </ol>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterUSB() {
+      const query = document.getElementById('usbSearch').value.toLowerCase();
+      const activeBrand = document.querySelector('.chip[data-brand].active')?.dataset.brand || 'all';
+      
+      let filtered = usbDevices;
+      
+      if (activeBrand !== 'all') {
+        filtered = filtered.filter(d => d.brandSlug === activeBrand);
+      }
+      
+      if (query) {
+        filtered = filtered.filter(d => 
+          d.name.toLowerCase().includes(query) ||
+          d.brand.toLowerCase().includes(query)
+        );
+      }
+      
+      renderUSB(filtered);
+    }
+
+    // USB brand filter chips
+    document.querySelectorAll('.chip[data-brand]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip[data-brand]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        filterUSB();
+      });
+    });
+
+    // Initial USB render
+    renderUSB(usbDevices);
+  </script>
+</body>
 </html>
