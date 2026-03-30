@@ -221,7 +221,7 @@
           <span class="tab-icon">🎡</span>
           <span class="tab-label">Camelot Wheel</span>
         </button>
-        <button class="tool-tab" data-tool="music" disabled>
+        <button class="tool-tab" data-tool="music">
           <span class="tab-icon">🎵</span>
           <span class="tab-label">Free Music</span>
         </button>
@@ -313,6 +313,40 @@
         </div>
       </div>
     </div>
+
+    <!-- Free Music Directory Section -->
+    <section class="music-directory" id="musicSection" style="display: none;">
+      <div class="section-header">
+        <h2>🎵 Free Music Directory</h2>
+        <p>Fuentes legales para descargar música electrónica gratis</p>
+      </div>
+
+      <!-- Search and Filters -->
+      <div class="music-filters">
+        <div class="search-wrapper">
+          <input 
+            type="text" 
+            id="musicSearch" 
+            class="music-search"
+            placeholder="Buscar fuente... (ej: techno, house, psytrance)"
+          />
+        </div>
+        
+        <div class="genre-filters" id="genreFilters">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Source Count -->
+      <div class="source-count">
+        <span id="sourceCount">0</span> fuentes encontradas
+      </div>
+
+      <!-- Music Grid -->
+      <div class="music-grid" id="musicGrid">
+        <!-- Cards rendered by JavaScript -->
+      </div>
+    </section>
 
     <!-- Affiliate Section -->
     <section class="affiliate-section">
@@ -458,6 +492,8 @@
     </script>
     <script src="js/hardware-db.js"></script>
     <script src="js/hardware-guide.js"></script>
+    <script src="js/music-db.js"></script>
+    <script src="js/music-directory.js"></script>
     <script src="js/app.js"></script>
     <script>
       // Tool Tab Switching
@@ -465,6 +501,7 @@
         const toolTabs = document.querySelectorAll('.tool-tab');
         const downloadTool = document.querySelector('.download-tool');
         const hardwareSection = document.getElementById('hardwareSection');
+        const musicSection = document.getElementById('musicSection');
 
         toolTabs.forEach(tab => {
           tab.addEventListener('click', function() {
@@ -480,17 +517,28 @@
             if (tool === 'downloader') {
               downloadTool.style.display = 'block';
               hardwareSection.style.display = 'none';
+              musicSection.style.display = 'none';
             } else if (tool === 'hardware') {
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'block';
+              musicSection.style.display = 'none';
               // Initialize hardware guide if not already
               if (!HardwareGuide.state.devices.length) {
                 HardwareGuide.init();
+              }
+            } else if (tool === 'music') {
+              downloadTool.style.display = 'none';
+              hardwareSection.style.display = 'none';
+              musicSection.style.display = 'block';
+              // Initialize music directory if not already
+              if (!MusicDirectory.state.sources.length) {
+                MusicDirectory.init();
               }
             } else {
               // Future tools
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'none';
+              musicSection.style.display = 'none';
             }
           });
         });
