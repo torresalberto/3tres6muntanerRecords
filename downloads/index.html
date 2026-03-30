@@ -217,7 +217,7 @@
           <span class="tab-icon">💾</span>
           <span class="tab-label">USB Export Guide</span>
         </button>
-        <button class="tool-tab" data-tool="wheel" disabled>
+        <button class="tool-tab" data-tool="wheel">
           <span class="tab-icon">🎡</span>
           <span class="tab-label">Camelot Wheel</span>
         </button>
@@ -345,6 +345,59 @@
       <!-- Music Grid -->
       <div class="music-grid" id="musicGrid">
         <!-- Cards rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Camelot Wheel Section -->
+    <section class="camelot-wheel-section" id="wheelSection" style="display: none;">
+      <div class="section-header">
+        <h2>🎡 Camelot Wheel</h2>
+        <p>Mejora tus transiciones con mixing armónico</p>
+      </div>
+
+      <div class="wheel-container">
+        <div class="wheel-panel">
+          <div id="camelotWheel" class="wheel-wrapper"></div>
+        </div>
+
+        <div class="info-panel">
+          <div class="key-info" id="keyInfo">
+            <p class="placeholder-text">Click en una tecla de la rueda para ver compatibilidad</p>
+          </div>
+
+          <div class="compatible-keys-section" id="compatibleKeys">
+            <!-- Rendered by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- BPM Converter -->
+      <div class="bpm-converter">
+        <h3>🎵 BPM to Genre</h3>
+        <div class="bpm-input-wrapper">
+          <input 
+            type="number" 
+            id="bpmInput" 
+            class="bpm-input"
+            placeholder="Enter BPM (ej: 128)"
+            min="60"
+            max="200"
+          />
+          <span class="bpm-label">BPM</span>
+        </div>
+        <div id="genreSuggestions"></div>
+      </div>
+
+      <!-- Legend -->
+      <div class="wheel-legend">
+        <div class="legend-item">
+          <span class="legend-color" style="background: linear-gradient(135deg, #ff6b35, #ffd166)"></span>
+          <span class="legend-text">A Keys (Minor - Energetic)</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color" style="background: linear-gradient(135deg, #00d4ff, #023e8a)"></span>
+          <span class="legend-text">B Keys (Major - Atmospheric)</span>
+        </div>
       </div>
     </section>
 
@@ -494,6 +547,8 @@
     <script src="js/hardware-guide.js"></script>
     <script src="js/music-db.js"></script>
     <script src="js/music-directory.js"></script>
+    <script src="js/camelot-db.js"></script>
+    <script src="js/camelot-wheel.js"></script>
     <script src="js/app.js"></script>
     <script>
       // Tool Tab Switching
@@ -502,6 +557,7 @@
         const downloadTool = document.querySelector('.download-tool');
         const hardwareSection = document.getElementById('hardwareSection');
         const musicSection = document.getElementById('musicSection');
+        const wheelSection = document.getElementById('wheelSection');
 
         toolTabs.forEach(tab => {
           tab.addEventListener('click', function() {
@@ -518,10 +574,12 @@
               downloadTool.style.display = 'block';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
+              wheelSection.style.display = 'none';
             } else if (tool === 'hardware') {
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'block';
               musicSection.style.display = 'none';
+              wheelSection.style.display = 'none';
               // Initialize hardware guide if not already
               if (!HardwareGuide.state.devices.length) {
                 HardwareGuide.init();
@@ -530,15 +588,26 @@
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'block';
+              wheelSection.style.display = 'none';
               // Initialize music directory if not already
               if (!MusicDirectory.state.sources.length) {
                 MusicDirectory.init();
+              }
+            } else if (tool === 'wheel') {
+              downloadTool.style.display = 'none';
+              hardwareSection.style.display = 'none';
+              musicSection.style.display = 'none';
+              wheelSection.style.display = 'block';
+              // Initialize camelot wheel if not already
+              if (!document.getElementById('wheelSvg')) {
+                CamelotWheel.init();
               }
             } else {
               // Future tools
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
+              wheelSection.style.display = 'none';
             }
           });
         });
