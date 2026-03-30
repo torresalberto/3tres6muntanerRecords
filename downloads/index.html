@@ -206,6 +206,114 @@
       </div>
     </section>
 
+    <!-- DJ Tools Hub Tabs -->
+    <section class="tools-hub">
+      <div class="tool-tabs">
+        <button class="tool-tab active" data-tool="downloader">
+          <span class="tab-icon">⬇️</span>
+          <span class="tab-label">MP3 Downloader</span>
+        </button>
+        <button class="tool-tab" data-tool="hardware">
+          <span class="tab-icon">💾</span>
+          <span class="tab-label">USB Export Guide</span>
+        </button>
+        <button class="tool-tab" data-tool="wheel" disabled>
+          <span class="tab-icon">🎡</span>
+          <span class="tab-label">Camelot Wheel</span>
+        </button>
+        <button class="tool-tab" data-tool="music" disabled>
+          <span class="tab-icon">🎵</span>
+          <span class="tab-label">Free Music</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Hardware Guide Section -->
+    <section class="hardware-guide" id="hardwareSection" style="display: none;">
+      <div class="section-header">
+        <h2>💾 USB Export Guide</h2>
+        <p>Configuración exacta para tu equipo DJ</p>
+      </div>
+
+      <!-- Search and Filters -->
+      <div class="hardware-filters">
+        <div class="search-wrapper">
+          <input 
+            type="text" 
+            id="hardwareSearch" 
+            class="hardware-search"
+            placeholder="Buscar dispositivo... (ej: CDJ-3000, SC6000)"
+          />
+        </div>
+        
+        <div class="filter-group">
+          <span class="filter-label">Marca:</span>
+          <button class="brand-filter-btn active" data-brand="all">Todos</button>
+          <button class="brand-filter-btn" data-brand="pioneer">Pioneer</button>
+          <button class="brand-filter-btn" data-brand="denon">Denon</button>
+          <button class="brand-filter-btn" data-brand="technics">Technics</button>
+          <button class="brand-filter-btn" data-brand="reloop">Reloop</button>
+          <button class="brand-filter-btn" data-brand="ni">Native Instruments</button>
+          <button class="brand-filter-btn" data-brand="rane">Rane</button>
+          <button class="brand-filter-btn" data-brand="numark">Numark</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Tipo:</span>
+          <button class="type-filter-btn active" data-type="all">Todos</button>
+          <button class="type-filter-btn" data-type="cdj">CDJs</button>
+          <button class="type-filter-btn" data-type="controller">Controllers</button>
+          <button class="type-filter-btn" data-type="all-in-one">All-in-One</button>
+          <button class="type-filter-btn" data-type="turntable">Turntables</button>
+        </div>
+      </div>
+
+      <!-- Hardware Grid -->
+      <div class="hardware-grid" id="hardwareGrid">
+        <!-- Cards rendered by JavaScript -->
+      </div>
+
+      <!-- Compare Bar -->
+      <div class="compare-bar" id="compareBar" style="display: none;">
+        <div class="compare-info">
+          <span class="compare-count">Comparando <span id="compareCount">2</span> dispositivos:</span>
+          <span class="compare-text" id="compareText"></span>
+        </div>
+        <div class="compare-actions">
+          <button class="btn-compare-modal" onclick="HardwareGuide.showCompareModal()">
+            Ver Comparación
+          </button>
+          <button class="btn-clear" id="closeCompareBar" onclick="HardwareGuide.clearCompare()">
+            ✕
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compare Modal -->
+    <div class="compare-modal" id="compareModal">
+      <div class="compare-modal-content">
+        <div class="compare-modal-header">
+          <h3>Comparación de Dispositivos</h3>
+          <button class="modal-close" id="closeCompareModal">✕</button>
+        </div>
+        <div class="compare-table-wrapper">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th id="compareDevice1Name">Device 1</th>
+                <th id="compareDevice2Name">Device 2</th>
+              </tr>
+            </thead>
+            <tbody id="compareTableBody">
+              <!-- Comparison rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- Affiliate Section -->
     <section class="affiliate-section">
       <div class="section-header">
@@ -348,6 +456,45 @@
       window.API_BASE = 'https://3tres6muntanerrecords-production.up.railway.app';
       window.DOWNLOAD_API_BASE = 'https://3tres6muntanerrecords-production.up.railway.app';
     </script>
+    <script src="js/hardware-db.js"></script>
+    <script src="js/hardware-guide.js"></script>
     <script src="js/app.js"></script>
+    <script>
+      // Tool Tab Switching
+      document.addEventListener('DOMContentLoaded', function() {
+        const toolTabs = document.querySelectorAll('.tool-tab');
+        const downloadTool = document.querySelector('.download-tool');
+        const hardwareSection = document.getElementById('hardwareSection');
+
+        toolTabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            if (this.disabled) return;
+
+            const tool = this.dataset.tool;
+
+            // Update active tab
+            toolTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+
+            // Show/hide sections
+            if (tool === 'downloader') {
+              downloadTool.style.display = 'block';
+              hardwareSection.style.display = 'none';
+            } else if (tool === 'hardware') {
+              downloadTool.style.display = 'none';
+              hardwareSection.style.display = 'block';
+              // Initialize hardware guide if not already
+              if (!HardwareGuide.state.devices.length) {
+                HardwareGuide.init();
+              }
+            } else {
+              // Future tools
+              downloadTool.style.display = 'none';
+              hardwareSection.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
