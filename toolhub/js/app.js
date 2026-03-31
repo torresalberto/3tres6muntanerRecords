@@ -188,7 +188,7 @@ const App = {
     try {
       // Create abort controller for timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 60000);
 
       const response = await fetch(`${this.API_BASE}/api/download`, {
         method: 'POST',
@@ -211,33 +211,23 @@ const App = {
 
       const data = await response.json();
 
-      if (data.success) {
-        this.showResult(data);
-        this.incrementDownloadCount();
-        this.checkEmailCapture();
+      // ReClip returns job_id - need to poll for status
+      if (data.job_id) {
+        await this.pollJobStatus(data.job_id);
       } else {
-        throw new Error(data.error || 'Error desconocido');
+        throw new Error('Error desconocido');
       }
     } catch (error) {
       console.error('Download error:', error);
 
-      // Provide more helpful error messages
       let errorMessage = error.message || 'Error al conectar con el servidor';
 
       if (error.name === 'AbortError') {
-        errorMessage =
-          'La descarga está tardando demasiado. Intenta con un video más corto o intenta de nuevo.';
-      } else if (
-        error.message.includes('Failed to fetch') ||
-        error.message.includes('NetworkError')
-      ) {
+        errorMessage = 'La descarga está tardando demasiado. Intenta con un video más corto o intenta de nuevo.';
+      } else if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
         errorMessage = 'Error de conexión. Verifica tu conexión a internet e intenta de nuevo.';
-      } else if (
-        error.message.includes('No video found') ||
-        error.message.includes('Video unavailable')
-      ) {
-        errorMessage =
-          'El video no está disponible o no se pudo encontrar. Intenta con otro enlace.';
+      } else if (error.message.includes('No video found') || error.message.includes('Video unavailable')) {
+        errorMessage = 'El video no está disponible o no se pudo encontrar. Intenta con otro enlace.';
       } else if (error.message.includes('private') || error.message.includes('Private video')) {
         errorMessage = 'El video es privado y no se puede descargar.';
       } else if (error.message.includes('age') || error.message.includes('restricted')) {
@@ -246,6 +236,70 @@ const App = {
 
       this.showError(errorMessage);
     }
+  },
+
+  async pollJobStatus(jobId) {
+    const maxAttempts = 60;
+    const pollInterval = 2000;
+    let attempts = 0;
+
+    this.updateProgress(10, 'Iniciando descarga...');
+
+    while (attempts < maxAttempts) {
+      await new Promise(resolve => setTimeout(resolve, pollInterval));
+      attempts++;
+
+      try {
+        const statusResponse = await fetch(`${this.API_BASE}/api/status/${jobId}`);
+        const statusData = await statusResponse.json();
+
+        if (statusData.status === 'done') {
+          const downloadUrl = `${this.API_BASE}/api/file/${jobId}`;
+          const filename = statusData.filename || 'download.mp3';
+          
+          this.showReclipResult(downloadUrl, filename);
+          this.incrementDownloadCount();
+          this.checkEmailCapture();
+          return;
+        } else if (statusData.status === 'error') {
+          throw new Error(statusData.error || 'Error en la descarga');
+        } else {
+          const progress = Math.min(30 + (attempts * 2), 90);
+          this.updateProgress(progress, `Descargando... ${progress}%`);
+        }
+      } catch (e) {
+        console.warn('Status poll error:', e);
+      }
+    }
+
+    throw new Error('La descarga tardó demasiado tiempo');
+  },
+
+  showReclipResult(downloadUrl, filename) {
+    this.state.isLoading = false;
+
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('resultCard').style.display = 'block';
+    document.getElementById('errorState').style.display = 'none';
+    document.getElementById('downloadBtn').disabled = false;
+
+    document.getElementById('resultTitle').textContent = filename.replace(/\.[^/.]+$/, '');
+    document.getElementById('resultArtist').textContent = '3TRES6 Tools';
+
+    document.getElementById('bpmValue').textContent = '-';
+    document.getElementById('keyValue').textContent = '-';
+    document.getElementById('energyValue').textContent = '-/10';
+    document.getElementById('energyFill').style.width = '0%';
+    document.getElementById('keyTags').innerHTML = '';
+
+    const downloadLinkBtn = document.getElementById('downloadLinkBtn');
+    downloadLinkBtn.href = downloadUrl;
+    downloadLinkBtn.target = '_blank';
+    downloadLinkBtn.download = filename;
+    downloadLinkBtn.textContent = 'Descargar Archivo';
+    downloadLinkBtn.onclick = null;
+
+    this.simulateProgress();
   },
 
   validateUrl(url) {
