@@ -25,54 +25,47 @@ def run_download(job_id, url, format_choice, format_id):
     job = jobs[job_id]
     out_template = os.path.join(DOWNLOAD_DIR, f"{job_id}.%(ext)s")
 
-    # Try multiple clients to bypass YouTube bot detection
-    clients = [
-        "android",  # Android app has less restrictions
-        "tv",  # TV app client
-        "web_creator",  # Web creator client
+    # Path to cookies file (for YouTube authentication)
+    cookies_path = os.path.join(os.path.dirname(__file__), "cookies.txt")
+    use_cookies = os.path.exists(cookies_path)
+
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+    # Use web client with cookies if available
+    cmd = [
+        "yt-dlp",
+        "--no-playlist",
+        "-o", out_template,
+        "--user-agent", user_agent,
+        "--no-check-certificates",
     ]
 
-    user_agent = "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+    if use_cookies:
+        cmd.extend(["--cookies", cookies_path])
 
-    # Try each client until one works
-    for client in clients:
-        cmd = [
-            "yt-dlp",
-            "--no-playlist",
-            "-o",
-            out_template,
-            "--user-agent",
-            user_agent,
-            "--no-check-certificates",
-            "--extractor-args",
-            f"youtube:player_client={client}",
-            "--sleep-interval",
-            "2",  # Be polite, avoid triggering rate limits
-            "--max-sleep-interval",
-            "5",
-        ]
+    if format_choice == "audio":
+        cmd += ["-x", "--audio-format", "mp3", "--audio-quality", "0"]
+    elif format_id:
+        cmd += ["-f", f"{format_id}+bestaudio/best", "--merge-output-format", "mp4"]
+    else:
+        cmd += ["-f", "bestvideo+bestaudio/best", "--merge-output-format", "mp4"]
 
-        if format_choice == "audio":
-            cmd += ["-x", "--audio-format", "mp3", "--audio-quality", "0"]
-        elif format_id:
-            cmd += ["-f", f"{format_id}+bestaudio/best", "--merge-output-format", "mp4"]
-        else:
-            cmd += ["-f", "bestvideo+bestaudio/best", "--merge-output-format", "mp4"]
+    cmd.append(url)
 
-        cmd.append(url)
-
-        try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-            if result.returncode == 0:
-                break  # Success! Exit the loop
-            elif "Sign in to confirm" in result.stderr:
-                continue  # Try next client
-            else:
-                job["status"] = "error"
-                job["error"] = result.stderr.strip().split("\n")[-1]
-                return
-        except Exception as e:
-            continue  # Try next client
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        if result.returncode != 0:
+            job["status"] = "error"
+            job["error"] = result.stderr.strip().split("\n")[-1]
+            return
+    except subprocess.TimeoutExpired:
+        job["status"] = "error"
+        job["error"] = "Download timed out (5 min limit)"
+        return
+    except Exception as e:
+        job["status"] = "error"
+        job["error"] = str(e)
+        return
 
     # Check if we have the file
     files = glob.glob(os.path.join(DOWNLOAD_DIR, f"{job_id}.*"))
