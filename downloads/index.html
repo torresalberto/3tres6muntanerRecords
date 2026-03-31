@@ -458,7 +458,7 @@
         </a>
 
         <a
-          href="https://www.amazon.es/dp/B09JQMJHXY?tag=3tres6-21"
+          href="https://www.discogs.com/seller/3tres6records"
           target="_blank"
           rel="nofollow"
           class="affiliate-card"
@@ -558,6 +558,23 @@
         const hardwareSection = document.getElementById('hardwareSection');
         const musicSection = document.getElementById('musicSection');
         const wheelSection = document.getElementById('wheelSection');
+        const body = document.body;
+
+        // Hide hero when not on downloader
+        function updateHeroVisibility(tool) {
+          if (tool === 'downloader') {
+            body.classList.remove('hero-hidden');
+          } else {
+            body.classList.add('hero-hidden');
+          }
+        }
+
+        // Animate section transition
+        function animateSection(section) {
+          section.style.animation = 'none';
+          section.offsetHeight; // Trigger reflow
+          section.style.animation = 'fadeInUp 0.4s ease-out forwards';
+        }
 
         toolTabs.forEach(tab => {
           tab.addEventListener('click', function() {
@@ -571,39 +588,48 @@
 
             // Show/hide sections
             if (tool === 'downloader') {
+              updateHeroVisibility('downloader');
               downloadTool.style.display = 'block';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
+              animateSection(downloadTool);
             } else if (tool === 'hardware') {
+              updateHeroVisibility('hardware');
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'block';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
+              animateSection(hardwareSection);
               // Initialize hardware guide if not already
               if (!HardwareGuide.state.devices.length) {
                 HardwareGuide.init();
               }
             } else if (tool === 'music') {
+              updateHeroVisibility('music');
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'block';
               wheelSection.style.display = 'none';
+              animateSection(musicSection);
               // Initialize music directory if not already
               if (!MusicDirectory.state.sources.length) {
                 MusicDirectory.init();
               }
             } else if (tool === 'wheel') {
+              updateHeroVisibility('wheel');
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'block';
+              animateSection(wheelSection);
               // Initialize camelot wheel if not already
               if (!document.getElementById('wheelSvg')) {
                 CamelotWheel.init();
               }
             } else {
               // Future tools
+              updateHeroVisibility('downloader');
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
