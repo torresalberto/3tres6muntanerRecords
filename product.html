@@ -1,494 +1,516 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Larry Heard – Missing You | Muntaner336</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* Product Page Specific Styles */
-        .product-page {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
-        
-        .product-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-        
-        .product-gallery {
-            position: sticky;
-            top: 100px;
-        }
-        
-        .product-main-image {
-            width: 100%;
-            aspect-ratio: 1;
-            background: var(--color-bg-card);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-        
-        .product-main-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .product-thumbnails {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .product-thumb {
-            width: 80px;
-            height: 80px;
-            background: var(--color-bg-card);
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: var(--transition);
-        }
-        
-        .product-thumb:hover,
-        .product-thumb.active {
-            border-color: var(--color-accent);
-        }
-        
-        .product-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .product-info {
-            padding-top: 20px;
-        }
-        
-        .product-badges {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .badge {
-            padding: 6px 12px;
-            border-radius: var(--radius-sm);
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        
-        .badge-condition {
-            background: var(--color-bg-card);
-            border: 1px solid var(--color-border);
-        }
-        
-        .badge-origin {
-            background: var(--color-accent);
-        }
-        
-        .badge-genre {
-            background: transparent;
-            border: 1px solid var(--color-accent);
-            color: var(--color-accent);
-        }
-        
-        .product-title {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-        
-        .product-label {
-            font-size: 16px;
-            color: var(--color-text-muted);
-            margin-bottom: 30px;
-        }
-        
-        .product-price {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-        
-        .product-actions {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-        
-        .btn-primary {
-            flex: 1;
-            background: var(--color-accent);
-            color: var(--color-text);
-            padding: 16px 30px;
-            border: none;
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-        }
-        
-        .btn-primary:hover {
-            background: var(--color-accent-hover);
-        }
-        
-        .btn-secondary {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px 25px;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            background: transparent;
-            color: var(--color-text);
-        }
-        
-        .btn-secondary:hover {
-            border-color: var(--color-text);
-        }
-        
-        .product-audio {
-            background: var(--color-bg-card);
-            border-radius: var(--radius-md);
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .audio-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            font-size: 13px;
-            color: var(--color-text-muted);
-        }
-        
-        .audio-header svg {
-            color: var(--color-accent);
-        }
-        
-        .audio-player {
-            width: 100%;
-            height: 80px;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-        }
-        
-        .audio-player iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .product-details {
-            border-top: 1px solid var(--color-border);
-            padding-top: 30px;
-        }
-        
-        .details-title {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-        
-        .details-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .detail-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        
-        .detail-label {
-            font-size: 12px;
-            color: var(--color-text-muted);
-            letter-spacing: 0.5px;
-        }
-        
-        .detail-value {
-            font-size: 14px;
-        }
-        
-        .product-story {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid var(--color-border);
-        }
-        
-        .story-title {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-        
-        .story-text {
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--color-text-muted);
-        }
-        
-        .story-origin {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 15px;
-            font-size: 13px;
-            color: var(--color-text-muted);
-        }
-        
-        /* Related Products */
-        .related-section {
-            margin-top: 80px;
-            padding-top: 60px;
-            border-top: 1px solid var(--color-border);
-        }
-        
-        .related-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        
-        @media (max-width: 992px) {
-            .product-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .product-gallery {
-                position: static;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .product-page {
-                padding: 40px 20px;
-            }
-            
-            .product-title {
-                font-size: 28px;
-            }
-            
-            .product-actions {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<body>
+      /* Product Page Specific Styles */
+      .product-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px;
+      }
 
+      .product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+
+      .product-gallery {
+        position: sticky;
+        top: 100px;
+      }
+
+      .product-main-image {
+        width: 100%;
+        aspect-ratio: 1;
+        background: var(--color-bg-card);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        margin-bottom: 15px;
+      }
+
+      .product-main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-thumbnails {
+        display: flex;
+        gap: 10px;
+      }
+
+      .product-thumb {
+        width: 80px;
+        height: 80px;
+        background: var(--color-bg-card);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: var(--transition);
+      }
+
+      .product-thumb:hover,
+      .product-thumb.active {
+        border-color: var(--color-accent);
+      }
+
+      .product-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-info {
+        padding-top: 20px;
+      }
+
+      .product-badges {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .badge {
+        padding: 6px 12px;
+        border-radius: var(--radius-sm);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .badge-condition {
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+      }
+
+      .badge-origin {
+        background: var(--color-accent);
+      }
+
+      .badge-genre {
+        background: transparent;
+        border: 1px solid var(--color-accent);
+        color: var(--color-accent);
+      }
+
+      .product-title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .product-label {
+        font-size: 16px;
+        color: var(--color-text-muted);
+        margin-bottom: 30px;
+      }
+
+      .product-price {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      .product-actions {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .btn-primary {
+        flex: 1;
+        background: var(--color-accent);
+        color: var(--color-text);
+        padding: 16px 30px;
+        border: none;
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        text-align: center;
+      }
+
+      .btn-primary:hover {
+        background: var(--color-accent-hover);
+      }
+
+      .btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 16px 25px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+        background: transparent;
+        color: var(--color-text);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--color-text);
+      }
+
+      .product-audio {
+        background: var(--color-bg-card);
+        border-radius: var(--radius-md);
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .audio-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        font-size: 13px;
+        color: var(--color-text-muted);
+      }
+
+      .audio-header svg {
+        color: var(--color-accent);
+      }
+
+      .audio-player {
+        width: 100%;
+        height: 80px;
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+      }
+
+      .audio-player iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .product-details {
+        border-top: 1px solid var(--color-border);
+        padding-top: 30px;
+      }
+
+      .details-title {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .detail-label {
+        font-size: 12px;
+        color: var(--color-text-muted);
+        letter-spacing: 0.5px;
+      }
+
+      .detail-value {
+        font-size: 14px;
+      }
+
+      .product-story {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .story-title {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+
+      .story-text {
+        font-size: 15px;
+        line-height: 1.8;
+        color: var(--color-text-muted);
+      }
+
+      .story-origin {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 15px;
+        font-size: 13px;
+        color: var(--color-text-muted);
+      }
+
+      /* Related Products */
+      .related-section {
+        margin-top: 80px;
+        padding-top: 60px;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .related-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 992px) {
+        .product-container {
+          grid-template-columns: 1fr;
+        }
+
+        .product-gallery {
+          position: static;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .product-page {
+          padding: 40px 20px;
+        }
+
+        .product-title {
+          font-size: 28px;
+        }
+
+        .product-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <!-- Top Banner -->
     <div class="top-banner">
-        <p>Vinilos europeos directo de Barcelona 📦 Envíos a todo México</p>
+      <p>Vinilos europeos directo de Barcelona 📦 Envíos a todo México</p>
     </div>
 
     <!-- Header (same as index.html) -->
     <header class="header">
-        <div class="header-container">
-            <a href="/" class="logo">
-                <span class="logo-text">MUNTANER336</span>
-                <span class="logo-subtitle">BCN → MX</span>
-            </a>
-            
-            <nav class="main-nav">
-                <a href="/#novedades" class="nav-item">NOVEDADES</a>
-                <a href="/#catalogo" class="nav-item">CATÁLOGO</a>
-                <a href="/#calendario" class="nav-item">CALENDARIO</a>
-                <a href="/#nosotros" class="nav-item">NOSOTROS</a>
-            </nav>
+      <div class="header-container">
+        <a href="/" class="logo">
+          <span class="logo-text">MUNTANER336</span>
+          <span class="logo-subtitle">BCN → MX</span>
+        </a>
 
-            <div class="header-actions">
-                <a href="https://www.discogs.com/seller/muntaner336" target="_blank" class="discogs-link">
-                    Ver en Discogs
-                </a>
-            </div>
+        <nav class="main-nav">
+          <a href="/#novedades" class="nav-item">NOVEDADES</a>
+          <a href="/#catalogo" class="nav-item">CATÁLOGO</a>
+          <a href="/#calendario" class="nav-item">CALENDARIO</a>
+          <a href="/#nosotros" class="nav-item">NOSOTROS</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://www.discogs.com/seller/muntaner336" target="_blank" class="discogs-link">
+            Ver en Discogs
+          </a>
         </div>
+      </div>
     </header>
 
     <!-- Product Page -->
     <main class="product-page">
-        <div class="product-container">
-            
-            <!-- Gallery -->
-            <div class="product-gallery">
-                <div class="product-main-image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect fill='%23111' width='500' height='500'/%3E%3Ctext fill='%23333' x='250' y='250' text-anchor='middle' dy='.3em' font-size='60'%3E🎵%3C/text%3E%3C/svg%3E" alt="Larry Heard – Missing You" id="mainImage">
-                </div>
-                <div class="product-thumbnails">
-                    <div class="product-thumb active">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23333' x='50' y='50' text-anchor='middle' dy='.3em' font-size='20'%3EA%3C/text%3E%3C/svg%3E" alt="Front">
-                    </div>
-                    <div class="product-thumb">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23333' x='50' y='50' text-anchor='middle' dy='.3em' font-size='20'%3EB%3C/text%3E%3C/svg%3E" alt="Back">
-                    </div>
-                    <div class="product-thumb">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23333' x='50' y='50' text-anchor='middle' dy='.3em' font-size='20'%3EL%3C/text%3E%3C/svg%3E" alt="Label">
-                    </div>
-                </div>
+      <div class="product-container">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="product-main-image">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect fill='%23111' width='500' height='500'/%3E%3Ctext fill='%23333' x='250' y='250' text-anchor='middle' dy='.3em' font-size='60'%3E🎵%3C/text%3E%3C/svg%3E"
+              alt="Larry Heard – Missing You"
+              id="mainImage"
+            />
+          </div>
+          <div class="product-thumbnails">
+            <div class="product-thumb active">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23333' x='50' y='50' text-anchor='middle' dy='.3em' font-size='20'%3EA%3C/text%3E%3C/svg%3E"
+                alt="Front"
+              />
             </div>
-            
-            <!-- Info -->
-            <div class="product-info">
-                <div class="product-badges">
-                    <span class="badge badge-condition">VG+</span>
-                    <span class="badge badge-origin">BARCELONA</span>
-                    <span class="badge badge-genre">DEEP HOUSE</span>
-                </div>
-                
-                <h1 class="product-title">Larry Heard – Missing You</h1>
-                <p class="product-label">Alleviated Records • 1991 • US</p>
-                
-                <p class="product-price">$950 MXN</p>
-                
-                <div class="product-actions">
-                    <a href="https://www.discogs.com/sell/item/XXXXXX" class="btn-primary" target="_blank">
-                        Comprar en Discogs
-                    </a>
-                    <button class="btn-secondary" onclick="scrollToAudio()">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                        Escuchar
-                    </button>
-                </div>
-                
-                <!-- Audio Preview -->
-                <div class="product-audio" id="audioSection">
-                    <div class="audio-header">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                        </svg>
-                        <span>PREVIEW — "Missing You" (Side A)</span>
-                    </div>
-                    <div class="audio-player">
-                        <!-- YouTube embed for the track -->
-                        <iframe 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="Audio Preview"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                
-                <!-- Details -->
-                <div class="product-details">
-                    <h3 class="details-title">DETALLES</h3>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <span class="detail-label">Formato</span>
-                            <span class="detail-value">12" Vinyl</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Condición Vinilo</span>
-                            <span class="detail-value">Very Good Plus (VG+)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Condición Funda</span>
-                            <span class="detail-value">Very Good (VG)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Año</span>
-                            <span class="detail-value">1991</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">País</span>
-                            <span class="detail-value">United States</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Catálogo</span>
-                            <span class="detail-value">AL-1234</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Story -->
-                <div class="product-story">
-                    <h3 class="story-title">LA HISTORIA</h3>
-                    <p class="story-text">
-                        Un clásico absoluto del deep house de Chicago. Larry Heard, también conocido 
-                        como Mr. Fingers, definió el sonido del género con este track. Esta copia viene 
-                        directamente de una colección privada en Barcelona — un DJ que tocó en los 90s 
-                        y guardó sus discos en perfectas condiciones.
-                    </p>
-                    <p class="story-text" style="margin-top: 15px;">
-                        El vinilo tiene marcas mínimas de uso pero suena impecable. La funda original 
-                        muestra algo de desgaste en las esquinas pero conserva toda la artwork.
-                    </p>
-                    <p class="story-origin">
-                        📍 Encontrado en: Discos Paradiso, Barcelona
-                    </p>
-                </div>
+            <div class="product-thumb">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23333' x='50' y='50' text-anchor='middle' dy='.3em' font-size='20'%3EB%3C/text%3E%3C/svg%3E"
+                alt="Back"
+              />
             </div>
+            <div class="product-thumb">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23333' x='50' y='50' text-anchor='middle' dy='.3em' font-size='20'%3EL%3C/text%3E%3C/svg%3E"
+                alt="Label"
+              />
+            </div>
+          </div>
         </div>
-        
-        <!-- Related Products -->
-        <section class="related-section">
-            <h2 class="related-title">También te puede gustar</h2>
-            <div class="vinyl-grid">
-                <!-- Add related vinyl cards here -->
+
+        <!-- Info -->
+        <div class="product-info">
+          <div class="product-badges">
+            <span class="badge badge-condition">VG+</span>
+            <span class="badge badge-origin">BARCELONA</span>
+            <span class="badge badge-genre">DEEP HOUSE</span>
+          </div>
+
+          <h1 class="product-title">Larry Heard – Missing You</h1>
+          <p class="product-label">Alleviated Records • 1991 • US</p>
+
+          <p class="product-price">$950 MXN</p>
+
+          <div class="product-actions">
+            <a href="https://www.discogs.com/sell/item/XXXXXX" class="btn-primary" target="_blank">
+              Comprar en Discogs
+            </a>
+            <button class="btn-secondary" onclick="scrollToAudio()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Escuchar
+            </button>
+          </div>
+
+          <!-- Audio Preview -->
+          <div class="product-audio" id="audioSection">
+            <div class="audio-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
+                />
+              </svg>
+              <span>PREVIEW — "Missing You" (Side A)</span>
             </div>
-        </section>
+            <div class="audio-player">
+              <!-- YouTube embed for the track -->
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Audio Preview"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="product-details">
+            <h3 class="details-title">DETALLES</h3>
+            <div class="details-grid">
+              <div class="detail-item">
+                <span class="detail-label">Formato</span>
+                <span class="detail-value">12" Vinyl</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Condición Vinilo</span>
+                <span class="detail-value">Very Good Plus (VG+)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Condición Funda</span>
+                <span class="detail-value">Very Good (VG)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Año</span>
+                <span class="detail-value">1991</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">País</span>
+                <span class="detail-value">United States</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Catálogo</span>
+                <span class="detail-value">AL-1234</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story -->
+          <div class="product-story">
+            <h3 class="story-title">LA HISTORIA</h3>
+            <p class="story-text">
+              Un clásico absoluto del deep house de Chicago. Larry Heard, también conocido como Mr.
+              Fingers, definió el sonido del género con este track. Esta copia viene directamente de
+              una colección privada en Barcelona — un DJ que tocó en los 90s y guardó sus discos en
+              perfectas condiciones.
+            </p>
+            <p class="story-text" style="margin-top: 15px">
+              El vinilo tiene marcas mínimas de uso pero suena impecable. La funda original muestra
+              algo de desgaste en las esquinas pero conserva toda la artwork.
+            </p>
+            <p class="story-origin">📍 Encontrado en: Discos Paradiso, Barcelona</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <section class="related-section">
+        <h2 class="related-title">También te puede gustar</h2>
+        <div class="vinyl-grid">
+          <!-- Add related vinyl cards here -->
+        </div>
+      </section>
     </main>
 
     <!-- Footer (same as index.html) -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <span class="footer-logo">MUNTANER336</span>
-                <p>Vinilos europeos de segunda mano<br>Barcelona → México</p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Síguenos</h4>
-                    <a href="https://instagram.com/muntaner336" target="_blank">Instagram</a>
-                    <a href="https://www.discogs.com/seller/muntaner336" target="_blank">Discogs</a>
-                    <a href="https://youtube.com/@muntaner336" target="_blank">YouTube</a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="footer-logo">MUNTANER336</span>
+          <p>Vinilos europeos de segunda mano<br />Barcelona → México</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 Muntaner336. Hecho con 🎵 en CDMX.</p>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Síguenos</h4>
+            <a href="https://instagram.com/muntaner336" target="_blank">Instagram</a>
+            <a href="https://www.discogs.com/seller/muntaner336" target="_blank">Discogs</a>
+            <a href="https://youtube.com/@muntaner336" target="_blank">YouTube</a>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Muntaner336. Hecho con 🎵 en CDMX.</p>
+      </div>
     </footer>
 
     <script>
-        // Thumbnail gallery
-        document.querySelectorAll('.product-thumb').forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                // In real implementation, swap main image
-            });
+      // Thumbnail gallery
+      document.querySelectorAll('.product-thumb').forEach((thumb) => {
+        thumb.addEventListener('click', function () {
+          document.querySelectorAll('.product-thumb').forEach((t) => t.classList.remove('active'));
+          this.classList.add('active');
+          // In real implementation, swap main image
         });
-        
-        // Scroll to audio
-        function scrollToAudio() {
-            document.getElementById('audioSection').scrollIntoView({ behavior: 'smooth' });
-        }
+      });
+
+      // Scroll to audio
+      function scrollToAudio() {
+        document.getElementById('audioSection').scrollIntoView({ behavior: 'smooth' });
+      }
     </script>
-</body>
+  </body>
 </html>

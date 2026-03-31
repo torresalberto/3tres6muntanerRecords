@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "property-no-vendor-prefix": null,
+    "at-rule-no-unknown": null,
+    "selector-no-unknown": null,
+    "function-no-unknown": null,
+    "keyframe-name-pattern": null,
+    "selector-specificity": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "color-hex-length": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "value-keyword-case": null,
+    "custom-property-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "media-feature-range-notation": null
+  },
+  "ignoreFiles": ["node_modules/", "dist/", "*.min.css", "downloads/"]
+}

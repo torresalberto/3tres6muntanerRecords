@@ -1,0 +1,23 @@
+{
+  "name": "muntaner336-website",
+  "version": "1.0.0",
+  "description": "Muntaner336 vinyl store website",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "eslint . --ext .js,.jsx --fix",
+    "format": "prettier --write \"**/*.{html,css,js}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js}\"",
+    "css:lint": "stylelint \"**/*.css\"",
+    "css:fix": "stylelint \"**/*.css\" --fix",
+    "check": "npm run format:check"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
