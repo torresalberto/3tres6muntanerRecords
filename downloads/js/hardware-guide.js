@@ -229,6 +229,11 @@ const HardwareGuide = {
             ${device.software.versionWarning ? `
               <p class="detail-warning">⚠️ ${device.software.versionWarning}</p>
             ` : ''}
+            ${device.software.downloadUrl ? `
+              <a href="${device.software.downloadUrl}" target="_blank" rel="noopener" class="download-link-btn">
+                ⬇️ Download ${device.software.downloadNote || device.software.name}
+              </a>
+            ` : ''}
           </div>
         ` : ''}
 

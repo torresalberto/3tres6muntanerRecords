@@ -28,6 +28,8 @@ const HardwareDB = {
         name: "Rekordbox",
         version: "6.x",
         versionWarning: "Avoid Rekordbox 7.x - export crashes reported on some units",
+        downloadUrl: "https://rekordbox.com/download/",
+        downloadNote: "Download Rekordbox v6 (not v7)",
         exportMode: "Performance Mode",
         analysis: "On-device BPM/Key analysis available"
       },
@@ -87,6 +89,8 @@ const HardwareDB = {
         name: "Rekordbox",
         version: "5.x or 6.x",
         versionWarning: "Rekordbox 7.x has compatibility issues with NXS2",
+        downloadUrl: "https://rekordbox.com/download/",
+        downloadNote: "Download Rekordbox v6",
         exportMode: "Performance Mode",
         analysis: "On-device analysis available but slower than CDJ-3000"
       },
@@ -145,6 +149,8 @@ const HardwareDB = {
         name: "Rekordbox",
         version: "4.x, 5.x",
         versionWarning: "Use Rekordbox 5.x - version 6+ may have issues",
+        downloadUrl: "https://rekordbox.com/download/",
+        downloadNote: "Download Rekordbox v5",
         exportMode: "Export Mode",
         analysis: "Basic on-device analysis"
       },
@@ -197,6 +203,8 @@ const HardwareDB = {
         name: "Rekordbox",
         version: "6.x",
         versionWarning: "Avoid Rekordbox 7.x",
+        downloadUrl: "https://rekordbox.com/download/",
+        downloadNote: "Download Rekordbox v6",
         exportMode: "Performance Mode / Link Export",
         analysis: "Full rekordbox compatibility"
       },
@@ -250,6 +258,8 @@ const HardwareDB = {
         name: "Rekordbox",
         version: "6.x",
         versionWarning: "Avoid Rekordbox 7.x",
+        downloadUrl: "https://rekordbox.com/download/",
+        downloadNote: "Download Rekordbox v6",
         exportMode: "Performance Mode",
         analysis: "Full analysis export"
       },
@@ -301,6 +311,8 @@ const HardwareDB = {
         name: "Rekordbox",
         version: "6.x",
         versionWarning: "Avoid Rekordbox 7.x for stable export",
+        downloadUrl: "https://rekordbox.com/download/",
+        downloadNote: "Download Rekordbox v6",
         exportMode: "Performance Mode",
         analysis: "Full export with all rekordbox features"
       },
@@ -447,6 +459,8 @@ const HardwareDB = {
         name: "Engine Prime",
         version: "1.x (latest)",
         versionWarning: null,
+        downloadUrl: "https://enginedj.com/download/",
+        downloadNote: "Download Engine DJ",
         exportMode: "Engine Prime USB Export",
         analysis: "BPM and Key analysis built-in"
       },
@@ -502,6 +516,8 @@ const HardwareDB = {
         name: "Engine Prime",
         version: "1.x",
         versionWarning: null,
+        downloadUrl: "https://enginedj.com/download/",
+        downloadNote: "Download Engine DJ",
         exportMode: "Engine Prime USB Export",
         analysis: "Full analysis support"
       },
@@ -550,6 +566,8 @@ const HardwareDB = {
         name: "Engine Prime",
         version: "1.x",
         versionWarning: null,
+        downloadUrl: "https://enginedj.com/download/",
+        downloadNote: "Download Engine DJ",
         exportMode: "Engine Prime",
         analysis: "Full analysis including track preview"
       },
@@ -600,6 +618,8 @@ const HardwareDB = {
         name: "Engine Prime",
         version: "1.x",
         versionWarning: null,
+        downloadUrl: "https://enginedj.com/download/",
+        downloadNote: "Download Engine DJ",
         exportMode: "Engine Prime",
         analysis: "Full analysis in Engine Prime"
       },
@@ -826,6 +846,8 @@ const HardwareDB = {
         name: "Traktor Pro 3",
         version: "3.x",
         versionWarning: null,
+        downloadUrl: "https://www.native-instruments.com/traktor",
+        downloadNote: "Download Traktor Pro 3",
         exportMode: "Not applicable - laptop-based",
         analysis: "Full analysis in Traktor Pro"
       },
@@ -874,6 +896,8 @@ const HardwareDB = {
         name: "Serato DJ Pro",
         version: "Latest",
         versionWarning: "Requires Serato DJ Pro (paid subscription)",
+        downloadUrl: "https://serato.com/dj/pro",
+        downloadNote: "Download Serato DJ Pro",
         exportMode: "Not applicable - laptop-based",
         analysis: "Analyze in Serato"
       },
@@ -918,6 +942,8 @@ const HardwareDB = {
         name: "Serato DJ Pro",
         version: "Latest",
         versionWarning: "Requires Serato DJ Pro",
+        downloadUrl: "https://serato.com/dj/pro",
+        downloadNote: "Download Serato DJ Pro",
         exportMode: "Laptop-based",
         analysis: "Serato analyzes on load"
       },
@@ -963,6 +989,8 @@ const HardwareDB = {
         name: "Engine DJ",
         version: "Latest (free)",
         versionWarning: null,
+        downloadUrl: "https://enginedj.com/download/",
+        downloadNote: "Download Engine DJ",
         exportMode: "Engine Prime Export",
         analysis: "Built-in analysis"
       },

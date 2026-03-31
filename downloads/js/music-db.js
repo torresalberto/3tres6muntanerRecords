@@ -1,341 +1,247 @@
 const MusicDB = {
   sources: [
-    // ==================== TIER 1 - BEST SOURCES ====================
+    // ==================== TIER 1 - DIRECT DOWNLOADS ====================
     {
-      id: "musicvibez",
-      name: "MusicVibez",
-      url: "https://musicvibez.com",
-      description: "Premier destination for free electronic music. Curated releases from top labels with excellent quality.",
-      genres: ["house", "techno", "deep house", "progressive", "melodic techno"],
-      formats: ["MP3", "FLAC"],
-      quality: "320kbps / Lossless",
+      id: "bandcamp",
+      name: "Bandcamp",
+      url: "https://bandcamp.com",
+      description: "Direct downloads from artists. Many offer free downloads with purchase or as free releases. Best for House, Microhouse, Progressive.",
+      genres: ["house", "microhouse", "progressive house", "deep house", "melodic techno", "tech house"],
+      formats: ["MP3", "FLAC", "WAV"],
+      quality: "Artist choice (often 320kbps+)",
       tier: 1,
       tierLabel: "Best",
-      features: ["curated", "label releases", "high quality"],
-      color: "#7c3aed"
+      features: ["direct downloads", "free releases", "support artists", "name your price"],
+      color: "#629aa9"
     },
     {
-      id: "ektoplasm",
+      id: "ektoplazm",
       name: "Ektoplazm",
       url: "https://ektoplazm.com",
-      description: "Legendary free music platform. Massive collection of electronic, psytrance, and experimental.",
-      genres: ["psytrance", "progressive psy", "electronic", "ambient", "experimental"],
-      formats: ["MP3", "FLAC"],
+      description: "Direct MP3/FLAC downloads. Legendary platform for psytrance and progressive electronic.",
+      genres: ["psytrance", "progressive psy", "progressive house", "electronic", "ambient"],
+      formats: ["MP3", "FLAC", "WAV"],
       quality: "320kbps / Lossless",
       tier: 1,
       tierLabel: "Best",
-      features: ["massive catalog", "community", "free releases"],
+      features: ["direct downloads", "massive catalog", "free releases", "cc licenses"],
       color: "#059669"
     },
     {
       id: "free-music-archive",
       name: "Free Music Archive",
       url: "https://freemusicarchive.org",
-      description: "One of the largest databases of free, legal music downloads. Extensive electronic section.",
-      genres: ["electronic", "ambient", "experimental", "house", "techno"],
+      description: "Direct downloads. One of the largest legal free music databases with extensive electronic section.",
+      genres: ["electronic", "house", "techno", "progressive", "ambient", "experimental"],
       formats: ["MP3", "FLAC"],
       quality: "Varies",
       tier: 1,
       tierLabel: "Best",
-      features: ["huge catalog", "curated collections", "cc licenses"],
+      features: ["direct downloads", "huge catalog", "curated collections", "cc licenses"],
       color: "#0891b2"
     },
-    {
-      id: "cctrrax",
-      name: "CCTrax",
-      url: "https://cctrax.com",
-      description: "Creative Commons electronic music. Quality over quantity with expert curation.",
-      genres: ["electronic", "house", "techno", "minimal", "deep house"],
-      formats: ["MP3", "FLAC"],
-      quality: "320kbps / Lossless",
-      tier: 1,
-      tierLabel: "Best",
-      features: ["cc music", "curated", "electronic focused"],
-      color: "#dc2626"
-    },
-    {
-      id: "bandcamp",
-      name: "Bandcamp",
-      url: "https://bandcamp.com",
-      description: "Support artists directly. Many offer free downloads with purchase or as free releases.",
-      genres: ["all electronic"],
-      formats: ["MP3", "FLAC", "WAV"],
-      quality: "Artist choice",
-      tier: 1,
-      tierLabel: "Best",
-      features: ["support artists", "free releases", "name your price"],
-      color: "#629aa9"
-    },
 
-    // ==================== TIER 2 - GOOD SOURCES ====================
+    // ==================== TIER 2 - GOOD DOWNLOADS ====================
     {
       id: "jamendo",
       name: "Jamendo",
       url: "https://www.jamendo.com",
-      description: "Independent music platform with thousands of electronic tracks. Free streaming and downloads.",
-      genres: ["electronic", "house", "techno", "trance", "ambient"],
+      description: "Direct downloads. Thousands of electronic tracks available for free download.",
+      genres: ["electronic", "house", "techno", "progressive", "trance", "ambient"],
       formats: ["MP3"],
       quality: "128-320kbps",
       tier: 2,
       tierLabel: "Good",
-      features: ["large catalog", "free downloads", "artist profiles"],
+      features: ["direct downloads", "large catalog", "free downloads", "artist profiles"],
       color: "#f59e0b"
     },
     {
       id: "bensound",
       name: "Bensound",
       url: "https://www.bensound.com",
-      description: "Royalty-free electronic music for creators. Clean, production-ready tracks.",
-      genres: ["electronic", "house", "techno", "downtempo", "cinematic"],
+      description: "Direct downloads. Royalty-free electronic music for creators. Great for House and Progressive.",
+      genres: ["electronic", "house", "techno", "progressive", "downtempo", "cinematic"],
       formats: ["MP3"],
       quality: "128-320kbps",
       tier: 2,
       tierLabel: "Good",
-      features: ["royalty free", "production ready", "clean sound"],
+      features: ["direct downloads", "royalty free", "production ready", "clean sound"],
       color: "#8b5cf6"
     },
     {
-      id: "world-of-house",
-      name: "World of House",
-      url: "https://worldofhouse.io",
-      description: "Dedicated to house music. Regular free releases from emerging artists.",
-      genres: ["house", "deep house", "tech house", "lo-fi house"],
+      id: "beatport",
+      name: "Beatport",
+      url: "https://www.beatport.com",
+      description: "Free downloads section. Professional marketplace with weekly free tracks.",
+      genres: ["house", "progressive house", "tech house", "deep house", "melodic techno"],
+      formats: ["MP3", "WAV", "FLAC"],
+      quality: "320kbps+",
+      tier: 2,
+      tierLabel: "Good",
+      features: ["free section", "pro marketplace", "new releases", "electronic focused"],
+      color: "#000000"
+    },
+    {
+      id: "traxsource",
+      name: "Traxsource",
+      url: "https://www.traxsource.com",
+      description: "Free tracks daily. Premier house and techno source with direct downloads.",
+      genres: ["house", "techno", "deep house", "tech house", "progressive house"],
       formats: ["MP3", "WAV"],
       quality: "320kbps",
       tier: 2,
       tierLabel: "Good",
-      features: ["house focused", "fresh releases", "emerging artists"],
-      color: "#ec4899"
-    },
-    {
-      id: "minimalfreaks",
-      name: "MinimalFreaks",
-      url: "https://minimalfreaks.net",
-      description: "Underground electronic music. Techno, minimal, and experimental.",
-      genres: ["techno", "minimal", "tech house", "experimental"],
-      formats: ["MP3"],
-      quality: "Varies",
-      tier: 2,
-      tierLabel: "Good",
-      features: ["underground", "techno focused", "free downloads"],
-      color: "#0d9488"
-    },
-    {
-      id: "techno-raw",
-      name: "Techno Raw",
-      url: "https://technoraw.net",
-      description: "Raw, industrial, and dark techno. Harder styles for the underground scene.",
-      genres: ["techno", "industrial", "hard techno", "dark techno"],
-      formats: ["MP3"],
-      quality: "Varies",
-      tier: 2,
-      tierLabel: "Good",
-      features: ["raw techno", "industrial", "underground"],
-      color: "#1e1e1e"
+      features: ["direct downloads", "free tracks", "house focused", "daily freebies"],
+      color: "#0ea5e9"
     },
 
-    // ==================== TIER 3 - SPECIALTY SOURCES ====================
-    {
-      id: "zenon-records",
-      name: "Zenon Records",
-      url: "https://zenonrecords.bandcamp.com",
-      description: "Psychedelic trance and electronic. High-quality releases on Bandcamp.",
-      genres: ["psytrance", "progressive psy", "dark psy"],
-      formats: ["MP3", "FLAC"],
-      quality: "320kbps / Lossless",
-      tier: 3,
-      tierLabel: "Specialty",
-      features: ["psytrance", "quality releases", "bandcamp"],
-      color: "#7c2d12"
-    },
+    // ==================== TIER 3 - LABEL STORES (Direct Download) ====================
     {
       id: "anjunadeep",
       name: "Anjunadeep",
       url: "https://anjunadeep.bandcamp.com",
-      description: "Melodic house and progressive. Beautiful, emotional electronic music.",
-      genres: ["melodic house", "progressive", "deep house", "melodic techno"],
+      description: "Direct Bandcamp downloads. Melodic house and progressive. Beautiful, emotional electronic music.",
+      genres: ["melodic house", "progressive house", "deep house", "melodic techno"],
       formats: ["MP3", "FLAC"],
       quality: "320kbps / Lossless",
       tier: 3,
-      tierLabel: "Specialty",
-      features: ["melodic", "emotional", "quality label"],
+      tierLabel: "Labels",
+      features: ["direct downloads", "melodic", "emotional", "quality label"],
       color: "#3b82f6"
     },
     {
       id: "defected-records",
       name: "Defected Records",
       url: "https://defected.bandcamp.com",
-      description: "Classic house and disco. Legendary label with free releases.",
-      genres: ["house", "disco", "soulful house", "deep house"],
+      description: "Direct Bandcamp downloads. Classic house and disco. Legendary label.",
+      genres: ["house", "disco", "soulful house", "deep house", "progressive house"],
       formats: ["MP3", "FLAC"],
       quality: "320kbps",
       tier: 3,
-      tierLabel: "Specialty",
-      features: ["classic house", "legendary label", "disco vibes"],
+      tierLabel: "Labels",
+      features: ["direct downloads", "classic house", "legendary label", "disco vibes"],
       color: "#f43f5e"
     },
     {
-      id: "moachin",
-      name: "Moachin",
-      url: "https://moachin.bandcamp.com",
-      description: "Latin electronic and house. Unique fusion sounds.",
-      genres: ["latin house", "electronic", "afrobeat"],
+      id: "armada",
+      name: "Armada Music",
+      url: "https://armadamusic.bandcamp.com",
+      description: "Direct Bandcamp downloads. One of the world's biggest electronic music labels.",
+      genres: ["house", "progressive", "trance", "electro", "big room"],
       formats: ["MP3", "FLAC"],
       quality: "320kbps",
       tier: 3,
-      tierLabel: "Specialty",
-      features: ["latin flavor", "unique", "emerging"],
-      color: "#ea580c"
+      tierLabel: "Labels",
+      features: ["direct downloads", "major label", "varied genres", "high quality"],
+      color: "#0066cc"
     },
     {
-      id: "beatport",
-      name: "Beatport",
-      url: "https://www.beatport.com",
-      description: "The pro audio marketplace. Free downloads section with weekly picks.",
-      genres: ["all electronic"],
-      formats: ["MP3", "WAV", "FLAC"],
-      quality: "320kbps+",
+      id: "stereohype",
+      name: "Stereohype",
+      url: "https://stereohype.bandcamp.com",
+      description: "Direct Bandcamp downloads. Forward-thinking electronic music label.",
+      genres: ["house", "techno", "electro", "experimental", "bass"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
       tier: 3,
-      tierLabel: "Specialty",
-      features: ["pro marketplace", "free section", "new releases"],
-      color: "#000000"
+      tierLabel: "Labels",
+      features: ["direct downloads", "experimental", "fresh sounds", "affordable"],
+      color: "#e11d48"
     },
-
-    // ==================== YOUTUBE CHANNELS (Legal to rip) ====================
     {
-      id: "spinnin-records",
-      name: "Spinnin' Records",
-      url: "https://www.youtube.com/c/SpinninRecords",
-      description: "One of the biggest EDM labels. Legal to rip for personal use in most jurisdictions.",
-      genres: ["edm", "house", "progressive", "electro"],
-      formats: ["YouTube"],
-      quality: "YouTube Quality",
+      id: "hot creations",
+      name: "Hot Creations",
+      url: "https://hotcreations.bandcamp.com",
+      description: "Direct Bandcamp downloads. techno, house and more from Fisher's label.",
+      genres: ["house", "techno", "tech house", "deep house"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
       tier: 3,
-      tierLabel: "YouTube",
-      features: ["huge catalog", "mainstream edm", "legal to rip"],
+      tierLabel: "Labels",
+      features: ["direct downloads", "techno", "house", "popular label"],
+      color: "#f97316"
+    },
+    {
+      id: "dirtybird",
+      name: "Dirtybird",
+      url: "https://dirtybird.bandcamp.com",
+      description: "Direct Bandcamp downloads. West coast house and techno.",
+      genres: ["house", "tech house", "funky house", " techno"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
+      tier: 3,
+      tierLabel: "Labels",
+      features: ["direct downloads", "funky house", "west coast", "iconic label"],
+      color: "#84cc16"
+    },
+    {
+      id: "toolroom",
+      name: "Toolroom",
+      url: "https://toolroom.bandcamp.com",
+      description: "Direct Bandcamp downloads. Premium house and techno label.",
+      genres: ["house", "tech house", "techno", "progressive"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
+      tier: 3,
+      tierLabel: "Labels",
+      features: ["direct downloads", "professional", "house focused", "quality releases"],
+      color: "#a855f7"
+    },
+    {
+      id: "spinnin-sessions",
+      name: "Spinnin' Sessions",
+      url: "https://spinninsessions.bandcamp.com",
+      description: "Direct Bandcamp downloads. House and progressive from Spinnin'.",
+      genres: ["house", "progressive house", "electro", "edm"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
+      tier: 3,
+      tierLabel: "Labels",
+      features: ["direct downloads", "major label", "house", "progressive"],
       color: "#1ca0f2"
     },
     {
-      id: "majestic-casual",
-      name: "Majestic Casual",
-      url: "https://www.youtube.com/c/MajesticCasual",
-      description: "Curated deep house and future bass. Excellent production quality.",
-      genres: ["deep house", "future bass", "chill electronic"],
-      formats: ["YouTube"],
-      quality: "YouTube Quality",
+      id: "crazy-k",
+      name: "Crazy K",
+      url: "https://crazyk.bandcamp.com",
+      description: "Direct Bandcamp downloads. Techno and house from Berlin.",
+      genres: ["techno", "house", "minimal", "tech house"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
       tier: 3,
-      tierLabel: "YouTube",
-      features: ["curated", "chill vibes", "high quality"],
-      color: "#8b5cf6"
-    },
-    {
-      id: "tasty-records",
-      name: "Tasty Records",
-      url: "https://www.youtube.com/c/OfficialTasty",
-      description: "Electronic and house music. Part of the Spinnin' network.",
-      genres: ["house", "electronic", "progressive"],
-      formats: ["YouTube"],
-      quality: "YouTube Quality",
-      tier: 3,
-      tierLabel: "YouTube",
-      features: ["edm", "house", "regular uploads"],
-      color: "#f472b6"
-    },
-    {
-      id: "edm-nation",
-      name: "EDM Nation",
-      url: "https://www.youtube.com/c/EDMNation",
-      description: "Electronic dance music curation. High-energy tracks.",
-      genres: ["edm", "house", "dubstep", "electro"],
-      formats: ["YouTube"],
-      quality: "YouTube Quality",
-      tier: 3,
-      tierLabel: "YouTube",
-      features: ["edm", "high energy", "varied genres"],
+      tierLabel: "Labels",
+      features: ["direct downloads", "berlin", "techno", "underground"],
       color: "#ef4444"
     },
     {
-      id: "selected",
-      name: "Selected",
-      url: "https://www.youtube.com/c/SelectedVEVO",
-      description: "Curated electronic music. Deep house and melodic techno focus.",
-      genres: ["deep house", "melodic techno", "electronic"],
-      formats: ["YouTube"],
-      quality: "YouTube Quality",
-      tier: 3,
-      tierLabel: "YouTube",
-      features: ["curated", "melodic focus", "quality mixes"],
-      color: "#6366f1"
-    },
-
-    // ==================== ADDITIONAL SPECIALTY SOURCES ====================
-    {
-      id: "traxsource",
-      name: "Traxsource",
-      url: "https://www.traxsource.com",
-      description: "Premier house and techno source. Free tracks available daily.",
-      genres: ["house", "techno", "deep house", "tech house"],
-      formats: ["MP3", "WAV"],
+      id: "mord",
+      name: "MORD",
+      url: "https://mord.bandcamp.com",
+      description: "Direct Bandcamp downloads. Dark techno and experimental.",
+      genres: ["techno", "dark techno", "experimental", "industrial"],
+      formats: ["MP3", "FLAC"],
       quality: "320kbps",
-      tier: 2,
-      tierLabel: "Good",
-      features: ["pro source", "daily free", "house & techno"],
-      color: "#0f172a"
-    },
-    {
-      id: "soundcloud",
-      name: "SoundCloud",
-      url: "https://soundcloud.com/discover",
-      description: "Massive artist uploads. Use filters to find free downloadable tracks.",
-      genres: ["all electronic"],
-      formats: ["MP3 (varies)"],
-      quality: "Varies",
-      tier: 2,
-      tierLabel: "Good",
-      features: ["artist uploads", "free downloads filter", "huge catalog"],
-      color: "#ff5500"
-    },
-    {
-      id: "archive",
-      name: "Internet Archive",
-      url: "https://archive.org/details/audio",
-      description: "Non-profit library. Extensive electronic music collections and radio shows.",
-      genres: ["electronic", "experimental", "ambient", "radio shows"],
-      formats: ["MP3", "FLAC"],
-      quality: "Varies",
-      tier: 2,
-      tierLabel: "Good",
-      features: ["non-profit", "radio shows", "historical"],
-      color: "#000000"
-    },
-    {
-      id: "audiomack",
-      name: "AudioMack",
-      url: "https://audiomack.com",
-      description: "Music streaming and downloads. Many free electronic releases.",
-      genres: ["electronic", "hip-hop", "afrobeats"],
-      formats: ["MP3"],
-      quality: "128-320kbps",
-      tier: 2,
-      tierLabel: "Good",
-      features: ["streaming", "free downloads", "curated"],
-      color: "#f59e0b"
-    },
-    {
-      id: "record-union",
-      name: "Record Union",
-      url: "https://www.recordunion.com",
-      description: "Independent distribution. Artists offer free downloads to build fanbase.",
-      genres: ["all electronic"],
-      formats: ["MP3", "FLAC"],
-      quality: "Artist choice",
       tier: 3,
-      tierLabel: "Specialty",
-      features: ["independent", "artist direct", "free promos"],
-      color: "#06b6d4"
+      tierLabel: "Labels",
+      features: ["direct downloads", "dark techno", "experimental", "berlin"],
+      color: "#18181b"
+    },
+    {
+      id: "afterhours",
+      name: "Afterhours",
+      url: "https://afterhours.bandcamp.com",
+      description: "Direct Bandcamp downloads. Italian techno and house.",
+      genres: ["techno", "house", "progressive", "melodic"],
+      formats: ["MP3", "FLAC"],
+      quality: "320kbps",
+      tier: 3,
+      tierLabel: "Labels",
+      features: ["direct downloads", "italian", "techno", "quality"],
+      color: "#dc2626"
     }
   ],
 
+  // Get all unique genres
   getGenres: function() {
     const genres = new Set();
     this.sources.forEach(source => {
@@ -344,26 +250,18 @@ const MusicDB = {
     return Array.from(genres).sort();
   },
 
-  getTierLabel: function(tier) {
-    switch(tier) {
-      case 1: return 'Best';
-      case 2: return 'Good';
-      case 3: return 'Specialty';
-      default: return '';
-    }
-  },
-
+  // Get quality badges
   getQualityBadges: function(quality) {
     const badges = [];
-    if (quality.includes('Lossless') || quality.includes('FLAC')) {
-      badges.push({ text: 'Lossless', color: '#00c853' });
+    const qualityLower = quality.toLowerCase();
+    
+    if (qualityLower.includes('320') || qualityLower.includes('lossless')) {
+      badges.push({ text: 'High Quality', color: '#00c853' });
     }
-    if (quality.includes('320')) {
-      badges.push({ text: '320kbps', color: '#2196f3' });
+    if (qualityLower.includes('flac') || qualityLower.includes('wav')) {
+      badges.push({ text: 'Lossless', color: '#2196f3' });
     }
-    if (quality.includes('YouTube')) {
-      badges.push({ text: 'YouTube', color: '#ff0000' });
-    }
+    
     return badges;
   }
 };

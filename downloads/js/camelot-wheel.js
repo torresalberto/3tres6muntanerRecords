@@ -242,6 +242,15 @@ const CamelotWheel = {
           <span class="key-type">${key.letter === 'A' ? 'Minor (Energetic)' : 'Major (Atmospheric)'}</span>
           <span class="key-energy" style="color: ${energyData.color}">${energyData.icon} ${energyData.label}</span>
         </div>
+        <div class="selected-key-bpm">
+          <span class="bpm-label">BPM:</span>
+          <span class="bpm-range">${key.bpmRange}</span>
+          <span class="bpm-typical">Typical: ${key.bpmTypical}</span>
+        </div>
+        <div class="selected-key-genre">
+          <span class="genre-label">Best for:</span>
+          <span class="genre-value">${key.genre}</span>
+        </div>
       `;
     }
 
@@ -295,8 +304,9 @@ const CamelotWheel = {
         <div class="compatible-keys-list">
           ${keys.map(c => `
             <button class="compatible-key-btn" data-key="${c.key.id}" style="background: ${color}20; border-color: ${color}; color: ${color}">
-              ${c.key.id}
-              <span class="compatible-key-musical">${c.key.key}</span>
+              <span class="compat-key-id">${c.key.id}</span>
+              <span class="compat-key-musical">${c.key.key}</span>
+              <span class="compat-key-bpm">${c.key.bpmTypical} BPM</span>
             </button>
           `).join('')}
         </div>
