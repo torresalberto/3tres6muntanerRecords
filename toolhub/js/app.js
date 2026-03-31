@@ -1,7 +1,7 @@
 const App = {
   DOWNLOAD_LIMIT: 3,
-  API_BASE: window.API_BASE || '/api',
-  DOWNLOAD_API_BASE: window.DOWNLOAD_API_BASE || '/api',
+  API_BASE: 'https://threetres6muntanerrecords.onrender.com',
+  DOWNLOAD_API_BASE: 'https://threetres6muntanerrecords.onrender.com',
 
   state: {
     platform: 'youtube',
