@@ -25,10 +25,24 @@ def run_download(job_id, url, format_choice, format_id):
     job = jobs[job_id]
     out_template = os.path.join(DOWNLOAD_DIR, f"{job_id}.%(ext)s")
 
-    cmd = ["yt-dlp", "--no-playlist", "-o", out_template]
+    # Common user agent to avoid bot detection
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+    cmd = [
+        "yt-dlp",
+        "--no-playlist",
+        "-o",
+        out_template,
+        "--user-agent",
+        user_agent,
+        "--no-check-certificates",
+        "--no-warnings",
+        "--extractor-args",
+        "youtube:player_client=android",
+    ]
 
     if format_choice == "audio":
-        cmd += ["-x", "--audio-format", "mp3"]
+        cmd += ["-x", "--audio-format", "mp3", "--audio-quality", "0"]
     elif format_id:
         cmd += ["-f", f"{format_id}+bestaudio/best", "--merge-output-format", "mp4"]
     else:
