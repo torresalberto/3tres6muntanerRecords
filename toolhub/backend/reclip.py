@@ -25,71 +25,106 @@ def run_download(job_id, url, format_choice, format_id):
     job = jobs[job_id]
     out_template = os.path.join(DOWNLOAD_DIR, f"{job_id}.%(ext)s")
 
-    # Common user agent to avoid bot detection
-    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-
-    cmd = [
-        "yt-dlp",
-        "--no-playlist",
-        "-o",
-        out_template,
-        "--user-agent",
-        user_agent,
-        "--no-check-certificates",
-        "--no-warnings",
-        "--extractor-args",
-        "youtube:player_client=android",
+    # Try multiple clients to bypass YouTube bot detection
+    clients = [
+        "android",  # Android app has less restrictions
+        "tv",  # TV app client
+        "web_creator",  # Web creator client
     ]
 
-    if format_choice == "audio":
-        cmd += ["-x", "--audio-format", "mp3", "--audio-quality", "0"]
-    elif format_id:
-        cmd += ["-f", f"{format_id}+bestaudio/best", "--merge-output-format", "mp4"]
-    else:
-        cmd += ["-f", "bestvideo+bestaudio/best", "--merge-output-format", "mp4"]
+    user_agent = "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
 
-    cmd.append(url)
-
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-        if result.returncode != 0:
-            job["status"] = "error"
-            job["error"] = result.stderr.strip().split("\n")[-1]
-            return
-
-        files = glob.glob(os.path.join(DOWNLOAD_DIR, f"{job_id}.*"))
-        if not files:
-            job["status"] = "error"
-            job["error"] = "Download completed but no file was found"
-            return
+    # Try each client until one works
+    for client in clients:
+        cmd = [
+            "yt-dlp",
+            "--no-playlist",
+            "-o",
+            out_template,
+            "--user-agent",
+            user_agent,
+            "--no-check-certificates",
+            "--extractor-args",
+            f"youtube:player_client={client}",
+            "--sleep-interval",
+            "2",  # Be polite, avoid triggering rate limits
+            "--max-sleep-interval",
+            "5",
+        ]
 
         if format_choice == "audio":
-            target = [f for f in files if f.endswith(".mp3")]
-            chosen = target[0] if target else files[0]
+            cmd += ["-x", "--audio-format", "mp3", "--audio-quality", "0"]
+        elif format_id:
+            cmd += ["-f", f"{format_id}+bestaudio/best", "--merge-output-format", "mp4"]
         else:
-            target = [f for f in files if f.endswith(".mp4")]
-            chosen = target[0] if target else files[0]
+            cmd += ["-f", "bestvideo+bestaudio/best", "--merge-output-format", "mp4"]
 
-        for f in files:
-            if f != chosen:
-                try:
-                    os.remove(f)
-                except OSError:
-                    pass
+        cmd.append(url)
 
-        job["status"] = "done"
-        job["file"] = chosen
-        ext = os.path.splitext(chosen)[1]
-        title = job.get("title", "").strip()
-        if title:
-            safe_title = (
-                "".join(c for c in title if c not in r'\/:*?"<>|').strip()[:20].strip()
-            )
-            job["filename"] = (
-                f"{safe_title}{ext}" if safe_title else os.path.basename(chosen)
-            )
-        else:
-            job["filename"] = os.path.basename(chosen)
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+            if result.returncode == 0:
+                break  # Success! Exit the loop
+            elif "Sign in to confirm" in result.stderr:
+                continue  # Try next client
+            else:
+                job["status"] = "error"
+                job["error"] = result.stderr.strip().split("\n")[-1]
+                return
+        except Exception as e:
+            continue  # Try next client
+
+    # Check if we have the file
+    files = glob.glob(os.path.join(DOWNLOAD_DIR, f"{job_id}.*"))
+    if not files:
+        job["status"] = "error"
+        job["error"] = "Could not download - video may require authentication"
+        return
+
+    # Select the best file
+    if format_choice == "audio":
+        target = [f for f in files if f.endswith(".mp3")]
+        chosen = target[0] if target else files[0]
+    else:
+        target = [f for f in files if f.endswith(".mp4")]
+        chosen = target[0] if target else files[0]
+
+    # Clean up other files
+    for f in files:
+        if f != chosen:
+            try:
+                os.remove(f)
+            except OSError:
+                pass
+
+    job["status"] = "done"
+    job["file"] = chosen
+    ext = os.path.splitext(chosen)[1]
+    title = job.get("title", "").strip()
+    if title:
+        safe_title = (
+            "".join(c for c in title if c not in r'\/:*?"<>|').strip()[:20].strip()
+        )
+        job["filename"] = (
+            f"{safe_title}{ext}" if safe_title else os.path.basename(chosen)
+        )
+    else:
+        job["filename"] = os.path.basename(chosen)
+        
+    # Cleanup old files older than 1 hour
+    cleanup_old_files()
+
+
+def cleanup_old_files():
+    """Remove files older than 1 hour to save disk space"""
+    import time
+    now = time.time()
+    for f in glob.glob(os.path.join(DOWNLOAD_DIR, "*")):
+        try:
+            if os.path.isfile(f) and (now - os.path.getmtime(f)) > 3600:
+                os.remove(f)
+        except OSError:
+            pass
     except subprocess.TimeoutExpired:
         job["status"] = "error"
         job["error"] = "Download timed out (5 min limit)"
