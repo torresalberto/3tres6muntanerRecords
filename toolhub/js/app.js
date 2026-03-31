@@ -122,8 +122,6 @@ const App = {
 
     if (this.isYouTubeUrl(url)) {
       this.setPlatform('youtube');
-    } else if (this.isSpotifyUrl(url)) {
-      this.setPlatform('spotify');
     } else if (this.isSoundcloudUrl(url)) {
       this.setPlatform('soundcloud');
     }
@@ -139,12 +137,6 @@ const App = {
 
   isYouTubeUrl(url) {
     return /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|playlist\?list=)|youtu\.be\/)[a-zA-Z0-9_-]+/.test(
-      url
-    );
-  },
-
-  isSpotifyUrl(url) {
-    return /^(https?:\/\/)?(open\.)?spotify\.com\/(track|playlist|album|episode)\/[a-zA-Z0-9]+/.test(
       url
     );
   },
@@ -174,7 +166,7 @@ const App = {
     }
 
     if (!this.validateUrl(url)) {
-      this.showError('URL no válida. Usa enlaces de YouTube, Spotify o SoundCloud');
+      this.showError('URL no válida. Usa enlaces de YouTube o SoundCloud');
       return;
     }
 
@@ -303,7 +295,7 @@ const App = {
   },
 
   validateUrl(url) {
-    return this.isYouTubeUrl(url) || this.isSpotifyUrl(url) || this.isSoundcloudUrl(url);
+    return this.isYouTubeUrl(url) || this.isSoundcloudUrl(url);
   },
 
   showLoading() {

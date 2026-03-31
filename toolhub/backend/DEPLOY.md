@@ -35,7 +35,6 @@ Copy your Render URL (e.g., `https://336-reclip.onrender.com`) and update it in:
 ## Supported Platforms
 - YouTube (video + audio)
 - SoundCloud (audio)
-- Spotify (audio)
 - 1000+ other sites via yt-dlp
 
 ---
