@@ -5,8 +5,10 @@ import json
 import subprocess
 import threading
 from flask import Flask, request, jsonify, send_file, render_template
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # For production (Render), use /tmp for ephemeral storage
 if os.environ.get("RENDER"):
