@@ -142,6 +142,10 @@ const App = {
   },
 
   isSoundcloudUrl(url) {
+    // Accept either full SoundCloud URLs OR track IDs (numbers like 293)
+    if (/^\d+$/.test(url)) {
+      return true;
+    }
     return /^(https?:\/\/)?(www\.)?soundcloud\.com\/[a-zA-Z0-9_-]+(\/[a-zA-Z0-9_-]+)?/.test(url);
   },
 
@@ -158,7 +162,7 @@ const App = {
   },
 
   async startDownload() {
-    const url = document.getElementById('urlInput').value.trim();
+    let url = document.getElementById('urlInput').value.trim();
 
     if (!url) {
       this.showError('Por favor ingresa una URL válida');
@@ -170,8 +174,92 @@ const App = {
       return;
     }
 
+    // For SoundCloud track IDs (plain numbers), convert to API URL
+    if (this.state.platform === 'soundcloud' && /^\d+$/.test(url)) {
+      url = `https://api.soundcloud.com/tracks/${url}`;
+    }
+    // For SoundCloud URLs, try to resolve to track ID via proxy
+    else if (this.state.platform === 'soundcloud' && url.includes('soundcloud.com')) {
+      const trackId = await this.resolveSoundcloudUrl(url);
+      if (trackId) {
+        url = `https://api.soundcloud.com/tracks/${trackId}`;
+      } else {
+        this.showError('SoundCloud requiere el ID de pista (número). Ejemplo: 293. Encuentra el ID en la URL de compartir.');
+        return;
+      }
+    }
+
     // Call backend API instead of external redirector
     await this.downloadFromAPI(url);
+  },
+
+  async resolveSoundcloudUrl(url) {
+    try {
+      // Use a CORS proxy to fetch the SoundCloud page
+      // The browser can access SoundCloud directly via a proxy
+      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+      
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+      });
+
+      if (!response.ok) {
+        console.error('Failed to fetch SoundCloud page via proxy:', response.status);
+        // Fallback: try direct fetch
+        return await this.resolveSoundcloudUrlDirect(url);
+      }
+
+      const html = await response.text();
+
+      // Look for track ID in various formats in the HTML
+      // Pattern 1: "track_id":123456789
+      const match1 = html.match(/"track_id"\s*:\s*(\d+)/);
+      if (match1) {
+        return match1[1];
+      }
+
+      // Pattern 2: api.soundcloud.com/tracks/123456789
+      const match2 = html.match(/api\.soundcloud\.com\/tracks\/(\d+)/);
+      if (match2) {
+        return match2[1];
+      }
+
+      // Pattern 3: data-trackid="123456789"
+      const match3 = html.match(/data-trackid\s*=\s*["'](\d+)["']/);
+      if (match3) {
+        return match3[1];
+      }
+
+      // Pattern 4: tracks in widget config
+      const match4 = html.match(/tracks\/(\d+)/);
+      if (match4) {
+        return match4[1];
+      }
+
+      console.error('Could not find track ID in SoundCloud page');
+      return null;
+    } catch (error) {
+      console.error('Error resolving SoundCloud URL:', error);
+      // Try direct fetch as fallback
+      return await this.resolveSoundcloudUrlDirect(url);
+    }
+  },
+
+  async resolveSoundcloudUrlDirect(url) {
+    try {
+      // Direct fetch without proxy - might work depending on browser
+      const response = await fetch(url, {
+        method: 'GET',
+        mode: 'no-cors',  // This will return an opaque response but might work
+      });
+      return null; // no-cors won't give us the content
+    } catch (error) {
+      console.error('Direct fetch also failed:', error);
+      return null;
+    }
   },
 
   async downloadFromAPI(url) {
