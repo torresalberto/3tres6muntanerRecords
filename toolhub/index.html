@@ -524,6 +524,9 @@
     </div>
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/gsap-animations.js"></script>
     <script src="js/hardware-db.js"></script>
     <script src="js/hardware-guide.js"></script>
     <script src="js/music-db.js"></script>
@@ -574,14 +577,14 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
-              animateSection(downloadTool);
+              (window.gsapAnimateSection || animateSection)(downloadTool);
             } else if (tool === 'hardware') {
               updateHeroVisibility('hardware');
               downloadTool.style.display = 'none';
               hardwareSection.style.display = 'block';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
-              animateSection(hardwareSection);
+              (window.gsapAnimateSection || animateSection)(hardwareSection);
               // Initialize hardware guide if not already
               if (!HardwareGuide.state.devices.length) {
                 HardwareGuide.init();
@@ -592,7 +595,7 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'block';
               wheelSection.style.display = 'none';
-              animateSection(musicSection);
+              (window.gsapAnimateSection || animateSection)(musicSection);
               // Initialize music directory if not already
               if (!MusicDirectory.state.sources.length) {
                 MusicDirectory.init();
@@ -603,7 +606,7 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'block';
-              animateSection(wheelSection);
+              (window.gsapAnimateSection || animateSection)(wheelSection);
               // Initialize camelot wheel if not already
               if (!document.getElementById('wheelSvg')) {
                 CamelotWheel.init();

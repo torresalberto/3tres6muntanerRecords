@@ -35,8 +35,10 @@ def run_download(job_id, url, format_choice, format_id):
     cmd = [
         "yt-dlp",
         "--no-playlist",
-        "-o", out_template,
-        "--user-agent", user_agent,
+        "-o",
+        out_template,
+        "--user-agent",
+        user_agent,
         "--no-check-certificates",
     ]
 
@@ -103,7 +105,7 @@ def run_download(job_id, url, format_choice, format_id):
         )
     else:
         job["filename"] = os.path.basename(chosen)
-        
+
     # Cleanup old files older than 1 hour
     cleanup_old_files()
 
@@ -111,6 +113,7 @@ def run_download(job_id, url, format_choice, format_id):
 def cleanup_old_files():
     """Remove files older than 1 hour to save disk space"""
     import time
+
     now = time.time()
     for f in glob.glob(os.path.join(DOWNLOAD_DIR, "*")):
         try:
@@ -118,12 +121,6 @@ def cleanup_old_files():
                 os.remove(f)
         except OSError:
             pass
-    except subprocess.TimeoutExpired:
-        job["status"] = "error"
-        job["error"] = "Download timed out (5 min limit)"
-    except Exception as e:
-        job["status"] = "error"
-        job["error"] = str(e)
 
 
 @app.route("/")
