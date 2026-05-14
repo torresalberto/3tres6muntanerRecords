@@ -2058,11 +2058,15 @@
       "artist": "Octave One",
       "played_by": [
         "seth-troxler",
-        "carl-craig"
+        "carl-craig",
+        "carl-cox",
+        "laurent-garnier"
       ],
       "sets": [
         "seth-troxler-br-mexico-2014",
-        "carl-craig-br-rbma-2013"
+        "carl-craig-br-rbma-2013",
+        "carl-cox-via-blackwater",
+        "laurent-garnier-via-blackwater"
       ],
       "status": "confirmed",
       "timestamp_appearances": [

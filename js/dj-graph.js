@@ -57,63 +57,21 @@ const DJGraph = {
               }
               edges.push({ source: nodeMap[djId], target: tid, type: 'track' });
             }
-
-            // Same-ARTIST connections across DJs
-            const artist = track.artist || '';
-            if (artist && !artist.includes('Unknown')) {
-              if (!artistDJs[artist]) artistDJs[artist] = new Set();
-              artistDJs[artist].add(djId);
-            }
           });
         });
 
-        // Create ARTIST nodes shared by 2+ DJs
-        Object.entries(artistDJs).forEach(([artist, djsSet]) => {
-          const djsArr = Array.from(djsSet);
-          if (djsArr.length >= 2) {
-            const aid = 'artist_' + artist.replace(/[^a-zA-Z0-9]/g, '_').slice(0,40);
-            if (!nodes.find(n => n.id === aid)) {
-              nodes.push({ id: aid, label: artist, type: 'artist' });
+        // Cross-DJ connections via SHARED EXACT TRACKS only
+        const trackDJs = {};
+        tr.tracks.forEach(track => {
+          const djArr = track.played_by.filter(djId => nodeMap[djId]);
+          if (djArr.length >= 2) {
+            // Create a shared-track connection node
+            const sharedId = 'shared_' + track.id;
+            if (!nodes.find(n => n.id === sharedId)) {
+              nodes.push({ id: sharedId, label: (track.title || '').slice(0,30), type: 'shared-track' });
             }
-            djsArr.forEach(djId => {
-              if (nodeMap[djId]) {
-                edges.push({ source: nodeMap[djId], target: aid, type: 'artist' });
-              }
-            });
-          }
-        });
-
-        // Festival connections — same festival = connection
-        const festivalMap = {};
-        djs.forEach(dj => {
-          (dj.sets || []).forEach(setId => {
-            const festMatch = setId.match(/dekmantel/i);
-            if (festMatch) {
-              if (!festivalMap['Dekmantel']) festivalMap['Dekmantel'] = new Set();
-              festivalMap['Dekmantel'].add(dj.id);
-            }
-            if (setId.includes('boiler-room') || setId.includes('br-')) {
-              if (!festivalMap['Boiler Room']) festivalMap['Boiler Room'] = new Set();
-              festivalMap['Boiler Room'].add(dj.id);
-            }
-            if (setId.includes('ballantine') || setId.includes('ballantines')) {
-              if (!festivalMap["Ballantine's True Music"]) festivalMap["Ballantine's True Music"] = new Set();
-              festivalMap["Ballantine's True Music"].add(dj.id);
-            }
-          });
-        });
-
-        Object.entries(festivalMap).forEach(([fest, djsSet]) => {
-          const djsArr = Array.from(djsSet);
-          if (djsArr.length >= 2) {
-            const fid = 'fest_' + fest.replace(/[^a-zA-Z0-9]/g, '_');
-            if (!nodes.find(n => n.id === fid)) {
-              nodes.push({ id: fid, label: fest, type: 'festival' });
-            }
-            djsArr.forEach(djId => {
-              if (nodeMap[djId]) {
-                edges.push({ source: nodeMap[djId], target: fid, type: 'festival' });
-              }
+            djArr.forEach(djId => {
+              edges.push({ source: nodeMap[djId], target: sharedId, type: 'shared-track' });
             });
           }
         });
@@ -157,9 +115,9 @@ const DJGraph = {
     const zoom = d3.zoom().scaleExtent([0.3,3]).on('zoom', ev => g.setAttribute('transform', ev.transform));
     d3.select(svg).call(zoom);
 
-    const colorMap = { dj: '#ff4d00', set: '#7c4dff', track: '#00bcd4', artist: '#ff9100', festival: '#00c864' };
-    const sizeMap = { dj: 20, set: 8, track: 5, artist: 12, festival: 14 };
-    const edgeStyles = { 'dj-set': '#7c4dff', track: '#00bcd4', artist: '#ff9100', festival: '#00c864' };
+    const colorMap = { dj: '#ff4d00', set: '#7c4dff', track: '#00bcd4', 'shared-track': '#00c864' };
+    const sizeMap = { dj: 20, set: 8, track: 5, 'shared-track': 12 };
+    const edgeStyles = { 'dj-set': '#7c4dff', track: '#00bcd4', 'shared-track': '#00c864' };
 
     const simulation = d3.forceSimulation(data.nodes)
       .force('link', d3.forceLink(data.edges).id(d => d.id).distance(d => d.type === 'artist' ? 150 : 100))
@@ -210,8 +168,7 @@ const DJGraph = {
       { label: 'DJ', color: '#ff4d00', size: 10 },
       { label: 'Set', color: '#7c4dff', size: 7 },
       { label: 'Track', color: '#00bcd4', size: 5 },
-      { label: 'Shared Artist', color: '#ff9100', size: 7, dash: '4,3' },
-      { label: 'Festival', color: '#00c864', size: 8, dash: '2,4' }
+      { label: 'Shared Track', color: '#00c864', size: 8 }
     ];
     const lg = d3.select(svg).append('g').attr('transform', 'translate('+(width-160)+',15)');
     legendItems.forEach((l,i) => {

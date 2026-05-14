@@ -1,6 +1,15 @@
 {
   "shared_artists": [
     {
+      "artist": "Octave One",
+      "djs": [
+        "carl-cox",
+        "carl-craig",
+        "laurent-garnier",
+        "seth-troxler"
+      ]
+    },
+    {
       "artist": "X-Press 2",
       "djs": [
         "ian-pooley",
@@ -53,13 +62,6 @@
       "artist": "Kings Of Tomorrow",
       "djs": [
         "call-super",
-        "seth-troxler"
-      ]
-    },
-    {
-      "artist": "Octave One",
-      "djs": [
-        "carl-craig",
         "seth-troxler"
       ]
     },
@@ -160,7 +162,9 @@
       "track": "Octave One - Blackwater",
       "djs": [
         "seth-troxler",
-        "carl-craig"
+        "carl-craig",
+        "carl-cox",
+        "laurent-garnier"
       ]
     },
     {
