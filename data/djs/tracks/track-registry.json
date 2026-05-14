@@ -5791,10 +5791,190 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "black-jazz-consortium-ft-christina-wheeler-resonate",
+      "title": "Resonate",
+      "artist": "Black Jazz Consortium ft. Christina Wheeler",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "sinnamon-i-need-you-now-id-remix",
+      "title": "I Need You Now (ID Remix)",
+      "artist": "Sinnamon",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "thelma-houston-im-here-again-mr-k--danny-krivit-edit",
+      "title": "I'm Here Again (Mr. K & Danny Krivit Edit)",
+      "artist": "Thelma Houston",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ron-trent-ft-harry-dennis-black-magic-woman",
+      "title": "Black Magic Woman",
+      "artist": "Ron Trent ft. Harry Dennis",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "somi-african-lady-the-soul-feast-african-suite-version",
+      "title": "African Lady (The Soul Feast African Suite Version)",
+      "artist": "Somi",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "alan-dixon-bless-me-today",
+      "title": "Bless Me Today",
+      "artist": "Alan Dixon",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "floorplan-made-up-in-my-mind",
+      "title": "Made Up In My Mind",
+      "artist": "Floorplan",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "chi-lites-my-first-mistake-mr-k-12-remix",
+      "title": "My First Mistake (Mr. K 12 Remix)",
+      "artist": "Chi-lites",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "the-vision-ft-andreya-triana-heaven",
+      "title": "Heaven",
+      "artist": "The Vision ft. Andreya Triana",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dawn-penn-you-dont-love-me-no-no-no",
+      "title": "You Don't Love Me (No, No, No)",
+      "artist": "Dawn Penn",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-montreal-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-montreal-2024",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 320,
+    "total_tracks": 330,
     "cross_referenced": 13,
     "dj_count": 32
   }
