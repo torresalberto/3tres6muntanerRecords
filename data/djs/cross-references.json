@@ -36,6 +36,13 @@
       ]
     },
     {
+      "artist": "Marshall Jefferson",
+      "djs": [
+        "masters-at-work",
+        "moodymann"
+      ]
+    },
+    {
       "artist": "Harry Romero",
       "djs": [
         "honey-dijon",
@@ -64,9 +71,5 @@
       ]
     }
   ],
-  "shared_tracks": [],
-  "stats": {
-    "total_artist_connections": 9,
-    "total_track_connections": 0
-  }
+  "shared_tracks": []
 }

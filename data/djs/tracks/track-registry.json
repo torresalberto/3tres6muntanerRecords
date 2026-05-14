@@ -3887,11 +3887,641 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "sbtrkt-volca",
+      "title": "VOLCA",
+      "artist": "SBTRKT",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ede--nowa-i-am-wavy",
+      "title": "I Am Wavy",
+      "artist": "Ede & Nowa",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "alex-medina-la-gustosa",
+      "title": "La Gustosa",
+      "artist": "Alex Medina",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jimi-jules-dont-break-my-heart",
+      "title": "Don't Break My Heart",
+      "artist": "Jimi Jules",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "huntergame--noah-kaluga-stars-mano-le-tough-remix",
+      "title": "Stars (Mano Le Tough Remix)",
+      "artist": "Hunter/Game & Noah Kaluga",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "deer-jade-firmament",
+      "title": "Firmament",
+      "artist": "Deer Jade",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ame-asa",
+      "title": "Asa",
+      "artist": "Ame",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ame--curses-shadow-of-love",
+      "title": "Shadow Of Love",
+      "artist": "Ame & Curses",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "yet-more-tryna-jack-my-style",
+      "title": "Tryna Jack My Style",
+      "artist": "Yet More",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mulya-aus-music",
+      "title": "Aus Music",
+      "artist": "MULYA",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dixon-cercle-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mim-suleiman-fumbo",
+      "title": "Fumbo",
+      "artist": "Mim Suleiman",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "orla-chant-pearson-sound-edit",
+      "title": "Chant (Pearson Sound Edit)",
+      "artist": "Or:la",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "olof-dreijer--diva-cruz-acuyuye",
+      "title": "Acuyuye",
+      "artist": "Olof Dreijer & Diva Cruz",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "breaka-squashy-track",
+      "title": "Squashy Track",
+      "artist": "Breaka",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "oflynn-srekye",
+      "title": "Srekye",
+      "artist": "O'Flynn",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "binary-digit-ale-by-the-sea",
+      "title": "Ale By The Sea",
+      "artist": "Binary Digit",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kink-kazan",
+      "title": "Kazan",
+      "artist": "KiNK",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "skream--kodo-shinogi",
+      "title": "Shinogi",
+      "artist": "Skream & KODO",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "pangaea-router",
+      "title": "Router",
+      "artist": "Pangaea",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "pearson-sound-untitled",
+      "title": "Untitled",
+      "artist": "Pearson Sound",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "digital-mystikz-walkin-with-jah",
+      "title": "Walkin' With Jah",
+      "artist": "Digital Mystikz",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "addison-groove-fuk-tha-101",
+      "title": "Fuk Tha 101",
+      "artist": "Addison Groove",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ben-ufo-br-sugar-mountain-2025",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "cloud-one-atmosphere-strut",
+      "title": "Atmosphere Strut",
+      "artist": "Cloud One",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "lonnie-smith-funk-reaction",
+      "title": "Funk Reaction",
+      "artist": "Lonnie Smith",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "slum-village-disco",
+      "title": "Disco",
+      "artist": "Slum Village",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dwele-feels-so-good",
+      "title": "Feels So Good",
+      "artist": "Dwele",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "roy-ayers-love-will-bring-us-back-together",
+      "title": "Love Will Bring Us Back Together",
+      "artist": "Roy Ayers",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "william-devaughn-be-thankful-for-what-you-got",
+      "title": "Be Thankful For What You Got",
+      "artist": "William DeVaughn",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "indeep-last-night-a-dj-saved-my-life",
+      "title": "Last Night A DJ Saved My Life",
+      "artist": "Indeep",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "marshall-jefferson-the-house-music-anthem---dub-your-body",
+      "title": "The House Music Anthem - Dub Your Body",
+      "artist": "Marshall Jefferson",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "alexander-robotnick-problemes-damour",
+      "title": "Problemes D'Amour",
+      "artist": "Alexander Robotnick",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "the-whispers-the-planets-of-life",
+      "title": "The Planets Of Life",
+      "artist": "The Whispers",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "prince-uptown",
+      "title": "Uptown",
+      "artist": "Prince",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "moodymann-jan",
+      "title": "J.A.N.",
+      "artist": "Moodymann",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "phuture-acid-trax",
+      "title": "Acid Trax",
+      "artist": "Phuture",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "moodymann-rbma-2010",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 216,
+    "total_tracks": 251,
     "cross_referenced": 0,
-    "dj_count": 15
+    "dj_count": 18
   }
 }

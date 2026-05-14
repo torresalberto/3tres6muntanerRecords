@@ -5,209 +5,463 @@
       "name": "Chaos In The CBD",
       "origin": "New Zealand",
       "active_since": 2012,
-      "genres": ["Deep House", "Afro House", "Acid House", "Disco", "Boogie"],
-      "bio": "Hermano d\u00fao neozeland\u00e9s (Louie y Ben) conocido por sus sets profundos que mezclan house, acid, afro y disco. Residentes de Rhythm Section y fundadores del sello In Dust We Trust.",
+      "genres": [
+        "Deep House",
+        "Afro House",
+        "Acid House",
+        "Disco",
+        "Boogie"
+      ],
+      "bio": "Hermano dúo neozelandés (Louie y Ben) conocido por sus sets profundos que mezclan house, acid, afro y disco. Residentes de Rhythm Section y fundadores del sello In Dust We Trust.",
       "image": "https://i.ytimg.com/vi/mzUPU4QpWG4/maxresdefault.jpg",
-      "social": {"soundcloud": "https://soundcloud.com/chaosinthecbd", "instagram": "https://instagram.com/chaosinthecbd", "discogs": "https://www.discogs.com/artist/3270072-Chaos-In-The-CBD"},
-      "sets": ["chaos-in-the-cbd-ballantines-lebanon"]
+      "social": {
+        "soundcloud": "https://soundcloud.com/chaosinthecbd",
+        "instagram": "https://instagram.com/chaosinthecbd",
+        "discogs": "https://www.discogs.com/artist/3270072-Chaos-In-The-CBD"
+      },
+      "sets": [
+        "chaos-in-the-cbd-ballantines-lebanon"
+      ]
     },
     {
       "id": "palms-trax",
       "name": "Palms Trax",
       "origin": "UK / Berlin",
       "active_since": 2015,
-      "genres": ["House", "Deep House", "Disco", "Balearic", "Breakbeat"],
-      "bio": "Productor y DJ londinense afincado en Berl\u00edn. Conocido por sus ecl\u00e9cticos sets que mezclan house, disco, balearic y breakbeat. Residentes del sello Dekmantel y habitual del festival.",
+      "genres": [
+        "House",
+        "Deep House",
+        "Disco",
+        "Balearic",
+        "Breakbeat"
+      ],
+      "bio": "Productor y DJ londinense afincado en Berlín. Conocido por sus eclécticos sets que mezclan house, disco, balearic y breakbeat. Residentes del sello Dekmantel y habitual del festival.",
       "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/palmstrax", "soundcloud": "https://soundcloud.com/palmstrax"},
-      "sets": ["palms-trax-dekmantel-2018", "palms-trax-dekmantel-2024"]
+      "social": {
+        "instagram": "https://instagram.com/palmstrax",
+        "soundcloud": "https://soundcloud.com/palmstrax"
+      },
+      "sets": [
+        "palms-trax-dekmantel-2018",
+        "palms-trax-dekmantel-2024"
+      ]
     },
     {
       "id": "laurent-garnier",
       "name": "Laurent Garnier",
       "origin": "Francia",
       "active_since": 1987,
-      "genres": ["House", "Techno", "Deep House", "French Touch", "Jazz"],
-      "bio": "Leyenda de la m\u00fasica electr\u00f3nica francesa. Fundador de F-Communications. Con m\u00e1s de 30 a\u00f1os de carrera, es uno de los DJs m\u00e1s respetados del mundo, conocido por sus marat\u00f3nicos sets de hasta 6 horas.",
+      "genres": [
+        "House",
+        "Techno",
+        "Deep House",
+        "French Touch",
+        "Jazz"
+      ],
+      "bio": "Leyenda de la música electrónica francesa. Fundador de F-Communications. Con más de 30 años de carrera, es uno de los DJs más respetados del mundo, conocido por sus maratónicos sets de hasta 6 horas.",
       "image": "https://i.ytimg.com/vi/WG35-7LpIAc/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/laurentgarnierofficial", "soundcloud": "https://soundcloud.com/laurent-garnier"},
-      "sets": ["laurent-garnier-br-lyon"]
+      "social": {
+        "instagram": "https://instagram.com/laurentgarnierofficial",
+        "soundcloud": "https://soundcloud.com/laurent-garnier"
+      },
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
     },
     {
       "id": "frankie-knuckles",
       "name": "Frankie Knuckles",
       "origin": "Chicago / New York",
       "active_since": 1977,
-      "genres": ["House", "Classic House", "Soulful House", "Disco", "Garage"],
-      "bio": "El Padrino de la House Music. Su residencia en The Warehouse en Chicago dio nombre al g\u00e9nero. Ganador del Grammy, pionero y leyenda absoluta. Falleci\u00f3 en 2014 dejando un legado imborrable.",
+      "genres": [
+        "House",
+        "Classic House",
+        "Soulful House",
+        "Disco",
+        "Garage"
+      ],
+      "bio": "El Padrino de la House Music. Su residencia en The Warehouse en Chicago dio nombre al género. Ganador del Grammy, pionero y leyenda absoluta. Falleció en 2014 dejando un legado imborrable.",
       "image": "https://i.ytimg.com/vi/644UU55eyzk/maxresdefault.jpg",
-      "social": {"discogs": "https://www.discogs.com/artist/2456-Frankie-Knuckles"},
-      "sets": ["frankie-knuckles-br-nyc", "frankie-knuckles-session-2015"]
+      "social": {
+        "discogs": "https://www.discogs.com/artist/2456-Frankie-Knuckles"
+      },
+      "sets": [
+        "frankie-knuckles-br-nyc",
+        "frankie-knuckles-session-2015"
+      ]
     },
     {
       "id": "floating-points",
       "name": "Floating Points",
       "origin": "UK",
       "active_since": 2009,
-      "genres": ["House", "Techno", "Electronic", "Jazz", "Ambient"],
-      "bio": "Sam Shepherd, conocido como Floating Points, es un productor, DJ y m\u00fasico brit\u00e1nico. Su estilo ecl\u00e9ctico fusiona house, techno, jazz, funk y m\u00fasica cl\u00e1sica. Su set de 5 horas en Boiler Room NYC es legendario.",
+      "genres": [
+        "House",
+        "Techno",
+        "Electronic",
+        "Jazz",
+        "Ambient"
+      ],
+      "bio": "Sam Shepherd, conocido como Floating Points, es un productor, DJ y músico británico. Su estilo ecléctico fusiona house, techno, jazz, funk y música clásica. Su set de 5 horas en Boiler Room NYC es legendario.",
       "image": "https://i.ytimg.com/vi/kiy05zewUpg/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/floatpoints", "soundcloud": "https://soundcloud.com/floatingpoints"},
-      "sets": ["floating-points-br-nyc-5hr"]
+      "social": {
+        "instagram": "https://instagram.com/floatpoints",
+        "soundcloud": "https://soundcloud.com/floatingpoints"
+      },
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
     },
     {
       "id": "richie-hawtin",
       "name": "Richie Hawtin",
-      "origin": "UK / Canada / Berl\u00edn",
+      "origin": "UK / Canada / Berlín",
       "active_since": 1990,
-      "genres": ["Minimal Techno", "Techno", "Acid", "Experimental"],
-      "bio": "Pionero del minimal techno. Fundador de Plus 8, Minus y Plastikman. Reconocido por su enfoque vanguardista y sus innovadores sets con tecnolog\u00eda MODEL 1.",
+      "genres": [
+        "Minimal Techno",
+        "Techno",
+        "Acid",
+        "Experimental"
+      ],
+      "bio": "Pionero del minimal techno. Fundador de Plus 8, Minus y Plastikman. Reconocido por su enfoque vanguardista y sus innovadores sets con tecnología MODEL 1.",
       "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/richiehawtin", "soundcloud": "https://soundcloud.com/richiehawtin"},
-      "sets": ["richie-hawtin-br-paris"]
+      "social": {
+        "instagram": "https://instagram.com/richiehawtin",
+        "soundcloud": "https://soundcloud.com/richiehawtin"
+      },
+      "sets": [
+        "richie-hawtin-br-paris"
+      ]
     },
     {
       "id": "avalon-emerson",
       "name": "Avalon Emerson",
-      "origin": "USA / Berl\u00edn",
+      "origin": "USA / Berlín",
       "active_since": 2014,
-      "genres": ["House", "Techno", "Electro", "Breaks", "Trance"],
-      "bio": "DJ y productora estadounidense afincada en Berl\u00edn. Conocida por sus sets en\u00e9rgicos que cruzan g\u00e9neros con fluidez. Habitual de Dekmantel y clubes de todo el mundo.",
+      "genres": [
+        "House",
+        "Techno",
+        "Electro",
+        "Breaks",
+        "Trance"
+      ],
+      "bio": "DJ y productora estadounidense afincada en Berlín. Conocida por sus sets enérgicos que cruzan géneros con fluidez. Habitual de Dekmantel y clubes de todo el mundo.",
       "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/avalonemerson", "soundcloud": "https://soundcloud.com/avalonemerson"},
-      "sets": ["avalon-emerson-dekmantel-2025"]
+      "social": {
+        "instagram": "https://instagram.com/avalonemerson",
+        "soundcloud": "https://soundcloud.com/avalonemerson"
+      },
+      "sets": [
+        "avalon-emerson-dekmantel-2025"
+      ]
     },
     {
       "id": "dj-pierre",
       "name": "DJ Pierre",
       "origin": "Chicago, USA",
       "active_since": 1985,
-      "genres": ["Acid House", "Chicago House", "Techno", "Acid Techno"],
-      "bio": "Pionero del acid house. Miembro fundador de Phuture, los creadores del sonido 303. Leyenda viva de la m\u00fasica electr\u00f3nica de Chicago.",
+      "genres": [
+        "Acid House",
+        "Chicago House",
+        "Techno",
+        "Acid Techno"
+      ],
+      "bio": "Pionero del acid house. Miembro fundador de Phuture, los creadores del sonido 303. Leyenda viva de la música electrónica de Chicago.",
       "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/djpierre", "soundcloud": "https://soundcloud.com/djpierre"},
-      "sets": ["dj-pierre-br-chicago"]
+      "social": {
+        "instagram": "https://instagram.com/djpierre",
+        "soundcloud": "https://soundcloud.com/djpierre"
+      },
+      "sets": [
+        "dj-pierre-br-chicago"
+      ]
     },
     {
       "id": "kettama",
       "name": "KETTAMA",
       "origin": "Irlanda / Galway",
       "active_since": 2018,
-      "genres": ["House", "Bass", "Garage", "UKG", "Trance"],
-      "bio": "El DJ irland\u00e9s que est\u00e1 arrasando la escena. Conocido por sus sets en\u00e9rgicos que mezclan house, bass, garage y trance. Su set en Boiler Room London suma m\u00e1s de 1.3M de visitas.",
+      "genres": [
+        "House",
+        "Bass",
+        "Garage",
+        "UKG",
+        "Trance"
+      ],
+      "bio": "El DJ irlandés que está arrasando la escena. Conocido por sus sets enérgicos que mezclan house, bass, garage y trance. Su set en Boiler Room London suma más de 1.3M de visitas.",
       "image": "https://i.ytimg.com/vi/JUDUC87VuPU/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/kettamauk", "soundcloud": "https://soundcloud.com/kettama"},
-      "sets": ["kettama-br-london"]
+      "social": {
+        "instagram": "https://instagram.com/kettamauk",
+        "soundcloud": "https://soundcloud.com/kettama"
+      },
+      "sets": [
+        "kettama-br-london"
+      ]
     },
     {
       "id": "young-marco",
       "name": "Young Marco",
-      "origin": "Pa\u00edses Bajos / Amsterdam",
+      "origin": "Países Bajos / Amsterdam",
       "active_since": 2010,
-      "genres": ["House", "Balearic", "Disco", "Ambient", "New Age"],
-      "bio": "DJ y productor holand\u00e9s conocido por su ecl\u00e9ctico estilo que va del house y el balearic al ambient y el new age. Habitual de Dekmantel y sello propio Safe Trip.",
+      "genres": [
+        "House",
+        "Balearic",
+        "Disco",
+        "Ambient",
+        "New Age"
+      ],
+      "bio": "DJ y productor holandés conocido por su ecléctico estilo que va del house y el balearic al ambient y el new age. Habitual de Dekmantel y sello propio Safe Trip.",
       "image": "https://i.ytimg.com/vi/4z2bO7WizIg/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/young_marco", "soundcloud": "https://soundcloud.com/youngmarco"},
-      "sets": ["young-marco-dekmantel-ten"]
+      "social": {
+        "instagram": "https://instagram.com/young_marco",
+        "soundcloud": "https://soundcloud.com/youngmarco"
+      },
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
     },
     {
       "id": "masters-at-work",
       "name": "Masters At Work",
       "origin": "New York, USA",
       "active_since": 1990,
-      "genres": ["House", "Soulful House", "Latin House", "Disco", "Garage"],
-      "bio": "El d\u00fao legendario formado por Louie Vega y Kenny Dope. Pioneros de la house music, creadores del sonido MAW. Han producido incontables himnos y remezclado a los m\u00e1s grandes. Su set en Boiler Room London suma 2.8M de visitas.",
+      "genres": [
+        "House",
+        "Soulful House",
+        "Latin House",
+        "Disco",
+        "Garage"
+      ],
+      "bio": "El dúo legendario formado por Louie Vega y Kenny Dope. Pioneros de la house music, creadores del sonido MAW. Han producido incontables himnos y remezclado a los más grandes. Su set en Boiler Room London suma 2.8M de visitas.",
       "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/mastersatwork"},
-      "sets": ["maw-br-london-2014"]
+      "social": {
+        "instagram": "https://instagram.com/mastersatwork"
+      },
+      "sets": [
+        "maw-br-london-2014"
+      ]
     },
     {
       "id": "honey-dijon",
       "name": "Honey Dijon",
       "origin": "Chicago / Berlin",
       "active_since": 2000,
-      "genres": ["House", "Techno", "Disco", "Soulful House", "Fashion"],
-      "bio": "DJ, productora y icono de la moda. Honey Dijon es una de las figuras m\u00e1s influyentes de la house music actual. Su set en Dekmantel 2025 confirma su estatus como curadora de pistas impecables.",
+      "genres": [
+        "House",
+        "Techno",
+        "Disco",
+        "Soulful House",
+        "Fashion"
+      ],
+      "bio": "DJ, productora y icono de la moda. Honey Dijon es una de las figuras más influyentes de la house music actual. Su set en Dekmantel 2025 confirma su estatus como curadora de pistas impecables.",
       "image": "https://i.ytimg.com/vi/t5KwF_VsM50/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/honeydijon"},
-      "sets": ["honey-dijon-dekmantel-2025"]
+      "social": {
+        "instagram": "https://instagram.com/honeydijon"
+      },
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
     },
     {
       "id": "seth-troxler",
       "name": "Seth Troxler",
       "origin": "USA / Berlin",
       "active_since": 2005,
-      "genres": ["Tech House", "House", "Minimal", "Detroit Techno"],
-      "bio": "DJ y productor estadounidense afincado en Berlin. Figura central de la escena house/techno, conocido por su carisma y sus ecl\u00e9cticos sets. Ha tocado en Boiler Room, DC-10 y festivales globales.",
+      "genres": [
+        "Tech House",
+        "House",
+        "Minimal",
+        "Detroit Techno"
+      ],
+      "bio": "DJ y productor estadounidense afincado en Berlin. Figura central de la escena house/techno, conocido por su carisma y sus eclécticos sets. Ha tocado en Boiler Room, DC-10 y festivales globales.",
       "image": "https://i.ytimg.com/vi/vy-k0FopsmY/maxresdefault.jpg",
-      "social": {"instagram": "https://instagram.com/sethtroxler"},
-      "sets": ["seth-troxler-br-mexico-2014"]
+      "social": {
+        "instagram": "https://instagram.com/sethtroxler"
+      },
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ]
     },
     {
       "id": "alex-do",
       "name": "Alex.Do",
       "origin": "UK / Berlin",
       "active_since": 2010,
-      "genres": ["Techno", "Hypnotic Techno", "Dub Techno", "Ambient", "Experimental"],
-      "bio": "Productor y DJ de techno hipn\u00f3tico. Fundador del sello Dystopian. Conocido por sus sets profundos y atmosf\u00e9ricos que fusionan techno, ambient y experimental.",
+      "genres": [
+        "Techno",
+        "Hypnotic Techno",
+        "Dub Techno",
+        "Ambient",
+        "Experimental"
+      ],
+      "bio": "Productor y DJ de techno hipnótico. Fundador del sello Dystopian. Conocido por sus sets profundos y atmosféricos que fusionan techno, ambient y experimental.",
       "image": "",
       "social": {},
-      "sets": ["alex-do-clr-305"]
+      "sets": [
+        "alex-do-clr-305"
+      ]
     },
     {
       "id": "etapp-kyle",
       "name": "Etapp Kyle",
-      "origin": "Ucrania / Berl\u00edn",
+      "origin": "Ucrania / Berlín",
       "active_since": 2010,
-      "genres": ["Techno", "Hypnotic Techno", "Electro", "Ambient"],
-      "bio": "DJ y productora ucraniana afincada en Berl\u00edn. Figura clave del techno hipn\u00f3tico. Ha tocado en Boiler Room (Berl\u00edn, Kiev), Awakenings y Berghain. Su set en Ballantine's True Music Kiev conecta con nuestra serie.",
+      "genres": [
+        "Techno",
+        "Hypnotic Techno",
+        "Electro",
+        "Ambient"
+      ],
+      "bio": "DJ y productora ucraniana afincada en Berlín. Figura clave del techno hipnótico. Ha tocado en Boiler Room (Berlín, Kiev), Awakenings y Berghain. Su set en Ballantine's True Music Kiev conecta con nuestra serie.",
       "image": "",
       "social": {},
-      "sets": ["etapp-kyle-lot-radio-2023"]
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
     },
     {
       "id": "call-super",
       "name": "Call Super",
-      "origin": "UK / Berl\u00edn",
+      "origin": "UK / Berlín",
       "active_since": 2012,
-      "genres": ["House", "Techno", "Electro", "Breaks", "Experimental"],
-      "bio": "Productor y DJ brit\u00e1nico conocido por sus ecl\u00e9cticos sets que cruzan house, techno, electro y experimental. Ha tocado en Boiler Room, Dekmantel y De School. Su estilo vers\u00e1til conecta con m\u00faltiples g\u00e9neros.",
+      "genres": [
+        "House",
+        "Techno",
+        "Electro",
+        "Breaks",
+        "Experimental"
+      ],
+      "bio": "Productor y DJ británico conocido por sus eclécticos sets que cruzan house, techno, electro y experimental. Ha tocado en Boiler Room, Dekmantel y De School. Su estilo versátil conecta con múltiples géneros.",
       "image": "",
       "social": {},
-      "sets": ["call-super-br-dekmantel-2015"]
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
     },
     {
       "id": "kerri-chandler",
       "name": "Kerri Chandler",
       "origin": "New Jersey, USA",
       "active_since": 1990,
-      "genres": ["Deep House", "Soulful House", "Garage", "Chicago House", "Kaoz Theory"],
-      "bio": "El padrino del deep house. Fundador de Kaoz Theory. Con m\u00e1s de 30 a\u00f1os de carrera, Kerri Chandler es uno de los productores m\u00e1s influyentes de la m\u00fasica house. Su set en Boiler Room NYC 2022 es una masterclass de deep house con 29 tracks que conectan con Masters At Work y Honey Dijon.",
+      "genres": [
+        "Deep House",
+        "Soulful House",
+        "Garage",
+        "Chicago House",
+        "Kaoz Theory"
+      ],
+      "bio": "El padrino del deep house. Fundador de Kaoz Theory. Con más de 30 años de carrera, Kerri Chandler es uno de los productores más influyentes de la música house. Su set en Boiler Room NYC 2022 es una masterclass de deep house con 29 tracks que conectan con Masters At Work y Honey Dijon.",
       "image": "",
-      "social": {"instagram": "https://instagram.com/kerri_chandler"},
-      "sets": ["kerri-chandler-br-nyc-2022"]
+      "social": {
+        "instagram": "https://instagram.com/kerri_chandler"
+      },
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
     },
     {
       "id": "ian-pooley",
       "name": "Ian Pooley",
-      "origin": "Mainz, Alemania / Berl\u00edn",
+      "origin": "Mainz, Alemania / Berlín",
       "active_since": 1992,
-      "genres": ["Deep House", "House", "Chicago House", "Disco", "Tech House"],
-      "bio": "Leyenda del deep house alem\u00e1n. Conocido por su hit \u2018900\u2019 y su sello Pooled Music. Sus sets conectan con Kerri Chandler, X-Press 2 y MCDE, creando puentes entre la escena house europea y americana.",
+      "genres": [
+        "Deep House",
+        "House",
+        "Chicago House",
+        "Disco",
+        "Tech House"
+      ],
+      "bio": "Leyenda del deep house alemán. Conocido por su hit ‘900’ y su sello Pooled Music. Sus sets conectan con Kerri Chandler, X-Press 2 y MCDE, creando puentes entre la escena house europea y americana.",
       "image": "",
-      "social": {"instagram": "https://instagram.com/ianpooley"},
-      "sets": ["ian-pooley-hor-berlin-2023", "ian-pooley-paloma-berlin-2023"]
+      "social": {
+        "instagram": "https://instagram.com/ianpooley"
+      },
+      "sets": [
+        "ian-pooley-hor-berlin-2023",
+        "ian-pooley-paloma-berlin-2023"
+      ]
     },
     {
       "id": "apollonia",
       "name": "Apollonia",
-      "origin": "Par\u00eds, Francia",
+      "origin": "París, Francia",
       "active_since": 2012,
-      "genres": ["Minimal", "Deep House", "Tech House", "French Touch"],
-      "bio": "Tr\u00edo parisino formado por Dan Ghenacia, Dyed Soundorom y Shonky. Conocidos por sus marat\u00f3nicos sets b2b2b de 5+ horas. Su m\u00fasica fusiona minimal, deep house y tech house con la elegancia de la escuela francesa.",
+      "genres": [
+        "Minimal",
+        "Deep House",
+        "Tech House",
+        "French Touch"
+      ],
+      "bio": "Trío parisino formado por Dan Ghenacia, Dyed Soundorom y Shonky. Conocidos por sus maratónicos sets b2b2b de 5+ horas. Su música fusiona minimal, deep house y tech house con la elegancia de la escuela francesa.",
       "image": "",
-      "social": {"instagram": "https://instagram.com/apollonia"},
-      "sets": ["apollonia-br-epizode-2019"]
+      "social": {
+        "instagram": "https://instagram.com/apollonia"
+      },
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "dixon",
+      "name": "Dixon",
+      "origin": "Berlin, Alemania",
+      "active_since": 1995,
+      "genres": [
+        "Melodic House",
+        "Techno",
+        "Deep House",
+        "Innervisions"
+      ],
+      "bio": "Uno de los DJs más influyentes del mundo. Fundador de Innervisions junto a Âme. Conocido por sus sets melódicos y su capacidad para leer la pista. Ha tocado en Boiler Room, Dekmantel, Cercle y Tomorrowland.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/dixoninnervisions"
+      },
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "ben-ufo",
+      "name": "Ben UFO",
+      "origin": "UK / London",
+      "active_since": 2007,
+      "genres": [
+        "House",
+        "Techno",
+        "UK Bass",
+        "Breaks",
+        "Eclectic"
+      ],
+      "bio": "DJ y co-fundador de Hessle Audio (junto a Pearson Sound y Pangaea). Conocido por sus sets eclécticos que cruzan house, techno, bass y experimental. Referente del underground británico.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/benufo"
+      },
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "moodymann",
+      "name": "Moodymann",
+      "origin": "Detroit, USA",
+      "active_since": 1992,
+      "genres": [
+        "Deep House",
+        "Funk",
+        "Disco",
+        "Soul",
+        "Detroit Techno"
+      ],
+      "bio": "Leyenda del deep house de Detroit. Conocido por su sonido único que fusiona house, funk, soul y hip-hop. Su música ha sido sampleada por innumerables artistas. Figura enigmática y genio creativo.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/moodymann"
+      },
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
     }
   ]
 }
