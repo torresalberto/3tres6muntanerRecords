@@ -769,6 +769,66 @@
       "sets": [
         "cassius-cercle-2017"
       ]
+    },
+    {
+      "id": "folamour",
+      "name": "Folamour",
+      "origin": "Lyon, France",
+      "active_since": 2015,
+      "bio": "Productor y DJ francés. Conocido por sus sets de house y disco llenos de buen rollo. Su set en Boiler Room Sugar Mountain tiene 3.6M de visitas.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "peggy-gou",
+      "name": "Peggy Gou",
+      "origin": "South Korea / Berlin",
+      "active_since": 2016,
+      "bio": "DJ y productora surcoreana afincada en Berlín. Una de las DJs más populares del mundo. Su set en Cercle Lille tiene 6.1M de visitas. Fundadora de Gudu Records.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "peggy-cercle"
+      ]
+    },
+    {
+      "id": "blessed-madonna",
+      "name": "The Blessed Madonna",
+      "origin": "USA",
+      "active_since": 2013,
+      "bio": "DJ y productora estadounidense. Conocida como The Black Madonna hasta 2019. Referente de la house music con sets que cruzan disco, house y techno clásico.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "blessed-br"
+      ]
+    },
+    {
+      "id": "mall-grab",
+      "name": "Mall Grab",
+      "origin": "Australia / London",
+      "active_since": 2015,
+      "bio": "Productor y DJ australiano radicado en Londres. Conocido por su sonido lo-fi house/hardcore. Fundador de Steel City Dance Discs. Su BR Melbourne tiene 2.3M visitas.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "hunee",
+      "name": "Hunee",
+      "origin": "Germany / Berlin",
+      "active_since": 2010,
+      "bio": "DJ y selector alemán afincado en Berlín. Conocido por sus sets eclécticos de house, disco, afro y rarezas. Su BR x Dekmantel tiene 1.7M visitas.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "hunee-dekmantel"
+      ]
     }
   ]
 }
