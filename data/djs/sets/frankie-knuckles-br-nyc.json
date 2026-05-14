@@ -10,12 +10,89 @@
   "duration_formatted": "1:06:21",
   "view_count": 4400000,
   "channel": "Boiler Room",
-  "genres": ["House", "Classic House", "Soulful House", "Disco"],
-  "tracklist": [],
+  "genres": [
+    "House",
+    "Classic House",
+    "Soulful House",
+    "Disco"
+  ],
+  "tracklist": [
+    {
+      "artist": "Dbow",
+      "title": "Get Involved (Director's Cut Mix)",
+      "timestamp": "00",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Marko Militano feat. Darren Barrett",
+      "title": "Good People (A Director's Cut Master Exclusive)",
+      "timestamp": "07",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Frankie Knuckles Pres. Director's Cut",
+      "title": "Bourgie Bourgie (A Director's Cut Exclusive)",
+      "timestamp": "15",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Frankie Knuckles Pres. Directors Cut feat. B Slade",
+      "title": "Get Over U (Rober Gaez 'Mustache' Mix)",
+      "timestamp": "22",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Phunk Investigation",
+      "title": "Your Love (Instrumental Simulator Mix)",
+      "timestamp": "27",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Joe Smooth feat. Paris Brightledge",
+      "title": "We Gotta Love (Director's Cut Signature Mix)",
+      "timestamp": "32",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Joey Negro & The Sunburst Band & Diane Charlemagne",
+      "title": "The Secret Life Of Us (Director's Cut Signature Mix)",
+      "timestamp": "40",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "The Layabouts feat. Portia Monique",
+      "title": "Bring Me Joy (Directors Cut Remix)",
+      "timestamp": "47",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Erick Morillo, Harry Romero & Jose Nunez feat. Shawnee Taylor",
+      "title": "My Melody (Morillo & Romero Dirty Mix)",
+      "timestamp": "53",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Frankie Knuckles",
+      "title": "Let's Stay Home (Director's Cut Classic Mix)",
+      "timestamp": "58",
+      "status": "confirmed",
+      "position": 10
+    }
+  ],
   "most_requested_ids": [],
   "curious_facts": {
     "total_comments": 0,
     "track_relevant_comments": 0,
-    "note": "One of the most iconic Boiler Room sets ever. The Godfather of House Music."
+    "note": "One of the most iconic Boiler Room sets ever. The Godfather of House Music.",
+    "confirmed_tracks": 10
   }
 }

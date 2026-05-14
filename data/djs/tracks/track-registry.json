@@ -2057,10 +2057,12 @@
       "title": "Blackwater",
       "artist": "Octave One",
       "played_by": [
-        "seth-troxler"
+        "seth-troxler",
+        "carl-craig"
       ],
       "sets": [
-        "seth-troxler-br-mexico-2014"
+        "seth-troxler-br-mexico-2014",
+        "carl-craig-br-rbma-2013"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -4185,10 +4187,12 @@
       "title": "Kazan",
       "artist": "KiNK",
       "played_by": [
-        "ben-ufo"
+        "ben-ufo",
+        "kink"
       ],
       "sets": [
-        "ben-ufo-br-sugar-mountain-2025"
+        "ben-ufo-br-sugar-mountain-2025",
+        "kink-br-moscow-2014"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -4221,10 +4225,12 @@
       "title": "Router",
       "artist": "Pangaea",
       "played_by": [
-        "ben-ufo"
+        "ben-ufo",
+        "pangaea"
       ],
       "sets": [
-        "ben-ufo-br-sugar-mountain-2025"
+        "ben-ufo-br-sugar-mountain-2025",
+        "pangaea-br-dekmantel-2015"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -4851,10 +4857,12 @@
       "title": "All The Time",
       "artist": "DJ Koze",
       "played_by": [
-        "four-tet"
+        "four-tet",
+        "dj-koze"
       ],
       "sets": [
-        "four-tet-br-london-2015"
+        "four-tet-br-london-2015",
+        "dj-koze-various"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -4917,11 +4925,407 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "moodymann-got-2-make-it",
+      "title": "Got 2 Make It",
+      "artist": "Moodymann",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "moodymann-feat-roberta-sweed-shades-of-jae",
+      "title": "Shades Of Jae",
+      "artist": "Moodymann feat. Roberta Sweed",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "tale-of-us-another-earth",
+      "title": "Another Earth",
+      "artist": "Tale Of Us",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "model-500-neptune",
+      "title": "Neptune",
+      "artist": "Model 500",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "loco-dice-detox",
+      "title": "Detox",
+      "artist": "Loco Dice",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "carl-craig--pepe-bradock-angola",
+      "title": "Angola",
+      "artist": "Carl Craig & Pepe Bradock",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "inner-city-good-life",
+      "title": "Good Life",
+      "artist": "Inner City",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-craig-br-rbma-2013",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "pangaea-more-is-more-to-burn",
+      "title": "More Is More To Burn",
+      "artist": "Pangaea",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "pangaea-br-dekmantel-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dvs1-polyphonic-love",
+      "title": "Polyphonic Love",
+      "artist": "DVS1",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "pangaea-br-dekmantel-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "aleksi-perala-uk74r1512110",
+      "title": "UK74R1512110",
+      "artist": "Aleksi Perala",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "pangaea-br-dekmantel-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ramadanman-dont-change-for-me",
+      "title": "Don't Change For Me",
+      "artist": "Ramadanman",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "pangaea-br-dekmantel-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "planetary-assault-systems-pull",
+      "title": "Pull",
+      "artist": "Planetary Assault Systems",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "pangaea-br-dekmantel-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "joe-claussell-je-ka-jo-drums-of-passion",
+      "title": "Je Ka Jo (Drums Of Passion)",
+      "artist": "Joe Claussell",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "pangaea-br-dekmantel-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kink-existence",
+      "title": "Existence",
+      "artist": "KiNK",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kink-br-moscow-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kink-leko",
+      "title": "Leko",
+      "artist": "KiNK",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kink-br-moscow-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kink-express",
+      "title": "Express",
+      "artist": "KiNK",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kink-br-moscow-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "rachel-row-follow-the-step-kink-remix",
+      "title": "Follow The Step (KiNK Remix)",
+      "artist": "Rachel Row",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kink-br-moscow-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dj-koze-pick-up",
+      "title": "Pick Up",
+      "artist": "DJ Koze",
+      "played_by": [
+        "dj-koze"
+      ],
+      "sets": [
+        "dj-koze-various"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dj-koze-various",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dj-koze-ich-schlafe-auf-dem-ruecken",
+      "title": "Ich Schlafe Auf Dem Ruecken",
+      "artist": "DJ Koze",
+      "played_by": [
+        "dj-koze"
+      ],
+      "sets": [
+        "dj-koze-various"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "dj-koze-various",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "objekt-theme-from-q",
+      "title": "Theme From Q",
+      "artist": "Objekt",
+      "played_by": [
+        "objekt"
+      ],
+      "sets": [
+        "objekt-various"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "objekt-various",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "objekt-ganzfeld",
+      "title": "Ganzfeld",
+      "artist": "Objekt",
+      "played_by": [
+        "objekt"
+      ],
+      "sets": [
+        "objekt-various"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "objekt-various",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "objekt-dogma",
+      "title": "Dogma",
+      "artist": "Objekt",
+      "played_by": [
+        "objekt"
+      ],
+      "sets": [
+        "objekt-various"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "objekt-various",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 273,
-    "cross_referenced": 2,
-    "dj_count": 21
+    "total_tracks": 295,
+    "cross_referenced": 6,
+    "dj_count": 26
   }
 }

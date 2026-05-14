@@ -10,19 +10,89 @@
   "duration_formatted": "1:58:31",
   "view_count": 0,
   "channel": "Dekmantel",
-  "genres": ["House", "Breakbeat", "Techno"],
+  "genres": [
+    "House",
+    "Breakbeat",
+    "Techno"
+  ],
   "tracklist": [
-    {"position": 1, "timestamp": "0:00", "artist": "Mood II Swing & Wall Of Sound", "title": "I Need Your Luv (Church Mix)", "status": "confirmed"},
-    {"position": 2, "timestamp": "2:00", "artist": "DJ Antoine", "title": "The Disco Bassline (Real Disco Bassline Mix)", "status": "confirmed"},
-    {"position": 3, "timestamp": "12:00", "artist": "Joeski", "title": "Dia De Ayer (Extended Mix)", "status": "confirmed"},
-    {"position": 4, "timestamp": "24:00", "artist": "Club Royale", "title": "Groove 4 Joy", "status": "confirmed"},
-    {"position": 5, "timestamp": "43:00", "artist": "Gilberto", "title": "Da Samba (Club Mix)", "status": "confirmed"},
-    {"position": 6, "timestamp": "47:00", "artist": "Mr. Jay", "title": "The Love", "status": "confirmed"},
-    {"position": 7, "timestamp": "66:00", "artist": "Borai & Denham Audio", "title": "Make Me (Paul Sirrell Remix)", "status": "confirmed"},
-    {"position": 8, "timestamp": "79:00", "artist": "The Grid", "title": "Diablo (The Devil Rides Out Mix)", "status": "confirmed"},
-    {"position": 9, "timestamp": "84:00", "artist": "DJ Flavours", "title": "Your Caress (All I Need) (Open Arms Remix)", "status": "confirmed"},
-    {"position": 10, "timestamp": "93:00", "artist": "X-Press 2", "title": "Smoke Machine", "status": "confirmed"},
-    {"position": 11, "timestamp": "108:00", "artist": "Sam Alfred", "title": "Feel The Friction (Alfredo Mix)", "status": "confirmed"}
+    {
+      "artist": "Mood II Swing & Wall Of Sound",
+      "title": "I Need Your Luv (Church Mix)",
+      "timestamp": "00",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "DJ Antoine",
+      "title": "The Disco Bassline (Real Disco Bassline Mix)",
+      "timestamp": "02",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Sam Alfred",
+      "title": "Feel The Friction (Alfredo Mix)",
+      "timestamp": "108",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Joeski",
+      "title": "Dia De Ayer (Extended Mix)",
+      "timestamp": "12",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Club Royale",
+      "title": "Groove 4 Joy",
+      "timestamp": "24",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Gilberto",
+      "title": "Da Samba (Club Mix)",
+      "timestamp": "43",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Mr. Jay",
+      "title": "The Love",
+      "timestamp": "47",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Borai & Denham Audio",
+      "title": "Make Me (Paul Sirrell Remix)",
+      "timestamp": "66",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "The Grid",
+      "title": "Diablo (The Devil Rides Out Mix)",
+      "timestamp": "79",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "DJ Flavours",
+      "title": "Your Caress (All I Need) (Open Arms Remix)",
+      "timestamp": "84",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "X-Press 2",
+      "title": "Smoke Machine",
+      "timestamp": "93",
+      "status": "confirmed",
+      "position": 11
+    }
   ],
   "most_requested_ids": [],
   "curious_facts": {

@@ -520,6 +520,97 @@
       "sets": [
         "four-tet-br-london-2015"
       ]
+    },
+    {
+      "id": "carl-craig",
+      "name": "Carl Craig",
+      "origin": "Detroit, USA",
+      "active_since": 1989,
+      "genres": [
+        "Detroit Techno",
+        "House",
+        "Electronic"
+      ],
+      "bio": "Leyenda del techno de Detroit. Fundador de Planet E. Uno de los productores más influyentes de la música electrónica. Su set conecta con Moodymann y Octave One.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/carlcraig"
+      },
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "pangaea",
+      "name": "Pangaea",
+      "origin": "UK / London",
+      "active_since": 2008,
+      "genres": [
+        "UK Bass",
+        "Techno",
+        "House",
+        "Breaks"
+      ],
+      "bio": "DJ y productor del sello Hessle Audio. Conocido por su sonido único que fusiona techno, bass y breaks. Ha tocado en Dekmantel y Boiler Room. Su track ‘Router’ también lo ha tocado Ben UFO.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "kink",
+      "name": "KiNK",
+      "origin": "Bulgaria",
+      "active_since": 2008,
+      "genres": [
+        "Techno",
+        "House",
+        "Live PA",
+        "Electronic"
+      ],
+      "bio": "Productor búlgaro conocido por sus poderosos Live PA sets. Su track ‘Kazan’ ha sido tocado por Ben UFO. Ha actuado en Boiler Room Moscú y AVA Festival.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "id": "dj-koze",
+      "name": "DJ Koze",
+      "origin": "Hamburg, Alemania",
+      "active_since": 1997,
+      "genres": [
+        "House",
+        "Electronic",
+        "Experimental",
+        "Hip Hop"
+      ],
+      "bio": "Productor y DJ alemán conocido por su estilo ecléctico. Su track ‘All The Time’ ha sido tocado por Four Tet. Ganador de numerosos premios y referente de la música electrónica.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "dj-koze-various"
+      ]
+    },
+    {
+      "id": "objekt",
+      "name": "Objekt",
+      "origin": "Berlin, Alemania",
+      "active_since": 2011,
+      "genres": [
+        "Techno",
+        "Experimental",
+        "Electro",
+        "IDM"
+      ],
+      "bio": "Productor y DJ berlinés conocido por su enfoque experimental. Ha tocado b2b con Call Super en Dekmantel. Su sello Objekt Records es referencia del techno más vanguardista.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "objekt-various"
+      ]
     }
   ]
 }

@@ -57,6 +57,13 @@
       ]
     },
     {
+      "artist": "Octave One",
+      "djs": [
+        "carl-craig",
+        "seth-troxler"
+      ]
+    },
+    {
       "artist": "Boards Of Canada",
       "djs": [
         "alex-do",
@@ -104,9 +111,44 @@
         "ben-ufo",
         "four-tet"
       ]
+    },
+    {
+      "artist": "KiNK",
+      "djs": [
+        "ben-ufo",
+        "kink"
+      ]
+    },
+    {
+      "artist": "Pangaea",
+      "djs": [
+        "ben-ufo",
+        "pangaea"
+      ]
+    },
+    {
+      "artist": "Moodymann",
+      "djs": [
+        "carl-craig",
+        "moodymann"
+      ]
+    },
+    {
+      "artist": "DJ Koze",
+      "djs": [
+        "dj-koze",
+        "four-tet"
+      ]
     }
   ],
   "shared_tracks": [
+    {
+      "track": "Octave One - Blackwater",
+      "djs": [
+        "seth-troxler",
+        "carl-craig"
+      ]
+    },
     {
       "track": "Ame - Asa",
       "djs": [
@@ -119,6 +161,27 @@
       "djs": [
         "dixon",
         "ame"
+      ]
+    },
+    {
+      "track": "KiNK - Kazan",
+      "djs": [
+        "ben-ufo",
+        "kink"
+      ]
+    },
+    {
+      "track": "Pangaea - Router",
+      "djs": [
+        "ben-ufo",
+        "pangaea"
+      ]
+    },
+    {
+      "track": "DJ Koze - All The Time",
+      "djs": [
+        "four-tet",
+        "dj-koze"
       ]
     }
   ]
