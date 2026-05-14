@@ -701,6 +701,38 @@
       "sets": [
         "shonky-b2b-dan-ghenacia-ibiza-2014"
       ]
+    },
+    {
+      "id": "tiger-woods",
+      "name": "Tiger & Woods",
+      "origin": "Italy",
+      "active_since": 2010,
+      "bio": "Dúo italiano de producers/DJs conocido por su sonido edit/disco/house. Su set en Boiler Room London es una masterclass de ediciones privadas y rarezas bailables.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "nicolas-jaar",
+      "name": "Nicolas Jaar",
+      "origin": "Chile / USA",
+      "active_since": 2009,
+      "bio": "Productor y DJ chileno-estadounidense. Conocido por su estilo experimental que fusiona house, techno, ambient y jazz. Su set TRANSITION en Boiler Room es legendario.",
+      "image": "",
+      "social": {},
+      "sets": []
+    },
+    {
+      "id": "demi-riquismo",
+      "name": "Demi Riquísimo",
+      "origin": "UK / London",
+      "active_since": 2015,
+      "bio": "DJ y productor londinense. Fundador de Semi Delicious. Conocido por sus sets eclécticos de house, disco, italo y balearic.",
+      "image": "",
+      "social": {},
+      "sets": []
     }
   ]
 }
