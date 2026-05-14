@@ -733,6 +733,30 @@
       "image": "",
       "social": {},
       "sets": []
+    },
+    {
+      "id": "job-jobse",
+      "name": "Job Jobse",
+      "origin": "Netherlands",
+      "active_since": 2010,
+      "bio": "DJ y productor holandés. Habitual de Dekmantel y Boiler Room. Su estilo mezcla house, techno y electro con un toque único.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "job-jobse-dekmantel"
+      ]
+    },
+    {
+      "id": "rey-colino",
+      "name": "Rey Colino",
+      "origin": "Bélgica",
+      "active_since": 2015,
+      "bio": "DJ y productor belga. Conocido por sus sets eclécticos de house, techno y minimal. Ha tocado en Boiler Room, Dekmantel y Horst Festival.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "rey-colino-br"
+      ]
     }
   ]
 }
