@@ -1,0 +1,72 @@
+{
+  "shared_artists": [
+    {
+      "artist": "X-Press 2",
+      "djs": [
+        "ian-pooley",
+        "palms-trax"
+      ]
+    },
+    {
+      "artist": "Floating Points",
+      "djs": [
+        "etapp-kyle",
+        "floating-points"
+      ]
+    },
+    {
+      "artist": "Peven Everett",
+      "djs": [
+        "kerri-chandler",
+        "motor-city-drum-ensemble"
+      ]
+    },
+    {
+      "artist": "Masters At Work feat. India",
+      "djs": [
+        "kerri-chandler",
+        "masters-at-work"
+      ]
+    },
+    {
+      "artist": "Barbara Tucker",
+      "djs": [
+        "honey-dijon",
+        "masters-at-work"
+      ]
+    },
+    {
+      "artist": "Harry Romero",
+      "djs": [
+        "honey-dijon",
+        "seth-troxler"
+      ]
+    },
+    {
+      "artist": "Kings Of Tomorrow",
+      "djs": [
+        "call-super",
+        "seth-troxler"
+      ]
+    },
+    {
+      "artist": "Boards Of Canada",
+      "djs": [
+        "alex-do",
+        "call-super"
+      ]
+    },
+    {
+      "artist": "Kerri Chandler",
+      "djs": [
+        "ian-pooley",
+        "kerri-chandler"
+      ]
+    }
+  ],
+  "shared_tracks": [],
+  "stats": {
+    "total_artist_connections": 9,
+    "total_track_connections": 0
+  }
+}

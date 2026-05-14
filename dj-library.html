@@ -548,7 +548,7 @@
           Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de YouTube. 
           Descubre qué track suena en cada momento.
         </p>
-        <div class="dj-library-stats">
+        <div class="dj-library-stats" id="djLibraryStats">
           <span class="stat-pill"><strong>8</strong> DJs</span>
           <span class="stat-pill"><strong>9</strong> Sets</span>
           <span class="stat-pill"><strong>43</strong> Tracks</span>
@@ -804,6 +804,9 @@
         </div>
       </section>
 
+    <!-- Dynamic DJ Library Container (auto-loaded from JSON) -->
+    <div id="djLibraryContainer"></div>
+
     <!-- DJ Relationship Graph -->
     <section class="dj-profile-section" id="djGraph">
       <div class="dj-profile-card">
@@ -962,5 +965,6 @@
     </script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/dj-graph.js"></script>
+    <script src="js/dj-library-loader.js"></script>
   </body>
 </html>

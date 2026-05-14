@@ -2717,11 +2717,1181 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "the-ojays-i-love-music-part-i",
+      "title": "I Love Music (Part I)",
+      "artist": "The O'Jays",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "underground-ministries-feat-kenny-bobien-i-shall-not-be-move",
+      "title": "I Shall Not Be Moved (Stand Still)",
+      "artist": "Underground Ministries feat. Kenny Bobien",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "tasha-larae--dj-spen-wish-i-didnt-miss-you-john-morales-mm-v",
+      "title": "Wish I Didn't Miss You (John Morales M+M Vocal Mix)",
+      "artist": "Tasha LaRae & DJ Spen",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-so-let-the-wind-come",
+      "title": "So Let The Wind Come",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "fusion-groove-orchestra-feat-steve-lucas-if-only-i-could-lie",
+      "title": "If Only I Could (Liem Remix)",
+      "artist": "Fusion Groove Orchestra feat. Steve Lucas",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-i-feel-it",
+      "title": "I Feel It",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-feat-sunchilde-never-thought-printworks-main-",
+      "title": "Never Thought (Printworks) (Main Vocal Mix)",
+      "artist": "Kerri Chandler feat. Sunchilde",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "demuir-high-alive-and-dirty",
+      "title": "High. Alive. And Dirty.",
+      "artist": "Demuir",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dennis-ferrer-feat-tyrone-ellis-underground-is-my-home",
+      "title": "Underground Is My Home",
+      "artist": "Dennis Ferrer feat. Tyrone Ellis",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jovonn-random-extended-mix",
+      "title": "Random (Extended Mix)",
+      "artist": "Jovonn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dj-kwame-spirit-dance-timmy-regisford-edit",
+      "title": "Spirit Dance (Timmy Regisford Edit)",
+      "artist": "DJ Kwame",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-feat-rev-fl-brown-prayer-623-again-vocal",
+      "title": "Prayer (623 Again Vocal)",
+      "artist": "Kerri Chandler feat. Rev F.L. Brown",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "matt-early--lee-jeffries-feat-otis-corley-i-think-im-falling",
+      "title": "I Think I'm Falling In Love (Grant Nelson Remix)",
+      "artist": "Matt Early & Lee Jeffries feat. Otis Corley",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mateo--matos-release-the-rhythm-kevin-mckay-extended-remix",
+      "title": "Release The Rhythm (Kevin McKay Extended Remix)",
+      "artist": "Mateo & Matos",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "honey-dijon-feat-annette-bowen--nikki-o-downtown-louie-vega-",
+      "title": "Downtown (Louie Vega Extended Raw Dub Mix)",
+      "artist": "Honey Dijon feat. Annette Bowen & Nikki-O",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "crackazat-fire-drift",
+      "title": "Fire Drift",
+      "artist": "Crackazat",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "terry-hunter-feat-devine-brown-angel",
+      "title": "Angel",
+      "artist": "Terry Hunter feat. Devine Brown",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-feat-troy-denari-change-your-mind-district-8-",
+      "title": "Change Your Mind (District 8) (Full Vocal)",
+      "artist": "Kerri Chandler feat. Troy Denari",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jovonn-hesperia-soul-main-mix",
+      "title": "Hesperia Soul (Main Mix)",
+      "artist": "Jovonn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-feat-lady-linn-you-get-lost-in-it-the-warehou",
+      "title": "You Get Lost In It (The Warehouse Project)",
+      "artist": "Kerri Chandler feat. Lady Linn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "armonica-feat-toshi-ngeke-andhim-remix",
+      "title": "Ngeke (andhim Remix)",
+      "artist": "Armonica feat. Toshi",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "emmaculate-voodoo-shannon-chambers-1sound-remix",
+      "title": "Voodoo (Shannon Chambers 1Sound Remix)",
+      "artist": "Emmaculate",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "peven-everett-special-timmy-regisford-remix",
+      "title": "Special (Timmy Regisford Remix)",
+      "artist": "Peven Everett",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "masters-at-work-feat-india-i-cant-get-no-sleep-kenlou-12-inc",
+      "title": "I Can't Get No Sleep (Ken/Lou 12 Inch)",
+      "artist": "Masters At Work feat. India",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-atmospheric-beats",
+      "title": "Atmospheric Beats",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "massimo-lippoli-let-it-ride-dario-dattis-remix",
+      "title": "Let It Ride (Dario D'Attis Remix)",
+      "artist": "Massimo Lippoli",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "yves-murasca-all-about-housemusic-dario-dattis-extended-remi",
+      "title": "All About Housemusic (Dario D'Attis Extended Remix)",
+      "artist": "Yves Murasca",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "michel-de-hey-tracklights-crackazat-dub",
+      "title": "Tracklights (Crackazat Dub)",
+      "artist": "Michel De Hey",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "johnick-heat",
+      "title": "Heat",
+      "artist": "JohNick",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "kerri-chandler-br-nyc-2022",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ian-obrien-eden",
+      "title": "Eden",
+      "artist": "Ian O'Brien",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "laurence-guy-you-do-your-best-to-hide-the-good-parts-of-your",
+      "title": "You Do Your Best To Hide The Good Parts Of Yourself",
+      "artist": "Laurence Guy",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ian-pooley-sp12-electric-mistress",
+      "title": "SP12 Electric Mistress",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "javonntte-enter-the-disco",
+      "title": "Enter The Disco",
+      "artist": "Javonntte",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jovonn-eclipse",
+      "title": "Eclipse",
+      "artist": "JoVonn",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "paul-johnson-i-got-rhythm",
+      "title": "I Got Rhythm",
+      "artist": "Paul Johnson",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "loose-joints-honey-strut",
+      "title": "Honey Strut",
+      "artist": "Loose Joints",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ian-pooley-feel-it",
+      "title": "Feel It",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-hor-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "q-burns-abstract-message-mess-of-afros-glenn-underground-rem",
+      "title": "Mess Of Afros (Glenn Underground Remix)",
+      "artist": "Q-Burn's Abstract Message",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "x-press-2-zeven",
+      "title": "Zeven",
+      "artist": "X-Press 2",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "boris-dlugosch-feat-rosin-murphy-never-enough-ian-pooleys-ra",
+      "title": "Never Enough (Ian Pooley's Raw Dub)",
+      "artist": "Boris Dlugosch feat. Rosin Murphy",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "6th-borough-project-rhythm",
+      "title": "Rhythm",
+      "artist": "6th Borough Project",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "raw-instinct-grande-de-folie-dj-gregorys-main-club-mix",
+      "title": "Grande De Folie (DJ Gregory's Main Club Mix)",
+      "artist": "Raw Instinct",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dj-mes-all-about-house",
+      "title": "All About House",
+      "artist": "DJ Mes",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kerri-chandler-last-man-up",
+      "title": "Last Man Up",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "cajmere-only-4-u-id-remix",
+      "title": "Only 4 U (ID Remix)",
+      "artist": "Cajmere",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "motor-city-drum-ensemble-send-a-prayer-pt2",
+      "title": "Send A Prayer (Pt.2)",
+      "artist": "Motor City Drum Ensemble",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "pepe-braddock-4",
+      "title": "4",
+      "artist": "Pepe Braddock",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "nick-holder-feat-andraya-inside-your-soul",
+      "title": "Inside Your Soul",
+      "artist": "Nick Holder feat. Andraya",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "adam-port-86",
+      "title": "86",
+      "artist": "Adam Port",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "johnny-d--nicky-p-wild-kingdom",
+      "title": "Wild Kingdom",
+      "artist": "Johnny D & Nicky P",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "k-alexi-the-dancer-ian-pooley-remix",
+      "title": "The Dancer (Ian Pooley Remix)",
+      "artist": "K-Alexi",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "daft-punk-musique",
+      "title": "Musique",
+      "artist": "Daft Punk",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ben-sims-raise-your-hands",
+      "title": "Raise Your Hands",
+      "artist": "Ben Sims",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dj-gregory-s2-dubarash",
+      "title": "S2 (Dubarash)",
+      "artist": "DJ Gregory",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ian-pooley-900-mix",
+      "title": "900 (Mix)",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ian-pooley"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ian-pooley-paloma-berlin-2023",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "moritz-von-oswald-watamu-beach-rework",
+      "title": "Watamu Beach Rework",
+      "artist": "Moritz Von Oswald",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "audio-werner-story",
+      "title": "Story",
+      "artist": "Audio Werner",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "klanggut-padlab",
+      "title": "Padlab",
+      "artist": "Klanggut",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "shonky--dan-ghenacia-close-to-the-edge-the-mole-remix",
+      "title": "Close To The Edge (The Mole Remix)",
+      "artist": "Shonky & Dan Ghenacia",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "rowlanz-jogger",
+      "title": "Jogger",
+      "artist": "Rowlanz",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dave-barker-pos",
+      "title": "Pos",
+      "artist": "Dave Barker",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "apollonia-trinidad",
+      "title": "Trinidad",
+      "artist": "Apollonia",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "callisto-need-ur-love-stalagmite-mix",
+      "title": "Need Ur Love (Stalagmite Mix)",
+      "artist": "Callisto",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "the-mole-bleep-blop-robot",
+      "title": "Bleep Blop Robot",
+      "artist": "The Mole",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "nail-ive-been-there",
+      "title": "I've Been There",
+      "artist": "Nail",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "apollonia-br-epizode-2019",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 151,
+    "total_tracks": 216,
     "cross_referenced": 0,
-    "dj_count": 12
+    "dj_count": 15
   }
 }

@@ -175,6 +175,39 @@
       "image": "",
       "social": {},
       "sets": ["call-super-br-dekmantel-2015"]
+    },
+    {
+      "id": "kerri-chandler",
+      "name": "Kerri Chandler",
+      "origin": "New Jersey, USA",
+      "active_since": 1990,
+      "genres": ["Deep House", "Soulful House", "Garage", "Chicago House", "Kaoz Theory"],
+      "bio": "El padrino del deep house. Fundador de Kaoz Theory. Con m\u00e1s de 30 a\u00f1os de carrera, Kerri Chandler es uno de los productores m\u00e1s influyentes de la m\u00fasica house. Su set en Boiler Room NYC 2022 es una masterclass de deep house con 29 tracks que conectan con Masters At Work y Honey Dijon.",
+      "image": "",
+      "social": {"instagram": "https://instagram.com/kerri_chandler"},
+      "sets": ["kerri-chandler-br-nyc-2022"]
+    },
+    {
+      "id": "ian-pooley",
+      "name": "Ian Pooley",
+      "origin": "Mainz, Alemania / Berl\u00edn",
+      "active_since": 1992,
+      "genres": ["Deep House", "House", "Chicago House", "Disco", "Tech House"],
+      "bio": "Leyenda del deep house alem\u00e1n. Conocido por su hit \u2018900\u2019 y su sello Pooled Music. Sus sets conectan con Kerri Chandler, X-Press 2 y MCDE, creando puentes entre la escena house europea y americana.",
+      "image": "",
+      "social": {"instagram": "https://instagram.com/ianpooley"},
+      "sets": ["ian-pooley-hor-berlin-2023", "ian-pooley-paloma-berlin-2023"]
+    },
+    {
+      "id": "apollonia",
+      "name": "Apollonia",
+      "origin": "Par\u00eds, Francia",
+      "active_since": 2012,
+      "genres": ["Minimal", "Deep House", "Tech House", "French Touch"],
+      "bio": "Tr\u00edo parisino formado por Dan Ghenacia, Dyed Soundorom y Shonky. Conocidos por sus marat\u00f3nicos sets b2b2b de 5+ horas. Su m\u00fasica fusiona minimal, deep house y tech house con la elegancia de la escuela francesa.",
+      "image": "",
+      "social": {"instagram": "https://instagram.com/apollonia"},
+      "sets": ["apollonia-br-epizode-2019"]
     }
   ]
 }
