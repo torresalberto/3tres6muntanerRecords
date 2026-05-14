@@ -43,6 +43,50 @@
       "image": "https://i.ytimg.com/vi/644UU55eyzk/maxresdefault.jpg",
       "social": {"discogs": "https://www.discogs.com/artist/2456-Frankie-Knuckles"},
       "sets": ["frankie-knuckles-br-nyc", "frankie-knuckles-session-2015"]
+    },
+    {
+      "id": "floating-points",
+      "name": "Floating Points",
+      "origin": "UK",
+      "active_since": 2009,
+      "genres": ["House", "Techno", "Electronic", "Jazz", "Ambient"],
+      "bio": "Sam Shepherd, conocido como Floating Points, es un productor, DJ y m\u00fasico brit\u00e1nico. Su estilo ecl\u00e9ctico fusiona house, techno, jazz, funk y m\u00fasica cl\u00e1sica. Su set de 5 horas en Boiler Room NYC es legendario.",
+      "image": "https://i.ytimg.com/vi/kiy05zewUpg/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/floatpoints", "soundcloud": "https://soundcloud.com/floatingpoints"},
+      "sets": ["floating-points-br-nyc-5hr"]
+    },
+    {
+      "id": "richie-hawtin",
+      "name": "Richie Hawtin",
+      "origin": "UK / Canada / Berl\u00edn",
+      "active_since": 1990,
+      "genres": ["Minimal Techno", "Techno", "Acid", "Experimental"],
+      "bio": "Pionero del minimal techno. Fundador de Plus 8, Minus y Plastikman. Reconocido por su enfoque vanguardista y sus innovadores sets con tecnolog\u00eda MODEL 1.",
+      "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/richiehawtin", "soundcloud": "https://soundcloud.com/richiehawtin"},
+      "sets": ["richie-hawtin-br-paris"]
+    },
+    {
+      "id": "avalon-emerson",
+      "name": "Avalon Emerson",
+      "origin": "USA / Berl\u00edn",
+      "active_since": 2014,
+      "genres": ["House", "Techno", "Electro", "Breaks", "Trance"],
+      "bio": "DJ y productora estadounidense afincada en Berl\u00edn. Conocida por sus sets en\u00e9rgicos que cruzan g\u00e9neros con fluidez. Habitual de Dekmantel y clubes de todo el mundo.",
+      "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/avalonemerson", "soundcloud": "https://soundcloud.com/avalonemerson"},
+      "sets": ["avalon-emerson-dekmantel-2025"]
+    },
+    {
+      "id": "dj-pierre",
+      "name": "DJ Pierre",
+      "origin": "Chicago, USA",
+      "active_since": 1985,
+      "genres": ["Acid House", "Chicago House", "Techno", "Acid Techno"],
+      "bio": "Pionero del acid house. Miembro fundador de Phuture, los creadores del sonido 303. Leyenda viva de la m\u00fasica electr\u00f3nica de Chicago.",
+      "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/djpierre", "soundcloud": "https://soundcloud.com/djpierre"},
+      "sets": ["dj-pierre-br-chicago"]
     }
   ]
 }

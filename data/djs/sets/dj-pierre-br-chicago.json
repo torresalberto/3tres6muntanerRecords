@@ -1,0 +1,20 @@
+{
+  "id": "dj-pierre-br-chicago",
+  "dj_id": "dj-pierre",
+  "title": "Boiler Room Chicago 2025",
+  "venue": "Boiler Room, Chicago",
+  "date": "2025-07-18",
+  "youtube_url": "https://www.youtube.com/watch?v=NsR7kVgxFLs",
+  "youtube_embed_id": "NsR7kVgxFLs",
+  "duration_minutes": 84,
+  "duration_formatted": "1:24:14",
+  "view_count": 78000,
+  "channel": "Boiler Room",
+  "genres": ["Acid House", "Techno", "Chicago House", "Acid Techno"],
+  "tracklist": [],
+  "most_requested_ids": [
+    {"timestamp": "8:30", "request_count": 2, "sample_comments": ["8:30 track id please"], "status": "unidentified"},
+    {"timestamp": "1:18:00", "request_count": 1, "sample_comments": ["1:18:00 what a track!"], "status": "unidentified"}
+  ],
+  "curious_facts": {"total_comments": 278, "track_relevant_comments": 15, "unidentified_tracks": 5}
+}

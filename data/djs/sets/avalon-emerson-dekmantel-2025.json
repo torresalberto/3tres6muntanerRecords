@@ -1,0 +1,21 @@
+{
+  "id": "avalon-emerson-dekmantel-2025",
+  "dj_id": "avalon-emerson",
+  "title": "The Loop - Dekmantel Festival 2025",
+  "venue": "Dekmantel Festival, Amsterdam",
+  "date": "2025-08-01",
+  "youtube_url": "https://www.youtube.com/watch?v=s14IS_wXrEQ",
+  "youtube_embed_id": "s14IS_wXrEQ",
+  "duration_minutes": 119,
+  "duration_formatted": "1:59:15",
+  "view_count": 152000,
+  "channel": "Dekmantel",
+  "genres": ["House", "Techno", "Electro", "Breaks"],
+  "tracklist": [],
+  "most_requested_ids": [
+    {"timestamp": "13:00", "request_count": 1, "sample_comments": ["13:00 what is this track?"], "status": "unidentified"},
+    {"timestamp": "1:43:31", "request_count": 1, "sample_comments": ["1:43:31 ID?"], "status": "unidentified"},
+    {"timestamp": "1:29:30", "request_count": 1, "sample_comments": ["Need this 1:29:30 track"], "status": "unidentified"}
+  ],
+  "curious_facts": {"total_comments": 247, "track_relevant_comments": 8, "unidentified_tracks": 5}
+}
