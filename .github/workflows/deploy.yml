@@ -1,5 +1,5 @@
-# This workflow deploys your site to GitHub Pages (free)
-# Falls back to FTP if configured
+# Deploy Website — GitHub Pages (free, automatic)
+# No FTP needed. Just push to main and it deploys.
 
 name: Deploy Website
 
@@ -13,11 +13,9 @@ permissions:
   id-token: write
 
 jobs:
-  # Primary: Deploy to GitHub Pages
-  deploy-pages:
+  deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    if: github.repository == 'torresalberto/3tres6muntanerRecords'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,21 +34,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # Fallback: Deploy to FTP (only if secrets are configured)
-  deploy-ftp:
-    name: Deploy to FTP (optional)
-    runs-on: ubuntu-latest
-    needs: deploy-pages
-    if: ${{ vars.FTP_ENABLED == 'true' }}
-    steps:
-      - name: Get latest code
-        uses: actions/checkout@v4
-
-      - name: Sync files to server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /
