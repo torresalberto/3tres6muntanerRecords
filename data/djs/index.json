@@ -462,6 +462,64 @@
       "sets": [
         "moodymann-rbma-2010"
       ]
+    },
+    {
+      "id": "maceo-plex",
+      "name": "Maceo Plex",
+      "origin": "USA / Berlin",
+      "active_since": 2009,
+      "genres": [
+        "Tech House",
+        "Melodic Techno",
+        "Electro"
+      ],
+      "bio": "Productor y DJ estadounidense. Su set en Boiler Room Berlin suma 16.6M de visitas. Fundador de Ellum Audio. Conocido por su sonido melódico y sus remixes icónicos.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/maceoplex"
+      },
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "ame",
+      "name": "Âme",
+      "origin": "Alemania",
+      "active_since": 2005,
+      "genres": [
+        "Melodic House",
+        "Techno",
+        "Deep House"
+      ],
+      "bio": "Dúo alemán formado por Kristian Beyer y Frank Wiedemann. Fundadores de Innervisions junto a Dixon. Iconos del sonido melódico con tracks como ‘Asa’ y ‘Rej’.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/amemusic"
+      },
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "id": "four-tet",
+      "name": "Four Tet",
+      "origin": "UK / London",
+      "active_since": 1998,
+      "genres": [
+        "House",
+        "Electronic",
+        "Experimental",
+        "Jazz"
+      ],
+      "bio": "Kieran Hebden, conocido como Four Tet, es uno de los productores más innovadores de la música electrónica británica. Su estilo fusiona house, jazz, folk y experimental.",
+      "image": "",
+      "social": {
+        "instagram": "https://instagram.com/fourTet"
+      },
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
     }
   ]
 }

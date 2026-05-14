@@ -4001,10 +4001,12 @@
       "title": "Asa",
       "artist": "Ame",
       "played_by": [
-        "dixon"
+        "dixon",
+        "ame"
       ],
       "sets": [
-        "dixon-cercle-2024"
+        "dixon-cercle-2024",
+        "ame-br-innervisions-ade-2012"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -4019,10 +4021,12 @@
       "title": "Shadow Of Love",
       "artist": "Ame & Curses",
       "played_by": [
-        "dixon"
+        "dixon",
+        "ame"
       ],
       "sets": [
-        "dixon-cercle-2024"
+        "dixon-cercle-2024",
+        "ame-br-innervisions-ade-2012"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -4517,11 +4521,407 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "maceo-plex--gabriel-ananda-solitary-daze",
+      "title": "Solitary Daze",
+      "artist": "Maceo Plex & Gabriel Ananda",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "gardens-of-god-fiddler",
+      "title": "Fiddler",
+      "artist": "Gardens Of God",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "shall-ocin-orbis",
+      "title": "Orbis",
+      "artist": "Shall Ocin",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "confute-on-the-hour",
+      "title": "On The Hour",
+      "artist": "Confute",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dense--pika-klank",
+      "title": "Klank",
+      "artist": "Dense & Pika",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "the-smiths-how-soon-is-now-maceo-plex-remix",
+      "title": "How Soon Is Now? (Maceo Plex Remix)",
+      "artist": "The Smiths",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "der-dritte-raum-hale-bopp-maceo-plex-edit",
+      "title": "Hale Bopp (Maceo Plex Edit)",
+      "artist": "Der Dritte Raum",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "nicolas-bougaieff-pulse-train",
+      "title": "Pulse Train",
+      "artist": "Nicolas Bougaieff",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "maceo-plex-br-berlin-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "paul-simon-diamonds-on-the-soles-of-her-shoes-ame-private-re",
+      "title": "Diamonds On The Soles Of Her Shoes (Ame Private Remix)",
+      "artist": "Paul Simon",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ame-br-innervisions-ade-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ian-pooley-compurhythm-dixon-44-treatment",
+      "title": "CompuRhythm (Dixon 4/4 Treatment)",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ame-br-innervisions-ade-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "recondite-drgn",
+      "title": "Drgn",
+      "artist": "Recondite",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ame-br-innervisions-ade-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "konstantin-sibold-madeleine",
+      "title": "Madeleine",
+      "artist": "Konstantin Sibold",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ame-br-innervisions-ade-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "monoloc-shame",
+      "title": "Shame",
+      "artist": "Monoloc",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "ame-br-innervisions-ade-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "four-tet-school",
+      "title": "School",
+      "artist": "Four Tet",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "anthony-naples-refugio",
+      "title": "Refugio",
+      "artist": "Anthony Naples",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "oflynn-tyrion",
+      "title": "Tyrion",
+      "artist": "O'Flynn",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "aphex-twin-xmas_evet1-n",
+      "title": "Xmas_Evet1 N",
+      "artist": "Aphex Twin",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "martyn--four-tet-glassbeadgames-8-hours-at-fabric-dub",
+      "title": "Glassbeadgames (8 Hours At Fabric Dub)",
+      "artist": "Martyn & Four Tet",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "dj-koze-all-the-time",
+      "title": "All The Time",
+      "artist": "DJ Koze",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "caribou-never-come-back-four-tet-remix",
+      "title": "Never Come Back (Four Tet Remix)",
+      "artist": "Caribou",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kh-only-human",
+      "title": "Only Human",
+      "artist": "KH",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jamie-xx-idontknow",
+      "title": "Idontknow",
+      "artist": "Jamie xx",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "four-tet-br-london-2015",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 251,
-    "cross_referenced": 0,
-    "dj_count": 18
+    "total_tracks": 273,
+    "cross_referenced": 2,
+    "dj_count": 21
   }
 }

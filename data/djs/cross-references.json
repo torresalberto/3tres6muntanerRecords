@@ -64,12 +64,62 @@
       ]
     },
     {
+      "artist": "Recondite",
+      "djs": [
+        "alex-do",
+        "ame"
+      ]
+    },
+    {
       "artist": "Kerri Chandler",
       "djs": [
         "ian-pooley",
         "kerri-chandler"
       ]
+    },
+    {
+      "artist": "Ian Pooley",
+      "djs": [
+        "ame",
+        "ian-pooley"
+      ]
+    },
+    {
+      "artist": "Ame",
+      "djs": [
+        "ame",
+        "dixon"
+      ]
+    },
+    {
+      "artist": "Ame & Curses",
+      "djs": [
+        "ame",
+        "dixon"
+      ]
+    },
+    {
+      "artist": "O'Flynn",
+      "djs": [
+        "ben-ufo",
+        "four-tet"
+      ]
     }
   ],
-  "shared_tracks": []
+  "shared_tracks": [
+    {
+      "track": "Ame - Asa",
+      "djs": [
+        "dixon",
+        "ame"
+      ]
+    },
+    {
+      "track": "Ame & Curses - Shadow Of Love",
+      "djs": [
+        "dixon",
+        "ame"
+      ]
+    }
+  ]
 }
