@@ -346,13 +346,14 @@
 
     // ========== D3.js RENDER ==========
     const container = document.getElementById('network-container');
-    const width = container.clientWidth;
-    const height = container.clientHeight;
+    const width = Math.max(container.clientWidth, window.innerWidth - 40, 800);
+    const height = Math.max(container.clientHeight, window.innerHeight - 100, 500);
 
     const svg = d3.select('#network-container')
       .append('svg')
       .attr('width', width)
-      .attr('height', height);
+      .attr('height', height)
+      .attr('viewBox', [0, 0, width, height]);
 
     const g = svg.append('g');
 
@@ -361,6 +362,8 @@
       .scaleExtent([0.2, 4])
       .on('zoom', (event) => { g.attr('transform', event.transform); });
     svg.call(zoom);
+    // Disable double-click zoom (annoying on mobile)
+    svg.on('dblclick.zoom', null);
 
     // Tooltip
     const tooltip = document.getElementById('graphTooltip');
