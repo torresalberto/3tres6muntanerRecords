@@ -272,10 +272,6 @@
       });
       return edges;
     }
-        }
-      }
-      return edges;
-    }
 
     const EDGES = buildConnections(DJ_DATA);
 
@@ -332,26 +328,10 @@
     scene.add(stars);
 
     // ============================================================
-    //  CONNECTION LINES
+    //  LINE GROUP (holds connection lines)
     // ============================================================
     const lineGroup = new THREE.Group();
     scene.add(lineGroup);
-
-    const lineMat = new THREE.LineBasicMaterial({
-      color: 0xff4d00,
-      transparent: true,
-      opacity: 0.08
-    });
-
-    EDGES.forEach(edge => {
-      const geo = new THREE.BufferGeometry();
-      const positions = new Float32Array(6);
-      // Will be updated on animation
-      geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      const line = new THREE.Line(geo, lineMat.clone());
-      line.userData = edge;
-      lineGroup.add(line);
-    });
 
     // ============================================================
     //  DJ NODES (3D Spheres with glow)
