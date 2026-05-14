@@ -1,25 +1,56 @@
-# This workflow deploys your site to a shared hosting server via FTP
+# This workflow deploys your site to GitHub Pages (free)
+# Falls back to FTP if configured
 
 name: Deploy Website
 
-# This action runs on every push to the 'main' branch
 on:
   push:
     branches: [ main ]
 
-jobs:
-  deploy:
-    name: Deploy to FTP
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v4
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-    - name: Sync files to server
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        # Use the secrets you created in Step 2
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /
+jobs:
+  # Primary: Deploy to GitHub Pages
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    if: github.repository == 'torresalberto/3tres6muntanerRecords'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Fallback: Deploy to FTP (only if secrets are configured)
+  deploy-ftp:
+    name: Deploy to FTP (optional)
+    runs-on: ubuntu-latest
+    needs: deploy-pages
+    if: ${{ vars.FTP_ENABLED == 'true' }}
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Sync files to server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /
