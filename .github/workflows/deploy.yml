@@ -1,5 +1,4 @@
-# Deploy Website — GitHub Pages (free, automatic)
-# No FTP needed. Just push to main and it deploys.
+# Deploy Website — GitHub Pages + Shared Hosting (SSH)
 
 name: Deploy Website
 
@@ -13,7 +12,8 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  # Deploy to GitHub Pages
+  deploy-pages:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     environment:
@@ -22,15 +22,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Deploy to shared hosting via SSH/rsync
+  deploy-server:
+    name: Deploy to Shared Hosting
+    runs-on: ubuntu-latest
+    needs: deploy-pages
+    if: vars.SSH_ENABLED == 'true'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via rsync
+        run: |
+          rsync -avz --delete --exclude '.git' --exclude 'node_modules' --exclude 'backend/node_modules' \
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}
