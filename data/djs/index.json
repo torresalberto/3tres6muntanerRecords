@@ -142,6 +142,39 @@
       "image": "https://i.ytimg.com/vi/vy-k0FopsmY/maxresdefault.jpg",
       "social": {"instagram": "https://instagram.com/sethtroxler"},
       "sets": ["seth-troxler-br-mexico-2014"]
+    },
+    {
+      "id": "alex-do",
+      "name": "Alex.Do",
+      "origin": "UK / Berlin",
+      "active_since": 2010,
+      "genres": ["Techno", "Hypnotic Techno", "Dub Techno", "Ambient", "Experimental"],
+      "bio": "Productor y DJ de techno hipn\u00f3tico. Fundador del sello Dystopian. Conocido por sus sets profundos y atmosf\u00e9ricos que fusionan techno, ambient y experimental.",
+      "image": "",
+      "social": {},
+      "sets": ["alex-do-clr-305"]
+    },
+    {
+      "id": "etapp-kyle",
+      "name": "Etapp Kyle",
+      "origin": "Ucrania / Berl\u00edn",
+      "active_since": 2010,
+      "genres": ["Techno", "Hypnotic Techno", "Electro", "Ambient"],
+      "bio": "DJ y productora ucraniana afincada en Berl\u00edn. Figura clave del techno hipn\u00f3tico. Ha tocado en Boiler Room (Berl\u00edn, Kiev), Awakenings y Berghain. Su set en Ballantine's True Music Kiev conecta con nuestra serie.",
+      "image": "",
+      "social": {},
+      "sets": ["etapp-kyle-lot-radio-2023"]
+    },
+    {
+      "id": "call-super",
+      "name": "Call Super",
+      "origin": "UK / Berl\u00edn",
+      "active_since": 2012,
+      "genres": ["House", "Techno", "Electro", "Breaks", "Experimental"],
+      "bio": "Productor y DJ brit\u00e1nico conocido por sus ecl\u00e9cticos sets que cruzan house, techno, electro y experimental. Ha tocado en Boiler Room, Dekmantel y De School. Su estilo vers\u00e1til conecta con m\u00faltiples g\u00e9neros.",
+      "image": "",
+      "social": {},
+      "sets": ["call-super-br-dekmantel-2015"]
     }
   ]
 }

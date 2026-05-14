@@ -1,0 +1,28 @@
+{
+  "id": "call-super-br-dekmantel-2015",
+  "dj_id": "call-super",
+  "title": "Boiler Room x Dekmantel Festival 2015",
+  "venue": "Dekmantel Festival, Amsterdam",
+  "date": "2015-07-31",
+  "youtube_url": "",
+  "youtube_embed_id": "",
+  "duration_minutes": 60,
+  "duration_formatted": "1:00:00",
+  "view_count": 0,
+  "channel": "Boiler Room",
+  "genres": ["House", "Techno", "Electro", "Breaks", "Experimental"],
+  "tracklist": [
+    {"position":1,"artist":"Aubrey","title":"Air Strike","status":"confirmed"},
+    {"position":2,"artist":"Floating Points & Maalem Mahmoud Ghania","title":"Mimoun Marhaba","status":"confirmed"},
+    {"position":3,"artist":"Kings Of Tomorrow","title":"Fade II Black","status":"confirmed"},
+    {"position":4,"artist":"Terrence Dixon","title":"One Bedroom Apartment","status":"confirmed"},
+    {"position":5,"artist":"Boards Of Canada","title":"Transmisiones Ferox","status":"confirmed"},
+    {"position":6,"artist":"Levon Vincent","title":"Double Joint (Part 2)","status":"confirmed"},
+    {"position":7,"artist":"LTJ Bukem","title":"Demons Theme","status":"confirmed"},
+    {"position":8,"artist":"Shed","title":"Shot Rhythm","status":"confirmed"},
+    {"position":9,"artist":"The Field","title":"Over The Ice","status":"confirmed"},
+    {"position":10,"artist":"Siu Mata","title":"Nuna","status":"confirmed"}
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {"total_comments": 0, "confirmed_tracks": 10}
+}

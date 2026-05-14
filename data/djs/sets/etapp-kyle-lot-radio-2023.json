@@ -1,0 +1,24 @@
+{
+  "id": "etapp-kyle-lot-radio-2023",
+  "dj_id": "etapp-kyle",
+  "title": "The Lot Radio New York 2023",
+  "venue": "The Lot Radio, New York",
+  "date": "2023-05-26",
+  "youtube_url": "",
+  "youtube_embed_id": "",
+  "duration_minutes": 60,
+  "duration_formatted": "1:00:00",
+  "view_count": 0,
+  "channel": "The Lot Radio",
+  "genres": ["Techno", "Hypnotic Techno", "Electro", "Ambient"],
+  "tracklist": [
+    {"position":1,"artist":"Speedy J","title":"The FUN Equations","status":"confirmed"},
+    {"position":2,"artist":"Samuli Kemppi","title":"Expand","status":"confirmed"},
+    {"position":3,"artist":"Special Request","title":"237,0000 Miles","status":"confirmed"},
+    {"position":4,"artist":"Galaxy 2 Galaxy","title":"Transition","status":"confirmed"},
+    {"position":5,"artist":"Floating Points","title":"Problems","status":"confirmed"},
+    {"position":6,"artist":"Kareem Lofty","title":"Fr3sh","status":"confirmed"}
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {"total_comments": 0, "confirmed_tracks": 6}
+}
