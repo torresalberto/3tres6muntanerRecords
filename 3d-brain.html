@@ -219,12 +219,12 @@
       { id:'apollonia', name:'Apollonia', genres:['Minimal','Deep House'], color:'#e040fb' }
     ];
 
-    // Connections between DJs (shared genres = connection)
+    // Connections between DJs
     function buildConnections(djs) {
       const edges = [];
       for (let i = 0; i < djs.length; i++) {
         for (let j = i + 1; j < djs.length; j++) {
-          const shared = djs[i].genres.filter(g => djs[j].genres.some(gg => gg.toLowerCase().includes(g.toLowerCase()) || g.toLowerCase().includes(gg.toLowerCase())));
+          const shared = []; // No genre-based connections. Only track cross-references.
           if (shared.length > 0) {
             edges.push({ from: i, to: j, strength: shared.length });
           }
@@ -381,9 +381,6 @@
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(dj.name, canvas.width / 2, canvas.height / 2);
-      ctx.font = '24px Space Grotesk, sans-serif';
-      ctx.fillStyle = 'rgba(255,255,255,0.3)';
-      ctx.fillText(dj.genres.join(' · '), canvas.width / 2, canvas.height / 2 + 45);
 
       const texture = new THREE.CanvasTexture(canvas);
       texture.needsUpdate = true;
@@ -475,8 +472,8 @@
         if (obj.userData.isDJ) {
           const dj = DJ_DATA[obj.userData.djIndex];
           infoTitle.textContent = dj.name;
-          infoDesc.textContent = `DJ / Producer — ${dj.genres.join(', ')}`;
-          infoTags.innerHTML = dj.genres.map(g => `<span class="tag">${g}</span>`).join('');
+          infoDesc.textContent = 'DJ / Producer';
+          infoTags.innerHTML = '';
           infoPanel.classList.add('visible');
           setTimeout(() => infoPanel.classList.remove('visible'), 5000);
         }

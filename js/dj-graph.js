@@ -1,6 +1,6 @@
 /**
  * DJ Relationship Graph — D3.js Force-Directed View
- * Shows connections between DJs via shared tracks, artists, genres, and festivals
+ * Shows connections between DJs via shared tracks
  */
 const DJGraph = {
   graphData: null,
@@ -155,7 +155,7 @@ const DJGraph = {
       .style('pointer-events', 'none')
       .style('text-shadow', '0 1px 3px rgba(0,0,0,0.8)');
 
-    node.append('title').text(d => d.label + (d.genres ? '\n' + d.genres : ''));
+    node.append('title').text(d => d.label);
 
     simulation.on('tick', () => {
       link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)

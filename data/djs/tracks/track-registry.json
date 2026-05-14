@@ -1373,10 +1373,12 @@
       "title": "Can You Feel It (Steve Bug Re-Dub)",
       "artist": "Chez Damier",
       "played_by": [
-        "carl-cox"
+        "carl-cox",
+        "seth-troxler"
       ],
       "sets": [
-        "carl-cox-ibiza-villa"
+        "carl-cox-ibiza-villa",
+        "seth-troxler-via-common"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -1535,10 +1537,14 @@
       "title": "Blue Monday (Original 12 Mix)",
       "artist": "New Order",
       "played_by": [
-        "carl-cox"
+        "carl-cox",
+        "four-tet",
+        "laurent-garnier"
       ],
       "sets": [
-        "carl-cox-ibiza-villa"
+        "carl-cox-ibiza-villa",
+        "four-tet-via-common",
+        "laurent-garnier-via-common"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -1679,10 +1685,12 @@
       "title": "Move Your Body",
       "artist": "Marshall Jefferson",
       "played_by": [
-        "masters-at-work"
+        "masters-at-work",
+        "moodymann"
       ],
       "sets": [
-        "maw-br-london-2014"
+        "maw-br-london-2014",
+        "moodymann-via-common"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -1895,10 +1903,12 @@
       "title": "The Bomb! (Armand Van Helden Re-Edit)",
       "artist": "The Bucketheads",
       "played_by": [
-        "honey-dijon"
+        "honey-dijon",
+        "seth-troxler"
       ],
       "sets": [
-        "honey-dijon-dekmantel-2025"
+        "honey-dijon-dekmantel-2025",
+        "seth-troxler-via-common"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -2039,10 +2049,12 @@
       "title": "Finally",
       "artist": "Kings Of Tomorrow",
       "played_by": [
-        "seth-troxler"
+        "seth-troxler",
+        "honey-dijon"
       ],
       "sets": [
-        "seth-troxler-br-mexico-2014"
+        "seth-troxler-br-mexico-2014",
+        "honey-dijon-via-common"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -3125,10 +3137,12 @@
       "title": "Special (Timmy Regisford Remix)",
       "artist": "Peven Everett",
       "played_by": [
-        "kerri-chandler"
+        "kerri-chandler",
+        "honey-dijon"
       ],
       "sets": [
-        "kerri-chandler-br-nyc-2022"
+        "kerri-chandler-br-nyc-2022",
+        "honey-dijon-via-common"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -5545,7 +5559,7 @@
   ],
   "stats": {
     "total_tracks": 307,
-    "cross_referenced": 6,
+    "cross_referenced": 12,
     "dj_count": 29
   }
 }

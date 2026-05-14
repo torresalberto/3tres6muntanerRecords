@@ -51,7 +51,6 @@ const DJLibrary = {
               <div class="dj-info">
                 <h2>${dj.name}</h2>
                 <div class="dj-meta"><span>${dj.origin || ''}</span>${dj.active_since ? `<span>•</span><span>Since ${dj.active_since}</span>` : ''}<span>•</span><span>${setCount} set${setCount !== 1 ? 's' : ''}</span></div>
-                <div class="dj-genres">${(dj.genres || []).map(g => `<span class="genre-tag">${g}</span>`).join('')}</div>
                 <p class="dj-bio">${dj.bio || ''}</p>
               </div>
             </div>
