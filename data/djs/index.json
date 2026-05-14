@@ -6,14 +6,43 @@
       "origin": "New Zealand",
       "active_since": 2012,
       "genres": ["Deep House", "Afro House", "Acid House", "Disco", "Boogie"],
-      "bio": "Hermano dúo neozelandés (Louie y Ben) conocido por sus sets profundos que mezclan house, acid, afro y disco. Residentes de Rhythm Section y fundadores del sello In Dust We Trust. Han tocado en Djoon, Boiler Room y festivales globales.",
+      "bio": "Hermano d\u00fao neozeland\u00e9s (Louie y Ben) conocido por sus sets profundos que mezclan house, acid, afro y disco. Residentes de Rhythm Section y fundadores del sello In Dust We Trust.",
       "image": "https://i.ytimg.com/vi/mzUPU4QpWG4/maxresdefault.jpg",
-      "social": {
-        "soundcloud": "https://soundcloud.com/chaosinthecbd",
-        "instagram": "https://instagram.com/chaosinthecbd",
-        "discogs": "https://www.discogs.com/artist/3270072-Chaos-In-The-CBD"
-      },
+      "social": {"soundcloud": "https://soundcloud.com/chaosinthecbd", "instagram": "https://instagram.com/chaosinthecbd", "discogs": "https://www.discogs.com/artist/3270072-Chaos-In-The-CBD"},
       "sets": ["chaos-in-the-cbd-ballantines-lebanon"]
+    },
+    {
+      "id": "palms-trax",
+      "name": "Palms Trax",
+      "origin": "UK / Berlin",
+      "active_since": 2015,
+      "genres": ["House", "Deep House", "Disco", "Balearic", "Breakbeat"],
+      "bio": "Productor y DJ londinense afincado en Berl\u00edn. Conocido por sus ecl\u00e9cticos sets que mezclan house, disco, balearic y breakbeat. Residentes del sello Dekmantel y habitual del festival.",
+      "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/palmstrax", "soundcloud": "https://soundcloud.com/palmstrax"},
+      "sets": ["palms-trax-dekmantel-2018", "palms-trax-dekmantel-2024"]
+    },
+    {
+      "id": "laurent-garnier",
+      "name": "Laurent Garnier",
+      "origin": "Francia",
+      "active_since": 1987,
+      "genres": ["House", "Techno", "Deep House", "French Touch", "Jazz"],
+      "bio": "Leyenda de la m\u00fasica electr\u00f3nica francesa. Fundador de F-Communications. Con m\u00e1s de 30 a\u00f1os de carrera, es uno de los DJs m\u00e1s respetados del mundo, conocido por sus marat\u00f3nicos sets de hasta 6 horas.",
+      "image": "https://i.ytimg.com/vi/WG35-7LpIAc/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/laurentgarnierofficial", "soundcloud": "https://soundcloud.com/laurent-garnier"},
+      "sets": ["laurent-garnier-br-lyon"]
+    },
+    {
+      "id": "frankie-knuckles",
+      "name": "Frankie Knuckles",
+      "origin": "Chicago / New York",
+      "active_since": 1977,
+      "genres": ["House", "Classic House", "Soulful House", "Disco", "Garage"],
+      "bio": "El Padrino de la House Music. Su residencia en The Warehouse en Chicago dio nombre al g\u00e9nero. Ganador del Grammy, pionero y leyenda absoluta. Falleci\u00f3 en 2014 dejando un legado imborrable.",
+      "image": "https://i.ytimg.com/vi/644UU55eyzk/maxresdefault.jpg",
+      "social": {"discogs": "https://www.discogs.com/artist/2456-Frankie-Knuckles"},
+      "sets": ["frankie-knuckles-br-nyc", "frankie-knuckles-session-2015"]
     }
   ]
 }

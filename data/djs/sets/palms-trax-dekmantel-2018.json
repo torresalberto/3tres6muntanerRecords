@@ -1,0 +1,23 @@
+{
+  "id": "palms-trax-dekmantel-2018",
+  "dj_id": "palms-trax",
+  "title": "Boiler Room x Dekmantel Festival 2018",
+  "venue": "Dekmantel Festival, Amsterdam",
+  "date": "2018-08-03",
+  "youtube_url": "https://www.youtube.com/watch?v=fVlVZTHmkaw",
+  "youtube_embed_id": "fVlVZTHmkaw",
+  "duration_minutes": 58,
+  "duration_formatted": "57:39",
+  "view_count": 1700000,
+  "channel": "Boiler Room",
+  "genres": ["House", "Deep House", "Disco", "Balearic"],
+  "tracklist": [],
+  "most_requested_ids": [
+    {"timestamp": "37:00", "request_count": 1, "sample_comments": ["37:00 track id ?"], "status": "unidentified"}
+  ],
+  "curious_facts": {
+    "total_comments": 644,
+    "track_relevant_comments": 5,
+    "unidentified_tracks": 1
+  }
+}

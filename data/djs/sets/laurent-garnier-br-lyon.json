@@ -1,0 +1,27 @@
+{
+  "id": "laurent-garnier-br-lyon",
+  "dj_id": "laurent-garnier",
+  "title": "Boiler Room Lyon DJ Set",
+  "venue": "Lyon, France",
+  "date": "2015-08-28",
+  "youtube_url": "https://www.youtube.com/watch?v=WG35-7LpIAc",
+  "youtube_embed_id": "WG35-7LpIAc",
+  "duration_minutes": 175,
+  "duration_formatted": "2:54:49",
+  "view_count": 1900000,
+  "channel": "Boiler Room",
+  "genres": ["House", "Techno", "Deep House", "French Touch"],
+  "tracklist": [],
+  "most_requested_ids": [
+    {"timestamp": "1:00:00", "request_count": 3, "sample_comments": ["1:00:00 track id anyone?"], "status": "unidentified"},
+    {"timestamp": "1:02:41", "request_count": 3, "sample_comments": ["1:02:41 what is this track?"], "status": "unidentified"},
+    {"timestamp": "2:01:46", "request_count": 2, "sample_comments": ["2:01:46 absolute tune!"], "status": "unidentified"},
+    {"timestamp": "59:00", "request_count": 1, "sample_comments": ["59:00 track id please"], "status": "unidentified"},
+    {"timestamp": "1:02:00", "request_count": 1, "sample_comments": ["need 1:02:00 pls"], "status": "unidentified"}
+  ],
+  "curious_facts": {
+    "total_comments": 1157,
+    "track_relevant_comments": 40,
+    "unidentified_tracks": 10
+  }
+}
