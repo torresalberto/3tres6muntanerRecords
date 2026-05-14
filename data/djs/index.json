@@ -757,6 +757,18 @@
       "sets": [
         "rey-colino-br"
       ]
+    },
+    {
+      "id": "cassius",
+      "name": "Cassius",
+      "origin": "Paris, France",
+      "active_since": 1999,
+      "bio": "Dúo francés fundado por Philippe Zdar (RIP) y Boom Bass. Pioneros del French Touch con himnos como I Love You So y 1999. Su set en Cercle (Château de Champs-sur-Marne) muestra 23 tracks en los comentarios.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "cassius-cercle-2017"
+      ]
     }
   ]
 }
