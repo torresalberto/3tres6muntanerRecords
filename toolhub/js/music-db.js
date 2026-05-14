@@ -146,6 +146,19 @@ const MusicDB = {
       features: ["granada", "balearic", "name your price", "summer vibes", "spanish producer"],
       color: "#ffab00"
     },
+    {
+      id: "planet-ibiza",
+      name: "Planet Ibiza \u2014 Free Downloads",
+      url: "https://magazine.planetibiza.net/free-download/",
+      description: "Colecci\u00f3n curada de tracks balearics, deep house, organic house y remixes \u00edbicos. Descarga gratuita directa desde SoundCloud. Vibra Ibicenca aut\u00e9ntica.",
+      genres: ["balearic", "deep house", "organic house", "downtempo", "melodic techno"],
+      formats: ["MP3"],
+      quality: "Variable (SoundCloud)",
+      tier: 1,
+      tierLabel: "Best",
+      features: ["balearic", "ibiza vibes", "free downloads", "curated selection", "edits & remixes"],
+      color: "#ff6f91"
+    },
 
     // ==================== SPECIALIZED EUROPEAN NETLABELS ====================
     {
