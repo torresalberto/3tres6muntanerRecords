@@ -1,43 +1,1647 @@
 {
   "tracks": [
     {
-      "id": "unknown-28-30",
-      "title": "Unknown Track",
-      "artist": "Unknown",
-      "timestamp_appearances": [
-        {"set_id": "chaos-in-the-cbd-ballantines-lebanon", "timestamp": "28:30"}
+      "id": "mood-ii-swing--wall-of-sound-i-need-your-luv-church-mix",
+      "title": "I Need Your Luv (Church Mix)",
+      "artist": "Mood II Swing & Wall Of Sound",
+      "played_by": [
+        "palms-trax"
       ],
-      "played_by": ["chaos-in-the-cbd"],
-      "status": "unidentified",
-      "request_count": 5
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "00"
+        }
+      ]
     },
     {
-      "id": "unknown-37-50",
-      "title": "Unknown Track",
-      "artist": "Unknown",
-      "timestamp_appearances": [
-        {"set_id": "chaos-in-the-cbd-ballantines-lebanon", "timestamp": "37:50"}
+      "id": "dj-antoine-the-disco-bassline-real-disco-bassline-mix",
+      "title": "The Disco Bassline (Real Disco Bassline Mix)",
+      "artist": "DJ Antoine",
+      "played_by": [
+        "palms-trax"
       ],
-      "played_by": ["chaos-in-the-cbd"],
-      "status": "unidentified",
-      "request_count": 4
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "02"
+        }
+      ]
     },
     {
-      "id": "unknown-18-58",
-      "title": "Unknown Track",
-      "artist": "Unknown",
-      "timestamp_appearances": [
-        {"set_id": "chaos-in-the-cbd-ballantines-lebanon", "timestamp": "18:58"}
+      "id": "joeski-dia-de-ayer-extended-mix",
+      "title": "Dia De Ayer (Extended Mix)",
+      "artist": "Joeski",
+      "played_by": [
+        "palms-trax"
       ],
-      "played_by": ["chaos-in-the-cbd"],
-      "status": "unidentified",
-      "request_count": 3
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "12"
+        }
+      ]
+    },
+    {
+      "id": "club-royale-groove-4-joy",
+      "title": "Groove 4 Joy",
+      "artist": "Club Royale",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "24"
+        }
+      ]
+    },
+    {
+      "id": "gilberto-da-samba-club-mix",
+      "title": "Da Samba (Club Mix)",
+      "artist": "Gilberto",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "43"
+        }
+      ]
+    },
+    {
+      "id": "mr-jay-the-love",
+      "title": "The Love",
+      "artist": "Mr. Jay",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "47"
+        }
+      ]
+    },
+    {
+      "id": "borai--denham-audio-make-me-paul-sirrell-remix",
+      "title": "Make Me (Paul Sirrell Remix)",
+      "artist": "Borai & Denham Audio",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "66"
+        }
+      ]
+    },
+    {
+      "id": "the-grid-diablo-the-devil-rides-out-mix",
+      "title": "Diablo (The Devil Rides Out Mix)",
+      "artist": "The Grid",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "79"
+        }
+      ]
+    },
+    {
+      "id": "dj-flavours-your-caress-all-i-need-open-arms-remix",
+      "title": "Your Caress (All I Need) (Open Arms Remix)",
+      "artist": "DJ Flavours",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "84"
+        }
+      ]
+    },
+    {
+      "id": "x-press-2-smoke-machine",
+      "title": "Smoke Machine",
+      "artist": "X-Press 2",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "93"
+        }
+      ]
+    },
+    {
+      "id": "sam-alfred-feel-the-friction-alfredo-mix",
+      "title": "Feel The Friction (Alfredo Mix)",
+      "artist": "Sam Alfred",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "palms-trax-dekmantel-2024",
+          "timestamp": "108"
+        }
+      ]
+    },
+    {
+      "id": "frankie-knuckles-lets-stay-home-directors-cut-classic-mix",
+      "title": "Let's Stay Home (Director's Cut Classic Mix)",
+      "artist": "Frankie Knuckles",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "58"
+        }
+      ]
+    },
+    {
+      "id": "erick-morillo-harry-romero--jose-nunez-feat-shawnee-taylor-m",
+      "title": "My Melody (Morillo & Romero Dirty Mix)",
+      "artist": "Erick Morillo, Harry Romero & Jose Nunez feat. Shawnee Taylor",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "53"
+        }
+      ]
+    },
+    {
+      "id": "the-layabouts-feat-portia-monique-bring-me-joy-directors-cut",
+      "title": "Bring Me Joy (Directors Cut Remix)",
+      "artist": "The Layabouts feat. Portia Monique",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "47"
+        }
+      ]
+    },
+    {
+      "id": "joey-negro--the-sunburst-band--diane-charlemagne-the-secret-",
+      "title": "The Secret Life Of Us (Director's Cut Signature Mix)",
+      "artist": "Joey Negro & The Sunburst Band & Diane Charlemagne",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "40"
+        }
+      ]
+    },
+    {
+      "id": "joe-smooth-feat-paris-brightledge-we-gotta-love-directors-cu",
+      "title": "We Gotta Love (Director's Cut Signature Mix)",
+      "artist": "Joe Smooth feat. Paris Brightledge",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "32"
+        }
+      ]
+    },
+    {
+      "id": "phunk-investigation-your-love-instrumental-simulator-mix",
+      "title": "Your Love (Instrumental Simulator Mix)",
+      "artist": "Phunk Investigation",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "27"
+        }
+      ]
+    },
+    {
+      "id": "frankie-knuckles-pres-directors-cut-feat-b-slade-get-over-u-",
+      "title": "Get Over U (Rober Gaez 'Mustache' Mix)",
+      "artist": "Frankie Knuckles Pres. Directors Cut feat. B Slade",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "22"
+        }
+      ]
+    },
+    {
+      "id": "frankie-knuckles-pres-directors-cut-bourgie-bourgie-a-direct",
+      "title": "Bourgie Bourgie (A Director's Cut Exclusive)",
+      "artist": "Frankie Knuckles Pres. Director's Cut",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "15"
+        }
+      ]
+    },
+    {
+      "id": "marko-militano-feat-darren-barrett-good-people-a-directors-c",
+      "title": "Good People (A Director's Cut Master Exclusive)",
+      "artist": "Marko Militano feat. Darren Barrett",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "07"
+        }
+      ]
+    },
+    {
+      "id": "dbow-get-involved-directors-cut-mix",
+      "title": "Get Involved (Director's Cut Mix)",
+      "artist": "Dbow",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "frankie-knuckles-br-nyc",
+          "timestamp": "00"
+        }
+      ]
+    },
+    {
+      "id": "5volts-opencluster",
+      "title": "Opencluster",
+      "artist": "5volts",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "000"
+        }
+      ]
+    },
+    {
+      "id": "redspecs-absent",
+      "title": "Absent",
+      "artist": "Redspecs",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "007"
+        }
+      ]
+    },
+    {
+      "id": "rodriguez-jr-kenopsia",
+      "title": "Kenopsia",
+      "artist": "Rodriguez Jr.",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "0??"
+        }
+      ]
+    },
+    {
+      "id": "mandy-gizmo-monoloc-remix",
+      "title": "Gizmo (Monoloc Remix)",
+      "artist": "M.A.N.D.Y.",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "020"
+        }
+      ]
+    },
+    {
+      "id": "marc-romboy-vs-blake-baxter-follow-the-sound-version-1",
+      "title": "Follow The Sound (Version 1)",
+      "artist": "Marc Romboy vs. Blake Baxter",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "023"
+        }
+      ]
+    },
+    {
+      "id": "stephan-bodzin-lx-marc-romboy-lost-in-leploops-remix",
+      "title": "Lx (Marc Romboy Lost In Leploops Remix)",
+      "artist": "Stephan Bodzin",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "0??"
+        }
+      ]
+    },
+    {
+      "id": "maceo-plex-solar-detroit",
+      "title": "Solar Detroit",
+      "artist": "Maceo Plex",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "035"
+        }
+      ]
+    },
+    {
+      "id": "trikk-firma",
+      "title": "Firma",
+      "artist": "Trikk",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "041"
+        }
+      ]
+    },
+    {
+      "id": "tripmastaz-grindin",
+      "title": "Grindin",
+      "artist": "Tripmastaz",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "0??"
+        }
+      ]
+    },
+    {
+      "id": "mr-g-newmerique-mango-boys-sunday-dub",
+      "title": "Newmerique (Mango Boys Sunday Dub)",
+      "artist": "Mr. G",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "0??"
+        }
+      ]
+    },
+    {
+      "id": "amy-winehouse-valerie-andy-cato-pack-up-and-dance-remix",
+      "title": "Valerie (Andy Cato Pack Up And Dance Remix)",
+      "artist": "Amy Winehouse",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "0??"
+        }
+      ]
+    },
+    {
+      "id": "après-chicago-club-edit",
+      "title": "Chicago (Club Edit)",
+      "artist": "Après",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "059"
+        }
+      ]
+    },
+    {
+      "id": "julian-jabre-war",
+      "title": "War",
+      "artist": "Julian Jabre",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "064"
+        }
+      ]
+    },
+    {
+      "id": "copy-paste-soul-home",
+      "title": "Home",
+      "artist": "Copy Paste Soul",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "067"
+        }
+      ]
+    },
+    {
+      "id": "kölsch-feat-gregor-schwellenbach-the-road",
+      "title": "The Road",
+      "artist": "Kölsch feat. Gregor Schwellenbach",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "073"
+        }
+      ]
+    },
+    {
+      "id": "sébastien-léger-soldier",
+      "title": "Soldier",
+      "artist": "Sébastien Léger",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "080"
+        }
+      ]
+    },
+    {
+      "id": "guy-gerber--chaim-myspace",
+      "title": "Myspace",
+      "artist": "Guy Gerber & Chaim",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "086"
+        }
+      ]
+    },
+    {
+      "id": "joao-ceser-5th-dimension",
+      "title": "5th Dimension",
+      "artist": "Joao Ceser",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "091"
+        }
+      ]
+    },
+    {
+      "id": "trunkline-1st-shoot-clave-tool-mix",
+      "title": "1st Shoot (Clave Tool Mix)",
+      "artist": "Trunkline",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "095"
+        }
+      ]
+    },
+    {
+      "id": "jan-driver-filter",
+      "title": "Filter",
+      "artist": "Jan Driver",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "103"
+        }
+      ]
+    },
+    {
+      "id": "dj-rush-look--see-daniel-boon--marco-remus-remix",
+      "title": "Look & See (Daniel Boon & Marco Remus Remix)",
+      "artist": "DJ Rush",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "107"
+        }
+      ]
+    },
+    {
+      "id": "geeeman-wanna-go-bang",
+      "title": "Wanna Go Bang",
+      "artist": "Geeeman",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "109"
+        }
+      ]
+    },
+    {
+      "id": "thomas-bangalter-what-to-do-id-remix",
+      "title": "What To Do (ID Remix)",
+      "artist": "Thomas Bangalter",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "1??"
+        }
+      ]
+    },
+    {
+      "id": "kissy-sell-out-feat-holly-lois-tell-you-jay-robinson-remix",
+      "title": "Tell You (Jay Robinson Remix)",
+      "artist": "Kissy Sell Out feat. Holly Lois",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "120"
+        }
+      ]
+    },
+    {
+      "id": "jay-robinson-carnage",
+      "title": "Carnage",
+      "artist": "Jay Robinson",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "123"
+        }
+      ]
+    },
+    {
+      "id": "distro-east-side",
+      "title": "East Side",
+      "artist": "Distro",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "130"
+        }
+      ]
+    },
+    {
+      "id": "corticyte-modulate",
+      "title": "Modulate",
+      "artist": "Corticyte",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "134"
+        }
+      ]
+    },
+    {
+      "id": "agents-of-time-emperor",
+      "title": "Emperor",
+      "artist": "Agents Of Time",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "139"
+        }
+      ]
+    },
+    {
+      "id": "hackman-semibreves-epiphylogenetically-enumerated-reset-by-k",
+      "title": "Semibreves (Epiphylogenetically Enumerated Reset By KiNK)",
+      "artist": "Hackman",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "143"
+        }
+      ]
+    },
+    {
+      "id": "copy-paste-soul-voyager",
+      "title": "Voyager",
+      "artist": "Copy Paste Soul",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "1??"
+        }
+      ]
+    },
+    {
+      "id": "oniris-daylight",
+      "title": "Daylight",
+      "artist": "Oniris",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "157"
+        }
+      ]
+    },
+    {
+      "id": "laurent-garnier-feat-the-lbs-crew-our-futur-loud-disco-mix",
+      "title": "Our Futur (Loud Disco Mix)",
+      "artist": "Laurent Garnier feat. The Lbs Crew",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "162"
+        }
+      ]
+    },
+    {
+      "id": "cerrone-supernature",
+      "title": "Supernature",
+      "artist": "Cerrone",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "laurent-garnier-br-lyon",
+          "timestamp": "169"
+        }
+      ]
+    },
+    {
+      "id": "fairouz-ma-kedert-neseet",
+      "title": "Ma Kedert Neseet",
+      "artist": "Fairouz",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "010"
+        }
+      ]
+    },
+    {
+      "id": "renaissance-ensemble-pourque-les-fruits-murissent-cet-été",
+      "title": "Pourque Les Fruits Murissent Cet Été",
+      "artist": "Renaissance Ensemble",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "014"
+        }
+      ]
+    },
+    {
+      "id": "the-ba-benzele-pygmies-hindewhu-whistle-solo",
+      "title": "Hindewhu (Whistle Solo)",
+      "artist": "The Ba-Benzele Pygmies",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "017"
+        }
+      ]
+    },
+    {
+      "id": "maxime-denuc-ouverture",
+      "title": "Ouverture",
+      "artist": "Maxime Denuc",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "019"
+        }
+      ]
+    },
+    {
+      "id": "agitation-free-rucksturz",
+      "title": "Rucksturz",
+      "artist": "Agitation Free",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "023"
+        }
+      ]
+    },
+    {
+      "id": "angie-stone-everyday",
+      "title": "Everyday",
+      "artist": "Angie Stone",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "025"
+        }
+      ]
+    },
+    {
+      "id": "dee-edwards-i-can-deal-with-that",
+      "title": "(I Can) Deal With That",
+      "artist": "Dee Edwards",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "028"
+        }
+      ]
+    },
+    {
+      "id": "pure-pleasure-by-my-side",
+      "title": "By My Side",
+      "artist": "Pure Pleasure",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "031"
+        }
+      ]
+    },
+    {
+      "id": "crystal-clear-stay-with-me",
+      "title": "Stay With Me",
+      "artist": "Crystal Clear",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "034"
+        }
+      ]
+    },
+    {
+      "id": "jc-lodge-between-the-sheets",
+      "title": "Between The Sheets",
+      "artist": "JC Lodge",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "038"
+        }
+      ]
+    },
+    {
+      "id": "chevelle-franklin-real-love",
+      "title": "Real Love",
+      "artist": "Chevelle Franklin",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "041"
+        }
+      ]
+    },
+    {
+      "id": "tiffany-villarreal-you-yourself--you",
+      "title": "You, Yourself & You",
+      "artist": "Tiffany Villarreal",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "044"
+        }
+      ]
+    },
+    {
+      "id": "melvin-sparks-aint-no-woman",
+      "title": "Ain't No Woman",
+      "artist": "Melvin Sparks",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "047"
+        }
+      ]
+    },
+    {
+      "id": "conjunto-los-tic-tac-el-carreton",
+      "title": "El Carreton",
+      "artist": "Conjunto Los Tic Tac",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "050"
+        }
+      ]
+    },
+    {
+      "id": "joao-bosco-a-nível-de",
+      "title": "A Nível De…",
+      "artist": "Joao Bosco",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "052"
+        }
+      ]
+    },
+    {
+      "id": "joão-donato-xangô-é-de-baê",
+      "title": "Xangô É De Baê",
+      "artist": "João Donato",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "056"
+        }
+      ]
+    },
+    {
+      "id": "paulo-jeronimo-vida-agitada",
+      "title": "Vida Agitada",
+      "artist": "Paulo Jeronimo",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "059"
+        }
+      ]
+    },
+    {
+      "id": "allure-feat-az--tone-head-over",
+      "title": "Head Over",
+      "artist": "Allure feat. Az & Tone",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "062"
+        }
+      ]
+    },
+    {
+      "id": "maurice-moore-everything-that-shines",
+      "title": "Everything That Shines",
+      "artist": "Maurice Moore",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "065"
+        }
+      ]
+    },
+    {
+      "id": "scott-grooves-la-ridd",
+      "title": "La Ridd",
+      "artist": "Scott Grooves",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "090"
+        }
+      ]
+    },
+    {
+      "id": "floating-points-fast-forward",
+      "title": "Fast Forward",
+      "artist": "Floating Points",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "floating-points-br-nyc-5hr",
+          "timestamp": "124"
+        }
+      ]
+    },
+    {
+      "id": "x-press-2-feat-james-yuill-muzik-xpress",
+      "title": "Muzik Xpress",
+      "artist": "X-Press 2 feat. James Yuill",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "chez-damier-can-you-feel-it-steve-bug-re-dub",
+      "title": "Can You Feel It (Steve Bug Re-Dub)",
+      "artist": "Chez Damier",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "sergio-fernandez-carioca",
+      "title": "Carioca",
+      "artist": "Sergio Fernandez",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "elio-riso-pain-in-the-ass",
+      "title": "Pain In The Ass",
+      "artist": "Elio Riso",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "round-table-knights--bauchamp-calypso",
+      "title": "Calypso",
+      "artist": "Round Table Knights & Bauchamp",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "joe-brunning-positive-vibes",
+      "title": "Positive Vibes",
+      "artist": "Joe Brunning",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "the-rivera-project-puerto-rico-vibe-robbie-rivera-original-m",
+      "title": "Puerto Rico Vibe (Robbie Rivera Original Mix)",
+      "artist": "The Rivera Project",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jim-rivers-we-can-do-this-all-night",
+      "title": "We Can Do This All Night",
+      "artist": "Jim Rivers",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "trevor-rockcliffe-jumping-deep-house-mix",
+      "title": "Jumping (Deep House Mix)",
+      "artist": "Trevor Rockcliffe",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "stefano-frisoni-el-nino-loco-turkana-remix",
+      "title": "El Nino Loco (Turkana Remix)",
+      "artist": "Stefano Frisoni",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "new-order-blue-monday-original-12-mix",
+      "title": "Blue Monday (Original 12 Mix)",
+      "artist": "New Order",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "carl-cox-ibiza-villa",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "sonny-jenkins--ny-potpourri-strings-that-friday-pay-part-1",
+      "title": "That Friday Pay (Part 1)",
+      "artist": "Sonny Jenkins + NY Potpourri Strings",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mcde-dekmantel-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "logg-dancing-into-the-stars-john-morales-remix",
+      "title": "Dancing Into The Stars (John Morales Remix)",
+      "artist": "Logg",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mcde-dekmantel-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "andrés-just-a-player",
+      "title": "Just A Player",
+      "artist": "Andrés",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mcde-dekmantel-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "bileo-you-can-win",
+      "title": "You Can Win",
+      "artist": "Bileo",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mcde-dekmantel-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "peven-everett-put-your-back-into-it",
+      "title": "Put Your Back Into It",
+      "artist": "Peven Everett",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mcde-dekmantel-2014",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 3,
-    "unidentified": 3,
-    "confirmed": 0,
-    "most_requested": "unknown-28-30"
+    "total_tracks": 91,
+    "cross_referenced": 0,
+    "dj_count": 6
   }
 }

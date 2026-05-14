@@ -1,0 +1,29 @@
+{
+  "id": "carl-cox-ibiza-villa",
+  "dj_id": "carl-cox",
+  "title": "Boiler Room Ibiza Villa Takeovers",
+  "venue": "Ibiza Villa Takeovers, Ibiza",
+  "date": "2013-08-15",
+  "youtube_url": "https://www.youtube.com/watch?v=vy-k0FopsmY",
+  "youtube_embed_id": "vy-k0FopsmY",
+  "duration_minutes": 44,
+  "duration_formatted": "44:09",
+  "view_count": 169000,
+  "channel": "Boiler Room",
+  "genres": ["Tech House", "House", "Techno", "Classic House"],
+  "tracklist": [
+    {"position": 1, "timestamp": "0:00", "artist": "X-Press 2 feat. James Yuill", "title": "Muzik Xpress", "status": "confirmed"},
+    {"position": 2, "timestamp": "1:11", "artist": "Chez Damier", "title": "Can You Feel It (Steve Bug Re-Dub)", "status": "confirmed"},
+    {"position": 3, "timestamp": "5:17", "artist": "Sergio Fernandez", "title": "Carioca", "status": "confirmed"},
+    {"position": 4, "timestamp": "7:05", "artist": "Elio Riso", "title": "Pain In The Ass", "status": "confirmed"},
+    {"position": 5, "timestamp": "11:43", "artist": "Round Table Knights & Bauchamp", "title": "Calypso", "status": "confirmed"},
+    {"position": 6, "timestamp": "16:14", "artist": "Joe Brunning", "title": "Positive Vibes", "status": "confirmed"},
+    {"position": 7, "timestamp": "19:44", "artist": "The Rivera Project", "title": "Puerto Rico Vibe (Robbie Rivera Original Mix)", "status": "confirmed"},
+    {"position": 8, "timestamp": "23:00", "artist": "Jim Rivers", "title": "We Can Do This All Night", "status": "confirmed"},
+    {"position": 9, "timestamp": "25:08", "artist": "Trevor Rockcliffe", "title": "Jumping (Deep House Mix)", "status": "confirmed"},
+    {"position": 10, "timestamp": "29:40", "artist": "Stefano Frisoni", "title": "El Nino Loco (Turkana Remix)", "status": "confirmed"},
+    {"position": 11, "timestamp": "31:38", "artist": "New Order", "title": "Blue Monday (Original 12 Mix)", "status": "confirmed"}
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {"total_comments": 0, "track_relevant_comments": 0, "confirmed_tracks": 11}
+}
