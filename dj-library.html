@@ -532,6 +532,7 @@
           <a href="blog.html" class="nav-item">BLOG</a>
           <a href="/#nosotros" class="nav-item">NOSOTROS</a>
           <a href="dj-library.html" class="nav-item active">DJ LIBRARY</a>
+          <a href="#djGraph" class="nav-item">GRAPH</a>
           <a href="/toolhub/" class="nav-item">DESCARGAS</a>
         </nav>
       </div>
@@ -802,6 +803,24 @@
         </div>
       </section>
 
+    <!-- DJ Relationship Graph -->
+    <section class="dj-profile-section" id="djGraph">
+      <div class="dj-profile-card">
+        <div class="section-label" style="padding:2rem 3rem 0">\ud83d\udd0d Mapa de Conexiones</div>
+        <div style="padding:0 3rem 1rem;color:rgba(255,255,255,0.5);font-size:0.85rem">
+          Visualiza las conexiones entre DJs, sus sets y los tracks compartidos. Arrastra los nodos para explorar.
+        </div>
+        <div id="djGraphContainer" style="min-height:500px;width:100%;padding:0 1rem 2rem">
+          <div style="display:flex;align-items:center;justify-content:center;height:500px;color:rgba(255,255,255,0.2)">
+            <div style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:0.5rem">\ud83d\udd0d</div>
+              <div>Cargando grafo de conexiones...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
       <div class="footer-container">
@@ -940,5 +959,7 @@
       renderRequestedIds();
       renderFacts();
     </script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/dj-graph.js"></script>
   </body>
 </html>
