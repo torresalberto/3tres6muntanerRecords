@@ -665,6 +665,42 @@
       "sets": [
         "joy-orbison-various"
       ]
+    },
+    {
+      "id": "larry-heard",
+      "name": "Larry Heard (Mr. Fingers)",
+      "origin": "Chicago, USA",
+      "active_since": 1985,
+      "bio": "El padrino del deep house. Como Mr. Fingers, creó himnos como ‘Can You Feel It’ y ‘Mystery Of Love’. Su música define el sonido de Chicago.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "joe-claussell",
+      "name": "Joe Claussell",
+      "origin": "New York / Puerto Rico",
+      "active_since": 1993,
+      "bio": "DJ, productor y sello discográfico (Sacred Rhythm). Conocido por su estilo espiritual que fusiona house, jazz, áfrica y latín. Uno de los mejores selectors del mundo.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ]
+    },
+    {
+      "id": "shonky",
+      "name": "Shonky",
+      "origin": "Francia",
+      "active_since": 2005,
+      "bio": "Miembro de Apollonia junto a Dan Ghenacia y Dyed Soundorom. DJ y productor francés de minimal house y tech house con un estilo único y reconocible.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ]
     }
   ]
 }

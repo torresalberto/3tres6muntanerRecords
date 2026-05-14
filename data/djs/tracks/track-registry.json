@@ -1777,10 +1777,12 @@
       "title": "Dance",
       "artist": "Earth People",
       "played_by": [
-        "masters-at-work"
+        "masters-at-work",
+        "joe-claussell"
       ],
       "sets": [
-        "maw-br-london-2014"
+        "maw-br-london-2014",
+        "joe-claussell-br-paris-2014"
       ],
       "status": "confirmed",
       "timestamp_appearances": [
@@ -5555,11 +5557,245 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "ron-trent-feat-robert-owens-deep-down-fingers-remix",
+      "title": "Deep Down (Fingers Remix)",
+      "artist": "Ron Trent feat. Robert Owens",
+      "played_by": [
+        "larry-heard"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "larry-heard-mr-fingers-mix-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "levon-vincent-man-or-mistress",
+      "title": "Man Or Mistress",
+      "artist": "Levon Vincent",
+      "played_by": [
+        "larry-heard"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "larry-heard-mr-fingers-mix-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "osunlade-april",
+      "title": "April",
+      "artist": "Osunlade",
+      "played_by": [
+        "larry-heard"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "larry-heard-mr-fingers-mix-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "terrence-parker-your-love",
+      "title": "Your Love",
+      "artist": "Terrence Parker",
+      "played_by": [
+        "larry-heard"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "larry-heard-mr-fingers-mix-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mr-fingers-can-you-feel-it",
+      "title": "Can You Feel It",
+      "artist": "Mr. Fingers",
+      "played_by": [
+        "larry-heard"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "larry-heard-mr-fingers-mix-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mr-fingers-mystery-of-love",
+      "title": "Mystery Of Love",
+      "artist": "Mr. Fingers",
+      "played_by": [
+        "larry-heard"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "larry-heard-mr-fingers-mix-2012",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "ron-trent-feat-tkumah-sadeek-in-time",
+      "title": "In Time",
+      "artist": "Ron Trent feat. Tkumah Sadeek",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-paris-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "lil-louis-feat-chinahblac-fable-frankie-knuckles-directors-c",
+      "title": "Fable (Frankie Knuckles Directors Cut Classic Club Mix)",
+      "artist": "Lil Louis feat. ChinahBlac",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-paris-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "chez-n-trent-the-choice-windy-city-club",
+      "title": "The Choice (Windy City Club)",
+      "artist": "Chez N Trent",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-paris-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "david-morales-believe-dj-spen--michele-chiavarini-remix",
+      "title": "Believe (DJ Spen & Michele Chiavarini Remix)",
+      "artist": "David Morales",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joe-claussell-br-paris-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "green-velvet-flash-danny-tenaglia-nitrous-oxide-mix",
+      "title": "Flash (Danny Tenaglia Nitrous Oxide Mix)",
+      "artist": "Green Velvet",
+      "played_by": [
+        "shonky"
+      ],
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "shonky-b2b-dan-ghenacia-ibiza-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "kings-of-tomorrow-i-want-you-for-myself-kot-ruff-mix",
+      "title": "I Want You (For Myself) (KOT Ruff Mix)",
+      "artist": "Kings Of Tomorrow",
+      "played_by": [
+        "shonky"
+      ],
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "shonky-b2b-dan-ghenacia-ibiza-2014",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "paperclip-people-throw-slam-rtm-remix",
+      "title": "Throw (Slam RTM Remix)",
+      "artist": "Paperclip People",
+      "played_by": [
+        "shonky"
+      ],
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "shonky-b2b-dan-ghenacia-ibiza-2014",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 307,
-    "cross_referenced": 12,
-    "dj_count": 29
+    "total_tracks": 320,
+    "cross_referenced": 13,
+    "dj_count": 32
   }
 }
