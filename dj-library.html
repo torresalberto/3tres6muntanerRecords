@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>DJ Library | 3TRES6 Records — Sets, Tracklists & IDs</title>
+    <meta name="description" content="Biblioteca de sets de DJ con tracklists completas, IDs más solicitados y datos curiosos extraídos de YouTube." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://muntaner336.com/dj-library" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ===== DJ LIBRARY SPECIFIC STYLES ===== */
+      
+      /* Vinyl Texture Background */
+      .dj-library-hero {
+        position: relative;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+      }
+      
+      .dj-library-hero::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 800px;
+        height: 800px;
+        transform: translate(-50%, -50%);
+        background: 
+          repeating-radial-gradient(
+            circle at center,
+            transparent 0px,
+            transparent 2px,
+            rgba(255, 77, 0, 0.03) 2px,
+            rgba(255, 77, 0, 0.03) 4px
+          );
+        border-radius: 50%;
+        animation: vinylSpin 60s linear infinite;
+        pointer-events: none;
+      }
+      
+      .dj-library-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          radial-gradient(ellipse at 20% 50%, rgba(255, 77, 0, 0.08) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 50%, rgba(255, 140, 0, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+      }
+      
+      @keyframes vinylSpin {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+      
+      .hero-content-wrapper {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+      
+      .dj-library-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 77, 0, 0.15);
+        border: 1px solid rgba(255, 77, 0, 0.3);
+        color: #ff4d00;
+        padding: 0.5rem 1rem;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      
+      .dj-library-badge::before {
+        content: '🎧';
+      }
+      
+      .dj-library-title {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+      
+      .dj-library-subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: rgba(255, 255, 255, 0.6);
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+      }
+      
+      .dj-library-stats {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      
+      .stat-pill {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: 100px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.875rem;
+      }
+      
+      .stat-pill strong {
+        color: #ff4d00;
+        font-weight: 600;
+      }
+      
+      /* Noise Texture Overlay */
+      .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      }
+      
+      /* DJ Profile Section */
+      .dj-profile-section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .dj-profile-card {
+        background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .dj-profile-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        background: linear-gradient(180deg, rgba(255, 77, 0, 0.1) 0%, transparent 100%);
+        pointer-events: none;
+      }
+      
+      .dj-profile-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 3rem;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .dj-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #ff4d00;
+        object-fit: cover;
+        flex-shrink: 0;
+        box-shadow: 0 0 40px rgba(255, 77, 0, 0.3);
+      }
+      
+      .dj-info h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+      
+      .dj-meta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      
+      .dj-meta span {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.875rem;
+      }
+      
+      .dj-genres {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      
+      .genre-tag {
+        background: rgba(255, 77, 0, 0.15);
+        color: #ff4d00;
+        padding: 0.35rem 0.75rem;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+      
+      .dj-bio {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.7;
+        max-width: 600px;
+      }
+      
+      /* Set Player Section */
+      .set-player-section {
+        padding: 0 3rem 3rem;
+      }
+      
+      .set-info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      
+      .set-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      
+      .set-meta {
+        display: flex;
+        gap: 1rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.875rem;
+      }
+      
+      .set-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 16px;
+        background: #000;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      
+      /* Tracklist Section */
+      .tracklist-section {
+        padding: 0 3rem 3rem;
+      }
+      
+      .section-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #ff4d00;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      
+      .tracklist-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      .tracklist-table th {
+        text-align: left;
+        padding: 1rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      
+      .tracklist-table td {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.875rem;
+      }
+      
+      .tracklist-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      
+      .track-time {
+        color: #ff4d00;
+        font-weight: 600;
+        font-family: 'Courier New', monospace;
+        font-size: 0.8rem;
+      }
+      
+      .track-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      
+      .status-unidentified {
+        background: rgba(255, 77, 0, 0.15);
+        color: #ff4d00;
+      }
+      
+      .status-confirmed {
+        background: rgba(0, 255, 100, 0.15);
+        color: #00ff64;
+      }
+      
+      /* Most Requested IDs Section */
+      .requested-ids-section {
+        padding: 0 3rem 3rem;
+      }
+      
+      .requested-ids-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+      }
+      
+      .requested-id-card {
+        background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+        border: 1px solid rgba(255, 77, 0, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .requested-id-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(255, 77, 0, 0.15);
+      }
+      
+      .requested-id-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #ff4d00, #ff8c00);
+      }
+      
+      .id-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+      
+      .id-timestamp {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #fff;
+        font-family: 'Courier New', monospace;
+      }
+      
+      .id-request-count {
+        background: rgba(255, 77, 0, 0.2);
+        color: #ff4d00;
+        padding: 0.25rem 0.75rem;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      
+      .id-request-count::before {
+        content: '🔥 ';
+      }
+      
+      .id-comments {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.8rem;
+        line-height: 1.5;
+        font-style: italic;
+      }
+      
+      .id-comments li {
+        margin-bottom: 0.35rem;
+        list-style: none;
+        position: relative;
+        padding-left: 1rem;
+      }
+      
+      .id-comments li::before {
+        content: '"';
+        position: absolute;
+        left: 0;
+        color: #ff4d00;
+        opacity: 0.5;
+      }
+      
+      /* Curious Facts Section */
+      .facts-section {
+        padding: 0 3rem 3rem;
+      }
+      
+      .facts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+      
+      .fact-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.2s ease;
+      }
+      
+      .fact-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 77, 0, 0.3);
+      }
+      
+      .fact-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ff4d00;
+        margin-bottom: 0.5rem;
+      }
+      
+      .fact-label {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .dj-profile-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 2rem;
+        }
+        
+        .dj-avatar {
+          width: 100px;
+          height: 100px;
+        }
+        
+        .set-player-section,
+        .tracklist-section,
+        .requested-ids-section,
+        .facts-section {
+          padding: 0 1.5rem 2rem;
+        }
+        
+        .tracklist-table {
+          font-size: 0.8rem;
+        }
+        
+        .tracklist-table th,
+        .tracklist-table td {
+          padding: 0.75rem 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="header-container">
+        <a href="/" class="logo" aria-label="3TRES6 Records Home">
+          <span class="logo-text">3TRES6</span>
+          <span class="logo-subtitle">RECORDS</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+          <a href="/" class="nav-item">CATÁLOGO</a>
+          <a href="/#calendario" class="nav-item">CALENDARIO</a>
+          <a href="/#instagram" class="nav-item">INSTAGRAM</a>
+          <a href="blog.html" class="nav-item">BLOG</a>
+          <a href="/#nosotros" class="nav-item">NOSOTROS</a>
+          <a href="dj-library.html" class="nav-item active">DJ LIBRARY</a>
+          <a href="/toolhub/" class="nav-item">DESCARGAS</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="dj-library-hero">
+      <div class="hero-content-wrapper">
+        <div class="dj-library-badge">Nueva Sección</div>
+        <h1 class="dj-library-title">DJ Library</h1>
+        <p class="dj-library-subtitle">
+          Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de YouTube. 
+          Descubre qué track suena en cada momento.
+        </p>
+        <div class="dj-library-stats">
+          <span class="stat-pill"><strong>1</strong> DJ</span>
+          <span class="stat-pill"><strong>1</strong> Set</span>
+          <span class="stat-pill"><strong>27</strong> Tracks</span>
+          <span class="stat-pill"><strong>10</strong> IDs Requested</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DJ Profile -->
+    <section class="dj-profile-section">
+      <div class="dj-profile-card">
+        <div class="dj-profile-header">
+          <img 
+            src="https://i.ytimg.com/vi/mzUPU4QpWG4/maxresdefault.jpg" 
+            alt="Chaos In The CBD" 
+            class="dj-avatar"
+            loading="lazy"
+          />
+          <div class="dj-info">
+            <h2>Chaos In The CBD</h2>
+            <div class="dj-meta">
+              <span>🇳🇿 New Zealand</span>
+              <span>•</span>
+              <span>Since 2012</span>
+              <span>•</span>
+              <span>1 Set catalogado</span>
+            </div>
+            <div class="dj-genres">
+              <span class="genre-tag">Deep House</span>
+              <span class="genre-tag">Afro House</span>
+              <span class="genre-tag">Acid House</span>
+              <span class="genre-tag">Disco</span>
+              <span class="genre-tag">Boogie</span>
+            </div>
+            <p class="dj-bio">
+              Hermano dúo neozelandés (Louie y Ben) conocido por sus sets profundos que mezclan house, 
+              acid, afro y disco. Residentes de Rhythm Section y fundadores del sello In Dust We Trust. 
+              Han tocado en Djoon, Boiler Room y festivales globales.
+            </p>
+          </div>
+        </div>
+
+        <!-- Set Player -->
+        <div class="set-player-section">
+          <div class="set-info-header">
+            <div>
+              <div class="section-label">▶ Set Destacado</div>
+              <h3 class="set-title">Boiler Room x Ballantine's True Music: Hybrid Sounds Lebanon</h3>
+              <div class="set-meta">
+                <span>📍 Beirut, Lebanon</span>
+                <span>📅 May 12, 2017</span>
+                <span>⏱️ 1:00:52</span>
+                <span>👁️ 161K views</span>
+              </div>
+            </div>
+          </div>
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/mzUPU4QpWG4" 
+              title="Chaos In The CBD Boiler Room Lebanon"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Tracklist -->
+        <div class="tracklist-section">
+          <div class="section-label">🎵 Tracklist</div>
+          <table class="tracklist-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Time</th>
+                <th>Artist</th>
+                <th>Title</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tracklistBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Most Requested IDs -->
+        <div class="requested-ids-section">
+          <div class="section-label">🔥 Most Requested IDs</div>
+          <div class="requested-ids-grid" id="requestedIdsGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Curious Facts -->
+        <div class="facts-section">
+          <div class="section-label">📊 Datos Curiosos</div>
+          <div class="facts-grid" id="factsGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="footer-logo">3TRES6 RECORDS</span>
+          <p>Vinilos europeos de segunda mano<br />Barcelona → México</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Explorar</h4>
+            <a href="/">Catálogo</a>
+            <a href="dj-library.html">DJ Library</a>
+            <a href="blog.html">Blog</a>
+          </div>
+          <div class="footer-column">
+            <h4>Síguenos</h4>
+            <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+            <a href="https://youtube.com/@3tres6records" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 3TRES6 Records. DJ Library powered by YouTube comment analysis.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Load data from JSON
+      const setData = {
+        "tracklist": [
+          {"position": 1, "timestamp": "0:00", "artist": "Chaos In The CBD", "title": "Intro / Ambient", "status": "confirmed"},
+          {"position": 2, "timestamp": "5:06", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 3, "timestamp": "7:08", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 4, "timestamp": "13:40", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 5, "timestamp": "14:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 6, "timestamp": "15:30", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 7, "timestamp": "16:18", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 8, "timestamp": "18:58", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 9, "timestamp": "20:50", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 10, "timestamp": "21:14", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 11, "timestamp": "22:30", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 12, "timestamp": "28:30", "artist": "Unknown", "title": "Unknown Roller Bass Track", "status": "unidentified"},
+          {"position": 13, "timestamp": "29:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 14, "timestamp": "30:30", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 15, "timestamp": "31:26", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 16, "timestamp": "32:20", "artist": "Unknown", "title": "Unknown Dub Track", "status": "unidentified"},
+          {"position": 17, "timestamp": "34:50", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 18, "timestamp": "36:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 19, "timestamp": "37:50", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 20, "timestamp": "37:54", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 21, "timestamp": "44:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 22, "timestamp": "44:30", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 23, "timestamp": "45:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 24, "timestamp": "47:50", "artist": "Unknown", "title": "Unknown Major Track", "status": "unidentified"},
+          {"position": 25, "timestamp": "48:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 26, "timestamp": "51:00", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"},
+          {"position": 27, "timestamp": "53:46", "artist": "Unknown", "title": "Unknown Track", "status": "unidentified"}
+        ],
+        "most_requested_ids": [
+          {"timestamp": "28:30", "request_count": 5, "sample_comments": ["That roller of a bass line at 28:30. Yes son.", "Minute 28 Echo chamber"]},
+          {"timestamp": "37:50", "request_count": 4, "sample_comments": ["Does anyone know the song at 37:50 ?", "from 37:50 omg"]},
+          {"timestamp": "18:58", "request_count": 3, "sample_comments": ["18:58 What is the track? i love this one", "ID for 18:58 plsss xx"]},
+          {"timestamp": "48:00-51:00", "request_count": 3, "sample_comments": ["Desperately need track id 48:00-51:00 pls anyone"]},
+          {"timestamp": "47:50", "request_count": 2, "sample_comments": ["Id 47:50 major track"]},
+          {"timestamp": "32:20", "request_count": 2, "sample_comments": ["Min 32:20 dub banger"]},
+          {"timestamp": "53:46", "request_count": 1, "sample_comments": ["53:46 TRACK ID PLEASE, AMAZING TRACK!!!"]},
+          {"timestamp": "5:06", "request_count": 1, "sample_comments": ["track id at @5:06??", "What is the second track? At around 5 min"]},
+          {"timestamp": "20:50", "request_count": 1, "sample_comments": ["Track ID 20:50??"]},
+          {"timestamp": "22:30", "request_count": 1, "sample_comments": ["Track name 22:30????"]}
+        ],
+        "curious_facts": {
+          "total_comments": 191,
+          "track_relevant_comments": 50,
+          "tracklist_requests": 12,
+          "unidentified_tracks": 27,
+          "confirmed_tracks": 0
+        }
+      };
+
+      // Render tracklist
+      function renderTracklist() {
+        const tbody = document.getElementById('tracklistBody');
+        tbody.innerHTML = setData.tracklist.map(track => `
+          <tr>
+            <td>${track.position}</td>
+            <td><span class="track-time">${track.timestamp}</span></td>
+            <td>${track.artist}</td>
+            <td>${track.title}</td>
+            <td>
+              <span class="track-status status-${track.status}">
+                ${track.status === 'confirmed' ? '✓' : '?'} ${track.status}
+              </span>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      // Render requested IDs
+      function renderRequestedIds() {
+        const grid = document.getElementById('requestedIdsGrid');
+        grid.innerHTML = setData.most_requested_ids.map(id => `
+          <div class="requested-id-card">
+            <div class="id-card-header">
+              <span class="id-timestamp">${id.timestamp}</span>
+              <span class="id-request-count">${id.request_count} requests</span>
+            </div>
+            <ul class="id-comments">
+              ${id.sample_comments.map(comment => `<li>${comment}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('');
+      }
+
+      // Render facts
+      function renderFacts() {
+        const grid = document.getElementById('factsGrid');
+        const facts = [
+          { number: setData.curious_facts.total_comments, label: 'Total Comments' },
+          { number: setData.curious_facts.track_relevant_comments, label: 'Track Relevant' },
+          { number: setData.curious_facts.tracklist_requests, label: 'Tracklist Requests' },
+          { number: setData.curious_facts.unidentified_tracks, label: 'Unidentified Tracks' },
+          { number: setData.curious_facts.confirmed_tracks, label: 'Confirmed Tracks' },
+          { number: '28:30', label: 'Hottest Timestamp' }
+        ];
+        grid.innerHTML = facts.map(fact => `
+          <div class="fact-card">
+            <div class="fact-number">${fact.number}</div>
+            <div class="fact-label">${fact.label}</div>
+          </div>
+        `).join('');
+      }
+
+      // Initialize
+      renderTracklist();
+      renderRequestedIds();
+      renderFacts();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "djs": [
+    {
+      "id": "chaos-in-the-cbd",
+      "name": "Chaos In The CBD",
+      "origin": "New Zealand",
+      "active_since": 2012,
+      "genres": ["Deep House", "Afro House", "Acid House", "Disco", "Boogie"],
+      "bio": "Hermano dúo neozelandés (Louie y Ben) conocido por sus sets profundos que mezclan house, acid, afro y disco. Residentes de Rhythm Section y fundadores del sello In Dust We Trust. Han tocado en Djoon, Boiler Room y festivales globales.",
+      "image": "https://i.ytimg.com/vi/mzUPU4QpWG4/maxresdefault.jpg",
+      "social": {
+        "soundcloud": "https://soundcloud.com/chaosinthecbd",
+        "instagram": "https://instagram.com/chaosinthecbd",
+        "discogs": "https://www.discogs.com/artist/3270072-Chaos-In-The-CBD"
+      },
+      "sets": ["chaos-in-the-cbd-ballantines-lebanon"]
+    }
+  ]
+}

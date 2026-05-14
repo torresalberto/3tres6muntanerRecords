@@ -6,7 +6,7 @@
     <title>3TRES6 Tools | Herramientas para DJ</title>
     <meta
       name="description"
-      content="Herramientas gratuitas para DJs: descarga música, guía USB, Camelot Wheel y música gratis."
+      content="Herramientas gratuitas para DJs: descarga música, guía USB, Camelot Wheel, música gratis y software DJ: Rekordbox, Serato, Traktor, Mixxx."
     />
 
     <link rel="canonical" href="https://3tres6records.albto.me/toolhub/" />
@@ -32,6 +32,7 @@
           <a href="/#instagram">INSTAGRAM</a>
           <a href="/blog.html">BLOG</a>
           <a href="/toolhub/" class="nav-item active">HERRAMIENTAS</a>
+          <a href="/dj-library.html">DJ LIBRARY</a>
         </nav>
       </div>
     </header>
@@ -209,6 +210,10 @@
           <span class="tab-icon">🎵</span>
           <span class="tab-label">Free Music</span>
         </button>
+        <button class="tool-tab" data-tool="software">
+          <span class="tab-icon">💻</span>
+          <span class="tab-label">Software</span>
+        </button>
       </div>
     </section>
 
@@ -385,6 +390,57 @@
       </div>
     </section>
 
+    <!-- Software Directory Section -->
+    <section class="software-directory" id="softwareSection" style="display: none;">
+      <div class="section-header">
+        <h2>💻 Software para DJ</h2>
+        <p>Rekordbox, Serato, Traktor, Mixxx y más. Descargas oficiales, versiones gratuitas y alternativas.</p>
+      </div>
+
+      <!-- Search -->
+      <div class="software-filters">
+        <div class="search-wrapper">
+          <input 
+            type="text" 
+            id="softwareSearch" 
+            class="software-search"
+            placeholder="Buscar software... (ej: rekordbox 6, stems gratis, mixer)"
+          />
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Categoría:</span>
+          <div id="softwareCategoryFilters" class="category-filters">
+            <!-- Rendered by JavaScript -->
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Precio:</span>
+          <button class="pricing-filter-btn active" data-pricing="all">Todos</button>
+          <button class="pricing-filter-btn" data-pricing="free">🆓 Gratis</button>
+          <button class="pricing-filter-btn" data-pricing="freemium">⚖️ Freemium</button>
+          <button class="pricing-filter-btn" data-pricing="paid">💵 Pago</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Plataforma:</span>
+          <button class="platform-filter-btn active" data-platform="all">Todas</button>
+          <button class="platform-filter-btn" data-platform="windows">🪟 Windows</button>
+          <button class="platform-filter-btn" data-platform="mac">🍎 Mac</button>
+          <button class="platform-filter-btn" data-platform="linux">🐧 Linux</button>
+        </div>
+      </div>
+
+      <div class="software-count">
+        <span id="softwareCount">0</span> recursos encontrados
+      </div>
+
+      <div class="software-grid" id="softwareGrid">
+        <!-- Cards rendered by JavaScript -->
+      </div>
+    </section>
+
     <!-- Affiliate Section -->
     <section class="affiliate-section">
       <div class="section-header">
@@ -533,6 +589,8 @@
     <script src="js/music-directory.js"></script>
     <script src="js/camelot-db.js"></script>
     <script src="js/camelot-wheel.js"></script>
+    <script src="js/software-db.js"></script>
+    <script src="js/software-directory.js"></script>
     <script src="js/app.js"></script>
     <script>
       // Tool Tab Switching
@@ -542,6 +600,7 @@
         const hardwareSection = document.getElementById('hardwareSection');
         const musicSection = document.getElementById('musicSection');
         const wheelSection = document.getElementById('wheelSection');
+        const softwareSection = document.getElementById('softwareSection');
         const body = document.body;
 
         // Hide hero when not on downloader
@@ -577,6 +636,7 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
+              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(downloadTool);
             } else if (tool === 'hardware') {
               updateHeroVisibility('hardware');
@@ -584,6 +644,7 @@
               hardwareSection.style.display = 'block';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
+              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(hardwareSection);
               // Initialize hardware guide if not already
               if (!HardwareGuide.state.devices.length) {
@@ -595,6 +656,7 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'block';
               wheelSection.style.display = 'none';
+              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(musicSection);
               // Initialize music directory if not already
               if (!MusicDirectory.state.sources.length) {
@@ -606,10 +668,22 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'block';
+              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(wheelSection);
               // Initialize camelot wheel if not already
               if (!document.getElementById('wheelSvg')) {
                 CamelotWheel.init();
+              }
+            } else if (tool === 'software') {
+              updateHeroVisibility('software');
+              downloadTool.style.display = 'none';
+              hardwareSection.style.display = 'none';
+              musicSection.style.display = 'none';
+              wheelSection.style.display = 'none';
+              softwareSection.style.display = 'block';
+              (window.gsapAnimateSection || animateSection)(softwareSection);
+              if (!SoftwareDirectory.state.resources.length) {
+                SoftwareDirectory.init();
               }
             } else {
               // Future tools
@@ -618,6 +692,7 @@
               hardwareSection.style.display = 'none';
               musicSection.style.display = 'none';
               wheelSection.style.display = 'none';
+              softwareSection.style.display = 'none';
             }
           });
         });
