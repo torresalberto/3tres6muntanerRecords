@@ -71,6 +71,13 @@
       ]
     },
     {
+      "artist": "Jeff Mills",
+      "djs": [
+        "alex-do",
+        "mark-broom"
+      ]
+    },
+    {
       "artist": "Recondite",
       "djs": [
         "alex-do",
@@ -138,6 +145,13 @@
       "djs": [
         "dj-koze",
         "four-tet"
+      ]
+    },
+    {
+      "artist": "Inner City",
+      "djs": [
+        "carl-craig",
+        "mark-broom"
       ]
     }
   ],

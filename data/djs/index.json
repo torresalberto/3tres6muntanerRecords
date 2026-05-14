@@ -611,6 +611,60 @@
       "sets": [
         "objekt-various"
       ]
+    },
+    {
+      "id": "vtss",
+      "name": "VTSS",
+      "origin": "UK / Bristol",
+      "active_since": 2018,
+      "genres": [
+        "Techno",
+        "Hard Dance",
+        "Electro",
+        "Experimental"
+      ],
+      "bio": "Productora y DJ británica conocida por sus sets enérgicos de techno y hard dance. Ha tocado en Boiler Room, Glitch Festival y festivales globales. También conocida como SPICE.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "vtss-br-glitch-2024"
+      ]
+    },
+    {
+      "id": "mark-broom",
+      "name": "Mark Broom",
+      "origin": "UK / London",
+      "active_since": 1992,
+      "genres": [
+        "Techno",
+        "House",
+        "UK Bass",
+        "Hardgroove"
+      ],
+      "bio": "Productor y DJ británico con más de 30 años de carrera. Figura clave del techno UK. Ha publicado en Pure Plastic, Beardyman y su propio sello Broom Editions.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "joy-orbison",
+      "name": "Joy Orbison",
+      "origin": "UK / London",
+      "active_since": 2009,
+      "genres": [
+        "UK Bass",
+        "House",
+        "Techno",
+        "Experimental"
+      ],
+      "bio": "Productor y DJ británico. Pionero del sonido UK bass/post-dubstep. Su track ‘Hyph Mngo’ es un himno. Ha colaborado con Ben UFO, Pearson Sound y Four Tet.",
+      "image": "",
+      "social": {},
+      "sets": [
+        "joy-orbison-various"
+      ]
     }
   ]
 }

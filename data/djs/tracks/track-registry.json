@@ -5321,11 +5321,227 @@
           "timestamp": ""
         }
       ]
+    },
+    {
+      "id": "vtss-trisha",
+      "title": "TRISHA",
+      "artist": "VTSS",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "vtss-br-glitch-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "randomer-dhm-jam",
+      "title": "DHM JAM",
+      "artist": "Randomer",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "vtss-br-glitch-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "boys-noize-fvkvrvnd",
+      "title": "FVKVRVND",
+      "artist": "Boys Noize",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "vtss-br-glitch-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "shygirl--kingdom--vtss--club-shy-fkë-vtss-remix",
+      "title": "F@kë (VTSS Remix)",
+      "artist": "Shygirl & Kingdom & VTSS & Club Shy",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "vtss-br-glitch-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "franck-acid-groover",
+      "title": "Acid Groover",
+      "artist": "Franck",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "vtss-br-glitch-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mark-broom-soul-reverse",
+      "title": "Soul Reverse",
+      "artist": "Mark Broom",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mark-broom-br-bogota-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mark-broom-funky-sounds",
+      "title": "Funky Sounds",
+      "artist": "Mark Broom",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mark-broom-br-bogota-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "mark-broom-909-workout",
+      "title": "909 Workout",
+      "artist": "Mark Broom",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mark-broom-br-bogota-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "jeff-mills-the-bells-mark-broom-edit",
+      "title": "The Bells (Mark Broom Edit)",
+      "artist": "Jeff Mills",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mark-broom-br-bogota-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "inner-city-goodlife-killa-mix",
+      "title": "Goodlife (Killa Mix)",
+      "artist": "Inner City",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mark-broom-br-bogota-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "surgeon-bite-killa-mix",
+      "title": "Bite (Killa Mix)",
+      "artist": "Surgeon",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "mark-broom-br-bogota-2024",
+          "timestamp": ""
+        }
+      ]
+    },
+    {
+      "id": "joy-orbison-flight-fm",
+      "title": "Flight FM",
+      "artist": "Joy Orbison",
+      "played_by": [
+        "joy-orbison"
+      ],
+      "sets": [
+        "joy-orbison-various"
+      ],
+      "status": "confirmed",
+      "timestamp_appearances": [
+        {
+          "set_id": "joy-orbison-various",
+          "timestamp": ""
+        }
+      ]
     }
   ],
   "stats": {
-    "total_tracks": 295,
+    "total_tracks": 307,
     "cross_referenced": 6,
-    "dj_count": 26
+    "dj_count": 29
   }
 }
