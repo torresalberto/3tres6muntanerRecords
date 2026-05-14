@@ -1,0 +1,24 @@
+{
+  "id": "seth-troxler-br-mexico-2014",
+  "dj_id": "seth-troxler",
+  "title": "Boiler Room Stay True Mexico 2014",
+  "venue": "Boiler Room, Mexico City",
+  "date": "2014-03-20",
+  "youtube_url": "",
+  "youtube_embed_id": "",
+  "duration_minutes": 81,
+  "duration_formatted": "1:20:50",
+  "view_count": 0,
+  "channel": "Boiler Room",
+  "genres": ["Tech House", "House", "Minimal", "Chicago House"],
+  "tracklist": [
+    {"position":1,"artist":"Red Axes","title":"Too Late To Samba","status":"confirmed"},
+    {"position":2,"artist":"Simon Baker","title":"Plastik (Todd Terje Remix)","status":"confirmed"},
+    {"position":3,"artist":"Harry Romero","title":"Get Deep","status":"confirmed"},
+    {"position":4,"artist":"Kings Of Tomorrow","title":"Finally","status":"confirmed"},
+    {"position":5,"artist":"Octave One","title":"Blackwater","status":"confirmed"},
+    {"position":6,"artist":"Femi Kuti","title":"Truth Don\u2019t Die (Masters At Work Remix)","status":"confirmed"}
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {"total_comments": 0, "confirmed_tracks": 6}
+}

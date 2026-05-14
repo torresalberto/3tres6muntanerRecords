@@ -1,0 +1,27 @@
+{
+  "id": "honey-dijon-dekmantel-2025",
+  "dj_id": "honey-dijon",
+  "title": "Dekmantel Festival 2025 (The Loop)",
+  "venue": "Dekmantel Festival, Amsterdam",
+  "date": "2025-08-02",
+  "youtube_url": "https://www.youtube.com/watch?v=t5KwF_VsM50",
+  "youtube_embed_id": "t5KwF_VsM50",
+  "duration_minutes": 120,
+  "duration_formatted": "1:59:55",
+  "view_count": 0,
+  "channel": "Dekmantel",
+  "genres": ["House", "Techno", "Disco", "Soulful House"],
+  "tracklist": [
+    {"position":1,"artist":"Barbara Tucker","title":"I Get Lifted (The Bar Dub)","status":"confirmed"},
+    {"position":2,"artist":"Harry Romero","title":"Mood Vision","status":"confirmed"},
+    {"position":3,"artist":"Mary J. Blige","title":"Ain\u2019t Nobody","status":"confirmed"},
+    {"position":4,"artist":"Sylvester","title":"You Make Me Feel (Mighty Real)","status":"confirmed"},
+    {"position":5,"artist":"The Bucketheads","title":"The Bomb! (Armand Van Helden Re-Edit)","status":"confirmed"},
+    {"position":6,"artist":"Chicago","title":"Street Player","status":"confirmed"},
+    {"position":7,"artist":"Colonel Abrams","title":"Music Is The Answer","status":"confirmed"},
+    {"position":8,"artist":"Soul Central","title":"Strings Of Life (Supernova Remix)","status":"confirmed"},
+    {"position":9,"artist":"Honey Dijon","title":"The Nightlife (Round And Round Remix)","status":"confirmed"}
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {"total_comments": 0, "confirmed_tracks": 9}
+}

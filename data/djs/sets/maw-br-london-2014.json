@@ -1,0 +1,26 @@
+{
+  "id": "maw-br-london-2014",
+  "dj_id": "masters-at-work",
+  "title": "Boiler Room London 2014 (Defected)",
+  "venue": "Boiler Room, London",
+  "date": "2014-08-10",
+  "youtube_url": "https://www.youtube.com/watch?v=tfRJhmC-G1Y",
+  "youtube_embed_id": "tfRJhmC-G1Y",
+  "duration_minutes": 225,
+  "duration_formatted": "3:44:45",
+  "view_count": 2880000,
+  "channel": "Boiler Room",
+  "genres": ["House", "Soulful House", "Disco", "Garage", "Latin"],
+  "tracklist": [
+    {"position":1,"artist":"Masters At Work feat. India","title":"To Be In Love (Original MAW Mix)","status":"confirmed"},
+    {"position":2,"artist":"Barbara Tucker","title":"Beautiful People (Underground Network Mix)","status":"confirmed"},
+    {"position":3,"artist":"Marshall Jefferson","title":"Move Your Body","status":"confirmed"},
+    {"position":4,"artist":"Lil Louis","title":"French Kiss","status":"confirmed"},
+    {"position":5,"artist":"Black Science Orchestra","title":"New Jersey Deep","status":"confirmed"},
+    {"position":6,"artist":"Nuyorican Soul","title":"It\u2019s Alright, I Feel It","status":"confirmed"},
+    {"position":7,"artist":"The MD X-Spress","title":"God Made Me Phunky","status":"confirmed"},
+    {"position":8,"artist":"Gypsymen","title":"Hear The Music","status":"confirmed"}
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {"total_comments": 0, "confirmed_tracks": 8}
+}

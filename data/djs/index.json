@@ -109,6 +109,39 @@
       "image": "https://i.ytimg.com/vi/4z2bO7WizIg/maxresdefault.jpg",
       "social": {"instagram": "https://instagram.com/young_marco", "soundcloud": "https://soundcloud.com/youngmarco"},
       "sets": ["young-marco-dekmantel-ten"]
+    },
+    {
+      "id": "masters-at-work",
+      "name": "Masters At Work",
+      "origin": "New York, USA",
+      "active_since": 1990,
+      "genres": ["House", "Soulful House", "Latin House", "Disco", "Garage"],
+      "bio": "El d\u00fao legendario formado por Louie Vega y Kenny Dope. Pioneros de la house music, creadores del sonido MAW. Han producido incontables himnos y remezclado a los m\u00e1s grandes. Su set en Boiler Room London suma 2.8M de visitas.",
+      "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/mastersatwork"},
+      "sets": ["maw-br-london-2014"]
+    },
+    {
+      "id": "honey-dijon",
+      "name": "Honey Dijon",
+      "origin": "Chicago / Berlin",
+      "active_since": 2000,
+      "genres": ["House", "Techno", "Disco", "Soulful House", "Fashion"],
+      "bio": "DJ, productora y icono de la moda. Honey Dijon es una de las figuras m\u00e1s influyentes de la house music actual. Su set en Dekmantel 2025 confirma su estatus como curadora de pistas impecables.",
+      "image": "https://i.ytimg.com/vi/t5KwF_VsM50/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/honeydijon"},
+      "sets": ["honey-dijon-dekmantel-2025"]
+    },
+    {
+      "id": "seth-troxler",
+      "name": "Seth Troxler",
+      "origin": "USA / Berlin",
+      "active_since": 2005,
+      "genres": ["Tech House", "House", "Minimal", "Detroit Techno"],
+      "bio": "DJ y productor estadounidense afincado en Berlin. Figura central de la escena house/techno, conocido por su carisma y sus ecl\u00e9cticos sets. Ha tocado en Boiler Room, DC-10 y festivales globales.",
+      "image": "https://i.ytimg.com/vi/vy-k0FopsmY/maxresdefault.jpg",
+      "social": {"instagram": "https://instagram.com/sethtroxler"},
+      "sets": ["seth-troxler-br-mexico-2014"]
     }
   ]
 }
