@@ -15,6 +15,8 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const cron = require('node-cron');
 const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -458,6 +460,71 @@ app.post('/api/contact', (req, res) => {
     success: true,
     whatsappUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`,
   });
+});
+
+// ============================================
+// EVENTS API
+// ============================================
+
+const EVENTS_FILE = path.join(__dirname, '..', 'data', 'events', 'events.json');
+const PENDING_FILE = path.join(__dirname, '..', 'data', 'events', 'pending.json');
+
+app.get('/api/events', (req, res) => {
+  try {
+    if (!fs.existsSync(EVENTS_FILE)) {
+      return res.json({ success: true, events: [] });
+    }
+    const data = fs.readFileSync(EVENTS_FILE, 'utf-8');
+    const events = JSON.parse(data);
+    res.json({ success: true, events: events.filter(e => e.status === 'approved') });
+  } catch (error) {
+    console.error('❌ Events read error:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+app.post('/api/events/submit', (req, res) => {
+  try {
+    const { title, date, venue, city, djs, price, url, email, description, genres } = req.body;
+
+    if (!title || !date || !venue) {
+      return res.status(400).json({ success: false, error: 'Title, date, and venue are required' });
+    }
+
+    const newSubmission = {
+      id: `submission_${Date.now()}`,
+      title,
+      date,
+      time: req.body.time || 'TBA',
+      venue,
+      address: req.body.address || '',
+      city: city || 'Barcelona',
+      country: req.body.country || 'ES',
+      djs: djs || [],
+      genres: genres || [],
+      price: price || 'TBA',
+      url: url || '',
+      email: email || '',
+      description: description || '',
+      submittedAt: new Date().toISOString(),
+      source: 'submission',
+      status: 'pending',
+      featured: false
+    };
+
+    let pending = [];
+    if (fs.existsSync(PENDING_FILE)) {
+      pending = JSON.parse(fs.readFileSync(PENDING_FILE, 'utf-8'));
+    }
+    pending.push(newSubmission);
+    fs.writeFileSync(PENDING_FILE, JSON.stringify(pending, null, 2), 'utf-8');
+
+    console.log('📩 New event submission:', title);
+    res.json({ success: true, message: 'Event submitted for review', id: newSubmission.id });
+  } catch (error) {
+    console.error('❌ Event submission error:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
 });
 
 // ============================================

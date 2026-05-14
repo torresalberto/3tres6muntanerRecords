@@ -501,114 +501,32 @@
         </div>
       </div>
 
-      <div class="weekly-calendar">
-        <div class="calendar-header-row">
-          <div class="calendar-day-header">LUN<span>06</span></div>
-          <div class="calendar-day-header">MAR<span>07</span></div>
-          <div class="calendar-day-header">MIÉ<span>08</span></div>
-          <div class="calendar-day-header">JUE<span>09</span></div>
-          <div class="calendar-day-header">VIE<span>10</span></div>
-          <div class="calendar-day-header weekend">SÁB<span>11</span></div>
-          <div class="calendar-day-header weekend">DOM<span>12</span></div>
+      <!-- Pr\u00f3ximos Eventos -->
+      <div class="upcoming-section">
+        <div class="upcoming-header">
+          <h3>Pr\u00f3ximos Eventos</h3>
+          <button class="submit-event-btn" id="openEventSubmit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+            Promociona tu evento
+          </button>
         </div>
-        <div class="calendar-body">
-          <div class="calendar-day"><div class="no-events">—</div></div>
-          <div class="calendar-day"><div class="no-events">—</div></div>
-          <div class="calendar-day">
-            <div class="calendar-event tiktok-event" data-event="vinyl-session">
-              <span class="event-platform tiktok-tag">TikTok Live</span>
-              <span class="event-time">20:00</span>
-              <span class="event-name">Vinyl Session</span>
-              <span class="event-venue">🎵 3TRES6 Live</span>
-              <span class="event-genre">Deep House</span>
-              <a
-                href="https://www.tiktok.com/@3tres6records/live"
-                target="_blank"
-                rel="noopener"
-                class="event-watch-link"
-                >Ver Live →</a
-              >
-            </div>
-          </div>
-          <div class="calendar-day">
-            <div class="calendar-event youtube-event" data-event="warm-up">
-              <span class="event-platform youtube-tag">YouTube Live</span>
-              <span class="event-time">22:00</span>
-              <span class="event-name">Warm Up Set</span>
-              <span class="event-venue">▶ 3TRES6 Channel</span>
-              <span class="event-genre">House / Disco</span>
-              <a
-                href="https://www.youtube.com/@3tres6records/live"
-                target="_blank"
-                rel="noopener"
-                class="event-watch-link"
-                >Ver Live →</a
-              >
-            </div>
-          </div>
-          <div class="calendar-day has-events">
-            <div class="calendar-event featured physical-event" data-event="noche-minima">
-              <span class="event-platform physical-tag">Evento Físico</span>
-              <span class="event-time">23:00</span>
-              <span class="event-name">Noche Mínima</span>
-              <span class="event-venue">🏛️ Foro Normandie</span>
-              <span class="event-genre">Minimal / Techno</span>
-              <a
-                href="https://www.youtube.com/watch?v=qfF19hUzLo0"
-                target="_blank"
-                rel="noopener"
-                class="event-watch-link"
-                >Ver Set →</a
-              >
-            </div>
-          </div>
-          <div class="calendar-day has-events">
-            <div class="calendar-event featured youtube-event" data-event="barcelona-nights">
-              <span class="event-platform youtube-tag">YouTube Live</span>
-              <span class="event-time">22:00</span>
-              <span class="event-name">Barcelona Nights</span>
-              <span class="event-venue">▶ 3TRES6 Channel</span>
-              <span class="event-genre">Techno / Electro</span>
-              <a
-                href="https://www.youtube.com/@3tres6records/live"
-                target="_blank"
-                rel="noopener"
-                class="event-watch-link"
-                >Ver Live →</a
-              >
-            </div>
-            <div class="calendar-event tiktok-event" data-event="vinyl-market">
-              <span class="event-platform tiktok-tag">TikTok Live</span>
-              <span class="event-time">15:00</span>
-              <span class="event-name">Vinyl Market</span>
-              <span class="event-venue">🎵 3TRES6 Live</span>
-              <span class="event-genre">All Genres</span>
-              <a
-                href="https://www.tiktok.com/@3tres6records/live"
-                target="_blank"
-                rel="noopener"
-                class="event-watch-link"
-                >Ver Live →</a
-              >
-            </div>
-          </div>
-          <div class="calendar-day">
-            <div class="calendar-event physical-event" data-event="brunch-beats">
-              <span class="event-platform physical-tag">Evento Físico</span>
-              <span class="event-time">13:00</span>
-              <span class="event-name">Brunch &amp; Beats</span>
-              <span class="event-venue">☕ Café Toscano</span>
-              <span class="event-genre">Jazz / Soul</span>
-            </div>
-          </div>
+        <div class="upcoming-events" id="upcomingEvents">
+          <div class="loading-events">Cargando eventos...</div>
         </div>
+      </div>
+
+      <!-- Calendar Mesh -->
+      <div class="calendar-mesh" id="dynamicCalendar">
+        <div class="loading-events">Cargando calendario...</div>
       </div>
 
       <div class="calendar-legend">
         <span><span class="legend-dot featured"></span> Evento destacado</span>
         <span><span class="legend-dot tiktok-dot"></span> TikTok Live</span>
         <span><span class="legend-dot youtube-dot"></span> YouTube Live</span>
-        <span><span class="legend-dot physical-dot"></span> Evento físico</span>
+        <span><span class="legend-dot physical-dot"></span> Evento f\u00edsico</span>
       </div>
     </section>
 
@@ -1406,7 +1324,113 @@
       </div>
     </div>
 
+    <!-- Event Submission Modal -->
+    <div class="event-submit-modal" id="eventSubmitModal" role="dialog" aria-hidden="true">
+      <div class="event-submit-content">
+        <div class="event-submit-header">
+          <div class="submit-header-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff4d00" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h2>Promociona tu Evento</h2>
+          <p class="submit-subtitle">Llega a la comunidad de 3TRES6 Records</p>
+          <button class="submit-modal-close" id="closeEventSubmit" aria-label="Cerrar">&times;</button>
+        </div>
+
+        <form id="eventSubmitForm" class="event-submit-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-title">Nombre del evento *</label>
+              <input type="text" id="sub-title" name="title" class="submit-input" placeholder="Ej: Noche M\u00ednima Vol. 3" required />
+            </div>
+            <div class="form-group">
+              <label for="sub-genres">G\u00e9neros</label>
+              <input type="text" id="sub-genres" name="genres" class="submit-input" placeholder="House, Techno, Minimal..." />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-date">Fecha *</label>
+              <input type="date" id="sub-date" name="date" class="submit-input" required />
+            </div>
+            <div class="form-group">
+              <label for="sub-time">Hora</label>
+              <input type="text" id="sub-time" name="time" class="submit-input" placeholder="23:00" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-venue">Lugar / Venue *</label>
+              <input type="text" id="sub-venue" name="venue" class="submit-input" placeholder="Nombre del club o espacio" required />
+            </div>
+            <div class="form-group">
+              <label for="sub-city">Ciudad</label>
+              <input type="text" id="sub-city" name="city" class="submit-input" placeholder="Barcelona, CDMX..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sub-address">Direcci\u00f3n</label>
+            <input type="text" id="sub-address" name="address" class="submit-input" placeholder="Calle y n\u00famero" />
+          </div>
+
+          <div class="form-group">
+            <label>DJs invitados</label>
+            <div id="djFields" class="dj-fields">
+              <input type="text" class="submit-input dj-input" placeholder="DJ principal..." />
+            </div>
+            <button type="button" class="add-dj-btn" id="addDjField">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              A\u00f1adir otro DJ
+            </button>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sub-price">Precio</label>
+              <input type="text" id="sub-price" name="price" class="submit-input" placeholder="Gratis, 270 MXN, $10..." />
+            </div>
+            <div class="form-group">
+              <label for="sub-url">URL del evento</label>
+              <input type="url" id="sub-url" name="url" class="submit-input" placeholder="https://dice.fm/..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sub-email">Tu email (no se publica)</label>
+            <input type="email" id="sub-email" name="email" class="submit-input" placeholder="tu@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="sub-desc">Descripci\u00f3n</label>
+            <textarea id="sub-desc" name="description" class="submit-textarea" rows="3" placeholder="Breve descripci\u00f3n de la noche..."></textarea>
+          </div>
+
+          <div id="submitStatus" class="submit-status"></div>
+
+          <button type="submit" class="submit-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            Enviar Evento
+          </button>
+
+          <p class="submit-footer-note">Recibimos tu propuesta, la revisamos y si todo est\u00e1 bien la publicamos en el calendario. F\u00e1cil.</p>
+        </form>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="script.js" defer></script>
+    <script src="js/calendar.js" defer></script>
+    <script src="js/event-submission.js" defer></script>
   </body>
 </html>
