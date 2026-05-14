@@ -196,38 +196,82 @@
     //  DJ DATA — same as the library
     // ============================================================
     const DJ_DATA = [
-      { id:'chaos-in-the-cbd', name:'Chaos In The CBD', genres:['Deep House','Acid','Disco'], color:'#ff4d00' },
-      { id:'palms-trax', name:'Palms Trax', genres:['House','Balearic','Breakbeat'], color:'#ff6a2a' },
-      { id:'laurent-garnier', name:'Laurent Garnier', genres:['House','Techno','French'], color:'#ff8c00' },
-      { id:'frankie-knuckles', name:'Frankie Knuckles', genres:['House','Soulful','Disco'], color:'#ff4d00' },
-      { id:'floating-points', name:'Floating Points', genres:['House','Jazz','Electronic'], color:'#7c4dff' },
-      { id:'richie-hawtin', name:'Richie Hawtin', genres:['Minimal','Techno'], color:'#00bcd4' },
-      { id:'avalon-emerson', name:'Avalon Emerson', genres:['House','Techno','Breaks'], color:'#00e5ff' },
-      { id:'dj-pierre', name:'DJ Pierre', genres:['Acid House','Techno'], color:'#ff4d00' },
-      { id:'kettama', name:'KETTAMA', genres:['House','Bass','Garage'], color:'#ff9100' },
-      { id:'young-marco', name:'Young Marco', genres:['Balearic','Disco','Ambient'], color:'#00c864' },
-      { id:'masters-at-work', name:'Masters At Work', genres:['House','Latin','Disco'], color:'#ff6f00' },
-      { id:'honey-dijon', name:'Honey Dijon', genres:['House','Techno','Disco'], color:'#e91e63' },
-      { id:'seth-troxler', name:'Seth Troxler', genres:['Tech House','Minimal'], color:'#9c27b0' },
-      { id:'carl-cox', name:'Carl Cox', genres:['Techno','House','Tech'], color:'#ff5722' },
-      { id:'motor-city-drum', name:'MCDE', genres:['House','Disco','Soul'], color:'#4caf50' },
-      { id:'alex-do', name:'Alex.Do', genres:['Hypnotic Techno','Ambient'], color:'#607d8b' },
-      { id:'etapp-kyle', name:'Etapp Kyle', genres:['Hypnotic Techno','Electro'], color:'#03a9f4' },
-      { id:'call-super', name:'Call Super', genres:['House','Techno','Electro'], color:'#8bc34a' },
-      { id:'kerri-chandler', name:'Kerri Chandler', genres:['Deep House','Soulful'], color:'#ff5722' },
-      { id:'ian-pooley', name:'Ian Pooley', genres:['Deep House','Disco'], color:'#009688' },
-      { id:'apollonia', name:'Apollonia', genres:['Minimal','Deep House'], color:'#e040fb' }
+      { id:'chaos-in-the-cbd', name:'Chaos In The CBD', color:'#ff4d00' },
+      { id:'palms-trax', name:'Palms Trax', color:'#ff6a2a' },
+      { id:'laurent-garnier', name:'Laurent Garnier', color:'#ff8c00' },
+      { id:'frankie-knuckles', name:'Frankie Knuckles', color:'#ff4d00' },
+      { id:'floating-points', name:'Floating Points', color:'#7c4dff' },
+      { id:'richie-hawtin', name:'Richie Hawtin', color:'#00bcd4' },
+      { id:'avalon-emerson', name:'Avalon Emerson', color:'#00e5ff' },
+      { id:'dj-pierre', name:'DJ Pierre', color:'#ff4d00' },
+      { id:'kettama', name:'KETTAMA', color:'#ff9100' },
+      { id:'young-marco', name:'Young Marco', color:'#00c864' },
+      { id:'masters-at-work', name:'Masters At Work', color:'#ff6f00' },
+      { id:'honey-dijon', name:'Honey Dijon', color:'#e91e63' },
+      { id:'seth-troxler', name:'Seth Troxler', color:'#9c27b0' },
+      { id:'carl-cox', name:'Carl Cox', color:'#ff5722' },
+      { id:'motor-city-drum', name:'MCDE', color:'#4caf50' },
+      { id:'alex-do', name:'Alex.Do', color:'#607d8b' },
+      { id:'etapp-kyle', name:'Etapp Kyle', color:'#03a9f4' },
+      { id:'call-super', name:'Call Super', color:'#8bc34a' },
+      { id:'kerri-chandler', name:'Kerri Chandler', color:'#ff5722' },
+      { id:'ian-pooley', name:'Ian Pooley', color:'#009688' },
+      { id:'apollonia', name:'Apollonia', color:'#e040fb' },
+      { id:'dixon', name:'Dixon', color:'#ffab00' },
+      { id:'ben-ufo', name:'Ben UFO', color:'#795548' },
+      { id:'moodymann', name:'Moodymann', color:'#37474f' },
+      { id:'carl-craig', name:'Carl Craig', color:'#607d8b' },
+      { id:'pangaea', name:'Pangaea', color:'#3e2723' },
+      { id:'kink', name:'KiNK', color:'#1b5e20' },
+      { id:'dj-koze', name:'DJ Koze', color:'#e65100' },
+      { id:'objekt', name:'Objekt', color:'#4a148c' },
+      { id:'ame', name:'\u00c2me', color:'#01579b' },
+      { id:'four-tet', name:'Four Tet', color:'#33691e' },
+      { id:'maceo-plex', name:'Maceo Plex', color:'#880e4f' },
+      { id:'larry-heard', name:'Larry Heard', color:'#bf360c' },
+      { id:'joe-claussell', name:'Joe Claussell', color:'#3e2723' },
+      { id:'shonky', name:'Shonky', color:'#1a237e' },
+      { id:'tiger-woods', name:'Tiger & Woods', color:'#ff6f00' },
+      { id:'nicolas-jaar', name:'Nicolas Jaar', color:'#006064' },
+      { id:'demi-riquismo', name:'Demi Riquisimo', color:'#827717' },
+      { id:'job-jobse', name:'Job Jobse', color:'#4e342e' },
+      { id:'rey-colino', name:'Rey Colino', color:'#37474f' },
+      { id:'vtss', name:'VTSS', color:'#d50000' },
+      { id:'mark-broom', name:'Mark Broom', color:'#263238' },
+      { id:'joy-orbison', name:'Joy Orbison', color:'#ffab40' },
     ];
 
-    // Connections between DJs
+    // Track cross-references from the database
+    // Format: [dj1_index, dj2_index, track_name]
+    const TRACK_CONNECTIONS = [
+      [3, 13, 'Can You Feel It'],     // Carl Cox & Seth Troxler
+      [3, 31, 'Blue Monday'],          // Carl Cox & Four Tet
+      [1, 30, 'Blue Monday'],          // Laurent Garnier & Four Tet
+      [3, 6, 'Blue Monday'],           // Carl Cox & Laurent Garnier
+      [10, 23, 'Move Your Body'],      // MAW & Moodymann
+      [1, 3, 'Blackwater'],            // Seth Troxler & Carl Craig
+      [3, 13, 'Blackwater'],           // Carl Cox & Seth Troxler
+      [3, 6, 'Blackwater'],            // Carl Cox & Laurent Garnier
+      [11, 12, 'The Bomb!'],           // Honey Dijon & Seth Troxler
+      [12, 11, 'Finally'],             // Seth Troxler & Honey Dijon
+      [18, 11, 'Special'],             // Kerri Chandler & Honey Dijon
+      [10, 33, 'Earth People - Dance'],// MAW & Joe Claussell
+      [29, 20, 'Asa'],                 // Dixon & Ame
+      [22, 5, 'Kazan'],                // Ben UFO & KiNK
+      [25, 22, 'Router'],              // Pangaea & Ben UFO
+      [30, 27, 'All The Time'],        // Four Tet & DJ Koze
+    ];
+
+    // Build edges from track connections
     function buildConnections(djs) {
       const edges = [];
-      for (let i = 0; i < djs.length; i++) {
-        for (let j = i + 1; j < djs.length; j++) {
-          const shared = []; // No genre-based connections. Only track cross-references.
-          if (shared.length > 0) {
-            edges.push({ from: i, to: j, strength: shared.length });
-          }
+      const djMap = {};
+      djs.forEach((d, i) => { djMap[d.id] = i; });
+      TRACK_CONNECTIONS.forEach(([i, j, track]) => {
+        edges.push({ from: i, to: j, strength: 1, track: track });
+      });
+      return edges;
+    }
         }
       }
       return edges;
@@ -461,6 +505,26 @@
     const infoDesc = document.getElementById('infoDesc');
     const infoTags = document.getElementById('infoTags');
 
+    // Connection lines with track labels
+    const connections = EDGES.map(e => {
+      const from = nodes[e.from];
+      const to = nodes[e.to];
+      const points = [
+        new THREE.Vector3(from.x, from.y, from.z),
+        new THREE.Vector3(to.x, to.y, to.z)
+      ];
+      const geo = new THREE.BufferGeometry().setFromPoints(points);
+      const mat = new THREE.LineBasicMaterial({
+        color: 0x00c864,
+        transparent: true,
+        opacity: 0.6
+      });
+      const line = new THREE.Line(geo, mat);
+      line.userData = { track: e.track, fromIdx: e.from, toIdx: e.to };
+      lineGroup.add(line);
+      return line;
+    });
+
     renderer.domElement.addEventListener('click', (event) => {
       pointer.x = (event.clientX / width) * 2 - 1;
       pointer.y = -(event.clientY / height) * 2 + 1;
@@ -472,8 +536,19 @@
         if (obj.userData.isDJ) {
           const dj = DJ_DATA[obj.userData.djIndex];
           infoTitle.textContent = dj.name;
-          infoDesc.textContent = 'DJ / Producer';
-          infoTags.innerHTML = '';
+          // Find connections for this DJ
+          const conns = TRACK_CONNECTIONS.filter(c => c[0] === obj.userData.djIndex || c[1] === obj.userData.djIndex);
+          if (conns.length > 0) {
+            infoDesc.textContent = conns.length + ' track connection' + (conns.length > 1 ? 's' : '');
+            infoTags.innerHTML = conns.map(c => {
+              const otherIdx = c[0] === obj.userData.djIndex ? c[1] : c[0];
+              const other = DJ_DATA[otherIdx];
+              return '<span class="tag">' + c[2] + ' \u2192 ' + other.name + '</span>';
+            }).join('');
+          } else {
+            infoDesc.textContent = 'No track connections yet';
+            infoTags.innerHTML = '';
+          }
           infoPanel.classList.add('visible');
           setTimeout(() => infoPanel.classList.remove('visible'), 5000);
         }
