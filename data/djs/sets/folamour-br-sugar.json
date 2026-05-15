@@ -1,1 +1,112 @@
-{"id": "folamour-br-sugar", "dj_id": "folamour", "title": "Boiler Room x Sugar Mountain 2024", "youtube_embed_id": "IC5EOU0vZjw", "duration_minutes": 59, "duration_formatted": "59:45", "view_count": 3691617, "tracklist": [], "curious_facts": {}}
+{
+  "id": "folamour-br-sugar",
+  "dj_id": "folamour",
+  "title": "Boiler Room x Sugar Mountain 2024",
+  "youtube_embed_id": "IC5EOU0vZjw",
+  "duration_minutes": 59,
+  "duration_formatted": "59:45",
+  "view_count": 3691617,
+  "tracklist": [
+    {
+      "artist": "D Stone",
+      "title": "Total Unison x Folamour's Manifesto",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Urban Blues Project ft Bobby Pruitt",
+      "title": "We Are One (Jazz'N'Groove Hands Up Vocal Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Da Lukas",
+      "title": "Satisfy Your Soul (Extended Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Dam Swindle",
+      "title": "That's Right",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "MoD, Luisen",
+      "title": "Small Town Boy (Supermini Mega Dub)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Løne Døg",
+      "title": "Straight From The Underground",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Bongoloverz ft An",
+      "title": "Tonic - Power Of Music",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Folamour",
+      "title": "ID TBA",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Madonna",
+      "title": "Vogue (Dj Meme Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Melon Bomb",
+      "title": "ID TBA",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Folamour",
+      "title": "ID TBA That closing track 😭🥹❤‍🔥 please release the naaaame ♥",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Melon Bomb",
+      "title": "Fantazia (iirc it was a free DL via their facebook page)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "The seatbelts",
+      "title": "Cowboy Bebop theme?",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Madonna",
+      "title": "Vogue (Dj Meme Remix)!!I",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 14
+  }
+}

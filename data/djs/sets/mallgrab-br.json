@@ -1,1 +1,70 @@
-{"id": "mallgrab-br", "dj_id": "mall-grab", "title": "Boiler Room Melbourne", "youtube_embed_id": "ddeAyYF_uwg", "duration_minutes": 90, "duration_formatted": "1:30:02", "view_count": 2382681, "tracklist": [], "curious_facts": {}}
+{
+  "id": "mallgrab-br",
+  "dj_id": "mall-grab",
+  "title": "Boiler Room Melbourne",
+  "youtube_embed_id": "ddeAyYF_uwg",
+  "duration_minutes": 90,
+  "duration_formatted": "1:30:02",
+  "view_count": 2382681,
+  "tracklist": [
+    {
+      "artist": "Fishermans",
+      "title": "Long Season <3",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "just released -> Surusinghe",
+      "title": "Likshot",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Surusinghe",
+      "title": "Likshot is out now on SCDD",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "is Mall Grab x Flansie",
+      "title": "Love Yourself Because Nobody Else Will (Unreleased)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "released; Mall Grab & Flansie",
+      "title": "No One Else Will",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "He's layering House Music",
+      "title": "Hertz",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "mall grab",
+      "title": "madman(unreleased)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "is Mall Grab",
+      "title": "Madman (unreleased). He played and identified this in his Lab LDN set and BBC es",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 8
+  }
+}

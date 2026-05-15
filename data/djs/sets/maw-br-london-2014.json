@@ -10,17 +10,88 @@
   "duration_formatted": "3:44:45",
   "view_count": 2880000,
   "channel": "Boiler Room",
-  "genres": ["House", "Soulful House", "Disco", "Garage", "Latin"],
+  "genres": [
+    "House",
+    "Soulful House",
+    "Disco",
+    "Garage",
+    "Latin"
+  ],
   "tracklist": [
-    {"position":1,"artist":"Masters At Work feat. India","title":"To Be In Love (Original MAW Mix)","status":"confirmed"},
-    {"position":2,"artist":"Barbara Tucker","title":"Beautiful People (Underground Network Mix)","status":"confirmed"},
-    {"position":3,"artist":"Marshall Jefferson","title":"Move Your Body","status":"confirmed"},
-    {"position":4,"artist":"Lil Louis","title":"French Kiss","status":"confirmed"},
-    {"position":5,"artist":"Black Science Orchestra","title":"New Jersey Deep","status":"confirmed"},
-    {"position":6,"artist":"Nuyorican Soul","title":"It\u2019s Alright, I Feel It","status":"confirmed"},
-    {"position":7,"artist":"The MD X-Spress","title":"God Made Me Phunky","status":"confirmed"},
-    {"position":8,"artist":"Gypsymen","title":"Hear The Music","status":"confirmed"}
+    {
+      "artist": "Masters At Work feat. India",
+      "title": "To Be In Love (Original MAW Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Barbara Tucker",
+      "title": "Beautiful People (Underground Network Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Marshall Jefferson",
+      "title": "Move Your Body",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Lil Louis",
+      "title": "French Kiss",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Black Science Orchestra",
+      "title": "New Jersey Deep",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Nuyorican Soul",
+      "title": "Its Alright I Feel It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Chic",
+      "title": "Everybody Dance",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Earth People",
+      "title": "Dance",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "The MD X-Spress",
+      "title": "God Made Me Phunky",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Gypsymen",
+      "title": "Hear The Music",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    }
   ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 0, "confirmed_tracks": 8}
+  "curious_facts": {
+    "total_comments": 0,
+    "confirmed_tracks": 10
+  }
 }

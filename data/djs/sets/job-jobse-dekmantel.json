@@ -1,1 +1,21 @@
-{"id": "job-jobse-dekmantel", "dj_id": "job-jobse", "title": "Boiler Room x Dekmantel Festival", "youtube_embed_id": "IxhYDVRqdYY", "duration_minutes": 59, "duration_formatted": "59:01", "view_count": 471905, "tracklist": [], "curious_facts": {}}
+{
+  "id": "job-jobse-dekmantel",
+  "dj_id": "job-jobse",
+  "title": "Boiler Room x Dekmantel Festival",
+  "youtube_embed_id": "IxhYDVRqdYY",
+  "duration_minutes": 59,
+  "duration_formatted": "59:01",
+  "view_count": 471905,
+  "tracklist": [
+    {
+      "artist": "Manicured Noise",
+      "title": "Monotrome (Cousin Cole Remix); You got me there mothaaafockaaaa!",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 1
+  }
+}

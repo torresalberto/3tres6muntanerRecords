@@ -9,8 +9,80 @@
   "duration_minutes": 83,
   "duration_formatted": "1:23:16",
   "view_count": 0,
-  "genres": ["House", "Electronic", "Experimental", "UK Bass"],
-  "tracklist": [],
+  "genres": [
+    "House",
+    "Electronic",
+    "Experimental",
+    "UK Bass"
+  ],
+  "tracklist": [
+    {
+      "artist": "Four Tet",
+      "title": "School",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Anthony Naples",
+      "title": "Refugio",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "O'Flynn",
+      "title": "Tyrion",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Aphex Twin",
+      "title": "Xmas_Evet1 N",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Martyn & Four Tet",
+      "title": "Glassbeadgames (8 Hours At Fabric Dub)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "DJ Koze",
+      "title": "All The Time",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Caribou",
+      "title": "Never Come Back (Four Tet Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "KH",
+      "title": "Only Human",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Jamie xx",
+      "title": "Idontknow",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 9, "confirmed_tracks": 9}
+  "curious_facts": {
+    "total_tracks": 9,
+    "confirmed_tracks": 9
+  }
 }

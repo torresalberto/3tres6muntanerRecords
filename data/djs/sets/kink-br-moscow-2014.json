@@ -1,1 +1,46 @@
-{"id": "kink-br-moscow-2014", "dj_id": "kink", "title": "Set", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "kink-br-moscow-2014",
+  "dj_id": "kink",
+  "title": "Set",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "KiNK",
+      "title": "Kazan",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "KiNK",
+      "title": "Existence",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "KiNK",
+      "title": "Leko",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "KiNK",
+      "title": "Express",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Rachel Row",
+      "title": "Follow The Step (KiNK Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 5
+  }
+}

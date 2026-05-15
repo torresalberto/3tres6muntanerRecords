@@ -10,11 +10,50 @@
   "duration_formatted": "1:24:14",
   "view_count": 78000,
   "channel": "Boiler Room",
-  "genres": ["Acid House", "Techno", "Chicago House", "Acid Techno"],
-  "tracklist": [],
-  "most_requested_ids": [
-    {"timestamp": "8:30", "request_count": 2, "sample_comments": ["8:30 track id please"], "status": "unidentified"},
-    {"timestamp": "1:18:00", "request_count": 1, "sample_comments": ["1:18:00 what a track!"], "status": "unidentified"}
+  "genres": [
+    "Acid House",
+    "Techno",
+    "Chicago House",
+    "Acid Techno"
   ],
-  "curious_facts": {"total_comments": 278, "track_relevant_comments": 15, "unidentified_tracks": 5}
+  "tracklist": [
+    {
+      "position": 1,
+      "timestamp": "18:40",
+      "artist": "Profiler",
+      "title": "Stef Mendesidis",
+      "status": "confirmed"
+    },
+    {
+      "position": 2,
+      "timestamp": "41:00",
+      "artist": "bellz chi",
+      "title": "det <3",
+      "status": "confirmed"
+    }
+  ],
+  "most_requested_ids": [
+    {
+      "timestamp": "8:30",
+      "request_count": 2,
+      "sample_comments": [
+        "8:30 track id please"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:18:00",
+      "request_count": 1,
+      "sample_comments": [
+        "1:18:00 what a track!"
+      ],
+      "status": "unidentified"
+    }
+  ],
+  "curious_facts": {
+    "total_comments": 278,
+    "track_relevant_comments": 15,
+    "unidentified_tracks": 5,
+    "confirmed_tracks": 2
+  }
 }

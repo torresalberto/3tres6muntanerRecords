@@ -1,1 +1,156 @@
-{"id": "cassius-cercle-2017", "dj_id": "cassius", "title": "Cercle @ Château de Champs-sur-Marne", "youtube_embed_id": "kv92f5__3UQ", "duration_minutes": 94, "duration_formatted": "1:34:11", "view_count": 243317, "tracklist": [], "curious_facts": {"total_tracks": 23, "confirmed_tracks": 23, "source": "youtube_comments"}}
+{
+  "id": "cassius-cercle-2017",
+  "dj_id": "cassius",
+  "title": "Cercle @ Château de Champs-sur-Marne",
+  "youtube_embed_id": "kv92f5__3UQ",
+  "duration_minutes": 94,
+  "duration_formatted": "1:34:11",
+  "view_count": 243317,
+  "tracklist": [
+    {
+      "artist": "Cassius",
+      "title": "I love U So",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Marlena Shaw",
+      "title": "Woman Of The Ghetto (Catz’N Dogs Beat Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "BrianBerg & Sam Simmon",
+      "title": "You Played Me (Original Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Sebastien Drums & Avicii",
+      "title": "My Feeling For Yu (Acapella)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Son of 8",
+      "title": "Party Time (Original Mix) [URBANA RECORDINGS] w/ Fingers Inc - My House (Acapell",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Daft Punk",
+      "title": "Burnin’  w/ Daft Punk - Technologic (Acapella)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "David Penn, Hosse",
+      "title": "I Can’t Wait - (Roog & Dennis Quin Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Calypso",
+      "title": "Round Table Knights",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "EDUKE",
+      "title": "Take Care (Mr E Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Kid Enigma",
+      "title": "Dangerous",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Full Intention",
+      "title": "It’s Set To Groove (Downtown Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Cassius",
+      "title": "Go Up (Butch Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Lifelike & Kris Menace",
+      "title": "What Time Is Love (Live at SSL mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Mathias Kaden",
+      "title": "Get Phunky (Nick Curly Vocal Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    },
+    {
+      "artist": "Tiga",
+      "title": "Woke (Jamie Jones Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 15
+    },
+    {
+      "artist": "Luca Garboni & Andy J",
+      "title": "Tadpole  (Original Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 16
+    },
+    {
+      "artist": "Jasper St. Co ‎",
+      "title": "God Helps Those (Da 5 Mile Dub) [BASEMENT BOYS RECORDS] w/ M.I.A - Paper Planes ",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 17
+    },
+    {
+      "artist": "Cassius",
+      "title": "Ibifornia (Myd Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 18
+    },
+    {
+      "artist": "Jay De Lys",
+      "title": "Youngster (Original Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 19
+    },
+    {
+      "artist": "is Cassius",
+      "title": "Feeling For You, not Avicii lol",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 20
+    }
+  ],
+  "curious_facts": {
+    "total_tracks": 23,
+    "confirmed_tracks": 20,
+    "source": "youtube_comments"
+  }
+}

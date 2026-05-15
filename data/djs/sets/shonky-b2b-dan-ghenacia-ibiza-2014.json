@@ -1,1 +1,31 @@
-{"id": "shonky-b2b-dan-ghenacia-ibiza-2014", "dj_id": "shonky", "title": "b2b Dan Ghenacia @ Ibiza 2014", "tracklist": [], "curious_facts": {}}
+{
+  "id": "shonky-b2b-dan-ghenacia-ibiza-2014",
+  "dj_id": "shonky",
+  "title": "b2b Dan Ghenacia @ Ibiza 2014",
+  "tracklist": [
+    {
+      "artist": "Green Velvet",
+      "title": "Flash (Danny Tenaglia Nitrous Oxide Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Kings Of Tomorrow",
+      "title": "I Want You (For Myself) (KOT Ruff Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Paperclip People",
+      "title": "Throw (Slam RTM Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 3
+  }
+}

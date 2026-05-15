@@ -10,14 +10,54 @@
   "duration_formatted": "47:11",
   "view_count": 4200000,
   "channel": "Boiler Room",
-  "genres": ["House", "Disco", "Deep House", "Soul", "Balearic"],
+  "genres": [
+    "House",
+    "Disco",
+    "Deep House",
+    "Soul",
+    "Balearic"
+  ],
   "tracklist": [
-    {"position": 1, "timestamp": "0:00", "artist": "Sonny Jenkins + NY Potpourri Strings", "title": "That Friday Pay (Part 1)", "status": "confirmed"},
-    {"position": 2, "timestamp": "4:35", "artist": "Logg", "title": "Dancing Into The Stars (John Morales Remix)", "status": "confirmed"},
-    {"position": 3, "timestamp": "9:50", "artist": "Andrés", "title": "Just A Player", "status": "confirmed"},
-    {"position": 4, "timestamp": "12:10", "artist": "Bileo", "title": "You Can Win", "status": "confirmed"},
-    {"position": 5, "timestamp": "15:30", "artist": "Peven Everett", "title": "Put Your Back Into It", "status": "confirmed"}
+    {
+      "artist": "Sonny Jenkins + NY Potpourri Strings",
+      "title": "That Friday Pay (Part 1)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Logg",
+      "title": "Dancing Into The Stars (John Morales Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Andrés",
+      "title": "Just A Player",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Bileo",
+      "title": "You Can Win",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Peven Everett",
+      "title": "Put Your Back Into It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    }
   ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 0, "track_relevant_comments": 0, "confirmed_tracks": 5}
+  "curious_facts": {
+    "total_comments": 0,
+    "track_relevant_comments": 0,
+    "confirmed_tracks": 5
+  }
 }

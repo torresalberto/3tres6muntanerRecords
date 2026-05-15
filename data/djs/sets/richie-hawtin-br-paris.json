@@ -10,11 +10,34 @@
   "duration_formatted": "1:40:30",
   "view_count": 212000,
   "channel": "Richie Hawtin",
-  "genres": ["Minimal Techno", "Techno", "Acid", "Experimental"],
+  "genres": [
+    "Minimal Techno",
+    "Techno",
+    "Acid",
+    "Experimental"
+  ],
   "tracklist": [],
   "most_requested_ids": [
-    {"timestamp": "1:02:00", "request_count": 2, "sample_comments": ["Track id at 1:02:00?"], "status": "unidentified"},
-    {"timestamp": "1:00:00", "request_count": 1, "sample_comments": ["Anyone know the track at 1 hour?"], "status": "unidentified"}
+    {
+      "timestamp": "1:02:00",
+      "request_count": 2,
+      "sample_comments": [
+        "Track id at 1:02:00?"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:00:00",
+      "request_count": 1,
+      "sample_comments": [
+        "Anyone know the track at 1 hour?"
+      ],
+      "status": "unidentified"
+    }
   ],
-  "curious_facts": {"total_comments": 441, "track_relevant_comments": 10, "unidentified_tracks": 5}
+  "curious_facts": {
+    "total_comments": 441,
+    "track_relevant_comments": 10,
+    "unidentified_tracks": 5
+  }
 }

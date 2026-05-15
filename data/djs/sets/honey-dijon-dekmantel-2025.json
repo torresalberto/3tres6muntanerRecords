@@ -10,18 +10,80 @@
   "duration_formatted": "1:59:55",
   "view_count": 0,
   "channel": "Dekmantel",
-  "genres": ["House", "Techno", "Disco", "Soulful House"],
+  "genres": [
+    "House",
+    "Techno",
+    "Disco",
+    "Soulful House"
+  ],
   "tracklist": [
-    {"position":1,"artist":"Barbara Tucker","title":"I Get Lifted (The Bar Dub)","status":"confirmed"},
-    {"position":2,"artist":"Harry Romero","title":"Mood Vision","status":"confirmed"},
-    {"position":3,"artist":"Mary J. Blige","title":"Ain\u2019t Nobody","status":"confirmed"},
-    {"position":4,"artist":"Sylvester","title":"You Make Me Feel (Mighty Real)","status":"confirmed"},
-    {"position":5,"artist":"The Bucketheads","title":"The Bomb! (Armand Van Helden Re-Edit)","status":"confirmed"},
-    {"position":6,"artist":"Chicago","title":"Street Player","status":"confirmed"},
-    {"position":7,"artist":"Colonel Abrams","title":"Music Is The Answer","status":"confirmed"},
-    {"position":8,"artist":"Soul Central","title":"Strings Of Life (Supernova Remix)","status":"confirmed"},
-    {"position":9,"artist":"Honey Dijon","title":"The Nightlife (Round And Round Remix)","status":"confirmed"}
+    {
+      "artist": "Barbara Tucker",
+      "title": "I Get Lifted (The Bar Dub)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Harry Romero",
+      "title": "Mood Vision",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Mary J. Blige",
+      "title": "Ain't Nobody",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Sylvester",
+      "title": "You Make Me Feel (Mighty Real)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "The Bucketheads",
+      "title": "The Bomb! (Armand Van Helden Re-Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Chicago",
+      "title": "Street Player",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Colonel Abrams",
+      "title": "Music Is The Answer",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Soul Central",
+      "title": "Strings Of Life (Supernova Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Honey Dijon",
+      "title": "The Nightlife (Round And Round Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    }
   ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 0, "confirmed_tracks": 9}
+  "curious_facts": {
+    "total_comments": 0,
+    "confirmed_tracks": 9
+  }
 }

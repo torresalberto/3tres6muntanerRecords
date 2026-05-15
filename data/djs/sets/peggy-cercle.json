@@ -1,1 +1,126 @@
-{"id": "peggy-cercle", "dj_id": "peggy-gou", "title": "Cercle @ Palais des Beaux-Arts Lille", "youtube_embed_id": "-UOMvxh4MYU", "duration_minutes": 108, "duration_formatted": "1:48:21", "view_count": 6104298, "tracklist": [], "curious_facts": {}}
+{
+  "id": "peggy-cercle",
+  "dj_id": "peggy-gou",
+  "title": "Cercle @ Palais des Beaux-Arts Lille",
+  "youtube_embed_id": "-UOMvxh4MYU",
+  "duration_minutes": 108,
+  "duration_formatted": "1:48:21",
+  "view_count": 6104298,
+  "tracklist": [
+    {
+      "artist": "Commix",
+      "title": "Satellite Song (Underground Resistance Remix) 17:35 Dancer - Boom Boom (Jerome H",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Commix",
+      "title": "Satellite Song (Underground Resistance Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Dancer",
+      "title": "Boom Boom (Jerome Hill Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Spacetime Continuum",
+      "title": "Drug",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Lewski",
+      "title": "Gru",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Kraftwerk",
+      "title": "Aerodynamik (François K Aero Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Kim English",
+      "title": "Learn 2 Luv Pearson Sound Mix",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Château Flight",
+      "title": "Sargan",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Digital Excitation",
+      "title": "Pure Pleasure (Rave Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Special Request",
+      "title": "Reset It (Head High Dirt Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Kraftwerk",
+      "title": "Expo 2000 (DJ Rolando Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Skee Mask",
+      "title": "Fjorward Flex Dub",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Dreamscape",
+      "title": "Born",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Metro",
+      "title": "Here For The Love (Metropolitan Acid Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    },
+    {
+      "artist": "Peggy Gou",
+      "title": "It Makes You Forget",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 15
+    },
+    {
+      "artist": "Commix",
+      "title": "Satellite Song (Underground Résistance Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 16
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 16
+  }
+}

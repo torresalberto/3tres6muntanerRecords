@@ -9,8 +9,87 @@
   "duration_minutes": 88,
   "duration_formatted": "1:28:31",
   "view_count": 0,
-  "genres": ["Melodic Techno", "House", "Deep House", "Innervisions"],
-  "tracklist": [],
+  "genres": [
+    "Melodic Techno",
+    "House",
+    "Deep House",
+    "Innervisions"
+  ],
+  "tracklist": [
+    {
+      "artist": "SBTRKT",
+      "title": "VOLCA",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Ede & Nowa",
+      "title": "I Am Wavy",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Alex Medina",
+      "title": "La Gustosa",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Jimi Jules",
+      "title": "Don't Break My Heart",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Hunter/Game & Noah Kaluga",
+      "title": "Stars (Mano Le Tough Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Deer Jade",
+      "title": "Firmament",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Ame",
+      "title": "Asa",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Ame & Curses",
+      "title": "Shadow Of Love",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Yet More",
+      "title": "Tryna Jack My Style",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "MULYA",
+      "title": "Aus Music",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 10, "confirmed_tracks": 10}
+  "curious_facts": {
+    "total_tracks": 10,
+    "confirmed_tracks": 10
+  }
 }

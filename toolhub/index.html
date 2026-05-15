@@ -19,23 +19,62 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="downloads-page">
-    <!-- Header -->
-    <header class="header">
+    <header class="header" id="mainHeader" role="banner">
       <div class="header-container">
         <a href="/" class="logo" aria-label="3TRES6 Records Home">
           <span class="logo-text">3TRES6</span>
           <span class="logo-subtitle">RECORDS</span>
         </a>
-        <nav class="main-nav">
-          <a href="/">CATÁLOGO</a>
-          <a href="/#calendario">CALENDARIO</a>
-          <a href="/#instagram">INSTAGRAM</a>
-          <a href="/blog.html">BLOG</a>
-          <a href="/toolhub/" class="nav-item active">HERRAMIENTAS</a>
-          <a href="/dj-library.html">DJ LIBRARY</a>
-          <a href="/3d-brain.html">NEURAL</a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+          <div class="nav-group nav-group-store">
+            <a href="/" class="nav-item">Catálogo</a>
+            <a href="/#calendario" class="nav-item">Calendario</a>
+            <a href="/#nosotros" class="nav-item">Nosotros</a>
+          </div>
+          <div class="nav-separator"></div>
+          <div class="nav-group nav-group-content">
+            <a href="/blog.html" class="nav-item">Blog</a>
+            <a href="/dj-library.html" class="nav-item">DJ Library</a>
+            <a href="/3d-brain.html" class="nav-item">Neural</a>
+            <a href="/toolhub/" class="nav-item active">Herramientas</a>
+            <a href="/toolhub/#hardware" class="nav-item">Equipo DJ</a>
+          </div>
         </nav>
+
+        <div class="header-actions">
+          <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
+          <a href="/" class="cart-icon" aria-label="Carrito">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+        </div>
       </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+        <div class="mobile-nav-group-label">Tienda</div>
+        <a href="/">Catálogo</a>
+        <a href="/#calendario">Calendario</a>
+        <a href="/#nosotros">Nosotros</a>
+        <div class="mobile-nav-group-label">Contenido</div>
+        <a href="/blog.html">Blog</a>
+        <a href="/dj-library.html">DJ Library</a>
+        <a href="/3d-brain.html">Neural</a>
+        <a href="/toolhub/">Herramientas</a>
+        <a href="/toolhub/#hardware">Equipo DJ</a>
+        <div class="mobile-nav-group-label">Redes</div>
+        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+      </nav>
     </header>
 
     <!-- Hero Section -->
@@ -215,11 +254,16 @@
           <span class="tab-icon">💻</span>
           <span class="tab-label">Software</span>
         </button>
+        <button class="tool-tab" data-tool="djsets">
+          <span class="tab-icon">📀</span>
+          <span class="tab-label">DJ Sets</span>
+        </button>
       </div>
     </section>
 
     <!-- Hardware Guide Section -->
     <section class="hardware-guide" id="hardwareSection" style="display: none;">
+      <div id="hardware" style="scroll-margin-top:100px;"></div>
       <div class="section-header">
         <h2>💾 USB Export Guide</h2>
         <p>Configuración exacta para tu equipo DJ</p>
@@ -425,77 +469,100 @@
       </div>
     </section>
 
-    <!-- Affiliate Section -->
-    <section class="affiliate-section">
+    <!-- Equipo DJ Section -->
+    <section class="affiliate-section" id="hardware">
       <div class="section-header">
-        <h2>🎧 Equipa Tu Set</h2>
-        <p>Herramientas profesionales para DJs</p>
+        <h2>🎧 Equipo Recomendado</h2>
+        <p>Productos para DJ seleccionados — ganas comisión sin costo extra</p>
       </div>
 
       <div class="affiliate-grid">
         <a
-          href="https://www.amazon.es/dp/B07XD5RDKF?tag=3tres6-21"
+          href="https://www.mercadolibre.com.mx/#tu-enlace-afiliado"
           target="_blank"
-          rel="nofollow"
-          class="affiliate-card"
-        >
-          <div class="affiliate-image">
-            <span class="affiliate-badge">🎧</span>
-          </div>
-          <div class="affiliate-info">
-            <h4>DJ Headphones</h4>
-            <p>Alta calidad para monitoreo</p>
-            <span class="affiliate-price">Ver precio →</span>
-          </div>
-        </a>
-
-        <a
-          href="https://www.amazon.es/dp/B08J4CRY5P?tag=3tres6-21"
-          target="_blank"
-          rel="nofollow"
+          rel="sponsored"
           class="affiliate-card"
         >
           <div class="affiliate-image">
             <span class="affiliate-badge">🎛️</span>
           </div>
           <div class="affiliate-info">
-            <h4>Controller DJ</h4>
-            <p>Compatible con rekordbox</p>
-            <span class="affiliate-price">Ver precio →</span>
+            <h4>Pioneer DJ XDJ-AZ</h4>
+            <p>Sistema todo-en-uno 4 canales — el estándar profesional</p>
+            <span class="affiliate-price">Ver en Mercado Libre →</span>
           </div>
         </a>
 
         <a
-          href="https://www.amazon.es/dp/B0BYNPT7SS?tag=3tres6-21"
+          href="https://www.mercadolibre.com.mx/#tu-enlace-afiliado"
           target="_blank"
-          rel="nofollow"
+          rel="sponsored"
           class="affiliate-card"
         >
           <div class="affiliate-image">
             <span class="affiliate-badge">🔊</span>
           </div>
           <div class="affiliate-info">
-            <h4>Audio Interface</h4>
-            <p>Sonido profesional</p>
-            <span class="affiliate-price">Ver precio →</span>
+            <h4>Pioneer DJ DJM-A9</h4>
+            <p>Mezcladora profesional 4 canales — sonido de club</p>
+            <span class="affiliate-price">Ver en Mercado Libre →</span>
           </div>
         </a>
 
         <a
-          href="https://www.discogs.com/seller/3tres6records"
+          href="https://www.mercadolibre.com.mx/#tu-enlace-afiliado"
           target="_blank"
-          rel="nofollow"
+          rel="sponsored"
           class="affiliate-card"
         >
           <div class="affiliate-image">
             <span class="affiliate-badge">💿</span>
           </div>
           <div class="affiliate-info">
-            <h4>Pack Vinilos</h4>
-            <p>Deep House Selection</p>
-            <span class="affiliate-price">Ver precio →</span>
+            <h4>Pioneer DDJ-FLX10</h4>
+            <p>Controlador 4 canales para Serato + rekordbox</p>
+            <span class="affiliate-price">Ver en Mercado Libre →</span>
           </div>
         </a>
+
+        <a
+          href="https://www.mercadolibre.com.mx/#tu-enlace-afiliado"
+          target="_blank"
+          rel="sponsored"
+          class="affiliate-card"
+        >
+          <div class="affiliate-image">
+            <span class="affiliate-badge">🎧</span>
+          </div>
+          <div class="affiliate-info">
+            <h4>Audio-Technica ATH-M50x</h4>
+            <p>Audífonos profesionales de monitoreo</p>
+            <span class="affiliate-price">Ver en Mercado Libre →</span>
+          </div>
+        </a>
+      </div>
+      <p style="text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.2);margin-top:1.5rem;">
+        Al comprar a través de estos enlaces, apoyas a 3TRES6 sin costo adicional. Ver <a href="/AFFILIATE_SETUP.md" style="color:rgba(255,255,255,0.3);">cómo funciona</a>.
+      </p>
+    </section>
+
+    <!-- DJ Sets Section -->
+    <section class="dj-sets-section" id="djSetsSection" style="display: none;">
+      <div class="section-header">
+        <h2>📀 Biblioteca de Sets</h2>
+        <p>Todos los sets de DJ y tracklists curados</p>
+      </div>
+
+      <div class="djsets-filters">
+        <div class="search-wrapper" style="margin-bottom: 1.5rem;">
+          <input type="text" id="djSetsSearch" class="hardware-search" placeholder="Buscar DJ, set o track..." />
+        </div>
+      </div>
+
+      <div class="djsets-grid" id="djSetsGrid"></div>
+
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="/dj-library.html" class="cta-button" style="display:inline-block;padding:12px 40px;background:#ff4d00;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">Ver Biblioteca Completa →</a>
       </div>
     </section>
 
@@ -576,6 +643,7 @@
     <script src="js/software-db.js"></script>
     <script src="js/software-directory.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/dj-sets-db.js"></script>
     <script>
       // Tool Tab Switching
       document.addEventListener('DOMContentLoaded', function() {
@@ -585,6 +653,7 @@
         const musicSection = document.getElementById('musicSection');
         const wheelSection = document.getElementById('wheelSection');
         const softwareSection = document.getElementById('softwareSection');
+        const djSetsSection = document.getElementById('djSetsSection');
         const body = document.body;
 
         // Hide hero when not on downloader
@@ -669,6 +738,19 @@
               if (!SoftwareDirectory.state.resources.length) {
                 SoftwareDirectory.init();
               }
+            } else if (tool === 'djsets') {
+              updateHeroVisibility('djsets');
+              downloadTool.style.display = 'none';
+              hardwareSection.style.display = 'none';
+              musicSection.style.display = 'none';
+              wheelSection.style.display = 'none';
+              softwareSection.style.display = 'none';
+              djSetsSection.style.display = 'block';
+              (window.gsapAnimateSection || animateSection)(djSetsSection);
+              if (typeof renderDJSets === 'function' && !djSetsSection.dataset.initialized) {
+                renderDJSets();
+                djSetsSection.dataset.initialized = 'true';
+              }
             } else {
               // Future tools
               updateHeroVisibility('downloader');
@@ -680,6 +762,66 @@
             }
           });
         });
+      });
+
+      // DJ Sets renderer
+      function renderDJSets() {
+        const grid = document.getElementById('djSetsGrid');
+        const searchInput = document.getElementById('djSetsSearch');
+        if (!grid) return;
+
+        function render(query) {
+          const q = (query || '').toLowerCase().trim();
+          let filtered = DJ_SETS;
+          if (q) {
+            filtered = DJ_SETS.filter(s =>
+              s.dj_name.toLowerCase().includes(q) ||
+              s.title.toLowerCase().includes(q) ||
+              s.venue.toLowerCase().includes(q)
+            );
+          }
+          grid.innerHTML = filtered.map(s => {
+            const yt_url = s.youtube ? `https://www.youtube.com/watch?v=${s.youtube}` : '';
+            return `
+              <div class="djsets-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;transition:all 0.2s;cursor:default;">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.5rem;">
+                  <div>
+                    <div style="font-size:0.75rem;color:var(--primary,#ff4d00);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.2rem;">${s.dj_name}</div>
+                    <div style="font-size:1rem;font-weight:600;color:var(--text,#fff);line-height:1.3;">${s.title}</div>
+                  </div>
+                  <div style="font-size:0.7rem;color:rgba(255,255,255,0.3);white-space:nowrap;text-align:right;">
+                    ${s.duration || ''}
+                    ${s.duration ? '<br>' : ''}${s.tracks} tracks
+                  </div>
+                </div>
+                ${s.venue ? `<div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-bottom:0.4rem;">📍 ${s.venue}</div>` : ''}
+                <div style="display:flex;gap:0.5rem;align-items:center;">
+                  <span style="font-size:0.75rem;color:rgba(255,255,255,0.4);">${s.confirmed} confirmed</span>
+                  ${s.views ? `<span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">• ${(s.views / 1000).toFixed(0)}K views</span>` : ''}
+                </div>
+                ${yt_url ? `<a href="${yt_url}" target="_blank" style="display:inline-block;margin-top:0.6rem;font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;">▶ Watch on YouTube →</a>` : ''}
+              </div>
+            `;
+          }).join('');
+        }
+
+        render('');
+        searchInput.addEventListener('input', () => render(searchInput.value));
+      }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var hash = window.location.hash.replace('#', '');
+        if (hash && (hash === 'hardware' || hash === 'djsets')) {
+          var btn = document.querySelector('.tool-tab[data-tool="' + hash + '"]');
+          if (btn) {
+            btn.click();
+            setTimeout(function() {
+              var el = document.getElementById(hash);
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+          }
+        }
       });
     </script>
   </body>

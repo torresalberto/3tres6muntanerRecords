@@ -9,8 +9,102 @@
   "duration_minutes": 74,
   "duration_formatted": "1:13:47",
   "view_count": 0,
-  "genres": ["House", "Techno", "UK Bass", "Breaks", "Eclectic"],
-  "tracklist": [],
+  "genres": [
+    "House",
+    "Techno",
+    "UK Bass",
+    "Breaks",
+    "Eclectic"
+  ],
+  "tracklist": [
+    {
+      "artist": "Mim Suleiman",
+      "title": "Fumbo",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Or:la",
+      "title": "Chant (Pearson Sound Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Olof Dreijer & Diva Cruz",
+      "title": "Acuyuye",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Breaka",
+      "title": "Squashy Track",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "O'Flynn",
+      "title": "Srekye",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Binary Digit",
+      "title": "Ale By The Sea",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "KiNK",
+      "title": "Kazan",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Skream & KODO",
+      "title": "Shinogi",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Pangaea",
+      "title": "Router",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Pearson Sound",
+      "title": "Untitled",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Digital Mystikz",
+      "title": "Walkin' With Jah",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Addison Groove",
+      "title": "Fuk Tha 101",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 12, "confirmed_tracks": 12}
+  "curious_facts": {
+    "total_tracks": 12,
+    "confirmed_tracks": 12
+  }
 }

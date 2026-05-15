@@ -1,1 +1,18 @@
-{"id": "joy-orbison-various", "dj_id": "joy-orbison", "title": "Various Sets", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "joy-orbison-various",
+  "dj_id": "joy-orbison",
+  "title": "Various Sets",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "Joy Orbison",
+      "title": "Flight FM",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 1
+  }
+}

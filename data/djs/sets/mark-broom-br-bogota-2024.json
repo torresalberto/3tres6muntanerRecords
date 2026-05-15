@@ -1,1 +1,53 @@
-{"id": "mark-broom-br-bogota-2024", "dj_id": "mark-broom", "title": "Boiler Room Bogotá 2024", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "mark-broom-br-bogota-2024",
+  "dj_id": "mark-broom",
+  "title": "Boiler Room Bogotá 2024",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "Mark Broom",
+      "title": "Soul Reverse",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Mark Broom",
+      "title": "Funky Sounds",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Mark Broom",
+      "title": "909 Workout",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Jeff Mills",
+      "title": "The Bells (Mark Broom Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Inner City",
+      "title": "Goodlife (Killa Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Surgeon",
+      "title": "Bite (Killa Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 6
+  }
+}

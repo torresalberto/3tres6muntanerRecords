@@ -9,8 +9,66 @@
   "duration_minutes": 240,
   "duration_formatted": "4:00:00",
   "view_count": 0,
-  "genres": ["Melodic House", "Techno", "Deep House", "Innervisions"],
-  "tracklist": [],
+  "genres": [
+    "Melodic House",
+    "Techno",
+    "Deep House",
+    "Innervisions"
+  ],
+  "tracklist": [
+    {
+      "artist": "Ame",
+      "title": "Asa",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Ame & Curses",
+      "title": "Shadow Of Love",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Paul Simon",
+      "title": "Diamonds On The Soles Of Her Shoes (Ame Private Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Ian Pooley",
+      "title": "CompuRhythm (Dixon 4/4 Treatment)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Recondite",
+      "title": "Drgn",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Konstantin Sibold",
+      "title": "Madeleine",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Monoloc",
+      "title": "Shame",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 7, "confirmed_tracks": 7}
+  "curious_facts": {
+    "total_tracks": 7,
+    "confirmed_tracks": 7
+  }
 }

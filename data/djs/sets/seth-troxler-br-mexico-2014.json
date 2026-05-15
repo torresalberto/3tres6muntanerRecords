@@ -10,15 +10,59 @@
   "duration_formatted": "1:20:50",
   "view_count": 0,
   "channel": "Boiler Room",
-  "genres": ["Tech House", "House", "Minimal", "Chicago House"],
+  "genres": [
+    "Tech House",
+    "House",
+    "Minimal",
+    "Chicago House"
+  ],
   "tracklist": [
-    {"position":1,"artist":"Red Axes","title":"Too Late To Samba","status":"confirmed"},
-    {"position":2,"artist":"Simon Baker","title":"Plastik (Todd Terje Remix)","status":"confirmed"},
-    {"position":3,"artist":"Harry Romero","title":"Get Deep","status":"confirmed"},
-    {"position":4,"artist":"Kings Of Tomorrow","title":"Finally","status":"confirmed"},
-    {"position":5,"artist":"Octave One","title":"Blackwater","status":"confirmed"},
-    {"position":6,"artist":"Femi Kuti","title":"Truth Don\u2019t Die (Masters At Work Remix)","status":"confirmed"}
+    {
+      "artist": "Red Axes",
+      "title": "Too Late To Samba",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Simon Baker",
+      "title": "Plastik (Todd Terje Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Harry Romero",
+      "title": "Get Deep",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Kings Of Tomorrow",
+      "title": "Finally",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Octave One",
+      "title": "Blackwater",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Femi Kuti",
+      "title": "Truth Don't Die (Masters At Work Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    }
   ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 0, "confirmed_tracks": 6}
+  "curious_facts": {
+    "total_comments": 0,
+    "confirmed_tracks": 6
+  }
 }

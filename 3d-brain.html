@@ -2,94 +2,205 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>3TRES6 Neural — DJ Connection Map</title>
-  <meta name="description" content="Interactive visualization of DJ connections via shared tracks. Explore which DJs play the same tracks." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3TRES6 Neural — DJ Connection Sphere</title>
+  <meta name="description" content="Interactive 3D sphere visualization of DJ connections via shared tracks." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0a0a0a;
+      background: #050505;
       font-family: 'Space Grotesk', sans-serif;
       color: #fff;
       overflow: hidden;
       height: 100vh;
       display: flex;
       flex-direction: column;
+      user-select: none;
     }
 
-    /* HEADER */
-    .network-header {
+    /* UNIFIED HEADER (inlined from styles.css) */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
+    }
+    .header.scrolled {
+      background: rgba(5,5,5,0.82);
+      border-bottom-color: rgba(255,255,255,0.04);
+      backdrop-filter: blur(20px) saturate(1.2);
+      -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    }
+    .header-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 2rem;
-      background: rgba(10,10,10,0.95);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      z-index: 10;
-      gap: 1.5rem;
-      flex-shrink: 0;
     }
-    .network-logo span { display: block; }
-    .network-logo .main { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
-    .network-logo .main em { color: #ff4d00; font-style: normal; }
-    .network-logo .sub { font-size: 0.65rem; color: rgba(255,255,255,0.25); letter-spacing: 0.12em; text-transform: uppercase; }
-
-    .search-wrapper {
+    .logo { display: flex; flex-direction: column; gap: 1px; text-decoration: none; }
+    .logo-text { font-size: 20px; font-weight: 700; letter-spacing: 3px; color: #fff; line-height: 1; }
+    .logo-subtitle { font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.35); letter-spacing: 4px; line-height: 1; }
+    .main-nav { display: flex; gap: 20px; align-items: center; }
+    .main-nav .nav-group { display: flex; gap: 16px; align-items: center; }
+    .main-nav .nav-group-content { gap: 16px; }
+    .nav-separator { width: 1px; height: 14px; background: rgba(255,255,255,0.1); flex-shrink: 0; margin: 0 4px; }
+    .nav-item {
       position: relative;
-      flex: 1;
-      max-width: 400px;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.3s ease;
+      padding: 8px 0;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
     }
-    .search-wrapper input {
+    .nav-item::before {
+      content: ''; position: absolute; top: -2px; left: 50%;
+      transform: translateX(-50%) scale(0);
+      width: 3px; height: 3px; border-radius: 50%;
+      background: #ff4d00;
+      transition: transform 0.3s ease;
+    }
+    .nav-item:hover { color: rgba(255,255,255,0.9); }
+    .nav-item:hover::before { transform: translateX(-50%) scale(1); }
+    .nav-item.active { color: rgba(255,255,255,0.9); }
+    .nav-item.active::before { transform: translateX(-50%) scale(1); }
+    .nav-item.affiliate { color: rgba(255,200,100,0.4); font-size: 10px; letter-spacing: 2px; }
+    .nav-item.affiliate:hover { color: rgba(255,200,100,0.8); }
+    .header-actions { display: flex; align-items: center; gap: 24px; }
+    .discogs-link {
+      font-size: 10px; font-weight: 400; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.35);
+      transition: color 0.3s ease; text-decoration: none;
+    }
+    .discogs-link:hover { color: rgba(255,255,255,0.7); }
+    .cart-icon { position: relative; color: rgba(255,255,255,0.45); transition: color 0.3s ease; display: flex; align-items: center; }
+    .cart-icon:hover { color: rgba(255,255,255,0.9); }
+    .cart-count {
+      position: absolute; top: -6px; right: -8px;
+      background: #ff4d00; color: #fff; font-size: 9px; font-weight: 700;
+      width: 15px; height: 15px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .mobile-menu-btn {
+      display: none; flex-direction: column; justify-content: space-between;
+      width: 22px; height: 16px; background: none; border: none;
+      cursor: pointer; padding: 0; z-index: 1001;
+    }
+    .mobile-menu-btn span { display: block; width: 100%; height: 1.5px; background: rgba(255,255,255,0.7); transition: all 0.3s ease; border-radius: 1px; }
+    .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+    .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+    .mobile-nav {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(5,5,5,0.97);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px; z-index: 999;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+    }
+    .mobile-nav.active { opacity: 1; visibility: visible; }
+    .mobile-nav a {
+      font-size: 20px; font-weight: 300; letter-spacing: 4px;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      transition: color 0.3s ease; text-decoration: none;
+    }
+    .mobile-nav a:hover { color: #ff4d00; }
+    .mobile-nav-group-label {
+      font-size: 9px; font-weight: 600; letter-spacing: 4px;
+      text-transform: uppercase; color: rgba(255,255,255,0.15);
+      padding: 16px 0 4px; border-top: 1px solid rgba(255,255,255,0.04);
+      width: 80%; text-align: center;
+    }
+    .mobile-nav-group-label:first-child { border-top: none; padding-top: 0; }
+    @media (max-width: 768px) {
+      .mobile-menu-btn { display: flex; }
+      .main-nav { display: none; }
+      .header-container { padding: 0 20px; }
+      .header-actions .discogs-link { display: none; }
+    }
+
+    /* FLOATING SEARCH (replaces old header search) */
+    .viz-search {
+      position: absolute;
+      top: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 15;
+      width: 320px;
+      max-width: 90vw;
+    }
+    .viz-search input {
       width: 100%;
-      padding: 0.6rem 1rem 0.6rem 2.4rem;
+      padding: 0.55rem 1rem 0.55rem 2.4rem;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 50px;
       color: #fff;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-family: inherit;
       outline: none;
-      transition: border-color 0.3s;
+      transition: border-color 0.3s, background 0.3s;
+      backdrop-filter: blur(8px);
     }
-    .search-wrapper input:focus { border-color: #ff4d00; }
-    .search-icon {
+    .viz-search input:focus { border-color: #ff4d00; background: rgba(255,255,255,0.06); }
+    .viz-search .search-icon { position: absolute; left: 0.9rem; top: 50%; transform: translateY(-50%); font-size: 0.75rem; opacity: 0.3; pointer-events: none; }
+    .viz-reset {
       position: absolute;
-      left: 0.9rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.8rem;
-      opacity: 0.3;
-    }
-
-    .header-actions {
-      display: flex;
-      gap: 0.6rem;
-    }
-    .header-btn {
+      top: 6rem;
+      right: 1.5rem;
+      z-index: 15;
       padding: 0.5rem 1rem;
       border-radius: 50px;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 600;
       cursor: pointer;
-      text-decoration: none;
       font-family: inherit;
       border: 1px solid rgba(255,255,255,0.1);
       background: rgba(255,255,255,0.04);
       color: rgba(255,255,255,0.5);
       transition: all 0.2s;
+      backdrop-filter: blur(8px);
     }
-    .header-btn:hover { background: rgba(255,77,0,0.15); border-color: #ff4d00; color: #ff4d00; }
+    .viz-reset:hover { background: rgba(255,77,0,0.15); border-color: #ff4d00; color: #ff4d00; }
 
-    /* SVG CONTAINER */
+    /* CANVAS */
     #network-container {
       flex: 1;
       position: relative;
       overflow: hidden;
+      cursor: grab;
     }
+    #network-container:active { cursor: grabbing; }
     #network-container svg {
       width: 100%;
       height: 100%;
+      display: block;
+    }
+
+    /* BACKGROUND GRID */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.15;
+      background-image:
+        radial-gradient(circle at 50% 50%, rgba(255,77,0,0.08) 0%, transparent 60%),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 60px 60px, 60px 60px;
     }
 
     /* STATS BAR */
@@ -98,7 +209,7 @@
       justify-content: center;
       gap: 2rem;
       padding: 0.6rem 2rem;
-      background: rgba(10,10,10,0.95);
+      background: rgba(5,5,5,0.95);
       border-top: 1px solid rgba(255,255,255,0.06);
       font-size: 0.72rem;
       color: rgba(255,255,255,0.3);
@@ -113,25 +224,27 @@
     /* INFO PANEL */
     .network-info {
       position: fixed;
-      bottom: 4rem;
-      left: 50%;
-      transform: translateX(-50%) translateY(20px);
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%) translateX(20px);
       z-index: 20;
-      background: rgba(20,20,20,0.95);
-      border: 1px solid rgba(255,77,0,0.25);
+      background: rgba(12,12,12,0.97);
+      border: 1px solid rgba(255,77,0,0.2);
       border-radius: 16px;
       padding: 1.5rem 2rem;
-      min-width: 360px;
-      max-width: 500px;
-      backdrop-filter: blur(20px);
+      width: 380px;
+      max-height: 70vh;
+      overflow-y: auto;
+      backdrop-filter: blur(24px);
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     }
     .network-info.visible {
       opacity: 1;
       visibility: visible;
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(-50%) translateX(0);
     }
     .info-close {
       position: absolute;
@@ -147,59 +260,122 @@
     }
     .info-close:hover { color: #ff4d00; }
     .info-name {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       color: #ff4d00;
+    }
+    .info-genre {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
     }
     .info-summary {
       font-size: 0.8rem;
       color: rgba(255,255,255,0.5);
       margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .info-list {
+    .info-group {
+      margin-bottom: 1.2rem;
+    }
+    .info-group-title {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       gap: 0.4rem;
+    }
+    .info-group-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #00c864;
     }
     .info-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.6rem;
-      padding: 0.5rem 0.7rem;
+      padding: 0.6rem 0.8rem;
       background: rgba(255,255,255,0.03);
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 0.82rem;
-      cursor: pointer;
+      margin-bottom: 0.4rem;
       transition: background 0.2s;
+      cursor: pointer;
     }
-    .info-item:hover { background: rgba(255,77,0,0.1); }
+    .info-item:hover { background: rgba(255,77,0,0.08); }
     .info-track {
-      color: #00c864;
-      font-weight: 600;
-      max-width: 220px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      color: #fff;
+      font-weight: 500;
+      flex: 1;
+      line-height: 1.4;
     }
-    .info-arrow { color: rgba(255,255,255,0.2); }
-    .info-other { color: #ff4d00; font-weight: 600; }
+    .info-set {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 0.15rem;
+    }
+
+    /* GENRE LEGEND */
+    .genre-legend {
+      position: fixed;
+      bottom: 3.5rem;
+      left: 2rem;
+      z-index: 20;
+      background: rgba(12,12,12,0.9);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      backdrop-filter: blur(12px);
+      max-width: 200px;
+    }
+    .genre-legend-title {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .genre-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.25rem;
+    }
+    .genre-color {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
     /* TOOLTIP */
     .graph-tooltip {
       position: absolute;
-      padding: 0.4rem 0.7rem;
-      background: rgba(0,0,0,0.9);
-      border: 1px solid rgba(0,200,100,0.4);
-      border-radius: 6px;
-      color: #00c864;
-      font-size: 0.7rem;
+      padding: 0.5rem 0.8rem;
+      background: rgba(0,0,0,0.92);
+      border: 1px solid rgba(255,77,0,0.3);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.75rem;
       font-weight: 600;
       pointer-events: none;
       opacity: 0;
       z-index: 30;
       transition: opacity 0.15s;
       white-space: nowrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
     .graph-tooltip.visible { opacity: 1; }
 
@@ -207,353 +383,691 @@
       .network-header { padding: 0.8rem 1rem; gap: 0.8rem; flex-wrap: wrap; }
       .search-wrapper { max-width: 100%; }
       .network-stats { gap: 1rem; font-size: 0.65rem; }
-      .network-info { min-width: auto; width: 90%; padding: 1rem 1.2rem; }
+      .network-info { width: 90%; right: 5%; transform: translateY(-50%) translateX(0); top: 50%; }
+      .genre-legend { display: none; }
     }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
-  <div class="network-header">
-    <div class="network-logo">
-      <span class="main">3TRES6 <em>NEURAL</em></span>
-      <span class="sub">DJ Connection Map</span>
+  <header class="header" id="mainHeader" role="banner">
+    <div class="header-container">
+      <a href="/" class="logo" aria-label="3TRES6 Records Home">
+        <span class="logo-text">3TRES6</span>
+        <span class="logo-subtitle">RECORDS</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+        <div class="nav-group nav-group-store">
+          <a href="/" class="nav-item">Catálogo</a>
+          <a href="/#calendario" class="nav-item">Calendario</a>
+          <a href="/#nosotros" class="nav-item">Nosotros</a>
+        </div>
+        <div class="nav-separator"></div>
+        <div class="nav-group nav-group-content">
+          <a href="blog.html" class="nav-item">Blog</a>
+          <a href="dj-library.html" class="nav-item">DJ Library</a>
+          <a href="3d-brain.html" class="nav-item active">Neural</a>
+          <a href="/toolhub/" class="nav-item">Herramientas</a>
+          <a href="/toolhub/#hardware" class="nav-item">Equipo DJ</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
+        <a href="/" class="cart-icon" aria-label="Carrito">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
     </div>
-    <div class="search-wrapper">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="networkSearch" placeholder="Search DJ or track name..." />
-    </div>
-    <div class="header-actions">
-      <button class="header-btn" id="resetViewBtn">⟲ Reset</button>
-      <a href="/" class="header-btn">← Home</a>
-    </div>
-  </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <div class="mobile-nav-group-label">Tienda</div>
+      <a href="/">Catálogo</a>
+      <a href="/#calendario">Calendario</a>
+      <a href="/#nosotros">Nosotros</a>
+      <div class="mobile-nav-group-label">Contenido</div>
+      <a href="blog.html">Blog</a>
+      <a href="dj-library.html">DJ Library</a>
+      <a href="3d-brain.html">Neural</a>
+      <a href="/toolhub/">Herramientas</a>
+      <a href="/toolhub/#hardware">Equipo DJ</a>
+      <div class="mobile-nav-group-label">Redes</div>
+      <a href="/#instagram">Instagram</a>
+      <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+    </nav>
+  </header>
 
   <!-- CANVAS -->
-  <div id="network-container"></div>
+  <div id="network-container">
+    <div class="bg-grid"></div>
+
+    <div class="viz-search">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="networkSearch" placeholder="Search DJ or track..." />
+    </div>
+
+    <button class="viz-reset" id="resetViewBtn">⟲ Reset</button>
+
+    <svg id="sphere-svg"></svg>
+  </div>
 
   <!-- TOOLTIP -->
   <div class="graph-tooltip" id="graphTooltip"></div>
+
+  <!-- GENRE LEGEND -->
+  <div class="genre-legend" id="genreLegend">
+    <div class="genre-legend-title">Genres</div>
+    <div id="legendItems"></div>
+  </div>
 
   <!-- STATS -->
   <div class="network-stats" id="networkStats">
     <span><strong id="statDJs">0</strong> DJs</span>
     <span><strong id="statConns">0</strong> Connections</span>
     <span><strong id="statVis">0</strong> Visible</span>
-    <span class="legend"><span class="dot dj-dot"></span>DJ<span class="dot conn-dot"></span>Track Match</span>
+    <span class="legend"><span class="dot dj-dot"></span>DJ<span class="dot conn-dot"></span>Connection</span>
   </div>
 
   <!-- INFO PANEL -->
   <div class="network-info" id="networkInfo">
     <button class="info-close" id="infoClose">×</button>
     <div class="info-name" id="infoName"></div>
+    <div class="info-genre" id="infoGenre"></div>
     <div class="info-summary" id="infoSummary"></div>
-    <div class="info-list" id="infoList"></div>
+    <div id="infoList"></div>
   </div>
 
-  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
-    // DATA — DJs with color palette
+    // ======== DATA ========
+    const GENRE_COLORS = {
+      "House": "#ff4d00", "Deep House": "#ff8c00", "Acid House": "#ff6a00",
+      "Soulful House": "#ff9100", "Melodic House": "#ffab00", "Tech House": "#e040fb",
+      "Techno": "#00bcd4", "Minimal Techno": "#00e5ff", "Detroit Techno": "#37474f",
+      "Hypnotic Techno": "#00acc1", "Dub Techno": "#4dd0e1", "Minimal": "#7c4dff",
+      "UK Bass": "#00c864", "Disco": "#ff6a2a", "Balearic": "#ff8c42",
+      "French Touch": "#ff5252", "Experimental": "#607d8b", "Jazz": "#78909c",
+      "Ambient": "#90a4ae", "Funk": "#ffca28", "Breaks": "#ab47bc",
+      "Garage": "#26a69a", "Trance": "#42a5f5", "Electro": "#66bb6a",
+      "Classic House": "#ff7043", "Chicago House": "#ff8a65", "Latin House": "#ffab91",
+      "Fashion": "#f06292", "New Age": "#81d4fa", "Live PA": "#a5d6a7",
+      "Hard Dance": "#d32f2f", "IDM": "#8e24aa", "Hardgroove": "#5c6bc0",
+      "Unknown": "#555555"
+    };
+    function getGenreColor(g) { return GENRE_COLORS[g] || GENRE_COLORS["Unknown"]; }
+
     const DJ_DATA = [
-      { id:'chaos-in-the-cbd', name:'Chaos In The CBD', color:'#ff4d00' },
-      { id:'palms-trax', name:'Palms Trax', color:'#ff6a2a' },
-      { id:'laurent-garnier', name:'Laurent Garnier', color:'#ff8c00' },
-      { id:'frankie-knuckles', name:'Frankie Knuckles', color:'#ff4d00' },
-      { id:'floating-points', name:'Floating Points', color:'#7c4dff' },
-      { id:'richie-hawtin', name:'Richie Hawtin', color:'#00bcd4' },
-      { id:'avalon-emerson', name:'Avalon Emerson', color:'#00e5ff' },
-      { id:'dj-pierre', name:'DJ Pierre', color:'#ff4d00' },
-      { id:'kettama', name:'KETTAMA', color:'#ff9100' },
-      { id:'young-marco', name:'Young Marco', color:'#00c864' },
-      { id:'masters-at-work', name:'Masters At Work', color:'#ff6f00' },
-      { id:'honey-dijon', name:'Honey Dijon', color:'#e91e63' },
-      { id:'seth-troxler', name:'Seth Troxler', color:'#9c27b0' },
-      { id:'carl-cox', name:'Carl Cox', color:'#ff5722' },
-      { id:'motor-city-drum', name:'MCDE', color:'#4caf50' },
-      { id:'alex-do', name:'Alex.Do', color:'#607d8b' },
-      { id:'etapp-kyle', name:'Etapp Kyle', color:'#03a9f4' },
-      { id:'call-super', name:'Call Super', color:'#8bc34a' },
-      { id:'kerri-chandler', name:'Kerri Chandler', color:'#ff5722' },
-      { id:'ian-pooley', name:'Ian Pooley', color:'#009688' },
-      { id:'apollonia', name:'Apollonia', color:'#e040fb' },
-      { id:'dixon', name:'Dixon', color:'#ffab00' },
-      { id:'ben-ufo', name:'Ben UFO', color:'#795548' },
-      { id:'moodymann', name:'Moodymann', color:'#37474f' },
-      { id:'carl-craig', name:'Carl Craig', color:'#607d8b' },
-      { id:'pangaea', name:'Pangaea', color:'#3e2723' },
-      { id:'kink', name:'KiNK', color:'#1b5e20' },
-      { id:'dj-koze', name:'DJ Koze', color:'#e65100' },
-      { id:'objekt', name:'Objekt', color:'#4a148c' },
-      { id:'ame', name:'Âme', color:'#01579b' },
-      { id:'four-tet', name:'Four Tet', color:'#33691e' },
-      { id:'maceo-plex', name:'Maceo Plex', color:'#880e4f' },
-      { id:'larry-heard', name:'Larry Heard', color:'#bf360c' },
-      { id:'joe-claussell', name:'Joe Claussell', color:'#3e2723' },
-      { id:'shonky', name:'Shonky', color:'#1a237e' },
-      { id:'tiger-woods', name:'Tiger & Woods', color:'#ff6f00' },
-      { id:'nicolas-jaar', name:'Nicolas Jaar', color:'#006064' },
-      { id:'demi-riquismo', name:'Demi Riquisimo', color:'#827717' },
-      { id:'job-jobse', name:'Job Jobse', color:'#4e342e' },
-      { id:'rey-colino', name:'Rey Colino', color:'#37474f' },
-      { id:'vtss', name:'VTSS', color:'#d50000' },
-      { id:'mark-broom', name:'Mark Broom', color:'#263238' },
-      { id:'joy-orbison', name:'Joy Orbison', color:'#ffab40' },
-      { id:'folamour', name:'Folamour', color:'#f44336' },
-      { id:'peggy-gou', name:'Peggy Gou', color:'#e91e63' },
-      { id:'blessed-madonna', name:'Blessed Madonna', color:'#9c27b0' },
-      { id:'mall-grab', name:'Mall Grab', color:'#00bcd4' },
-      { id:'hunee', name:'Hunee', color:'#795548' },
-    ];
+      { id: "chaos-in-the-cbd", name: "Chaos In The CBD", genre: "Deep House" },
+  { id: "palms-trax", name: "Palms Trax", genre: "House" },
+  { id: "laurent-garnier", name: "Laurent Garnier", genre: "House" },
+  { id: "frankie-knuckles", name: "Frankie Knuckles", genre: "House" },
+  { id: "floating-points", name: "Floating Points", genre: "House" },
+  { id: "richie-hawtin", name: "Richie Hawtin", genre: "Minimal Techno" },
+  { id: "avalon-emerson", name: "Avalon Emerson", genre: "House" },
+  { id: "dj-pierre", name: "DJ Pierre", genre: "Acid House" },
+  { id: "kettama", name: "KETTAMA", genre: "House" },
+  { id: "young-marco", name: "Young Marco", genre: "House" },
+  { id: "masters-at-work", name: "Masters At Work", genre: "House" },
+  { id: "honey-dijon", name: "Honey Dijon", genre: "House" },
+  { id: "seth-troxler", name: "Seth Troxler", genre: "Tech House" },
+  { id: "alex-do", name: "Alex.Do", genre: "Techno" },
+  { id: "etapp-kyle", name: "Etapp Kyle", genre: "Techno" },
+  { id: "call-super", name: "Call Super", genre: "House" },
+  { id: "kerri-chandler", name: "Kerri Chandler", genre: "Deep House" },
+  { id: "ian-pooley", name: "Ian Pooley", genre: "Deep House" },
+  { id: "apollonia", name: "Apollonia", genre: "Minimal" },
+  { id: "dixon", name: "Dixon", genre: "Melodic House" },
+  { id: "ben-ufo", name: "Ben UFO", genre: "House" },
+  { id: "moodymann", name: "Moodymann", genre: "Deep House" },
+  { id: "maceo-plex", name: "Maceo Plex", genre: "Tech House" },
+  { id: "ame", name: "\u00c2me", genre: "Melodic House" },
+  { id: "four-tet", name: "Four Tet", genre: "House" },
+  { id: "carl-craig", name: "Carl Craig", genre: "Detroit Techno" },
+  { id: "pangaea", name: "Pangaea", genre: "UK Bass" },
+  { id: "kink", name: "KiNK", genre: "Techno" },
+  { id: "dj-koze", name: "DJ Koze", genre: "House" },
+  { id: "objekt", name: "Objekt", genre: "Techno" },
+  { id: "vtss", name: "VTSS", genre: "Techno" },
+  { id: "mark-broom", name: "Mark Broom", genre: "Techno" },
+  { id: "joy-orbison", name: "Joy Orbison", genre: "UK Bass" },
+  { id: "larry-heard", name: "Larry Heard (Mr. Fingers)", genre: "Unknown" },
+  { id: "joe-claussell", name: "Joe Claussell", genre: "Unknown" },
+  { id: "shonky", name: "Shonky", genre: "Unknown" },
+  { id: "tiger-woods", name: "Tiger & Woods", genre: "Unknown" },
+  { id: "nicolas-jaar", name: "Nicolas Jaar", genre: "Unknown" },
+  { id: "demi-riquismo", name: "Demi Riqu\u00edsimo", genre: "Unknown" },
+  { id: "job-jobse", name: "Job Jobse", genre: "Unknown" },
+  { id: "rey-colino", name: "Rey Colino", genre: "Unknown" },
+  { id: "cassius", name: "Cassius", genre: "Unknown" },
+  { id: "folamour", name: "Folamour", genre: "Unknown" },
+  { id: "peggy-gou", name: "Peggy Gou", genre: "Unknown" },
+  { id: "blessed-madonna", name: "The Blessed Madonna", genre: "Unknown" },
+  { id: "mall-grab", name: "Mall Grab", genre: "Unknown" },
+  { id: "hunee", name: "Hunee", genre: "Unknown" },
+  { id: "carl-cox", name: "Carl Cox", genre: "Techno" }
+];
 
-    // Track cross-references from database
-    const TRACK_CONNECTIONS = [
-      ['carl-cox','seth-troxler','Chez Damier — Can You Feel It'],
-      ['carl-cox','four-tet','New Order — Blue Monday'],
-      ['carl-cox','laurent-garnier','New Order — Blue Monday'],
-      ['laurent-garnier','four-tet','New Order — Blue Monday'],
-      ['masters-at-work','moodymann','Marshall Jefferson — Move Your Body'],
-      ['seth-troxler','carl-craig','Octave One — Blackwater'],
-      ['carl-cox','carl-craig','Octave One — Blackwater'],
-      ['carl-cox','laurent-garnier','Octave One — Blackwater'],
-      ['carl-cox','seth-troxler','Octave One — Blackwater'],
-      ['honey-dijon','seth-troxler','The Bucketheads — The Bomb!'],
-      ['seth-troxler','honey-dijon','Kings Of Tomorrow — Finally'],
-      ['kerri-chandler','honey-dijon','Peven Everett — Special'],
-      ['masters-at-work','joe-claussell','Earth People — Dance'],
-      ['dixon','ame','Âme — Asa'],
-      ['dixon','ame','Âme & Curses — Shadow Of Love'],
-      ['ben-ufo','kink','KiNK — Kazan'],
-      ['pangaea','ben-ufo','Pangaea — Router'],
-      ['four-tet','dj-koze','DJ Koze — All The Time'],
-    ];
+// ======== MULTI-DJ TRACKS ========
+const MULTI_DJ_TRACKS = [
+  { track: "Ame - Asa", djs: ["ame", "dixon"], sets: ["ame-br-innervisions-ade-2012", "dixon-cercle-2024"] },
+  { track: "Ame & Curses - Shadow Of Love", djs: ["ame", "dixon"], sets: ["ame-br-innervisions-ade-2012", "dixon-cercle-2024"] },
+  { track: "KiNK - Kazan", djs: ["ben-ufo", "kink"], sets: ["ben-ufo-br-sugar-mountain-2025", "kink-br-moscow-2014"] },
+  { track: "Pangaea - Router", djs: ["ben-ufo", "pangaea"], sets: ["ben-ufo-br-sugar-mountain-2025", "pangaea-br-dekmantel-2015"] },
+  { track: "Chez Damier - Can You Feel It (Steve Bug Re-Dub)", djs: ["carl-cox", "seth-troxler"], sets: ["carl-cox-ibiza-villa", "seth-troxler-via-cross-ref"] },
+  { track: "New Order - Blue Monday (Original 12 Mix)", djs: ["carl-cox", "four-tet", "laurent-garnier"], sets: ["carl-cox-ibiza-villa", "four-tet-via-cross-ref", "laurent-garnier-via-cross-ref"] },
+  { track: "Octave One - Blackwater", djs: ["carl-craig", "seth-troxler", "carl-cox", "laurent-garnier"], sets: ["carl-craig-br-rbma-2013", "seth-troxler-br-mexico-2014", "carl-cox-via-cross-ref", "laurent-garnier-via-cross-ref"] },
+  { track: "DJ Koze - All The Time", djs: ["dj-koze", "four-tet"], sets: ["dj-koze-various", "four-tet-br-london-2015"] },
+  { track: "The Bucketheads - The Bomb! (Armand Van Helden Re-Edit)", djs: ["honey-dijon", "seth-troxler"], sets: ["honey-dijon-dekmantel-2025", "seth-troxler-via-cross-ref"] },
+  { track: "Earth People - Dance", djs: ["joe-claussell", "masters-at-work"], sets: ["joe-claussell-br-paris-2014", "maw-br-london-2014", "masters-at-work-via-cross-ref"] },
+  { track: "Peven Everett - Special (Timmy Regisford Remix)", djs: ["kerri-chandler", "honey-dijon"], sets: ["kerri-chandler-br-nyc-2022", "honey-dijon-via-cross-ref"] },
+  { track: "Marshall Jefferson - Move Your Body", djs: ["masters-at-work", "moodymann"], sets: ["maw-br-london-2014", "masters-at-work-via-cross-ref", "moodymann-via-cross-ref"] },
+  { track: "Kings Of Tomorrow - Finally", djs: ["seth-troxler", "honey-dijon"], sets: ["seth-troxler-br-mexico-2014", "honey-dijon-via-cross-ref"] }
+];
 
-    // Build graph structure
+    // ======== BUILD GRAPH ========
     const djMap = {};
     DJ_DATA.forEach(d => { djMap[d.id] = d; });
 
-    const nodes = DJ_DATA.map(d => ({ id: d.id, name: d.name, color: d.color, connections: 0 }));
+    const nodes = DJ_DATA.map(d => ({
+      id: d.id,
+      name: d.name,
+      genre: d.genre,
+      color: getGenreColor(d.genre),
+      connections: 0,
+      x3: 0, y3: 0, z3: 0,
+      x2: 0, y2: 0, z2: 0, scale: 1
+    }));
+
     const links = [];
     const linkSet = new Set();
 
-    TRACK_CONNECTIONS.forEach(([a, b, track]) => {
-      const key = [a, b].sort().join('|') + '|' + track;
-      if (!linkSet.has(key)) {
-        linkSet.add(key);
-        links.push({ source: djMap[a] ? DJ_DATA.findIndex(d => d.id === a) : -1, target: DJ_DATA.findIndex(d => d.id === b), track: track });
+    MULTI_DJ_TRACKS.forEach(t => {
+      const djs = t.djs;
+      for (let i = 0; i < djs.length; i++) {
+        for (let j = i + 1; j < djs.length; j++) {
+          const a = djs[i], b = djs[j];
+          const key = [a, b].sort().join('|');
+          if (!linkSet.has(key)) {
+            linkSet.add(key);
+            const na = nodes.find(n => n.id === a);
+            const nb = nodes.find(n => n.id === b);
+            if (na && nb) {
+              links.push({ source: na, target: nb, track: t.track, sets: t.sets });
+              na.connections++;
+              nb.connections++;
+            }
+          }
+        }
       }
     });
 
-    // Count connections per node
-    links.forEach(l => {
-      nodes[l.source].connections++;
-      nodes[l.target].connections++;
+    // ======== SPHERICAL LAYOUT ========
+    function fibonacciSphere(n, radius) {
+      const pts = [];
+      const phi = Math.PI * (3 - Math.sqrt(5));
+      for (let i = 0; i < n; i++) {
+        const y = 1 - (i / (n - 1)) * 2;
+        const r = Math.sqrt(1 - y * y);
+        const theta = phi * i;
+        const x = Math.cos(theta) * r;
+        const z = Math.sin(theta) * r;
+        pts.push({ x: x * radius, y: y * radius, z: z * radius });
+      }
+      return pts;
+    }
+
+    // Place connected DJs closer together using force relaxation
+    const radius = 280;
+    const positions = fibonacciSphere(nodes.length, radius);
+
+    // Seed initial positions
+    nodes.forEach((n, i) => {
+      n.x3 = positions[i].x;
+      n.y3 = positions[i].y;
+      n.z3 = positions[i].z;
     });
 
-    // ========== D3.js RENDER ==========
-    const container = document.getElementById('network-container');
-    const width = Math.max(container.clientWidth, window.innerWidth - 40, 800);
-    const height = Math.max(container.clientHeight, window.innerHeight - 100, 500);
+    // Relax: connected nodes attract, all nodes repel
+    for (let iter = 0; iter < 200; iter++) {
+      // Attraction
+      links.forEach(l => {
+        const dx = l.target.x3 - l.source.x3;
+        const dy = l.target.y3 - l.source.y3;
+        const dz = l.target.z3 - l.source.z3;
+        const dist = Math.sqrt(dx*dx + dy*dy + dz*dz) || 1;
+        const force = 0.3 * (dist - radius * 0.4) / dist;
+        const fx = dx * force;
+        const fy = dy * force;
+        const fz = dz * force;
+        l.source.x3 += fx; l.source.y3 += fy; l.source.z3 += fz;
+        l.target.x3 -= fx; l.target.y3 -= fy; l.target.z3 -= fz;
+      });
+      // Repulsion
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i], b = nodes[j];
+          const dx = b.x3 - a.x3;
+          const dy = b.y3 - a.y3;
+          const dz = b.z3 - a.z3;
+          const dist = Math.sqrt(dx*dx + dy*dy + dz*dz) || 1;
+          const force = -80 / (dist * dist);
+          const fx = dx * force;
+          const fy = dy * force;
+          const fz = dz * force;
+          a.x3 += fx; a.y3 += fy; a.z3 += fz;
+          b.x3 -= fx; b.y3 -= fy; b.z3 -= fz;
+        }
+      }
+      // Re-project to sphere surface
+      nodes.forEach(n => {
+        const dist = Math.sqrt(n.x3*n.x3 + n.y3*n.y3 + n.z3*n.z3) || 1;
+        n.x3 = (n.x3 / dist) * radius;
+        n.y3 = (n.y3 / dist) * radius;
+        n.z3 = (n.z3 / dist) * radius;
+      });
+    }
 
-    const svg = d3.select('#network-container')
-      .append('svg')
-      .attr('width', width)
-      .attr('height', height)
-      .attr('viewBox', [0, 0, width, height]);
+    // ======== 3D PROJECTION ========
+    let rotX = 0.4, rotY = 0.6;
+    let targetRotX = 0.4, targetRotY = 0.6;
+    let autoRotate = true;
+    let dragStart = null;
+    let dragStartRot = null;
 
-    const g = svg.append('g');
+    function project(x, y, z, w, h) {
+      // Rotate around Y
+      let x1 = x * Math.cos(rotY) - z * Math.sin(rotY);
+      let z1 = x * Math.sin(rotY) + z * Math.cos(rotY);
+      // Rotate around X
+      let y1 = y * Math.cos(rotX) - z1 * Math.sin(rotX);
+      let z2 = y * Math.sin(rotX) + z1 * Math.cos(rotX);
+      // Perspective
+      const camDist = 900;
+      const scale = camDist / (camDist - z2);
+      return {
+        x: w / 2 + x1 * scale,
+        y: h / 2 + y1 * scale,
+        z: z2,
+        scale: scale
+      };
+    }
 
-    // Zoom
-    const zoom = d3.zoom()
-      .scaleExtent([0.2, 4])
-      .on('zoom', (event) => { g.attr('transform', event.transform); });
-    svg.call(zoom);
-    // Disable double-click zoom (annoying on mobile)
-    svg.on('dblclick.zoom', null);
-
-    // Tooltip
+    // ======== RENDER ========
+    const svg = document.getElementById('sphere-svg');
     const tooltip = document.getElementById('graphTooltip');
+    const container = document.getElementById('network-container');
+    let w = container.clientWidth;
+    let h = container.clientHeight;
+
+    // Create SVG definitions (filters, gradients)
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    defs.innerHTML = `
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="4" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="8" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      <radialGradient id="sphere-bg" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(255,77,0,0.03)" />
+        <stop offset="100%" stop-color="transparent" />
+      </radialGradient>
+    `;
+    svg.appendChild(defs);
+
+    // Groups for z-sorting
+    const linkGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const labelGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    svg.appendChild(linkGroup);
+    svg.appendChild(nodeGroup);
+    svg.appendChild(labelGroup);
+
+    // Create link elements
+    const linkEls = links.map(l => {
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('stroke', 'rgba(0,200,100,0.35)');
+      line.setAttribute('stroke-width', '1.5');
+      line.setAttribute('stroke-dasharray', '4,3');
+      line.style.transition = 'stroke 0.3s, stroke-width 0.3s, opacity 0.3s';
+      line.dataset.track = l.track;
+      linkGroup.appendChild(line);
+      return { el: line, data: l };
+    });
+
+    // Create node elements
+    const nodeEls = nodes.map(n => {
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.style.cursor = 'pointer';
+      g.style.transition = 'opacity 0.3s';
+
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      const r = Math.max(5, n.connections * 2.5 + 5);
+      circle.setAttribute('r', r);
+      circle.setAttribute('fill', n.color);
+      circle.setAttribute('stroke', n.connections > 0 ? '#fff' : 'rgba(255,255,255,0.2)');
+      circle.setAttribute('stroke-width', n.connections > 0 ? 2 : 1);
+      circle.setAttribute('filter', n.connections > 0 ? 'url(#glow)' : '');
+      circle.style.transition = 'r 0.3s, stroke-width 0.3s, opacity 0.3s';
+
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.textContent = n.name;
+      label.setAttribute('fill', '#fff');
+      label.setAttribute('font-size', n.connections > 0 ? '10px' : '9px');
+      label.setAttribute('font-weight', n.connections > 0 ? '600' : '400');
+      label.setAttribute('font-family', 'Space Grotesk, sans-serif');
+      label.setAttribute('dy', r + 12);
+      label.setAttribute('text-anchor', 'middle');
+      label.style.pointerEvents = 'none';
+      label.style.transition = 'opacity 0.3s';
+      label.style.opacity = '0.7';
+
+      g.appendChild(circle);
+      nodeGroup.appendChild(g);
+      labelGroup.appendChild(label);
+
+      return { g, circle, label, data: n };
+    });
+
+    // ======== INTERACTION STATE ========
+    let hoveredId = null;
+    let selectedId = null;
+    let filteredIds = null;
+
+    function getConnectedIds(id) {
+      const set = new Set([id]);
+      links.forEach(l => {
+        if (l.source.id === id) set.add(l.target.id);
+        if (l.target.id === id) set.add(l.source.id);
+      });
+      return set;
+    }
+
+    // ======== HOVER ========
+    nodeEls.forEach(ne => {
+      ne.g.addEventListener('mouseenter', e => {
+        hoveredId = ne.data.id;
+        autoRotate = false;
+        tooltip.textContent = ne.data.name;
+        tooltip.classList.add('visible');
+
+      });
+      ne.g.addEventListener('mousemove', e => {
+        tooltip.style.left = (e.clientX + 15) + 'px';
+        tooltip.style.top = (e.clientY + 15) + 'px';
+      });
+      ne.g.addEventListener('mouseleave', () => {
+        hoveredId = null;
+        autoRotate = true;
+        tooltip.classList.remove('visible');
+
+      });
+    });
+
+    // ======== CLICK / POPUP ========
     const infoPanel = document.getElementById('networkInfo');
 
-    // Force simulation
-    const simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(d => d.id).distance(180))
-      .force('charge', d3.forceManyBody().strength(-400))
-      .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide(d => Math.max(30, d.connections * 4 + 25)));
+    nodeEls.forEach(ne => {
+      ne.g.addEventListener('click', e => {
+        e.stopPropagation();
+        selectedId = ne.data.id;
+        autoRotate = false;
+        showInfo(ne.data);
 
-    // Connection lines
-    const link = g.append('g')
-      .selectAll('line')
-      .data(links)
-      .enter().append('line')
-      .attr('stroke', 'rgba(0,200,100,0.25)')
-      .attr('stroke-width', 1.5)
-      .attr('stroke-dasharray', '3,2')
-      .style('cursor', 'default');
-
-    // DJ nodes
-    const node = g.append('g')
-      .selectAll('g')
-      .data(nodes)
-      .enter().append('g')
-      .call(d3.drag()
-        .on('start', (event, d) => { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-        .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
-        .on('end', (event, d) => { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; })
-      )
-      .style('cursor', 'grab');
-
-    // Node circles
-    node.append('circle')
-      .attr('r', d => Math.max(10, d.connections * 2 + 10))
-      .attr('fill', d => d.color)
-      .attr('stroke', d => d.connections > 0 ? '#fff' : 'rgba(255,255,255,0.3)')
-      .attr('stroke-width', d => d.connections > 0 ? 2 : 1)
-      .attr('opacity', 0.85);
-
-    // Node labels
-    node.append('text')
-      .text(d => d.name)
-      .attr('x', d => Math.max(14, d.connections * 2 + 14))
-      .attr('y', 4)
-      .attr('fill', '#fff')
-      .attr('font-size', d => d.connections > 0 ? '11px' : '9px')
-      .attr('font-weight', d => d.connections > 0 ? 600 : 400)
-      .attr('font-family', 'Space Grotesk, sans-serif')
-      .style('pointer-events', 'none');
-
-    // HOVER — highlight connected, dim others
-    node.on('mouseenter', function(event, d) {
-      const connectedIds = new Set();
-      links.forEach(l => {
-        if (l.source.id === d.id) connectedIds.add(l.target.id);
-        if (l.target.id === d.id) connectedIds.add(l.source.id);
       });
-      connectedIds.add(d.id);
-
-      node.selectAll('circle').attr('opacity', n => connectedIds.has(n.id) ? 1 : 0.12);
-      node.selectAll('text').attr('opacity', n => connectedIds.has(n.id) ? 1 : 0);
-      link.attr('stroke', l => {
-        if ((l.source.id === d.id && connectedIds.has(l.target.id)) || (l.target.id === d.id && connectedIds.has(l.source.id))) {
-          return 'rgba(0,200,100,0.9)';
-        }
-        return 'rgba(255,255,255,0.02)';
-      }).attr('stroke-width', l => {
-        if ((l.source.id === d.id && connectedIds.has(l.target.id)) || (l.target.id === d.id && connectedIds.has(l.source.id))) {
-          return 3;
-        }
-        return 1;
-      }).attr('stroke-dasharray', l => {
-        if ((l.source.id === d.id && connectedIds.has(l.target.id)) || (l.target.id === d.id && connectedIds.has(l.source.id))) {
-          return null;
-        }
-        return '3,2';
-      });
-
-      document.getElementById('network-container').style.cursor = 'pointer';
     });
 
-    node.on('mouseleave', function() {
-      node.selectAll('circle').attr('opacity', 0.85);
-      node.selectAll('text').attr('opacity', 1);
-      link.attr('stroke', 'rgba(0,200,100,0.25)').attr('stroke-width', 1.5).attr('stroke-dasharray', '3,2');
-      document.getElementById('network-container').style.cursor = 'default';
+    container.addEventListener('click', () => {
+      selectedId = null;
+      autoRotate = true;
+      infoPanel.classList.remove('visible');
+
     });
 
-    // CLICK — show info panel
-    node.on('click', function(event, d) {
+    document.getElementById('infoClose').addEventListener('click', () => {
+      selectedId = null;
+      autoRotate = true;
+      infoPanel.classList.remove('visible');
+
+    });
+
+    function showInfo(d) {
+      document.getElementById('infoName').textContent = d.name;
+      document.getElementById('infoGenre').textContent = d.genre;
       const conns = [];
       links.forEach(l => {
-        if (l.source.id === d.id) conns.push({ other: l.target, track: l.track });
-        if (l.target.id === d.id) conns.push({ other: l.source, track: l.track });
+        if (l.source.id === d.id) conns.push({ other: l.target, track: l.track, sets: l.sets });
+        if (l.target.id === d.id) conns.push({ other: l.source, track: l.track, sets: l.sets });
       });
-
-      document.getElementById('infoName').textContent = d.name;
-      document.getElementById('infoSummary').textContent = conns.length + ' track connection' + (conns.length !== 1 ? 's' : '');
+      document.getElementById('infoSummary').textContent = conns.length + ' shared track' + (conns.length !== 1 ? 's' : '') + ' across the library';
 
       const list = document.getElementById('infoList');
       if (conns.length === 0) {
-        list.innerHTML = '<div class="info-item" style="color:rgba(255,255,255,0.3)">No track connections yet. Keep feeding the library!</div>';
+        list.innerHTML = '<div style="color:rgba(255,255,255,0.2);font-size:0.8rem;padding:1rem 0;">No shared tracks yet.</div>';
       } else {
-        list.innerHTML = conns.map(c => `
-          <div class="info-item">
-            <span class="info-track" title="${c.track}">${c.track}</span>
-            <span class="info-arrow">→</span>
-            <span class="info-other">${c.other.name}</span>
+        // Group by other DJ
+        const byDJ = {};
+        conns.forEach(c => {
+          if (!byDJ[c.other.id]) byDJ[c.other.id] = { other: c.other, tracks: [] };
+          byDJ[c.other.id].tracks.push(c);
+        });
+        list.innerHTML = Object.values(byDJ).map(g => `
+          <div class="info-group">
+            <div class="info-group-title">${g.other.name}</div>
+            ${g.tracks.map(t => `
+              <div class="info-item">
+                <div>
+                  <div class="info-track">${t.track}</div>
+                  <div class="info-set">${t.sets.map(s => s.replace(/-/g, ' ')).join(' • ')}</div>
+                </div>
+              </div>
+            `).join('')}
           </div>
         `).join('');
       }
-
       infoPanel.classList.add('visible');
-    });
+    }
 
-    // CLOSE info panel
-    document.getElementById('infoClose').addEventListener('click', () => {
-      infoPanel.classList.remove('visible');
-    });
-
-    // SEARCH
+    // ======== SEARCH ========
     document.getElementById('networkSearch').addEventListener('input', function() {
       const q = this.value.toLowerCase().trim();
       if (!q) {
-        node.selectAll('circle').attr('opacity', 0.85);
-        node.selectAll('text').attr('opacity', 1);
-        link.attr('stroke', 'rgba(0,200,100,0.25)');
+        filteredIds = null;
+
         document.getElementById('statVis').textContent = nodes.length;
         return;
       }
-
-      const matchingIds = new Set();
+      filteredIds = new Set();
       nodes.forEach(n => {
-        if (n.name.toLowerCase().includes(q)) matchingIds.add(n.id);
+        if (n.name.toLowerCase().includes(q) || n.genre.toLowerCase().includes(q)) filteredIds.add(n.id);
       });
       links.forEach(l => {
-        if (l.track && l.track.toLowerCase().includes(q)) {
-          matchingIds.add(l.source.id);
-          matchingIds.add(l.target.id);
+        if (l.track.toLowerCase().includes(q)) {
+          filteredIds.add(l.source.id);
+          filteredIds.add(l.target.id);
         }
       });
 
-      node.selectAll('circle').attr('opacity', n => matchingIds.has(n.id) ? 1 : 0.08);
-      node.selectAll('text').attr('opacity', n => matchingIds.has(n.id) ? 1 : 0);
-      link.attr('stroke', l => {
-        if (matchingIds.has(l.source.id) && matchingIds.has(l.target.id)) return 'rgba(0,200,100,0.6)';
-        return 'rgba(255,255,255,0.02)';
-      });
-      document.getElementById('statVis').textContent = matchingIds.size;
+      document.getElementById('statVis').textContent = filteredIds.size;
     });
 
-    // RESET
+    // ======== RESET ========
     document.getElementById('resetViewBtn').addEventListener('click', () => {
-      svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
-      node.selectAll('circle').attr('opacity', 0.85);
-      node.selectAll('text').attr('opacity', 1);
-      link.attr('stroke', 'rgba(0,200,100,0.25)');
+      rotX = 0.4;
+      rotY = 0.6;
+      targetRotX = 0.4;
+      targetRotY = 0.6;
+      hoveredId = null;
+      selectedId = null;
+      filteredIds = null;
+      autoRotate = true;
       document.getElementById('networkSearch').value = '';
-      document.getElementById('statVis').textContent = nodes.length;
       infoPanel.classList.remove('visible');
+
+      document.getElementById('statVis').textContent = nodes.length;
     });
 
-    // Tick
-    simulation.on('tick', () => {
-      link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-          .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-      node.attr('transform', d => `translate(${d.x},${d.y})`);
+    // ======== DRAG TO ROTATE ========
+    container.addEventListener('mousedown', e => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartRot = { x: rotX, y: rotY };
+      autoRotate = false;
+      container.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mousemove', e => {
+      if (!dragStart) return;
+      const dx = e.clientX - dragStart.x;
+      const dy = e.clientY - dragStart.y;
+      targetRotY = dragStartRot.y + dx * 0.005;
+      targetRotX = dragStartRot.x - dy * 0.005;
+    });
+    window.addEventListener('mouseup', () => {
+      if (dragStart) {
+        dragStart = null;
+        container.style.cursor = 'grab';
+        if (!selectedId) autoRotate = true;
+      }
     });
 
-    // Resize
+    // ======== ANIMATION LOOP ========
+    function animate() {
+      // Smooth rotation
+      if (autoRotate) {
+        targetRotY += 0.0015;
+      }
+      rotX += (targetRotX - rotX) * 0.08;
+      rotY += (targetRotY - rotY) * 0.08;
+
+      // Project all nodes
+      nodeEls.forEach(ne => {
+        const n = ne.data;
+        const p = project(n.x3, n.y3, n.z3, w, h);
+        n.x2 = p.x;
+        n.y2 = p.y;
+        n.z2 = p.z;
+        n.scale = p.scale;
+      });
+
+      // Sort nodes by Z for proper overlap
+      const sorted = nodeEls.slice().sort((a, b) => a.data.z2 - b.data.z2);
+
+      // Determine active IDs for this frame
+      const activeIds = filteredIds || (hoveredId ? getConnectedIds(hoveredId) : null);
+
+      // Update node positions
+      sorted.forEach(ne => {
+        const n = ne.data;
+        const s = n.scale;
+        const r = Math.max(5, n.connections * 2.5 + 5) * s;
+        const isActive = !activeIds || activeIds.has(n.id);
+        const isHovered = n.id === hoveredId;
+        const isSelected = n.id === selectedId;
+
+        ne.g.setAttribute('transform', `translate(${n.x2}, ${n.y2}) scale(${s})`);
+        ne.circle.setAttribute('r', r / s);
+        ne.label.setAttribute('x', n.x2);
+        ne.label.setAttribute('y', n.y2);
+        ne.label.setAttribute('dy', r + 12 * s);
+        ne.label.setAttribute('font-size', (n.connections > 0 ? 10 : 9) * s + 'px');
+
+        // Z-occlusion combined with interaction state
+        const zOpacity = n.z2 < -50 ? 0.3 : 1;
+        const stateOpacity = isActive ? 1 : 0.1;
+        ne.g.style.opacity = zOpacity * stateOpacity;
+        ne.label.style.opacity = zOpacity * (isActive ? (isHovered || isSelected ? 1 : 0.7) : 0);
+
+        if (isHovered || isSelected) {
+          ne.circle.setAttribute('r', Math.max(8, n.connections * 3 + 8));
+          ne.circle.setAttribute('filter', 'url(#glow-strong)');
+          ne.circle.setAttribute('stroke-width', 3);
+        } else {
+          ne.circle.setAttribute('r', Math.max(5, n.connections * 2.5 + 5));
+          ne.circle.setAttribute('filter', n.connections > 0 ? 'url(#glow)' : '');
+          ne.circle.setAttribute('stroke-width', n.connections > 0 ? 2 : 1);
+        }
+      });
+
+      // Update links
+      linkEls.forEach(le => {
+        const l = le.data;
+        const s = l.source;
+        const t = l.target;
+
+        // Always set coordinates
+        le.el.setAttribute('x1', s.x2);
+        le.el.setAttribute('y1', s.y2);
+        le.el.setAttribute('x2', t.x2);
+        le.el.setAttribute('y2', t.y2);
+
+        // Midpoint Z determines if line is "inside" the sphere
+        const midZ = (s.z2 + t.z2) / 2;
+        const isBehind = midZ < -30;
+
+        if (isBehind) {
+          le.el.style.opacity = 0.05;
+        } else {
+          const isActive = !filteredIds || (filteredIds.has(s.id) && filteredIds.has(t.id));
+          const isHovered = hoveredId && (s.id === hoveredId || t.id === hoveredId);
+          le.el.style.opacity = isActive || isHovered ? 1 : 0.1;
+          if (isActive || isHovered) {
+            const phase = (Date.now() / 20) % 20;
+            le.el.setAttribute('stroke-dashoffset', -phase);
+          }
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    // ======== RESIZE ========
     window.addEventListener('resize', () => {
-      const w = container.clientWidth;
-      const h = container.clientHeight;
-      svg.attr('width', w).attr('height', h);
-      simulation.force('center', d3.forceCenter(w / 2, h / 2));
-      simulation.alpha(0.3).restart();
+      w = container.clientWidth;
+      h = container.clientHeight;
+      svg.setAttribute('width', w);
+      svg.setAttribute('height', h);
+      svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
     });
+    svg.setAttribute('width', w);
+    svg.setAttribute('height', h);
+    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
 
-    // Stats
+    // ======== GENRE LEGEND ========
+    const usedGenres = [...new Set(nodes.map(n => n.genre))].sort();
+    document.getElementById('legendItems').innerHTML = usedGenres.map(g => `
+      <div class="genre-item">
+        <span class="genre-color" style="background:${getGenreColor(g)}"></span>
+        ${g}
+      </div>
+    `).join('');
+
+    // ======== STATS ========
     document.getElementById('statDJs').textContent = nodes.length;
     document.getElementById('statConns').textContent = links.length;
     document.getElementById('statVis').textContent = nodes.length;
+
+    // Start
+    animate();
   </script>
 </body>
 </html>

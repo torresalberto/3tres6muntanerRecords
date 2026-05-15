@@ -10,12 +10,79 @@
   "duration_formatted": "1:59:15",
   "view_count": 152000,
   "channel": "Dekmantel",
-  "genres": ["House", "Techno", "Electro", "Breaks"],
-  "tracklist": [],
-  "most_requested_ids": [
-    {"timestamp": "13:00", "request_count": 1, "sample_comments": ["13:00 what is this track?"], "status": "unidentified"},
-    {"timestamp": "1:43:31", "request_count": 1, "sample_comments": ["1:43:31 ID?"], "status": "unidentified"},
-    {"timestamp": "1:29:30", "request_count": 1, "sample_comments": ["Need this 1:29:30 track"], "status": "unidentified"}
+  "genres": [
+    "House",
+    "Techno",
+    "Electro",
+    "Breaks"
   ],
-  "curious_facts": {"total_comments": 247, "track_relevant_comments": 8, "unidentified_tracks": 5}
+  "tracklist": [
+    {
+      "position": 1,
+      "timestamp": "43:30",
+      "artist": "is COHN",
+      "title": "Just A Little Bit (Edit)",
+      "status": "confirmed"
+    },
+    {
+      "position": 2,
+      "timestamp": "16:00",
+      "artist": "I'm pretty sure its TVS1",
+      "title": "Unreleased",
+      "status": "confirmed"
+    },
+    {
+      "position": 3,
+      "timestamp": "1:27:00",
+      "artist": "is Panda bear",
+      "title": "I'm Not",
+      "status": "confirmed"
+    },
+    {
+      "position": 4,
+      "timestamp": "16:00",
+      "artist": "is TSVI",
+      "title": "music is moving, as very short transition into something else that gets layered on top",
+      "status": "confirmed"
+    },
+    {
+      "position": 5,
+      "timestamp": "0:17:00",
+      "artist": "Tiga",
+      "title": "Cherry",
+      "status": "confirmed"
+    }
+  ],
+  "most_requested_ids": [
+    {
+      "timestamp": "13:00",
+      "request_count": 1,
+      "sample_comments": [
+        "13:00 what is this track?"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:43:31",
+      "request_count": 1,
+      "sample_comments": [
+        "1:43:31 ID?"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:29:30",
+      "request_count": 1,
+      "sample_comments": [
+        "Need this 1:29:30 track"
+      ],
+      "status": "unidentified"
+    }
+  ],
+  "curious_facts": {
+    "total_comments": 247,
+    "track_relevant_comments": 8,
+    "unidentified_tracks": 5,
+    "confirmed_tracks": 5
+  }
 }

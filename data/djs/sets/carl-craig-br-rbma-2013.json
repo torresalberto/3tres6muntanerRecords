@@ -1,1 +1,67 @@
-{"id": "carl-craig-br-rbma-2013", "dj_id": "carl-craig", "title": "Set", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "carl-craig-br-rbma-2013",
+  "dj_id": "carl-craig",
+  "title": "Set",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "Octave One",
+      "title": "Blackwater",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Moodymann",
+      "title": "Got 2 Make It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Moodymann feat. Roberta Sweed",
+      "title": "Shades Of Jae",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Tale Of Us",
+      "title": "Another Earth",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Model 500",
+      "title": "Neptune",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Loco Dice",
+      "title": "Detox",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Carl Craig & Pepe Bradock",
+      "title": "Angola",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Inner City",
+      "title": "Good Life",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 8
+  }
+}

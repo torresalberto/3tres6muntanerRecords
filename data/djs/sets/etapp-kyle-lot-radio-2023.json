@@ -10,15 +10,59 @@
   "duration_formatted": "1:00:00",
   "view_count": 0,
   "channel": "The Lot Radio",
-  "genres": ["Techno", "Hypnotic Techno", "Electro", "Ambient"],
+  "genres": [
+    "Techno",
+    "Hypnotic Techno",
+    "Electro",
+    "Ambient"
+  ],
   "tracklist": [
-    {"position":1,"artist":"Speedy J","title":"The FUN Equations","status":"confirmed"},
-    {"position":2,"artist":"Samuli Kemppi","title":"Expand","status":"confirmed"},
-    {"position":3,"artist":"Special Request","title":"237,0000 Miles","status":"confirmed"},
-    {"position":4,"artist":"Galaxy 2 Galaxy","title":"Transition","status":"confirmed"},
-    {"position":5,"artist":"Floating Points","title":"Problems","status":"confirmed"},
-    {"position":6,"artist":"Kareem Lofty","title":"Fr3sh","status":"confirmed"}
+    {
+      "artist": "Speedy J",
+      "title": "The FUN Equations",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Samuli Kemppi",
+      "title": "Expand",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Special Request",
+      "title": "237,0000 Miles",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Galaxy 2 Galaxy",
+      "title": "Transition",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Floating Points",
+      "title": "Problems",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Kareem Lofty",
+      "title": "Fr3sh",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    }
   ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 0, "confirmed_tracks": 6}
+  "curious_facts": {
+    "total_comments": 0,
+    "confirmed_tracks": 6
+  }
 }

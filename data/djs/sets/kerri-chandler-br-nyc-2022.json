@@ -10,8 +10,221 @@
   "duration_formatted": "1:09:18",
   "view_count": 0,
   "channel": "Boiler Room",
-  "genres": ["Deep House", "Soulful House", "Garage", "Chicago House"],
-  "tracklist": [],
+  "genres": [
+    "Deep House",
+    "Soulful House",
+    "Garage",
+    "Chicago House"
+  ],
+  "tracklist": [
+    {
+      "artist": "The O'Jays",
+      "title": "I Love Music (Part I)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Underground Ministries feat. Kenny Bobien",
+      "title": "I Shall Not Be Moved (Stand Still)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Tasha LaRae & DJ Spen",
+      "title": "Wish I Didn't Miss You (John Morales M+M Vocal Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Kerri Chandler",
+      "title": "So Let The Wind Come",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Fusion Groove Orchestra feat. Steve Lucas",
+      "title": "If Only I Could (Liem Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Kerri Chandler",
+      "title": "I Feel It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Kerri Chandler feat. Sunchilde",
+      "title": "Never Thought (Printworks) (Main Vocal Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Demuir",
+      "title": "High. Alive. And Dirty.",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Dennis Ferrer feat. Tyrone Ellis",
+      "title": "Underground Is My Home",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Jovonn",
+      "title": "Random (Extended Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "DJ Kwame",
+      "title": "Spirit Dance (Timmy Regisford Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Kerri Chandler feat. Rev F.L. Brown",
+      "title": "Prayer (623 Again Vocal)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Matt Early & Lee Jeffries feat. Otis Corley",
+      "title": "I Think I'm Falling In Love (Grant Nelson Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Mateo & Matos",
+      "title": "Release The Rhythm (Kevin McKay Extended Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    },
+    {
+      "artist": "Honey Dijon feat. Annette Bowen & Nikki-O",
+      "title": "Downtown (Louie Vega Extended Raw Dub Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 15
+    },
+    {
+      "artist": "Crackazat",
+      "title": "Fire Drift",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 16
+    },
+    {
+      "artist": "Terry Hunter feat. Devine Brown",
+      "title": "Angel",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 17
+    },
+    {
+      "artist": "Kerri Chandler feat. Troy Denari",
+      "title": "Change Your Mind (District 8) (Full Vocal)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 18
+    },
+    {
+      "artist": "Jovonn",
+      "title": "Hesperia Soul (Main Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 19
+    },
+    {
+      "artist": "Kerri Chandler feat. Lady Linn",
+      "title": "You Get Lost In It (The Warehouse Project)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 20
+    },
+    {
+      "artist": "Armonica feat. Toshi",
+      "title": "Ngeke (andhim Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 21
+    },
+    {
+      "artist": "Emmaculate",
+      "title": "Voodoo (Shannon Chambers 1Sound Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 22
+    },
+    {
+      "artist": "Peven Everett",
+      "title": "Special (Timmy Regisford Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 23
+    },
+    {
+      "artist": "Masters At Work feat. India",
+      "title": "I Can't Get No Sleep (Ken/Lou 12 Inch)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 24
+    },
+    {
+      "artist": "Kerri Chandler",
+      "title": "Atmospheric Beats",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 25
+    },
+    {
+      "artist": "Massimo Lippoli",
+      "title": "Let It Ride (Dario D'Attis Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 26
+    },
+    {
+      "artist": "Yves Murasca",
+      "title": "All About Housemusic (Dario D'Attis Extended Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 27
+    },
+    {
+      "artist": "Michel De Hey",
+      "title": "Tracklights (Crackazat Dub)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 28
+    },
+    {
+      "artist": "JohNick",
+      "title": "Heat",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 29
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 29, "confirmed_tracks": 29, "cross_references": 2}
+  "curious_facts": {
+    "total_tracks": 29,
+    "confirmed_tracks": 29,
+    "cross_references": 2
+  }
 }

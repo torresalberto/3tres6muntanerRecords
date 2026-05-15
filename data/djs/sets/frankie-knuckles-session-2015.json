@@ -10,7 +10,12 @@
   "duration_formatted": "1:50:04",
   "view_count": 399000,
   "channel": "Mixmag via AvidMuzikFan",
-  "genres": ["House", "Soulful House", "Classic House", "Disco"],
+  "genres": [
+    "House",
+    "Soulful House",
+    "Classic House",
+    "Disco"
+  ],
   "tracklist": [],
   "most_requested_ids": [],
   "curious_facts": {

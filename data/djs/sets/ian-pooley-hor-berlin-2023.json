@@ -1,16 +1,81 @@
 {
   "id": "ian-pooley-hor-berlin-2023",
   "dj_id": "ian-pooley",
-  "title": "H\u00d6R Berlin 2023",
-  "venue": "H\u00d6R, Berlin",
+  "title": "HÖR Berlin 2023",
+  "venue": "HÖR, Berlin",
   "date": "2023-01-20",
   "youtube_url": "",
   "youtube_embed_id": "",
   "duration_minutes": 60,
   "duration_formatted": "1:00:00",
   "view_count": 0,
-  "genres": ["Deep House", "House", "Chicago House", "Disco"],
-  "tracklist": [],
+  "genres": [
+    "Deep House",
+    "House",
+    "Chicago House",
+    "Disco"
+  ],
+  "tracklist": [
+    {
+      "artist": "Ian O'Brien",
+      "title": "Eden",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Laurence Guy",
+      "title": "You Do Your Best To Hide The Good Parts Of Yourself",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Ian Pooley",
+      "title": "SP12 Electric Mistress",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Javonntte",
+      "title": "Enter The Disco",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "JoVonn",
+      "title": "Eclipse",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Paul Johnson",
+      "title": "I Got Rhythm",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Loose Joints",
+      "title": "Honey Strut",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Ian Pooley",
+      "title": "Feel It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 8, "confirmed_tracks": 8}
+  "curious_facts": {
+    "total_tracks": 8,
+    "confirmed_tracks": 8
+  }
 }

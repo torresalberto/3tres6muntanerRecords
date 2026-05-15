@@ -1,1 +1,35 @@
-{"id": "hunee-dekmantel", "dj_id": "hunee", "title": "Boiler Room x Dekmantel Festival", "youtube_embed_id": "0RIU0cy6L1I", "duration_minutes": 58, "duration_formatted": "58:53", "view_count": 1794251, "tracklist": [], "curious_facts": {}}
+{
+  "id": "hunee-dekmantel",
+  "dj_id": "hunee",
+  "title": "Boiler Room x Dekmantel Festival",
+  "youtube_embed_id": "0RIU0cy6L1I",
+  "duration_minutes": 58,
+  "duration_formatted": "58:53",
+  "view_count": 1794251,
+  "tracklist": [
+    {
+      "artist": "Sheryl Lee Ralph",
+      "title": "In the Evening  :)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Gavin Russom",
+      "title": "The Telstar File",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Errorsmith & Mark Fell",
+      "title": "Cuica Digitales",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 3
+  }
+}

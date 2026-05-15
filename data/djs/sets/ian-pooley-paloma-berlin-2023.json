@@ -9,8 +9,144 @@
   "duration_minutes": 180,
   "duration_formatted": "3:00:00",
   "view_count": 0,
-  "genres": ["Deep House", "House", "Disco", "Tech House"],
-  "tracklist": [],
+  "genres": [
+    "Deep House",
+    "House",
+    "Disco",
+    "Tech House"
+  ],
+  "tracklist": [
+    {
+      "artist": "Q-Burn's Abstract Message",
+      "title": "Mess Of Afros (Glenn Underground Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "X-Press 2",
+      "title": "Zeven",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Boris Dlugosch feat. Rosin Murphy",
+      "title": "Never Enough (Ian Pooley's Raw Dub)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "6th Borough Project",
+      "title": "Rhythm",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Raw Instinct",
+      "title": "Grande De Folie (DJ Gregory's Main Club Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "DJ Mes",
+      "title": "All About House",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Kerri Chandler",
+      "title": "Last Man Up",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Cajmere",
+      "title": "Only 4 U (ID Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Motor City Drum Ensemble",
+      "title": "Send A Prayer (Pt.2)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Pepe Braddock",
+      "title": "4",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Nick Holder feat. Andraya",
+      "title": "Inside Your Soul",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Adam Port",
+      "title": "86",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Johnny D & Nicky P",
+      "title": "Wild Kingdom",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "K-Alexi",
+      "title": "The Dancer (Ian Pooley Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    },
+    {
+      "artist": "Daft Punk",
+      "title": "Musique",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 15
+    },
+    {
+      "artist": "Ben Sims",
+      "title": "Raise Your Hands",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 16
+    },
+    {
+      "artist": "DJ Gregory",
+      "title": "S2 (Dubarash)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 17
+    },
+    {
+      "artist": "Ian Pooley",
+      "title": "900 (Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 18
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 18, "confirmed_tracks": 18, "cross_references": 3}
+  "curious_facts": {
+    "total_tracks": 18,
+    "confirmed_tracks": 18,
+    "cross_references": 3
+  }
 }

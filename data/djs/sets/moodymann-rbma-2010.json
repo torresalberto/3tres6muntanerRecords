@@ -9,8 +9,109 @@
   "duration_minutes": 120,
   "duration_formatted": "1:59:53",
   "view_count": 0,
-  "genres": ["Deep House", "Funk", "Disco", "Soul", "Detroit"],
-  "tracklist": [],
+  "genres": [
+    "Deep House",
+    "Funk",
+    "Disco",
+    "Soul",
+    "Detroit"
+  ],
+  "tracklist": [
+    {
+      "artist": "Cloud One",
+      "title": "Atmosphere Strut",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Lonnie Smith",
+      "title": "Funk Reaction",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Slum Village",
+      "title": "Disco",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Dwele",
+      "title": "Feels So Good",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Roy Ayers",
+      "title": "Love Will Bring Us Back Together",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "William DeVaughn",
+      "title": "Be Thankful For What You Got",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Indeep",
+      "title": "Last Night A DJ Saved My Life",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Marshall Jefferson",
+      "title": "The House Music Anthem - Dub Your Body",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Alexander Robotnick",
+      "title": "Problemes D'Amour",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "The Whispers",
+      "title": "The Planets Of Life",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Prince",
+      "title": "Uptown",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Moodymann",
+      "title": "J.A.N.",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Phuture",
+      "title": "Acid Trax",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 13, "confirmed_tracks": 13}
+  "curious_facts": {
+    "total_tracks": 13,
+    "confirmed_tracks": 13
+  }
 }

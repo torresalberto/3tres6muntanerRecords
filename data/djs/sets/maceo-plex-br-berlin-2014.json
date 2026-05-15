@@ -9,8 +9,73 @@
   "duration_minutes": 90,
   "duration_formatted": "1:30:45",
   "view_count": 16600000,
-  "genres": ["Tech House", "Melodic Techno", "Electro", "Ellum"],
-  "tracklist": [],
+  "genres": [
+    "Tech House",
+    "Melodic Techno",
+    "Electro",
+    "Ellum"
+  ],
+  "tracklist": [
+    {
+      "artist": "Maceo Plex & Gabriel Ananda",
+      "title": "Solitary Daze",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Gardens Of God",
+      "title": "Fiddler",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Shall Ocin",
+      "title": "Orbis",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Confute",
+      "title": "On The Hour",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Dense & Pika",
+      "title": "Klank",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "The Smiths",
+      "title": "How Soon Is Now? (Maceo Plex Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Der Dritte Raum",
+      "title": "Hale Bopp (Maceo Plex Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Nicolas Bougaieff",
+      "title": "Pulse Train",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_tracks": 8, "confirmed_tracks": 8}
+  "curious_facts": {
+    "total_tracks": 8,
+    "confirmed_tracks": 8
+  }
 }

@@ -1,1 +1,49 @@
-{"id": "blessed-br", "dj_id": "blessed-madonna", "title": "Boiler Room London", "youtube_embed_id": "_IyMTaEeHTM", "duration_minutes": 85, "duration_formatted": "1:25:53", "view_count": 446948, "tracklist": [], "curious_facts": {}}
+{
+  "id": "blessed-br",
+  "dj_id": "blessed-madonna",
+  "title": "Boiler Room London",
+  "youtube_embed_id": "_IyMTaEeHTM",
+  "duration_minutes": 85,
+  "duration_formatted": "1:25:53",
+  "view_count": 446948,
+  "tracklist": [
+    {
+      "artist": "Fix",
+      "title": "Flash",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "SL2",
+      "title": "DJ's Take Control",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Patrick Cowley",
+      "title": "Menergy Bomb!!!",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "could be Babert",
+      "title": "My Name Is Caroline or another remix of Hamilton Bohannon \" Me & the gang \"",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Dance System",
+      "title": "All I Wanna Do",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 5
+  }
+}

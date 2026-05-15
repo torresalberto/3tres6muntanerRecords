@@ -15,7 +15,78 @@
     "Tech House",
     "French Touch"
   ],
-  "tracklist": [],
+  "tracklist": [
+    {
+      "artist": "Moritz Von Oswald",
+      "title": "Watamu Beach Rework",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Audio Werner",
+      "title": "Story",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Klanggut",
+      "title": "Padlab",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Shonky & Dan Ghenacia",
+      "title": "Close To The Edge (The Mole Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Rowlanz",
+      "title": "Jogger",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Dave Barker",
+      "title": "Pos",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Apollonia",
+      "title": "Trinidad",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Callisto",
+      "title": "Need Ur Love (Stalagmite Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "The Mole",
+      "title": "Bleep Blop Robot",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Nail",
+      "title": "I've Been There",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    }
+  ],
   "most_requested_ids": [],
   "curious_facts": {
     "total_tracks": 10,

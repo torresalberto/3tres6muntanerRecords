@@ -1,1 +1,32 @@
-{"id": "objekt-various", "dj_id": "objekt", "title": "Set", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "objekt-various",
+  "dj_id": "objekt",
+  "title": "Set",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "Objekt",
+      "title": "Theme From Q",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Objekt",
+      "title": "Ganzfeld",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Objekt",
+      "title": "Dogma",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 3
+  }
+}

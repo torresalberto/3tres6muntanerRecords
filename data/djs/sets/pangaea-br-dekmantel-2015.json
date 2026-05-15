@@ -1,1 +1,60 @@
-{"id": "pangaea-br-dekmantel-2015", "dj_id": "pangaea", "title": "Set", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "pangaea-br-dekmantel-2015",
+  "dj_id": "pangaea",
+  "title": "Set",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "Pangaea",
+      "title": "Router",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Pangaea",
+      "title": "More Is More To Burn",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "DVS1",
+      "title": "Polyphonic Love",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Aleksi Perala",
+      "title": "UK74R1512110",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Ramadanman",
+      "title": "Don't Change For Me",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Planetary Assault Systems",
+      "title": "Pull",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Joe Claussell",
+      "title": "Je Ka Jo (Drums Of Passion)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 7
+  }
+}

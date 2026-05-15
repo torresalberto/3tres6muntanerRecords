@@ -1,1 +1,46 @@
-{"id": "vtss-br-glitch-2024", "dj_id": "vtss", "title": "Boiler Room x Glitch Festival 2024", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "vtss-br-glitch-2024",
+  "dj_id": "vtss",
+  "title": "Boiler Room x Glitch Festival 2024",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "VTSS",
+      "title": "TRISHA",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Randomer",
+      "title": "DHM JAM",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Boys Noize",
+      "title": "FVKVRVND",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Shygirl & Kingdom & VTSS & Club Shy",
+      "title": "F@kë (VTSS Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Franck",
+      "title": "Acid Groover",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 5
+  }
+}

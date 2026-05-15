@@ -10,21 +10,115 @@
   "duration_formatted": "1:00:00",
   "view_count": 0,
   "channel": "CLR",
-  "genres": ["Techno", "Hypnotic Techno", "Dub Techno", "Ambient"],
+  "genres": [
+    "Techno",
+    "Hypnotic Techno",
+    "Dub Techno",
+    "Ambient"
+  ],
   "tracklist": [
-    {"position":1,"artist":"Boards Of Canada","title":"Split Your Infinities","status":"confirmed"},
-    {"position":2,"artist":"Emika","title":"Chemical Fever (Substance Remix)","status":"confirmed"},
-    {"position":3,"artist":"Ed Davenport","title":"Head Channel","status":"confirmed"},
-    {"position":4,"artist":"Damon Wild","title":"Warchild (Adam Beyer Remix 1)","status":"confirmed"},
-    {"position":5,"artist":"Jeff Mills","title":"Automatic","status":"confirmed"},
-    {"position":6,"artist":"Green Velvet","title":"Flash (Carl Craig Paperclip People Mix)","status":"confirmed"},
-    {"position":7,"artist":"James Ruskin","title":"Detatched","status":"confirmed"},
-    {"position":8,"artist":"Alex.Do","title":"Lost In Time","status":"confirmed"},
-    {"position":9,"artist":"Recondite","title":"Glim","status":"confirmed"},
-    {"position":10,"artist":"Donato Dozzy","title":"Gol","status":"confirmed"},
-    {"position":11,"artist":"Function","title":"Against The Wall","status":"confirmed"},
-    {"position":12,"artist":"Andy Stott","title":"Numb","status":"confirmed"}
+    {
+      "artist": "Boards Of Canada",
+      "title": "Split Your Infinities",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Emika",
+      "title": "Chemical Fever (Substance Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Ed Davenport",
+      "title": "Head Channel",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Damon Wild",
+      "title": "Warchild (Adam Beyer Remix 1)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Jeff Mills",
+      "title": "Automatic",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Green Velvet",
+      "title": "Flash (Carl Craig Paperclip People Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "The Advent",
+      "title": "It One Jah (Surgeon Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "James Ruskin",
+      "title": "Detatched",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Alex.Do",
+      "title": "Lost In Time",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Recondite",
+      "title": "Glim",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Donato Dozzy",
+      "title": "Gol",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Plastikman",
+      "title": "EXpand (Tale Of Us Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Function",
+      "title": "Against The Wall",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Andy Stott",
+      "title": "Numb",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    }
   ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 0, "confirmed_tracks": 12}
+  "curious_facts": {
+    "total_comments": 0,
+    "confirmed_tracks": 14
+  }
 }

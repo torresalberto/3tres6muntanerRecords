@@ -10,8 +10,110 @@
   "duration_formatted": "59:37",
   "view_count": 136000,
   "channel": "Dekmantel",
-  "genres": ["House", "Balearic", "Disco", "Ambient"],
-  "tracklist": [],
+  "genres": [
+    "House",
+    "Balearic",
+    "Disco",
+    "Ambient"
+  ],
+  "tracklist": [
+    {
+      "position": 1,
+      "timestamp": "15:20",
+      "artist": "Masalo",
+      "title": "arcade heartbeat ㄸㅣ발 미쳤어 🤤",
+      "status": "confirmed"
+    },
+    {
+      "position": 2,
+      "timestamp": "19:20",
+      "artist": "rare footage of the world record in object throw from one side of the dj booth to the other",
+      "title": "well done guys!",
+      "status": "confirmed"
+    },
+    {
+      "position": 3,
+      "timestamp": "0:00",
+      "artist": "Sunscreem",
+      "title": "Perfect Motion (Ahhcappella Mix)",
+      "status": "confirmed"
+    },
+    {
+      "position": 4,
+      "timestamp": "5:50",
+      "artist": "The Trip",
+      "title": "Fantazia (Spray Remix)",
+      "status": "confirmed"
+    },
+    {
+      "position": 5,
+      "timestamp": "10:30",
+      "artist": "Jex Opolis",
+      "title": "Music (Piano Mix)",
+      "status": "confirmed"
+    },
+    {
+      "position": 6,
+      "timestamp": "20:30",
+      "artist": "Zombies in Miami",
+      "title": "GPI",
+      "status": "confirmed"
+    },
+    {
+      "position": 7,
+      "timestamp": "26:00",
+      "artist": "Sam Girling",
+      "title": "Do you know where the DJs are hanging",
+      "status": "confirmed"
+    },
+    {
+      "position": 8,
+      "timestamp": "30:00",
+      "artist": "Pat De Ruiter",
+      "title": "Newsflash",
+      "status": "confirmed"
+    },
+    {
+      "position": 9,
+      "timestamp": "35:00",
+      "artist": "Regent",
+      "title": "Aphid Riot",
+      "status": "confirmed"
+    },
+    {
+      "position": 10,
+      "timestamp": "41:00",
+      "artist": "WOLTERS",
+      "title": "Gone with the wind",
+      "status": "confirmed"
+    },
+    {
+      "position": 11,
+      "timestamp": "45:00",
+      "artist": "SWIM & CRUSH3d",
+      "title": "London Freeze",
+      "status": "confirmed"
+    },
+    {
+      "position": 12,
+      "timestamp": "47:00",
+      "artist": "Tornado Wallace aka Lew E",
+      "title": "Unreleased",
+      "status": "confirmed"
+    },
+    {
+      "position": 13,
+      "timestamp": "49:00",
+      "artist": "Avalon Emerson",
+      "title": "Entombed in Ice (Young Marco remix)",
+      "status": "confirmed"
+    }
+  ],
   "most_requested_ids": [],
-  "curious_facts": {"total_comments": 131, "track_relevant_comments": 6, "unidentified_tracks": 2}
+  "curious_facts": {
+    "total_comments": 131,
+    "track_relevant_comments": 6,
+    "unidentified_tracks": 2,
+    "confirmed_tracks": 13
+  }
 }

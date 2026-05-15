@@ -1,1 +1,32 @@
-{"id": "dj-koze-various", "dj_id": "dj-koze", "title": "Set", "genres": [], "tracklist": [], "curious_facts": {}}
+{
+  "id": "dj-koze-various",
+  "dj_id": "dj-koze",
+  "title": "Set",
+  "genres": [],
+  "tracklist": [
+    {
+      "artist": "DJ Koze",
+      "title": "All The Time",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "DJ Koze",
+      "title": "Pick Up",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "DJ Koze",
+      "title": "Ich Schlafe Auf Dem Ruecken",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 3
+  }
+}

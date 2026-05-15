@@ -1,1 +1,112 @@
-{"id": "chaos-glitch-2022", "dj_id": "chaos-in-the-cbd", "title": "Boiler Room x Glitch Festival 2022", "youtube_embed_id": "gArS5VA3Vxk", "duration_minutes": 57, "duration_formatted": "57:50", "view_count": 328881, "tracklist": [], "curious_facts": {}}
+{
+  "id": "chaos-glitch-2022",
+  "dj_id": "chaos-in-the-cbd",
+  "title": "Boiler Room x Glitch Festival 2022",
+  "youtube_embed_id": "gArS5VA3Vxk",
+  "duration_minutes": 57,
+  "duration_formatted": "57:50",
+  "view_count": 328881,
+  "tracklist": [
+    {
+      "artist": "Ananda Project",
+      "title": "Cascades of Colour (Kiko Navarro 4 Hugo Re-Edit)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Music Freaks",
+      "title": "Tribal Trance",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "The T - Collective",
+      "title": "Burnin' (After Hours Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Alec Wizz",
+      "title": "Drummin",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "The Absolute Family",
+      "title": "Snake Way",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Didier Sinclair & Dj Chris Pi",
+      "title": "Groove 2 Me",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Circulation",
+      "title": "Orange",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Funk 198",
+      "title": "Cruising",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Trevor Rockcliffe",
+      "title": "Tremor",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Jerome",
+      "title": "G-Birth",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Oliver Ho",
+      "title": "Origin",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Oxia",
+      "title": "134",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "R - Play",
+      "title": "Mojito",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Devilfish & Roel Salemink",
+      "title": "Manalive",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 14
+  }
+}

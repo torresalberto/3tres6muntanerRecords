@@ -1,1 +1,52 @@
-{"id": "larry-heard-mr-fingers-mix-2012", "dj_id": "larry-heard", "title": "A Mr. Fingers Music Mix 2012", "tracklist": [], "curious_facts": {}}
+{
+  "id": "larry-heard-mr-fingers-mix-2012",
+  "dj_id": "larry-heard",
+  "title": "A Mr. Fingers Music Mix 2012",
+  "tracklist": [
+    {
+      "artist": "Ron Trent feat. Robert Owens",
+      "title": "Deep Down (Fingers Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Levon Vincent",
+      "title": "Man Or Mistress",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Osunlade",
+      "title": "April",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Terrence Parker",
+      "title": "Your Love",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Mr. Fingers",
+      "title": "Can You Feel It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Mr. Fingers",
+      "title": "Mystery Of Love",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 6
+  }
+}
