@@ -12,8 +12,8 @@
       background: #050505;
       font-family: 'Space Grotesk', sans-serif;
       color: #fff;
-      overflow: hidden;
-      height: 100vh;
+      overflow-y: auto;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       user-select: none;
@@ -420,11 +420,7 @@
         </div>
         <div class="nav-separator"></div>
         <div class="nav-group nav-group-content">
-          <a href="blog.html" class="nav-item">Blog</a>
-          <a href="dj-library.html" class="nav-item">DJ Library</a>
-          <a href="3d-brain.html" class="nav-item active">Neural</a>
-          <a href="/3tres6muntanerRecords/toolhub/" class="nav-item">Herramientas</a>
-          <a href="/3tres6muntanerRecords/toolhub/#hardware" class="nav-item">Equipo DJ</a>
+          <a href="3d-brain.html" class="nav-item active">DJ Hub</a>
         </div>
       </nav>
 
@@ -447,16 +443,30 @@
       <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
       <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
       <div class="mobile-nav-group-label">Contenido</div>
-      <a href="blog.html">Blog</a>
-      <a href="dj-library.html">DJ Library</a>
-      <a href="3d-brain.html">Neural</a>
-      <a href="/3tres6muntanerRecords/toolhub/">Herramientas</a>
-      <a href="/3tres6muntanerRecords/toolhub/#hardware">Equipo DJ</a>
+      <a href="3d-brain.html">DJ Hub</a>
       <div class="mobile-nav-group-label">Redes</div>
       <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
       <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
     </nav>
   </header>
+
+  <!-- DJ Hub Sub-Nav -->
+  <nav class="dj-hub-subnav" aria-label="Navegación DJ Hub">
+    <div class="subnav-container">
+      <a href="/3tres6muntanerRecords/" class="subnav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Tienda
+      </a>
+      <div class="subnav-divider"></div>
+      <div class="subnav-tabs">
+        <a href="blog.html" class="subnav-tab">Blog</a>
+        <a href="dj-library.html" class="subnav-tab">DJ Library</a>
+        <a href="3d-brain.html" class="subnav-tab active">Neural</a>
+        <a href="/3tres6muntanerRecords/toolhub/" class="subnav-tab">Herramientas</a>
+        <a href="/3tres6muntanerRecords/toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- CANVAS -->
   <div id="network-container">
@@ -497,6 +507,41 @@
     <div class="info-summary" id="infoSummary"></div>
     <div id="infoList"></div>
   </div>
+
+  <!-- DJ HUB INTRO SECTION -->
+  <section class="dj-hub-intro" id="djHubIntro">
+    <div class="dj-hub-intro-header">
+      <h2>DJ Hub</h2>
+      <p>Tu centro de recursos para DJs. Explora sets con tracklists completas, descubre conexiones entre artistas, aprende técnicas y encuentra las mejores herramientas para pinchar.</p>
+    </div>
+    <div class="dj-hub-cards">
+      <a href="blog.html" class="dj-hub-card">
+        <div class="dj-hub-card-icon">📝</div>
+        <h3>Blog</h3>
+        <p>Artículos y guías sobre vinilos, tornamesas, técnicas de DJ y cultura underground.</p>
+      </a>
+      <a href="dj-library.html" class="dj-hub-card">
+        <div class="dj-hub-card-icon">🎧</div>
+        <h3>DJ Library</h3>
+        <p>Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de YouTube.</p>
+      </a>
+      <a href="3d-brain.html" class="dj-hub-card">
+        <div class="dj-hub-card-icon">🧠</div>
+        <h3>Neural Graph</h3>
+        <p>Visualización interactiva de conexiones entre DJs a través de tracks compartidos.</p>
+      </a>
+      <a href="/3tres6muntanerRecords/toolhub/" class="dj-hub-card">
+        <div class="dj-hub-card-icon">🛠️</div>
+        <h3>Herramientas</h3>
+        <p>Descarga música, configura tu USB, consulta el Camelot Wheel y descubre software DJ.</p>
+      </a>
+      <a href="/3tres6muntanerRecords/toolhub/#hardware" class="dj-hub-card">
+        <div class="dj-hub-card-icon">🎛️</div>
+        <h3>Equipo DJ</h3>
+        <p>Productos recomendados: controladores, mezcladoras, audífonos y más.</p>
+      </a>
+    </div>
+  </section>
 
   <script>
     // ======== DATA ========
