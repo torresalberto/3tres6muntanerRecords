@@ -509,6 +509,14 @@
         }
       }
     </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/3tres6muntanerRecords/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/3tres6muntanerRecords/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/3tres6muntanerRecords/apple-touch-icon.png" />
+    <link rel="manifest" href="/3tres6muntanerRecords/manifest.json" />
+    <meta name="theme-color" content="#ff4d00" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   </head>
   <body>
     <div class="noise-overlay"></div>
@@ -568,6 +576,7 @@
         <a href="/3tres6muntanerRecords/toolhub/">Herramientas</a>
         <a href="/3tres6muntanerRecords/toolhub/#hardware">Equipo DJ</a>
         <div class="mobile-nav-group-label">Redes</div>
+        <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
         <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
       </nav>
     </header>
@@ -595,10 +604,11 @@
       <div class="dj-profile-card">
         <div class="dj-profile-header">
           <img 
-            src="https://i.ytimg.com/vi/mzUPU4QpWG4/maxresdefault.jpg" 
+            src="https://i.ytimg.com/vi/mzUPU4QpWG4/hqdefault.jpg" 
             alt="Chaos In The CBD" 
             class="dj-avatar"
             loading="lazy"
+            onerror="this.style.display='none'"
           />
           <div class="dj-info">
             <h2>Chaos In The CBD</h2>
@@ -689,7 +699,7 @@
       <section class="dj-profile-section">
         <div class="dj-profile-card">
           <div class="dj-profile-header">
-            <img src="https://i.ytimg.com/vi/fVlVZTHmkaw/maxresdefault.jpg" alt="Palms Trax" class="dj-avatar" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/fVlVZTHmkaw/hqdefault.jpg" alt="Palms Trax" class="dj-avatar" loading="lazy" onerror="this.style.display='none'" />
             <div class="dj-info">
               <h2>Palms Trax</h2>
               <div class="dj-meta"><span>🇬🇧 UK / Berlin</span><span>•</span><span>Since 2015</span><span>•</span><span>2 Sets catalogados</span></div>
@@ -738,7 +748,7 @@
       <section class="dj-profile-section">
         <div class="dj-profile-card">
           <div class="dj-profile-header">
-            <img src="https://i.ytimg.com/vi/WG35-7LpIAc/maxresdefault.jpg" alt="Laurent Garnier" class="dj-avatar" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/WG35-7LpIAc/hqdefault.jpg" alt="Laurent Garnier" class="dj-avatar" loading="lazy" onerror="this.style.display='none'" />
             <div class="dj-info">
               <h2>Laurent Garnier</h2>
               <div class="dj-meta"><span>\ud83c\uddeb\ud83c\uddf7 France</span><span>\u2022</span><span>Since 1987</span><span>\u2022</span><span>1 Set catalogado</span></div>
@@ -783,7 +793,7 @@
       <section class="dj-profile-section">
         <div class="dj-profile-card">
           <div class="dj-profile-header">
-            <img src="https://i.ytimg.com/vi/644UU55eyzk/maxresdefault.jpg" alt="Frankie Knuckles" class="dj-avatar" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/644UU55eyzk/hqdefault.jpg" alt="Frankie Knuckles" class="dj-avatar" loading="lazy" onerror="this.style.display='none'" />
             <div class="dj-info">
               <h2>Frankie Knuckles</h2>
               <div class="dj-meta"><span>\ud83c\uddfa\ud83c\uddf8 Chicago</span><span>\u2022</span><span>1977-2014</span><span>\u2022</span><span>2 Sets catalogados</span></div>
@@ -999,5 +1009,11 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/dj-graph.js"></script>
     <script src="js/dj-library-loader.js"></script>
+
+    <script>
+      window.addEventListener('scroll', function () {
+        document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
+      });
+    </script>
   </body>
 </html>

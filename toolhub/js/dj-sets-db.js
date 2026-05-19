@@ -691,7 +691,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "New Zealand",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/mzUPU4QpWG4/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/mzUPU4QpWG4/hqdefault.jpg"
   },
   {
     "id": "palms-trax",
@@ -705,7 +705,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "UK / Berlin",
     "set_count": 2,
-    "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/hqdefault.jpg"
   },
   {
     "id": "laurent-garnier",
@@ -719,7 +719,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "Francia",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/WG35-7LpIAc/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/WG35-7LpIAc/hqdefault.jpg"
   },
   {
     "id": "frankie-knuckles",
@@ -733,7 +733,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "Chicago / New York",
     "set_count": 2,
-    "image": "https://i.ytimg.com/vi/644UU55eyzk/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/644UU55eyzk/hqdefault.jpg"
   },
   {
     "id": "floating-points",
@@ -747,7 +747,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "UK",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/kiy05zewUpg/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/kiy05zewUpg/hqdefault.jpg"
   },
   {
     "id": "richie-hawtin",
@@ -760,7 +760,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "UK / Canada / Berlín",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/hqdefault.jpg"
   },
   {
     "id": "avalon-emerson",
@@ -774,7 +774,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "USA / Berlín",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/hqdefault.jpg"
   },
   {
     "id": "dj-pierre",
@@ -787,7 +787,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "Chicago, USA",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/hqdefault.jpg"
   },
   {
     "id": "kettama",
@@ -801,7 +801,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "Irlanda / Galway",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/JUDUC87VuPU/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg"
   },
   {
     "id": "young-marco",
@@ -815,7 +815,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "Países Bajos / Amsterdam",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/4z2bO7WizIg/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/4z2bO7WizIg/hqdefault.jpg"
   },
   {
     "id": "masters-at-work",
@@ -829,7 +829,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "New York, USA",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/hqdefault.jpg"
   },
   {
     "id": "honey-dijon",
@@ -843,7 +843,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "Chicago / Berlin",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/t5KwF_VsM50/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/t5KwF_VsM50/hqdefault.jpg"
   },
   {
     "id": "seth-troxler",
@@ -856,7 +856,7 @@ const DJ_REGISTRY = [
     ],
     "origin": "USA / Berlin",
     "set_count": 1,
-    "image": "https://i.ytimg.com/vi/vy-k0FopsmY/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg"
   },
   {
     "id": "alex-do",

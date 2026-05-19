@@ -1074,29 +1074,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=${muteParam}&loop=1&playlist=${vid}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
 
       youtubeContainer.innerHTML = `
-                <div class="mini-player-inner">
-                    <div class="mini-player-info">
-                        <span class="mini-player-now-playing">▶ Now Playing</span>
-                        <span class="mini-player-title">${this.currentTitle}</span>
-                        <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
-                    </div>
-                    <iframe
-                        id="ytPlayer"
-                        width="240"
-                        height="135"
-                        src="${iframeSrc}"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        frameborder="0">
-                    </iframe>
-                </div>
+                <iframe
+                    id="ytPlayer"
+                    width="0"
+                    height="0"
+                    src="${iframeSrc}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    frameborder="0"
+                    style="position:absolute;width:0;height:0;min-width:0;min-height:0;opacity:0;pointer-events:none;">
+                </iframe>
             `;
-
-      // Attach close button handler
-      document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        youtubeContainer.style.display = 'none';
-      });
 
       this.isPlaying = true;
       state.isPlaying = true;
@@ -1142,29 +1130,17 @@ document.addEventListener('DOMContentLoaded', function () {
       state.isPlaying = true;
 
       youtubeContainer.innerHTML = `
-                <div class="mini-player-inner">
-                    <div class="mini-player-info">
-                        <span class="mini-player-now-playing">▶ Now Playing</span>
-                        <span class="mini-player-title">${this.currentTitle}</span>
-                        <button class="mini-player-close" id="miniPlayerClose" title="Cerrar reproductor" aria-label="Cerrar reproductor">×</button>
-                    </div>
-                    <iframe
-                        id="ytPlayer"
-                        width="240"
-                        height="135"
-                        src="${searchSrc}"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        frameborder="0">
-                    </iframe>
-                </div>
+                <iframe
+                    id="ytPlayer"
+                    width="0"
+                    height="0"
+                    src="${searchSrc}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    frameborder="0"
+                    style="position:absolute;width:0;height:0;min-width:0;min-height:0;opacity:0;pointer-events:none;">
+                </iframe>
             `;
-
-      // Attach close button handler
-      document.getElementById('miniPlayerClose')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        youtubeContainer.style.display = 'none';
-      });
 
       this.updateUI(true, this.currentTitle, this.isMuted);
       console.log('Music search iframe created for:', title);

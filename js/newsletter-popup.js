@@ -146,7 +146,7 @@ const NewsletterPopup = {
             page: window.location.pathname
           })
         });
-        alert('\u00a1Gracias por suscribirte!");
+        alert('\u00a1Gracias por suscribirte!');
         form.reset();
       } catch(err) {
         alert('Gracias! Te hemos registrado.');
