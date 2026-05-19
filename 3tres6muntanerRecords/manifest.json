@@ -1,0 +1,21 @@
+{
+  "name": "3TRES6 Records",
+  "short_name": "3TRES6",
+  "description": "Vinilos curados desde Barcelona para coleccionistas en M\u00e9xico",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ff6b35",
+  "icons": [
+    {
+      "src": "/3tres6muntanerRecords/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/3tres6muntanerRecords/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

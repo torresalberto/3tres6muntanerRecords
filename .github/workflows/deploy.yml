@@ -49,6 +49,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
+      - name: Transform paths for root domain
+        run: |
+          sed -i 's|/3tres6muntanerRecords/|/|g' $(find . -type f \( -name '*.html' -o -name '*.js' -o -name '*.json' \) | grep -v node_modules)
+
       - name: Deploy via rsync
         run: |
           rsync -avz --delete --exclude '.git' --exclude 'node_modules' --exclude 'backend/node_modules' \
