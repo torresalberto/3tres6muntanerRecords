@@ -1,0 +1,29 @@
+{
+  "artist": "David August",
+  "artist_id": "david-august",
+  "sets": [
+    {
+      "id": "david-august-br-berlin-2014",
+      "title": "Boiler Room Berlin 2014",
+      "venue": "Boiler Room, Berlin, Germany",
+      "date": "2014-04-09",
+      "duration": "1:06:34",
+      "youtube": "mRfwdJx0NDE",
+      "views": 14500000,
+      "genre": ["Melodic House", "Techno", "Deep House"],
+      "tracks_identified": 8,
+      "tracks_total": 8,
+      "source": "1001tracklists + MixesDB",
+      "tracklist": [
+        { "time": "00:13", "artist": "Kollektiv Turmstrasse", "title": "Last Day (David August Revision)", "label": "DIYNAMIC" },
+        { "time": "16:52", "artist": "Syl Johnson", "title": "Is It Because I'm Black (David August Reconstruction)" },
+        { "time": "27:00", "artist": "Rebekah Del Rio", "title": "Llorando (David August Edit)" },
+        { "time": "38:19", "artist": "David August", "title": "Ingrid" },
+        { "time": "45:53", "artist": "Tomas Barfod ft. Nina K", "title": "Pulsing (David August Remix)", "label": "Secretly Canadian" },
+        { "time": "51:22", "artist": "Ten Walls", "title": "Gotham (David August Edit)" },
+        { "time": "56:03", "artist": "High Heels Breaker ft. Sarah Palin", "title": "Come Easy (David August Remix)", "label": "Drumpoet" },
+        { "time": "1:00:52", "artist": "Grizzly Bear", "title": "Yet Again (David August Remix)", "label": "Warp" }
+      ]
+    }
+  ]
+}

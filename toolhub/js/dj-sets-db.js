@@ -157,6 +157,19 @@ const DJ_SETS = [
     "views": 161577
   },
   {
+    "id": "david-august-br-berlin-2014",
+    "dj_id": "david-august",
+    "dj_name": "David August",
+    "title": "Boiler Room Berlin 2014",
+    "venue": "Boiler Room, Berlin",
+    "date": "2014-04-09",
+    "tracks": 8,
+    "confirmed": 8,
+    "youtube": "mRfwdJx0NDE",
+    "duration": "1:06:34",
+    "views": 14500000
+  },
+  {
     "id": "dixon-cercle-2024",
     "dj_id": "dixon",
     "dj_name": "Dixon",
@@ -1037,6 +1050,14 @@ const DJ_REGISTRY = [
     "origin": "París, Francia",
     "set_count": 1,
     "image": ""
+  },
+  {
+    "id": "david-august",
+    "name": "David August",
+    "genres": ["Melodic House", "Techno", "Deep House", "Classical"],
+    "origin": "Germany / Munich",
+    "set_count": 1,
+    "image": "https://i.ytimg.com/vi/mRfwdJx0NDE/hqdefault.jpg"
   },
   {
     "id": "dixon",

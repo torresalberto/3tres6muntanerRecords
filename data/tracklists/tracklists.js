@@ -300,6 +300,72 @@ const TRACKLISTS = {
         ]
       }
     ]
+  },
+  "chaos-in-the-cbd": {
+    artist: "Chaos In The CBD",
+    artist_id: "chaos-in-the-cbd",
+    sets: [
+      {
+        id: "chaos-in-the-cbd-br-glitch-2022",
+        title: "Boiler Room x Glitch Festival 2022",
+        venue: "Glitch Festival, Malta",
+        date: "2022-08-15",
+        duration: "57:50",
+        youtube: "gArS5VA3Vxk",
+        views: 328881,
+        genre: ["Deep House", "Afro House", "Acid House"],
+        tracks_identified: 14,
+        tracks_total: 20,
+        source: "MixesDB",
+        tracklist: [
+          { time: "00:00", artist: "Stephanie Cooke", title: "Here With My Best Friend (Louie Vega Drumz)", label: "Nite Grooves" },
+          { time: "03:00", artist: "DJ Duke", title: "Tribal Trance (Tribal Mix)", label: "Power" },
+          { time: "06:00", artist: "Modal", title: "Boy (Girl (Boy Girl)", label: "Sounds." },
+          { time: "11:00", artist: "Alec Wizz", title: "Drummin'", label: "ADA UK" },
+          { time: "13:00", artist: "The Absolute Family", title: "Snaky Way", label: "Adult Only" },
+          { time: "17:00", artist: "Unknown", title: "ID", note: "ID" },
+          { time: "20:00", artist: "Didier Sinclair & DJ Chris Pi", title: "Groove 2 Me" },
+          { time: "23:00", artist: "Circulation", title: "Orange (Mix A)" },
+          { time: "26:00", artist: "Unknown", title: "ID", note: "ID" },
+          { time: "34:00", artist: "Jerome", title: "G-Birth", label: "Music Man" },
+          { time: "41:00", artist: "A Jackin' Phreak", title: "Raw Jackin'", label: "Brique Rouge" },
+          { time: "44:00", artist: "Unknown", title: "ID", note: "ID" },
+          { time: "47:00", artist: "Olav Basoski", title: "Get Over", label: "Armada" },
+          { time: "50:00", artist: "Samuel L. Session", title: "Danses D'Afrique", label: "SLS" },
+          { time: "54:00", artist: "R-Play", title: "Mojito", label: "Mix Trax" },
+          { time: "55:00", artist: "Devilfish", title: "Manalive", label: "Bush" }
+        ]
+      }
+    ]
+  },
+  "david-august": {
+    artist: "David August",
+    artist_id: "david-august",
+    sets: [
+      {
+        id: "david-august-br-berlin-2014",
+        title: "Boiler Room Berlin 2014",
+        venue: "Boiler Room, Berlin, Germany",
+        date: "2014-04-09",
+        duration: "1:06:34",
+        youtube: "mRfwdJx0NDE",
+        views: 14500000,
+        genre: ["Melodic House", "Techno", "Deep House"],
+        tracks_identified: 8,
+        tracks_total: 8,
+        source: "1001tracklists + MixesDB",
+        tracklist: [
+          { time: "00:13", artist: "Kollektiv Turmstrasse", title: "Last Day (David August Revision)", label: "DIYNAMIC" },
+          { time: "16:52", artist: "Syl Johnson", title: "Is It Because I'm Black (David August Reconstruction)" },
+          { time: "27:00", artist: "Rebekah Del Rio", title: "Llorando (David August Edit)" },
+          { time: "38:19", artist: "David August", title: "Ingrid" },
+          { time: "45:53", artist: "Tomas Barfod ft. Nina K", title: "Pulsing (David August Remix)", label: "Secretly Canadian" },
+          { time: "51:22", artist: "Ten Walls", title: "Gotham (David August Edit)" },
+          { time: "56:03", artist: "High Heels Breaker ft. Sarah Palin", title: "Come Easy (David August Remix)", label: "Drumpoet" },
+          { time: "1:00:52", artist: "Grizzly Bear", title: "Yet Again (David August Remix)", label: "Warp" }
+        ]
+      }
+    ]
   }
 };
 
