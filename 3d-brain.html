@@ -543,6 +543,9 @@
     </div>
   </section>
 
+  <!-- DATA SCRIPTS -->
+  <script src="js/dj-sets-db.js"></script>
+  <script src="data/tracklists/tracklists.js"></script>
   <script>
     // ======== DATA ========
     const GENRE_COLORS = {
@@ -604,7 +607,7 @@
   { id: "job-jobse", name: "Job Jobse", genre: "Unknown" },
   { id: "rey-colino", name: "Rey Colino", genre: "Unknown" },
   { id: "cassius", name: "Cassius", genre: "Unknown" },
-  { id: "folamour", name: "Folamour", genre: "Unknown" },
+  { id: "folamour", name: "Folamour", genre: "House" },
   { id: "peggy-gou", name: "Peggy Gou", genre: "Unknown" },
   { id: "blessed-madonna", name: "The Blessed Madonna", genre: "Unknown" },
   { id: "mall-grab", name: "Mall Grab", genre: "Unknown" },
@@ -612,7 +615,7 @@
   { id: "carl-cox", name: "Carl Cox", genre: "Techno" }
 ];
 
-// ======== MULTI-DJ TRACKS ========
+    // ======== MULTI-DJ TRACKS ========
 const MULTI_DJ_TRACKS = [
   { track: "Ame - Asa", djs: ["ame", "dixon"], sets: ["ame-br-innervisions-ade-2012", "dixon-cercle-2024"] },
   { track: "Ame & Curses - Shadow Of Love", djs: ["ame", "dixon"], sets: ["ame-br-innervisions-ade-2012", "dixon-cercle-2024"] },
@@ -628,6 +631,42 @@ const MULTI_DJ_TRACKS = [
   { track: "Marshall Jefferson - Move Your Body", djs: ["masters-at-work", "moodymann"], sets: ["maw-br-london-2014", "masters-at-work-via-cross-ref", "moodymann-via-cross-ref"] },
   { track: "Kings Of Tomorrow - Finally", djs: ["seth-troxler", "honey-dijon"], sets: ["seth-troxler-br-mexico-2014", "honey-dijon-via-cross-ref"] }
 ];
+
+    // ======== AUTO-GENERATE TRACK CONNECTIONS FROM TRACKLISTS ========
+    function buildTracklistConnections() {
+      if (typeof TRACKLISTS === 'undefined') return [];
+      const trackIndex = {}; // normalized key → [{dj_id, set_id, set_title}]
+
+      for (const djId in TRACKLISTS) {
+        TRACKLISTS[djId].sets.forEach(set => {
+          set.tracklist.forEach(track => {
+            const key = (track.artist + ' — ' + track.title).toLowerCase().replace(/\s+/g, ' ').trim();
+            if (!trackIndex[key]) trackIndex[key] = [];
+            trackIndex[key].push({
+              dj_id: djId,
+              set_id: set.id,
+              set_title: set.title,
+              time: track.time,
+              label: track.label
+            });
+          });
+        });
+      }
+
+      const connections = [];
+      for (const key in trackIndex) {
+        const plays = trackIndex[key];
+        const uniqueDJs = [...new Set(plays.map(p => p.dj_id))];
+        if (uniqueDJs.length >= 2) {
+          const displayTrack = key.replace(/\s*—\s*/g, ' - ').replace(/\b\w/g, c => c.toUpperCase());
+          const sets = plays.map(p => p.set_id);
+          connections.push({ track: displayTrack, djs: uniqueDJs, sets });
+        }
+      }
+      return connections;
+    }
+
+    const TRACKLIST_CONNECTIONS = buildTracklistConnections();
 
     // ======== BUILD GRAPH ========
     const djMap = {};
@@ -646,25 +685,30 @@ const MULTI_DJ_TRACKS = [
     const links = [];
     const linkSet = new Set();
 
-    MULTI_DJ_TRACKS.forEach(t => {
-      const djs = t.djs;
-      for (let i = 0; i < djs.length; i++) {
-        for (let j = i + 1; j < djs.length; j++) {
-          const a = djs[i], b = djs[j];
-          const key = [a, b].sort().join('|');
-          if (!linkSet.has(key)) {
-            linkSet.add(key);
-            const na = nodes.find(n => n.id === a);
-            const nb = nodes.find(n => n.id === b);
-            if (na && nb) {
-              links.push({ source: na, target: nb, track: t.track, sets: t.sets });
-              na.connections++;
-              nb.connections++;
+    function addTrackConnections(trackEntries) {
+      trackEntries.forEach(t => {
+        const djs = t.djs;
+        for (let i = 0; i < djs.length; i++) {
+          for (let j = i + 1; j < djs.length; j++) {
+            const a = djs[i], b = djs[j];
+            const key = [a, b].sort().join('|') + '::' + t.track.toLowerCase();
+            if (!linkSet.has(key)) {
+              linkSet.add(key);
+              const na = nodes.find(n => n.id === a);
+              const nb = nodes.find(n => n.id === b);
+              if (na && nb) {
+                links.push({ source: na, target: nb, track: t.track, sets: t.sets });
+                na.connections++;
+                nb.connections++;
+              }
             }
           }
         }
-      }
-    });
+      });
+    }
+
+    addTrackConnections(MULTI_DJ_TRACKS);
+    addTrackConnections(TRACKLIST_CONNECTIONS);
 
     // ======== SPHERICAL LAYOUT ========
     function fibonacciSphere(n, radius) {
@@ -913,7 +957,12 @@ const MULTI_DJ_TRACKS = [
         if (l.source.id === d.id) conns.push({ other: l.target, track: l.track, sets: l.sets });
         if (l.target.id === d.id) conns.push({ other: l.source, track: l.track, sets: l.sets });
       });
-      document.getElementById('infoSummary').textContent = conns.length + ' shared track' + (conns.length !== 1 ? 's' : '') + ' across the library';
+      const tracklistConns = conns.filter(c => {
+        const key = c.track.toLowerCase().replace(/\s+/g, ' ');
+        return TRACKLIST_CONNECTIONS.some(t => t.track.toLowerCase().replace(/\s+/g, ' ') === key);
+      });
+      const sourceLabel = tracklistConns.length > 0 ? `${tracklistConns.length} from tracklists • ` : '';
+      document.getElementById('infoSummary').textContent = sourceLabel + conns.length + ' shared track' + (conns.length !== 1 ? 's' : '') + ' across the library';
 
       const list = document.getElementById('infoList');
       if (conns.length === 0) {
@@ -928,14 +977,17 @@ const MULTI_DJ_TRACKS = [
         list.innerHTML = Object.values(byDJ).map(g => `
           <div class="info-group">
             <div class="info-group-title">${g.other.name}</div>
-            ${g.tracks.map(t => `
+            ${g.tracks.map(t => {
+              const key = t.track.toLowerCase().replace(/\s+/g, ' ');
+              const fromTracklist = TRACKLIST_CONNECTIONS.some(tc => tc.track.toLowerCase().replace(/\s+/g, ' ') === key);
+              return `
               <div class="info-item">
                 <div>
-                  <div class="info-track">${t.track}</div>
+                  <div class="info-track">${t.track}${fromTracklist ? ' <span style="color:var(--primary,#ff4d00);font-size:0.65rem;font-weight:600;">🎵 tracklist</span>' : ''}</div>
                   <div class="info-set">${t.sets.map(s => s.replace(/-/g, ' ')).join(' • ')}</div>
                 </div>
               </div>
-            `).join('')}
+            `}).join('')}
           </div>
         `).join('');
       }
@@ -961,6 +1013,17 @@ const MULTI_DJ_TRACKS = [
           filteredIds.add(l.target.id);
         }
       });
+      // Also search tracklist data directly
+      if (typeof TracklistAPI !== 'undefined') {
+        const tlResults = TracklistAPI.searchTracks(q);
+        tlResults.forEach(r => {
+          const djEntry = DJ_REGISTRY.find(d => d.id === r.dj.toLowerCase().replace(/\s+/g, '-'));
+          if (djEntry) filteredIds.add(djEntry.id);
+          // Also try matching by dj_id from DJ_DATA
+          const djNode = nodes.find(n => n.id === r.dj.toLowerCase().replace(/\s+/g, '-'));
+          if (djNode) filteredIds.add(djNode.id);
+        });
+      }
 
       document.getElementById('statVis').textContent = filteredIds.size;
     });
@@ -1118,6 +1181,15 @@ const MULTI_DJ_TRACKS = [
     document.getElementById('statDJs').textContent = nodes.length;
     document.getElementById('statConns').textContent = links.length;
     document.getElementById('statVis').textContent = nodes.length;
+
+    // Add tracklist source indicator to stats
+    const tracklistCount = TRACKLIST_CONNECTIONS.length;
+    if (tracklistCount > 0) {
+      const statsEl = document.getElementById('networkStats');
+      const tracklistSpan = document.createElement('span');
+      tracklistSpan.innerHTML = `<strong style="color:#ff4d00;">${tracklistCount}</strong> from tracklists`;
+      statsEl.appendChild(tracklistSpan);
+    }
 
     // Start
     animate();
