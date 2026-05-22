@@ -660,7 +660,7 @@ const MULTI_DJ_TRACKS = [
         const uniqueDJs = [...new Set(plays.map(p => p.dj_id))];
         if (uniqueDJs.length >= 2) {
           const displayTrack = key.replace(/\s*—\s*/g, ' - ').replace(/\b\w/g, c => c.toUpperCase());
-          const sets = plays.map(p => p.set_id);
+          const sets = plays.map(p => ({ id: p.set_id, title: p.set_title, artist: p.dj_id }));
           connections.push({ track: displayTrack, djs: uniqueDJs, sets });
         }
       }
@@ -985,7 +985,7 @@ const MULTI_DJ_TRACKS = [
               <div class="info-item">
                 <div>
                   <div class="info-track">${t.track}${fromTracklist ? ' <span style="color:var(--primary,#ff4d00);font-size:0.65rem;font-weight:600;">🎵 tracklist</span>' : ''}</div>
-                  <div class="info-set">${t.sets.map(s => s.replace(/-/g, ' ')).join(' • ')}</div>
+                  <div class="info-set">${t.sets.map(s => typeof s === 'object' ? s.title : s.replace(/-/g, ' ')).join(' • ')}</div>
                 </div>
               </div>
             `}).join('')}
