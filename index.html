@@ -55,7 +55,7 @@
     <!-- PWA -->
     <link rel="manifest" href="/3tres6muntanerRecords/manifest.json" />
     <meta name="theme-color" content="#ff4d00" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- Preconnect for Performance -->
@@ -898,8 +898,10 @@
         <form id="footerNewsletterForm" class="newsletter-form">
           <input
             type="email"
+            id="newsletterEmail"
             name="email"
             placeholder="tu@email.com"
+            autocomplete="email"
             required
             aria-label="Tu email"
           />
@@ -1150,11 +1152,12 @@
           <h2>Información de Contacto</h2>
           <form id="checkoutInfoForm">
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="checkoutEmail">Email</label>
               <input
                 type="email"
                 id="checkoutEmail"
                 name="email"
+                autocomplete="email"
                 required
                 placeholder="tu@email.com"
               />
@@ -1162,16 +1165,16 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">Nombre</label>
-                <input type="text" id="firstName" name="firstName" required />
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
               </div>
               <div class="form-group">
                 <label for="lastName">Apellido</label>
-                <input type="text" id="lastName" name="lastName" required />
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
               </div>
             </div>
             <div class="form-group">
               <label for="phone">Teléfono</label>
-              <input type="tel" id="phone" name="phone" required placeholder="+52 55 1234 5678" />
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="+52 55 1234 5678" />
             </div>
             <button type="submit" class="checkout-next-btn">Continuar a Envío</button>
           </form>
@@ -1187,6 +1190,7 @@
                 type="text"
                 id="address"
                 name="address"
+                autocomplete="street-address"
                 required
                 placeholder="Calle y número"
               />
@@ -1198,11 +1202,11 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="city">Ciudad</label>
-                <input type="text" id="city" name="city" required />
+                <input type="text" id="city" name="city" autocomplete="address-level2" required />
               </div>
               <div class="form-group">
                 <label for="state">Estado</label>
-                <select id="state" name="state" required>
+                <select id="state" name="state" autocomplete="address-level1" required>
                   <option value="">Seleccionar...</option>
                   <option value="CDMX">Ciudad de México</option>
                   <option value="JAL">Jalisco</option>
@@ -1215,7 +1219,7 @@
             </div>
             <div class="form-group">
               <label for="zip">Código Postal</label>
-              <input type="text" id="zip" name="zip" required placeholder="00000" />
+              <input type="text" id="zip" name="zip" autocomplete="postal-code" required placeholder="00000" />
             </div>
 
             <div class="shipping-options">
@@ -1457,7 +1461,7 @@
           <div class="form-group">
             <label>DJs invitados</label>
             <div id="djFields" class="dj-fields">
-              <input type="text" class="submit-input dj-input" placeholder="DJ principal..." />
+              <input type="text" id="dj-0" name="dj-0" class="submit-input dj-input" placeholder="DJ principal..." />
             </div>
             <button type="button" class="add-dj-btn" id="addDjField">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
