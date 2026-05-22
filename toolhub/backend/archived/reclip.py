@@ -1,0 +1,235 @@
+import os
+import uuid
+import glob
+import json
+import subprocess
+import threading
+from flask import Flask, request, jsonify, send_file, render_template
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+# For production (Render), use /tmp for ephemeral storage
+if os.environ.get("RENDER"):
+    DOWNLOAD_DIR = "/tmp/downloads"
+else:
+    DOWNLOAD_DIR = os.path.join(os.path.dirname(__file__), "downloads")
+
+os.makedirs(DOWNLOAD_DIR, exist_ok=True)
+
+jobs = {}
+
+
+def run_download(job_id, url, format_choice, format_id):
+    job = jobs[job_id]
+    out_template = os.path.join(DOWNLOAD_DIR, f"{job_id}.%(ext)s")
+
+    # Path to cookies file (for YouTube authentication)
+    cookies_path = os.path.join(os.path.dirname(__file__), "cookies.txt")
+    use_cookies = os.path.exists(cookies_path)
+
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+    # Use web client with cookies if available
+    cmd = [
+        "yt-dlp",
+        "--no-playlist",
+        "-o",
+        out_template,
+        "--user-agent",
+        user_agent,
+        "--no-check-certificates",
+    ]
+
+    if use_cookies:
+        cmd.extend(["--cookies", cookies_path])
+
+    if format_choice == "audio":
+        cmd += ["-x", "--audio-format", "mp3", "--audio-quality", "0"]
+    elif format_id:
+        cmd += ["-f", f"{format_id}+bestaudio/best", "--merge-output-format", "mp4"]
+    else:
+        cmd += ["-f", "bestvideo+bestaudio/best", "--merge-output-format", "mp4"]
+
+    cmd.append(url)
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        if result.returncode != 0:
+            job["status"] = "error"
+            job["error"] = result.stderr.strip().split("\n")[-1]
+            return
+    except subprocess.TimeoutExpired:
+        job["status"] = "error"
+        job["error"] = "Download timed out (5 min limit)"
+        return
+    except Exception as e:
+        job["status"] = "error"
+        job["error"] = str(e)
+        return
+
+    # Check if we have the file
+    files = glob.glob(os.path.join(DOWNLOAD_DIR, f"{job_id}.*"))
+    if not files:
+        job["status"] = "error"
+        job["error"] = "Could not download - video may require authentication"
+        return
+
+    # Select the best file
+    if format_choice == "audio":
+        target = [f for f in files if f.endswith(".mp3")]
+        chosen = target[0] if target else files[0]
+    else:
+        target = [f for f in files if f.endswith(".mp4")]
+        chosen = target[0] if target else files[0]
+
+    # Clean up other files
+    for f in files:
+        if f != chosen:
+            try:
+                os.remove(f)
+            except OSError:
+                pass
+
+    job["status"] = "done"
+    job["file"] = chosen
+    ext = os.path.splitext(chosen)[1]
+    title = job.get("title", "").strip()
+    if title:
+        safe_title = (
+            "".join(c for c in title if c not in r'\/:*?"<>|').strip()[:20].strip()
+        )
+        job["filename"] = (
+            f"{safe_title}{ext}" if safe_title else os.path.basename(chosen)
+        )
+    else:
+        job["filename"] = os.path.basename(chosen)
+
+    # Cleanup old files older than 1 hour
+    cleanup_old_files()
+
+
+def cleanup_old_files():
+    """Remove files older than 1 hour to save disk space"""
+    import time
+
+    now = time.time()
+    for f in glob.glob(os.path.join(DOWNLOAD_DIR, "*")):
+        try:
+            if os.path.isfile(f) and (now - os.path.getmtime(f)) > 3600:
+                os.remove(f)
+        except OSError:
+            pass
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok", "service": "reclip"})
+
+
+@app.route("/api/info", methods=["POST"])
+def get_info():
+    data = request.json
+    url = data.get("url", "").strip()
+    if not url:
+        return jsonify({"error": "No URL provided"}), 400
+
+    cmd = ["yt-dlp", "--no-playlist", "-j", url]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+        if result.returncode != 0:
+            return jsonify({"error": result.stderr.strip().split("\n")[-1]}), 400
+
+        info = json.loads(result.stdout)
+
+        best_by_height = {}
+        for f in info.get("formats", []):
+            height = f.get("height")
+            if height and f.get("vcodec", "none") != "none":
+                tbr = f.get("tbr") or 0
+                if height not in best_by_height or tbr > (
+                    best_by_height[height].get("tbr") or 0
+                ):
+                    best_by_height[height] = f
+
+        formats = []
+        for height, f in best_by_height.items():
+            formats.append(
+                {
+                    "id": f["format_id"],
+                    "label": f"{height}p",
+                    "height": height,
+                }
+            )
+        formats.sort(key=lambda x: x["height"], reverse=True)
+
+        return jsonify(
+            {
+                "title": info.get("title", ""),
+                "thumbnail": info.get("thumbnail", ""),
+                "duration": info.get("duration"),
+                "uploader": info.get("uploader", ""),
+                "formats": formats,
+            }
+        )
+    except subprocess.TimeoutExpired:
+        return jsonify({"error": "Timed out fetching video info"}), 400
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@app.route("/api/download", methods=["POST"])
+def start_download():
+    data = request.json
+    url = data.get("url", "").strip()
+    format_choice = data.get("format", "video")
+    format_id = data.get("format_id")
+    title = data.get("title", "")
+
+    if not url:
+        return jsonify({"error": "No URL provided"}), 400
+
+    job_id = uuid.uuid4().hex[:10]
+    jobs[job_id] = {"status": "downloading", "url": url, "title": title}
+
+    thread = threading.Thread(
+        target=run_download, args=(job_id, url, format_choice, format_id)
+    )
+    thread.daemon = True
+    thread.start()
+
+    return jsonify({"job_id": job_id})
+
+
+@app.route("/api/status/<job_id>")
+def check_status(job_id):
+    job = jobs.get(job_id)
+    if not job:
+        return jsonify({"error": "Job not found"}), 404
+    return jsonify(
+        {
+            "status": job["status"],
+            "error": job.get("error"),
+            "filename": job.get("filename"),
+        }
+    )
+
+
+@app.route("/api/file/<job_id>")
+def download_file(job_id):
+    job = jobs.get(job_id)
+    if not job or job["status"] != "done":
+        return jsonify({"error": "File not ready"}), 404
+    return send_file(job["file"], as_attachment=True, download_name=job["filename"])
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8899))
+    host = os.environ.get("HOST", "0.0.0.0")
+    app.run(host=host, port=port, debug=False)

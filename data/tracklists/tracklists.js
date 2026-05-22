@@ -301,6 +301,99 @@ const TRACKLISTS = {
       }
     ]
   },
+  "helena-hauff": {
+    artist: "Helena Hauff",
+    artist_id: "helena-hauff",
+    sets: [
+      {
+        id: "helena-hauff-br-dekmantel-2017",
+        title: "Boiler Room x Dekmantel Festival 2017",
+        venue: "Dekmantel Festival, Amsterdamse Bos, Amsterdam",
+        date: "2017-08-06",
+        duration: "57:42",
+        youtube: "OdJy_g1G7Ho",
+        views: 1009963,
+        genre: ["Electro", "Acid", "Techno"],
+        tracks_identified: 16,
+        tracks_total: 17,
+        source: "MixesDB",
+        tracklist: [
+          { time: "00:00", artist: "Mumm", title: "Star", label: "STILLEBEN" },
+          { time: "04:00", artist: "Carl Finlow", title: "Hashtag (Radioactive Man Remix)", label: "ELECTRIXNOIZE" },
+          { time: "08:00", artist: "The Exaltics", title: "0998.0989.12", label: "SOLAR ONE MUSIC" },
+          { time: "11:00", artist: "The Hacker", title: "Dans La Salle Des Machines", label: "DATAPUNK" },
+          { time: "14:00", artist: "Computor Rockers", title: "Computor Science", label: "BREAKIN'THEBARRIER" },
+          { time: "18:00", artist: "Sync 24 & Privacy", title: "General Data Standard", label: "CULTIVATED ELECTRONICS" },
+          { time: "21:00", artist: "ID", title: "ID", note: "ID" },
+          { time: "24:00", artist: "Pollon", title: "Lost Souls", label: "SCOPEX" },
+          { time: "27:00", artist: "Disabled", title: "Untitled A1", label: "VARVET" },
+          { time: "30:00", artist: "B.W.P. Experiments", title: "Stratoïds", label: "BONZAI" },
+          { time: "33:00", artist: "Thomas Schumacher", title: "When I Rock", label: "BUSH" },
+          { time: "38:00", artist: "Q.D.T", title: "Untitled B1", label: "KINGSIZE" },
+          { time: "41:00", artist: "Minimum Syndicat", title: "Worth It" },
+          { time: "45:00", artist: "Minimum Syndicat", title: "The Bloop" },
+          { time: "48:00", artist: "Umwelt", title: "Slave To The Rave", label: "RAVE OR DIE" },
+          { time: "50:00", artist: "Illektrolab", title: "Internal Software", label: "SATAMILE" },
+          { time: "53:00", artist: "Zeta Reticula", title: "EP2", label: "ELECTRIXNOIZE" }
+        ]
+      }
+    ]
+  },
+  "floorplan": {
+    artist: "Floorplan",
+    artist_id: "floorplan",
+    sets: [
+      {
+        id: "floorplan-weather-paris-2015",
+        title: "Weather Festival Paris 2015 (Mixmag)",
+        venue: "Weather Festival, Paris, France",
+        date: "2015-06-06",
+        duration: "1:57:26",
+        youtube: "Ow530rJ9W9w",
+        views: 514000,
+        genre: ["Techno", "Gospel House", "Detroit Techno"],
+        tracks_identified: 30,
+        tracks_total: 34,
+        source: "MixesDB + set79.com",
+        tracklist: [
+          { time: "00:00", artist: "Sounds Of Blackness", "title": "The Pressure Pt.2" },
+          { time: "03:00", artist: "Ben Sims", "title": "New Blood (Robert Hood Mix)", label: "Theory" },
+          { time: "07:00", artist: "Floorplan", "title": "Never Grow Old", label: "M-Plant" },
+          { time: "11:00", artist: "Floorplan", "title": "Phobia", label: "M-Plant" },
+          { time: "14:00", artist: "Gary Beck", "title": "Get Down", label: "In The House & Defected" },
+          { time: "17:00", artist: "Ben Sims", "title": "Dollar Bill Y'all (Vocal Mix)", label: "Hardgroove" },
+          { time: "21:00", artist: "Floorplan", "title": "Push On", label: "M-Plant" },
+          { time: "25:00", artist: "Club MCM", "title": "Club MCM (Mark Broom Re-Edit)", label: "Do Not Sleep" },
+          { time: "29:00", artist: "Frankie Knuckles Pres. Directors Cut", "title": "Get Over U (Gifted Souls Remix)", label: "Nocturnal Groove Digital" },
+          { time: "33:00", artist: "ID", "title": "ID", note: "unidentified" },
+          { time: "37:00", artist: "Floorplan", "title": "Chord Principle", label: "M-Plant" },
+          { time: "39:00", artist: "Floorplan", "title": "Let's Ride", label: "M-Plant" },
+          { time: "42:00", artist: "Candi Staton", "title": "Hallelujah Anyway (Directors Cut Signature Praise)", label: "Vendetta" },
+          { time: "46:00", artist: "Floorplan", "title": "Confess", label: "M-Plant" },
+          { time: "48:00", artist: "Gary Beck", "title": "Rascal", label: "Bek" },
+          { time: "52:00", artist: "Esteban Adame", "title": "Rays of Saturn (Robert Hood Remix)" },
+          { time: "56:00", artist: "Kevin Saunderson", "title": "Bassline (Ben Sims 25th Anniversary Edit)", label: "KMS" },
+          { time: "59:00", artist: "Lil Louis", "title": "French Kiss (Mark Broom Edit)" },
+          { time: "1:03:00", artist: "Kevin Saunderson Feat. Inner City", "title": "Good Life (Pig&Dan Less Is More Remix)", label: "Cr2" },
+          { time: "1:09:00", artist: "Ben Sims", "title": "Love", label: "Hardgroove" },
+          { time: "1:13:00", artist: "Floorplan", "title": "We Magnify His Name", label: "M-Plant" },
+          { time: "1:18:00", artist: "ID", "title": "ID", note: "unidentified" },
+          { time: "1:22:00", artist: "Shawn Christopher", "title": "You Can Make It (B's Preacher Man Mix)" },
+          { time: "1:28:00", artist: "Gingy & Bordello", "title": "All Day (Robert Hood Remix)", label: "Turbo" },
+          { time: "1:31:00", artist: "Floorplan", "title": "Never Grow Old", label: "M-Plant", note: "second play" },
+          { time: "1:34:00", artist: "Mark Ambrose", "title": "Shooting Stars (Ben Sims Dub Mix)", label: "Theory" },
+          { time: "1:36:00", artist: "Candi Staton", "title": "Hallelujah Anyway (Directors Cut Signature Praise)", label: "Vendetta", note: "second play" },
+          { time: "1:40:00", artist: "Ben Sims", "title": "Love & Hurt (Gary Beck Remix)", label: "Hardgroove" },
+          { time: "1:43:00", artist: "ID", "title": "ID", note: "unidentified" },
+          { time: "1:46:00", artist: "Floorplan", "title": "Eclipse", label: "M-Plant" },
+          { time: "1:50:00", artist: "Floorplan", "title": "Ritual", label: "EPM" },
+          { time: "1:52:00", artist: "Ritzi Lee", "title": "Reverse Processed", label: "Theory" },
+          { time: "1:55:00", artist: "Arnaud Rebotini", "title": "777 (Ascii Disko Remix)", label: "Turbo" },
+          { time: "1:57:00", artist: "ID", "title": "ID", note: "unidentified" }
+        ]
+      }
+    ]
+  },
   "chaos-in-the-cbd": {
     artist: "Chaos In The CBD",
     artist_id: "chaos-in-the-cbd",
@@ -367,6 +460,1201 @@ const TRACKLISTS = {
       }
     ]
   }
+,
+  "peggy-gou": {
+    "artist": "Peggy Gou",
+    "artist_id": "peggy-gou",
+    "sets": [
+        {
+            "id": "peggy-gou-cercle-lille-2024",
+            "title": "Cercle @ Palais des Beaux-Arts de Lille",
+            "venue": "Palais des Beaux-Arts, Lille, France",
+            "date": "2024-03-16",
+            "duration": "1:48:21",
+            "youtube": "-UOMvxh4MYU",
+            "views": 6104298,
+            "genre": [
+                "House",
+                "Techno",
+                "Electro"
+            ],
+            "tracks_identified": 22,
+            "tracks_total": 22,
+            "source": "YouTube description",
+            "tracklist": [
+                {
+                    "time": "00:00",
+                    "artist": "Ebi",
+                    "title": "San"
+                },
+                {
+                    "time": "02:55",
+                    "artist": "ID",
+                    "title": "ID",
+                    "note": "ID"
+                },
+                {
+                    "time": "05:33",
+                    "artist": "Commix",
+                    "title": "Satellite Song (Underground Resistance Remix)"
+                },
+                {
+                    "time": "08:20",
+                    "artist": "Woody McBride",
+                    "title": "Darrin Houston"
+                },
+                {
+                    "time": "12:38",
+                    "artist": "Jellybean",
+                    "title": "Twilight Drone"
+                },
+                {
+                    "time": "17:35",
+                    "artist": "Dancer",
+                    "title": "Boom Boom (Jerome Hill Edit)"
+                },
+                {
+                    "time": "21:22",
+                    "artist": "Spacetime Continuum",
+                    "title": "Drug #6"
+                },
+                {
+                    "time": "26:08",
+                    "artist": "Ongaku",
+                    "title": "Mihon #1"
+                },
+                {
+                    "time": "29:48",
+                    "artist": "Penance",
+                    "title": "Deniro"
+                },
+                {
+                    "time": "34:09",
+                    "artist": "Lewski",
+                    "title": "Gru"
+                },
+                {
+                    "time": "38:30",
+                    "artist": "Kraftwerk",
+                    "title": "Aerodynamik (François K Aero Mix)"
+                },
+                {
+                    "time": "44:31",
+                    "artist": "Kim English",
+                    "title": "Learn 2 Luv (Pearson Sound Mix)"
+                },
+                {
+                    "time": "47:27",
+                    "artist": "Château Flight",
+                    "title": "Sargan"
+                },
+                {
+                    "time": "53:21",
+                    "artist": "Paul Johnson",
+                    "title": "Come On Children (Remix)"
+                },
+                {
+                    "time": "57:08",
+                    "artist": "Digital Excitation",
+                    "title": "Pure Pleasure (Rave Mix)"
+                },
+                {
+                    "time": "1:01:09",
+                    "artist": "Special Request",
+                    "title": "Reset It (Head High Dirt Mix)"
+                },
+                {
+                    "time": "1:05:25",
+                    "artist": "Kraftwerk",
+                    "title": "Expo 2000 (DJ Rolando Remix)"
+                },
+                {
+                    "time": "1:10:30",
+                    "artist": "Skee Mask",
+                    "title": "Fjorward Flex Dub"
+                },
+                {
+                    "time": "1:15:00",
+                    "artist": "Dreamscape",
+                    "title": "Born"
+                },
+                {
+                    "time": "1:20:10",
+                    "artist": "Metro",
+                    "title": "Here For The Love (Metropolitan Acid Mix)"
+                },
+                {
+                    "time": "1:26:35",
+                    "artist": "Peggy Gou",
+                    "title": "It Makes You Forget (I:Cube Remix)"
+                },
+                {
+                    "time": "1:31:19",
+                    "artist": "Tan-Ru",
+                    "title": "Body Move"
+                }
+            ]
+        }
+    ]
+},
+  "mall-grab": {
+    "artist": "Mall Grab",
+    "artist_id": "mall-grab",
+    "sets": [
+        {
+            "id": "mall-grab-br-melbourne-2022",
+            "title": "Boiler Room Melbourne",
+            "venue": "Pica, Melbourne, Australia",
+            "date": "2022-11-26",
+            "duration": "1:30:02",
+            "youtube": "ddeAyYF_uwg",
+            "views": 2382681,
+            "genre": [
+                "House",
+                "Techno",
+                "Breaks",
+                "Rave"
+            ],
+            "tracks_identified": 24,
+            "tracks_total": 25,
+            "source": "MixesDB + set79.com",
+            "tracklist": [
+                {
+                    "time": "00:00",
+                    "artist": "Fishmans",
+                    "title": "Long Season (MG Edit)"
+                },
+                {
+                    "time": "04:00",
+                    "artist": "Mall Grab",
+                    "title": "Winter"
+                },
+                {
+                    "time": "07:00",
+                    "artist": "Mall Grab",
+                    "title": "Spirit Wave"
+                },
+                {
+                    "time": "12:00",
+                    "artist": "Mall Grab",
+                    "title": "Mirror Break (4/4 Mix)"
+                },
+                {
+                    "time": "15:00",
+                    "artist": "Mall Grab",
+                    "title": "Inside"
+                },
+                {
+                    "time": "18:00",
+                    "artist": "KETTAMA",
+                    "title": "Rok Da House"
+                },
+                {
+                    "time": "21:00",
+                    "artist": "Mall Grab",
+                    "title": "Marathon"
+                },
+                {
+                    "time": "25:00",
+                    "artist": "Mall Grab & Flansie",
+                    "title": "Love Yourself"
+                },
+                {
+                    "time": "30:00",
+                    "artist": "Mall Grab",
+                    "title": "Tremors"
+                },
+                {
+                    "time": "33:00",
+                    "artist": "Mall Grab",
+                    "title": "Bear Witness"
+                },
+                {
+                    "time": "36:30",
+                    "artist": "Surusinghe",
+                    "title": "Likshot"
+                },
+                {
+                    "time": "40:30",
+                    "artist": "Effy",
+                    "title": "Get Down"
+                },
+                {
+                    "time": "44:00",
+                    "artist": "Mall Grab & C.R.T.B.",
+                    "title": "Juice (MG Remix)"
+                },
+                {
+                    "time": "47:30",
+                    "artist": "Mall Grab",
+                    "title": "Say Nothing (Dub Mix)"
+                },
+                {
+                    "time": "50:00",
+                    "artist": "KETTAMA",
+                    "title": "Feel Emotion"
+                },
+                {
+                    "time": "55:30",
+                    "artist": "X CLUB.",
+                    "title": "Say No More"
+                },
+                {
+                    "time": "1:00:00",
+                    "artist": "Mall Grab",
+                    "title": "Escape From Belanglo"
+                },
+                {
+                    "time": "1:02:00",
+                    "artist": "Mall Grab",
+                    "title": "BB MG"
+                },
+                {
+                    "time": "1:07:30",
+                    "artist": "C.R.T.B.",
+                    "title": "It Never Ends"
+                },
+                {
+                    "time": "1:11:00",
+                    "artist": "Mall Grab & C.R.T.B.",
+                    "title": "Juice (First Mix)"
+                },
+                {
+                    "time": "1:14:00",
+                    "artist": "Clouds",
+                    "title": "Plastyx"
+                },
+                {
+                    "time": "1:17:50",
+                    "artist": "Mall Grab",
+                    "title": "Madman"
+                },
+                {
+                    "time": "1:21:00",
+                    "artist": "Mall Grab",
+                    "title": "1ofthozedaze (Edit)"
+                },
+                {
+                    "time": "1:24:40",
+                    "artist": "Mall Grab",
+                    "title": "Metaphysical"
+                }
+            ]
+        }
+    ]
+},
+  "hunee": {
+    "artist": "Hunee",
+    "artist_id": "hunee",
+    "sets": [
+        {
+            "id": "hunee-br-dekmantel-2015",
+            "title": "Boiler Room x Dekmantel Festival",
+            "venue": "Dekmantel Festival, Amsterdam",
+            "date": "2015-07-31",
+            "duration": "58:53",
+            "youtube": "0RIU0cy6L1I",
+            "views": 1794251,
+            "genre": [
+                "Disco",
+                "House",
+                "Boogie",
+                "Funk"
+            ],
+            "tracks_identified": 18,
+            "tracks_total": 18,
+            "source": "MixesDB",
+            "tracklist": [
+                {
+                    "time": "00:15",
+                    "artist": "Shadow",
+                    "title": "Let's Make It Up"
+                },
+                {
+                    "time": "03:30",
+                    "artist": "Sammy Barbot",
+                    "title": "New Mexico"
+                },
+                {
+                    "time": "06:20",
+                    "artist": "Udell",
+                    "title": "Won't You Try"
+                },
+                {
+                    "time": "09:40",
+                    "artist": "Kiki Gyan",
+                    "title": "Disco Dancer"
+                },
+                {
+                    "time": "13:00",
+                    "artist": "Javaroo",
+                    "title": "Breakin In'"
+                },
+                {
+                    "time": "16:20",
+                    "artist": "House Of Doors",
+                    "title": "Burmstar (Twin Mix)"
+                },
+                {
+                    "time": "18:50",
+                    "artist": "The Coachouse Rhythm Section",
+                    "title": "Time Warp"
+                },
+                {
+                    "time": "21:50",
+                    "artist": "Sheryl Lee Ralph",
+                    "title": "In The Evening"
+                },
+                {
+                    "time": "25:45",
+                    "artist": "Gavin Russom",
+                    "title": "The Telstar File"
+                },
+                {
+                    "time": "29:20",
+                    "artist": "Mappa Mundi",
+                    "title": "Sexafari"
+                },
+                {
+                    "time": "31:30",
+                    "artist": "Errorsmith & Mark Fell",
+                    "title": "Cuica Digitales"
+                },
+                {
+                    "time": "34:25",
+                    "artist": "Kindred Spirit",
+                    "title": "Put Your Spirit Up"
+                },
+                {
+                    "time": "38:50",
+                    "artist": "Mac Gregor",
+                    "title": "Nan Ye Li Kan"
+                },
+                {
+                    "time": "42:40",
+                    "artist": "Lyman Woodard",
+                    "title": "Theme In Search Of A Sportspectacular"
+                },
+                {
+                    "time": "47:20",
+                    "artist": "Estiban",
+                    "title": "Come To Me"
+                },
+                {
+                    "time": "51:20",
+                    "artist": "Jimmy Smith",
+                    "title": "Can't Hide Love"
+                },
+                {
+                    "time": "54:45",
+                    "artist": "Odessey 1",
+                    "title": "Last Night"
+                },
+                {
+                    "time": "57:30",
+                    "artist": "Chiwoniso",
+                    "title": "Zvichapera"
+                }
+            ]
+        }
+    ]
+},
+  "kerri-chandler": {
+    "artist": "Kerri Chandler",
+    "artist_id": "kerri-chandler",
+    "sets": [
+        {
+            "id": "kerri-chandler-br-nyc-136",
+            "title": "Boiler Room New York (Reel-to-Reel Set)",
+            "venue": "Boiler Room, New York City",
+            "date": "2022-09-23",
+            "duration": "2:16:05",
+            "youtube": "K6XiDub2Wc4",
+            "views": 1496023,
+            "genre": [
+                "Deep House",
+                "Soulful House",
+                "Garage"
+            ],
+            "tracks_identified": 29,
+            "tracks_total": 29,
+            "source": "MixesDB + LiveTrackList",
+            "tracklist": [
+                {
+                    "time": "00:00",
+                    "artist": "JohNick",
+                    "title": "Heat",
+                    "label": "Henry Street Music",
+                    "note": "w/ Martin Ikin ft. Byron Stingily - Devoted (Acapella)"
+                },
+                {
+                    "time": "05:00",
+                    "artist": "Michel De Hey",
+                    "title": "Tracklights (Crackazat Dub)",
+                    "label": "Ovum"
+                },
+                {
+                    "time": "10:00",
+                    "artist": "Yves Murasca",
+                    "title": "All About Housemusic (Dario D'Attis Extended Remix)",
+                    "label": "Deepalma"
+                },
+                {
+                    "time": "14:00",
+                    "artist": "Massimo Lippoli",
+                    "title": "Let It Ride (Dario D'Attis Remix)",
+                    "label": "Go Deeva"
+                },
+                {
+                    "time": "19:00",
+                    "artist": "Kerri Chandler",
+                    "title": "Atmospheric Beats",
+                    "label": "Ibadan"
+                },
+                {
+                    "time": "24:00",
+                    "artist": "Masters At Work ft. India",
+                    "title": "I Can't Get No Sleep (Ken/Lou 12\")",
+                    "label": "Cutting"
+                },
+                {
+                    "time": "28:00",
+                    "artist": "Peven Everett",
+                    "title": "Special (Timmy Regisford Remix)",
+                    "label": "Groovin"
+                },
+                {
+                    "time": "32:00",
+                    "artist": "Emmaculate",
+                    "title": "Voodoo (Shannon Chambers 1Sound Remix)",
+                    "label": "T's Crates"
+                },
+                {
+                    "time": "38:00",
+                    "artist": "Armonica ft. Toshi",
+                    "title": "Ngeke (andhim Remix)",
+                    "label": "MoBlack"
+                },
+                {
+                    "time": "42:00",
+                    "artist": "Kerri Chandler ft. Lady Linn",
+                    "title": "You Get Lost In It (The Warehouse Project)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "46:00",
+                    "artist": "Jovonn",
+                    "title": "Hesperia Soul (Main Mix)",
+                    "label": "Body'N Deep"
+                },
+                {
+                    "time": "52:00",
+                    "artist": "Kerri Chandler ft. Troy Denari",
+                    "title": "Change Your Mind (District 8) (Full Vocal)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "57:00",
+                    "artist": "Terry Hunter ft. Devine Brown",
+                    "title": "Angel",
+                    "label": "Ultra"
+                },
+                {
+                    "time": "1:03:00",
+                    "artist": "Crackazat",
+                    "title": "Fire Drift"
+                },
+                {
+                    "time": "1:08:00",
+                    "artist": "Honey Dijon ft. Annette Bowen & Nikki-O",
+                    "title": "Downtown (Louie Vega Extended Raw Dub Mix)",
+                    "label": "Classic"
+                },
+                {
+                    "time": "1:12:00",
+                    "artist": "Mateo & Matos",
+                    "title": "Release The Rhythm (Kevin McKay Extended Remix)",
+                    "label": "Glasgow Underground"
+                },
+                {
+                    "time": "1:14:00",
+                    "artist": "Matt Early & Lee Jeffries ft. Otis Corley",
+                    "title": "I Think I'm Falling In Love (Grant Nelson Remix)",
+                    "label": "Lockdown"
+                },
+                {
+                    "time": "1:18:00",
+                    "artist": "Kerri Chandler ft. Rev F.L. Brown",
+                    "title": "Prayer (623 Again Vocal)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "1:20:00",
+                    "artist": "DJ Kwame",
+                    "title": "Spirit Dance (Timmy Regisford Edit)",
+                    "label": "Nervous"
+                },
+                {
+                    "time": "1:25:00",
+                    "artist": "Jovonn",
+                    "title": "Random (Extended Mix)",
+                    "label": "Nu Groove"
+                },
+                {
+                    "time": "1:28:00",
+                    "artist": "Dennis Ferrer ft. Tyrone Ellis",
+                    "title": "Underground Is My Home",
+                    "label": "King Street Sounds"
+                },
+                {
+                    "time": "1:32:00",
+                    "artist": "Demuir",
+                    "title": "High. Alive. And Dirty.",
+                    "label": "Hot Creations"
+                },
+                {
+                    "time": "1:35:00",
+                    "artist": "Kerri Chandler ft. Sunchilde",
+                    "title": "Never Thought (Printworks) (Main Vocal Mix)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "1:39:00",
+                    "artist": "Kerri Chandler",
+                    "title": "I Feel It",
+                    "label": "Madhouse"
+                },
+                {
+                    "time": "1:43:00",
+                    "artist": "Fusion Groove Orchestra ft. Steve Lucas",
+                    "title": "If Only I Could (Liem Remix)",
+                    "label": "Strictly Rhythm"
+                },
+                {
+                    "time": "1:48:00",
+                    "artist": "Kerri Chandler",
+                    "title": "So Let The Wind Come",
+                    "label": "Nite Grooves"
+                },
+                {
+                    "time": "1:53:00",
+                    "artist": "Tasha LaRae & DJ Spen",
+                    "title": "Wish I Didn't Miss You (John Morales M+M Vocal Mix)",
+                    "label": "Quantize"
+                },
+                {
+                    "time": "1:59:00",
+                    "artist": "Underground Ministries ft. Kenny Bobien",
+                    "title": "I Shall Not Be Moved (Stand Still) (Extended Club Mix)",
+                    "label": "Flatline"
+                },
+                {
+                    "time": "2:06:00",
+                    "artist": "The O'Jays",
+                    "title": "I Love Music (Part I)",
+                    "label": "Philadelphia International"
+                }
+            ]
+        }
+    ]
+},
+  "peggy-gou": {
+    "artist": "Peggy Gou",
+    "artist_id": "peggy-gou",
+    "sets": [
+        {
+            "id": "peggy-gou-cercle-lille-2024",
+            "title": "Cercle @ Palais des Beaux-Arts de Lille",
+            "venue": "Palais des Beaux-Arts, Lille, France",
+            "date": "2024-03-16",
+            "duration": "1:48:21",
+            "youtube": "-UOMvxh4MYU",
+            "views": 6104298,
+            "genre": [
+                "House",
+                "Techno",
+                "Electro"
+            ],
+            "tracks_identified": 22,
+            "tracks_total": 22,
+            "source": "YouTube description",
+            "tracklist": [
+                {
+                    "time": "00:00",
+                    "artist": "Ebi",
+                    "title": "San"
+                },
+                {
+                    "time": "02:55",
+                    "artist": "ID",
+                    "title": "ID",
+                    "note": "ID"
+                },
+                {
+                    "time": "05:33",
+                    "artist": "Commix",
+                    "title": "Satellite Song (Underground Resistance Remix)"
+                },
+                {
+                    "time": "08:20",
+                    "artist": "Woody McBride",
+                    "title": "Darrin Houston"
+                },
+                {
+                    "time": "12:38",
+                    "artist": "Jellybean",
+                    "title": "Twilight Drone"
+                },
+                {
+                    "time": "17:35",
+                    "artist": "Dancer",
+                    "title": "Boom Boom (Jerome Hill Edit)"
+                },
+                {
+                    "time": "21:22",
+                    "artist": "Spacetime Continuum",
+                    "title": "Drug #6"
+                },
+                {
+                    "time": "26:08",
+                    "artist": "Ongaku",
+                    "title": "Mihon #1"
+                },
+                {
+                    "time": "29:48",
+                    "artist": "Penance",
+                    "title": "Deniro"
+                },
+                {
+                    "time": "34:09",
+                    "artist": "Lewski",
+                    "title": "Gru"
+                },
+                {
+                    "time": "38:30",
+                    "artist": "Kraftwerk",
+                    "title": "Aerodynamik (François K Aero Mix)"
+                },
+                {
+                    "time": "44:31",
+                    "artist": "Kim English",
+                    "title": "Learn 2 Luv (Pearson Sound Mix)"
+                },
+                {
+                    "time": "47:27",
+                    "artist": "Château Flight",
+                    "title": "Sargan"
+                },
+                {
+                    "time": "53:21",
+                    "artist": "Paul Johnson",
+                    "title": "Come On Children (Remix)"
+                },
+                {
+                    "time": "57:08",
+                    "artist": "Digital Excitation",
+                    "title": "Pure Pleasure (Rave Mix)"
+                },
+                {
+                    "time": "1:01:09",
+                    "artist": "Special Request",
+                    "title": "Reset It (Head High Dirt Mix)"
+                },
+                {
+                    "time": "1:05:25",
+                    "artist": "Kraftwerk",
+                    "title": "Expo 2000 (DJ Rolando Remix)"
+                },
+                {
+                    "time": "1:10:30",
+                    "artist": "Skee Mask",
+                    "title": "Fjorward Flex Dub"
+                },
+                {
+                    "time": "1:15:00",
+                    "artist": "Dreamscape",
+                    "title": "Born"
+                },
+                {
+                    "time": "1:20:10",
+                    "artist": "Metro",
+                    "title": "Here For The Love (Metropolitan Acid Mix)"
+                },
+                {
+                    "time": "1:26:35",
+                    "artist": "Peggy Gou",
+                    "title": "It Makes You Forget (I:Cube Remix)"
+                },
+                {
+                    "time": "1:31:19",
+                    "artist": "Tan-Ru",
+                    "title": "Body Move"
+                }
+            ]
+        }
+    ]
+},
+  "mall-grab": {
+    "artist": "Mall Grab",
+    "artist_id": "mall-grab",
+    "sets": [
+        {
+            "id": "mall-grab-br-melbourne-2022",
+            "title": "Boiler Room Melbourne",
+            "venue": "Pica, Melbourne, Australia",
+            "date": "2022-11-26",
+            "duration": "1:30:02",
+            "youtube": "ddeAyYF_uwg",
+            "views": 2382681,
+            "genre": [
+                "House",
+                "Techno",
+                "Breaks",
+                "Rave"
+            ],
+            "tracks_identified": 24,
+            "tracks_total": 25,
+            "source": "MixesDB + set79.com",
+            "tracklist": [
+                {
+                    "time": "00:00",
+                    "artist": "Fishmans",
+                    "title": "Long Season (MG Edit)"
+                },
+                {
+                    "time": "04:00",
+                    "artist": "Mall Grab",
+                    "title": "Winter"
+                },
+                {
+                    "time": "07:00",
+                    "artist": "Mall Grab",
+                    "title": "Spirit Wave"
+                },
+                {
+                    "time": "12:00",
+                    "artist": "Mall Grab",
+                    "title": "Mirror Break (4/4 Mix)"
+                },
+                {
+                    "time": "15:00",
+                    "artist": "Mall Grab",
+                    "title": "Inside"
+                },
+                {
+                    "time": "18:00",
+                    "artist": "KETTAMA",
+                    "title": "Rok Da House"
+                },
+                {
+                    "time": "21:00",
+                    "artist": "Mall Grab",
+                    "title": "Marathon"
+                },
+                {
+                    "time": "25:00",
+                    "artist": "Mall Grab & Flansie",
+                    "title": "Love Yourself"
+                },
+                {
+                    "time": "30:00",
+                    "artist": "Mall Grab",
+                    "title": "Tremors"
+                },
+                {
+                    "time": "33:00",
+                    "artist": "Mall Grab",
+                    "title": "Bear Witness"
+                },
+                {
+                    "time": "36:30",
+                    "artist": "Surusinghe",
+                    "title": "Likshot"
+                },
+                {
+                    "time": "40:30",
+                    "artist": "Effy",
+                    "title": "Get Down"
+                },
+                {
+                    "time": "44:00",
+                    "artist": "Mall Grab & C.R.T.B.",
+                    "title": "Juice (MG Remix)"
+                },
+                {
+                    "time": "47:30",
+                    "artist": "Mall Grab",
+                    "title": "Say Nothing (Dub Mix)"
+                },
+                {
+                    "time": "50:00",
+                    "artist": "KETTAMA",
+                    "title": "Feel Emotion"
+                },
+                {
+                    "time": "55:30",
+                    "artist": "X CLUB.",
+                    "title": "Say No More"
+                },
+                {
+                    "time": "1:00:00",
+                    "artist": "Mall Grab",
+                    "title": "Escape From Belanglo"
+                },
+                {
+                    "time": "1:02:00",
+                    "artist": "Mall Grab",
+                    "title": "BB MG"
+                },
+                {
+                    "time": "1:07:30",
+                    "artist": "C.R.T.B.",
+                    "title": "It Never Ends"
+                },
+                {
+                    "time": "1:11:00",
+                    "artist": "Mall Grab & C.R.T.B.",
+                    "title": "Juice (First Mix)"
+                },
+                {
+                    "time": "1:14:00",
+                    "artist": "Clouds",
+                    "title": "Plastyx"
+                },
+                {
+                    "time": "1:17:50",
+                    "artist": "Mall Grab",
+                    "title": "Madman"
+                },
+                {
+                    "time": "1:21:00",
+                    "artist": "Mall Grab",
+                    "title": "1ofthozedaze (Edit)"
+                },
+                {
+                    "time": "1:24:40",
+                    "artist": "Mall Grab",
+                    "title": "Metaphysical"
+                }
+            ]
+        }
+    ]
+},
+  "hunee": {
+    "artist": "Hunee",
+    "artist_id": "hunee",
+    "sets": [
+        {
+            "id": "hunee-br-dekmantel-2015",
+            "title": "Boiler Room x Dekmantel Festival",
+            "venue": "Dekmantel Festival, Amsterdam",
+            "date": "2015-07-31",
+            "duration": "58:53",
+            "youtube": "0RIU0cy6L1I",
+            "views": 1794251,
+            "genre": [
+                "Disco",
+                "House",
+                "Boogie",
+                "Funk"
+            ],
+            "tracks_identified": 18,
+            "tracks_total": 18,
+            "source": "MixesDB",
+            "tracklist": [
+                {
+                    "time": "00:15",
+                    "artist": "Shadow",
+                    "title": "Let's Make It Up"
+                },
+                {
+                    "time": "03:30",
+                    "artist": "Sammy Barbot",
+                    "title": "New Mexico"
+                },
+                {
+                    "time": "06:20",
+                    "artist": "Udell",
+                    "title": "Won't You Try"
+                },
+                {
+                    "time": "09:40",
+                    "artist": "Kiki Gyan",
+                    "title": "Disco Dancer"
+                },
+                {
+                    "time": "13:00",
+                    "artist": "Javaroo",
+                    "title": "Breakin In'"
+                },
+                {
+                    "time": "16:20",
+                    "artist": "House Of Doors",
+                    "title": "Burmstar (Twin Mix)"
+                },
+                {
+                    "time": "18:50",
+                    "artist": "The Coachouse Rhythm Section",
+                    "title": "Time Warp"
+                },
+                {
+                    "time": "21:50",
+                    "artist": "Sheryl Lee Ralph",
+                    "title": "In The Evening"
+                },
+                {
+                    "time": "25:45",
+                    "artist": "Gavin Russom",
+                    "title": "The Telstar File"
+                },
+                {
+                    "time": "29:20",
+                    "artist": "Mappa Mundi",
+                    "title": "Sexafari"
+                },
+                {
+                    "time": "31:30",
+                    "artist": "Errorsmith & Mark Fell",
+                    "title": "Cuica Digitales"
+                },
+                {
+                    "time": "34:25",
+                    "artist": "Kindred Spirit",
+                    "title": "Put Your Spirit Up"
+                },
+                {
+                    "time": "38:50",
+                    "artist": "Mac Gregor",
+                    "title": "Nan Ye Li Kan"
+                },
+                {
+                    "time": "42:40",
+                    "artist": "Lyman Woodard",
+                    "title": "Theme In Search Of A Sportspectacular"
+                },
+                {
+                    "time": "47:20",
+                    "artist": "Estiban",
+                    "title": "Come To Me"
+                },
+                {
+                    "time": "51:20",
+                    "artist": "Jimmy Smith",
+                    "title": "Can't Hide Love"
+                },
+                {
+                    "time": "54:45",
+                    "artist": "Odessey 1",
+                    "title": "Last Night"
+                },
+                {
+                    "time": "57:30",
+                    "artist": "Chiwoniso",
+                    "title": "Zvichapera"
+                }
+            ]
+        }
+    ]
+},
+  "kerri-chandler": {
+    "artist": "Kerri Chandler",
+    "artist_id": "kerri-chandler",
+    "sets": [
+        {
+            "id": "kerri-chandler-br-nyc-136",
+            "title": "Boiler Room New York (Reel-to-Reel Set)",
+            "venue": "Boiler Room, New York City",
+            "date": "2022-09-23",
+            "duration": "2:16:05",
+            "youtube": "K6XiDub2Wc4",
+            "views": 1496023,
+            "genre": [
+                "Deep House",
+                "Soulful House",
+                "Garage"
+            ],
+            "tracks_identified": 29,
+            "tracks_total": 29,
+            "source": "MixesDB + LiveTrackList",
+            "tracklist": [
+                {
+                    "time": "00:00",
+                    "artist": "JohNick",
+                    "title": "Heat",
+                    "label": "Henry Street Music",
+                    "note": "w/ Martin Ikin ft. Byron Stingily - Devoted (Acapella)"
+                },
+                {
+                    "time": "05:00",
+                    "artist": "Michel De Hey",
+                    "title": "Tracklights (Crackazat Dub)",
+                    "label": "Ovum"
+                },
+                {
+                    "time": "10:00",
+                    "artist": "Yves Murasca",
+                    "title": "All About Housemusic (Dario D'Attis Extended Remix)",
+                    "label": "Deepalma"
+                },
+                {
+                    "time": "14:00",
+                    "artist": "Massimo Lippoli",
+                    "title": "Let It Ride (Dario D'Attis Remix)",
+                    "label": "Go Deeva"
+                },
+                {
+                    "time": "19:00",
+                    "artist": "Kerri Chandler",
+                    "title": "Atmospheric Beats",
+                    "label": "Ibadan"
+                },
+                {
+                    "time": "24:00",
+                    "artist": "Masters At Work ft. India",
+                    "title": "I Can't Get No Sleep (Ken/Lou 12\")",
+                    "label": "Cutting"
+                },
+                {
+                    "time": "28:00",
+                    "artist": "Peven Everett",
+                    "title": "Special (Timmy Regisford Remix)",
+                    "label": "Groovin"
+                },
+                {
+                    "time": "32:00",
+                    "artist": "Emmaculate",
+                    "title": "Voodoo (Shannon Chambers 1Sound Remix)",
+                    "label": "T's Crates"
+                },
+                {
+                    "time": "38:00",
+                    "artist": "Armonica ft. Toshi",
+                    "title": "Ngeke (andhim Remix)",
+                    "label": "MoBlack"
+                },
+                {
+                    "time": "42:00",
+                    "artist": "Kerri Chandler ft. Lady Linn",
+                    "title": "You Get Lost In It (The Warehouse Project)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "46:00",
+                    "artist": "Jovonn",
+                    "title": "Hesperia Soul (Main Mix)",
+                    "label": "Body'N Deep"
+                },
+                {
+                    "time": "52:00",
+                    "artist": "Kerri Chandler ft. Troy Denari",
+                    "title": "Change Your Mind (District 8) (Full Vocal)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "57:00",
+                    "artist": "Terry Hunter ft. Devine Brown",
+                    "title": "Angel",
+                    "label": "Ultra"
+                },
+                {
+                    "time": "1:03:00",
+                    "artist": "Crackazat",
+                    "title": "Fire Drift"
+                },
+                {
+                    "time": "1:08:00",
+                    "artist": "Honey Dijon ft. Annette Bowen & Nikki-O",
+                    "title": "Downtown (Louie Vega Extended Raw Dub Mix)",
+                    "label": "Classic"
+                },
+                {
+                    "time": "1:12:00",
+                    "artist": "Mateo & Matos",
+                    "title": "Release The Rhythm (Kevin McKay Extended Remix)",
+                    "label": "Glasgow Underground"
+                },
+                {
+                    "time": "1:14:00",
+                    "artist": "Matt Early & Lee Jeffries ft. Otis Corley",
+                    "title": "I Think I'm Falling In Love (Grant Nelson Remix)",
+                    "label": "Lockdown"
+                },
+                {
+                    "time": "1:18:00",
+                    "artist": "Kerri Chandler ft. Rev F.L. Brown",
+                    "title": "Prayer (623 Again Vocal)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "1:20:00",
+                    "artist": "DJ Kwame",
+                    "title": "Spirit Dance (Timmy Regisford Edit)",
+                    "label": "Nervous"
+                },
+                {
+                    "time": "1:25:00",
+                    "artist": "Jovonn",
+                    "title": "Random (Extended Mix)",
+                    "label": "Nu Groove"
+                },
+                {
+                    "time": "1:28:00",
+                    "artist": "Dennis Ferrer ft. Tyrone Ellis",
+                    "title": "Underground Is My Home",
+                    "label": "King Street Sounds"
+                },
+                {
+                    "time": "1:32:00",
+                    "artist": "Demuir",
+                    "title": "High. Alive. And Dirty.",
+                    "label": "Hot Creations"
+                },
+                {
+                    "time": "1:35:00",
+                    "artist": "Kerri Chandler ft. Sunchilde",
+                    "title": "Never Thought (Printworks) (Main Vocal Mix)",
+                    "label": "Kaoz Theory"
+                },
+                {
+                    "time": "1:39:00",
+                    "artist": "Kerri Chandler",
+                    "title": "I Feel It",
+                    "label": "Madhouse"
+                },
+                {
+                    "time": "1:43:00",
+                    "artist": "Fusion Groove Orchestra ft. Steve Lucas",
+                    "title": "If Only I Could (Liem Remix)",
+                    "label": "Strictly Rhythm"
+                },
+                {
+                    "time": "1:48:00",
+                    "artist": "Kerri Chandler",
+                    "title": "So Let The Wind Come",
+                    "label": "Nite Grooves"
+                },
+                {
+                    "time": "1:53:00",
+                    "artist": "Tasha LaRae & DJ Spen",
+                    "title": "Wish I Didn't Miss You (John Morales M+M Vocal Mix)",
+                    "label": "Quantize"
+                },
+                {
+                    "time": "1:59:00",
+                    "artist": "Underground Ministries ft. Kenny Bobien",
+                    "title": "I Shall Not Be Moved (Stand Still) (Extended Club Mix)",
+                    "label": "Flatline"
+                },
+                {
+                    "time": "2:06:00",
+                    "artist": "The O'Jays",
+                    "title": "I Love Music (Part I)",
+                    "label": "Philadelphia International"
+                }
+            ]
+        }
+    ]
+},
 };
 
 // Tracklist API functions

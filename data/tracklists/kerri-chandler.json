@@ -1,0 +1,52 @@
+{
+  "kerri-chandler": {
+    "artist": "Kerri Chandler",
+    "artist_id": "kerri-chandler",
+    "sets": [
+      {
+        "id": "kerri-chandler-br-nyc-136",
+        "title": "Boiler Room New York (Reel-to-Reel Set)",
+        "venue": "Boiler Room, New York City",
+        "date": "2022-09-23",
+        "duration": "2:16:05",
+        "youtube": "K6XiDub2Wc4",
+        "views": 1496023,
+        "genre": ["Deep House", "Soulful House", "Garage"],
+        "tracks_identified": 29,
+        "tracks_total": 29,
+        "source": "MixesDB + LiveTrackList",
+        "tracklist": [
+          { "time": "00:00", "artist": "JohNick", "title": "Heat", "label": "Henry Street Music", "note": "w/ Martin Ikin ft. Byron Stingily - Devoted (Acapella)" },
+          { "time": "05:00", "artist": "Michel De Hey", "title": "Tracklights (Crackazat Dub)", "label": "Ovum" },
+          { "time": "10:00", "artist": "Yves Murasca", "title": "All About Housemusic (Dario D'Attis Extended Remix)", "label": "Deepalma" },
+          { "time": "14:00", "artist": "Massimo Lippoli", "title": "Let It Ride (Dario D'Attis Remix)", "label": "Go Deeva" },
+          { "time": "19:00", "artist": "Kerri Chandler", "title": "Atmospheric Beats", "label": "Ibadan" },
+          { "time": "24:00", "artist": "Masters At Work ft. India", "title": "I Can't Get No Sleep (Ken/Lou 12\")", "label": "Cutting" },
+          { "time": "28:00", "artist": "Peven Everett", "title": "Special (Timmy Regisford Remix)", "label": "Groovin" },
+          { "time": "32:00", "artist": "Emmaculate", "title": "Voodoo (Shannon Chambers 1Sound Remix)", "label": "T's Crates" },
+          { "time": "38:00", "artist": "Armonica ft. Toshi", "title": "Ngeke (andhim Remix)", "label": "MoBlack" },
+          { "time": "42:00", "artist": "Kerri Chandler ft. Lady Linn", "title": "You Get Lost In It (The Warehouse Project)", "label": "Kaoz Theory" },
+          { "time": "46:00", "artist": "Jovonn", "title": "Hesperia Soul (Main Mix)", "label": "Body'N Deep" },
+          { "time": "52:00", "artist": "Kerri Chandler ft. Troy Denari", "title": "Change Your Mind (District 8) (Full Vocal)", "label": "Kaoz Theory" },
+          { "time": "57:00", "artist": "Terry Hunter ft. Devine Brown", "title": "Angel", "label": "Ultra" },
+          { "time": "1:03:00", "artist": "Crackazat", "title": "Fire Drift" },
+          { "time": "1:08:00", "artist": "Honey Dijon ft. Annette Bowen & Nikki-O", "title": "Downtown (Louie Vega Extended Raw Dub Mix)", "label": "Classic" },
+          { "time": "1:12:00", "artist": "Mateo & Matos", "title": "Release The Rhythm (Kevin McKay Extended Remix)", "label": "Glasgow Underground" },
+          { "time": "1:14:00", "artist": "Matt Early & Lee Jeffries ft. Otis Corley", "title": "I Think I'm Falling In Love (Grant Nelson Remix)", "label": "Lockdown" },
+          { "time": "1:18:00", "artist": "Kerri Chandler ft. Rev F.L. Brown", "title": "Prayer (623 Again Vocal)", "label": "Kaoz Theory" },
+          { "time": "1:20:00", "artist": "DJ Kwame", "title": "Spirit Dance (Timmy Regisford Edit)", "label": "Nervous" },
+          { "time": "1:25:00", "artist": "Jovonn", "title": "Random (Extended Mix)", "label": "Nu Groove" },
+          { "time": "1:28:00", "artist": "Dennis Ferrer ft. Tyrone Ellis", "title": "Underground Is My Home", "label": "King Street Sounds" },
+          { "time": "1:32:00", "artist": "Demuir", "title": "High. Alive. And Dirty.", "label": "Hot Creations" },
+          { "time": "1:35:00", "artist": "Kerri Chandler ft. Sunchilde", "title": "Never Thought (Printworks) (Main Vocal Mix)", "label": "Kaoz Theory" },
+          { "time": "1:39:00", "artist": "Kerri Chandler", "title": "I Feel It", "label": "Madhouse" },
+          { "time": "1:43:00", "artist": "Fusion Groove Orchestra ft. Steve Lucas", "title": "If Only I Could (Liem Remix)", "label": "Strictly Rhythm" },
+          { "time": "1:48:00", "artist": "Kerri Chandler", "title": "So Let The Wind Come", "label": "Nite Grooves" },
+          { "time": "1:53:00", "artist": "Tasha LaRae & DJ Spen", "title": "Wish I Didn't Miss You (John Morales M+M Vocal Mix)", "label": "Quantize" },
+          { "time": "1:59:00", "artist": "Underground Ministries ft. Kenny Bobien", "title": "I Shall Not Be Moved (Stand Still) (Extended Club Mix)", "label": "Flatline" },
+          { "time": "2:06:00", "artist": "The O'Jays", "title": "I Love Music (Part I)", "label": "Philadelphia International" }
+        ]
+      }
+    ]
+  }
+}

@@ -97,165 +97,19 @@
     <!-- Hero Section -->
     <section class="hero-downloads">
       <div class="hero-content">
-        <span class="hero-badge">🎧 3TRES6 Tools</span>
-        <h1>Herramientas para DJ</h1>
+        <span class="hero-badge">🛠️ 3TRES6 Tools</span>
+        <h1>Toolkit para DJ</h1>
         <p>
-          Descarga música gratis, configura tu USB, consulta el Camelot Wheel y descubre música gratuita.
+          Configura tu USB, consulta el Camelot Wheel, descubre música gratuita y software DJ.
           Todo lo que necesitas para pinchar.
         </p>
-
-        <div class="download-counter">
-          <span class="counter-label">Tus descargas gratis:</span>
-          <span class="counter-number" id="downloadCount">0</span>
-          <span class="counter-divider">/</span>
-          <span class="counter-limit">3</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download Tool -->
-    <section class="download-tool">
-      <div class="tool-container">
-        <!-- URL Input -->
-        <div class="input-section">
-          <div class="platform-tabs">
-            <button class="platform-tab active" data-platform="youtube">
-              <span class="platform-icon">▶️</span>
-              YouTube
-            </button>
-            <button class="platform-tab" data-platform="soundcloud">
-              <span class="platform-icon">☁️</span>
-              SoundCloud
-            </button>
-          </div>
-
-          <div class="url-input-wrapper">
-            <input
-              type="text"
-              id="urlInput"
-              class="url-input"
-              placeholder="Pega el enlace de YouTube o SoundCloud (para SoundCloud usa el ID de pista)"
-              autocomplete="off"
-            />
-            <button class="paste-btn" id="pasteBtn" title="Pegar">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
-                />
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-              </svg>
-            </button>
-          </div>
-
-          <button class="download-btn" id="downloadBtn">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            <span>Obtener Enlace de Descarga</span>
-          </button>
-        </div>
-
-        <!-- Loading State -->
-        <div class="loading-state" id="loadingState" style="display: none">
-          <div class="loading-spinner"></div>
-          <p class="loading-text">Preparando enlace de descarga...</p>
-          <div class="progress-bar">
-            <div class="progress-fill" id="progressFill"></div>
-          </div>
-          <p class="progress-status" id="progressStatus">Redireccionando</p>
-        </div>
-
-        <!-- Result Card -->
-        <div class="result-card" id="resultCard" style="display: none">
-          <div class="result-header">
-            <div class="result-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
-                />
-              </svg>
-            </div>
-            <div class="result-info">
-              <h3 id="resultTitle">Track Title</h3>
-              <p id="resultArtist">Artist Name</p>
-            </div>
-          </div>
-
-          <div class="dj-analysis">
-            <div class="analysis-item">
-              <span class="analysis-label">BPM</span>
-              <span class="analysis-value" id="bpmValue">128</span>
-            </div>
-            <div class="analysis-item">
-              <span class="analysis-label">KEY</span>
-              <span class="analysis-value" id="keyValue">8B</span>
-            </div>
-            <div class="analysis-item">
-              <span class="analysis-label">ENERGY</span>
-              <div class="energy-meter">
-                <div class="energy-fill" id="energyFill"></div>
-              </div>
-              <span class="analysis-value" id="energyValue">8/10</span>
-            </div>
-          </div>
-
-          <div class="compatible-keys" id="compatibleKeys">
-            <span class="keys-label">Compatible:</span>
-            <div class="key-tags" id="keyTags"></div>
-          </div>
-
-          <a href="#" class="download-link-btn" id="downloadLinkBtn" target="_blank" rel="noopener noreferrer">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            Descargar MP3
-          </a>
-          <p class="download-note">Serás redirigido al servicio de conversión</p>
-        </div>
-
-        <!-- Error State -->
-        <div class="error-state" id="errorState" style="display: none">
-          <div class="error-icon">⚠️</div>
-          <h3>Error al descargar</h3>
-          <p id="errorMessage">El enlace no es válido o el video no está disponible.</p>
-          <button class="retry-btn" id="retryBtn">Intentar de nuevo</button>
-        </div>
       </div>
     </section>
 
     <!-- DJ Tools Hub Tabs -->
     <section class="tools-hub">
       <div class="tool-tabs">
-        <button class="tool-tab active" data-tool="downloader">
-          <span class="tab-icon">⬇️</span>
-          <span class="tab-label">Music Download</span>
-        </button>
-        <button class="tool-tab" data-tool="hardware">
+        <button class="tool-tab active" data-tool="hardware">
           <span class="tab-icon">💾</span>
           <span class="tab-label">USB Export Guide</span>
         </button>
@@ -611,43 +465,6 @@
       </div>
     </footer>
 
-    <!-- Email Modal -->
-    <div class="modal-overlay" id="emailModal" style="display: none">
-      <div class="modal-content">
-        <button class="modal-close" id="modalClose">×</button>
-
-        <div class="modal-icon">🎉</div>
-        <h2>¡Ya has usado 3 descargas gratuitas!</h2>
-        <p>
-          Únete a nuestra newsletter para descargas ilimitadas, pistas exclusivas y ofertas en
-          vinilos.
-        </p>
-
-        <form class="email-form" id="emailForm">
-          <input type="email" id="emailInput" placeholder="tu@email.com" required />
-          <button type="submit" class="submit-btn">
-            <span>¡Unirme y seguir descargando!</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
-          </button>
-        </form>
-
-        <p class="modal-note">No spam. Solo contenido útil para DJs. Cancela cuando quieras.</p>
-
-        <button class="skip-btn" id="skipBtn">Omitir por ahora</button>
-      </div>
-    </div>
-
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/gsap-animations.js"></script>
@@ -659,13 +476,12 @@
     <script src="js/camelot-wheel.js"></script>
     <script src="js/software-db.js"></script>
     <script src="js/software-directory.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/dj-sets-db.js"></script>
+    <script src="../data/tracklists/tracklists.js"></script>
     <script>
       // Tool Tab Switching
       document.addEventListener('DOMContentLoaded', function() {
         const toolTabs = document.querySelectorAll('.tool-tab');
-        const downloadTool = document.querySelector('.download-tool');
         const hardwareSection = document.getElementById('hardwareSection');
         const musicSection = document.getElementById('musicSection');
         const wheelSection = document.getElementById('wheelSection');
@@ -673,13 +489,9 @@
         const djSetsSection = document.getElementById('djSetsSection');
         const body = document.body;
 
-        // Hide hero when not on downloader
+        // Hide hero when not on downloader (downloader removed)
         function updateHeroVisibility(tool) {
-          if (tool === 'downloader') {
-            body.classList.remove('hero-hidden');
-          } else {
-            body.classList.add('hero-hidden');
-          }
+          body.classList.add('hero-hidden');
         }
 
         // Animate section transition
@@ -699,93 +511,85 @@
             toolTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
 
-            // Show/hide sections
-            if (tool === 'downloader') {
-              updateHeroVisibility('downloader');
-              downloadTool.style.display = 'block';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-              softwareSection.style.display = 'none';
-              (window.gsapAnimateSection || animateSection)(downloadTool);
-            } else if (tool === 'hardware') {
-              updateHeroVisibility('hardware');
-              downloadTool.style.display = 'none';
+            // Hide all sections first
+            updateHeroVisibility(tool);
+            hardwareSection.style.display = 'none';
+            musicSection.style.display = 'none';
+            wheelSection.style.display = 'none';
+            softwareSection.style.display = 'none';
+            djSetsSection.style.display = 'none';
+
+            // Show requested section
+            if (tool === 'hardware') {
               hardwareSection.style.display = 'block';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(hardwareSection);
-              // Initialize hardware guide if not already
               if (!HardwareGuide.state.devices.length) {
                 HardwareGuide.init();
               }
             } else if (tool === 'music') {
-              updateHeroVisibility('music');
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
               musicSection.style.display = 'block';
-              wheelSection.style.display = 'none';
-              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(musicSection);
-              // Initialize music directory if not already
               if (!MusicDirectory.state.sources.length) {
                 MusicDirectory.init();
               }
             } else if (tool === 'wheel') {
-              updateHeroVisibility('wheel');
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
               wheelSection.style.display = 'block';
-              softwareSection.style.display = 'none';
               (window.gsapAnimateSection || animateSection)(wheelSection);
-              // Initialize camelot wheel if not already
               if (!document.getElementById('wheelSvg')) {
                 CamelotWheel.init();
               }
             } else if (tool === 'software') {
-              updateHeroVisibility('software');
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
               softwareSection.style.display = 'block';
               (window.gsapAnimateSection || animateSection)(softwareSection);
               if (!SoftwareDirectory.state.resources.length) {
                 SoftwareDirectory.init();
               }
             } else if (tool === 'djsets') {
-              updateHeroVisibility('djsets');
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-              softwareSection.style.display = 'none';
               djSetsSection.style.display = 'block';
               (window.gsapAnimateSection || animateSection)(djSetsSection);
               if (typeof renderDJSets === 'function' && !djSetsSection.dataset.initialized) {
                 renderDJSets();
                 djSetsSection.dataset.initialized = 'true';
               }
-            } else {
-              // Future tools
-              updateHeroVisibility('downloader');
-              downloadTool.style.display = 'none';
-              hardwareSection.style.display = 'none';
-              musicSection.style.display = 'none';
-              wheelSection.style.display = 'none';
-              softwareSection.style.display = 'none';
             }
           });
         });
       });
 
-      // DJ Sets renderer
+      // DJ Sets renderer with expandable tracklists
       function renderDJSets() {
         const grid = document.getElementById('djSetsGrid');
         const searchInput = document.getElementById('djSetsSearch');
         if (!grid) return;
+
+        function getTracklistForSet(djId, setYoutubeId) {
+          if (typeof TRACKLISTS === 'undefined' || !setYoutubeId) return null;
+          const djData = TRACKLISTS[djId];
+          if (!djData) return null;
+          const set = djData.sets.find(s => s.youtube === setYoutubeId);
+          return set || null;
+        }
+
+        function renderTracklist(set, tracks) {
+          const ytUrl = set.youtube ? `https://www.youtube.com/watch?v=${set.youtube}` : '';
+          return `
+            <div class="tracklist-panel" style="margin-top:0.75rem;border-top:1px solid var(--border);padding-top:0.75rem;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+                <span style="font-size:0.7rem;color:var(--text-dim);">${tracks.length} tracks • ${set.source ? set.source.substring(0, 40) + (set.source.length > 40 ? '...' : '') : ''}</span>
+                ${ytUrl ? `<a href="${ytUrl}" target="_blank" style="font-size:0.7rem;color:rgba(255,255,255,0.3);text-decoration:none;">▶ YouTube</a>` : ''}
+              </div>
+              <div class="tracklist-scroll" style="max-height:320px;overflow-y:auto;">
+                ${tracks.map(t => `
+                  <div class="tracklist-row" style="display:flex;align-items:baseline;gap:0.5rem;padding:0.35rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:0.78rem;">
+                    <span style="color:var(--primary,#ff4d00);font-size:0.7rem;font-weight:600;min-width:42px;flex-shrink:0;">${t.time || '--:--'}</span>
+                    <span style="color:var(--text,#fff);flex:1;line-height:1.3;">${t.artist} — ${t.title}</span>
+                    ${t.label ? `<span style="color:var(--text-dim);font-size:0.65rem;white-space:nowrap;">${t.label}</span>` : ''}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
 
         function render(query) {
           const q = (query || '').toLowerCase().trim();
@@ -799,10 +603,13 @@
           }
           grid.innerHTML = filtered.map(s => {
             const yt_url = s.youtube ? `https://www.youtube.com/watch?v=${s.youtube}` : '';
+            const hasTracklist = typeof TRACKLISTS !== 'undefined' && TRACKLISTS[s.dj_id];
+            const tracklistData = hasTracklist && s.youtube ? getTracklistForSet(s.dj_id, s.youtube) : null;
+            const tracklistId = `tracklist-${s.id}`;
             return `
-              <div class="djsets-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;transition:all 0.2s;cursor:default;">
+              <div class="djsets-card" data-set-id="${s.id}" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;transition:all 0.2s;">
                 <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.5rem;">
-                  <div>
+                  <div style="flex:1;cursor:${tracklistData ? 'pointer' : 'default'};" ${tracklistData ? `onclick="document.getElementById('${tracklistId}').classList.toggle('expanded');this.closest('.djsets-card').classList.toggle('expanded');"` : ''}>
                     <div style="font-size:0.75rem;color:var(--primary,#ff4d00);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.2rem;">${s.dj_name}</div>
                     <div style="font-size:1rem;font-weight:600;color:var(--text,#fff);line-height:1.3;">${s.title}</div>
                   </div>
@@ -815,8 +622,14 @@
                 <div style="display:flex;gap:0.5rem;align-items:center;">
                   <span style="font-size:0.75rem;color:rgba(255,255,255,0.4);">${s.confirmed} confirmed</span>
                   ${s.views ? `<span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">• ${(s.views / 1000).toFixed(0)}K views</span>` : ''}
+                  ${tracklistData ? '<span style="font-size:0.65rem;color:var(--primary,#ff4d00);margin-left:0.25rem;">🎵 tracklist</span>' : ''}
                 </div>
                 ${yt_url ? `<a href="${yt_url}" target="_blank" style="display:inline-block;margin-top:0.6rem;font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;">▶ Watch on YouTube →</a>` : ''}
+                ${tracklistData ? `
+                  <div id="${tracklistId}" class="tracklist-container" style="display:none;">
+                    ${renderTracklist(tracklistData, tracklistData.tracklist)}
+                  </div>
+                ` : ''}
               </div>
             `;
           }).join('');
@@ -833,12 +646,12 @@
 
       document.addEventListener('DOMContentLoaded', function() {
         var hash = window.location.hash.replace('#', '');
-        if (hash && (hash === 'hardware' || hash === 'djsets')) {
+        if (hash && (hash === 'hardware' || hash === 'djsets' || hash === 'wheel' || hash === 'music' || hash === 'software')) {
           var btn = document.querySelector('.tool-tab[data-tool="' + hash + '"]');
           if (btn) {
             btn.click();
             setTimeout(function() {
-              var el = document.getElementById(hash);
+              var el = document.getElementById(hash === 'hardware' ? 'hardware' : hash);
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 300);
           }

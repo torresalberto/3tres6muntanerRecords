@@ -1,0 +1,47 @@
+{
+  "mall-grab": {
+    "artist": "Mall Grab",
+    "artist_id": "mall-grab",
+    "sets": [
+      {
+        "id": "mall-grab-br-melbourne-2022",
+        "title": "Boiler Room Melbourne",
+        "venue": "Pica, Melbourne, Australia",
+        "date": "2022-11-26",
+        "duration": "1:30:02",
+        "youtube": "ddeAyYF_uwg",
+        "views": 2382681,
+        "genre": ["House", "Techno", "Breaks", "Rave"],
+        "tracks_identified": 24,
+        "tracks_total": 25,
+        "source": "MixesDB + set79.com",
+        "tracklist": [
+          { "time": "00:00", "artist": "Fishmans", "title": "Long Season (MG Edit)" },
+          { "time": "04:00", "artist": "Mall Grab", "title": "Winter" },
+          { "time": "07:00", "artist": "Mall Grab", "title": "Spirit Wave" },
+          { "time": "12:00", "artist": "Mall Grab", "title": "Mirror Break (4/4 Mix)" },
+          { "time": "15:00", "artist": "Mall Grab", "title": "Inside" },
+          { "time": "18:00", "artist": "KETTAMA", "title": "Rok Da House" },
+          { "time": "21:00", "artist": "Mall Grab", "title": "Marathon" },
+          { "time": "25:00", "artist": "Mall Grab & Flansie", "title": "Love Yourself" },
+          { "time": "30:00", "artist": "Mall Grab", "title": "Tremors" },
+          { "time": "33:00", "artist": "Mall Grab", "title": "Bear Witness" },
+          { "time": "36:30", "artist": "Surusinghe", "title": "Likshot" },
+          { "time": "40:30", "artist": "Effy", "title": "Get Down" },
+          { "time": "44:00", "artist": "Mall Grab & C.R.T.B.", "title": "Juice (MG Remix)" },
+          { "time": "47:30", "artist": "Mall Grab", "title": "Say Nothing (Dub Mix)" },
+          { "time": "50:00", "artist": "KETTAMA", "title": "Feel Emotion" },
+          { "time": "55:30", "artist": "X CLUB.", "title": "Say No More" },
+          { "time": "1:00:00", "artist": "Mall Grab", "title": "Escape From Belanglo" },
+          { "time": "1:02:00", "artist": "Mall Grab", "title": "BB MG" },
+          { "time": "1:07:30", "artist": "C.R.T.B.", "title": "It Never Ends" },
+          { "time": "1:11:00", "artist": "Mall Grab & C.R.T.B.", "title": "Juice (First Mix)" },
+          { "time": "1:14:00", "artist": "Clouds", "title": "Plastyx" },
+          { "time": "1:17:50", "artist": "Mall Grab", "title": "Madman" },
+          { "time": "1:21:00", "artist": "Mall Grab", "title": "1ofthozedaze (Edit)" },
+          { "time": "1:24:40", "artist": "Mall Grab", "title": "Metaphysical" }
+        ]
+      }
+    ]
+  }
+}

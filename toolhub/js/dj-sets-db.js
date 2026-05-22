@@ -235,6 +235,19 @@ const DJ_SETS = [
     "views": 2000000
   },
   {
+    "id": "floorplan-weather-paris-2015",
+    "dj_id": "floorplan",
+    "dj_name": "Floorplan",
+    "title": "Weather Festival Paris 2015 (Mixmag)",
+    "venue": "Weather Festival, Paris, France",
+    "date": "2015-06-06",
+    "tracks": 34,
+    "confirmed": 30,
+    "youtube": "Ow530rJ9W9w",
+    "duration": "1:57:26",
+    "views": 514000
+  },
+  {
     "id": "folamour-br-sugar",
     "dj_id": "folamour",
     "dj_name": "Folamour",
@@ -415,6 +428,19 @@ const DJ_SETS = [
     "youtube": "0RIU0cy6L1I",
     "duration": "58:53",
     "views": 1794251
+  },
+  {
+    "id": "helena-hauff-br-dekmantel-2017",
+    "dj_id": "helena-hauff",
+    "dj_name": "Helena Hauff",
+    "title": "Boiler Room x Dekmantel Festival 2017",
+    "venue": "Dekmantel Festival, Amsterdamse Bos, Amsterdam",
+    "date": "2017-08-06",
+    "tracks": 17,
+    "confirmed": 16,
+    "youtube": "OdJy_g1G7Ho",
+    "duration": "57:42",
+    "views": 1009963
   },
   {
     "id": "ian-pooley-hor-berlin-2023",
@@ -1323,7 +1349,7 @@ const DJ_REGISTRY = [
   {
     "id": "peggy-gou",
     "name": "Peggy Gou",
-    "genres": [],
+    "genres": ["House", "Techno", "Electro", "Synth-pop"],
     "origin": "South Korea / Berlin",
     "set_count": 1,
     "image": ""
@@ -1331,7 +1357,7 @@ const DJ_REGISTRY = [
   {
     "id": "blessed-madonna",
     "name": "The Blessed Madonna",
-    "genres": [],
+    "genres": ["House", "Techno", "Disco", "Hi-NRG", "Italo Disco"],
     "origin": "USA",
     "set_count": 1,
     "image": ""
@@ -1339,7 +1365,7 @@ const DJ_REGISTRY = [
   {
     "id": "mall-grab",
     "name": "Mall Grab",
-    "genres": [],
+    "genres": ["House", "Techno", "Breaks", "Rave", "Lo-fi House"],
     "origin": "Australia / London",
     "set_count": 1,
     "image": ""
@@ -1347,7 +1373,7 @@ const DJ_REGISTRY = [
   {
     "id": "hunee",
     "name": "Hunee",
-    "genres": [],
+    "genres": ["Disco", "House", "Boogie", "Funk", "Balearic"],
     "origin": "Germany / Berlin",
     "set_count": 1,
     "image": ""
@@ -1361,5 +1387,21 @@ const DJ_REGISTRY = [
     "origin": "UK",
     "set_count": 1,
     "image": ""
+  },
+  {
+    "id": "helena-hauff",
+    "name": "Helena Hauff",
+    "genres": ["Electro", "Acid", "Techno", "Industrial", "EBM"],
+    "origin": "Hamburg, Alemania",
+    "set_count": 1,
+    "image": "https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg"
+  },
+  {
+    "id": "floorplan",
+    "name": "Floorplan",
+    "genres": ["Techno", "Gospel House", "Detroit Techno", "House"],
+    "origin": "Detroit, USA / Miami",
+    "set_count": 1,
+    "image": "https://i.ytimg.com/vi/Ow530rJ9W9w/hqdefault.jpg"
   }
 ];
