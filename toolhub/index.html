@@ -134,7 +134,7 @@
 
     <!-- Hardware Guide Section -->
     <section class="hardware-guide" id="hardwareSection" style="display: none;">
-      <div id="hardware" style="scroll-margin-top:100px;"></div>
+      <div id="hardware-anchor" style="scroll-margin-top:100px;"></div>
       <div class="section-header">
         <h2>💾 USB Export Guide</h2>
         <p>Configuración exacta para tu equipo DJ</p>
@@ -626,7 +626,7 @@
                 </div>
                 ${yt_url ? `<a href="${yt_url}" target="_blank" style="display:inline-block;margin-top:0.6rem;font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;">▶ Watch on YouTube →</a>` : ''}
                 ${tracklistData ? `
-                  <div id="${tracklistId}" class="tracklist-container" style="display:none;">
+                  <div id="${tracklistId}" class="tracklist-container">
                     ${renderTracklist(tracklistData, tracklistData.tracklist)}
                   </div>
                 ` : ''}

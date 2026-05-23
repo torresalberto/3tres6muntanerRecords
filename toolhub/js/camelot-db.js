@@ -1,52 +1,30 @@
 const CamelotDB = {
   keys: [
     // A KEYS (Minor - Energetic/Driving)
-    // Classic house/garage vibes
-    { id: "1A", number: 1, letter: "A", key: "G# Minor", energy: "low", bpmRange: "80-100", bpmTypical: "90", genre: "Deep House, Garage, Lo-Fi" },
-    // Warm, soulful deep house
-    { id: "2A", number: 2, letter: "A", key: "D# Minor", energy: "low", bpmRange: "100-118", bpmTypical: "110", genre: "Deep House, Soulful House" },
-    // Classic house territory
-    { id: "3A", number: 3, letter: "A", key: "B Minor", energy: "medium", bpmRange: "118-124", bpmTypical: "122", genre: "Deep House, Classic House" },
-    // Mainstream house
-    { id: "4A", number: 4, letter: "A", key: "F# Minor", energy: "medium", bpmRange: "120-126", bpmTypical: "124", genre: "House, Future House" },
-    // Tech house sweet spot
-    { id: "5A", number: 5, letter: "A", key: "C# Minor", energy: "medium", bpmRange: "124-130", bpmTypical: "127", genre: "Tech House, House" },
-    // Progressive/electro
-    { id: "6A", number: 6, letter: "A", key: "G# Minor", energy: "high", bpmRange: "126-132", bpmTypical: "128", genre: "Progressive House, Electro House" },
-    // Trance territory
-    { id: "7A", number: 7, letter: "A", key: "D# Minor", energy: "high", bpmRange: "130-140", bpmTypical: "138", genre: "Trance, Uplifting" },
-    // Psytrance
-    { id: "8A", number: 8, letter: "A", key: "A# Minor", energy: "high", bpmRange: "138-146", bpmTypical: "142", genre: "Psytrance, Goa" },
-    // Hard techno
-    { id: "9A", number: 9, letter: "A", key: "F Minor", energy: "very high", bpmRange: "140-155", bpmTypical: "148", genre: "Hard Techno, Industrial" },
-    // Hardcore
-    { id: "10A", number: 10, letter: "A", key: "C Minor", energy: "very high", bpmRange: "150-175", bpmTypical: "160", genre: "Hardcore, Frenchcore" },
-    // Hardstyle
-    { id: "11A", number: 11, letter: "A", key: "G Minor", energy: "very high", bpmRange: "170-180", bpmTypical: "175", genre: "Hardstyle" },
-    // Dubstep territory
-    { id: "12A", number: 12, letter: "A", key: "D Minor", energy: "high", bpmRange: "138-145", bpmTypical: "140", genre: "Dubstep, Bass" },
+    { id: "1A", number: 1, letter: "A", key: "G# Minor / Abm", energy: "low", bpmRange: "80-100", bpmTypical: "90", genre: "Deep House, Garage, Lo-Fi" },
+    { id: "2A", number: 2, letter: "A", key: "D# Minor / Ebm", energy: "low", bpmRange: "100-118", bpmTypical: "110", genre: "Deep House, Soulful House" },
+    { id: "3A", number: 3, letter: "A", key: "A# Minor / Bbm", energy: "medium", bpmRange: "118-124", bpmTypical: "122", genre: "Deep House, Classic House" },
+    { id: "4A", number: 4, letter: "A", key: "F Minor", energy: "medium", bpmRange: "120-126", bpmTypical: "124", genre: "House, Future House" },
+    { id: "5A", number: 5, letter: "A", key: "C Minor", energy: "medium", bpmRange: "124-130", bpmTypical: "127", genre: "Tech House, House" },
+    { id: "6A", number: 6, letter: "A", key: "G Minor", energy: "high", bpmRange: "126-132", bpmTypical: "128", genre: "Progressive House, Electro House" },
+    { id: "7A", number: 7, letter: "A", key: "D Minor", energy: "high", bpmRange: "130-140", bpmTypical: "138", genre: "Trance, Uplifting" },
+    { id: "8A", number: 8, letter: "A", key: "A Minor", energy: "high", bpmRange: "138-146", bpmTypical: "142", genre: "Psytrance, Goa" },
+    { id: "9A", number: 9, letter: "A", key: "E Minor", energy: "very high", bpmRange: "140-155", bpmTypical: "148", genre: "Hard Techno, Industrial" },
+    { id: "10A", number: 10, letter: "A", key: "B Minor", energy: "very high", bpmRange: "150-175", bpmTypical: "160", genre: "Hardcore, Frenchcore" },
+    { id: "11A", number: 11, letter: "A", key: "F# Minor", energy: "very high", bpmRange: "170-180", bpmTypical: "175", genre: "Hardstyle" },
+    { id: "12A", number: 12, letter: "A", key: "C# Minor / Dbm", energy: "high", bpmRange: "138-145", bpmTypical: "140", genre: "Dubstep, Bass" },
 
     // B KEYS (Major - Atmospheric/Melodic)
-    // Chill/ambient
-    { id: "1B", number: 1, letter: "B", key: "G# Major", energy: "low", bpmRange: "80-100", bpmTypical: "90", genre: "Deep House, Chillout" },
-    // Deep melodic
-    { id: "2B", number: 2, letter: "B", key: "D# Major", energy: "low", bpmRange: "100-118", bpmTypical: "110", genre: "Deep House, Melodic House" },
-    // Classic house
-    { id: "3B", number: 3, letter: "B", key: "B Major", energy: "medium", bpmRange: "118-124", bpmTypical: "122", genre: "Deep House, Classic House" },
-    // Mainstream house
-    { id: "4B", number: 4, letter: "B", key: "F# Major", energy: "medium", bpmRange: "120-126", bpmTypical: "124", genre: "House, Future House" },
-    // Tech house
-    { id: "5B", number: 5, letter: "B", key: "C# Major", energy: "medium", bpmRange: "124-130", bpmTypical: "127", genre: "Tech House, House" },
-    // Progressive
-    { id: "6B", number: 6, letter: "B", key: "G# Major", energy: "high", bpmRange: "126-132", bpmTypical: "128", genre: "Progressive House, Melodic Techno" },
-    // Trance
-    { id: "7B", number: 7, letter: "B", key: "D# Major", energy: "high", bpmRange: "130-140", bpmTypical: "138", genre: "Trance, Uplifting" },
-    // Psytrance
-    { id: "8B", number: 8, letter: "B", key: "A# Major", energy: "high", bpmRange: "138-146", bpmTypical: "142", genre: "Psytrance, Goa" },
-    // Hard techno
-    { id: "9B", number: 9, letter: "B", key: "F Major", energy: "very high", bpmRange: "140-155", bpmTypical: "148", genre: "Hard Techno, Industrial" },
-    // Hardcore
-    { id: "10B", number: 10, letter: "B", key: "C Major", energy: "very high", bpmRange: "150-175", bpmTypical: "160", genre: "Hardcore, Frenchcore" },
+    { id: "1B", number: 1, letter: "B", key: "G# Major / Ab", energy: "low", bpmRange: "80-100", bpmTypical: "90", genre: "Deep House, Chillout" },
+    { id: "2B", number: 2, letter: "B", key: "D# Major / Eb", energy: "low", bpmRange: "100-118", bpmTypical: "110", genre: "Deep House, Melodic House" },
+    { id: "3B", number: 3, letter: "B", key: "A# Major / Bb", energy: "medium", bpmRange: "118-124", bpmTypical: "122", genre: "Deep House, Classic House" },
+    { id: "4B", number: 4, letter: "B", key: "F Major", energy: "medium", bpmRange: "120-126", bpmTypical: "124", genre: "House, Future House" },
+    { id: "5B", number: 5, letter: "B", key: "C Major", energy: "medium", bpmRange: "124-130", bpmTypical: "127", genre: "Tech House, House" },
+    { id: "6B", number: 6, letter: "B", key: "G Major", energy: "high", bpmRange: "126-132", bpmTypical: "128", genre: "Progressive House, Melodic Techno" },
+    { id: "7B", number: 7, letter: "B", key: "D Major", energy: "high", bpmRange: "130-140", bpmTypical: "138", genre: "Trance, Uplifting" },
+    { id: "8B", number: 8, letter: "B", key: "A Major", energy: "high", bpmRange: "138-146", bpmTypical: "142", genre: "Psytrance, Goa" },
+    { id: "9B", number: 9, letter: "B", key: "E Major", energy: "very high", bpmRange: "140-155", bpmTypical: "148", genre: "Hard Techno, Industrial" },
+    { id: "10B", number: 10, letter: "B", key: "B Major", energy: "very high", bpmRange: "150-175", bpmTypical: "160", genre: "Hardcore, Frenchcore" },
     // Hardstyle
     { id: "11B", number: 11, letter: "B", key: "G Major", energy: "very high", bpmRange: "170-180", bpmTypical: "175", genre: "Hardstyle" },
     // Dubstep

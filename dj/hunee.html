@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunee | DJ Library — 3TRES6 Records</title>
+  <meta name="description" content="Sets completos de Hunee con tracklists, IDs y datos curiosos. 1 sets, 18 tracks." />
+  <link rel="canonical" href="https://3tres6records.albto.me/dj/hunee.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../css/dj-library.css" />
+  <style>
+    .dj-page-hero {
+      position: relative;
+      padding: 6rem 2rem 3rem;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+      overflow: hidden;
+    }
+    .dj-page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, #ff4d00, transparent);
+    }
+    .dj-page-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .dj-page-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #ff4d00;
+      object-fit: cover;
+      box-shadow: 0 0 60px rgba(255,77,0,0.3);
+      flex-shrink: 0;
+    }
+    .dj-page-info h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    .dj-page-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+    .dj-page-genres {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .dj-page-bio {
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    .sets-section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .sets-section h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .set-card {
+      background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .set-header {
+      padding: 2rem 2rem 1rem;
+    }
+    .set-header h3 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .set-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.85rem;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .tracklist-section {
+      padding: 1.5rem 2rem;
+    }
+    .tracklist-section .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1rem;
+    }
+    .tracklist-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .tracklist-table th {
+      text-align: left;
+      padding: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .tracklist-table td {
+      padding: 0.6rem 0.75rem;
+      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .tracklist-table tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+    .track-time {
+      color: rgba(255,255,255,0.3);
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+    .track-status {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    .track-status.confirmed {
+      background: rgba(0, 200, 100, 0.1);
+      color: #00c864;
+    }
+    .track-status.id {
+      background: rgba(255, 77, 0, 0.1);
+      color: #ff4d00;
+    }
+    .related-djs {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .related-djs h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .dj-page-header { flex-direction: column; align-items: center; text-align: center; }
+      .dj-page-avatar { width: 120px; height: 120px; }
+      .dj-page-info h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="mainHeader" role="banner">
+    <div class="header-container">
+      <a href="/" class="logo" aria-label="3TRES6 Records Home">
+        <span class="logo-text">3TRES6</span>
+        <span class="logo-subtitle">RECORDS</span>
+      </a>
+      <nav class="main-nav" role="navigation">
+        <a href="/" class="nav-item">Catálogo</a>
+        <a href="/#calendario" class="nav-item">Calendario</a>
+        <a href="/#nosotros" class="nav-item">Nosotros</a>
+        <a href="../3d-brain.html" class="nav-item">DJ Hub</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="dj-hub-subnav" role="navigation">
+    <a href="../blog.html">Blog</a>
+    <a href="../dj-library.html" class="active">DJ Library</a>
+    <a href="../3d-brain.html">Neural</a>
+    <a href="../toolhub/">Herramientas</a>
+    <a href="../toolhub/#hardware">Equipo DJ</a>
+  </nav>
+
+  <section class="dj-page-hero">
+    <div class="dj-page-header">
+      <img src="https://i.ytimg.com/vi/0RIU0cy6L1I/hqdefault.jpg" alt="Hunee" class="dj-page-avatar"
+        onerror="this.parentElement.querySelector('.dj-page-avatar').style.display='none'" />
+      <div class="dj-page-info">
+        <h1>Hunee</h1>
+        <div class="dj-page-meta">
+          
+          
+          <span>1 sets</span>
+          <span>18 tracks</span>
+          <span>18 identificados (100%)</span>
+        </div>
+        <div class="dj-page-genres">
+          <span class="genre-tag">Boogie</span><span class="genre-tag">House</span><span class="genre-tag">Disco</span><span class="genre-tag">Funk</span>
+        </div>
+        <p class="dj-page-bio"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sets-section">
+    <h2>Sets</h2>
+    <div class="set-card">
+          <div class="set-header">
+            <h3>Boiler Room x Dekmantel Festival</h3>
+            <div class="set-meta">
+              <span>📍 Dekmantel Festival, Amsterdam</span>
+              <span>📅 2015-07-31</span>
+              <span>⏱️ 58:53</span>
+              <span>🎵 18 tracks</span>
+            </div>
+          </div>
+          <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/0RIU0cy6L1I" title="Boiler Room x Dekmantel Festival" allowfullscreen loading="lazy"></iframe>
+        </div>
+          <div class="tracklist-section">
+            <div class="section-label">Tracklist</div>
+            <table class="tracklist-table">
+              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+              <tbody><tr>
+              <td><span class="track-time">00:15</span></td>
+              <td>Shadow</td>
+              <td>Let's Make It Up</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">03:30</span></td>
+              <td>Sammy Barbot</td>
+              <td>New Mexico</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">06:20</span></td>
+              <td>Udell</td>
+              <td>Won't You Try</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">09:40</span></td>
+              <td>Kiki Gyan</td>
+              <td>Disco Dancer</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">13:00</span></td>
+              <td>Javaroo</td>
+              <td>Breakin In'</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">16:20</span></td>
+              <td>House Of Doors</td>
+              <td>Burmstar (Twin Mix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">18:50</span></td>
+              <td>The Coachouse Rhythm Section</td>
+              <td>Time Warp</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">21:50</span></td>
+              <td>Sheryl Lee Ralph</td>
+              <td>In The Evening</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">25:45</span></td>
+              <td>Gavin Russom</td>
+              <td>The Telstar File</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">29:20</span></td>
+              <td>Mappa Mundi</td>
+              <td>Sexafari</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">31:30</span></td>
+              <td>Errorsmith & Mark Fell</td>
+              <td>Cuica Digitales</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">34:25</span></td>
+              <td>Kindred Spirit</td>
+              <td>Put Your Spirit Up</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">38:50</span></td>
+              <td>Mac Gregor</td>
+              <td>Nan Ye Li Kan</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">42:40</span></td>
+              <td>Lyman Woodard</td>
+              <td>Theme In Search Of A Sportspectacular</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">47:20</span></td>
+              <td>Estiban</td>
+              <td>Come To Me</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">51:20</span></td>
+              <td>Jimmy Smith</td>
+              <td>Can't Hide Love</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">54:45</span></td>
+              <td>Odessey 1</td>
+              <td>Last Night</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">57:30</span></td>
+              <td>Chiwoniso</td>
+              <td>Zvichapera</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr></tbody>
+            </table>
+          </div>
+        </div>
+  </section>
+
+  <section class="related-djs">
+    <h2>DJs Relacionados</h2>
+    <div class="related-grid" id="relatedGrid">
+      <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>3TRES6 Records</p>
+      <nav class="footer-nav">
+        <a href="/">Catálogo</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../3d-brain.html">Neural</a>
+        <a href="../dj-library.html">DJ Library</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Load related DJs from cross-references
+    fetch('../data/djs/cross-references.json')
+      .then(r => r.json())
+      .then(data => {
+        const related = (data.shared_artists['hunee'] || []).slice(0, 4);
+        if (related.length === 0) {
+          document.getElementById('relatedGrid').innerHTML =
+            '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+          return;
+        }
+        Promise.all(related.map(id =>
+          fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
+            const dj = idx.djs.find(d => d.id === id);
+            return dj ? `
+              <a href="${id}.html" class="dj-card">
+                <div class="dj-card-image">
+                  <img src="${dj.image || ''}" alt="${dj.name}" loading="lazy"
+                    onerror="this.parentElement.innerHTML='<div class=\'dj-card-placeholder\'>🎧</div>'" />
+                </div>
+                <div class="dj-card-body">
+                  <h3>${dj.name}</h3>
+                  <div class="dj-card-meta">
+                    <span>${dj.stats.sets} sets</span>
+                    <span>${dj.stats.completion_rate}% ID</span>
+                  </div>
+                </div>
+              </a>
+            ` : '';
+          })
+        )).then(cards => {
+          document.getElementById('relatedGrid').innerHTML = cards.join('');
+        });
+      })
+      .catch(() => {
+        document.getElementById('relatedGrid').innerHTML =
+          '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+      });
+  </script>
+</body>
+</html>

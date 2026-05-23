@@ -325,6 +325,72 @@
       margin-top: 0.15rem;
     }
 
+    /* NEW: Track-grouped info panel */
+    .info-track-group {
+      margin-bottom: 1.5rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .info-track-header {
+      padding: 1rem 1.2rem;
+      background: linear-gradient(90deg, rgba(255,77,0,0.08), transparent);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .info-track-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+    .tracklist-badge {
+      color: var(--primary,#ff4d00);
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-left: 0.3rem;
+    }
+    .info-track-artist {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .info-track-djs {
+      padding: 0.8rem 1.2rem;
+    }
+    .info-track-dj {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .info-track-dj:last-child {
+      border-bottom: none;
+    }
+    .info-dj-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+    .info-dj-sets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .info-set-tag {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.3;
+    }
+
     /* GENRE LEGEND */
     .genre-legend {
       position: fixed;
@@ -971,28 +1037,53 @@ const MULTI_DJ_TRACKS = [
       if (conns.length === 0) {
         list.innerHTML = '<div style="color:rgba(255,255,255,0.2);font-size:0.8rem;padding:1rem 0;">No shared tracks yet.</div>';
       } else {
-        // Group by other DJ
-        const byDJ = {};
+        // Group by track (new design)
+        const byTrack = {};
         conns.forEach(c => {
-          if (!byDJ[c.other.id]) byDJ[c.other.id] = { other: c.other, tracks: [] };
-          byDJ[c.other.id].tracks.push(c);
+          const trackKey = c.track.toLowerCase().replace(/\s+/g, ' ');
+          if (!byTrack[trackKey]) {
+            byTrack[trackKey] = {
+              track: c.track,
+              artists: new Set(),
+              djs: []
+            };
+          }
+          // Extract artist from track string (format: "Artist - Title" or just "Title")
+          const parts = c.track.split(' - ');
+          if (parts.length >= 2) byTrack[trackKey].artists.add(parts[0].trim());
+          byTrack[trackKey].djs.push({
+            dj: c.other,
+            sets: c.sets
+          });
         });
-        list.innerHTML = Object.values(byDJ).map(g => `
-          <div class="info-group">
-            <div class="info-group-title">${g.other.name}</div>
-            ${g.tracks.map(t => {
-              const key = t.track.toLowerCase().replace(/\s+/g, ' ');
-              const fromTracklist = TRACKLIST_CONNECTIONS.some(tc => tc.track.toLowerCase().replace(/\s+/g, ' ') === key);
-              return `
-              <div class="info-item">
-                <div>
-                  <div class="info-track">${t.track}${fromTracklist ? ' <span style="color:var(--primary,#ff4d00);font-size:0.65rem;font-weight:600;">🎵 tracklist</span>' : ''}</div>
-                  <div class="info-set">${t.sets.map(s => typeof s === 'object' ? s.title : s.replace(/-/g, ' ')).join(' • ')}</div>
+
+        list.innerHTML = Object.values(byTrack).map(t => {
+          const artists = Array.from(t.artists).join(', ') || 'Various';
+          const fromTracklist = TRACKLIST_CONNECTIONS.some(tc =>
+            tc.track.toLowerCase().replace(/\s+/g, ' ') === t.track.toLowerCase().replace(/\s+/g, ' ')
+          );
+          return `
+          <div class="info-track-group">
+            <div class="info-track-header">
+              <div class="info-track-title">${t.track}${fromTracklist ? ' <span class="tracklist-badge">🎵 tracklist</span>' : ''}</div>
+              <div class="info-track-artist">by ${artists}</div>
+            </div>
+            <div class="info-track-djs">
+              ${t.djs.map(dj => `
+                <div class="info-track-dj">
+                  <div class="info-dj-name">${dj.dj.name}</div>
+                  <div class="info-dj-sets">
+                    ${dj.sets.map(s => {
+                      const setName = typeof s === 'object' ? s.title : s.replace(/-/g, ' ');
+                      const setId = typeof s === 'object' ? s.id : s;
+                      return `<span class="info-set-tag" data-set="${setId}">${setName}</span>`;
+                    }).join('')}
+                  </div>
                 </div>
-              </div>
-            `}).join('')}
+              `).join('')}
+            </div>
           </div>
-        `).join('');
+        `}).join('');
       }
       infoPanel.classList.add('visible');
     }

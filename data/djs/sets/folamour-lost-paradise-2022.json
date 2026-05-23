@@ -1,0 +1,121 @@
+{
+  "id": "folamour-lost-paradise-2022",
+  "title": "Lost Paradise",
+  "venue": "Lost Paradise, Australia",
+  "date": "2022-12-30",
+  "duration": "1:28:50",
+  "youtube_embed_id": "",
+  "view_count": 0,
+  "genre": [
+    "House",
+    "Nu Disco",
+    "Disco"
+  ],
+  "tracks_identified": 16,
+  "tracks_total": 19,
+  "tracklist": [
+    {
+      "time": "00:00",
+      "artist": "Lenny Williams",
+      "title": "When I'm Dancin' (Marc Green Edit)"
+    },
+    {
+      "time": "",
+      "artist": "Kaleta",
+      "title": "ID"
+    },
+    {
+      "time": "",
+      "artist": "Afshin & Kiss My Black Jazz",
+      "title": "The Seduction"
+    },
+    {
+      "time": "",
+      "artist": "Gaoulé Mizik",
+      "title": "A Ka Titine (Dam Swindle Edit)",
+      "label": "Heist"
+    },
+    {
+      "time": "25:00",
+      "artist": "Fixed Angles",
+      "title": "Anikana",
+      "label": "Bonfido Disques"
+    },
+    {
+      "time": "29:30",
+      "artist": "Kaz James",
+      "title": "Footprints",
+      "label": "Another Record Label"
+    },
+    {
+      "time": "35:30",
+      "artist": "Folamour",
+      "title": "ID",
+      "note": "Unreleased"
+    },
+    {
+      "time": "41:00",
+      "artist": "H20",
+      "title": "Nobody's Business",
+      "label": "AM:PM"
+    },
+    {
+      "time": "46:00",
+      "artist": "Marc Cotterell",
+      "title": "Make Me Feel",
+      "label": "Plastik People"
+    },
+    {
+      "time": "51:00",
+      "artist": "Ferry Ultra ft. Gwen McCrae",
+      "title": "Happy (Folamour Remix)",
+      "label": "Peppermint Jam"
+    },
+    {
+      "time": "55:00",
+      "artist": "Ten City",
+      "title": "Be Free (Emmaculate & Shannon Chambers Remix)",
+      "label": "Ultra"
+    },
+    {
+      "time": "59:30",
+      "artist": "Koko",
+      "title": "7 Days In The Hotel (M-High Remix)",
+      "label": "Surge"
+    },
+    {
+      "time": "1:02:30",
+      "artist": "Robbie Doherty & FOLEY (UK)",
+      "title": "Let The Bass",
+      "label": "Avenu"
+    },
+    {
+      "time": "1:07:00",
+      "artist": "Marsolo",
+      "title": "ID"
+    },
+    {
+      "time": "1:10:00",
+      "artist": "Folamour",
+      "title": "ID",
+      "note": "Unreleased"
+    },
+    {
+      "time": "1:15:30",
+      "artist": "Daan Steenman",
+      "title": "Djingoo"
+    },
+    {
+      "time": "1:20:00",
+      "artist": "Herbert Leonard",
+      "title": "Chante Avec Moi (Young Pulse Edit)"
+    },
+    {
+      "time": "1:24:00",
+      "artist": "Patrice Rushen",
+      "title": "Forget Me Nots",
+      "label": "Elektra"
+    }
+  ],
+  "curious_facts": {}
+}

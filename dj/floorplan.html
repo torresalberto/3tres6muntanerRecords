@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floorplan | DJ Library — 3TRES6 Records</title>
+  <meta name="description" content="Sets completos de Floorplan con tracklists, IDs y datos curiosos. 1 sets, 34 tracks." />
+  <link rel="canonical" href="https://3tres6records.albto.me/dj/floorplan.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../css/dj-library.css" />
+  <style>
+    .dj-page-hero {
+      position: relative;
+      padding: 6rem 2rem 3rem;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+      overflow: hidden;
+    }
+    .dj-page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, #ff4d00, transparent);
+    }
+    .dj-page-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .dj-page-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #ff4d00;
+      object-fit: cover;
+      box-shadow: 0 0 60px rgba(255,77,0,0.3);
+      flex-shrink: 0;
+    }
+    .dj-page-info h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    .dj-page-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+    .dj-page-genres {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .dj-page-bio {
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    .sets-section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .sets-section h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .set-card {
+      background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .set-header {
+      padding: 2rem 2rem 1rem;
+    }
+    .set-header h3 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .set-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.85rem;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .tracklist-section {
+      padding: 1.5rem 2rem;
+    }
+    .tracklist-section .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1rem;
+    }
+    .tracklist-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .tracklist-table th {
+      text-align: left;
+      padding: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .tracklist-table td {
+      padding: 0.6rem 0.75rem;
+      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .tracklist-table tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+    .track-time {
+      color: rgba(255,255,255,0.3);
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+    .track-status {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    .track-status.confirmed {
+      background: rgba(0, 200, 100, 0.1);
+      color: #00c864;
+    }
+    .track-status.id {
+      background: rgba(255, 77, 0, 0.1);
+      color: #ff4d00;
+    }
+    .related-djs {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .related-djs h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .dj-page-header { flex-direction: column; align-items: center; text-align: center; }
+      .dj-page-avatar { width: 120px; height: 120px; }
+      .dj-page-info h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="mainHeader" role="banner">
+    <div class="header-container">
+      <a href="/" class="logo" aria-label="3TRES6 Records Home">
+        <span class="logo-text">3TRES6</span>
+        <span class="logo-subtitle">RECORDS</span>
+      </a>
+      <nav class="main-nav" role="navigation">
+        <a href="/" class="nav-item">Catálogo</a>
+        <a href="/#calendario" class="nav-item">Calendario</a>
+        <a href="/#nosotros" class="nav-item">Nosotros</a>
+        <a href="../3d-brain.html" class="nav-item">DJ Hub</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="dj-hub-subnav" role="navigation">
+    <a href="../blog.html">Blog</a>
+    <a href="../dj-library.html" class="active">DJ Library</a>
+    <a href="../3d-brain.html">Neural</a>
+    <a href="../toolhub/">Herramientas</a>
+    <a href="../toolhub/#hardware">Equipo DJ</a>
+  </nav>
+
+  <section class="dj-page-hero">
+    <div class="dj-page-header">
+      <img src="https://i.ytimg.com/vi/Ow530rJ9W9w/hqdefault.jpg" alt="Floorplan" class="dj-page-avatar"
+        onerror="this.parentElement.querySelector('.dj-page-avatar').style.display='none'" />
+      <div class="dj-page-info">
+        <h1>Floorplan</h1>
+        <div class="dj-page-meta">
+          
+          
+          <span>1 sets</span>
+          <span>34 tracks</span>
+          <span>30 identificados (88%)</span>
+        </div>
+        <div class="dj-page-genres">
+          <span class="genre-tag">Gospel House</span><span class="genre-tag">Detroit Techno</span><span class="genre-tag">Techno</span>
+        </div>
+        <p class="dj-page-bio"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sets-section">
+    <h2>Sets</h2>
+    <div class="set-card">
+          <div class="set-header">
+            <h3>Weather Festival Paris 2015 (Mixmag)</h3>
+            <div class="set-meta">
+              <span>📍 Weather Festival, Paris, France</span>
+              <span>📅 2015-06-06</span>
+              <span>⏱️ 1:57:26</span>
+              <span>🎵 34 tracks</span>
+            </div>
+          </div>
+          <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Ow530rJ9W9w" title="Weather Festival Paris 2015 (Mixmag)" allowfullscreen loading="lazy"></iframe>
+        </div>
+          <div class="tracklist-section">
+            <div class="section-label">Tracklist</div>
+            <table class="tracklist-table">
+              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+              <tbody><tr>
+              <td><span class="track-time">00:00</span></td>
+              <td>Sounds Of Blackness</td>
+              <td>The Pressure Pt.2</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">03:00</span></td>
+              <td>Ben Sims</td>
+              <td>New Blood (Robert Hood Mix)<br><small style="color:rgba(255,255,255,0.3)">Theory</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">07:00</span></td>
+              <td>Floorplan</td>
+              <td>Never Grow Old<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">11:00</span></td>
+              <td>Floorplan</td>
+              <td>Phobia<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">14:00</span></td>
+              <td>Gary Beck</td>
+              <td>Get Down<br><small style="color:rgba(255,255,255,0.3)">In The House & Defected</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">17:00</span></td>
+              <td>Ben Sims</td>
+              <td>Dollar Bill Y'all (Vocal Mix)<br><small style="color:rgba(255,255,255,0.3)">Hardgroove</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">21:00</span></td>
+              <td>Floorplan</td>
+              <td>Push On<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">25:00</span></td>
+              <td>Club MCM</td>
+              <td>Club MCM (Mark Broom Re-Edit)<br><small style="color:rgba(255,255,255,0.3)">Do Not Sleep</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">29:00</span></td>
+              <td>Frankie Knuckles Pres. Directors Cut</td>
+              <td>Get Over U (Gifted Souls Remix)<br><small style="color:rgba(255,255,255,0.3)">Nocturnal Groove Digital</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">33:00</span></td>
+              <td>ID</td>
+              <td>ID</td>
+              <td><span class="track-status id">ID</span></td>
+            </tr><tr>
+              <td><span class="track-time">37:00</span></td>
+              <td>Floorplan</td>
+              <td>Chord Principle<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">39:00</span></td>
+              <td>Floorplan</td>
+              <td>Let's Ride<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">42:00</span></td>
+              <td>Candi Staton</td>
+              <td>Hallelujah Anyway (Directors Cut Signature Praise)<br><small style="color:rgba(255,255,255,0.3)">Vendetta</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">46:00</span></td>
+              <td>Floorplan</td>
+              <td>Confess<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">48:00</span></td>
+              <td>Gary Beck</td>
+              <td>Rascal<br><small style="color:rgba(255,255,255,0.3)">Bek</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">52:00</span></td>
+              <td>Esteban Adame</td>
+              <td>Rays of Saturn (Robert Hood Remix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">56:00</span></td>
+              <td>Kevin Saunderson</td>
+              <td>Bassline (Ben Sims 25th Anniversary Edit)<br><small style="color:rgba(255,255,255,0.3)">KMS</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">59:00</span></td>
+              <td>Lil Louis</td>
+              <td>French Kiss (Mark Broom Edit)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:03:00</span></td>
+              <td>Kevin Saunderson Feat. Inner City</td>
+              <td>Good Life (Pig&Dan Less Is More Remix)<br><small style="color:rgba(255,255,255,0.3)">Cr2</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:09:00</span></td>
+              <td>Ben Sims</td>
+              <td>Love<br><small style="color:rgba(255,255,255,0.3)">Hardgroove</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:13:00</span></td>
+              <td>Floorplan</td>
+              <td>We Magnify His Name<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:18:00</span></td>
+              <td>ID</td>
+              <td>ID</td>
+              <td><span class="track-status id">ID</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:22:00</span></td>
+              <td>Shawn Christopher</td>
+              <td>You Can Make It (B's Preacher Man Mix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:28:00</span></td>
+              <td>Gingy & Bordello</td>
+              <td>All Day (Robert Hood Remix)<br><small style="color:rgba(255,255,255,0.3)">Turbo</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:31:00</span></td>
+              <td>Floorplan</td>
+              <td>Never Grow Old<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:34:00</span></td>
+              <td>Mark Ambrose</td>
+              <td>Shooting Stars (Ben Sims Dub Mix)<br><small style="color:rgba(255,255,255,0.3)">Theory</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:36:00</span></td>
+              <td>Candi Staton</td>
+              <td>Hallelujah Anyway (Directors Cut Signature Praise)<br><small style="color:rgba(255,255,255,0.3)">Vendetta</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:40:00</span></td>
+              <td>Ben Sims</td>
+              <td>Love & Hurt (Gary Beck Remix)<br><small style="color:rgba(255,255,255,0.3)">Hardgroove</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:43:00</span></td>
+              <td>ID</td>
+              <td>ID</td>
+              <td><span class="track-status id">ID</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:46:00</span></td>
+              <td>Floorplan</td>
+              <td>Eclipse<br><small style="color:rgba(255,255,255,0.3)">M-Plant</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:50:00</span></td>
+              <td>Floorplan</td>
+              <td>Ritual<br><small style="color:rgba(255,255,255,0.3)">EPM</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:52:00</span></td>
+              <td>Ritzi Lee</td>
+              <td>Reverse Processed<br><small style="color:rgba(255,255,255,0.3)">Theory</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:55:00</span></td>
+              <td>Arnaud Rebotini</td>
+              <td>777 (Ascii Disko Remix)<br><small style="color:rgba(255,255,255,0.3)">Turbo</small></td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">1:57:00</span></td>
+              <td>ID</td>
+              <td>ID</td>
+              <td><span class="track-status id">ID</span></td>
+            </tr></tbody>
+            </table>
+          </div>
+        </div>
+  </section>
+
+  <section class="related-djs">
+    <h2>DJs Relacionados</h2>
+    <div class="related-grid" id="relatedGrid">
+      <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>3TRES6 Records</p>
+      <nav class="footer-nav">
+        <a href="/">Catálogo</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../3d-brain.html">Neural</a>
+        <a href="../dj-library.html">DJ Library</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Load related DJs from cross-references
+    fetch('../data/djs/cross-references.json')
+      .then(r => r.json())
+      .then(data => {
+        const related = (data.shared_artists['floorplan'] || []).slice(0, 4);
+        if (related.length === 0) {
+          document.getElementById('relatedGrid').innerHTML =
+            '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+          return;
+        }
+        Promise.all(related.map(id =>
+          fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
+            const dj = idx.djs.find(d => d.id === id);
+            return dj ? `
+              <a href="${id}.html" class="dj-card">
+                <div class="dj-card-image">
+                  <img src="${dj.image || ''}" alt="${dj.name}" loading="lazy"
+                    onerror="this.parentElement.innerHTML='<div class=\'dj-card-placeholder\'>🎧</div>'" />
+                </div>
+                <div class="dj-card-body">
+                  <h3>${dj.name}</h3>
+                  <div class="dj-card-meta">
+                    <span>${dj.stats.sets} sets</span>
+                    <span>${dj.stats.completion_rate}% ID</span>
+                  </div>
+                </div>
+              </a>
+            ` : '';
+          })
+        )).then(cards => {
+          document.getElementById('relatedGrid').innerHTML = cards.join('');
+        });
+      })
+      .catch(() => {
+        document.getElementById('relatedGrid').innerHTML =
+          '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+      });
+  </script>
+</body>
+</html>

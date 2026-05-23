@@ -311,6 +311,7 @@ body {
 .skip-btn { display: none; }
 
 /* ==================== TOOLS HUB TABS ==================== */
+.tools-hub {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -2222,12 +2223,14 @@ body {
 
 /* ==================== DJ SETS TRACKLIST ==================== */
 .tracklist-container {
+  display: none;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease-out;
 }
 
 .tracklist-container.expanded {
+  display: block;
   max-height: 2000px;
   transition: max-height 0.5s ease-in;
 }
