@@ -4,6 +4,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Kill any existing animations on affiliate cards and reset inline styles
+  gsap.killTweensOf('.affiliate-card');
+  document.querySelectorAll('.affiliate-card').forEach(card => {
+    card.style.opacity = '';
+    card.style.transform = '';
+  });
+
   // ── Tool tabs staggered entrance ───────────────────────────────
   gsap.from('.tool-tab', {
     y: 40,
