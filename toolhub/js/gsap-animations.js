@@ -33,16 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   };
 
-  // ── Affiliate cards scroll reveal ─────────────────────────────
-  gsap.from('.affiliate-card', {
-    scrollTrigger: {
-      trigger: '.affiliate-section',
-      start: 'top 80%',
-    },
-    y: 50,
-    opacity: 0,
-    duration: 0.5,
-    stagger: 0.12,
-    ease: 'power2.out',
-  });
+  // ── Affiliate cards — CSS handles visibility (ScrollTrigger caused animation conflicts) ─
 });
