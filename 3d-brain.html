@@ -178,10 +178,12 @@
 
     /* CANVAS */
     #network-container {
-      flex: 1;
       position: relative;
       overflow: hidden;
       cursor: grab;
+      /* Fill viewport above the fold, below fixed header */
+      height: calc(100vh - 80px);
+      flex: none;
     }
     #network-container:active { cursor: grabbing; }
     #network-container svg {

@@ -552,6 +552,11 @@
                 djSetsSection.dataset.initialized = 'true';
               }
             }
+
+            // Refresh ScrollTrigger after showing section to fix position calculations
+            if (window.ScrollTrigger) {
+              ScrollTrigger.refresh();
+            }
           });
         });
       });
