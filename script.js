@@ -202,6 +202,14 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('discogs_inventory_time', Date.now().toString());
 
         state.products = data.listings;
+
+        // If Discogs returns empty inventory, show fallback products
+        if (!data.listings || data.listings.length === 0) {
+          console.warn('Discogs inventory empty — showing fallback products');
+          this.loadFallbackProducts();
+          return [];
+        }
+
         this.renderProducts(data.listings);
 
         // Populate hero playlist with inventory
