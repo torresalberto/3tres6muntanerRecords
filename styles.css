@@ -270,6 +270,8 @@ button {
   height: 40px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 999;
 }
 
 .ticker-wrapper {
@@ -313,7 +315,7 @@ button {
 
 .header {
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   z-index: 1000;
