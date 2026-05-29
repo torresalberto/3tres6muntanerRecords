@@ -1,5 +1,1322 @@
 {
-  "shared_artists": {},
-  "shared_tracks": {},
-  "total_shared_tracks": 0
+  "shared_tracks": [
+    {
+      "track": "ame - asa",
+      "djs": [
+        "ame",
+        "dixon"
+      ],
+      "sets": [
+        {
+          "id": "ame-br-innervisions-ade-2012",
+          "title": "Boiler Room x Innervisions ADE 2012",
+          "artist": "ame"
+        },
+        {
+          "id": "dixon-cercle-2024",
+          "title": "Cercle Festival 2024",
+          "artist": "dixon"
+        }
+      ]
+    },
+    {
+      "track": "ame & curses - shadow of love",
+      "djs": [
+        "ame",
+        "dixon"
+      ],
+      "sets": [
+        {
+          "id": "ame-br-innervisions-ade-2012",
+          "title": "Boiler Room x Innervisions ADE 2012",
+          "artist": "ame"
+        },
+        {
+          "id": "dixon-cercle-2024",
+          "title": "Cercle Festival 2024",
+          "artist": "dixon"
+        }
+      ]
+    },
+    {
+      "track": "kink - kazan",
+      "djs": [
+        "ben-ufo",
+        "kink"
+      ],
+      "sets": [
+        {
+          "id": "ben-ufo-br-sugar-mountain-2025",
+          "title": "Boiler Room x Sugar Mountain 2025",
+          "artist": "ben-ufo"
+        },
+        {
+          "id": "kink-br-moscow-2014",
+          "title": "Set",
+          "artist": "kink"
+        }
+      ]
+    },
+    {
+      "track": "pangaea - router",
+      "djs": [
+        "ben-ufo",
+        "pangaea"
+      ],
+      "sets": [
+        {
+          "id": "ben-ufo-br-sugar-mountain-2025",
+          "title": "Boiler Room x Sugar Mountain 2025",
+          "artist": "ben-ufo"
+        },
+        {
+          "id": "pangaea-br-dekmantel-2015",
+          "title": "Set",
+          "artist": "pangaea"
+        }
+      ]
+    },
+    {
+      "track": "octave one - blackwater",
+      "djs": [
+        "carl-craig",
+        "seth-troxler"
+      ],
+      "sets": [
+        {
+          "id": "carl-craig-br-rbma-2013",
+          "title": "Set",
+          "artist": "carl-craig"
+        },
+        {
+          "id": "seth-troxler-br-mexico-2014",
+          "title": "Boiler Room Stay True Mexico 2014",
+          "artist": "seth-troxler"
+        }
+      ]
+    },
+    {
+      "track": "dj koze - all the time",
+      "djs": [
+        "dj-koze-various",
+        "four-tet"
+      ],
+      "sets": [
+        {
+          "id": "dj-koze-various",
+          "title": "Set",
+          "artist": "dj-koze-various"
+        },
+        {
+          "id": "four-tet-br-london-2015",
+          "title": "Boiler Room London 2015",
+          "artist": "four-tet"
+        }
+      ]
+    },
+    {
+      "track": "earth people - dance",
+      "djs": [
+        "joe-claussell",
+        "masters-at-work"
+      ],
+      "sets": [
+        {
+          "id": "joe-claussell-br-paris-2014",
+          "title": "Boiler Room x Piknic Electronik Montreal 2024",
+          "artist": "joe-claussell"
+        },
+        {
+          "id": "maw-br-london-2014",
+          "title": "Boiler Room London 2014 (Defected)",
+          "artist": "masters-at-work"
+        }
+      ]
+    }
+  ],
+  "shared_artists": [
+    {
+      "artist": "Ian Pooley",
+      "djs": [
+        "ame",
+        "ian-pooley-hor",
+        "ian-pooley-paloma"
+      ],
+      "tracks": [
+        "CompuRhythm (Dixon 4/4 Treatment)",
+        "SP12 Electric Mistress",
+        "Feel It",
+        "900 (Mix)"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012",
+        "ian-pooley-hor-berlin-2023",
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "artist": "Floating Points",
+      "djs": [
+        "call-super",
+        "etapp-kyle",
+        "floating-points"
+      ],
+      "tracks": [
+        "Mimoun Marhaba",
+        "Problems",
+        "Fast Forward"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "etapp-kyle-lot-radio-2023",
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "artist": "Kings Of Tomorrow",
+      "djs": [
+        "call-super",
+        "seth-troxler",
+        "shonky-b2b-dan-ghenacia"
+      ],
+      "tracks": [
+        "Fade II Black",
+        "Finally",
+        "I Want You (For Myself) (KOT Ruff Mix)"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "seth-troxler-br-mexico-2014",
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ]
+    },
+    {
+      "artist": "X-Press 2",
+      "djs": [
+        "carl-cox",
+        "ian-pooley-paloma",
+        "palms-trax"
+      ],
+      "tracks": [
+        "Muzik Xpress",
+        "Zeven",
+        "Smoke Machine"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa",
+        "ian-pooley-paloma-berlin-2023",
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "artist": "Lil Louis",
+      "djs": [
+        "floorplan",
+        "joe-claussell",
+        "masters-at-work"
+      ],
+      "tracks": [
+        "French Kiss (Mark Broom Edit)",
+        "Fable (Frankie Knuckles Directors Cut Classic Club Mix)",
+        "French Kiss"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015",
+        "joe-claussell-br-paris-2014",
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "artist": "Boards Of Canada",
+      "djs": [
+        "alex-do-clr-305",
+        "call-super"
+      ],
+      "tracks": [
+        "Split Your Infinities",
+        "Transmisiones Ferox"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "artist": "Jeff Mills",
+      "djs": [
+        "alex-do-clr-305",
+        "mark-broom"
+      ],
+      "tracks": [
+        "Automatic",
+        "The Bells (Mark Broom Edit)"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "artist": "Green Velvet",
+      "djs": [
+        "alex-do-clr-305",
+        "shonky-b2b-dan-ghenacia"
+      ],
+      "tracks": [
+        "Flash (Carl Craig Paperclip People Mix)",
+        "Flash (Danny Tenaglia Nitrous Oxide Mix)"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ]
+    },
+    {
+      "artist": "Recondite",
+      "djs": [
+        "alex-do-clr-305",
+        "ame"
+      ],
+      "tracks": [
+        "Glim",
+        "Drgn"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "artist": "Ame",
+      "djs": [
+        "ame",
+        "dixon"
+      ],
+      "tracks": [
+        "Asa",
+        "Shadow Of Love"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012",
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "artist": "Tiga",
+      "djs": [
+        "avalon-emerson",
+        "cassius"
+      ],
+      "tracks": [
+        "Cherry",
+        "Woke (Jamie Jones Remix)"
+      ],
+      "sets": [
+        "avalon-emerson-dekmantel-2025",
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "artist": "O'Flynn",
+      "djs": [
+        "ben-ufo",
+        "four-tet"
+      ],
+      "tracks": [
+        "Srekye",
+        "Tyrion"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025",
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "artist": "Kink",
+      "djs": [
+        "ben-ufo",
+        "kink"
+      ],
+      "tracks": [
+        "Kazan",
+        "Existence",
+        "Leko",
+        "Express"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025",
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "artist": "Pangaea",
+      "djs": [
+        "ben-ufo",
+        "pangaea"
+      ],
+      "tracks": [
+        "Router",
+        "More Is More To Burn"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025",
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "artist": "Levon Vincent",
+      "djs": [
+        "call-super",
+        "larry-heard-mr-fingers"
+      ],
+      "tracks": [
+        "Double Joint (Part 2)",
+        "Man Or Mistress"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "artist": "Trevor Rockcliffe",
+      "djs": [
+        "carl-cox",
+        "chaos-in-the-cbd"
+      ],
+      "tracks": [
+        "Jumping (Deep House Mix)",
+        "Tremor"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa",
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "artist": "Octave One",
+      "djs": [
+        "carl-craig",
+        "seth-troxler"
+      ],
+      "tracks": [
+        "Blackwater"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "artist": "Moodymann",
+      "djs": [
+        "carl-craig",
+        "moodymann"
+      ],
+      "tracks": [
+        "Got 2 Make It",
+        "Shades Of Jae",
+        "J.A.N."
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "artist": "Inner City",
+      "djs": [
+        "carl-craig",
+        "mark-broom"
+      ],
+      "tracks": [
+        "Good Life",
+        "Goodlife (Killa Mix)"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "artist": "Daft Punk",
+      "djs": [
+        "cassius",
+        "ian-pooley-paloma"
+      ],
+      "tracks": [
+        "Burnin’  w/ Daft Punk - Technologic (Acapella)",
+        "Musique"
+      ],
+      "sets": [
+        "cassius-cercle-2017",
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "artist": "Dj Koze",
+      "djs": [
+        "dj-koze-various",
+        "four-tet"
+      ],
+      "tracks": [
+        "All The Time",
+        "Pick Up",
+        "Ich Schlafe Auf Dem Ruecken"
+      ],
+      "sets": [
+        "dj-koze-various",
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "artist": "Special Request",
+      "djs": [
+        "etapp-kyle",
+        "peggy-gou"
+      ],
+      "tracks": [
+        "237,0000 Miles",
+        "Reset It (Head High Dirt Mix)"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023",
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "artist": "Ben Sims",
+      "djs": [
+        "floorplan",
+        "ian-pooley-paloma"
+      ],
+      "tracks": [
+        "New Blood (Robert Hood Mix)",
+        "Dollar Bill Y'all (Vocal Mix)",
+        "Love",
+        "Love & Hurt (Gary Beck Remix)",
+        "Raise Your Hands"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015",
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "artist": "Frankie Knuckles",
+      "djs": [
+        "floorplan",
+        "frankie-knuckles"
+      ],
+      "tracks": [
+        "Get Over U (Gifted Souls Remix)",
+        "Bourgie Bourgie (A Director's Cut Exclusive)",
+        "Get Over U (Rober Gaez 'Mustache' Mix)",
+        "Let's Stay Home (Director's Cut Classic Mix)"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015",
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "artist": "Faze Action",
+      "djs": [
+        "folamour",
+        "tiger-woods"
+      ],
+      "tracks": [
+        "Mangwana",
+        "Magic Touch (FA Paradise 89 House Mix)"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020",
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "artist": "Barbara Tucker",
+      "djs": [
+        "honey-dijon",
+        "masters-at-work"
+      ],
+      "tracks": [
+        "I Get Lifted (The Bar Dub)",
+        "Beautiful People (Underground Network Mix)"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025",
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "artist": "Harry Romero",
+      "djs": [
+        "honey-dijon",
+        "seth-troxler"
+      ],
+      "tracks": [
+        "Mood Vision",
+        "Get Deep"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025",
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "artist": "Honey Dijon",
+      "djs": [
+        "honey-dijon",
+        "kerri-chandler"
+      ],
+      "tracks": [
+        "The Nightlife (Round And Round Remix)",
+        "Downtown (Louie Vega Extended Raw Dub Mix)"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025",
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "artist": "Jovonn",
+      "djs": [
+        "ian-pooley-hor",
+        "kerri-chandler"
+      ],
+      "tracks": [
+        "Eclipse",
+        "Hesperia Soul (Main Mix)",
+        "Random (Extended Mix)"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023",
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "artist": "Paul Johnson",
+      "djs": [
+        "ian-pooley-hor",
+        "peggy-gou"
+      ],
+      "tracks": [
+        "I Got Rhythm",
+        "Come On Children (Remix)"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "artist": "Kerri Chandler",
+      "djs": [
+        "ian-pooley-paloma",
+        "kerri-chandler"
+      ],
+      "tracks": [
+        "Last Man Up",
+        "Atmospheric Beats",
+        "You Get Lost In It (The Warehouse Project)",
+        "Change Your Mind (District 8) (Full Vocal)",
+        "Prayer (623 Again Vocal)",
+        "Never Thought (Printworks) (Main Vocal Mix)",
+        "I Feel It",
+        "So Let The Wind Come"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023",
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "artist": "Earth People",
+      "djs": [
+        "joe-claussell",
+        "masters-at-work"
+      ],
+      "tracks": [
+        "Dance"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014",
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "artist": "Ron Trent",
+      "djs": [
+        "joe-claussell",
+        "larry-heard-mr-fingers"
+      ],
+      "tracks": [
+        "In Time",
+        "Deep Down (Fingers Remix)"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014",
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "artist": "Masters At Work",
+      "djs": [
+        "kerri-chandler",
+        "masters-at-work"
+      ],
+      "tracks": [
+        "I Can't Get No Sleep (Ken/Lou 12\")",
+        "I Can't Get No Sleep (Ken/Lou 12 Inch)",
+        "To Be In Love (Original MAW Mix)"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022",
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "artist": "Peven Everett",
+      "djs": [
+        "kerri-chandler",
+        "motor-city-drum-ensemble"
+      ],
+      "tracks": [
+        "Special (Timmy Regisford Remix)",
+        "Put Your Back Into It"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022",
+        "mcde-dekmantel-2014"
+      ]
+    },
+    {
+      "artist": "Dennis Ferrer",
+      "djs": [
+        "kerri-chandler",
+        "palms-trax"
+      ],
+      "tracks": [
+        "Underground Is My Home",
+        "Reach 4 Freedom (Dennis Ferrer Vocal Mix)",
+        "Reach 4 Freedom (DF's vocal mix"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022",
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "artist": "Kettama",
+      "djs": [
+        "kettama",
+        "mall-grab"
+      ],
+      "tracks": [
+        "Yosemite",
+        "Sort It Out",
+        "If U Want My Heart (Ft.KLP)",
+        "It Gets Better (Forever Mix)",
+        "Man With the Second Face (unreleased)",
+        "Sort it Out",
+        "Rok Da House",
+        "Feel Emotion"
+      ],
+      "sets": [
+        "kettama-br-london-2025",
+        "kettama-br-london",
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "artist": "Maceo Plex",
+      "djs": [
+        "laurent-garnier",
+        "maceo-plex"
+      ],
+      "tracks": [
+        "Solar Detroit",
+        "Solitary Daze"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon",
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "artist": "Marshall Jefferson",
+      "djs": [
+        "masters-at-work",
+        "moodymann"
+      ],
+      "tracks": [
+        "Move Your Body",
+        "The House Music Anthem - Dub Your Body"
+      ],
+      "sets": [
+        "maw-br-london-2014",
+        "moodymann-rbma-2010"
+      ]
+    }
+  ],
+  "venue_networks": {
+    "Dekmantel Festival, Amsterdam": {
+      "djs": [
+        "avalon-emerson",
+        "call-super",
+        "honey-dijon",
+        "hunee",
+        "motor-city-drum-ensemble",
+        "palms-trax",
+        "young-marco"
+      ],
+      "sets": [
+        "avalon-emerson-dekmantel-2025",
+        "call-super-br-dekmantel-2015",
+        "honey-dijon-dekmantel-2025",
+        "hunee-br-dekmantel-2015",
+        "mcde-dekmantel-2014",
+        "palms-trax-dekmantel-2018",
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    "Boiler Room, New York City": {
+      "djs": [
+        "floating-points",
+        "frankie-knuckles",
+        "kerri-chandler"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr",
+        "frankie-knuckles-br-nyc",
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    "Boiler Room, London": {
+      "djs": [
+        "four-tet",
+        "kettama",
+        "masters-at-work"
+      ],
+      "sets": [
+        "four-tet-br-london-2015",
+        "kettama-br-london",
+        "maw-br-london-2014"
+      ]
+    }
+  },
+  "label_affinity": {
+    "Nite Grooves": {
+      "djs": [
+        "chaos-in-the-cbd",
+        "kerri-chandler"
+      ],
+      "tracks": [
+        {
+          "artist": "Stephanie Cooke",
+          "title": "Here With My Best Friend (Louie Vega Drumz)",
+          "djId": "chaos-in-the-cbd",
+          "setId": "chaos-in-the-cbd-br-glitch-2022"
+        },
+        {
+          "artist": "Kerri Chandler",
+          "title": "So Let The Wind Come",
+          "djId": "kerri-chandler",
+          "setId": "kerri-chandler-br-nyc-136"
+        }
+      ]
+    },
+    "Ultra": {
+      "djs": [
+        "folamour",
+        "kerri-chandler"
+      ],
+      "tracks": [
+        {
+          "artist": "Ten City",
+          "title": "Be Free (Emmaculate & Shannon Chambers Mix)",
+          "djId": "folamour",
+          "setId": "folamour-cercle-geneva-2023"
+        },
+        {
+          "artist": "Ten City",
+          "title": "Be Free (Emmaculate & Shannon Chambers Remix)",
+          "djId": "folamour",
+          "setId": "folamour-lost-paradise-2022"
+        },
+        {
+          "artist": "Terry Hunter ft. Devine Brown",
+          "title": "Angel",
+          "djId": "kerri-chandler",
+          "setId": "kerri-chandler-br-nyc-136"
+        }
+      ]
+    }
+  },
+  "genre_bridges": {
+    "Deep House": {
+      "djs": [
+        "chaos-in-the-cbd",
+        "david-august",
+        "kerri-chandler"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022",
+        "david-august-br-berlin-2014",
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    "Techno": {
+      "djs": [
+        "david-august",
+        "floorplan",
+        "helena-hauff",
+        "mall-grab",
+        "peggy-gou"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014",
+        "floorplan-weather-paris-2015",
+        "helena-hauff-br-dekmantel-2017",
+        "mall-grab-br-melbourne-2022",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    "House": {
+      "djs": [
+        "folamour",
+        "hunee",
+        "kettama",
+        "mall-grab",
+        "peggy-gou"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022",
+        "folamour-br-fly-edinburgh-2019",
+        "folamour-br-sugar-mountain-2024",
+        "folamour-cercle-geneva-2023",
+        "folamour-complex-sessions-074-2023",
+        "folamour-lost-paradise-2022",
+        "folamour-polaris-verbier-2020",
+        "folamour-yuma-coachella-2024",
+        "hunee-br-dekmantel-2015",
+        "kettama-br-london-2025",
+        "mall-grab-br-melbourne-2022",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    "Disco": {
+      "djs": [
+        "folamour",
+        "hunee"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022",
+        "folamour-br-fly-edinburgh-2019",
+        "folamour-cercle-geneva-2023",
+        "folamour-dj-mag-hq-2019",
+        "folamour-lost-paradise-2022",
+        "folamour-polaris-verbier-2020",
+        "folamour-yuma-coachella-2024",
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    "Electro": {
+      "djs": [
+        "helena-hauff",
+        "peggy-gou"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    "Garage": {
+      "djs": [
+        "kerri-chandler",
+        "kettama"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kettama-br-london-2025"
+      ]
+    }
+  },
+  "super_connectors": [
+    {
+      "dj_id": "masters-at-work",
+      "name": "Masters At Work",
+      "connection_count": 6,
+      "shared_with": [
+        "joe-claussell",
+        "floorplan",
+        "honey-dijon",
+        "kerri-chandler",
+        "moodymann"
+      ]
+    },
+    {
+      "dj_id": "kerri-chandler",
+      "name": "Kerri Chandler",
+      "connection_count": 6,
+      "shared_with": [
+        "honey-dijon",
+        "ian-pooley-hor",
+        "ian-pooley-paloma",
+        "masters-at-work",
+        "motor-city-drum-ensemble",
+        "palms-trax"
+      ]
+    },
+    {
+      "dj_id": "ame",
+      "name": "Ame",
+      "connection_count": 5,
+      "shared_with": [
+        "dixon",
+        "alex-do-clr-305",
+        "ian-pooley-hor",
+        "ian-pooley-paloma"
+      ]
+    },
+    {
+      "dj_id": "ben-ufo",
+      "name": "Ben Ufo",
+      "connection_count": 5,
+      "shared_with": [
+        "kink",
+        "pangaea",
+        "four-tet"
+      ]
+    },
+    {
+      "dj_id": "ian-pooley-paloma",
+      "name": "Ian Pooley Paloma",
+      "connection_count": 5,
+      "shared_with": [
+        "ame",
+        "ian-pooley-hor",
+        "carl-cox",
+        "palms-trax",
+        "cassius",
+        "floorplan",
+        "kerri-chandler"
+      ]
+    },
+    {
+      "dj_id": "carl-craig",
+      "name": "Carl Craig",
+      "connection_count": 4,
+      "shared_with": [
+        "seth-troxler",
+        "moodymann",
+        "mark-broom"
+      ]
+    },
+    {
+      "dj_id": "seth-troxler",
+      "name": "Seth Troxler",
+      "connection_count": 4,
+      "shared_with": [
+        "carl-craig",
+        "call-super",
+        "shonky-b2b-dan-ghenacia",
+        "honey-dijon"
+      ]
+    },
+    {
+      "dj_id": "joe-claussell",
+      "name": "Joe Claussell",
+      "connection_count": 4,
+      "shared_with": [
+        "masters-at-work",
+        "floorplan",
+        "larry-heard-mr-fingers"
+      ]
+    },
+    {
+      "dj_id": "alex-do-clr-305",
+      "name": "Alex Do Clr 305",
+      "connection_count": 4,
+      "shared_with": [
+        "call-super",
+        "mark-broom",
+        "shonky-b2b-dan-ghenacia",
+        "ame"
+      ]
+    },
+    {
+      "dj_id": "call-super",
+      "name": "Call Super",
+      "connection_count": 4,
+      "shared_with": [
+        "alex-do-clr-305",
+        "etapp-kyle",
+        "floating-points",
+        "seth-troxler",
+        "shonky-b2b-dan-ghenacia",
+        "larry-heard-mr-fingers"
+      ]
+    },
+    {
+      "dj_id": "dixon",
+      "name": "Dixon",
+      "connection_count": 3,
+      "shared_with": [
+        "ame"
+      ]
+    },
+    {
+      "dj_id": "four-tet",
+      "name": "Four Tet",
+      "connection_count": 3,
+      "shared_with": [
+        "dj-koze-various",
+        "ben-ufo"
+      ]
+    },
+    {
+      "dj_id": "ian-pooley-hor",
+      "name": "Ian Pooley Hor",
+      "connection_count": 3,
+      "shared_with": [
+        "ame",
+        "ian-pooley-paloma",
+        "kerri-chandler",
+        "peggy-gou"
+      ]
+    },
+    {
+      "dj_id": "floorplan",
+      "name": "Floorplan",
+      "connection_count": 3,
+      "shared_with": [
+        "ian-pooley-paloma",
+        "frankie-knuckles",
+        "joe-claussell",
+        "masters-at-work"
+      ]
+    },
+    {
+      "dj_id": "honey-dijon",
+      "name": "Honey Dijon",
+      "connection_count": 3,
+      "shared_with": [
+        "masters-at-work",
+        "seth-troxler",
+        "kerri-chandler"
+      ]
+    },
+    {
+      "dj_id": "kink",
+      "name": "Kink",
+      "connection_count": 2,
+      "shared_with": [
+        "ben-ufo"
+      ]
+    },
+    {
+      "dj_id": "pangaea",
+      "name": "Pangaea",
+      "connection_count": 2,
+      "shared_with": [
+        "ben-ufo"
+      ]
+    },
+    {
+      "dj_id": "dj-koze-various",
+      "name": "Dj Koze Various",
+      "connection_count": 2,
+      "shared_with": [
+        "four-tet"
+      ]
+    },
+    {
+      "dj_id": "mark-broom",
+      "name": "Mark Broom",
+      "connection_count": 2,
+      "shared_with": [
+        "alex-do-clr-305",
+        "carl-craig"
+      ]
+    },
+    {
+      "dj_id": "shonky-b2b-dan-ghenacia",
+      "name": "Shonky B2b Dan Ghenacia",
+      "connection_count": 2,
+      "shared_with": [
+        "alex-do-clr-305",
+        "call-super",
+        "seth-troxler"
+      ]
+    },
+    {
+      "dj_id": "cassius",
+      "name": "Cassius",
+      "connection_count": 2,
+      "shared_with": [
+        "avalon-emerson",
+        "ian-pooley-paloma"
+      ]
+    },
+    {
+      "dj_id": "etapp-kyle",
+      "name": "Etapp Kyle",
+      "connection_count": 2,
+      "shared_with": [
+        "call-super",
+        "floating-points",
+        "peggy-gou"
+      ]
+    },
+    {
+      "dj_id": "larry-heard-mr-fingers",
+      "name": "Larry Heard Mr Fingers",
+      "connection_count": 2,
+      "shared_with": [
+        "call-super",
+        "joe-claussell"
+      ]
+    },
+    {
+      "dj_id": "carl-cox",
+      "name": "Carl Cox",
+      "connection_count": 2,
+      "shared_with": [
+        "ian-pooley-paloma",
+        "palms-trax",
+        "chaos-in-the-cbd"
+      ]
+    },
+    {
+      "dj_id": "palms-trax",
+      "name": "Palms Trax",
+      "connection_count": 2,
+      "shared_with": [
+        "carl-cox",
+        "ian-pooley-paloma",
+        "kerri-chandler"
+      ]
+    },
+    {
+      "dj_id": "moodymann",
+      "name": "Moodymann",
+      "connection_count": 2,
+      "shared_with": [
+        "carl-craig",
+        "masters-at-work"
+      ]
+    },
+    {
+      "dj_id": "peggy-gou",
+      "name": "Peggy Gou",
+      "connection_count": 2,
+      "shared_with": [
+        "etapp-kyle",
+        "ian-pooley-hor"
+      ]
+    },
+    {
+      "dj_id": "avalon-emerson",
+      "name": "Avalon Emerson",
+      "connection_count": 1,
+      "shared_with": [
+        "cassius"
+      ]
+    },
+    {
+      "dj_id": "floating-points",
+      "name": "Floating Points",
+      "connection_count": 1,
+      "shared_with": [
+        "call-super",
+        "etapp-kyle"
+      ]
+    },
+    {
+      "dj_id": "chaos-in-the-cbd",
+      "name": "Chaos In The CBD",
+      "connection_count": 1,
+      "shared_with": [
+        "carl-cox"
+      ]
+    },
+    {
+      "dj_id": "frankie-knuckles",
+      "name": "Frankie Knuckles",
+      "connection_count": 1,
+      "shared_with": [
+        "floorplan"
+      ]
+    },
+    {
+      "dj_id": "folamour",
+      "name": "Folamour",
+      "connection_count": 1,
+      "shared_with": [
+        "tiger-woods"
+      ]
+    },
+    {
+      "dj_id": "tiger-woods",
+      "name": "Tiger Woods",
+      "connection_count": 1,
+      "shared_with": [
+        "folamour"
+      ]
+    },
+    {
+      "dj_id": "motor-city-drum-ensemble",
+      "name": "Motor City Drum Ensemble",
+      "connection_count": 1,
+      "shared_with": [
+        "kerri-chandler"
+      ]
+    },
+    {
+      "dj_id": "kettama",
+      "name": "KETTAMA",
+      "connection_count": 1,
+      "shared_with": [
+        "mall-grab"
+      ]
+    },
+    {
+      "dj_id": "mall-grab",
+      "name": "Mall Grab",
+      "connection_count": 1,
+      "shared_with": [
+        "kettama"
+      ]
+    },
+    {
+      "dj_id": "laurent-garnier",
+      "name": "Laurent Garnier",
+      "connection_count": 1,
+      "shared_with": [
+        "maceo-plex"
+      ]
+    },
+    {
+      "dj_id": "maceo-plex",
+      "name": "Maceo Plex",
+      "connection_count": 1,
+      "shared_with": [
+        "laurent-garnier"
+      ]
+    }
+  ],
+  "total_shared_tracks": 7,
+  "total_shared_artists": 39,
+  "total_connections": 46,
+  "generated_at": "2026-05-29T16:24:04.404Z"
 }

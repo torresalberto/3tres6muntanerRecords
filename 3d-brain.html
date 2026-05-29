@@ -1296,6 +1296,87 @@ const MULTI_DJ_TRACKS = [
 
     // Start
     animate();
+
+    // ======== ASYNC ENRICHMENT FROM CROSS-REFERENCES ========
+    (async function enrichBrain() {
+      try {
+        const res = await fetch('/data/djs/cross-references.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.shared_artists || data.shared_artists.length === 0) return;
+
+        const artistLinkSet = new Set();
+        let artistLinksAdded = 0;
+
+        for (const sa of data.shared_artists) {
+          const djs = sa.djs;
+          for (let i = 0; i < djs.length; i++) {
+            for (let j = i + 1; j < djs.length; j++) {
+              const a = djs[i], b = djs[j];
+              const trackKey = sa.artist.toLowerCase();
+              const key = [a, b].sort().join('|') + '::artist::' + trackKey;
+              // Skip if already connected by exact track
+              if (linkSet.has(key)) continue;
+              if (artistLinkSet.has(key)) continue;
+              artistLinkSet.add(key);
+
+              const na = nodes.find(n => n.id === a);
+              const nb = nodes.find(n => n.id === b);
+              if (na && nb) {
+                const linkObj = {
+                  source: na, target: nb,
+                  track: sa.artist + ' (shared artist)',
+                  sets: sa.sets.slice(0, 4),
+                  type: 'artist'
+                };
+                links.push(linkObj);
+
+                // Create SVG element with purple color
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('stroke', 'rgba(124,77,255,0.35)');
+                line.setAttribute('stroke-width', '1');
+                line.setAttribute('stroke-dasharray', '2,4');
+                line.style.transition = 'stroke 0.3s, stroke-width 0.3s, opacity 0.3s';
+                line.dataset.track = linkObj.track;
+                linkGroup.appendChild(line);
+                linkEls.push({ el: line, data: linkObj });
+
+                na.connections++;
+                nb.connections++;
+                artistLinksAdded++;
+              }
+            }
+          }
+        }
+
+        // Update stats
+        document.getElementById('statConns').textContent = links.length;
+        if (artistLinksAdded > 0) {
+          const statsEl = document.getElementById('networkStats');
+          // Avoid duplicate append on hot reload
+          if (!document.getElementById('artistBridgeStat')) {
+            const artistSpan = document.createElement('span');
+            artistSpan.id = 'artistBridgeStat';
+            artistSpan.innerHTML = `<strong style="color:#7c4dff;">${artistLinksAdded}</strong> artist bridges`;
+            statsEl.appendChild(artistSpan);
+          }
+        }
+
+        // Add connection type legend
+        const legendItems = document.getElementById('legendItems');
+        if (legendItems && !document.getElementById('connLegendArtist')) {
+          const artistItem = document.createElement('div');
+          artistItem.id = 'connLegendArtist';
+          artistItem.className = 'genre-item';
+          artistItem.innerHTML = `<span class="genre-color" style="background:rgba(124,77,255,0.8)"></span>Shared Artist`;
+          legendItems.appendChild(artistItem);
+        }
+
+        console.log(`🧠 Brain enriched: +${artistLinksAdded} artist bridges, ${data.total_shared_tracks} shared tracks, ${data.total_shared_artists} shared artists from cross-references`);
+      } catch (e) {
+        console.warn('Brain enrichment failed:', e);
+      }
+    })();
   </script>
 
   <!-- Footer -->

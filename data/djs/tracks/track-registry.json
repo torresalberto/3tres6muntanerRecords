@@ -1,3 +1,7921 @@
 {
-  "tracks": []
+  "tracks": [
+    {
+      "id": "tr_1",
+      "title": "Split Your Infinities",
+      "artist": "Boards Of Canada",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_2",
+      "title": "Chemical Fever (Substance Remix)",
+      "artist": "Emika",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_3",
+      "title": "Head Channel",
+      "artist": "Ed Davenport",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_4",
+      "title": "Warchild (Adam Beyer Remix 1)",
+      "artist": "Damon Wild",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_5",
+      "title": "Automatic",
+      "artist": "Jeff Mills",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_6",
+      "title": "Flash (Carl Craig Paperclip People Mix)",
+      "artist": "Green Velvet",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_7",
+      "title": "It One Jah (Surgeon Remix)",
+      "artist": "The Advent",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_8",
+      "title": "Detatched",
+      "artist": "James Ruskin",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_9",
+      "title": "Lost In Time",
+      "artist": "Alex.Do",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_10",
+      "title": "Glim",
+      "artist": "Recondite",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_11",
+      "title": "Gol",
+      "artist": "Donato Dozzy",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_12",
+      "title": "EXpand (Tale Of Us Remix)",
+      "artist": "Plastikman",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_13",
+      "title": "Against The Wall",
+      "artist": "Function",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_14",
+      "title": "Numb",
+      "artist": "Andy Stott",
+      "played_by": [
+        "alex-do-clr-305"
+      ],
+      "sets": [
+        "alex-do-clr-305"
+      ]
+    },
+    {
+      "id": "tr_15",
+      "title": "Asa",
+      "artist": "Ame",
+      "played_by": [
+        "ame",
+        "dixon"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012",
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_16",
+      "title": "Shadow Of Love",
+      "artist": "Ame & Curses",
+      "played_by": [
+        "ame",
+        "dixon"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012",
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_17",
+      "title": "Diamonds On The Soles Of Her Shoes (Ame Private Remix)",
+      "artist": "Paul Simon",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "id": "tr_18",
+      "title": "CompuRhythm (Dixon 4/4 Treatment)",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "id": "tr_19",
+      "title": "Drgn",
+      "artist": "Recondite",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "id": "tr_20",
+      "title": "Madeleine",
+      "artist": "Konstantin Sibold",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "id": "tr_21",
+      "title": "Shame",
+      "artist": "Monoloc",
+      "played_by": [
+        "ame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ]
+    },
+    {
+      "id": "tr_22",
+      "title": "Watamu Beach Rework",
+      "artist": "Moritz Von Oswald",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_23",
+      "title": "Story",
+      "artist": "Audio Werner",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_24",
+      "title": "Padlab",
+      "artist": "Klanggut",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_25",
+      "title": "Close To The Edge (The Mole Remix)",
+      "artist": "Shonky & Dan Ghenacia",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_26",
+      "title": "Jogger",
+      "artist": "Rowlanz",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_27",
+      "title": "Pos",
+      "artist": "Dave Barker",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_28",
+      "title": "Trinidad",
+      "artist": "Apollonia",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_29",
+      "title": "Need Ur Love (Stalagmite Mix)",
+      "artist": "Callisto",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_30",
+      "title": "Bleep Blop Robot",
+      "artist": "The Mole",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_31",
+      "title": "I've Been There",
+      "artist": "Nail",
+      "played_by": [
+        "apollonia"
+      ],
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ]
+    },
+    {
+      "id": "tr_32",
+      "title": "Just A Little Bit (Edit)",
+      "artist": "is COHN",
+      "played_by": [
+        "avalon-emerson"
+      ],
+      "sets": [
+        "avalon-emerson-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_33",
+      "title": "I'm Not",
+      "artist": "is Panda bear",
+      "played_by": [
+        "avalon-emerson"
+      ],
+      "sets": [
+        "avalon-emerson-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_34",
+      "title": "music is moving, as very short transition into something else that gets layered on top",
+      "artist": "is TSVI",
+      "played_by": [
+        "avalon-emerson"
+      ],
+      "sets": [
+        "avalon-emerson-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_35",
+      "title": "Cherry",
+      "artist": "Tiga",
+      "played_by": [
+        "avalon-emerson"
+      ],
+      "sets": [
+        "avalon-emerson-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_36",
+      "title": "Fumbo",
+      "artist": "Mim Suleiman",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_37",
+      "title": "Chant (Pearson Sound Edit)",
+      "artist": "Or:la",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_38",
+      "title": "Acuyuye",
+      "artist": "Olof Dreijer & Diva Cruz",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_39",
+      "title": "Squashy Track",
+      "artist": "Breaka",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_40",
+      "title": "Srekye",
+      "artist": "O'Flynn",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_41",
+      "title": "Ale By The Sea",
+      "artist": "Binary Digit",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_42",
+      "title": "Kazan",
+      "artist": "KiNK",
+      "played_by": [
+        "ben-ufo",
+        "kink"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025",
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "id": "tr_43",
+      "title": "Shinogi",
+      "artist": "Skream & KODO",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_44",
+      "title": "Router",
+      "artist": "Pangaea",
+      "played_by": [
+        "ben-ufo",
+        "pangaea"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025",
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_45",
+      "title": "Untitled",
+      "artist": "Pearson Sound",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_46",
+      "title": "Walkin' With Jah",
+      "artist": "Digital Mystikz",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_47",
+      "title": "Fuk Tha 101",
+      "artist": "Addison Groove",
+      "played_by": [
+        "ben-ufo"
+      ],
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ]
+    },
+    {
+      "id": "tr_48",
+      "title": "Flash",
+      "artist": "Fix",
+      "played_by": [
+        "blessed-madonna"
+      ],
+      "sets": [
+        "blessed-br"
+      ]
+    },
+    {
+      "id": "tr_49",
+      "title": "DJ's Take Control",
+      "artist": "SL2",
+      "played_by": [
+        "blessed-madonna"
+      ],
+      "sets": [
+        "blessed-br"
+      ]
+    },
+    {
+      "id": "tr_50",
+      "title": "Menergy Bomb!!!",
+      "artist": "Patrick Cowley",
+      "played_by": [
+        "blessed-madonna"
+      ],
+      "sets": [
+        "blessed-br"
+      ]
+    },
+    {
+      "id": "tr_51",
+      "title": "My Name Is Caroline or another remix of Hamilton Bohannon \" Me & the gang \"",
+      "artist": "could be Babert",
+      "played_by": [
+        "blessed-madonna"
+      ],
+      "sets": [
+        "blessed-br"
+      ]
+    },
+    {
+      "id": "tr_52",
+      "title": "All I Wanna Do",
+      "artist": "Dance System",
+      "played_by": [
+        "blessed-madonna"
+      ],
+      "sets": [
+        "blessed-br"
+      ]
+    },
+    {
+      "id": "tr_53",
+      "title": "Air Strike",
+      "artist": "Aubrey",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_54",
+      "title": "Mimoun Marhaba",
+      "artist": "Floating Points & Maalem Mahmoud Ghania",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_55",
+      "title": "Fade II Black",
+      "artist": "Kings Of Tomorrow",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_56",
+      "title": "One Bedroom Apartment",
+      "artist": "Terrence Dixon",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_57",
+      "title": "Mobility",
+      "artist": "Moby",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_58",
+      "title": "Transmisiones Ferox",
+      "artist": "Boards Of Canada",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_59",
+      "title": "MPH",
+      "artist": "Joe",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_60",
+      "title": "Twilight (Remix)",
+      "artist": "Maze feat. Frankie Beverly",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_61",
+      "title": "Double Joint (Part 2)",
+      "artist": "Levon Vincent",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_62",
+      "title": "Shena (T++ Remix)",
+      "artist": "Marcel Dettmann",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_63",
+      "title": "Sueno Latino (Illusion First Mix By Derrick May)",
+      "artist": "Sueno Latino",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_64",
+      "title": "Over The Ice",
+      "artist": "The Field",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_65",
+      "title": "Demons Theme",
+      "artist": "LTJ Bukem",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_66",
+      "title": "Shot Rhythm",
+      "artist": "Shed",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_67",
+      "title": "Nuna",
+      "artist": "Siu Mata",
+      "played_by": [
+        "call-super"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_68",
+      "title": "Muzik Xpress",
+      "artist": "X-Press 2 feat. James Yuill",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_69",
+      "title": "Can You Feel It (Steve Bug Re-Dub)",
+      "artist": "Chez Damier",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_70",
+      "title": "Carioca",
+      "artist": "Sergio Fernandez",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_71",
+      "title": "Pain In The Ass",
+      "artist": "Elio Riso",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_72",
+      "title": "Calypso",
+      "artist": "Round Table Knights & Bauchamp",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_73",
+      "title": "Positive Vibes",
+      "artist": "Joe Brunning",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_74",
+      "title": "Puerto Rico Vibe (Robbie Rivera Original Mix)",
+      "artist": "The Rivera Project",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_75",
+      "title": "We Can Do This All Night",
+      "artist": "Jim Rivers",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_76",
+      "title": "Jumping (Deep House Mix)",
+      "artist": "Trevor Rockcliffe",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_77",
+      "title": "El Nino Loco (Turkana Remix)",
+      "artist": "Stefano Frisoni",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_78",
+      "title": "Blue Monday (Original 12 Mix)",
+      "artist": "New Order",
+      "played_by": [
+        "carl-cox"
+      ],
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ]
+    },
+    {
+      "id": "tr_79",
+      "title": "Blackwater",
+      "artist": "Octave One",
+      "played_by": [
+        "carl-craig",
+        "seth-troxler"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "id": "tr_80",
+      "title": "Got 2 Make It",
+      "artist": "Moodymann",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_81",
+      "title": "Shades Of Jae",
+      "artist": "Moodymann feat. Roberta Sweed",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_82",
+      "title": "Another Earth",
+      "artist": "Tale Of Us",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_83",
+      "title": "Neptune",
+      "artist": "Model 500",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_84",
+      "title": "Detox",
+      "artist": "Loco Dice",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_85",
+      "title": "Angola",
+      "artist": "Carl Craig & Pepe Bradock",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_86",
+      "title": "Good Life",
+      "artist": "Inner City",
+      "played_by": [
+        "carl-craig"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ]
+    },
+    {
+      "id": "tr_87",
+      "title": "I love U So",
+      "artist": "Cassius",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_88",
+      "title": "Woman Of The Ghetto (Catz’N Dogs Beat Mix)",
+      "artist": "Marlena Shaw",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_89",
+      "title": "You Played Me (Original Mix)",
+      "artist": "BrianBerg & Sam Simmon",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_90",
+      "title": "My Feeling For Yu (Acapella)",
+      "artist": "Sebastien Drums & Avicii",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_91",
+      "title": "Party Time (Original Mix) [URBANA RECORDINGS] w/ Fingers Inc - My House (Acapell",
+      "artist": "Son of 8",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_92",
+      "title": "Burnin’  w/ Daft Punk - Technologic (Acapella)",
+      "artist": "Daft Punk",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_93",
+      "title": "I Can’t Wait - (Roog & Dennis Quin Remix)",
+      "artist": "David Penn, Hosse",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_94",
+      "title": "Round Table Knights",
+      "artist": "Calypso",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_95",
+      "title": "Take Care (Mr E Remix)",
+      "artist": "EDUKE",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_96",
+      "title": "Dangerous",
+      "artist": "Kid Enigma",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_97",
+      "title": "It’s Set To Groove (Downtown Mix)",
+      "artist": "Full Intention",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_98",
+      "title": "Go Up (Butch Remix)",
+      "artist": "Cassius",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_99",
+      "title": "What Time Is Love (Live at SSL mix)",
+      "artist": "Lifelike & Kris Menace",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_100",
+      "title": "Get Phunky (Nick Curly Vocal Remix)",
+      "artist": "Mathias Kaden",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_101",
+      "title": "Woke (Jamie Jones Remix)",
+      "artist": "Tiga",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_102",
+      "title": "Tadpole  (Original Mix)",
+      "artist": "Luca Garboni & Andy J",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_103",
+      "title": "God Helps Those (Da 5 Mile Dub) [BASEMENT BOYS RECORDS] w/ M.I.A - Paper Planes ",
+      "artist": "Jasper St. Co ‎",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_104",
+      "title": "Ibifornia (Myd Remix)",
+      "artist": "Cassius",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_105",
+      "title": "Youngster (Original Mix)",
+      "artist": "Jay De Lys",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_106",
+      "title": "Feeling For You, not Avicii lol",
+      "artist": "is Cassius",
+      "played_by": [
+        "cassius"
+      ],
+      "sets": [
+        "cassius-cercle-2017"
+      ]
+    },
+    {
+      "id": "tr_107",
+      "title": "Cascades of Colour (Kiko Navarro 4 Hugo Re-Edit)",
+      "artist": "Ananda Project",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_108",
+      "title": "Tribal Trance",
+      "artist": "Music Freaks",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_109",
+      "title": "Burnin' (After Hours Mix)",
+      "artist": "The T - Collective",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_110",
+      "title": "Drummin",
+      "artist": "Alec Wizz",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_111",
+      "title": "Snake Way",
+      "artist": "The Absolute Family",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_112",
+      "title": "Groove 2 Me",
+      "artist": "Didier Sinclair & Dj Chris Pi",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022",
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_113",
+      "title": "Orange",
+      "artist": "Circulation",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_114",
+      "title": "Cruising",
+      "artist": "Funk 198",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_115",
+      "title": "Tremor",
+      "artist": "Trevor Rockcliffe",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_116",
+      "title": "G-Birth",
+      "artist": "Jerome",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022",
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_117",
+      "title": "Origin",
+      "artist": "Oliver Ho",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_118",
+      "title": "134",
+      "artist": "Oxia",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_119",
+      "title": "Mojito",
+      "artist": "R - Play",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_120",
+      "title": "Manalive",
+      "artist": "Devilfish & Roel Salemink",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_121",
+      "title": "Intro / Ambient",
+      "artist": "Chaos In The CBD",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-ballantines-lebanon"
+      ]
+    },
+    {
+      "id": "tr_122",
+      "title": "Here With My Best Friend (Louie Vega Drumz)",
+      "artist": "Stephanie Cooke",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_123",
+      "title": "Tribal Trance (Tribal Mix)",
+      "artist": "DJ Duke",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_124",
+      "title": "Boy (Girl (Boy Girl)",
+      "artist": "Modal",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_125",
+      "title": "Drummin'",
+      "artist": "Alec Wizz",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_126",
+      "title": "Snaky Way",
+      "artist": "The Absolute Family",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_127",
+      "title": "Orange (Mix A)",
+      "artist": "Circulation",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_128",
+      "title": "Raw Jackin'",
+      "artist": "A Jackin' Phreak",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_129",
+      "title": "Get Over",
+      "artist": "Olav Basoski",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_130",
+      "title": "Danses D'Afrique",
+      "artist": "Samuel L. Session",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_131",
+      "title": "Mojito",
+      "artist": "R-Play",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_132",
+      "title": "Manalive",
+      "artist": "Devilfish",
+      "played_by": [
+        "chaos-in-the-cbd"
+      ],
+      "sets": [
+        "chaos-in-the-cbd-br-glitch-2022"
+      ]
+    },
+    {
+      "id": "tr_133",
+      "title": "Last Day (David August Revision)",
+      "artist": "Kollektiv Turmstrasse",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_134",
+      "title": "Is It Because I'm Black (David August Reconstruction)",
+      "artist": "Syl Johnson",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_135",
+      "title": "Llorando (David August Edit)",
+      "artist": "Rebekah Del Rio",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_136",
+      "title": "Ingrid",
+      "artist": "David August",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_137",
+      "title": "Pulsing (David August Remix)",
+      "artist": "Tomas Barfod ft. Nina K",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_138",
+      "title": "Gotham (David August Edit)",
+      "artist": "Ten Walls",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_139",
+      "title": "Come Easy (David August Remix)",
+      "artist": "High Heels Breaker ft. Sarah Palin",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_140",
+      "title": "Yet Again (David August Remix)",
+      "artist": "Grizzly Bear",
+      "played_by": [
+        "david-august"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_141",
+      "title": "VOLCA",
+      "artist": "SBTRKT",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_142",
+      "title": "I Am Wavy",
+      "artist": "Ede & Nowa",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_143",
+      "title": "La Gustosa",
+      "artist": "Alex Medina",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_144",
+      "title": "Don't Break My Heart",
+      "artist": "Jimi Jules",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_145",
+      "title": "Stars (Mano Le Tough Remix)",
+      "artist": "Hunter/Game & Noah Kaluga",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_146",
+      "title": "Firmament",
+      "artist": "Deer Jade",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_147",
+      "title": "Tryna Jack My Style",
+      "artist": "Yet More",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_148",
+      "title": "Aus Music",
+      "artist": "MULYA",
+      "played_by": [
+        "dixon"
+      ],
+      "sets": [
+        "dixon-cercle-2024"
+      ]
+    },
+    {
+      "id": "tr_149",
+      "title": "All The Time",
+      "artist": "DJ Koze",
+      "played_by": [
+        "dj-koze-various",
+        "four-tet"
+      ],
+      "sets": [
+        "dj-koze-various",
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_150",
+      "title": "Pick Up",
+      "artist": "DJ Koze",
+      "played_by": [
+        "dj-koze-various"
+      ],
+      "sets": [
+        "dj-koze-various"
+      ]
+    },
+    {
+      "id": "tr_151",
+      "title": "Ich Schlafe Auf Dem Ruecken",
+      "artist": "DJ Koze",
+      "played_by": [
+        "dj-koze-various"
+      ],
+      "sets": [
+        "dj-koze-various"
+      ]
+    },
+    {
+      "id": "tr_152",
+      "title": "Stef Mendesidis",
+      "artist": "Profiler",
+      "played_by": [
+        "dj-pierre"
+      ],
+      "sets": [
+        "dj-pierre-br-chicago"
+      ]
+    },
+    {
+      "id": "tr_153",
+      "title": "det <3",
+      "artist": "bellz chi",
+      "played_by": [
+        "dj-pierre"
+      ],
+      "sets": [
+        "dj-pierre-br-chicago"
+      ]
+    },
+    {
+      "id": "tr_154",
+      "title": "The FUN Equations",
+      "artist": "Speedy J",
+      "played_by": [
+        "etapp-kyle"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
+    },
+    {
+      "id": "tr_155",
+      "title": "Expand",
+      "artist": "Samuli Kemppi",
+      "played_by": [
+        "etapp-kyle"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
+    },
+    {
+      "id": "tr_156",
+      "title": "237,0000 Miles",
+      "artist": "Special Request",
+      "played_by": [
+        "etapp-kyle"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
+    },
+    {
+      "id": "tr_157",
+      "title": "Transition",
+      "artist": "Galaxy 2 Galaxy",
+      "played_by": [
+        "etapp-kyle"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
+    },
+    {
+      "id": "tr_158",
+      "title": "Problems",
+      "artist": "Floating Points",
+      "played_by": [
+        "etapp-kyle"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
+    },
+    {
+      "id": "tr_159",
+      "title": "Fr3sh",
+      "artist": "Kareem Lofty",
+      "played_by": [
+        "etapp-kyle"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023"
+      ]
+    },
+    {
+      "id": "tr_160",
+      "title": "Ma Kedert Neseet",
+      "artist": "Fairouz",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_161",
+      "title": "Pourque Les Fruits Murissent Cet Été",
+      "artist": "Renaissance Ensemble",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_162",
+      "title": "Hindewhu (Whistle Solo)",
+      "artist": "The Ba-Benzele Pygmies",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_163",
+      "title": "Ouverture",
+      "artist": "Maxime Denuc",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_164",
+      "title": "Rucksturz",
+      "artist": "Agitation Free",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_165",
+      "title": "Everyday",
+      "artist": "Angie Stone",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_166",
+      "title": "(I Can) Deal With That",
+      "artist": "Dee Edwards",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_167",
+      "title": "By My Side",
+      "artist": "Pure Pleasure",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_168",
+      "title": "Stay With Me",
+      "artist": "Crystal Clear",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_169",
+      "title": "Between The Sheets",
+      "artist": "JC Lodge",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_170",
+      "title": "Real Love",
+      "artist": "Chevelle Franklin",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_171",
+      "title": "You, Yourself & You",
+      "artist": "Tiffany Villarreal",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_172",
+      "title": "Ain't No Woman",
+      "artist": "Melvin Sparks",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_173",
+      "title": "El Carreton",
+      "artist": "Conjunto Los Tic Tac",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_174",
+      "title": "A Nível De…",
+      "artist": "Joao Bosco",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_175",
+      "title": "Xangô É De Baê",
+      "artist": "João Donato",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_176",
+      "title": "Vida Agitada",
+      "artist": "Paulo Jeronimo",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_177",
+      "title": "Head Over",
+      "artist": "Allure feat. Az & Tone",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_178",
+      "title": "Everything That Shines",
+      "artist": "Maurice Moore",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_179",
+      "title": "La Ridd",
+      "artist": "Scott Grooves",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_180",
+      "title": "Fast Forward",
+      "artist": "Floating Points",
+      "played_by": [
+        "floating-points"
+      ],
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ]
+    },
+    {
+      "id": "tr_181",
+      "title": "The Pressure Pt.2",
+      "artist": "Sounds Of Blackness",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_182",
+      "title": "New Blood (Robert Hood Mix)",
+      "artist": "Ben Sims",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_183",
+      "title": "Never Grow Old",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015",
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_184",
+      "title": "Phobia",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_185",
+      "title": "Get Down",
+      "artist": "Gary Beck",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_186",
+      "title": "Dollar Bill Y'all (Vocal Mix)",
+      "artist": "Ben Sims",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_187",
+      "title": "Push On",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_188",
+      "title": "Club MCM (Mark Broom Re-Edit)",
+      "artist": "Club MCM",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_189",
+      "title": "Get Over U (Gifted Souls Remix)",
+      "artist": "Frankie Knuckles Pres. Directors Cut",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_190",
+      "title": "Chord Principle",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_191",
+      "title": "Let's Ride",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_192",
+      "title": "Hallelujah Anyway (Directors Cut Signature Praise)",
+      "artist": "Candi Staton",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015",
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_193",
+      "title": "Confess",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_194",
+      "title": "Rascal",
+      "artist": "Gary Beck",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_195",
+      "title": "Rays of Saturn (Robert Hood Remix)",
+      "artist": "Esteban Adame",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_196",
+      "title": "Bassline (Ben Sims 25th Anniversary Edit)",
+      "artist": "Kevin Saunderson",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_197",
+      "title": "French Kiss (Mark Broom Edit)",
+      "artist": "Lil Louis",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_198",
+      "title": "Good Life (Pig&Dan Less Is More Remix)",
+      "artist": "Kevin Saunderson Feat. Inner City",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_199",
+      "title": "Love",
+      "artist": "Ben Sims",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_200",
+      "title": "We Magnify His Name",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_201",
+      "title": "You Can Make It (B's Preacher Man Mix)",
+      "artist": "Shawn Christopher",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_202",
+      "title": "All Day (Robert Hood Remix)",
+      "artist": "Gingy & Bordello",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_203",
+      "title": "Shooting Stars (Ben Sims Dub Mix)",
+      "artist": "Mark Ambrose",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_204",
+      "title": "Love & Hurt (Gary Beck Remix)",
+      "artist": "Ben Sims",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_205",
+      "title": "Eclipse",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_206",
+      "title": "Ritual",
+      "artist": "Floorplan",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_207",
+      "title": "Reverse Processed",
+      "artist": "Ritzi Lee",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_208",
+      "title": "777 (Ascii Disko Remix)",
+      "artist": "Arnaud Rebotini",
+      "played_by": [
+        "floorplan"
+      ],
+      "sets": [
+        "floorplan-weather-paris-2015"
+      ]
+    },
+    {
+      "id": "tr_209",
+      "title": "Simple Song",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_210",
+      "title": "L.O.V.E. (Folamour Edit)",
+      "artist": "Demis Roussos",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_211",
+      "title": "I Know It Has Been Done Before",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022",
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_212",
+      "title": "Doug's Disco Theme",
+      "artist": "Doug Willis",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_213",
+      "title": "Barlia (Kulandjagnho)",
+      "artist": "Saraba",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_214",
+      "title": "The Journey",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_215",
+      "title": "Open Your Mind (Joey Negro Seeekret Mix)",
+      "artist": "Kleeer",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_216",
+      "title": "The Widow's Lament In Springtime",
+      "artist": "Parviz",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_217",
+      "title": "In Need Of That Phone",
+      "artist": "Underdog",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_218",
+      "title": "A Cegonha Me Deixou Em Madureira (Aroop Roy Edit)",
+      "artist": "Jorge Ben Jor",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_219",
+      "title": "Party On",
+      "artist": "Pure Energy",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_220",
+      "title": "St Moskov",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-bbc-radio1-residency-2022"
+      ]
+    },
+    {
+      "id": "tr_221",
+      "title": "Going Back To My Roots (Ziggy Phunk Re-Edit)",
+      "artist": "Odyssey",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_222",
+      "title": "Chega Mais (Imaginei Você Dançando) (Folamour Edit)",
+      "artist": "Banda Black Rio",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_223",
+      "title": "A Muto",
+      "artist": "Esa",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_224",
+      "title": "Fill Me Up",
+      "artist": "Elaine & Ellen",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_225",
+      "title": "Don't Oho",
+      "artist": "COEO",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_226",
+      "title": "Lovetime Guarantee",
+      "artist": "Fronzena Harris",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_227",
+      "title": "Midnight Mouse (Revised)",
+      "artist": "Mighty Mouse",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_228",
+      "title": "Time (Koko Paradisco Re-Edit)",
+      "artist": "Light Of The World",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_229",
+      "title": "Funky Disco Music (Original Edit)",
+      "artist": "Sean Smith & MC Edits",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_230",
+      "title": "A E I O U",
+      "artist": "Di Melo",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_231",
+      "title": "Parribean Disco",
+      "artist": "Cotonete & Dimitri From Paris",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_232",
+      "title": "Freedom! '90 (Remastered)",
+      "artist": "George Michael",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-fly-edinburgh-2019"
+      ]
+    },
+    {
+      "id": "tr_233",
+      "title": "Total Unison",
+      "artist": "D Stone",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024",
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_234",
+      "title": "Manifesto (Vocal)",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024"
+      ]
+    },
+    {
+      "id": "tr_235",
+      "title": "We Are One (Jazz-N-Groove Hands Up Vocal Remix)",
+      "artist": "Urban Blues Project ft. Bobby Pruitt",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024"
+      ]
+    },
+    {
+      "id": "tr_236",
+      "title": "Satisfy Your Soul (Extended Mix)",
+      "artist": "Da Lukas",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024",
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_237",
+      "title": "That's Right",
+      "artist": "Dam Swindle",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024",
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_238",
+      "title": "Small Town Boy (Supermini Mega Dub)",
+      "artist": "MoD, Luisen",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024",
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_239",
+      "title": "Straight From The Underground",
+      "artist": "Lone Dog",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024"
+      ]
+    },
+    {
+      "id": "tr_240",
+      "title": "Power Of Music",
+      "artist": "Bongoloverz ft. An-Tonic",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024"
+      ]
+    },
+    {
+      "id": "tr_241",
+      "title": "Pressure Makes Diamonds",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024"
+      ]
+    },
+    {
+      "id": "tr_242",
+      "title": "Vogue (DJ Meme Remix)",
+      "artist": "Madonna",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024",
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_243",
+      "title": "Fantazia",
+      "artist": "Melon Bomb",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar-mountain-2024"
+      ]
+    },
+    {
+      "id": "tr_244",
+      "title": "Total Unison x Folamour's Manifesto",
+      "artist": "D Stone",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_245",
+      "title": "We Are One (Jazz'N'Groove Hands Up Vocal Remix)",
+      "artist": "Urban Blues Project ft Bobby Pruitt",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_246",
+      "title": "Straight From The Underground",
+      "artist": "Løne Døg",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_247",
+      "title": "Tonic - Power Of Music",
+      "artist": "Bongoloverz ft An",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_248",
+      "title": "ID TBA",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_249",
+      "title": "ID TBA",
+      "artist": "Melon Bomb",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_250",
+      "title": "ID TBA That closing track 😭🥹❤‍🔥 please release the naaaame ♥",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_251",
+      "title": "Fantazia (iirc it was a free DL via their facebook page)",
+      "artist": "Melon Bomb",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_252",
+      "title": "Cowboy Bebop theme?",
+      "artist": "The seatbelts",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_253",
+      "title": "Vogue (Dj Meme Remix)!!I",
+      "artist": "Madonna",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-br-sugar"
+      ]
+    },
+    {
+      "id": "tr_254",
+      "title": "Ostavi Trag",
+      "artist": "September",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_255",
+      "title": "Express ft. The Ibibio Horns - Africa (My No. 1) (Captain Planet Remix)",
+      "artist": "General Ehi Duncan, The Africa Army",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_256",
+      "title": "Midnight Or Late Afternoon",
+      "artist": "Mike Simonetti",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_257",
+      "title": "You Can't Hide From The Boogie",
+      "artist": "Donna Washington",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_258",
+      "title": "I See The Light",
+      "artist": "Crown Heights Affair",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023",
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_259",
+      "title": "Fearless",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_260",
+      "title": "The Hustle Parisian",
+      "artist": "Cotonete, Dimitri From Paris",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_261",
+      "title": "Be Free (Emmaculate & Shannon Chambers Mix)",
+      "artist": "Ten City",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_262",
+      "title": "Voyage",
+      "artist": "Folamour ft. Amadou & Mariam",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023",
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_263",
+      "title": "Breeze",
+      "artist": "Easttown",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023",
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_264",
+      "title": "Paradiso",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_265",
+      "title": "Poundland Anthem",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_266",
+      "title": "Peace Now (Folamour Remix)",
+      "artist": "Udo Jürgens",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023",
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_267",
+      "title": "Get Another Love (Warren Clarke Dub Mix)",
+      "artist": "Kathy Brown",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_268",
+      "title": "For You (Original Demo Mix)",
+      "artist": "Jamie Lewis ft. Michael Watford",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_269",
+      "title": "Man Of Soul",
+      "artist": "Saison",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_270",
+      "title": "Happy (Folamour Remix)",
+      "artist": "Ferry Ultra ft. Gwen McCrae",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023",
+        "folamour-complex-sessions-074-2023",
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_271",
+      "title": "Bonifacio",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_272",
+      "title": "Feel My Love",
+      "artist": "Dasco",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023",
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_273",
+      "title": "Energy",
+      "artist": "Danny Snowden",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_274",
+      "title": "Post Tenebras Lux",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_275",
+      "title": "When A Piano Saves The Day",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-cercle-geneva-2023"
+      ]
+    },
+    {
+      "id": "tr_276",
+      "title": "Make A Move On Me",
+      "artist": "Dave Lee ZR & Joey Montenegro",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_277",
+      "title": "Akalelo",
+      "artist": "Joï",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_278",
+      "title": "Enchance",
+      "artist": "Easttown",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_279",
+      "title": "So In Love With You (Full Intention Remix)",
+      "artist": "Duke",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_280",
+      "title": "For You",
+      "artist": "Jamie Lewis ft. Michael Watford",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_281",
+      "title": "No Longer",
+      "artist": "Dub Syndicate Productions",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023"
+      ]
+    },
+    {
+      "id": "tr_282",
+      "title": "Maiden Voyage",
+      "artist": "Brian Auger's Oblivion Express",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_283",
+      "title": "Your Love",
+      "artist": "Fingerman",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_284",
+      "title": "Iyo",
+      "artist": "Kazuko Ishibashi",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_285",
+      "title": "I Believe In Miracles (Broken Party Animal Mix)",
+      "artist": "Sunlightsquare",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_286",
+      "title": "Fantastic Voyage",
+      "artist": "Lakeside",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_287",
+      "title": "Another Brick (Edit)",
+      "artist": "Sharp Soul",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_288",
+      "title": "I'll Do Anything For You (Patchworks Remix)",
+      "artist": "Lee McDonald",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_289",
+      "title": "Reason To Dance (Aroop Roy Edit)",
+      "artist": "D.J. Rogers",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_290",
+      "title": "I'm Gonna Break Your Bones",
+      "artist": "The Disco Dog",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_291",
+      "title": "Time",
+      "artist": "Light Of The World",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_292",
+      "title": "Adome Nyueto",
+      "artist": "Yta Jourias",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_293",
+      "title": "Africa Africa (Faze Action Edit)",
+      "artist": "Songhoi Band",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_294",
+      "title": "Spies Are Watching Me",
+      "artist": "Voilaaa ft. Sir Jean",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_295",
+      "title": "After Winter Must Come Spring",
+      "artist": "Folamour ft. Elbi",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-dj-mag-hq-2019"
+      ]
+    },
+    {
+      "id": "tr_296",
+      "title": "When I'm Dancin' (Marc Green Edit)",
+      "artist": "Lenny Williams",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_297",
+      "title": "The Seduction",
+      "artist": "Afshin & Kiss My Black Jazz",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_298",
+      "title": "A Ka Titine (Dam Swindle Edit)",
+      "artist": "Gaoulé Mizik",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_299",
+      "title": "Anikana",
+      "artist": "Fixed Angles",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_300",
+      "title": "Footprints",
+      "artist": "Kaz James",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_301",
+      "title": "Nobody's Business",
+      "artist": "H20",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_302",
+      "title": "Make Me Feel",
+      "artist": "Marc Cotterell",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_303",
+      "title": "Be Free (Emmaculate & Shannon Chambers Remix)",
+      "artist": "Ten City",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_304",
+      "title": "7 Days In The Hotel (M-High Remix)",
+      "artist": "Koko",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_305",
+      "title": "Let The Bass",
+      "artist": "Robbie Doherty & FOLEY (UK)",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_306",
+      "title": "Djingoo",
+      "artist": "Daan Steenman",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_307",
+      "title": "Chante Avec Moi (Young Pulse Edit)",
+      "artist": "Herbert Leonard",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_308",
+      "title": "Forget Me Nots",
+      "artist": "Patrice Rushen",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-lost-paradise-2022"
+      ]
+    },
+    {
+      "id": "tr_309",
+      "title": "Dance Do It",
+      "artist": "Father's Children",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_310",
+      "title": "Out To Get'cha",
+      "artist": "Rare Cuts",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_311",
+      "title": "Bernard's Song (Young Pulse Edit)",
+      "artist": "Veronique Sanson",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_312",
+      "title": "Give It Up",
+      "artist": "Enchantment",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_313",
+      "title": "Emergency",
+      "artist": "Gayle Adams",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_314",
+      "title": "Fever",
+      "artist": "Isaac Hayes",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_315",
+      "title": "Jazz Session For No Future People",
+      "artist": "Folamour",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_316",
+      "title": "Mangwana",
+      "artist": "Faze Action & Zeke Manyika",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_317",
+      "title": "I Found Love In You",
+      "artist": "Rhyze",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_318",
+      "title": "Maybe, Maybe",
+      "artist": "Mass Production",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_319",
+      "title": "Jealousy",
+      "artist": "Martin Solveig",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_320",
+      "title": "Fastlove",
+      "artist": "George Michael",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-polaris-verbier-2020"
+      ]
+    },
+    {
+      "id": "tr_321",
+      "title": "Peace Now (Folamour Remix)",
+      "artist": "Udo Juergens",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_322",
+      "title": "Everybody Dance",
+      "artist": "Chevals",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_323",
+      "title": "Souma Bana",
+      "artist": "Born To Funk",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_324",
+      "title": "Another Day",
+      "artist": "Jasper Street Company",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_325",
+      "title": "I've Gotta Stand Up (Brand New Man) (Dave Lee Garage City Mix)",
+      "artist": "The Trammps",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_326",
+      "title": "Here We Go Agin (Joey Negro Philly Stomp Mix)",
+      "artist": "People's Choice",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_327",
+      "title": "This Time Baby",
+      "artist": "Jackie Moore",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_328",
+      "title": "Only The Strong Survive",
+      "artist": "Billy Paul",
+      "played_by": [
+        "folamour"
+      ],
+      "sets": [
+        "folamour-yuma-coachella-2024"
+      ]
+    },
+    {
+      "id": "tr_329",
+      "title": "School",
+      "artist": "Four Tet",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_330",
+      "title": "Refugio",
+      "artist": "Anthony Naples",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_331",
+      "title": "Tyrion",
+      "artist": "O'Flynn",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_332",
+      "title": "Xmas_Evet1 N",
+      "artist": "Aphex Twin",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_333",
+      "title": "Glassbeadgames (8 Hours At Fabric Dub)",
+      "artist": "Martyn & Four Tet",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_334",
+      "title": "Never Come Back (Four Tet Remix)",
+      "artist": "Caribou",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_335",
+      "title": "Only Human",
+      "artist": "KH",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_336",
+      "title": "Idontknow",
+      "artist": "Jamie xx",
+      "played_by": [
+        "four-tet"
+      ],
+      "sets": [
+        "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "id": "tr_337",
+      "title": "Get Involved (Director's Cut Mix)",
+      "artist": "Dbow",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_338",
+      "title": "Good People (A Director's Cut Master Exclusive)",
+      "artist": "Marko Militano feat. Darren Barrett",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_339",
+      "title": "Bourgie Bourgie (A Director's Cut Exclusive)",
+      "artist": "Frankie Knuckles Pres. Director's Cut",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_340",
+      "title": "Get Over U (Rober Gaez 'Mustache' Mix)",
+      "artist": "Frankie Knuckles Pres. Directors Cut feat. B Slade",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_341",
+      "title": "Your Love (Instrumental Simulator Mix)",
+      "artist": "Phunk Investigation",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_342",
+      "title": "We Gotta Love (Director's Cut Signature Mix)",
+      "artist": "Joe Smooth feat. Paris Brightledge",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_343",
+      "title": "The Secret Life Of Us (Director's Cut Signature Mix)",
+      "artist": "Joey Negro & The Sunburst Band & Diane Charlemagne",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_344",
+      "title": "Bring Me Joy (Directors Cut Remix)",
+      "artist": "The Layabouts feat. Portia Monique",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_345",
+      "title": "My Melody (Morillo & Romero Dirty Mix)",
+      "artist": "Erick Morillo, Harry Romero & Jose Nunez feat. Shawnee Taylor",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_346",
+      "title": "Let's Stay Home (Director's Cut Classic Mix)",
+      "artist": "Frankie Knuckles",
+      "played_by": [
+        "frankie-knuckles"
+      ],
+      "sets": [
+        "frankie-knuckles-br-nyc"
+      ]
+    },
+    {
+      "id": "tr_347",
+      "title": "Star",
+      "artist": "Mumm",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_348",
+      "title": "Hashtag (Radioactive Man Remix)",
+      "artist": "Carl Finlow",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_349",
+      "title": "0998.0989.12",
+      "artist": "The Exaltics",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_350",
+      "title": "Dans La Salle Des Machines",
+      "artist": "The Hacker",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_351",
+      "title": "Computor Science",
+      "artist": "Computor Rockers",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_352",
+      "title": "General Data Standard",
+      "artist": "Sync 24 & Privacy",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_353",
+      "title": "Lost Souls",
+      "artist": "Pollon",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_354",
+      "title": "Untitled A1",
+      "artist": "Disabled",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_355",
+      "title": "Stratoïds",
+      "artist": "B.W.P. Experiments",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_356",
+      "title": "When I Rock",
+      "artist": "Thomas Schumacher",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_357",
+      "title": "Untitled B1",
+      "artist": "Q.D.T",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_358",
+      "title": "Worth It",
+      "artist": "Minimum Syndicat",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_359",
+      "title": "The Bloop",
+      "artist": "Minimum Syndicat",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_360",
+      "title": "Slave To The Rave",
+      "artist": "Umwelt",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_361",
+      "title": "Internal Software",
+      "artist": "Illektrolab",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_362",
+      "title": "EP2",
+      "artist": "Zeta Reticula",
+      "played_by": [
+        "helena-hauff"
+      ],
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ]
+    },
+    {
+      "id": "tr_363",
+      "title": "I Get Lifted (The Bar Dub)",
+      "artist": "Barbara Tucker",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_364",
+      "title": "Mood Vision",
+      "artist": "Harry Romero",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_365",
+      "title": "Ain't Nobody",
+      "artist": "Mary J. Blige",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_366",
+      "title": "You Make Me Feel (Mighty Real)",
+      "artist": "Sylvester",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_367",
+      "title": "The Bomb! (Armand Van Helden Re-Edit)",
+      "artist": "The Bucketheads",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_368",
+      "title": "Street Player",
+      "artist": "Chicago",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_369",
+      "title": "Music Is The Answer",
+      "artist": "Colonel Abrams",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_370",
+      "title": "Strings Of Life (Supernova Remix)",
+      "artist": "Soul Central",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_371",
+      "title": "The Nightlife (Round And Round Remix)",
+      "artist": "Honey Dijon",
+      "played_by": [
+        "honey-dijon"
+      ],
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ]
+    },
+    {
+      "id": "tr_372",
+      "title": "Let's Make It Up",
+      "artist": "Shadow",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_373",
+      "title": "New Mexico",
+      "artist": "Sammy Barbot",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_374",
+      "title": "Won't You Try",
+      "artist": "Udell",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_375",
+      "title": "Disco Dancer",
+      "artist": "Kiki Gyan",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_376",
+      "title": "Breakin In'",
+      "artist": "Javaroo",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_377",
+      "title": "Burmstar (Twin Mix)",
+      "artist": "House Of Doors",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_378",
+      "title": "Time Warp",
+      "artist": "The Coachouse Rhythm Section",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_379",
+      "title": "In The Evening",
+      "artist": "Sheryl Lee Ralph",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_380",
+      "title": "The Telstar File",
+      "artist": "Gavin Russom",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015",
+        "hunee-dekmantel"
+      ]
+    },
+    {
+      "id": "tr_381",
+      "title": "Sexafari",
+      "artist": "Mappa Mundi",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_382",
+      "title": "Cuica Digitales",
+      "artist": "Errorsmith & Mark Fell",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015",
+        "hunee-dekmantel"
+      ]
+    },
+    {
+      "id": "tr_383",
+      "title": "Put Your Spirit Up",
+      "artist": "Kindred Spirit",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_384",
+      "title": "Nan Ye Li Kan",
+      "artist": "Mac Gregor",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_385",
+      "title": "Theme In Search Of A Sportspectacular",
+      "artist": "Lyman Woodard",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_386",
+      "title": "Come To Me",
+      "artist": "Estiban",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_387",
+      "title": "Can't Hide Love",
+      "artist": "Jimmy Smith",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_388",
+      "title": "Last Night",
+      "artist": "Odessey 1",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_389",
+      "title": "Zvichapera",
+      "artist": "Chiwoniso",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_390",
+      "title": "In the Evening  :)",
+      "artist": "Sheryl Lee Ralph",
+      "played_by": [
+        "hunee"
+      ],
+      "sets": [
+        "hunee-dekmantel"
+      ]
+    },
+    {
+      "id": "tr_391",
+      "title": "Eden",
+      "artist": "Ian O'Brien",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_392",
+      "title": "You Do Your Best To Hide The Good Parts Of Yourself",
+      "artist": "Laurence Guy",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_393",
+      "title": "SP12 Electric Mistress",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_394",
+      "title": "Enter The Disco",
+      "artist": "Javonntte",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_395",
+      "title": "Eclipse",
+      "artist": "JoVonn",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_396",
+      "title": "I Got Rhythm",
+      "artist": "Paul Johnson",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_397",
+      "title": "Honey Strut",
+      "artist": "Loose Joints",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_398",
+      "title": "Feel It",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ian-pooley-hor"
+      ],
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_399",
+      "title": "Mess Of Afros (Glenn Underground Remix)",
+      "artist": "Q-Burn's Abstract Message",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_400",
+      "title": "Zeven",
+      "artist": "X-Press 2",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_401",
+      "title": "Never Enough (Ian Pooley's Raw Dub)",
+      "artist": "Boris Dlugosch feat. Rosin Murphy",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_402",
+      "title": "Rhythm",
+      "artist": "6th Borough Project",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_403",
+      "title": "Grande De Folie (DJ Gregory's Main Club Mix)",
+      "artist": "Raw Instinct",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_404",
+      "title": "All About House",
+      "artist": "DJ Mes",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_405",
+      "title": "Last Man Up",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_406",
+      "title": "Only 4 U (ID Remix)",
+      "artist": "Cajmere",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_407",
+      "title": "Send A Prayer (Pt.2)",
+      "artist": "Motor City Drum Ensemble",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_408",
+      "title": "4",
+      "artist": "Pepe Braddock",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_409",
+      "title": "Inside Your Soul",
+      "artist": "Nick Holder feat. Andraya",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_410",
+      "title": "86",
+      "artist": "Adam Port",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_411",
+      "title": "Wild Kingdom",
+      "artist": "Johnny D & Nicky P",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_412",
+      "title": "The Dancer (Ian Pooley Remix)",
+      "artist": "K-Alexi",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_413",
+      "title": "Musique",
+      "artist": "Daft Punk",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_414",
+      "title": "Raise Your Hands",
+      "artist": "Ben Sims",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_415",
+      "title": "S2 (Dubarash)",
+      "artist": "DJ Gregory",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_416",
+      "title": "900 (Mix)",
+      "artist": "Ian Pooley",
+      "played_by": [
+        "ian-pooley-paloma"
+      ],
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ]
+    },
+    {
+      "id": "tr_417",
+      "title": "Monotrome (Cousin Cole Remix); You got me there mothaaafockaaaa!",
+      "artist": "Manicured Noise",
+      "played_by": [
+        "job-jobse-dekmantel"
+      ],
+      "sets": [
+        "job-jobse-dekmantel"
+      ]
+    },
+    {
+      "id": "tr_418",
+      "title": "Dance",
+      "artist": "Earth People",
+      "played_by": [
+        "joe-claussell",
+        "masters-at-work"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014",
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_419",
+      "title": "In Time",
+      "artist": "Ron Trent feat. Tkumah Sadeek",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ]
+    },
+    {
+      "id": "tr_420",
+      "title": "Fable (Frankie Knuckles Directors Cut Classic Club Mix)",
+      "artist": "Lil Louis feat. ChinahBlac",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ]
+    },
+    {
+      "id": "tr_421",
+      "title": "The Choice (Windy City Club)",
+      "artist": "Chez N Trent",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ]
+    },
+    {
+      "id": "tr_422",
+      "title": "Believe (DJ Spen & Michele Chiavarini Remix)",
+      "artist": "David Morales",
+      "played_by": [
+        "joe-claussell"
+      ],
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ]
+    },
+    {
+      "id": "tr_423",
+      "title": "Flight FM",
+      "artist": "Joy Orbison",
+      "played_by": [
+        "joy-orbison-various"
+      ],
+      "sets": [
+        "joy-orbison-various"
+      ]
+    },
+    {
+      "id": "tr_424",
+      "title": "Heat",
+      "artist": "JohNick",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_425",
+      "title": "Tracklights (Crackazat Dub)",
+      "artist": "Michel De Hey",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_426",
+      "title": "All About Housemusic (Dario D'Attis Extended Remix)",
+      "artist": "Yves Murasca",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_427",
+      "title": "Let It Ride (Dario D'Attis Remix)",
+      "artist": "Massimo Lippoli",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_428",
+      "title": "Atmospheric Beats",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_429",
+      "title": "I Can't Get No Sleep (Ken/Lou 12\")",
+      "artist": "Masters At Work ft. India",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_430",
+      "title": "Special (Timmy Regisford Remix)",
+      "artist": "Peven Everett",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_431",
+      "title": "Voodoo (Shannon Chambers 1Sound Remix)",
+      "artist": "Emmaculate",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_432",
+      "title": "Ngeke (andhim Remix)",
+      "artist": "Armonica ft. Toshi",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_433",
+      "title": "You Get Lost In It (The Warehouse Project)",
+      "artist": "Kerri Chandler ft. Lady Linn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_434",
+      "title": "Hesperia Soul (Main Mix)",
+      "artist": "Jovonn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_435",
+      "title": "Change Your Mind (District 8) (Full Vocal)",
+      "artist": "Kerri Chandler ft. Troy Denari",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_436",
+      "title": "Angel",
+      "artist": "Terry Hunter ft. Devine Brown",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_437",
+      "title": "Fire Drift",
+      "artist": "Crackazat",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_438",
+      "title": "Downtown (Louie Vega Extended Raw Dub Mix)",
+      "artist": "Honey Dijon ft. Annette Bowen & Nikki-O",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_439",
+      "title": "Release The Rhythm (Kevin McKay Extended Remix)",
+      "artist": "Mateo & Matos",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_440",
+      "title": "I Think I'm Falling In Love (Grant Nelson Remix)",
+      "artist": "Matt Early & Lee Jeffries ft. Otis Corley",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_441",
+      "title": "Prayer (623 Again Vocal)",
+      "artist": "Kerri Chandler ft. Rev F.L. Brown",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_442",
+      "title": "Spirit Dance (Timmy Regisford Edit)",
+      "artist": "DJ Kwame",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_443",
+      "title": "Random (Extended Mix)",
+      "artist": "Jovonn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_444",
+      "title": "Underground Is My Home",
+      "artist": "Dennis Ferrer ft. Tyrone Ellis",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_445",
+      "title": "High. Alive. And Dirty.",
+      "artist": "Demuir",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_446",
+      "title": "Never Thought (Printworks) (Main Vocal Mix)",
+      "artist": "Kerri Chandler ft. Sunchilde",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_447",
+      "title": "I Feel It",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_448",
+      "title": "If Only I Could (Liem Remix)",
+      "artist": "Fusion Groove Orchestra ft. Steve Lucas",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_449",
+      "title": "So Let The Wind Come",
+      "artist": "Kerri Chandler",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_450",
+      "title": "Wish I Didn't Miss You (John Morales M+M Vocal Mix)",
+      "artist": "Tasha LaRae & DJ Spen",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_451",
+      "title": "I Shall Not Be Moved (Stand Still) (Extended Club Mix)",
+      "artist": "Underground Ministries ft. Kenny Bobien",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
+    {
+      "id": "tr_452",
+      "title": "I Love Music (Part I)",
+      "artist": "The O'Jays",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_453",
+      "title": "I Shall Not Be Moved (Stand Still)",
+      "artist": "Underground Ministries feat. Kenny Bobien",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_454",
+      "title": "If Only I Could (Liem Remix)",
+      "artist": "Fusion Groove Orchestra feat. Steve Lucas",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_455",
+      "title": "Never Thought (Printworks) (Main Vocal Mix)",
+      "artist": "Kerri Chandler feat. Sunchilde",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_456",
+      "title": "Underground Is My Home",
+      "artist": "Dennis Ferrer feat. Tyrone Ellis",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_457",
+      "title": "Prayer (623 Again Vocal)",
+      "artist": "Kerri Chandler feat. Rev F.L. Brown",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_458",
+      "title": "I Think I'm Falling In Love (Grant Nelson Remix)",
+      "artist": "Matt Early & Lee Jeffries feat. Otis Corley",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_459",
+      "title": "Downtown (Louie Vega Extended Raw Dub Mix)",
+      "artist": "Honey Dijon feat. Annette Bowen & Nikki-O",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_460",
+      "title": "Angel",
+      "artist": "Terry Hunter feat. Devine Brown",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_461",
+      "title": "Change Your Mind (District 8) (Full Vocal)",
+      "artist": "Kerri Chandler feat. Troy Denari",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_462",
+      "title": "You Get Lost In It (The Warehouse Project)",
+      "artist": "Kerri Chandler feat. Lady Linn",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_463",
+      "title": "Ngeke (andhim Remix)",
+      "artist": "Armonica feat. Toshi",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_464",
+      "title": "I Can't Get No Sleep (Ken/Lou 12 Inch)",
+      "artist": "Masters At Work feat. India",
+      "played_by": [
+        "kerri-chandler"
+      ],
+      "sets": [
+        "kerri-chandler-br-nyc-2022"
+      ]
+    },
+    {
+      "id": "tr_465",
+      "title": "Jump (Rushing Mix)",
+      "artist": "Soul Mass Transit System",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_466",
+      "title": "Trip Advisor (Rhythm, Snare, Bass) [2025 Warp Mix]",
+      "artist": "Sidney Charles & BUGS",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_467",
+      "title": "Blessings (KETTAMA Remix)",
+      "artist": "Calvin Harris & Clementine Douglas",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_468",
+      "title": "RealSpill",
+      "artist": "FYAH",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_469",
+      "title": "Topper Top (Feat. Teddy Bruckshot, Lady Chann & Killa P)",
+      "artist": "Sir Spyro",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_470",
+      "title": "No Limit",
+      "artist": "2 Unlimited",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_471",
+      "title": "If U Want My Heart (Ft. KLP)",
+      "artist": "KETTAMA, DJ HEARTSTRING & KLP",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_472",
+      "title": "Carbon Spaghetti",
+      "artist": "GlennRoy",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_473",
+      "title": "Are You Ready?",
+      "artist": "Paqué",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_474",
+      "title": "Yosemite",
+      "artist": "KETTAMA & Interplanetary Criminal",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025"
+      ]
+    },
+    {
+      "id": "tr_475",
+      "title": "Sort It Out",
+      "artist": "KETTAMA & Clouds",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london-2025",
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_476",
+      "title": "Jump",
+      "artist": "soul mass transit system",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_477",
+      "title": "Trip Advisor (Bugs Warper Mix)",
+      "artist": "Sidney Charles",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_478",
+      "title": "Topper Top (Remix id ???)",
+      "artist": "Sir Spyro",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_479",
+      "title": "If U Want My Heart (Ft.KLP)",
+      "artist": "KETTAMA & DJ Heartstring",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_480",
+      "title": "It Gets Better (Forever Mix)",
+      "artist": "KETTAMA",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_481",
+      "title": "I need you (Twofaced Sport Remix)",
+      "artist": "Nikita Warren",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_482",
+      "title": "Man With the Second Face (unreleased)",
+      "artist": "Kettama",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_483",
+      "title": "Are You Ready?",
+      "artist": "Paque",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_484",
+      "title": "Yosemite",
+      "artist": "Kettama & Interplanatary criminal",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_485",
+      "title": "Skepta Dub",
+      "artist": "is 6 SENSE, Ned Bennett",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_486",
+      "title": "De Moma (Unreleased)",
+      "artist": "is Raredub",
+      "played_by": [
+        "kettama"
+      ],
+      "sets": [
+        "kettama-br-london"
+      ]
+    },
+    {
+      "id": "tr_487",
+      "title": "Existence",
+      "artist": "KiNK",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "id": "tr_488",
+      "title": "Leko",
+      "artist": "KiNK",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "id": "tr_489",
+      "title": "Express",
+      "artist": "KiNK",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "id": "tr_490",
+      "title": "Follow The Step (KiNK Remix)",
+      "artist": "Rachel Row",
+      "played_by": [
+        "kink"
+      ],
+      "sets": [
+        "kink-br-moscow-2014"
+      ]
+    },
+    {
+      "id": "tr_491",
+      "title": "Deep Down (Fingers Remix)",
+      "artist": "Ron Trent feat. Robert Owens",
+      "played_by": [
+        "larry-heard-mr-fingers"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "tr_492",
+      "title": "Man Or Mistress",
+      "artist": "Levon Vincent",
+      "played_by": [
+        "larry-heard-mr-fingers"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "tr_493",
+      "title": "April",
+      "artist": "Osunlade",
+      "played_by": [
+        "larry-heard-mr-fingers"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "tr_494",
+      "title": "Your Love",
+      "artist": "Terrence Parker",
+      "played_by": [
+        "larry-heard-mr-fingers"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "tr_495",
+      "title": "Can You Feel It",
+      "artist": "Mr. Fingers",
+      "played_by": [
+        "larry-heard-mr-fingers"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "tr_496",
+      "title": "Mystery Of Love",
+      "artist": "Mr. Fingers",
+      "played_by": [
+        "larry-heard-mr-fingers"
+      ],
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ]
+    },
+    {
+      "id": "tr_497",
+      "title": "Opencluster",
+      "artist": "5volts",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_498",
+      "title": "Absent",
+      "artist": "Redspecs",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_499",
+      "title": "Gizmo (Monoloc Remix)",
+      "artist": "M.A.N.D.Y.",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_500",
+      "title": "Follow The Sound (Version 1)",
+      "artist": "Marc Romboy vs. Blake Baxter",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_501",
+      "title": "Solar Detroit",
+      "artist": "Maceo Plex",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_502",
+      "title": "Firma",
+      "artist": "Trikk",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_503",
+      "title": "Chicago (Club Edit)",
+      "artist": "Après",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_504",
+      "title": "War",
+      "artist": "Julian Jabre",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_505",
+      "title": "Home",
+      "artist": "Copy Paste Soul",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_506",
+      "title": "The Road",
+      "artist": "Kölsch feat. Gregor Schwellenbach",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_507",
+      "title": "Soldier",
+      "artist": "Sébastien Léger",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_508",
+      "title": "Myspace",
+      "artist": "Guy Gerber & Chaim",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_509",
+      "title": "5th Dimension",
+      "artist": "Joao Ceser",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_510",
+      "title": "1st Shoot (Clave Tool Mix)",
+      "artist": "Trunkline",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_511",
+      "title": "Kenopsia",
+      "artist": "Rodriguez Jr.",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_512",
+      "title": "Lx (Marc Romboy Lost In Leploops Remix)",
+      "artist": "Stephan Bodzin",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_513",
+      "title": "Grindin",
+      "artist": "Tripmastaz",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_514",
+      "title": "Newmerique (Mango Boys Sunday Dub)",
+      "artist": "Mr. G",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_515",
+      "title": "Valerie (Andy Cato Pack Up And Dance Remix)",
+      "artist": "Amy Winehouse",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_516",
+      "title": "Filter",
+      "artist": "Jan Driver",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_517",
+      "title": "Look & See (Daniel Boon & Marco Remus Remix)",
+      "artist": "DJ Rush",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_518",
+      "title": "Wanna Go Bang",
+      "artist": "Geeeman",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_519",
+      "title": "Tell You (Jay Robinson Remix)",
+      "artist": "Kissy Sell Out feat. Holly Lois",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_520",
+      "title": "Carnage",
+      "artist": "Jay Robinson",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_521",
+      "title": "East Side",
+      "artist": "Distro",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_522",
+      "title": "Modulate",
+      "artist": "Corticyte",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_523",
+      "title": "Emperor",
+      "artist": "Agents Of Time",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_524",
+      "title": "Semibreves (Epiphylogenetically Enumerated Reset By KiNK)",
+      "artist": "Hackman",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_525",
+      "title": "Daylight",
+      "artist": "Oniris",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_526",
+      "title": "Our Futur (Loud Disco Mix)",
+      "artist": "Laurent Garnier feat. The Lbs Crew",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_527",
+      "title": "Supernature",
+      "artist": "Cerrone",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_528",
+      "title": "What To Do (ID Remix)",
+      "artist": "Thomas Bangalter",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_529",
+      "title": "Voyager",
+      "artist": "Copy Paste Soul",
+      "played_by": [
+        "laurent-garnier"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ]
+    },
+    {
+      "id": "tr_530",
+      "title": "Solitary Daze",
+      "artist": "Maceo Plex & Gabriel Ananda",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_531",
+      "title": "Fiddler",
+      "artist": "Gardens Of God",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_532",
+      "title": "Orbis",
+      "artist": "Shall Ocin",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_533",
+      "title": "On The Hour",
+      "artist": "Confute",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_534",
+      "title": "Klank",
+      "artist": "Dense & Pika",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_535",
+      "title": "How Soon Is Now? (Maceo Plex Remix)",
+      "artist": "The Smiths",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_536",
+      "title": "Hale Bopp (Maceo Plex Edit)",
+      "artist": "Der Dritte Raum",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_537",
+      "title": "Pulse Train",
+      "artist": "Nicolas Bougaieff",
+      "played_by": [
+        "maceo-plex"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ]
+    },
+    {
+      "id": "tr_538",
+      "title": "Long Season (MG Edit)",
+      "artist": "Fishmans",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_539",
+      "title": "Winter",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_540",
+      "title": "Spirit Wave",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_541",
+      "title": "Mirror Break (4/4 Mix)",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_542",
+      "title": "Inside",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_543",
+      "title": "Rok Da House",
+      "artist": "KETTAMA",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_544",
+      "title": "Marathon",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_545",
+      "title": "Love Yourself",
+      "artist": "Mall Grab & Flansie",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_546",
+      "title": "Tremors",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_547",
+      "title": "Bear Witness",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_548",
+      "title": "Likshot",
+      "artist": "Surusinghe",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_549",
+      "title": "Get Down",
+      "artist": "Effy",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_550",
+      "title": "Juice (MG Remix)",
+      "artist": "Mall Grab & C.R.T.B.",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_551",
+      "title": "Say Nothing (Dub Mix)",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_552",
+      "title": "Feel Emotion",
+      "artist": "KETTAMA",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_553",
+      "title": "Say No More",
+      "artist": "X CLUB.",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_554",
+      "title": "Escape From Belanglo",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_555",
+      "title": "BB MG",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_556",
+      "title": "It Never Ends",
+      "artist": "C.R.T.B.",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_557",
+      "title": "Juice (First Mix)",
+      "artist": "Mall Grab & C.R.T.B.",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_558",
+      "title": "Plastyx",
+      "artist": "Clouds",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_559",
+      "title": "Madman",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_560",
+      "title": "1ofthozedaze (Edit)",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_561",
+      "title": "Metaphysical",
+      "artist": "Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mall-grab-br-melbourne-2022"
+      ]
+    },
+    {
+      "id": "tr_562",
+      "title": "Long Season <3",
+      "artist": "Fishermans",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_563",
+      "title": "Likshot",
+      "artist": "just released -> Surusinghe",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_564",
+      "title": "Likshot is out now on SCDD",
+      "artist": "Surusinghe",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_565",
+      "title": "Love Yourself Because Nobody Else Will (Unreleased)",
+      "artist": "is Mall Grab x Flansie",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_566",
+      "title": "No One Else Will",
+      "artist": "released; Mall Grab & Flansie",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_567",
+      "title": "Hertz",
+      "artist": "He's layering House Music",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_568",
+      "title": "madman(unreleased)",
+      "artist": "mall grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_569",
+      "title": "Madman (unreleased). He played and identified this in his Lab LDN set and BBC es",
+      "artist": "is Mall Grab",
+      "played_by": [
+        "mall-grab"
+      ],
+      "sets": [
+        "mallgrab-br"
+      ]
+    },
+    {
+      "id": "tr_570",
+      "title": "Soul Reverse",
+      "artist": "Mark Broom",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "tr_571",
+      "title": "Funky Sounds",
+      "artist": "Mark Broom",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "tr_572",
+      "title": "909 Workout",
+      "artist": "Mark Broom",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "tr_573",
+      "title": "The Bells (Mark Broom Edit)",
+      "artist": "Jeff Mills",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "tr_574",
+      "title": "Goodlife (Killa Mix)",
+      "artist": "Inner City",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "tr_575",
+      "title": "Bite (Killa Mix)",
+      "artist": "Surgeon",
+      "played_by": [
+        "mark-broom"
+      ],
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ]
+    },
+    {
+      "id": "tr_576",
+      "title": "To Be In Love (Original MAW Mix)",
+      "artist": "Masters At Work feat. India",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_577",
+      "title": "Beautiful People (Underground Network Mix)",
+      "artist": "Barbara Tucker",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_578",
+      "title": "Move Your Body",
+      "artist": "Marshall Jefferson",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_579",
+      "title": "French Kiss",
+      "artist": "Lil Louis",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_580",
+      "title": "New Jersey Deep",
+      "artist": "Black Science Orchestra",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_581",
+      "title": "Its Alright I Feel It",
+      "artist": "Nuyorican Soul",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_582",
+      "title": "Everybody Dance",
+      "artist": "Chic",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_583",
+      "title": "God Made Me Phunky",
+      "artist": "The MD X-Spress",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_584",
+      "title": "Hear The Music",
+      "artist": "Gypsymen",
+      "played_by": [
+        "masters-at-work"
+      ],
+      "sets": [
+        "maw-br-london-2014"
+      ]
+    },
+    {
+      "id": "tr_585",
+      "title": "That Friday Pay (Part 1)",
+      "artist": "Sonny Jenkins + NY Potpourri Strings",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ]
+    },
+    {
+      "id": "tr_586",
+      "title": "Dancing Into The Stars (John Morales Remix)",
+      "artist": "Logg",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ]
+    },
+    {
+      "id": "tr_587",
+      "title": "Just A Player",
+      "artist": "Andrés",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ]
+    },
+    {
+      "id": "tr_588",
+      "title": "You Can Win",
+      "artist": "Bileo",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ]
+    },
+    {
+      "id": "tr_589",
+      "title": "Put Your Back Into It",
+      "artist": "Peven Everett",
+      "played_by": [
+        "motor-city-drum-ensemble"
+      ],
+      "sets": [
+        "mcde-dekmantel-2014"
+      ]
+    },
+    {
+      "id": "tr_590",
+      "title": "Atmosphere Strut",
+      "artist": "Cloud One",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_591",
+      "title": "Funk Reaction",
+      "artist": "Lonnie Smith",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_592",
+      "title": "Disco",
+      "artist": "Slum Village",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_593",
+      "title": "Feels So Good",
+      "artist": "Dwele",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_594",
+      "title": "Love Will Bring Us Back Together",
+      "artist": "Roy Ayers",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_595",
+      "title": "Be Thankful For What You Got",
+      "artist": "William DeVaughn",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_596",
+      "title": "Last Night A DJ Saved My Life",
+      "artist": "Indeep",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_597",
+      "title": "The House Music Anthem - Dub Your Body",
+      "artist": "Marshall Jefferson",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_598",
+      "title": "Problemes D'Amour",
+      "artist": "Alexander Robotnick",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_599",
+      "title": "The Planets Of Life",
+      "artist": "The Whispers",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_600",
+      "title": "Uptown",
+      "artist": "Prince",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_601",
+      "title": "J.A.N.",
+      "artist": "Moodymann",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_602",
+      "title": "Acid Trax",
+      "artist": "Phuture",
+      "played_by": [
+        "moodymann"
+      ],
+      "sets": [
+        "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "id": "tr_603",
+      "title": "Theme From Q",
+      "artist": "Objekt",
+      "played_by": [
+        "objekt-various"
+      ],
+      "sets": [
+        "objekt-various"
+      ]
+    },
+    {
+      "id": "tr_604",
+      "title": "Ganzfeld",
+      "artist": "Objekt",
+      "played_by": [
+        "objekt-various"
+      ],
+      "sets": [
+        "objekt-various"
+      ]
+    },
+    {
+      "id": "tr_605",
+      "title": "Dogma",
+      "artist": "Objekt",
+      "played_by": [
+        "objekt-various"
+      ],
+      "sets": [
+        "objekt-various"
+      ]
+    },
+    {
+      "id": "tr_606",
+      "title": "Trapped Under Ice (Instrumental)",
+      "artist": "Topo & Roby",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_607",
+      "title": "Get More (Mystic Bill Remix) FOREIGN LANGUAGE",
+      "artist": "Clem Abbott",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_608",
+      "title": "Some Acid",
+      "artist": "Gerome Sportelli",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_609",
+      "title": "27 (Laser Mix)",
+      "artist": "Tobias Bernstrup",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_610",
+      "title": "Lina (Masalo Acid Dream Version)",
+      "artist": "Oliver N Goma",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_611",
+      "title": "Soca De Cuba",
+      "artist": "Cuba Trinidad",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_612",
+      "title": "Showdown",
+      "artist": "Pulse",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_613",
+      "title": "Troubadour",
+      "artist": "Serge Fontaine",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_614",
+      "title": "We Just HIGH FASHION DIGITAL",
+      "artist": "Moses",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_615",
+      "title": "Jama Ko (Masalo Blueprint Version) CLIMA",
+      "artist": "Bassekou Kouyate",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_616",
+      "title": "Oxamu",
+      "artist": "Mpumi ft. DJ Christor",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_617",
+      "title": "Reach 4 Freedom (Dennis Ferrer Vocal Mix)",
+      "artist": "Dennis Ferrer",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_618",
+      "title": "Without Your Love (Spen & Thommy Heavy Vibes Mix)",
+      "artist": "Randy Roberts",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_619",
+      "title": "Small Circle of Friends",
+      "artist": "Tom Moulton",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_620",
+      "title": "Hip to Be Square",
+      "artist": "Huey Lewis and the News",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_621",
+      "title": "game!",
+      "artist": "song is on GTA Music Locker Radio, coincidentally on the Palms Trax mix in",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_622",
+      "title": "Reach 4 Freedom (DF's vocal mix",
+      "artist": "Dennis Ferrer",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_623",
+      "title": "cuba trinidad",
+      "artist": "Soca de cuba soca",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_624",
+      "title": "Troubadour (Instrumental) TUNEEEEEEEEEE and if your that lady in the grey on the right, marry me.",
+      "artist": "Serge Fontaine ‎",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_625",
+      "title": "Showdown",
+      "artist": "Pulse & Adele Bertei",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2018"
+      ]
+    },
+    {
+      "id": "tr_626",
+      "title": "I Need Your Luv (Church Mix)",
+      "artist": "Mood II Swing & Wall Of Sound",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_627",
+      "title": "The Disco Bassline (Real Disco Bassline Mix)",
+      "artist": "DJ Antoine",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_628",
+      "title": "Feel The Friction (Alfredo Mix)",
+      "artist": "Sam Alfred",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_629",
+      "title": "Dia De Ayer (Extended Mix)",
+      "artist": "Joeski",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_630",
+      "title": "Groove 4 Joy",
+      "artist": "Club Royale",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_631",
+      "title": "Da Samba (Club Mix)",
+      "artist": "Gilberto",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_632",
+      "title": "The Love",
+      "artist": "Mr. Jay",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_633",
+      "title": "Make Me (Paul Sirrell Remix)",
+      "artist": "Borai & Denham Audio",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_634",
+      "title": "Diablo (The Devil Rides Out Mix)",
+      "artist": "The Grid",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_635",
+      "title": "Your Caress (All I Need) (Open Arms Remix)",
+      "artist": "DJ Flavours",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_636",
+      "title": "Smoke Machine",
+      "artist": "X-Press 2",
+      "played_by": [
+        "palms-trax"
+      ],
+      "sets": [
+        "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "id": "tr_637",
+      "title": "More Is More To Burn",
+      "artist": "Pangaea",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_638",
+      "title": "Polyphonic Love",
+      "artist": "DVS1",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_639",
+      "title": "UK74R1512110",
+      "artist": "Aleksi Perala",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_640",
+      "title": "Don't Change For Me",
+      "artist": "Ramadanman",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_641",
+      "title": "Pull",
+      "artist": "Planetary Assault Systems",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_642",
+      "title": "Je Ka Jo (Drums Of Passion)",
+      "artist": "Joe Claussell",
+      "played_by": [
+        "pangaea"
+      ],
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ]
+    },
+    {
+      "id": "tr_643",
+      "title": "Satellite Song (Underground Resistance Remix) 17:35 Dancer - Boom Boom (Jerome H",
+      "artist": "Commix",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle"
+      ]
+    },
+    {
+      "id": "tr_644",
+      "title": "Satellite Song (Underground Resistance Remix)",
+      "artist": "Commix",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_645",
+      "title": "Boom Boom (Jerome Hill Edit)",
+      "artist": "Dancer",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_646",
+      "title": "Drug",
+      "artist": "Spacetime Continuum",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle"
+      ]
+    },
+    {
+      "id": "tr_647",
+      "title": "Gru",
+      "artist": "Lewski",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_648",
+      "title": "Aerodynamik (François K Aero Mix)",
+      "artist": "Kraftwerk",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_649",
+      "title": "Learn 2 Luv Pearson Sound Mix",
+      "artist": "Kim English",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle"
+      ]
+    },
+    {
+      "id": "tr_650",
+      "title": "Sargan",
+      "artist": "Château Flight",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_651",
+      "title": "Pure Pleasure (Rave Mix)",
+      "artist": "Digital Excitation",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_652",
+      "title": "Reset It (Head High Dirt Mix)",
+      "artist": "Special Request",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_653",
+      "title": "Expo 2000 (DJ Rolando Remix)",
+      "artist": "Kraftwerk",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_654",
+      "title": "Fjorward Flex Dub",
+      "artist": "Skee Mask",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_655",
+      "title": "Born",
+      "artist": "Dreamscape",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_656",
+      "title": "Here For The Love (Metropolitan Acid Mix)",
+      "artist": "Metro",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_657",
+      "title": "It Makes You Forget",
+      "artist": "Peggy Gou",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle"
+      ]
+    },
+    {
+      "id": "tr_658",
+      "title": "Satellite Song (Underground Résistance Remix)",
+      "artist": "Commix",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-cercle"
+      ]
+    },
+    {
+      "id": "tr_659",
+      "title": "San",
+      "artist": "Ebi",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_660",
+      "title": "Darrin Houston",
+      "artist": "Woody McBride",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_661",
+      "title": "Twilight Drone",
+      "artist": "Jellybean",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_662",
+      "title": "Drug #6",
+      "artist": "Spacetime Continuum",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_663",
+      "title": "Mihon #1",
+      "artist": "Ongaku",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_664",
+      "title": "Deniro",
+      "artist": "Penance",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_665",
+      "title": "Learn 2 Luv (Pearson Sound Mix)",
+      "artist": "Kim English",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_666",
+      "title": "Come On Children (Remix)",
+      "artist": "Paul Johnson",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_667",
+      "title": "It Makes You Forget (I:Cube Remix)",
+      "artist": "Peggy Gou",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_668",
+      "title": "Body Move",
+      "artist": "Tan-Ru",
+      "played_by": [
+        "peggy-gou"
+      ],
+      "sets": [
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
+      "id": "tr_669",
+      "title": "Too Late To Samba",
+      "artist": "Red Axes",
+      "played_by": [
+        "seth-troxler"
+      ],
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "id": "tr_670",
+      "title": "Plastik (Todd Terje Remix)",
+      "artist": "Simon Baker",
+      "played_by": [
+        "seth-troxler"
+      ],
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "id": "tr_671",
+      "title": "Get Deep",
+      "artist": "Harry Romero",
+      "played_by": [
+        "seth-troxler"
+      ],
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "id": "tr_672",
+      "title": "Finally",
+      "artist": "Kings Of Tomorrow",
+      "played_by": [
+        "seth-troxler"
+      ],
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "id": "tr_673",
+      "title": "Truth Don't Die (Masters At Work Remix)",
+      "artist": "Femi Kuti",
+      "played_by": [
+        "seth-troxler"
+      ],
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "id": "tr_674",
+      "title": "Flash (Danny Tenaglia Nitrous Oxide Mix)",
+      "artist": "Green Velvet",
+      "played_by": [
+        "shonky-b2b-dan-ghenacia"
+      ],
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ]
+    },
+    {
+      "id": "tr_675",
+      "title": "I Want You (For Myself) (KOT Ruff Mix)",
+      "artist": "Kings Of Tomorrow",
+      "played_by": [
+        "shonky-b2b-dan-ghenacia"
+      ],
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ]
+    },
+    {
+      "id": "tr_676",
+      "title": "Throw (Slam RTM Remix)",
+      "artist": "Paperclip People",
+      "played_by": [
+        "shonky-b2b-dan-ghenacia"
+      ],
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ]
+    },
+    {
+      "id": "tr_677",
+      "title": "Farther",
+      "artist": "Tiger & Woods",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_678",
+      "title": "Stop",
+      "artist": "B.W.H.",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_679",
+      "title": "Tonight",
+      "artist": "P-Sol",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_680",
+      "title": "Balanzat (Tuff City Kids Remix)",
+      "artist": "Talamanca System",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_681",
+      "title": "Magic Ways Of Body Movement",
+      "artist": "D.F.S.",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_682",
+      "title": "Magic Touch (FA Paradise 89 House Mix)",
+      "artist": "Faze Action",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_683",
+      "title": "Bestissimo (Private Edit)",
+      "artist": "Tiger & Woods",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_684",
+      "title": "Let's All Dance",
+      "artist": "Band of Jocks",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_685",
+      "title": "Return To Page One (Tuff City Kids Disco Mix)",
+      "artist": "PBR Streetgang",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_686",
+      "title": "No More Talking",
+      "artist": "Tiger & Woods",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_687",
+      "title": "Holding Back My Love (Tiger & Woods Remix)",
+      "artist": "Tensnake",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_688",
+      "title": "Let's Do It (Tiger & Woods Private Edit)",
+      "artist": "Convertion",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_689",
+      "title": "Ramona In The Seventies",
+      "artist": "Re-Tide",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_690",
+      "title": "Boca",
+      "artist": "Tiger & Woods",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_691",
+      "title": "Satisfy",
+      "artist": "Shit Hot Soundsystem",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_692",
+      "title": "Pink Blunted",
+      "artist": "Credit 00",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_693",
+      "title": "Disco Fever",
+      "artist": "Phil Weeks",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_694",
+      "title": "Amour Puerto Riqueno (Spanish Club Mix)",
+      "artist": "Raz",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_695",
+      "title": "Give Me Back The Love (Passarani Private Edit)",
+      "artist": "On The House",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_696",
+      "title": "Love So Deep (Tiger & Woods Private Edit)",
+      "artist": "Toney Lee",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_697",
+      "title": "You're The Kind Of Girl (Tiger & Woods Private Edit)",
+      "artist": "Kwick",
+      "played_by": [
+        "tiger-woods"
+      ],
+      "sets": [
+        "tiger-woods-br-london"
+      ]
+    },
+    {
+      "id": "tr_698",
+      "title": "TRISHA",
+      "artist": "VTSS",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ]
+    },
+    {
+      "id": "tr_699",
+      "title": "DHM JAM",
+      "artist": "Randomer",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ]
+    },
+    {
+      "id": "tr_700",
+      "title": "FVKVRVND",
+      "artist": "Boys Noize",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ]
+    },
+    {
+      "id": "tr_701",
+      "title": "F@kë (VTSS Remix)",
+      "artist": "Shygirl & Kingdom & VTSS & Club Shy",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ]
+    },
+    {
+      "id": "tr_702",
+      "title": "Acid Groover",
+      "artist": "Franck",
+      "played_by": [
+        "vtss"
+      ],
+      "sets": [
+        "vtss-br-glitch-2024"
+      ]
+    },
+    {
+      "id": "tr_703",
+      "title": "arcade heartbeat ㄸㅣ발 미쳤어 🤤",
+      "artist": "Masalo",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_704",
+      "title": "well done guys!",
+      "artist": "rare footage of the world record in object throw from one side of the dj booth to the other",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_705",
+      "title": "Perfect Motion (Ahhcappella Mix)",
+      "artist": "Sunscreem",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_706",
+      "title": "Fantazia (Spray Remix)",
+      "artist": "The Trip",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_707",
+      "title": "Music (Piano Mix)",
+      "artist": "Jex Opolis",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_708",
+      "title": "GPI",
+      "artist": "Zombies in Miami",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_709",
+      "title": "Do you know where the DJs are hanging",
+      "artist": "Sam Girling",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_710",
+      "title": "Newsflash",
+      "artist": "Pat De Ruiter",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_711",
+      "title": "Aphid Riot",
+      "artist": "Regent",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_712",
+      "title": "Gone with the wind",
+      "artist": "WOLTERS",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_713",
+      "title": "London Freeze",
+      "artist": "SWIM & CRUSH3d",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    },
+    {
+      "id": "tr_714",
+      "title": "Entombed in Ice (Young Marco remix)",
+      "artist": "Avalon Emerson",
+      "played_by": [
+        "young-marco"
+      ],
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ]
+    }
+  ],
+  "generated_at": "2026-05-29T16:24:04.411Z"
 }

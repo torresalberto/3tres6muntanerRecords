@@ -1,6 +1,210 @@
 {
   "djs": [
     {
+      "id": "alex-do-clr-305",
+      "name": "Alex Do Clr 305",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "alex-do-clr-305"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 14,
+        "known": 14,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "ame",
+      "name": "Ame",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "ame-br-innervisions-ade-2012"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 7,
+        "known": 7,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "apollonia",
+      "name": "Apollonia",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/oBFgjTi9ZTk/hqdefault.jpg",
+      "sets": [
+        "apollonia-br-epizode-2019"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 10,
+        "known": 10,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "avalon-emerson",
+      "name": "Avalon Emerson",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/hqdefault.jpg",
+      "sets": [
+        "avalon-emerson-dekmantel-2025"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 5,
+        "known": 5,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "ben-ufo",
+      "name": "Ben Ufo",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "ben-ufo-br-sugar-mountain-2025"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 12,
+        "known": 12,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "blessed-madonna",
+      "name": "Blessed Madonna",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/_IyMTaEeHTM/hqdefault.jpg",
+      "sets": [
+        "blessed-br"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 5,
+        "known": 5,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "call-super",
+      "name": "Call Super",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "call-super-br-dekmantel-2015"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 15,
+        "known": 15,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "carl-cox",
+      "name": "Carl Cox",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg",
+      "sets": [
+        "carl-cox-ibiza-villa"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 11,
+        "known": 11,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "carl-craig",
+      "name": "Carl Craig",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "carl-craig-br-rbma-2013"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 8,
+        "known": 8,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "cassius",
+      "name": "Cassius",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/kv92f5__3UQ/hqdefault.jpg",
+      "sets": [
+        "cassius-cercle-2017"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 20,
+        "known": 20,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "chaos-in-the-cbd",
+      "name": "Chaos In The CBD",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Afro House",
+        "Acid House",
+        "Deep House"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
+      "sets": [
+        "chaos-glitch-2022",
+        "chaos-in-the-cbd-ballantines-lebanon",
+        "chaos-in-the-cbd-br-glitch-2022"
+      ],
+      "stats": {
+        "sets": 3,
+        "tracks": 61,
+        "known": 55,
+        "completion_rate": 90
+      }
+    },
+    {
       "id": "david-august",
       "name": "David August",
       "origin": "",
@@ -23,169 +227,93 @@
       }
     },
     {
-      "id": "hunee",
-      "name": "Hunee",
+      "id": "dixon",
+      "name": "Dixon",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Boogie",
-        "House",
-        "Disco",
-        "Funk"
-      ],
+      "genres": [],
       "bio": "",
-      "image": "https://i.ytimg.com/vi/0RIU0cy6L1I/hqdefault.jpg",
+      "image": "",
       "sets": [
-        "hunee-br-dekmantel-2015"
+        "dixon-cercle-2024"
       ],
       "stats": {
         "sets": 1,
-        "tracks": 18,
-        "known": 18,
+        "tracks": 10,
+        "known": 10,
         "completion_rate": 100
       }
     },
     {
-      "id": "kerri-chandler",
-      "name": "Kerri Chandler",
+      "id": "dj-koze-various",
+      "name": "Dj Koze Various",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Soulful House",
-        "Deep House",
-        "Garage"
-      ],
+      "genres": [],
       "bio": "",
-      "image": "https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg",
+      "image": "",
       "sets": [
-        "kerri-chandler-br-nyc-136"
+        "dj-koze-various"
       ],
       "stats": {
         "sets": 1,
-        "tracks": 29,
-        "known": 29,
+        "tracks": 3,
+        "known": 3,
         "completion_rate": 100
       }
     },
     {
-      "id": "mall-grab",
-      "name": "Mall Grab",
+      "id": "dj-pierre",
+      "name": "Dj Pierre",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Breaks",
-        "House",
-        "Rave",
-        "Techno"
-      ],
+      "genres": [],
       "bio": "",
-      "image": "https://i.ytimg.com/vi/ddeAyYF_uwg/hqdefault.jpg",
+      "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/hqdefault.jpg",
       "sets": [
-        "mall-grab-br-melbourne-2022"
+        "dj-pierre-br-chicago"
       ],
       "stats": {
         "sets": 1,
-        "tracks": 24,
-        "known": 24,
+        "tracks": 2,
+        "known": 2,
         "completion_rate": 100
       }
     },
     {
-      "id": "folamour",
-      "name": "Folamour",
+      "id": "etapp-kyle",
+      "name": "Etapp Kyle",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Disco",
-        "Tech House",
-        "Nu Disco"
-      ],
+      "genres": [],
       "bio": "",
-      "image": "https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg",
+      "image": "",
       "sets": [
-        "folamour-cercle-geneva-2023",
-        "folamour-br-sugar-mountain-2024",
-        "folamour-dj-mag-hq-2019",
-        "folamour-br-fly-edinburgh-2019",
-        "folamour-polaris-verbier-2020",
-        "folamour-lost-paradise-2022",
-        "folamour-yuma-coachella-2024",
-        "folamour-complex-sessions-074-2023",
-        "folamour-bbc-radio1-residency-2022"
-      ],
-      "stats": {
-        "sets": 9,
-        "tracks": 125,
-        "known": 120,
-        "completion_rate": 96
-      }
-    },
-    {
-      "id": "peggy-gou",
-      "name": "Peggy Gou",
-      "origin": "",
-      "active_since": "",
-      "genres": [
-        "Electro",
-        "House",
-        "Techno"
-      ],
-      "bio": "",
-      "image": "https://i.ytimg.com/vi/-UOMvxh4MYU/hqdefault.jpg",
-      "sets": [
-        "peggy-gou-cercle-lille-2024"
+        "etapp-kyle-lot-radio-2023"
       ],
       "stats": {
         "sets": 1,
-        "tracks": 22,
+        "tracks": 6,
+        "known": 6,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "floating-points",
+      "name": "Floating Points",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/kiy05zewUpg/hqdefault.jpg",
+      "sets": [
+        "floating-points-br-nyc-5hr"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 21,
         "known": 21,
-        "completion_rate": 95
-      }
-    },
-    {
-      "id": "helena-hauff",
-      "name": "Helena Hauff",
-      "origin": "",
-      "active_since": "",
-      "genres": [
-        "Electro",
-        "Acid",
-        "Techno"
-      ],
-      "bio": "",
-      "image": "https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg",
-      "sets": [
-        "helena-hauff-br-dekmantel-2017"
-      ],
-      "stats": {
-        "sets": 1,
-        "tracks": 17,
-        "known": 16,
-        "completion_rate": 94
-      }
-    },
-    {
-      "id": "kettama",
-      "name": "KETTAMA",
-      "origin": "",
-      "active_since": "",
-      "genres": [
-        "Bass",
-        "UKG",
-        "House",
-        "Garage"
-      ],
-      "bio": "",
-      "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
-      "sets": [
-        "kettama-br-london-2025"
-      ],
-      "stats": {
-        "sets": 1,
-        "tracks": 12,
-        "known": 11,
-        "completion_rate": 92
+        "completion_rate": 100
       }
     },
     {
@@ -211,25 +339,645 @@
       }
     },
     {
-      "id": "chaos-in-the-cbd",
-      "name": "Chaos In The CBD",
+      "id": "folamour",
+      "name": "Folamour",
       "origin": "",
       "active_since": "",
       "genres": [
-        "Afro House",
-        "Acid House",
-        "Deep House"
+        "House",
+        "Disco",
+        "Tech House",
+        "Nu Disco"
       ],
       "bio": "",
-      "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
+      "image": "https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg",
       "sets": [
-        "chaos-in-the-cbd-br-glitch-2022"
+        "folamour-bbc-radio1-residency-2022",
+        "folamour-br-fly-edinburgh-2019",
+        "folamour-br-sugar",
+        "folamour-br-sugar-mountain-2024",
+        "folamour-cercle-geneva-2023",
+        "folamour-complex-sessions-074-2023",
+        "folamour-dj-mag-hq-2019",
+        "folamour-lost-paradise-2022",
+        "folamour-polaris-verbier-2020",
+        "folamour-yuma-coachella-2024"
+      ],
+      "stats": {
+        "sets": 10,
+        "tracks": 148,
+        "known": 138,
+        "completion_rate": 93
+      }
+    },
+    {
+      "id": "four-tet",
+      "name": "Four Tet",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "four-tet-br-london-2015"
       ],
       "stats": {
         "sets": 1,
-        "tracks": 16,
+        "tracks": 9,
+        "known": 9,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "frankie-knuckles",
+      "name": "Frankie Knuckles",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/644UU55eyzk/hqdefault.jpg",
+      "sets": [
+        "frankie-knuckles-br-nyc",
+        "frankie-knuckles-session-2015"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 10,
+        "known": 10,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "helena-hauff",
+      "name": "Helena Hauff",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Electro",
+        "Acid",
+        "Techno"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg",
+      "sets": [
+        "helena-hauff-br-dekmantel-2017"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 17,
+        "known": 16,
+        "completion_rate": 94
+      }
+    },
+    {
+      "id": "honey-dijon",
+      "name": "Honey Dijon",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/t5KwF_VsM50/hqdefault.jpg",
+      "sets": [
+        "honey-dijon-dekmantel-2025"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 9,
+        "known": 9,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "hunee",
+      "name": "Hunee",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Boogie",
+        "House",
+        "Disco",
+        "Funk"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/0RIU0cy6L1I/hqdefault.jpg",
+      "sets": [
+        "hunee-br-dekmantel-2015",
+        "hunee-dekmantel"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 21,
+        "known": 21,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "ian-pooley-hor",
+      "name": "Ian Pooley Hor",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "ian-pooley-hor-berlin-2023"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 8,
+        "known": 8,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "ian-pooley-paloma",
+      "name": "Ian Pooley Paloma",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "ian-pooley-paloma-berlin-2023"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 18,
+        "known": 18,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "job-jobse-dekmantel",
+      "name": "Job Jobse Dekmantel",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/IxhYDVRqdYY/hqdefault.jpg",
+      "sets": [
+        "job-jobse-dekmantel"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 1,
+        "known": 1,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "joe-claussell",
+      "name": "Joe Claussell",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/keb3u2g87J8/hqdefault.jpg",
+      "sets": [
+        "joe-claussell-br-paris-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 5,
+        "known": 5,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "joy-orbison-various",
+      "name": "Joy Orbison Various",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "joy-orbison-various"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 1,
+        "known": 1,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "kerri-chandler",
+      "name": "Kerri Chandler",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Soulful House",
+        "Deep House",
+        "Garage"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg",
+      "sets": [
+        "kerri-chandler-br-nyc-136",
+        "kerri-chandler-br-nyc-2022"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 58,
+        "known": 58,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "kettama",
+      "name": "KETTAMA",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Bass",
+        "UKG",
+        "House",
+        "Garage"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
+      "sets": [
+        "kettama-br-london",
+        "kettama-br-london-2025"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 25,
+        "known": 25,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "kink",
+      "name": "Kink",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "kink-br-moscow-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 5,
+        "known": 5,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "larry-heard-mr-fingers",
+      "name": "Larry Heard Mr Fingers",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "larry-heard-mr-fingers-mix-2012"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 6,
+        "known": 6,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "laurent-garnier",
+      "name": "Laurent Garnier",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/WG35-7LpIAc/hqdefault.jpg",
+      "sets": [
+        "laurent-garnier-br-lyon"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 33,
+        "known": 33,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "maceo-plex",
+      "name": "Maceo Plex",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "maceo-plex-br-berlin-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 8,
+        "known": 8,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "mall-grab",
+      "name": "Mall Grab",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Breaks",
+        "House",
+        "Rave",
+        "Techno"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/ddeAyYF_uwg/hqdefault.jpg",
+      "sets": [
+        "mall-grab-br-melbourne-2022",
+        "mallgrab-br"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 33,
+        "known": 32,
+        "completion_rate": 97
+      }
+    },
+    {
+      "id": "mark-broom",
+      "name": "Mark Broom",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "mark-broom-br-bogota-2024"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 6,
+        "known": 6,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "masters-at-work",
+      "name": "Masters At Work",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/hqdefault.jpg",
+      "sets": [
+        "maw-br-london-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 10,
+        "known": 10,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "moodymann",
+      "name": "Moodymann",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "moodymann-rbma-2010"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 13,
         "known": 13,
-        "completion_rate": 81
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "motor-city-drum-ensemble",
+      "name": "Motor City Drum Ensemble",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/p6ozF0Y-PzU/hqdefault.jpg",
+      "sets": [
+        "mcde-dekmantel-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 5,
+        "known": 5,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "objekt-various",
+      "name": "Objekt Various",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "objekt-various"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 3,
+        "known": 3,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "palms-trax",
+      "name": "Palms Trax",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/hqdefault.jpg",
+      "sets": [
+        "palms-trax-dekmantel-2018",
+        "palms-trax-dekmantel-2024"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 31,
+        "known": 31,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "pangaea",
+      "name": "Pangaea",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "pangaea-br-dekmantel-2015"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 7,
+        "known": 7,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "peggy-gou",
+      "name": "Peggy Gou",
+      "origin": "",
+      "active_since": "",
+      "genres": [
+        "Electro",
+        "House",
+        "Techno"
+      ],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/-UOMvxh4MYU/hqdefault.jpg",
+      "sets": [
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 38,
+        "known": 38,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "rey-colino-br",
+      "name": "Rey Colino Br",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/GcWjJyuWyig/hqdefault.jpg",
+      "sets": [
+        "rey-colino-br"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 0,
+        "known": 0,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "richie-hawtin",
+      "name": "Richie Hawtin",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/hqdefault.jpg",
+      "sets": [
+        "richie-hawtin-br-paris"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 0,
+        "known": 0,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "seth-troxler",
+      "name": "Seth Troxler",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "seth-troxler-br-mexico-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 6,
+        "known": 6,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "shonky-b2b-dan-ghenacia",
+      "name": "Shonky B2b Dan Ghenacia",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "shonky-b2b-dan-ghenacia-ibiza-2014"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 3,
+        "known": 3,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "tiger-woods",
+      "name": "Tiger Woods",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/zmqlJOb9yNc/hqdefault.jpg",
+      "sets": [
+        "tiger-woods-br-london"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 21,
+        "known": 21,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "vtss",
+      "name": "Vtss",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "",
+      "sets": [
+        "vtss-br-glitch-2024"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 5,
+        "known": 5,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "young-marco",
+      "name": "Young Marco",
+      "origin": "",
+      "active_since": "",
+      "genres": [],
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/4z2bO7WizIg/hqdefault.jpg",
+      "sets": [
+        "young-marco-dekmantel-ten"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 13,
+        "known": 13,
+        "completion_rate": 100
       }
     }
   ]
