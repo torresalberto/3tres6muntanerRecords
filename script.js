@@ -174,8 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return [];
           }
           this.renderProducts(data);
-          // Populate hero playlist with cached data
-          HeroPlaylist.populateFromInventory(data);
+          // Playlist populated after fetchReleaseImages gets real YouTube videos
           return data;
         }
 
@@ -217,9 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         this.renderProducts(data.listings);
 
-        // Populate hero playlist with inventory
-        HeroPlaylist.populateFromInventory(data.listings);
-
+        // Playlist populated after fetchReleaseImages gets real YouTube videos
         return data.listings;
       } catch (error) {
         console.error('Discogs API Error:', error);
