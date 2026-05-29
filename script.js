@@ -1151,7 +1151,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // autoplay=1 + mute=1 works in all browsers
       // autoplay=1 + mute=0 only works after user interaction
       const muteParam = startMuted ? 1 : 0;
-      const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=${muteParam}&loop=1&playlist=${vid}&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
+      const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=${muteParam}&loop=1&playlist=${vid}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
 
       youtubeContainer.innerHTML = `
                 <iframe
@@ -1276,34 +1276,6 @@ document.addEventListener('DOMContentLoaded', function () {
           this.pause();
         } else {
           this.playCurrentOrFirst();
-        }
-      });
-
-      // Previous button
-      document.getElementById('playlistPrevBtn')?.addEventListener('click', () => {
-        if (this.currentIndex > 0) {
-          this.playTrack(this.currentIndex - 1);
-        } else if (state.playlist.length > 0) {
-          this.playTrack(state.playlist.length - 1);
-        }
-      });
-
-      // Next button
-      document.getElementById('playlistNextBtn')?.addEventListener('click', () => {
-        if (this.currentIndex < state.playlist.length - 1) {
-          this.playTrack(this.currentIndex + 1);
-        } else {
-          this.playTrack(0);
-        }
-      });
-
-      // Volume slider
-      document.getElementById('volumeSlider')?.addEventListener('input', (e) => {
-        // Volume control via postMessage to YouTube iframe
-        const iframe = document.getElementById('ytPlayer');
-        if (iframe) {
-          // Store volume preference
-          localStorage.setItem('3tres6_volume', e.target.value);
         }
       });
 

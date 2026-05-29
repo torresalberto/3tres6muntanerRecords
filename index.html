@@ -256,55 +256,15 @@
             <h2 class="playlist-title" id="playlistTitle">"En Stock Ahora"</h2>
             <p class="playlist-artist" id="playlistArtist">by 3TRES6 Records</p>
             <div class="playlist-controls">
-              <button class="playlist-prev-btn" id="playlistPrevBtn" title="Anterior">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
-                </svg>
-              </button>
               <button class="playlist-play-btn" id="playlistPlayBtn" title="Play/Pause">
-                <svg
-                  class="play-icon"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
+                <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
                 </svg>
-                <svg
-                  class="pause-icon"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  style="display: none"
-                >
+                <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: none">
                   <rect x="6" y="4" width="4" height="16" />
                   <rect x="14" y="4" width="4" height="16" />
                 </svg>
               </button>
-              <button class="playlist-next-btn" id="playlistNextBtn" title="Siguiente">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 18l8.5-6L6 6v12zm2.5-6 5.5 4V8z" />
-                  <path d="M16 6h2v12h-2z" />
-                </svg>
-              </button>
-              <div class="playlist-volume">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
-                  />
-                </svg>
-                <input
-                  type="range"
-                  id="volumeSlider"
-                  min="0"
-                  max="100"
-                  value="80"
-                  class="volume-slider"
-                  aria-label="Volume"
-                />
-              </div>
             </div>
             <div class="now-playing-track" id="nowPlayingTrack">
               <span class="now-playing-label">▶ REPRODUCIENDO:</span>
@@ -1258,7 +1218,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="script.js?v=8" defer></script>
+    <script src="script.js?v=9" defer></script>
     <script src="js/calendar.js" defer></script>
     <script src="js/event-submission.js" defer></script>
     <script src="js/newsletter-popup.js" defer></script>
