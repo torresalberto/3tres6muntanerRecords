@@ -168,6 +168,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (cached && cacheTime && Date.now() - parseInt(cacheTime) < 3600000) {
           const data = JSON.parse(cached);
+          if (!data || data.length === 0) {
+            console.warn('Cached Discogs inventory empty — showing fallback products');
+            this.loadFallbackProducts();
+            return [];
+          }
           this.renderProducts(data);
           // Populate hero playlist with cached data
           HeroPlaylist.populateFromInventory(data);
