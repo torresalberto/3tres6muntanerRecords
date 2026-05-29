@@ -271,11 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <span class="badge origin">BCN</span>
                             </div>
                             <div class="product-overlay">
-                                <button class="play-btn" 
-                                        data-release-id="${release.id || ''}"
-                                        title="Reproducir">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                                </button>
                                 <button class="quick-view-btn" 
                                         data-product="${listing.id}"
                                         data-title="${artistName} – ${title}"
@@ -558,30 +553,6 @@ document.addEventListener('DOMContentLoaded', function () {
             audio: this.dataset.audio,
             discogs: this.dataset.discogs,
           });
-        });
-      });
-
-      // Play buttons - fetch YouTube video from Discogs release and play
-      document.querySelectorAll('.play-btn').forEach((btn) => {
-        btn.addEventListener('click', async function () {
-          const releaseId = this.dataset.releaseId;
-          if (!releaseId) return;
-          this.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>';
-          try {
-            const resp = await fetch(`https://api.discogs.com/releases/${releaseId}`, {
-              headers: { 'User-Agent': 'Muntaner336WebStore/1.0' },
-            });
-            const release = await resp.json();
-            const videos = release.videos || [];
-            const ytVideo = videos.find(v => v.uri?.includes('youtube.com'));
-            if (ytVideo) {
-              const match = ytVideo.uri.match(/v=([^&]+)/);
-              if (match) {
-                AudioPlayer.startMusic(match[1], `${release.artists?.[0]?.name || ''} - ${release.title}`, false);
-              }
-            }
-          } catch (_) {}
-          this.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
         });
       });
     },
