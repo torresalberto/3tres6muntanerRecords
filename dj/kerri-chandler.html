@@ -188,31 +188,78 @@
       .dj-page-info h1 { font-size: 2rem; }
     }
   </style>
+    <meta property="og:title" content="Kerri Chandler | DJ Library — 3TRES6 Records" />
 </head>
 <body>
   <header class="header" id="mainHeader" role="banner">
     <div class="header-container">
-      <a href="/" class="logo" aria-label="3TRES6 Records Home">
+      <a href="/3tres6muntanerRecords/" class="logo" aria-label="3TRES6 Records Home">
         <span class="logo-text">3TRES6</span>
         <span class="logo-subtitle">RECORDS</span>
       </a>
-      <nav class="main-nav" role="navigation">
-        <a href="/" class="nav-item">Catálogo</a>
-        <a href="/#calendario" class="nav-item">Calendario</a>
-        <a href="/#nosotros" class="nav-item">Nosotros</a>
-        <a href="../3d-brain.html" class="nav-item">DJ Hub</a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+        <div class="nav-group nav-group-store">
+          <a href="/3tres6muntanerRecords/#catalogo" class="nav-item">Catálogo</a>
+          <a href="/3tres6muntanerRecords/#calendario" class="nav-item">Calendario</a>
+          <a href="/3tres6muntanerRecords/#nosotros" class="nav-item">Nosotros</a>
+        </div>
+        <div class="nav-separator"></div>
+        <div class="nav-group nav-group-content">
+          <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
+        </div>
       </nav>
+
+      <div class="header-actions">
+        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
+        <a href="/3tres6muntanerRecords/" class="cart-icon" aria-label="Carrito">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
     </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <div class="mobile-nav-group-label">Tienda</div>
+      <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
+      <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
+      <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
+      <div class="mobile-nav-group-label">Contenido</div>
+      <a href="/3tres6muntanerRecords/3d-brain.html">DJ Hub</a>
+      <div class="mobile-nav-group-label">Redes</div>
+      <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
+      <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+    </nav>
   </header>
 
-  <nav class="dj-hub-subnav" role="navigation">
-    <a href="../blog.html">Blog</a>
-    <a href="../dj-library.html" class="active">DJ Library</a>
-    <a href="../3d-brain.html">Neural</a>
-    <a href="../toolhub/">Herramientas</a>
-    <a href="../toolhub/#hardware">Equipo DJ</a>
-  </nav>
+  <nav class="dj-hub-subnav" aria-label="Navegación DJ Hub">
+      <div class="subnav-container">
+        <a href="/3tres6muntanerRecords/" class="subnav-back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Tienda
+        </a>
+        <div class="subnav-divider"></div>
+        <div class="subnav-tabs">
+          <a href="../blog.html" class="subnav-tab">Blog</a>
+          <a href="../dj-library.html" class="subnav-tab active">DJ Library</a>
+          <a href="../3d-brain.html" class="subnav-tab">Neural</a>
+          <a href="../toolhub/" class="subnav-tab">Herramientas</a>
+          <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
+        </div>
+      </div>
+    </nav>
 
+  <main>
   <section class="dj-page-hero">
     <div class="dj-page-header">
       <img src="https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg" alt="Kerri Chandler" class="dj-page-avatar"
@@ -410,6 +457,8 @@
       <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="footer-content">
