@@ -1109,7 +1109,7 @@ button {
   color: var(--color-accent);
 }
 
-.playlist-track.playing .track-cover {
+.playlist-track.playing .track-cover-wrap {
   box-shadow: 0 0 0 2px var(--color-accent);
 }
 
@@ -1124,13 +1124,21 @@ button {
   flex-shrink: 0;
 }
 
-.track-cover {
+.track-cover-wrap {
   width: 36px;
   height: 36px;
   border-radius: 4px;
-  object-fit: cover;
-  margin-right: 12px;
+  overflow: hidden;
   flex-shrink: 0;
+  margin-right: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.track-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .track-title {
@@ -3008,71 +3016,6 @@ body.menu-open,
 body.cart-open,
 body.checkout-open {
   overflow: hidden;
-}
-
-/* Hero Playlist Track Styles */
-.playlist-track {
-  display: flex;
-  align-items: center;
-  padding: 12px 15px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.playlist-track:hover {
-  background: rgba(255, 77, 0, 0.1);
-}
-
-.playlist-track.playing {
-  background: rgba(255, 77, 0, 0.15);
-  border-left: 3px solid var(--color-accent);
-}
-
-.playlist-track.playing .track-title {
-  color: var(--color-accent);
-}
-
-.playlist-track.playing .track-play-icon {
-  color: var(--color-accent);
-  animation: pulse 1s infinite;
-}
-
-.track-number {
-  color: #666;
-  font-size: 12px;
-  width: 25px;
-  flex-shrink: 0;
-}
-
-.track-title {
-  flex: 1;
-  color: #ccc;
-  text-decoration: none;
-  font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 10px;
-}
-
-.track-title:hover {
-  color: #fff;
-}
-
-.track-play-icon {
-  color: #666;
-  font-size: 10px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.playlist-track:hover .track-play-icon {
-  opacity: 1;
-}
-
-.playlist-track.playing .track-play-icon {
-  opacity: 1;
 }
 
 @keyframes pulse {

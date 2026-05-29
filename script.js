@@ -1348,7 +1348,9 @@ document.addEventListener('DOMContentLoaded', function () {
                      data-artist="${track.artist}"
                      data-track-title="${track.trackTitle}"
                      data-image="${track.imageUrl}">
-                    <img class="track-cover" src="${track.imageUrl || ''}" alt="" onerror="this.style.display='none'">
+                    <div class="track-cover-wrap">
+                        <img class="track-cover" src="${track.imageUrl || ''}" alt="" onerror="this.parentElement.style.display='none'">
+                    </div>
                     <span class="track-number">${track.index}.</span>
                     <a href="#product-${track.productId}" class="track-title">"${track.trackTitle}" — by ${track.artist}</a>
                     <span class="track-play-icon">▶</span>
