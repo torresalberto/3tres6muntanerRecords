@@ -320,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Deep House',
           price: 550,
           condition: 'VG+',
+          image: 'https://i.discogs.com/qKAa9EDfnFVDSQqGUp1w8W8Xkrdxrzjdw9Gzwp77rPw/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczNDUt/MTM4NjY1MTgxMi00/NzI1LmpwZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=JvVw1XFBL7c',
         },
         {
@@ -331,6 +332,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Techno',
           price: 850,
           condition: 'M',
+          image: 'https://i.discogs.com/4LFnA2YxKMzvfGDNHAVzQigIDECG1uctYegrcZC-yjc/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzODYt/MTE1NjMzMjg5NS5q/cGVn.jpeg',
           audio: 'https://www.youtube.com/watch?v=DwjfXA5SC8w',
         },
         {
@@ -342,6 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'House',
           price: 720,
           condition: 'VG+',
+          image: 'https://i.discogs.com/5vfgKE4zqf4BBw_gJtAcwJNt6mRLU8D7OHxSxBXGgk0/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxMjcw/OTYtMTQ1NTY0NjAx/Ny02OTcwLmpwZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=6TJR6szPHxk',
         },
         {
@@ -353,6 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Minimal',
           price: 680,
           condition: 'VG',
+          image: 'https://i.discogs.com/kdbX4KoSmyhQJZz-SGSo8QKpabY8WNfnNnyjH2u57Ns/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NzI2/Mi0xNDEzNDc3Nzc3/LTkxODAuanBlZw.jpeg',
           audio: 'https://www.youtube.com/watch?v=JaU4V0rQF_Y',
         },
         {
@@ -364,6 +368,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Disco',
           price: 480,
           condition: 'VG+',
+          image: 'https://i.discogs.com/GMZM_CAtJCWOmpI5Qyu9HYg5nrKg1D7OVIGCMjAGO10/rs:fit/g:sm/q:90/h:584/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MDcx/MDYtMTI1NTA4NTk3/NS5qcGVn.jpeg',
           audio: 'https://www.youtube.com/watch?v=Nm-ISatLDG0',
         },
         {
@@ -375,6 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Electro',
           price: 1200,
           condition: 'M',
+          image: 'https://i.discogs.com/_Z7fBaiXlVORVWohPGt_CBLyQvdHZZ4OdTgkK8npWK8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczOS0x/MTI4NTk5MTg4Lmpw/ZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=cZ2RYr_E8SE',
         },
         {
@@ -386,6 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Deep House',
           price: 950,
           condition: 'VG+',
+          image: 'https://i.discogs.com/M-ir2aAKwTKQoLWMp-sOTTIEQYXe6rURk_NHXIUMWRg/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwNDAt/MTEyNDk4NDYxNi5q/cGc.jpeg',
           audio: 'https://www.youtube.com/watch?v=wKpmFSfA59c',
         },
         {
@@ -397,6 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Techno',
           price: 780,
           condition: 'VG',
+          image: 'https://i.discogs.com/GSgKYU7mH2xaJlP6VtsQvlqLfGqKp0Al2YBgB6aZDQ0/rs:fit/g:sm/q:90/h:567/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNjQw/Ny0xMTQyMjY4MzI3/LmpwZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=DwFs1PNz0fc',
         },
       ];
@@ -409,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
           (product) => `
                 <article class="product-card" data-genre="${product.genre.toLowerCase()}" data-product-id="${product.id}">
                     <div class="product-image">
-                        <img src="${this.getPlaceholderImage()}" alt="${product.artist} – ${product.title}" loading="lazy">
+                        <img src="${product.image || this.getPlaceholderImage()}" alt="${product.artist} – ${product.title}" loading="lazy">
                         <div class="product-badges">
                             <span class="badge condition">${product.condition}</span>
                             <span class="badge origin">BCN</span>
@@ -422,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     data-label="${product.label} · ${product.year}"
                                     data-price="${product.price}"
                                     data-condition="${product.condition}"
-                                    data-image="${this.getPlaceholderImage()}"
+                                    data-image="${product.image || this.getPlaceholderImage()}"
                                     data-audio="${product.audio}">
                                 Vista Rápida
                             </button>
@@ -453,7 +461,7 @@ document.addEventListener('DOMContentLoaded', function () {
           artists: [{ name: p.artist }],
           title: p.title,
           videos: p.audio ? [{ uri: p.audio }] : [],
-          thumbnail: DiscogsAPI.getPlaceholderImage(),
+          thumbnail: p.image || DiscogsAPI.getPlaceholderImage(),
         },
         id: p.id,
       }));
