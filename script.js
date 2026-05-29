@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const audioUrl = listing.audio_url || release.videos?.[0]?.uri || '';
 
           return `
-                    <article class="product-card" data-genre="${genre}" data-product-id="${listing.id}">
+                    <article class="product-card" data-genre="${genre}" data-product-id="${listing.id}" data-release-id="${release.id || ''}">
                         <div class="product-image">
                             <img src="${imageUrl}" 
                                  alt="${artistName} – ${title}"
@@ -307,6 +307,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Re-attach event listeners
       this.attachProductListeners();
+
+      // Fetch real cover images from individual release endpoints in background
+      this.fetchReleaseImages();
+    },
+
+    async fetchReleaseImages() {
+      const cards = document.querySelectorAll('.product-card[data-release-id]');
+      for (const card of cards) {
+        const releaseId = card.dataset.releaseId;
+        if (!releaseId) continue;
+        try {
+          const resp = await fetch(`https://api.discogs.com/releases/${releaseId}`, {
+            headers: { 'User-Agent': 'Muntaner336WebStore/1.0' },
+          });
+          if (!resp.ok) continue;
+          const release = await resp.json();
+          const images = release.images || [];
+          const imageUrl = images[0]?.uri;
+          if (imageUrl) {
+            const img = card.querySelector('.product-image img');
+            if (img) img.src = imageUrl;
+          }
+        } catch (_) { /* skip */ }
+      }
     },
 
     loadFallbackProducts() {
@@ -466,6 +490,9 @@ document.addEventListener('DOMContentLoaded', function () {
         id: p.id,
       }));
       HeroPlaylist.populateFromInventory(playlistData);
+
+      // Also fetch real images for fallback products
+      this.fetchReleaseImages();
     },
 
     getPlaceholderImage() {
