@@ -1104,11 +1104,29 @@ document.addEventListener('DOMContentLoaded', function () {
     currentTitle: '3TRES6 Radio',
     ytPlayer: null,
 
+    STORAGE_KEY: '3tres6_audio_state',
+
+    saveState() {
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify({
+        videoId: this.currentVideoId,
+        title: this.currentTitle,
+        isMuted: this.isMuted,
+        timestamp: Date.now(),
+      }));
+    },
+
+    loadState() {
+      try {
+        const raw = localStorage.getItem(this.STORAGE_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (_) { return null; }
+    },
+
     init() {
       const audioToggle = document.getElementById('audioToggle');
+      if (!audioToggle) return; // No player on this page
 
-      // TOGGLE BUTTON - mutes/unmutes (not stops)
-      audioToggle?.addEventListener('click', () => {
+      audioToggle.addEventListener('click', () => {
         if (this.isMuted) {
           this.unmute();
         } else {
@@ -1116,9 +1134,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // Start music immediately on page load (muted to satisfy autoplay policy)
-      // Then unmute after first user interaction
-      this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', true);
+      // Check if we have a saved state from another page
+      const saved = this.loadState();
+      const savedAge = saved ? Date.now() - saved.timestamp : Infinity;
+      const isRecent = savedAge < 5000; // Within 5 seconds = user just navigated
+
+      if (saved && isRecent && saved.videoId) {
+        // Resume from previous page (muted for autoplay policy)
+        this.startMusic(saved.videoId, saved.title, true);
+      } else {
+        // Fresh visit — start default radio
+        this.startMusic(CONFIG.youtubeVideoId, '3TRES6 Radio', true);
+      }
 
       // Unmute on first user interaction
       const unmuteHandler = () => {
@@ -1172,6 +1199,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.isPlaying = true;
       state.isPlaying = true;
       this.updateUI(true, this.currentTitle, startMuted);
+      this.saveState();
 
       console.log('Music iframe created');
       trackEvent('audio_play', {
