@@ -1350,6 +1350,36 @@ button {
   transform: translateY(0);
 }
 
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 77, 0, 0.9);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 5;
+}
+
+.product-image:hover .play-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.play-btn:hover {
+  background: var(--color-accent);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .quick-view-btn {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
