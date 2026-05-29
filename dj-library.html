@@ -153,7 +153,7 @@
 
     async function loadDjs() {
       try {
-        const res = await fetch('/data/djs/index.json');
+        const res = await fetch('data/djs/index.json');
         const data = await res.json();
         allDjs = data.djs || [];
         renderStats();

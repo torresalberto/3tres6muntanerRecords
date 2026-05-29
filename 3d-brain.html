@@ -1300,7 +1300,7 @@ const MULTI_DJ_TRACKS = [
     // ======== ASYNC ENRICHMENT FROM CROSS-REFERENCES ========
     (async function enrichBrain() {
       try {
-        const res = await fetch('/data/djs/cross-references.json');
+        const res = await fetch('data/djs/cross-references.json');
         if (!res.ok) return;
         const data = await res.json();
         if (!data.shared_artists || data.shared_artists.length === 0) return;

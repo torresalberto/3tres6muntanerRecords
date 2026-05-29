@@ -12,17 +12,17 @@ const DJLibrary = {
 
   async loadAll() {
     try {
-      const idx = await this.fetchJSON('/data/djs/index.json');
+      const idx = await this.fetchJSON('data/djs/index.json');
       this.djs = idx.djs || [];
       this.sets = {};
       for (const dj of this.djs) {
         for (const setId of (dj.sets || [])) {
-          const set = await this.fetchJSON(`/data/djs/sets/${setId}.json`);
+          const set = await this.fetchJSON(`data/djs/sets/${setId}.json`);
           if (set) this.sets[setId] = set;
         }
       }
       try {
-        const cr = await this.fetchJSON('/data/djs/cross-references.json');
+        const cr = await this.fetchJSON('data/djs/cross-references.json');
         this.crossRefs = cr || { shared_artists: [], shared_tracks: [], shared_labels: [] };
       } catch { this.crossRefs = { shared_artists: [], shared_tracks: [], shared_labels: [] }; }
     } catch(e) {

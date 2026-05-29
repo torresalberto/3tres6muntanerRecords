@@ -17,7 +17,7 @@ const DJGraph = {
 
   loadData: async function() {
     try {
-      const idxRes = await fetch('/data/djs/index.json');
+      const idxRes = await fetch('data/djs/index.json');
       const idx = await idxRes.json();
       const djs = idx.djs || [];
 
@@ -42,7 +42,7 @@ const DJGraph = {
 
       // Track registry — exact track overlaps
       try {
-        const trRes = await fetch('/data/djs/tracks/track-registry.json');
+        const trRes = await fetch('data/djs/tracks/track-registry.json');
         const tr = await trRes.json();
 
         // Group tracks by played_by for cross-DJ connections
