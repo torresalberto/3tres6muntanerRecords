@@ -504,6 +504,14 @@
           section.style.animation = 'fadeInUp 0.4s ease-out forwards';
         }
 
+        // Show default section on load
+        if (hardwareSection) {
+          hardwareSection.style.display = 'block';
+          if (!HardwareGuide.state.devices.length) {
+            HardwareGuide.init();
+          }
+        }
+
         toolTabs.forEach(tab => {
           tab.addEventListener('click', function() {
             if (this.disabled) return;
