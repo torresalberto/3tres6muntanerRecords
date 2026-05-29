@@ -333,9 +333,11 @@ document.addEventListener('DOMContentLoaded', function () {
           if (!resp.ok) continue;
           const release = await resp.json();
 
-          // Update cover image
+          // Get cover image
           const images = release.images || [];
-          const imageUrl = images[0]?.uri;
+          const imageUrl = images[0]?.uri || '';
+
+          // Update product card image
           if (imageUrl) {
             const img = card.querySelector('.product-image img');
             if (img) img.src = imageUrl;
@@ -346,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (videoId) {
             const artistName = release.artists?.[0]?.name || card.querySelector('.product-title')?.textContent?.split(' – ')[0] || '';
             const title = release.title || card.querySelector('.product-title')?.textContent?.split(' – ')[1] || '';
-            playlistVideos.push({ videoId, title: `${artistName} – ${title}` });
+            playlistVideos.push({ videoId, title: `${artistName} – ${title}`, imageUrl });
           }
         } catch (_) { /* skip */ }
       }
@@ -358,7 +360,8 @@ document.addEventListener('DOMContentLoaded', function () {
             artist: v.title.split(' – ')[0] || '',
             title: v.title.split(' – ')[1] || v.title,
             videos: [{ uri: `https://www.youtube.com/watch?v=${v.videoId}` }],
-            thumbnail: '',
+            thumbnail: v.imageUrl || '',
+            images: v.imageUrl ? [{ uri: v.imageUrl }] : [],
           },
           id: i,
         })));
@@ -1345,6 +1348,7 @@ document.addEventListener('DOMContentLoaded', function () {
                      data-artist="${track.artist}"
                      data-track-title="${track.trackTitle}"
                      data-image="${track.imageUrl}">
+                    <img class="track-cover" src="${track.imageUrl || ''}" alt="" onerror="this.style.display='none'">
                     <span class="track-number">${track.index}.</span>
                     <a href="#product-${track.productId}" class="track-title">"${track.trackTitle}" — by ${track.artist}</a>
                     <span class="track-play-icon">▶</span>

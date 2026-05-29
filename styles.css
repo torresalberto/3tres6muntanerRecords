@@ -1098,6 +1098,19 @@ button {
   background: var(--color-accent-light);
 }
 
+.playlist-track.playing {
+  background: rgba(255, 77, 0, 0.08);
+  border-left: 3px solid var(--color-accent);
+}
+
+.playlist-track.playing .track-title {
+  color: var(--color-accent);
+}
+
+.playlist-track.playing .track-cover {
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
 .playlist-track:last-child {
   border-bottom: none;
 }
@@ -1106,6 +1119,15 @@ button {
   width: 28px;
   color: var(--color-text-muted);
   font-size: 13px;
+  flex-shrink: 0;
+}
+
+.track-cover {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 12px;
   flex-shrink: 0;
 }
 
