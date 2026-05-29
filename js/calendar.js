@@ -1,5 +1,5 @@
 const EventCalendar = {
-  API_BASE: 'https://threetres6muntanerrecords.onrender.com',
+  // Backend retired — using local fallback only
   events: [],
   monthlyEvents: [],
 
@@ -13,14 +13,8 @@ const EventCalendar = {
   },
 
   fetchEvents: async function() {
-    try {
-      const res = await fetch(`${this.API_BASE}/api/events`);
-      const data = await res.json();
-      this.events = data.events || [];
-    } catch {
-      console.warn('Could not fetch events, using fallback');
-      this.events = [];
-    }
+    // Backend retired — no live events API available
+    this.events = [];
   },
 
   getUpcomingEvents: function() {

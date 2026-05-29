@@ -1,7 +1,6 @@
 const App = {
   DOWNLOAD_LIMIT: 3,
-  API_BASE: 'https://threetres6muntanerrecords.onrender.com',
-  DOWNLOAD_API_BASE: 'https://threetres6muntanerrecords.onrender.com',
+  // Backend retired — download service temporarily unavailable
 
   state: {
     platform: 'youtube',
@@ -19,21 +18,8 @@ const App = {
   },
 
   async checkBackendHealth() {
-    try {
-      const response = await fetch(`${this.API_BASE}/health`, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log('Backend health check:', data);
-      } else {
-        console.warn('Backend health check failed:', response.status);
-      }
-    } catch (error) {
-      console.warn('Backend health check error:', error.message);
-    }
+    // Backend retired — no health check needed
+    console.warn('Download backend retired — service temporarily unavailable');
   },
 
   loadDownloadCount() {
@@ -264,95 +250,12 @@ const App = {
 
   async downloadFromAPI(url) {
     this.showLoading();
-
-    try {
-      // Create abort controller for timeout
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 60000);
-
-      const response = await fetch(`${this.API_BASE}/api/download`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          url: url,
-          platform: this.state.platform,
-        }),
-        signal: controller.signal,
-      });
-
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || 'Error al procesar la descarga');
-      }
-
-      const data = await response.json();
-
-      // ReClip returns job_id - need to poll for status
-      if (data.job_id) {
-        await this.pollJobStatus(data.job_id);
-      } else {
-        throw new Error('Error desconocido');
-      }
-    } catch (error) {
-      console.error('Download error:', error);
-
-      let errorMessage = error.message || 'Error al conectar con el servidor';
-
-      if (error.name === 'AbortError') {
-        errorMessage = 'La descarga está tardando demasiado. Intenta con un video más corto o intenta de nuevo.';
-      } else if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-        errorMessage = 'Error de conexión. Verifica tu conexión a internet e intenta de nuevo.';
-      } else if (error.message.includes('No video found') || error.message.includes('Video unavailable')) {
-        errorMessage = 'El video no está disponible o no se pudo encontrar. Intenta con otro enlace.';
-      } else if (error.message.includes('private') || error.message.includes('Private video')) {
-        errorMessage = 'El video es privado y no se puede descargar.';
-      } else if (error.message.includes('age') || error.message.includes('restricted')) {
-        errorMessage = 'El video tiene restricciones de edad y no se puede descargar.';
-      }
-
-      this.showError(errorMessage);
-    }
+    // Backend retired — download service temporarily unavailable
+    this.showError('⚠️ El servicio de descarga está en mantenimiento. Usa Y2Mate o SoundCloud-Downloader como alternativa.');
   },
 
   async pollJobStatus(jobId) {
-    const maxAttempts = 60;
-    const pollInterval = 2000;
-    let attempts = 0;
-
-    this.updateProgress(10, 'Iniciando descarga...');
-
-    while (attempts < maxAttempts) {
-      await new Promise(resolve => setTimeout(resolve, pollInterval));
-      attempts++;
-
-      try {
-        const statusResponse = await fetch(`${this.API_BASE}/api/status/${jobId}`);
-        const statusData = await statusResponse.json();
-
-        if (statusData.status === 'done') {
-          const downloadUrl = `${this.API_BASE}/api/file/${jobId}`;
-          const filename = statusData.filename || 'download.mp3';
-          
-          this.showReclipResult(downloadUrl, filename);
-          this.incrementDownloadCount();
-          this.checkEmailCapture();
-          return;
-        } else if (statusData.status === 'error') {
-          throw new Error(statusData.error || 'Error en la descarga');
-        } else {
-          const progress = Math.min(30 + (attempts * 2), 90);
-          this.updateProgress(progress, `Descargando... ${progress}%`);
-        }
-      } catch (e) {
-        console.warn('Status poll error:', e);
-      }
-    }
-
-    throw new Error('La descarga tardó demasiado tiempo');
+    // Backend retired — no polling needed
   },
 
   showReclipResult(downloadUrl, filename) {
@@ -540,26 +443,10 @@ const App = {
       return;
     }
 
-    try {
-      await fetch(`${this.API_BASE}/newsletter`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-          source: 'downloads',
-        }),
-      });
-
-      localStorage.setItem('3tres6_email', email);
-      this.closeModal();
-
-      alert('¡Gracias! A partir de ahora tendrás descargas ilimitadas.');
-    } catch (error) {
-      console.error('Email submission error:', error);
-      this.closeModal();
-    }
+    // Backend retired — save locally only
+    localStorage.setItem('3tres6_email', email);
+    this.closeModal();
+    alert('¡Gracias! Tu email ha sido guardado.');
   },
 
   checkForExistingDownload() {

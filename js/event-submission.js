@@ -1,5 +1,5 @@
 const EventSubmission = {
-  API_BASE: 'https://threetres6muntanerrecords.onrender.com',
+  // Backend retired — event submission temporarily unavailable
 
   init: function() {
     this.bindEvents();
@@ -91,29 +91,12 @@ const EventSubmission = {
     submitBtn.textContent = 'Sending...';
     statusEl.textContent = '';
 
-    try {
-      const response = await fetch(`${this.API_BASE}/api/events/submit`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        statusEl.textContent = '✅ Event submitted! We\'ll review it shortly.';
-        statusEl.className = 'submit-status success';
-        form.reset();
-        document.querySelectorAll('.dj-input').forEach((el, i) => { if (i > 0) el.remove(); });
-        setTimeout(() => this.closeModal(), 2500);
-      } else {
-        statusEl.textContent = data.error || 'Something went wrong';
-        statusEl.className = 'submit-status error';
-      }
-    } catch (err) {
-      statusEl.textContent = 'Could not connect to server. Try again later.';
-      statusEl.className = 'submit-status error';
-    }
+    // Backend retired — event submission temporarily unavailable
+    statusEl.textContent = '📧 Envíanos el evento por email: hola@3tres6records.com';
+    statusEl.className = 'submit-status info';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Event';
+    return;
 
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit Event';
