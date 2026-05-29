@@ -311,6 +311,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async fetchReleaseImages() {
       const cards = document.querySelectorAll('.product-card[data-release-id]');
+
+      // Load pre-built playlist (YouTube videos matched to our vinyls)
+      let playlistData = [];
+      try {
+        const resp = await fetch('data/playlist.json');
+        if (resp.ok) playlistData = await resp.json();
+      } catch (_) {}
+
+      const playlistMap = {};
+      playlistData.forEach(p => { playlistMap[p.releaseId] = p.videoId; });
+
       const playlistVideos = [];
       for (const card of cards) {
         const releaseId = card.dataset.releaseId;
@@ -321,38 +332,35 @@ document.addEventListener('DOMContentLoaded', function () {
           });
           if (!resp.ok) continue;
           const release = await resp.json();
+
+          // Update cover image
           const images = release.images || [];
           const imageUrl = images[0]?.uri;
           if (imageUrl) {
             const img = card.querySelector('.product-image img');
             if (img) img.src = imageUrl;
           }
-          // Extract first YouTube video for playlist
-          const videos = release.videos || [];
-          const ytVideo = videos.find(v => v.uri?.includes('youtube.com'));
-          if (ytVideo) {
-            const match = ytVideo.uri.match(/v=([^&]+)/);
-            if (match) {
-              card.dataset.youtubeId = match[1];
-              playlistVideos.push({
-                id: card.dataset.productId,
-                videoId: match[1],
-                title: card.querySelector('.product-title')?.textContent || '',
-              });
-            }
+
+          // Use playlist.json video ID for this release
+          const videoId = playlistMap[parseInt(releaseId)];
+          if (videoId) {
+            const artistName = release.artists?.[0]?.name || card.querySelector('.product-title')?.textContent?.split(' – ')[0] || '';
+            const title = release.title || card.querySelector('.product-title')?.textContent?.split(' – ')[1] || '';
+            playlistVideos.push({ videoId, title: `${artistName} – ${title}` });
           }
         } catch (_) { /* skip */ }
       }
-      // Update hero playlist with real videos
+
+      // Populate hero playlist with matched YouTube tracks (audio only)
       if (playlistVideos.length > 0) {
-        HeroPlaylist.populateFromInventory(playlistVideos.map(v => ({
+        HeroPlaylist.populateFromInventory(playlistVideos.map((v, i) => ({
           release: {
             artist: v.title.split(' – ')[0] || '',
             title: v.title.split(' – ')[1] || v.title,
             videos: [{ uri: `https://www.youtube.com/watch?v=${v.videoId}` }],
             thumbnail: '',
           },
-          id: v.id,
+          id: i,
         })));
       }
     },
