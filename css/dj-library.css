@@ -733,3 +733,141 @@
     gap: 1rem;
   }
 }
+
+/* DJ Card Full (with tracklists) */
+.dj-card-full {
+  background: var(--bg-card, #1a1a1a);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.dj-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.dj-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,77,0,0.3);
+}
+
+.dj-info h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.dj-meta {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  flex-wrap: wrap;
+}
+
+.dj-genres {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.genre-tag {
+  background: rgba(255,77,0,0.15);
+  color: #ff9100;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.completion { font-weight: 600; }
+.completion-high { color: #4caf50; }
+.completion-med { color: #ff9800; }
+.completion-low { color: #f44336; }
+
+/* Sets */
+.dj-sets {
+  padding: 0 1.5rem 1.25rem;
+}
+
+.set-block {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.set-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.set-label {
+  font-weight: 600;
+  color: #ff4d00;
+  font-size: 0.9rem;
+}
+
+.set-venue, .set-date, .set-duration {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.set-yt {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+}
+.set-yt:hover { color: #ff4d00; }
+
+/* Tracklist Table */
+.tracklist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.tracklist-table th {
+  text-align: left;
+  color: rgba(255,255,255,0.4);
+  font-weight: 500;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tracklist-table td {
+  padding: 0.35rem 0.5rem;
+  color: rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.tracklist-table tr:hover td {
+  background: rgba(255,77,0,0.05);
+}
+
+.track-status {
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+.status-confirmed { background: rgba(76,175,80,0.15); color: #4caf50; }
+.status-unidentified { background: rgba(255,152,0,0.15); color: #ff9800; }
+
+.no-tracks {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.85rem;
+  padding: 0.75rem 0;
+}

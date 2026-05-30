@@ -156,6 +156,16 @@
         const res = await fetch('data/djs/index.json');
         const data = await res.json();
         allDjs = data.djs || [];
+        // Load set data for each DJ
+        for (const dj of allDjs) {
+          dj.setsData = [];
+          for (const setId of (dj.sets || [])) {
+            try {
+              const setRes = await fetch(`data/djs/sets/${setId}.json`);
+              if (setRes.ok) dj.setsData.push(await setRes.json());
+            } catch (_) {}
+          }
+        }
         renderStats();
         renderGenres();
         renderGrid(allDjs);
@@ -220,26 +230,51 @@
         const completion = dj.stats.completion_rate;
         const completionClass = completion >= 90 ? 'high' : completion >= 70 ? 'med' : 'low';
         const img = dj.image || 'data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20fill%3D%27%23111%27%20width%3D%27100%27%20height%3D%27100%27%2F%3E%3Ctext%20fill%3D%27%23ff4d00%27%20x%3D%2750%27%20y%3D%2755%27%20text-anchor%3D%27middle%27%20font-size%3D%2740%27%3E%F0%9F%8E%A7%3C%2Ftext%3E%3C%2Fsvg%3E';
+        const setsHtml = (dj.setsData || []).map(set => {
+          const tracks = set.tracklist || [];
+          const ytUrl = set.youtube_embed_id ? `https://www.youtube.com/watch?v=${set.youtube_embed_id}` : '';
+          return `
+            <div class="set-block">
+              <div class="set-header">
+                <span class="set-label">▶ ${set.title}</span>
+                ${set.venue ? `<span class="set-venue">📍 ${set.venue}</span>` : ''}
+                ${set.date ? `<span class="set-date">📅 ${set.date}</span>` : ''}
+                ${set.duration_formatted ? `<span class="set-duration">⏱️ ${set.duration_formatted}</span>` : ''}
+                ${ytUrl ? `<a href="${ytUrl}" target="_blank" class="set-yt">▶ YouTube</a>` : ''}
+              </div>
+              ${tracks.length ? `
+                <table class="tracklist-table">
+                  <thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+                  <tbody>${tracks.map((t, i) => `
+                    <tr>
+                      <td>${t.position || (i+1)}</td>
+                      <td>${t.timestamp || '--:--'}</td>
+                      <td>${t.artist}</td>
+                      <td>${t.title}</td>
+                      <td><span class="track-status status-${t.status || 'unidentified'}">${t.status === 'confirmed' ? '✓' : '?'}</span></td>
+                    </tr>
+                  `).join('')}</tbody>
+                </table>
+              ` : '<p class="no-tracks">Tracklist being sourced...</p>'}
+            </div>
+          `;
+        }).join('');
         return `
-          <div class="dj-card">
-            <div class="dj-card-image">
-              <img src="${img}" alt="${dj.name}" loading="lazy"
-                onerror="this.parentElement.innerHTML='<div class=\\'dj-card-placeholder\\'>🎧</div>'" />
-            </div>
-            <div class="dj-card-body">
-              <h3>${dj.name}</h3>
-              <div class="dj-card-meta">
-                ${dj.origin ? `<span>${dj.origin}</span>` : ''}
-                <span>${dj.stats.sets} set${dj.stats.sets !== 1 ? 's' : ''}</span>
-              </div>
-              <div class="dj-card-genres">
-                ${dj.genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}
-              </div>
-              <div class="dj-card-completion completion-${completionClass}">
-                <div class="completion-bar" style="width:${completion}%"></div>
-                <span>${completion}% identificado</span>
+          <div class="dj-card-full">
+            <div class="dj-card-header">
+              <img src="${img}" alt="${dj.name}" class="dj-avatar" loading="lazy"
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect fill=%27%23111%27 width=%27100%27 height=%27100%27/%3E%3Ctext fill=%27%23ff4d00%27 x=%2750%27 y=%2755%27 text-anchor=%27middle%27 font-size=%2740%27%3E🎧%3C/text%3E%3C/svg%3E'" />
+              <div class="dj-info">
+                <h3>${dj.name}</h3>
+                <div class="dj-meta">
+                  ${dj.origin ? `<span>${dj.origin}</span>` : ''}
+                  <span>${dj.stats.sets} set${dj.stats.sets !== 1 ? 's' : ''}</span>
+                  <span class="completion completion-${completionClass}">${completion}% identificado</span>
+                </div>
+                <div class="dj-genres">${dj.genres.map(g => `<span class="genre-tag">${g}</span>`).join('')}</div>
               </div>
             </div>
+            <div class="dj-sets">${setsHtml}</div>
           </div>
         `;
       }).join('');
