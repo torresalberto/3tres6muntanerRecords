@@ -127,10 +127,6 @@
           <span class="tab-icon">💻</span>
           <span class="tab-label">Software</span>
         </button>
-        <button class="tool-tab" data-tool="djsets">
-          <span class="tab-icon">📀</span>
-          <span class="tab-label">DJ Sets</span>
-        </button>
       </div>
     </section>
 
@@ -420,24 +416,6 @@
     </section>
 
     <!-- DJ Sets Section -->
-    <section class="dj-sets-section" id="djSetsSection" style="display: none;">
-      <div class="section-header">
-        <h2>📀 Biblioteca de Sets</h2>
-        <p>Todos los sets de DJ y tracklists curados</p>
-      </div>
-
-      <div class="djsets-filters">
-        <div class="search-wrapper" style="margin-bottom: 1.5rem;">
-          <input type="text" id="djSetsSearch" class="hardware-search" placeholder="Buscar DJ, set o track..." />
-        </div>
-      </div>
-
-      <div class="djsets-grid" id="djSetsGrid"></div>
-
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="/3tres6muntanerRecords/dj-library.html" class="cta-button" style="display:inline-block;padding:12px 40px;background:#ff4d00;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">Ver Biblioteca Completa →</a>
-      </div>
-    </section>
     </main>
 
     <!-- Footer -->
@@ -489,7 +467,6 @@
         const musicSection = document.getElementById('musicSection');
         const wheelSection = document.getElementById('wheelSection');
         const softwareSection = document.getElementById('softwareSection');
-        const djSetsSection = document.getElementById('djSetsSection');
         const body = document.body;
 
         // Hide hero when not on downloader (downloader removed)
@@ -528,7 +505,6 @@
             musicSection.style.display = 'none';
             wheelSection.style.display = 'none';
             softwareSection.style.display = 'none';
-            djSetsSection.style.display = 'none';
 
             // Show requested section
             if (tool === 'hardware') {
@@ -555,13 +531,6 @@
               if (!SoftwareDirectory.state.resources.length) {
                 SoftwareDirectory.init();
               }
-            } else if (tool === 'djsets') {
-              djSetsSection.style.display = 'block';
-              (window.gsapAnimateSection || animateSection)(djSetsSection);
-              if (typeof renderDJSets === 'function' && !djSetsSection.dataset.initialized) {
-                renderDJSets();
-                djSetsSection.dataset.initialized = 'true';
-              }
             }
 
             // Refresh ScrollTrigger after showing section to fix position calculations
@@ -571,89 +540,6 @@
           });
         });
       });
-
-      // DJ Sets renderer with expandable tracklists
-      function renderDJSets() {
-        const grid = document.getElementById('djSetsGrid');
-        const searchInput = document.getElementById('djSetsSearch');
-        if (!grid) return;
-
-        function getTracklistForSet(djId, setYoutubeId) {
-          if (typeof TRACKLISTS === 'undefined' || !setYoutubeId) return null;
-          const djData = TRACKLISTS[djId];
-          if (!djData) return null;
-          const set = djData.sets.find(s => s.youtube === setYoutubeId);
-          return set || null;
-        }
-
-        function renderTracklist(set, tracks) {
-          const ytUrl = set.youtube ? `https://www.youtube.com/watch?v=${set.youtube}` : '';
-          return `
-            <div class="tracklist-panel" style="margin-top:0.75rem;border-top:1px solid var(--border);padding-top:0.75rem;">
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
-                <span style="font-size:0.7rem;color:var(--text-dim);">${tracks.length} tracks • ${set.source ? set.source.substring(0, 40) + (set.source.length > 40 ? '...' : '') : ''}</span>
-                ${ytUrl ? `<a href="${ytUrl}" target="_blank" style="font-size:0.7rem;color:rgba(255,255,255,0.3);text-decoration:none;">▶ YouTube</a>` : ''}
-              </div>
-              <div class="tracklist-scroll" style="max-height:320px;overflow-y:auto;">
-                ${tracks.map(t => `
-                  <div class="tracklist-row" style="display:flex;align-items:baseline;gap:0.5rem;padding:0.35rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:0.78rem;">
-                    <span style="color:var(--primary,#ff4d00);font-size:0.7rem;font-weight:600;min-width:42px;flex-shrink:0;">${t.time || '--:--'}</span>
-                    <span style="color:var(--text,#fff);flex:1;line-height:1.3;">${t.artist} — ${t.title}</span>
-                    ${t.label ? `<span style="color:var(--text-dim);font-size:0.65rem;white-space:nowrap;">${t.label}</span>` : ''}
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          `;
-        }
-
-        function render(query) {
-          const q = (query || '').toLowerCase().trim();
-          let filtered = DJ_SETS;
-          if (q) {
-            filtered = DJ_SETS.filter(s =>
-              s.dj_name.toLowerCase().includes(q) ||
-              s.title.toLowerCase().includes(q) ||
-              s.venue.toLowerCase().includes(q)
-            );
-          }
-          grid.innerHTML = filtered.map(s => {
-            const yt_url = s.youtube ? `https://www.youtube.com/watch?v=${s.youtube}` : '';
-            const hasTracklist = typeof TRACKLISTS !== 'undefined' && TRACKLISTS[s.dj_id];
-            const tracklistData = hasTracklist && s.youtube ? getTracklistForSet(s.dj_id, s.youtube) : null;
-            const tracklistId = `tracklist-${s.id}`;
-            return `
-              <div class="djsets-card" data-set-id="${s.id}" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;transition:all 0.2s;">
-                <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.5rem;">
-                  <div style="flex:1;cursor:${tracklistData ? 'pointer' : 'default'};" ${tracklistData ? `onclick="document.getElementById('${tracklistId}').classList.toggle('expanded');this.closest('.djsets-card').classList.toggle('expanded');"` : ''}>
-                    <div style="font-size:0.75rem;color:var(--primary,#ff4d00);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.2rem;">${s.dj_name}</div>
-                    <div style="font-size:1rem;font-weight:600;color:var(--text,#fff);line-height:1.3;">${s.title}</div>
-                  </div>
-                  <div style="font-size:0.7rem;color:rgba(255,255,255,0.3);white-space:nowrap;text-align:right;">
-                    ${s.duration || ''}
-                    ${s.duration ? '<br>' : ''}${s.tracks} tracks
-                  </div>
-                </div>
-                ${s.venue ? `<div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-bottom:0.4rem;">📍 ${s.venue}</div>` : ''}
-                <div style="display:flex;gap:0.5rem;align-items:center;">
-                  <span style="font-size:0.75rem;color:rgba(255,255,255,0.4);">${s.confirmed} confirmed</span>
-                  ${s.views ? `<span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">• ${(s.views / 1000).toFixed(0)}K views</span>` : ''}
-                  ${tracklistData ? '<span style="font-size:0.65rem;color:var(--primary,#ff4d00);margin-left:0.25rem;">🎵 tracklist</span>' : ''}
-                </div>
-                ${yt_url ? `<a href="${yt_url}" target="_blank" style="display:inline-block;margin-top:0.6rem;font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;">▶ Watch on YouTube →</a>` : ''}
-                ${tracklistData ? `
-                  <div id="${tracklistId}" class="tracklist-container">
-                    ${renderTracklist(tracklistData, tracklistData.tracklist)}
-                  </div>
-                ` : ''}
-              </div>
-            `;
-          }).join('');
-        }
-
-        render('');
-        searchInput.addEventListener('input', () => render(searchInput.value));
-      }
     </script>
     <script>
       window.addEventListener('scroll', function () {
@@ -662,7 +548,7 @@
 
       document.addEventListener('DOMContentLoaded', function() {
         var hash = window.location.hash.replace('#', '');
-        if (hash && (hash === 'hardware' || hash === 'djsets' || hash === 'wheel' || hash === 'music' || hash === 'software')) {
+        if (hash && (hash === 'hardware' || hash === 'wheel' || hash === 'music' || hash === 'software')) {
           var btn = document.querySelector('.tool-tab[data-tool="' + hash + '"]');
           if (btn) {
             btn.click();
