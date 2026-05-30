@@ -194,13 +194,12 @@
       "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
       "sets": [
         "chaos-glitch-2022",
-        "chaos-in-the-cbd-ballantines-lebanon",
-        "chaos-in-the-cbd-br-glitch-2022"
+        "chaos-in-the-cbd-ballantines-lebanon"
       ],
       "stats": {
-        "sets": 3,
-        "tracks": 61,
-        "known": 55,
+        "sets": 2,
+        "tracks": 41,
+        "known": 40,
         "completion_rate": 90
       }
     },
@@ -598,13 +597,12 @@
       "bio": "",
       "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
       "sets": [
-        "kettama-br-london",
-        "kettama-br-london-2025"
+        "kettama-br-london"
       ],
       "stats": {
-        "sets": 2,
-        "tracks": 25,
-        "known": 25,
+        "sets": 1,
+        "tracks": 13,
+        "known": 13,
         "completion_rate": 100
       }
     },
