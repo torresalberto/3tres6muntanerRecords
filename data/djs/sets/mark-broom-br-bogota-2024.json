@@ -1,7 +1,7 @@
 {
   "id": "mark-broom-br-bogota-2024",
   "dj_id": "mark-broom",
-  "title": "Boiler Room Bogotá 2024",
+  "title": "Boiler Room Bogot\u00e1 2024",
   "genres": [],
   "tracklist": [
     {
@@ -49,5 +49,7 @@
   ],
   "curious_facts": {
     "confirmed_tracks": 6
-  }
+  },
+  "youtube_embed_id": "YNPGycZY8TI",
+  "youtube_url": "https://www.youtube.com/watch?v=YNPGycZY8TI"
 }

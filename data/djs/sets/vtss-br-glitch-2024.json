@@ -27,7 +27,7 @@
     },
     {
       "artist": "Shygirl & Kingdom & VTSS & Club Shy",
-      "title": "F@kë (VTSS Remix)",
+      "title": "F@k\u00eb (VTSS Remix)",
       "timestamp": "",
       "status": "confirmed",
       "position": 4
@@ -42,5 +42,7 @@
   ],
   "curious_facts": {
     "confirmed_tracks": 5
-  }
+  },
+  "youtube_embed_id": "I1mhJjxtJx4",
+  "youtube_url": "https://www.youtube.com/watch?v=I1mhJjxtJx4"
 }
