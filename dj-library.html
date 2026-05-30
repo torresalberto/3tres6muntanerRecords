@@ -106,8 +106,7 @@
   <!-- Filters -->
   <section class="dj-index-filters">
     <div class="filter-bar">
-      <input type="text" id="djSearch" placeholder="Buscar DJ, género..." autocomplete="off" />
-      <div class="genre-filters" id="genreFilters"></div>
+      <input type="text" id="djSearch" placeholder="Buscar DJ..." autocomplete="off" />
     </div>
   </section>
 
@@ -149,7 +148,6 @@
   <script>
     // ===== DJ LIBRARY INDEX =====
     let allDjs = [];
-    let activeGenre = null;
 
     async function loadDjs() {
       try {
@@ -167,7 +165,6 @@
           }
         }
         renderStats();
-        renderGenres();
         renderGrid(allDjs);
       } catch (e) {
         document.getElementById('djGrid').innerHTML =
@@ -185,35 +182,14 @@
       document.getElementById('statKnown').textContent = known;
     }
 
-    function renderGenres() {
-      const genres = new Set();
-      allDjs.forEach(d => d.genres.forEach(g => genres.add(g)));
-      const container = document.getElementById('genreFilters');
-      container.innerHTML = Array.from(genres).sort().map(g =>
-        `<button class="genre-pill" data-genre="${g}" onclick="filterGenre('${g}')">${g}</button>`
-      ).join('') + `<button class="genre-pill active" data-genre="" onclick="filterGenre('')">Todos</button>`;
-    }
-
-    function filterGenre(genre) {
-      activeGenre = genre || null;
-      document.querySelectorAll('.genre-pill').forEach(b => {
-        b.classList.toggle('active', b.dataset.genre === (genre || ''));
-      });
-      applyFilters();
-    }
-
     function applyFilters() {
       const q = document.getElementById('djSearch').value.toLowerCase();
       let filtered = allDjs;
       if (q) {
         filtered = filtered.filter(d =>
           d.name.toLowerCase().includes(q) ||
-          d.genres.some(g => g.toLowerCase().includes(q)) ||
           (d.origin && d.origin.toLowerCase().includes(q))
         );
-      }
-      if (activeGenre) {
-        filtered = filtered.filter(d => d.genres.includes(activeGenre));
       }
       renderGrid(filtered);
     }
