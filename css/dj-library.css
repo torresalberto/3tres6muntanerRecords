@@ -656,6 +656,14 @@
   border-color: rgba(255,77,0,0.3);
 }
 
+.dj-gallery-card.expanded .dj-gallery-thumb {
+  display: none;
+}
+
+.dj-gallery-card.expanded .dj-gallery-info {
+  display: none;
+}
+
 .dj-gallery-detail {
   padding: 1.25rem;
   max-height: 500px;
