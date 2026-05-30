@@ -499,8 +499,6 @@ body {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  opacity: 1 !important;
-  transform: none !important;
 }
 
 .tool-tab:hover:not(:disabled) {

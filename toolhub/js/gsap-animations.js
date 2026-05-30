@@ -11,14 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transform = '';
   });
 
-  // ── Tool tabs staggered entrance ───────────────────────────────
-  gsap.from('.tool-tab', {
-    y: 40,
-    opacity: 0,
-    duration: 0.5,
-    stagger: 0.1,
-    ease: 'back.out(1.4)',
-    delay: 0.4,
+  // ── Tool tabs — visible immediately (no GSAP from animation) ──
+  document.querySelectorAll('.tool-tab').forEach(tab => {
+    tab.style.opacity = '1';
+    tab.style.transform = 'none';
   });
 
   // ── Tab hover: subtle lift + glow ─────────────────────────────
