@@ -236,10 +236,10 @@
           `;
         }).join('');
         return `
-          <div class="dj-gallery-card" onclick="this.classList.toggle('expanded')">
+          <div class="dj-gallery-card" onclick="this.classList.toggle('expanded'); this.querySelector('.gallery-expand').textContent = this.classList.contains('expanded') ? 'Cerrar ▾' : 'Ver tracklist ▸'">
             <div class="dj-gallery-thumb">
               <img src="${img}" alt="${dj.name}" loading="lazy"
-                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect fill=%27%23111%27 width=%27100%27 height=%27100%27/%3E%3Ctext fill=%27%23ff4d00%27 x=%2750%27 y=%2755%27 text-anchor=%27middle%27 font-size=%2740%27%3E🎧%3C/text%3E%3C/svg%3E'" />
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect fill=%27%23111%27 width=%27100%27 height=%27100%27/%3E%3Ctext fill=%27%23ff4d00%27 x=%2750%27 y=%2755%27 text-anchor=%27middle%27 font-size=%2740%27%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E'" />
               <div class="dj-gallery-overlay">
                 <span class="gallery-sets">${dj.stats.sets} set${dj.stats.sets !== 1 ? 's' : ''}</span>
                 <span class="gallery-expand">Ver tracklist ▸</span>
@@ -256,6 +256,7 @@
               <div class="dj-gallery-detail">
                 ${setsHtml}
               </div>
+              <div class="dj-gallery-collapse">▾ Cerrar</div>
             </div>
           </div>
         `;
