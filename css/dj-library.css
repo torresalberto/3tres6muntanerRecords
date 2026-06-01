@@ -19,14 +19,13 @@
   width: 800px;
   height: 800px;
   transform: translate(-50%, -50%);
-  background:
-    repeating-radial-gradient(
-      circle at center,
-      transparent 0px,
-      transparent 2px,
-      rgba(255, 77, 0, 0.03) 2px,
-      rgba(255, 77, 0, 0.03) 4px
-    );
+  background: repeating-radial-gradient(
+    circle at center,
+    transparent 0px,
+    transparent 2px,
+    rgba(255, 77, 0, 0.03) 2px,
+    rgba(255, 77, 0, 0.03) 4px
+  );
   border-radius: 50%;
   animation: vinylSpin 60s linear infinite;
   pointer-events: none;
@@ -46,8 +45,12 @@
 }
 
 @keyframes vinylSpin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .hero-content-wrapper {
@@ -358,7 +361,9 @@
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .requested-id-card:hover {
@@ -481,8 +486,8 @@
 #djSearch {
   width: 100%;
   padding: 1rem 1.5rem;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   color: #fff;
   font-family: 'Space Grotesk', sans-serif;
@@ -496,7 +501,7 @@
 }
 
 #djSearch::placeholder {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .genre-filters {
@@ -507,10 +512,10 @@
 
 .genre-pill {
   padding: 0.5rem 1rem;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 100px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.8rem;
   cursor: pointer;
@@ -542,7 +547,7 @@
 /* Gallery Card */
 .dj-gallery-card {
   background: var(--bg-card, #1a1a1a);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -550,9 +555,9 @@
 }
 
 .dj-gallery-card:hover {
-  border-color: rgba(255,77,0,0.3);
+  border-color: rgba(255, 77, 0, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .dj-gallery-thumb {
@@ -579,7 +584,7 @@
   left: 0;
   right: 0;
   padding: 0.75rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -593,8 +598,8 @@
 
 .gallery-sets {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.7);
-  background: rgba(0,0,0,0.5);
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   padding: 2px 8px;
   border-radius: 4px;
 }
@@ -635,8 +640,8 @@
 
 .gallery-genres span {
   font-size: 0.6rem;
-  color: rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.05);
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
   padding: 1px 6px;
   border-radius: 3px;
 }
@@ -644,7 +649,7 @@
 /* Expanded State */
 .dj-gallery-expand {
   display: none;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .dj-gallery-card.expanded .dj-gallery-expand {
@@ -653,7 +658,7 @@
 
 .dj-gallery-card.expanded {
   grid-column: 1 / -1;
-  border-color: rgba(255,77,0,0.3);
+  border-color: rgba(255, 77, 0, 0.3);
 }
 
 .dj-gallery-card.expanded .dj-gallery-thumb {
@@ -673,10 +678,10 @@
 .dj-gallery-collapse {
   text-align: center;
   padding: 0.75rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 0.8rem;
   cursor: pointer;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   transition: color 0.2s;
 }
 
@@ -687,17 +692,20 @@
 .dj-card {
   display: block;
   background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .dj-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 77, 0, 0.3);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .dj-card-image {
@@ -743,7 +751,7 @@
   gap: 0.75rem;
   margin-bottom: 0.75rem;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .dj-card-genres {
@@ -755,16 +763,16 @@
 
 .dj-card-genres .genre-tag {
   padding: 0.25rem 0.6rem;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 100px;
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .dj-card-completion {
   position: relative;
   height: 6px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 3px;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -776,13 +784,19 @@
   transition: width 0.5s ease;
 }
 
-.completion-high .completion-bar { background: #00c864; }
-.completion-med .completion-bar { background: #ffaa00; }
-.completion-low .completion-bar { background: #ff4444; }
+.completion-high .completion-bar {
+  background: #00c864;
+}
+.completion-med .completion-bar {
+  background: #ffaa00;
+}
+.completion-low .completion-bar {
+  background: #ff4444;
+}
 
 .dj-card-completion span {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .loading-state,
@@ -791,7 +805,7 @@
   grid-column: 1 / -1;
   text-align: center;
   padding: 4rem 2rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .error-state button {
@@ -823,12 +837,12 @@
 }
 
 .dj-graph-section .section-header p {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .dj-graph-container {
   background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
   min-height: 500px;
@@ -886,7 +900,7 @@
 /* DJ Card Full (with tracklists) */
 .dj-card-full {
   background: var(--bg-card, #1a1a1a);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -904,7 +918,7 @@
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255,77,0,0.3);
+  border: 2px solid rgba(255, 77, 0, 0.3);
 }
 
 .dj-info h3 {
@@ -917,7 +931,7 @@
   display: flex;
   gap: 0.75rem;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   flex-wrap: wrap;
 }
 
@@ -929,7 +943,7 @@
 }
 
 .genre-tag {
-  background: rgba(255,77,0,0.15);
+  background: rgba(255, 77, 0, 0.15);
   color: #ff9100;
   padding: 2px 8px;
   border-radius: 4px;
@@ -937,10 +951,18 @@
   font-weight: 500;
 }
 
-.completion { font-weight: 600; }
-.completion-high { color: #4caf50; }
-.completion-med { color: #ff9800; }
-.completion-low { color: #f44336; }
+.completion {
+  font-weight: 600;
+}
+.completion-high {
+  color: #4caf50;
+}
+.completion-med {
+  color: #ff9800;
+}
+.completion-low {
+  color: #f44336;
+}
 
 /* Sets */
 .dj-sets {
@@ -948,7 +970,7 @@
 }
 
 .set-block {
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 1rem;
   margin-top: 1rem;
 }
@@ -986,17 +1008,21 @@
   border: none;
 }
 
-.set-venue, .set-date, .set-duration {
+.set-venue,
+.set-date,
+.set-duration {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .set-yt {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
 }
-.set-yt:hover { color: #ff4d00; }
+.set-yt:hover {
+  color: #ff4d00;
+}
 
 /* Tracklist Table */
 .tracklist-table {
@@ -1007,10 +1033,10 @@
 
 .tracklist-table th {
   text-align: left;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
   font-weight: 500;
   padding: 0.4rem 0.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1018,12 +1044,12 @@
 
 .tracklist-table td {
   padding: 0.35rem 0.5rem;
-  color: rgba(255,255,255,0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.03);
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .tracklist-table tr:hover td {
-  background: rgba(255,77,0,0.05);
+  background: rgba(255, 77, 0, 0.05);
 }
 
 .track-status {
@@ -1031,11 +1057,17 @@
   padding: 1px 6px;
   border-radius: 3px;
 }
-.status-confirmed { background: rgba(76,175,80,0.15); color: #4caf50; }
-.status-unidentified { background: rgba(255,152,0,0.15); color: #ff9800; }
+.status-confirmed {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+.status-unidentified {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+}
 
 .no-tracks {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 0.85rem;
   padding: 0.75rem 0;
 }

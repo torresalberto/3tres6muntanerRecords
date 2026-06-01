@@ -379,7 +379,7 @@
       ]
     },
     {
-      "artist": "Trevor Rockcliffe",
+"artist": "Trevor Rockcliffe",
       "djs": [
         "carl-cox",
         "chaos-in-the-cbd"
@@ -731,7 +731,6 @@
         "Feel Emotion"
       ],
       "sets": [
-        "kettama-br-london-2025",
         "kettama-br-london",
         "mall-grab-br-melbourne-2022"
       ]
@@ -825,7 +824,7 @@
           "artist": "Stephanie Cooke",
           "title": "Here With My Best Friend (Louie Vega Drumz)",
           "djId": "chaos-in-the-cbd",
-          "setId": "chaos-in-the-cbd-br-glitch-2022"
+          "setId": "chaos-glitch-2022"
         },
         {
           "artist": "Kerri Chandler",
@@ -909,7 +908,6 @@
         "folamour-polaris-verbier-2020",
         "folamour-yuma-coachella-2024",
         "hunee-br-dekmantel-2015",
-        "kettama-br-london-2025",
         "mall-grab-br-melbourne-2022",
         "peggy-gou-cercle-lille-2024"
       ]
@@ -946,8 +944,7 @@
         "kettama"
       ],
       "sets": [
-        "kerri-chandler-br-nyc-136",
-        "kettama-br-london-2025"
+        "kerri-chandler-br-nyc-136"
       ]
     }
   },

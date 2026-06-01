@@ -241,14 +241,17 @@ If `ytdl-core` breaks (YouTube updates), consider:
 ### Non-Critical Placeholders Found
 These are placeholder values that should be replaced with actual data:
 
-1. **[`product.html:367`](product.html:367)**: `https://www.discogs.com/sell/item/XXXXXX`
-   - Should be replaced with actual Discogs listing URL
+1. **[`product.html`](product.html)**: `https://www.discogs.com/sell/item/XXXXXX`
+   - Should be replaced with actual Discogs listing URL (dynamically loaded from API)
 
-2. **[`index.html:651`](index.html:651)**: `https://wa.me/521XXXXXXXXXX`
-   - Should be replaced with actual WhatsApp number
+2. **[`index.html`](index.html)**: WhatsApp URLs fixed to `5255879475564` ✅
 
-3. **[`backend/server.js:449`](backend/server.js:449)**: `521XXXXXXXXXX`
-   - Should be replaced with actual WhatsApp number
+3. **[`backend/server.js`](backend/server.js)**: WhatsApp fallback fixed ✅
+
+### Fixed Issues
+- [x] Shipping rates updated from $99 to $100 MXN to match business rules (May 2026)
+- [x] WhatsApp number placeholders updated with actual number `5255879475564`
+- [x] `.env.example` updated with correct WhatsApp number
 
 ### Recommendations
 - Replace placeholder URLs with actual values before production
@@ -259,6 +262,8 @@ These are placeholder values that should be replaced with actual data:
 ## 7. Deployment Checklist
 
 ### Before Going Live
+- [x] Fix shipping rates ($99 → $100 MXN) to match business rules
+- [x] Update WhatsApp numbers to actual values
 - [ ] Test all download functionality end-to-end
 - [ ] Test homepage on mobile devices
 - [ ] Test homepage on desktop
