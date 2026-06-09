@@ -95,7 +95,7 @@
       </div>
     </nav>
 
-    <main>
+    <main data-swup>
     <!-- Hero Section -->
     <section class="hero-downloads">
       <div class="hero-content">
@@ -542,11 +542,17 @@
       });
     </script>
     <script>
-      window.addEventListener('scroll', function () {
-        document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
-      });
+      // Toolhub page initializer (Swup-compatible)
+      function initToolhubPage() {
+        // Header scroll effect (idempotent via flag)
+        if (!window._toolhubScrollBound) {
+          window._toolhubScrollBound = true;
+          window.addEventListener('scroll', function () {
+            document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
+          });
+        }
 
-      document.addEventListener('DOMContentLoaded', function() {
+        // Tooltab deep-link via URL hash
         var hash = window.location.hash.replace('#', '');
         if (hash && (hash === 'hardware' || hash === 'wheel' || hash === 'music' || hash === 'software')) {
           var btn = document.querySelector('.tool-tab[data-tool="' + hash + '"]');
@@ -558,8 +564,18 @@
             }, 300);
           }
         }
-      });
+      }
+      initToolhubPage();
+      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+        window.Muntaner336.onPageView(function () {
+          if (document.querySelector('.tool-tab')) initToolhubPage();
+        });
+      }
     </script>
-  <script src="../player-init.js"></script>
+  <!-- Swup: seamless page transitions so the audio player never cuts off -->
+    <script src="../js/vendor/swup.umd.js" defer></script>
+    <script src="../js/swup-init.js" defer></script>
+
+    <script src="../player-init.js"></script>
 </body>
 </html>

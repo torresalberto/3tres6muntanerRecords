@@ -699,7 +699,7 @@
       </div>
     </nav>
 
-    <main>
+    <main data-swup>
       <h1
         style="
           position: absolute;
@@ -793,6 +793,15 @@
       <script src="toolhub/js/dj-sets-db.js"></script>
       <script src="data/tracklists/tracklists.js"></script>
       <script>
+        // ======== 3D BRAIN INITIALIZER (Swup-compatible) ========
+        // Wrapped in a function so it can be re-invoked after a Swup
+        // navigation. Stores rafIds and listeners for safe teardown.
+        window.Muntaner336 = window.Muntaner336 || {};
+        window.Muntaner336._brain = window.Muntaner336._brain || {};
+        window.Muntaner336.init3DBrain = function () {
+          var brain = { rafIds: [], listeners: [] };
+          window.Muntaner336._brain = brain;
+
         // ======== DATA ========
         const GENRE_COLORS = {
           House: '#ff4d00',
@@ -1635,6 +1644,18 @@
             console.warn('Brain enrichment failed:', e);
           }
         })();
+
+          // Register Swup hook to re-render on every navigation back.
+          if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+            window.Muntaner336.onPageView(function () {
+              if (document.getElementById('networkSvg') || document.getElementById('brainSvg')) {
+                try { window.Muntaner336.init3DBrain(); } catch (e) { console.error('Brain re-init failed', e); }
+              }
+            });
+          }
+        };
+        // Initial run
+        window.Muntaner336.init3DBrain();
       </script>
 
       <!-- Footer -->
@@ -1656,6 +1677,10 @@
         document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
       });
     </script>
+    <!-- Swup: seamless page transitions so the audio player never cuts off -->
+    <script src="../js/vendor/swup.umd.js" defer></script>
+    <script src="../js/swup-init.js" defer></script>
+
     <script src="../player-init.js"></script>
   </body>
 </html>

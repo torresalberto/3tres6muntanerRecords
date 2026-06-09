@@ -1990,21 +1990,47 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize Everything
   // ========================================
 
-  DiscogsAPI.getInventory();
-  Cart.init();
-  Checkout.init();
-  QuickView.init();
-  AudioPlayer.init();
-  HeroPlaylist.init();
-  CatalogFilters.init();
-  MobileNav.init();
-  ExitIntent.init();
-  InstagramCarousel.init();
-  CalendarLiveTabs.init();
+  function initHomepage() {
+    // Re-init handlers that bind event listeners. Calling them again
+    // after a Swup navigation rebinds listeners on the new DOM.
+    // Each init() should be idempotent (use ?., look up elements at call time).
+    Cart.init();
+    Checkout.init();
+    QuickView.init();
+    // AudioPlayer.init() is intentionally skipped on re-init: the audio
+    // player DOM is outside the swup container, and its state must persist.
+    HeroPlaylist.init();
+    CatalogFilters.init();
+    MobileNav.init();
+    ExitIntent.init();
+    InstagramCarousel.init();
+    CalendarLiveTabs.init();
 
-  // Re-process Instagram embeds if SDK loaded
-  if (window.instgrm) {
-    window.instgrm.Embeds.process();
+    // Re-process Instagram embeds if SDK loaded
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  }
+
+  // Initial inventory fetch (only on first load)
+  DiscogsAPI.getInventory();
+  initHomepage();
+
+  // Expose a re-init hook for Swup navigations back to the homepage.
+  // This is called from swup-init.js on every page:view event.
+  window.Muntaner336 = window.Muntaner336 || {};
+  window.Muntaner336.reinitHomepage = function () {
+    // Re-fetch inventory (catalog may have changed on the backend)
+    DiscogsAPI.getInventory();
+    initHomepage();
+  };
+  if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+    window.Muntaner336.onPageView(function () {
+      // Only re-init if we are on the homepage (catalog/products present)
+      if (document.getElementById('productsGrid') || document.querySelector('.product-card')) {
+        window.Muntaner336.reinitHomepage();
+      }
+    });
   }
 
   // ========================================

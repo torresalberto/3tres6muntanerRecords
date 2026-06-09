@@ -232,8 +232,9 @@
       </nav>
     </header>
 
-    <!-- Hero Section with Featured Playlist -->
-    <section class="hero" aria-label="Introducción">
+    <main data-swup>
+      <!-- Hero Section with Featured Playlist -->
+      <section class="hero" aria-label="Introducción">
       <div class="hero-content">
         <h1>Sonidos del Underground Europeo</h1>
         <p>Vinilos seleccionados en Barcelona, para coleccionistas en México.</p>
@@ -280,10 +281,10 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
-    <!-- Product Catalog Section -->
-    <section class="section catalog-section" id="catalogo" aria-label="Catálogo de vinilos">
+      <!-- Product Catalog Section -->
+      <section class="section catalog-section" id="catalogo" aria-label="Catálogo de vinilos">
       <div class="section-header">
         <h2>Catálogo</h2>
         <div class="catalog-filters" role="tablist" aria-label="Filtrar por género">
@@ -326,10 +327,10 @@
           Ver catálogo completo en Discogs →
         </a>
       </div>
-    </section>
+      </section>
 
 <!-- Weekly Calendar Section -->
-     <section class="section calendar-section" id="calendario" aria-label="Calendario de eventos">
+       <section class="section calendar-section" id="calendario" aria-label="Calendario de eventos">
        <div class="section-header">
          <h2>Esta Semana</h2>
          <span class="section-subtitle">Eventos, Lives y Sets en CDMX</span>
@@ -355,10 +356,10 @@
        <div class="calendar-mesh" id="dynamicCalendar">
          <div class="loading-events">Cargando calendario...</div>
        </div>
-     </section>
+       </section>
 
-     <!-- Instagram Section -->
-    <section class="section instagram-section" id="instagram" aria-label="Instagram">
+       <!-- Instagram Section -->
+      <section class="section instagram-section" id="instagram" aria-label="Instagram">
       <div class="section-header">
         <h2>@3tres6records</h2>
         <a
@@ -600,10 +601,10 @@
           Seguir @3tres6records
         </a>
       </div>
-    </section>
+      </section>
 
-    <!-- Localized Info Section (CDMX focused) -->
-    <section class="section info-banner" id="info" aria-label="Información">
+      <!-- Localized Info Section (CDMX focused) -->
+      <section class="section info-banner" id="info" aria-label="Información">
       <div class="info-banner-title">QUEREMOS QUE VUELVAS Y VUELVAS</div>
       <div class="info-grid">
         <div class="info-item">
@@ -641,10 +642,10 @@
           </p>
         </div>
       </div>
-    </section>
+      </section>
 
-    <!-- Newsletter Section -->
-    <section class="section newsletter-section" id="newsletter" aria-label="Newsletter">
+      <!-- Newsletter Section -->
+      <section class="section newsletter-section" id="newsletter" aria-label="Newsletter">
       <div class="newsletter-container">
         <h2>Mantente al día</h2>
         <p>Nuevas llegadas, eventos exclusivos y descuentos. Sin spam.</p>
@@ -661,10 +662,10 @@
           <button type="submit">Suscribirse</button>
         </form>
       </div>
-    </section>
+      </section>
 
-    <!-- Home Listening CTA -->
-    <section class="section cta-section" id="escucha" aria-label="Agendar sesión de escucha">
+      <!-- Home Listening CTA -->
+      <section class="section cta-section" id="escucha" aria-label="Agendar sesión de escucha">
       <div class="cta-container">
         <div class="cta-content">
           <h2>¿Quieres escucharlo antes de comprarlo?</h2>
@@ -689,10 +690,10 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
-    <!-- DJ Neural Network Preview -->
-    <section class="section brain-preview-section" id="brain-preview" aria-label="DJ Neural Network">
+      <!-- DJ Neural Network Preview -->
+      <section class="section brain-preview-section" id="brain-preview" aria-label="DJ Neural Network">
       <div class="brain-preview-container">
         <div class="brain-preview-content">
           <div class="brain-preview-badge">🧠 Neural Network</div>
@@ -723,10 +724,10 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section class="section about-section" id="nosotros" aria-label="Sobre nosotros">
+      <!-- About Section -->
+      <section class="section about-section" id="nosotros" aria-label="Sobre nosotros">
       <div class="about-container">
         <div class="about-text">
           <h2>La Conexión Barcelona</h2>
@@ -749,7 +750,8 @@
           />
         </div>
       </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
@@ -1213,6 +1215,10 @@
         </form>
       </div>
     </div>
+
+    <!-- Swup: seamless page transitions so the audio player never cuts off -->
+    <script src="js/vendor/swup.umd.js" defer></script>
+    <script src="js/swup-init.js" defer></script>
 
     <!-- Scripts -->
     <script src="script.js?v=10" defer></script>

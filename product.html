@@ -370,7 +370,7 @@
     </header>
 
     <!-- Product Page -->
-    <main class="product-page">
+    <main data-swup class="product-page">
       <div class="product-container">
         <!-- Gallery -->
         <div class="product-gallery">
@@ -537,25 +537,41 @@
     </footer>
 
     <script>
-      // Thumbnail gallery
-      document.querySelectorAll('.product-thumb').forEach((thumb) => {
-        thumb.addEventListener('click', function () {
-          document.querySelectorAll('.product-thumb').forEach((t) => t.classList.remove('active'));
-          this.classList.add('active');
-          // In real implementation, swap main image
+      // Product page initializer (Swup-compatible)
+      function initProductPage() {
+        // Thumbnail gallery
+        document.querySelectorAll('.product-thumb:not([data-bound])').forEach((thumb) => {
+          thumb.dataset.bound = '1';
+          thumb.addEventListener('click', function () {
+            document.querySelectorAll('.product-thumb').forEach((t) => t.classList.remove('active'));
+            this.classList.add('active');
+            // In real implementation, swap main image
+          });
         });
-      });
 
-      // Scroll to audio
-      function scrollToAudio() {
-        document.getElementById('audioSection').scrollIntoView({ behavior: 'smooth' });
+        // Header scroll effect (idempotent)
+        if (!window._productScrollBound) {
+          window._productScrollBound = true;
+          window.addEventListener('scroll', function () {
+            document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
+          });
+        }
       }
-
-      // Header scroll effect
-      window.addEventListener('scroll', function () {
-        document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
-      });
+      // scrollToAudio is global so onclick handlers in the page can use it
+      window.scrollToAudio = function () {
+        document.getElementById('audioSection')?.scrollIntoView({ behavior: 'smooth' });
+      };
+      initProductPage();
+      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+        window.Muntaner336.onPageView(function () {
+          if (document.querySelector('.product-thumb')) initProductPage();
+        });
+      }
     </script>
+  <!-- Swup: seamless page transitions so the audio player never cuts off -->
+  <script src="../js/vendor/swup.umd.js" defer></script>
+  <script src="../js/swup-init.js" defer></script>
+
   <script src="../player-init.js"></script>
 </body>
 </html>

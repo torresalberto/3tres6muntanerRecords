@@ -108,7 +108,7 @@
       </div>
     </nav>
 
-    <main>
+    <main data-swup>
       <!-- Hero -->
       <section class="dj-library-hero">
         <div class="hero-content-wrapper">
@@ -303,10 +303,30 @@
           .join('');
       }
 
-      // Init
-      loadDjs();
-      if (typeof DJGraph !== 'undefined') DJGraph.init();
+      // Init function (Swup-compatible: re-runs on page:view)
+      function initDjLibrary() {
+        // Avoid double-init if Swup navigates back and loadDjs re-fires
+        if (typeof loadDjs === 'function') {
+          loadDjs();
+        }
+        if (typeof DJGraph !== 'undefined' && DJGraph && typeof DJGraph.init === 'function') {
+          try { DJGraph.init(); } catch (e) { console.warn('DJGraph re-init failed', e); }
+        }
+      }
+      initDjLibrary();
+      // Register hook for Swup navigations back to this page
+      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+        window.Muntaner336.onPageView(function () {
+          if (document.getElementById('djGrid')) {
+            initDjLibrary();
+          }
+        });
+      }
     </script>
+    <!-- Swup: seamless page transitions so the audio player never cuts off -->
+    <script src="../js/vendor/swup.umd.js" defer></script>
+    <script src="../js/swup-init.js" defer></script>
+
     <script src="../player-init.js"></script>
   </body>
 </html>

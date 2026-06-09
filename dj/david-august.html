@@ -259,7 +259,7 @@
       </div>
     </nav>
 
-  <main>
+  <main data-swup>
   <section class="dj-page-hero">
     <div class="dj-page-header">
       <img src="https://i.ytimg.com/vi/mRfwdJx0NDE/hqdefault.jpg" alt="David August" class="dj-page-avatar"
@@ -368,6 +368,8 @@
   </footer>
 
   <script>
+      // DJ page initializer (Swup-compatible)
+      function initDjPage_david-august() {
     // Load related DJs from cross-references
     fetch('../data/djs/cross-references.json')
       .then(r => r.json())
@@ -405,7 +407,18 @@
         document.getElementById('relatedGrid').innerHTML =
           '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
       });
-  </script>
-<script src="../player-init.js"></script>
+      }
+      initDjPage_david-august();
+      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+        window.Muntaner336.onPageView(function () {
+          if (document.getElementById('relatedGrid')) initDjPage_david-august();
+        });
+      }
+    </script>
+<!-- Swup: seamless page transitions so the audio player never cuts off -->
+    <script src="../js/vendor/swup.umd.js" defer></script>
+    <script src="../js/swup-init.js" defer></script>
+
+    <script src="../player-init.js"></script>
 </body>
 </html>

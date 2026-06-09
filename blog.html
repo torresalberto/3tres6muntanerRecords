@@ -634,7 +634,7 @@
     </div>
 
     <!-- Blog Main Content -->
-    <main class="blog-main">
+    <main data-swup class="blog-main">
       <!-- Featured Articles -->
       <div class="blog-featured">
         <article class="blog-article" id="guia-vinilos" data-cat="guia">
@@ -1753,54 +1753,76 @@
     </footer>
 
     <script>
-      // Mobile menu
-      document.getElementById('mobileMenuBtn')?.addEventListener('click', function () {
-        const mobileNav = document.getElementById('mobileNav');
-        const isOpen = mobileNav.classList.toggle('active');
-        this.classList.toggle('active');
-        this.setAttribute('aria-expanded', isOpen);
-      });
+      // Blog page initializer (Swup-compatible)
+      function initBlogPage() {
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        if (mobileMenuBtn && !mobileMenuBtn.dataset.bound) {
+          mobileMenuBtn.dataset.bound = '1';
+          mobileMenuBtn.addEventListener('click', function () {
+            const mobileNav = document.getElementById('mobileNav');
+            const isOpen = mobileNav.classList.toggle('active');
+            this.classList.toggle('active');
+            this.setAttribute('aria-expanded', isOpen);
+          });
+        }
 
-      // Blog category filter
-      document.querySelectorAll('.blog-cat-btn').forEach((btn) => {
-        btn.addEventListener('click', function () {
-          document.querySelectorAll('.blog-cat-btn').forEach((b) => b.classList.remove('active'));
-          this.classList.add('active');
+        // Blog category filter
+        document.querySelectorAll('.blog-cat-btn:not([data-bound])').forEach((btn) => {
+          btn.dataset.bound = '1';
+          btn.addEventListener('click', function () {
+            document.querySelectorAll('.blog-cat-btn').forEach((b) => b.classList.remove('active'));
+            this.classList.add('active');
 
-          const cat = this.dataset.cat;
-          document.querySelectorAll('[data-cat]').forEach((article) => {
-            if (cat === 'all' || article.dataset.cat === cat) {
-              article.style.display = '';
-            } else {
-              article.style.display = 'none';
+            const cat = this.dataset.cat;
+            document.querySelectorAll('[data-cat]').forEach((article) => {
+              if (cat === 'all' || article.dataset.cat === cat) {
+                article.style.display = '';
+              } else {
+                article.style.display = 'none';
+              }
+            });
+          });
+        });
+
+        // Header scroll effect (idempotent — toggling a class is safe)
+        if (!window._blogScrollBound) {
+          window._blogScrollBound = true;
+          window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (header) {
+              header.classList.toggle('scrolled', window.pageYOffset > 50);
+            }
+          });
+        }
+
+        // Smooth scroll for anchor links (also idempotent via data-bound)
+        document.querySelectorAll('a[href^="#"]:not([data-bound])').forEach((anchor) => {
+          anchor.dataset.bound = '1';
+          anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+              const targetPosition = targetElement.offsetTop - headerHeight - 20;
+              window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
           });
         });
-      });
-
-      // Header scroll effect
-      window.addEventListener('scroll', function () {
-        const header = document.querySelector('.header');
-        if (header) {
-          header.classList.toggle('scrolled', window.pageYOffset > 50);
-        }
-      });
-
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            e.preventDefault();
-            const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
-            const targetPosition = targetElement.offsetTop - headerHeight - 20;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-          }
+      }
+      initBlogPage();
+      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+        window.Muntaner336.onPageView(function () {
+          if (document.querySelector('.blog-cat-btn')) initBlogPage();
         });
-      });
+      }
     </script>
+  <!-- Swup: seamless page transitions so the audio player never cuts off -->
+  <script src="../js/vendor/swup.umd.js" defer></script>
+  <script src="../js/swup-init.js" defer></script>
+
   <script src="../player-init.js"></script>
 </body>
 </html>
