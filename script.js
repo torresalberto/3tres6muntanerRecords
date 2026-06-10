@@ -1997,8 +1997,6 @@ document.addEventListener('DOMContentLoaded', function () {
     Cart.init();
     Checkout.init();
     QuickView.init();
-    // AudioPlayer.init() is intentionally skipped on re-init: the audio
-    // player DOM is outside the swup container, and its state must persist.
     HeroPlaylist.init();
     CatalogFilters.init();
     MobileNav.init();
@@ -2014,6 +2012,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial inventory fetch (only on first load)
   DiscogsAPI.getInventory();
+  // AudioPlayer.init() must be called exactly once on first load: it
+  // creates the YouTube iframe in #youtubeAudioContainer. On subsequent
+  // Swup navigations, the player DOM (and the iframe) live OUTSIDE the
+  // swup container and survive intact, so we MUST NOT re-init it.
+  AudioPlayer.init();
   initHomepage();
 
   // Expose a re-init hook for Swup navigations back to the homepage.
@@ -2022,6 +2025,9 @@ document.addEventListener('DOMContentLoaded', function () {
   window.Muntaner336.reinitHomepage = function () {
     // Re-fetch inventory (catalog may have changed on the backend)
     DiscogsAPI.getInventory();
+    // CRITICAL: do NOT call AudioPlayer.init() here. The audio player
+    // is outside the swup container; calling init() would re-create the
+    // YouTube iframe, restarting the audio from the beginning.
     initHomepage();
   };
   if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
