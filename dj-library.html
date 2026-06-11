@@ -18,6 +18,20 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="css/dj-library.css?v=3" />
+    <style>
+      /* DJ Library overrides: slim bottom-bar player to avoid covering the cards grid.
+         Scoped to this page so other pages keep the floating widget look. */
+      body { padding-bottom: 64px; }
+      .audio-controls {
+        bottom: 0; right: 0; left: auto;
+        border-radius: 0;
+        border-right: none; border-left: none; border-bottom: none;
+        height: 56px;
+        padding: 0 24px;
+        background: rgba(10, 10, 10, 0.96);
+        backdrop-filter: blur(10px);
+      }
+    </style>
     <meta property="og:title" content="DJ Library | 3TRES6 Records — Sets, Tracklists & IDs" />
   </head>
   <body>
