@@ -71,11 +71,51 @@ function renderSetBlock(set) {
   `;
 }
 
+function renderProfilePage(dj, sets) {
+  // Renders a full standalone HTML page (not just a fragment) so that:
+  //   1) Direct access at /data/djs/profiles/<id>.html works (charset, noindex,
+  //      meta-refresh redirect to the canonical dj-library page).
+  //   2) The inner detail (set blocks) is also usable as innerHTML for the
+  //      lazy-load expand in dj-library.html — the innerHTML parser strips
+  //      html/head/body context tags and leaves the set-block content intact.
+  const djName = esc(dj.name);
+  const inner = (sets || []).map(renderSetBlock).join('');
+  const canonicalHash = `#dj-${esc(dj.id)}`;
+  const canonicalUrl = `https://3tres6records.albto.me/dj-library.html${canonicalHash}`;
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="refresh" content="0;url=/dj-library.html${canonicalHash}">
+  <link rel="canonical" href="${canonicalUrl}">
+  <title>${djName} — 3TRES6 Records</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #111; color: #eee;
+           display: flex; align-items: center; justify-content: center;
+           min-height: 100vh; margin: 0; padding: 2rem; text-align: center; }
+    a { color: #ff4d00; }
+  </style>
+</head>
+<body>
+  <div class="set-block-wrapper">
+    ${inner}
+    <p style="margin-top:2rem;font-size:.9rem;opacity:.7">
+      Redirigiendo a <a href="/dj-library.html${canonicalHash}">${djName} en DJ Library</a>…
+    </p>
+  </div>
+  <script>setTimeout(function(){location.replace('/dj-library.html${canonicalHash}')},50);</script>
+</body>
+</html>
+`;
+}
+
 function renderProfileInner(dj, sets) {
-  // Renders JUST the inner detail (set blocks), so the loader can inject this
-  // into the outer .dj-gallery-detail of a card. Returning a full <div class="dj-gallery-card">
-  // wrapper would create a nested card that double-toggles on click.
-  return (sets || []).map(renderSetBlock).join('');
+  // Backwards-compatible alias — now returns a full standalone page.
+  // The innerHTML parser in dj-library.html still consumes this correctly:
+  // html/head/body context tags are stripped, leaving the set-block divs.
+  return renderProfilePage(dj, sets);
 }
 
 function renderDjCard(dj, sets) {
