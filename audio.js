@@ -119,5 +119,9 @@
   };
 
   window.AudioPlayer = AudioPlayer;
-  document.addEventListener('DOMContentLoaded', () => AudioPlayer.init());
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => AudioPlayer.init());
+  } else {
+    AudioPlayer.init();
+  }
 })();

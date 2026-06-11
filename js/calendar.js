@@ -5,6 +5,7 @@ const EventCalendar = {
 
   MONTHS: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
   DAYS: ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB', 'DOM'],
+  WEEKDAY_EN: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 
   init: async function() {
     await this.fetchEvents();
@@ -13,8 +14,16 @@ const EventCalendar = {
   },
 
   fetchEvents: async function() {
-    // Backend retired — no live events API available
-    this.events = [];
+    // Load events from local JSON manifest (populated by scripts/scrape-events.js)
+    try {
+      const res = await fetch('data/events/events.json?_=' + Date.now());
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      this.events = Array.isArray(data) ? data.filter(e => e.status === 'approved') : [];
+    } catch (e) {
+      console.warn('[EventCalendar] Could not load events.json:', e.message);
+      this.events = [];
+    }
   },
 
   getUpcomingEvents: function() {
@@ -102,8 +111,16 @@ const EventCalendar = {
     }
     for (let day = 1; day <= daysInMonth; day++) {
       const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const dayDate = new Date(year, month, day);
+      // getDay: Sun=0..Sat=6; index into WEEKDAY_EN directly for English name match
+      const dayNameEn = this.WEEKDAY_EN[dayDate.getDay()];
       const dayEvents = this.events.filter(e => {
-        if (e.recurring) return true;
+        if (e.recurring) {
+          if (Array.isArray(e.recurringDays) && e.recurringDays.length) {
+            return e.recurringDays.includes(dayNameEn);
+          }
+          return false; // recurring but no recurringDays = no grid match
+        }
         return e.date === dateStr;
       });
       const hasEvents = dayEvents.length > 0;
