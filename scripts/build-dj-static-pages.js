@@ -1,16 +1,139 @@
-<!doctype html>
+#!/usr/bin/env node
+/**
+ * build-dj-static-pages.js — Generates a full standalone /dj/<id>.html page
+ * for every DJ in data/djs/index.json. Each page is pre-rendered so the grid
+ * in /dj-library.html can link directly to it (faster first paint, SEO,
+ * sharable URLs, and the music player keeps playing thanks to Swup).
+ *
+ * Why two profile file trees?
+ *   - data/djs/profiles/<id>.html  : HTML FRAGMENT for inline expand (lazy)
+ *   - dj/<id>.html                  : FULL STANDALONE PAGE (this script)
+ *   Both share the same source data (data/djs/sets/*.json + data/djs/index.json)
+ *   so the fragment is the source of truth for content; this script just wraps
+ *   it in a complete <html> document with header, hero, footer, and a
+ *   "related DJs" loader.
+ *
+ * Usage:
+ *   node scripts/build-dj-static-pages.js                # build all
+ *   node scripts/build-dj-static-pages.js --watch        # rebuild on changes
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+const DATA = path.join(ROOT, 'data', 'djs');
+const SETS = path.join(DATA, 'sets');
+const OUT = path.join(ROOT, 'dj');
+const INDEX = path.join(DATA, 'index.json');
+const CROSS = path.join(DATA, 'cross-references.json');
+
+const PLACEHOLDER_IMG =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E";
+
+function esc(s) {
+  return String(s ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function fmtTime(ts) {
+  if (!ts) return '--:--';
+  // Accept "HH:MM:SS" or "MM:SS" or numeric seconds
+  if (/^\d+$/.test(ts)) {
+    const total = parseInt(ts, 10);
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    return h ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${m}:${String(s).padStart(2, '0')}`;
+  }
+  return ts;
+}
+
+function statusBadge(status) {
+  if (status === 'confirmed') return '<span class="track-status confirmed">✓</span>';
+  if (status === 'id' || status === 'unidentified') return '<span class="track-status id">ID</span>';
+  return `<span class="track-status">${esc(status || '?')}</span>`;
+}
+
+function renderSetCard(set) {
+  const yt = set.youtube_embed_id || '';
+  const tracks = set.tracklist || [];
+  const videoBlock = yt
+    ? `<div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/${esc(yt)}" title="${esc(set.title)}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>`
+    : '';
+  const tracklistBlock = tracks.length
+    ? `<table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody>${tracks
+          .map(
+            (t) => `<tr>
+              <td><span class="track-time">${esc(fmtTime(t.timestamp))}</span></td>
+              <td>${esc(t.artist || '')}</td>
+              <td>${esc(t.title || '')}</td>
+              <td>${statusBadge(t.status)}</td>
+            </tr>`
+          )
+          .join('')}</tbody>
+      </table>`
+    : '<p class="no-tracks">Tracklist being sourced...</p>';
+
+  return `<div class="set-card">
+    <div class="set-header">
+      <h3>${esc(set.title)}</h3>
+      <div class="set-meta">
+        ${set.venue ? `<span>📍 ${esc(set.venue)}</span>` : ''}
+        ${set.date ? `<span>📅 ${esc(set.date)}</span>` : ''}
+        ${set.duration_formatted ? `<span>⏱️ ${esc(set.duration_formatted)}</span>` : ''}
+        <span>🎵 ${tracks.length} tracks</span>
+      </div>
+    </div>
+    ${videoBlock}
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      ${tracklistBlock}
+    </div>
+  </div>`;
+}
+
+function renderPage(dj, sets) {
+  const setCount = sets.length;
+  const trackCount = sets.reduce((s, x) => s + (x.tracklist || []).length, 0);
+  const knownCount = sets.reduce(
+    (s, x) => s + (x.tracklist || []).filter((t) => t.status === 'confirmed').length,
+    0
+  );
+  const completion = trackCount ? Math.round((knownCount / trackCount) * 100) : 0;
+
+  const heroImg = dj.image || PLACEHOLDER_IMG;
+  const genres = (dj.genres || [])
+    .map((g) => `<span class="genre-tag">${esc(g)}</span>`)
+    .join('');
+
+  const pageUrl = `https://3tres6records.albto.me/dj/${dj.id}.html`;
+  const title = `${dj.name} | DJ Library — 3TRES6 Records`;
+  const description = `Sets completos de ${dj.name} con tracklists, IDs y datos curiosos. ${setCount} sets, ${trackCount} tracks.`;
+
+  return `<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Helena Hauff | DJ Library — 3TRES6 Records</title>
-  <meta name="description" content="Sets completos de Helena Hauff con tracklists, IDs y datos curiosos. 1 sets, 17 tracks." />
-  <link rel="canonical" href="https://3tres6records.albto.me/dj/helena-hauff.html" />
-  <meta property="og:title" content="Helena Hauff | DJ Library — 3TRES6 Records" />
-  <meta property="og:description" content="Sets completos de Helena Hauff con tracklists, IDs y datos curiosos. 1 sets, 17 tracks." />
-  <meta property="og:url" content="https://3tres6records.albto.me/dj/helena-hauff.html" />
+  <title>${esc(title)}</title>
+  <meta name="description" content="${esc(description)}" />
+  <link rel="canonical" href="${esc(pageUrl)}" />
+  <meta property="og:title" content="${esc(title)}" />
+  <meta property="og:description" content="${esc(description)}" />
+  <meta property="og:url" content="${esc(pageUrl)}" />
   <meta property="og:type" content="profile" />
-  <meta property="og:image" content="https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg" />
+  ${heroImg && heroImg.startsWith('http') ? `<meta property="og:image" content="${esc(heroImg)}" />` : ''}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -178,133 +301,26 @@
   <main data-swup>
     <section class="dj-page-hero">
       <div class="dj-page-header">
-        <img src="https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg" alt="Helena Hauff" class="dj-page-avatar"
-          onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E'" />
+        <img src="${esc(heroImg)}" alt="${esc(dj.name)}" class="dj-page-avatar"
+          onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'" />
         <div class="dj-page-info">
-          <h1>Helena Hauff</h1>
+          <h1>${esc(dj.name)}</h1>
           <div class="dj-page-meta">
-            
-            
-            <span>•</span><span><strong>1</strong> set</span>
-            <span><strong>17</strong> tracks</span>
-            <span><strong>0</strong> identificados (0%)</span>
+            ${dj.origin ? `<span>📍 ${esc(dj.origin)}</span>` : ''}
+            ${dj.active_since ? `<span>•</span><span>Activo desde ${esc(dj.active_since)}</span>` : ''}
+            <span>•</span><span><strong>${setCount}</strong> set${setCount !== 1 ? 's' : ''}</span>
+            <span><strong>${trackCount}</strong> tracks</span>
+            <span><strong>${knownCount}</strong> identificados (${completion}%)</span>
           </div>
-          <div class="dj-page-genres"><span class="genre-tag">Electro</span><span class="genre-tag">Acid</span><span class="genre-tag">Techno</span></div>
-          
+          ${genres ? `<div class="dj-page-genres">${genres}</div>` : ''}
+          ${dj.bio ? `<p class="dj-page-bio">${esc(dj.bio)}</p>` : ''}
         </div>
       </div>
     </section>
 
     <section class="sets-section">
       <h2>▶ Sets</h2>
-      <div class="set-card">
-    <div class="set-header">
-      <h3>Boiler Room x Dekmantel Festival 2017</h3>
-      <div class="set-meta">
-        <span>📍 Dekmantel Festival, Amsterdamse Bos, Amsterdam</span>
-        <span>📅 2017-08-06</span>
-        
-        <span>🎵 17 tracks</span>
-      </div>
-    </div>
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/OdJy_g1G7Ho" title="Boiler Room x Dekmantel Festival 2017"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
-      </div>
-    <div class="tracklist-section">
-      <div class="section-label">Tracklist</div>
-      <table class="tracklist-table">
-        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-        <tbody><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Mumm</td>
-              <td>Star</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Carl Finlow</td>
-              <td>Hashtag (Radioactive Man Remix)</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>The Exaltics</td>
-              <td>0998.0989.12</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>The Hacker</td>
-              <td>Dans La Salle Des Machines</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Computor Rockers</td>
-              <td>Computor Science</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Sync 24 &amp; Privacy</td>
-              <td>General Data Standard</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>ID</td>
-              <td>ID</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Pollon</td>
-              <td>Lost Souls</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Disabled</td>
-              <td>Untitled A1</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>B.W.P. Experiments</td>
-              <td>Stratoïds</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Thomas Schumacher</td>
-              <td>When I Rock</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Q.D.T</td>
-              <td>Untitled B1</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Minimum Syndicat</td>
-              <td>Worth It</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Minimum Syndicat</td>
-              <td>The Bloop</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Umwelt</td>
-              <td>Slave To The Rave</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Illektrolab</td>
-              <td>Internal Software</td>
-              <td><span class="track-status">?</span></td>
-            </tr><tr>
-              <td><span class="track-time">--:--</span></td>
-              <td>Zeta Reticula</td>
-              <td>EP2</td>
-              <td><span class="track-status">?</span></td>
-            </tr></tbody>
-      </table>
-    </div>
-  </div>
+      ${sets.length ? sets.map(renderSetCard).join('\n') : '<p class="no-tracks">No sets indexed yet.</p>'}
     </section>
 
     <section class="related-djs">
@@ -329,18 +345,18 @@
 
   <script>
     // Related DJs loader — fetches cross-references and renders up to 4
-    function initRelated_helena-hauff() {
+    function initRelated_${esc(dj.id)}() {
       const grid = document.getElementById('relatedGrid');
       if (!grid) return;
       fetch('../data/djs/cross-references.json')
         .then(r => r.ok ? r.json() : null)
         .then(cr => {
           if (!cr) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
-          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('helena-hauff'));
-          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('helena-hauff'));
+          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('${esc(dj.id)}'));
+          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('${esc(dj.id)}'));
           const relatedIds = new Set();
-          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== 'helena-hauff') relatedIds.add(id); }));
-          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== 'helena-hauff') relatedIds.add(id); }));
+          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== '${esc(dj.id)}') relatedIds.add(id); }));
+          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== '${esc(dj.id)}') relatedIds.add(id); }));
           const ids = Array.from(relatedIds).slice(0, 6);
           if (!ids.length) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
           return fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
@@ -350,7 +366,7 @@
               const img = d.image || '';
               return '<a href="' + id + '.html" class="dj-card">'
                 + '<div class="dj-card-image">' + (img
-                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=&#92;&#92;\&#39;dj-card-placeholder&#92;&#92;\&#39;>🎧</div>\'"/>'
+                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\\'<div class=&#92;&#92;\\&#39;dj-card-placeholder&#92;&#92;\\&#39;>🎧</div>\\'"/>'
                     : '<div class="dj-card-placeholder">🎧</div>')
                 + '</div>'
                 + '<div class="dj-card-body"><h3>' + d.name + '</h3>'
@@ -362,9 +378,9 @@
         })
         .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
     }
-    initRelated_helena-hauff();
+    initRelated_${esc(dj.id)}();
     if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-      window.Muntaner336.onPageView(function () { initRelated_helena-hauff(); });
+      window.Muntaner336.onPageView(function () { initRelated_${esc(dj.id)}(); });
     }
   </script>
   <!-- Swup: seamless page transitions so the audio player never cuts off -->
@@ -373,3 +389,55 @@
   <script src="../player-init.js" defer></script>
 </body>
 </html>
+`;
+}
+
+function build() {
+  if (!fs.existsSync(INDEX)) {
+    console.error(`Missing ${INDEX}. Run scripts/build-dj-data.js first.`);
+    process.exit(1);
+  }
+  const idx = JSON.parse(fs.readFileSync(INDEX, 'utf-8'));
+  const djs = idx.djs || [];
+  if (!fs.existsSync(OUT)) fs.mkdirSync(OUT, { recursive: true });
+
+  let built = 0;
+  let skipped = 0;
+  for (const dj of djs) {
+    const sets = [];
+    for (const setId of dj.sets || []) {
+      const p = path.join(SETS, `${setId}.json`);
+      if (fs.existsSync(p)) {
+        try { sets.push(JSON.parse(fs.readFileSync(p, 'utf-8'))); }
+        catch (e) { console.warn(`  ! ${setId}.json: ${e.message}`); }
+      }
+    }
+    const html = renderPage(dj, sets);
+    const outPath = path.join(OUT, `${dj.id}.html`);
+    fs.writeFileSync(outPath, html, 'utf-8');
+    built++;
+  }
+  console.log(`Built ${built} static page(s) in ${path.relative(ROOT, OUT)}/ (${skipped} skipped)`);
+}
+
+function watch() {
+  build();
+  let debounce = null;
+  const trigger = () => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      console.log('Change detected, rebuilding...');
+      try { build(); } catch (e) { console.error('Build failed:', e.message); }
+    }, 300);
+  };
+  fs.watch(DATA, { recursive: true }, (event, filename) => {
+    if (filename && !filename.includes('profiles/')) {
+      console.log(`  ${event} ${filename}`);
+      trigger();
+    }
+  });
+}
+
+const args = process.argv.slice(2);
+if (args.includes('--watch')) watch();
+else build();

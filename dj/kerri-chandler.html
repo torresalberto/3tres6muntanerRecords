@@ -4,8 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kerri Chandler | DJ Library — 3TRES6 Records</title>
-  <meta name="description" content="Sets completos de Kerri Chandler con tracklists, IDs y datos curiosos. 1 sets, 29 tracks." />
+  <meta name="description" content="Sets completos de Kerri Chandler con tracklists, IDs y datos curiosos. 2 sets, 58 tracks." />
   <link rel="canonical" href="https://3tres6records.albto.me/dj/kerri-chandler.html" />
+  <meta property="og:title" content="Kerri Chandler | DJ Library — 3TRES6 Records" />
+  <meta property="og:description" content="Sets completos de Kerri Chandler con tracklists, IDs y datos curiosos. 2 sets, 58 tracks." />
+  <meta property="og:url" content="https://3tres6records.albto.me/dj/kerri-chandler.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,175 +25,92 @@
     }
     .dj-page-hero::before {
       content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 3px;
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, transparent, #ff4d00, transparent);
     }
     .dj-page-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
+      display: flex; align-items: flex-start; gap: 2rem;
+      max-width: 1200px; margin: 0 auto;
+      position: relative; z-index: 1;
     }
     .dj-page-avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 3px solid #ff4d00;
-      object-fit: cover;
-      box-shadow: 0 0 60px rgba(255,77,0,0.3);
-      flex-shrink: 0;
+      width: 160px; height: 160px; border-radius: 50%;
+      border: 3px solid #ff4d00; object-fit: cover;
+      box-shadow: 0 0 60px rgba(255,77,0,0.3); flex-shrink: 0;
+      background: #111;
     }
-    .dj-page-info h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-      line-height: 1.1;
+    .dj-page-info h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; }
+    .dj-page-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+    .dj-page-meta strong { color: #ff9100; font-weight: 600; }
+    .dj-page-genres { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .genre-tag {
+      display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+      background: rgba(255,77,0,0.1); border: 1px solid rgba(255,77,0,0.3);
+      color: #ff9100; font-size: 0.8rem; font-weight: 500;
     }
-    .dj-page-meta {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
-    }
-    .dj-page-genres {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-    .dj-page-bio {
-      color: rgba(255,255,255,0.6);
-      line-height: 1.7;
-      max-width: 600px;
-    }
-    .sets-section {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    .dj-page-bio { color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 600px; }
+    .sets-section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
     .sets-section h2 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      font-size: 1.5rem; color: #fff; margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 0.75rem;
     }
     .set-card {
       background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 2rem;
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
+      overflow: hidden; margin-bottom: 2rem;
     }
-    .set-header {
-      padding: 2rem 2rem 1rem;
-    }
-    .set-header h3 {
-      font-size: 1.35rem;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-    .set-meta {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.85rem;
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      background: #000;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-    .tracklist-section {
-      padding: 1.5rem 2rem;
-    }
+    .set-header { padding: 2rem 2rem 1rem; }
+    .set-header h3 { font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem; }
+    .set-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; background: #000; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .tracklist-section { padding: 1.5rem 2rem; }
     .tracklist-section .section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 1rem;
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35); margin-bottom: 1rem;
     }
-    .tracklist-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-    }
+    .tracklist-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
     .tracklist-table th {
-      text-align: left;
-      padding: 0.75rem;
-      color: rgba(255,255,255,0.4);
-      font-weight: 500;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      text-align: left; padding: 0.75rem; color: rgba(255,255,255,0.4);
+      font-weight: 500; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .tracklist-table td {
-      padding: 0.6rem 0.75rem;
-      color: rgba(255,255,255,0.7);
+      padding: 0.6rem 0.75rem; color: rgba(255,255,255,0.7);
       border-bottom: 1px solid rgba(255,255,255,0.04);
     }
-    .tracklist-table tr:hover td {
-      background: rgba(255,255,255,0.02);
+    .tracklist-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .track-time { color: rgba(255,255,255,0.3); font-family: monospace; font-size: 0.8rem; }
+    .track-status { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 500; }
+    .track-status.confirmed { background: rgba(0, 200, 100, 0.1); color: #00c864; }
+    .track-status.id { background: rgba(255, 77, 0, 0.1); color: #ff4d00; }
+    .no-tracks { color: rgba(255,255,255,0.3); font-size: 0.9rem; padding: 1rem 0; }
+    .related-djs { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    .related-djs h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .related-grid .dj-card {
+      display: block; text-decoration: none; color: #fff;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; overflow: hidden; transition: transform 0.2s, border-color 0.2s;
     }
-    .track-time {
-      color: rgba(255,255,255,0.3);
-      font-family: monospace;
-      font-size: 0.8rem;
-    }
-    .track-status {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      font-weight: 500;
-    }
-    .track-status.confirmed {
-      background: rgba(0, 200, 100, 0.1);
-      color: #00c864;
-    }
-    .track-status.id {
-      background: rgba(255, 77, 0, 0.1);
-      color: #ff4d00;
-    }
-    .related-djs {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .related-djs h2 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
+    .related-grid .dj-card:hover { transform: translateY(-3px); border-color: rgba(255,77,0,0.4); }
+    .related-grid .dj-card-image { aspect-ratio: 1/1; background: #111; overflow: hidden; }
+    .related-grid .dj-card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .related-grid .dj-card-body { padding: 0.75rem 1rem; }
+    .related-grid .dj-card-body h3 { font-size: 1rem; margin: 0 0 0.35rem; }
+    .related-grid .dj-card-meta { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+    .related-grid .dj-card-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 100%; font-size: 3rem; background: #111; color: #ff4d00;
     }
     @media (max-width: 768px) {
       .dj-page-header { flex-direction: column; align-items: center; text-align: center; }
       .dj-page-avatar { width: 120px; height: 120px; }
       .dj-page-info h1 { font-size: 2rem; }
+      .dj-page-meta { justify-content: center; }
+      .dj-page-genres { justify-content: center; }
     }
   </style>
-    <meta property="og:title" content="Kerri Chandler | DJ Library — 3TRES6 Records" />
 </head>
 <body>
   <header class="header" id="mainHeader" role="banner">
@@ -197,13 +119,9 @@
         <span class="logo-text">3TRES6</span>
         <span class="logo-subtitle">RECORDS</span>
       </a>
-
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
       <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
         <div class="nav-group nav-group-store">
           <a href="/3tres6muntanerRecords/#catalogo" class="nav-item">Catálogo</a>
@@ -215,7 +133,6 @@
           <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
         </div>
       </nav>
-
       <div class="header-actions">
         <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
         <a href="/3tres6muntanerRecords/" class="cart-icon" aria-label="Carrito">
@@ -228,7 +145,6 @@
         </a>
       </div>
     </div>
-
     <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
       <div class="mobile-nav-group-label">Tienda</div>
       <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
@@ -243,226 +159,393 @@
   </header>
 
   <nav class="dj-hub-subnav" aria-label="Navegación DJ Hub">
-      <div class="subnav-container">
-        <a href="/3tres6muntanerRecords/" class="subnav-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          Tienda
-        </a>
-        <div class="subnav-divider"></div>
-        <div class="subnav-tabs">
-          <a href="../blog.html" class="subnav-tab">Blog</a>
-          <a href="../dj-library.html" class="subnav-tab active" aria-current="page">DJ Library</a>
-          <a href="../3d-brain.html" class="subnav-tab">Neural</a>
-          <a href="../toolhub/" class="subnav-tab">Herramientas</a>
-          <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
-        </div>
-      </div>
-    </nav>
-
-  <main data-swup>
-  <section class="dj-page-hero">
-    <div class="dj-page-header">
-      <img src="https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg" alt="Kerri Chandler" class="dj-page-avatar"
-        onerror="this.parentElement.querySelector('.dj-page-avatar').style.display='none'" />
-      <div class="dj-page-info">
-        <h1>Kerri Chandler</h1>
-        <div class="dj-page-meta">
-          
-          
-          <span>1 sets</span>
-          <span>29 tracks</span>
-          <span>29 identificados (100%)</span>
-        </div>
-        <div class="dj-page-genres">
-          <span class="genre-tag">Soulful House</span><span class="genre-tag">Deep House</span><span class="genre-tag">Garage</span>
-        </div>
-        <p class="dj-page-bio"></p>
+    <div class="subnav-container">
+      <a href="/3tres6muntanerRecords/" class="subnav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Tienda
+      </a>
+      <div class="subnav-divider"></div>
+      <div class="subnav-tabs">
+        <a href="../blog.html" class="subnav-tab">Blog</a>
+        <a href="../dj-library.html" class="subnav-tab active" aria-current="page">DJ Library</a>
+        <a href="../3d-brain.html" class="subnav-tab">Neural</a>
+        <a href="../toolhub/" class="subnav-tab">Herramientas</a>
+        <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section class="sets-section">
-    <h2>Sets</h2>
-    <div class="set-card">
-          <div class="set-header">
-            <h3>Boiler Room New York (Reel-to-Reel Set)</h3>
-            <div class="set-meta">
-              <span>📍 Boiler Room, New York City</span>
-              <span>📅 2022-09-23</span>
-              <span>⏱️ 2:16:05</span>
-              <span>🎵 29 tracks</span>
-            </div>
+  <main data-swup>
+    <section class="dj-page-hero">
+      <div class="dj-page-header">
+        <img src="https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg" alt="Kerri Chandler" class="dj-page-avatar"
+          onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E'" />
+        <div class="dj-page-info">
+          <h1>Kerri Chandler</h1>
+          <div class="dj-page-meta">
+            
+            
+            <span>•</span><span><strong>2</strong> sets</span>
+            <span><strong>58</strong> tracks</span>
+            <span><strong>29</strong> identificados (50%)</span>
           </div>
-          <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/K6XiDub2Wc4" title="Boiler Room New York (Reel-to-Reel Set)" allowfullscreen loading="lazy"></iframe>
+          <div class="dj-page-genres"><span class="genre-tag">Soulful House</span><span class="genre-tag">Deep House</span><span class="genre-tag">Garage</span></div>
+          
         </div>
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time">00:00</span></td>
+      </div>
+    </section>
+
+    <section class="sets-section">
+      <h2>▶ Sets</h2>
+      <div class="set-card">
+    <div class="set-header">
+      <h3>Boiler Room New York (Reel-to-Reel Set)</h3>
+      <div class="set-meta">
+        <span>📍 Boiler Room, New York City</span>
+        <span>📅 2022-09-23</span>
+        
+        <span>🎵 29 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/K6XiDub2Wc4" title="Boiler Room New York (Reel-to-Reel Set)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>JohNick</td>
-              <td>Heat<br><small style="color:rgba(255,255,255,0.3)">Henry Street Music</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Heat</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">05:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Michel De Hey</td>
-              <td>Tracklights (Crackazat Dub)<br><small style="color:rgba(255,255,255,0.3)">Ovum</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Tracklights (Crackazat Dub)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">10:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Yves Murasca</td>
-              <td>All About Housemusic (Dario D'Attis Extended Remix)<br><small style="color:rgba(255,255,255,0.3)">Deepalma</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>All About Housemusic (Dario D&#39;Attis Extended Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">14:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Massimo Lippoli</td>
-              <td>Let It Ride (Dario D'Attis Remix)<br><small style="color:rgba(255,255,255,0.3)">Go Deeva</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Let It Ride (Dario D&#39;Attis Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">19:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Kerri Chandler</td>
-              <td>Atmospheric Beats<br><small style="color:rgba(255,255,255,0.3)">Ibadan</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Atmospheric Beats</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">24:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Masters At Work ft. India</td>
-              <td>I Can't Get No Sleep (Ken/Lou 12")<br><small style="color:rgba(255,255,255,0.3)">Cutting</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>I Can&#39;t Get No Sleep (Ken/Lou 12&quot;)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">28:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Peven Everett</td>
-              <td>Special (Timmy Regisford Remix)<br><small style="color:rgba(255,255,255,0.3)">Groovin</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Special (Timmy Regisford Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">32:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Emmaculate</td>
-              <td>Voodoo (Shannon Chambers 1Sound Remix)<br><small style="color:rgba(255,255,255,0.3)">T's Crates</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Voodoo (Shannon Chambers 1Sound Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">38:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Armonica ft. Toshi</td>
-              <td>Ngeke (andhim Remix)<br><small style="color:rgba(255,255,255,0.3)">MoBlack</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Ngeke (andhim Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">42:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Kerri Chandler ft. Lady Linn</td>
-              <td>You Get Lost In It (The Warehouse Project)<br><small style="color:rgba(255,255,255,0.3)">Kaoz Theory</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>You Get Lost In It (The Warehouse Project)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">46:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Jovonn</td>
-              <td>Hesperia Soul (Main Mix)<br><small style="color:rgba(255,255,255,0.3)">Body'N Deep</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Hesperia Soul (Main Mix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">52:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Kerri Chandler ft. Troy Denari</td>
-              <td>Change Your Mind (District 8) (Full Vocal)<br><small style="color:rgba(255,255,255,0.3)">Kaoz Theory</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Change Your Mind (District 8) (Full Vocal)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">57:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Terry Hunter ft. Devine Brown</td>
-              <td>Angel<br><small style="color:rgba(255,255,255,0.3)">Ultra</small></td>
+              <td>Angel</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Crackazat</td>
+              <td>Fire Drift</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Honey Dijon ft. Annette Bowen &amp; Nikki-O</td>
+              <td>Downtown (Louie Vega Extended Raw Dub Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Mateo &amp; Matos</td>
+              <td>Release The Rhythm (Kevin McKay Extended Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Matt Early &amp; Lee Jeffries ft. Otis Corley</td>
+              <td>I Think I&#39;m Falling In Love (Grant Nelson Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler ft. Rev F.L. Brown</td>
+              <td>Prayer (623 Again Vocal)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>DJ Kwame</td>
+              <td>Spirit Dance (Timmy Regisford Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Jovonn</td>
+              <td>Random (Extended Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Dennis Ferrer ft. Tyrone Ellis</td>
+              <td>Underground Is My Home</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Demuir</td>
+              <td>High. Alive. And Dirty.</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler ft. Sunchilde</td>
+              <td>Never Thought (Printworks) (Main Vocal Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler</td>
+              <td>I Feel It</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Fusion Groove Orchestra ft. Steve Lucas</td>
+              <td>If Only I Could (Liem Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler</td>
+              <td>So Let The Wind Come</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Tasha LaRae &amp; DJ Spen</td>
+              <td>Wish I Didn&#39;t Miss You (John Morales M+M Vocal Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Underground Ministries ft. Kenny Bobien</td>
+              <td>I Shall Not Be Moved (Stand Still) (Extended Club Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>The O&#39;Jays</td>
+              <td>I Love Music (Part I)</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Boiler Room New York 2022</h3>
+      <div class="set-meta">
+        <span>📍 Boiler Room, New York City</span>
+        <span>📅 2022-09-23</span>
+        <span>⏱️ 1:09:18</span>
+        <span>🎵 29 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/K6XiDub2Wc4" title="Boiler Room New York 2022"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>The O&#39;Jays</td>
+              <td>I Love Music (Part I)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:03:00</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Underground Ministries feat. Kenny Bobien</td>
+              <td>I Shall Not Be Moved (Stand Still)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Tasha LaRae &amp; DJ Spen</td>
+              <td>Wish I Didn&#39;t Miss You (John Morales M+M Vocal Mix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler</td>
+              <td>So Let The Wind Come</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Fusion Groove Orchestra feat. Steve Lucas</td>
+              <td>If Only I Could (Liem Remix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler</td>
+              <td>I Feel It</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler feat. Sunchilde</td>
+              <td>Never Thought (Printworks) (Main Vocal Mix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Demuir</td>
+              <td>High. Alive. And Dirty.</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Dennis Ferrer feat. Tyrone Ellis</td>
+              <td>Underground Is My Home</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Jovonn</td>
+              <td>Random (Extended Mix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>DJ Kwame</td>
+              <td>Spirit Dance (Timmy Regisford Edit)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler feat. Rev F.L. Brown</td>
+              <td>Prayer (623 Again Vocal)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Matt Early &amp; Lee Jeffries feat. Otis Corley</td>
+              <td>I Think I&#39;m Falling In Love (Grant Nelson Remix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Mateo &amp; Matos</td>
+              <td>Release The Rhythm (Kevin McKay Extended Remix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Honey Dijon feat. Annette Bowen &amp; Nikki-O</td>
+              <td>Downtown (Louie Vega Extended Raw Dub Mix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>Crackazat</td>
               <td>Fire Drift</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:08:00</span></td>
-              <td>Honey Dijon ft. Annette Bowen & Nikki-O</td>
-              <td>Downtown (Louie Vega Extended Raw Dub Mix)<br><small style="color:rgba(255,255,255,0.3)">Classic</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Terry Hunter feat. Devine Brown</td>
+              <td>Angel</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:12:00</span></td>
-              <td>Mateo & Matos</td>
-              <td>Release The Rhythm (Kevin McKay Extended Remix)<br><small style="color:rgba(255,255,255,0.3)">Glasgow Underground</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler feat. Troy Denari</td>
+              <td>Change Your Mind (District 8) (Full Vocal)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:14:00</span></td>
-              <td>Matt Early & Lee Jeffries ft. Otis Corley</td>
-              <td>I Think I'm Falling In Love (Grant Nelson Remix)<br><small style="color:rgba(255,255,255,0.3)">Lockdown</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:18:00</span></td>
-              <td>Kerri Chandler ft. Rev F.L. Brown</td>
-              <td>Prayer (623 Again Vocal)<br><small style="color:rgba(255,255,255,0.3)">Kaoz Theory</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:20:00</span></td>
-              <td>DJ Kwame</td>
-              <td>Spirit Dance (Timmy Regisford Edit)<br><small style="color:rgba(255,255,255,0.3)">Nervous</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:25:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Jovonn</td>
-              <td>Random (Extended Mix)<br><small style="color:rgba(255,255,255,0.3)">Nu Groove</small></td>
+              <td>Hesperia Soul (Main Mix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:28:00</span></td>
-              <td>Dennis Ferrer ft. Tyrone Ellis</td>
-              <td>Underground Is My Home<br><small style="color:rgba(255,255,255,0.3)">King Street Sounds</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kerri Chandler feat. Lady Linn</td>
+              <td>You Get Lost In It (The Warehouse Project)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:32:00</span></td>
-              <td>Demuir</td>
-              <td>High. Alive. And Dirty.<br><small style="color:rgba(255,255,255,0.3)">Hot Creations</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Armonica feat. Toshi</td>
+              <td>Ngeke (andhim Remix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:35:00</span></td>
-              <td>Kerri Chandler ft. Sunchilde</td>
-              <td>Never Thought (Printworks) (Main Vocal Mix)<br><small style="color:rgba(255,255,255,0.3)">Kaoz Theory</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Emmaculate</td>
+              <td>Voodoo (Shannon Chambers 1Sound Remix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:39:00</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Peven Everett</td>
+              <td>Special (Timmy Regisford Remix)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Masters At Work feat. India</td>
+              <td>I Can&#39;t Get No Sleep (Ken/Lou 12 Inch)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>Kerri Chandler</td>
-              <td>I Feel It<br><small style="color:rgba(255,255,255,0.3)">Madhouse</small></td>
+              <td>Atmospheric Beats</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:43:00</span></td>
-              <td>Fusion Groove Orchestra ft. Steve Lucas</td>
-              <td>If Only I Could (Liem Remix)<br><small style="color:rgba(255,255,255,0.3)">Strictly Rhythm</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Massimo Lippoli</td>
+              <td>Let It Ride (Dario D&#39;Attis Remix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:48:00</span></td>
-              <td>Kerri Chandler</td>
-              <td>So Let The Wind Come<br><small style="color:rgba(255,255,255,0.3)">Nite Grooves</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Yves Murasca</td>
+              <td>All About Housemusic (Dario D&#39;Attis Extended Remix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:53:00</span></td>
-              <td>Tasha LaRae & DJ Spen</td>
-              <td>Wish I Didn't Miss You (John Morales M+M Vocal Mix)<br><small style="color:rgba(255,255,255,0.3)">Quantize</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Michel De Hey</td>
+              <td>Tracklights (Crackazat Dub)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">1:59:00</span></td>
-              <td>Underground Ministries ft. Kenny Bobien</td>
-              <td>I Shall Not Be Moved (Stand Still) (Extended Club Mix)<br><small style="color:rgba(255,255,255,0.3)">Flatline</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">2:06:00</span></td>
-              <td>The O'Jays</td>
-              <td>I Love Music (Part I)<br><small style="color:rgba(255,255,255,0.3)">Philadelphia International</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>JohNick</td>
+              <td>Heat</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr></tbody>
-            </table>
-          </div>
-        </div>
-  </section>
-
-  <section class="related-djs">
-    <h2>DJs Relacionados</h2>
-    <div class="related-grid" id="relatedGrid">
-      <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+      </table>
     </div>
-  </section>
+  </div>
+    </section>
 
+    <section class="related-djs">
+      <h2>DJs Relacionados</h2>
+      <div class="related-grid" id="relatedGrid">
+        <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
-      <p>3TRES6 Records</p>
+      <p>3TRES6 Records — Barcelona → México</p>
       <nav class="footer-nav">
         <a href="/">Catálogo</a>
         <a href="../blog.html">Blog</a>
@@ -473,57 +556,48 @@
   </footer>
 
   <script>
-      // DJ page initializer (Swup-compatible)
-      function initDjPage_kerri-chandler() {
-    // Load related DJs from cross-references
-    fetch('../data/djs/cross-references.json')
-      .then(r => r.json())
-      .then(data => {
-        const related = (data.shared_artists['kerri-chandler'] || []).slice(0, 4);
-        if (related.length === 0) {
-          document.getElementById('relatedGrid').innerHTML =
-            '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
-          return;
-        }
-        Promise.all(related.map(id =>
-          fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
-            const dj = idx.djs.find(d => d.id === id);
-            return dj ? `
-              <a href="${id}.html" class="dj-card">
-                <div class="dj-card-image">
-                  <img src="${dj.image || ''}" alt="${dj.name}" loading="lazy"
-                    onerror="this.parentElement.innerHTML='<div class=\'dj-card-placeholder\'>🎧</div>'" />
-                </div>
-                <div class="dj-card-body">
-                  <h3>${dj.name}</h3>
-                  <div class="dj-card-meta">
-                    <span>${dj.stats.sets} sets</span>
-                    <span>${dj.stats.completion_rate}% ID</span>
-                  </div>
-                </div>
-              </a>
-            ` : '';
-          })
-        )).then(cards => {
-          document.getElementById('relatedGrid').innerHTML = cards.join('');
-        });
-      })
-      .catch(() => {
-        document.getElementById('relatedGrid').innerHTML =
-          '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
-      });
-      }
-      initDjPage_kerri-chandler();
-      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-        window.Muntaner336.onPageView(function () {
-          if (document.getElementById('relatedGrid')) initDjPage_kerri-chandler();
-        });
-      }
-    </script>
-<!-- Swup: seamless page transitions so the audio player never cuts off -->
-    <script src="../js/vendor/swup.umd.js" defer></script>
-    <script src="../js/swup-init.js" defer></script>
-
-    <script src="../player-init.js" defer></script>
+    // Related DJs loader — fetches cross-references and renders up to 4
+    function initRelated_kerri-chandler() {
+      const grid = document.getElementById('relatedGrid');
+      if (!grid) return;
+      fetch('../data/djs/cross-references.json')
+        .then(r => r.ok ? r.json() : null)
+        .then(cr => {
+          if (!cr) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
+          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('kerri-chandler'));
+          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('kerri-chandler'));
+          const relatedIds = new Set();
+          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== 'kerri-chandler') relatedIds.add(id); }));
+          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== 'kerri-chandler') relatedIds.add(id); }));
+          const ids = Array.from(relatedIds).slice(0, 6);
+          if (!ids.length) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
+          return fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
+            const cards = ids.map(id => {
+              const d = (idx.djs || []).find(x => x.id === id);
+              if (!d) return '';
+              const img = d.image || '';
+              return '<a href="' + id + '.html" class="dj-card">'
+                + '<div class="dj-card-image">' + (img
+                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=&#92;&#92;\&#39;dj-card-placeholder&#92;&#92;\&#39;>🎧</div>\'"/>'
+                    : '<div class="dj-card-placeholder">🎧</div>')
+                + '</div>'
+                + '<div class="dj-card-body"><h3>' + d.name + '</h3>'
+                + '<div class="dj-card-meta"><span>' + (d.stats?.sets || 0) + ' sets</span> <span>' + (d.stats?.completion_rate || 0) + '% ID</span></div>'
+                + '</div></a>';
+            }).join('');
+            grid.innerHTML = cards || '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+          });
+        })
+        .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
+    }
+    initRelated_kerri-chandler();
+    if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+      window.Muntaner336.onPageView(function () { initRelated_kerri-chandler(); });
+    }
+  </script>
+  <!-- Swup: seamless page transitions so the audio player never cuts off -->
+  <script src="../js/vendor/swup.umd.js" defer></script>
+  <script src="../js/swup-init.js" defer></script>
+  <script src="../player-init.js" defer></script>
 </body>
 </html>

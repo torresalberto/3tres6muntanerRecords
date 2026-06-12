@@ -544,8 +544,11 @@
   margin: 0 auto;
 }
 
-/* Gallery Card */
+/* Gallery Card (now an <a> tag linking to /dj/<id>.html) */
 .dj-gallery-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background: var(--bg-card, #1a1a1a);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;

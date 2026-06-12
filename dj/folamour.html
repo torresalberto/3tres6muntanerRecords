@@ -4,8 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Folamour | DJ Library — 3TRES6 Records</title>
-  <meta name="description" content="Sets completos de Folamour con tracklists, IDs y datos curiosos. 9 sets, 125 tracks." />
+  <meta name="description" content="Sets completos de Folamour con tracklists, IDs y datos curiosos. 10 sets, 139 tracks." />
   <link rel="canonical" href="https://3tres6records.albto.me/dj/folamour.html" />
+  <meta property="og:title" content="Folamour | DJ Library — 3TRES6 Records" />
+  <meta property="og:description" content="Sets completos de Folamour con tracklists, IDs y datos curiosos. 10 sets, 139 tracks." />
+  <meta property="og:url" content="https://3tres6records.albto.me/dj/folamour.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,175 +25,92 @@
     }
     .dj-page-hero::before {
       content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 3px;
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, transparent, #ff4d00, transparent);
     }
     .dj-page-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
+      display: flex; align-items: flex-start; gap: 2rem;
+      max-width: 1200px; margin: 0 auto;
+      position: relative; z-index: 1;
     }
     .dj-page-avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 3px solid #ff4d00;
-      object-fit: cover;
-      box-shadow: 0 0 60px rgba(255,77,0,0.3);
-      flex-shrink: 0;
+      width: 160px; height: 160px; border-radius: 50%;
+      border: 3px solid #ff4d00; object-fit: cover;
+      box-shadow: 0 0 60px rgba(255,77,0,0.3); flex-shrink: 0;
+      background: #111;
     }
-    .dj-page-info h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-      line-height: 1.1;
+    .dj-page-info h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; }
+    .dj-page-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+    .dj-page-meta strong { color: #ff9100; font-weight: 600; }
+    .dj-page-genres { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .genre-tag {
+      display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+      background: rgba(255,77,0,0.1); border: 1px solid rgba(255,77,0,0.3);
+      color: #ff9100; font-size: 0.8rem; font-weight: 500;
     }
-    .dj-page-meta {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
-    }
-    .dj-page-genres {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-    .dj-page-bio {
-      color: rgba(255,255,255,0.6);
-      line-height: 1.7;
-      max-width: 600px;
-    }
-    .sets-section {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    .dj-page-bio { color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 600px; }
+    .sets-section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
     .sets-section h2 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      font-size: 1.5rem; color: #fff; margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 0.75rem;
     }
     .set-card {
       background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 2rem;
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
+      overflow: hidden; margin-bottom: 2rem;
     }
-    .set-header {
-      padding: 2rem 2rem 1rem;
-    }
-    .set-header h3 {
-      font-size: 1.35rem;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-    .set-meta {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.85rem;
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      background: #000;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-    .tracklist-section {
-      padding: 1.5rem 2rem;
-    }
+    .set-header { padding: 2rem 2rem 1rem; }
+    .set-header h3 { font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem; }
+    .set-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; background: #000; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .tracklist-section { padding: 1.5rem 2rem; }
     .tracklist-section .section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 1rem;
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35); margin-bottom: 1rem;
     }
-    .tracklist-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-    }
+    .tracklist-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
     .tracklist-table th {
-      text-align: left;
-      padding: 0.75rem;
-      color: rgba(255,255,255,0.4);
-      font-weight: 500;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      text-align: left; padding: 0.75rem; color: rgba(255,255,255,0.4);
+      font-weight: 500; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .tracklist-table td {
-      padding: 0.6rem 0.75rem;
-      color: rgba(255,255,255,0.7);
+      padding: 0.6rem 0.75rem; color: rgba(255,255,255,0.7);
       border-bottom: 1px solid rgba(255,255,255,0.04);
     }
-    .tracklist-table tr:hover td {
-      background: rgba(255,255,255,0.02);
+    .tracklist-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .track-time { color: rgba(255,255,255,0.3); font-family: monospace; font-size: 0.8rem; }
+    .track-status { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 500; }
+    .track-status.confirmed { background: rgba(0, 200, 100, 0.1); color: #00c864; }
+    .track-status.id { background: rgba(255, 77, 0, 0.1); color: #ff4d00; }
+    .no-tracks { color: rgba(255,255,255,0.3); font-size: 0.9rem; padding: 1rem 0; }
+    .related-djs { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    .related-djs h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .related-grid .dj-card {
+      display: block; text-decoration: none; color: #fff;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; overflow: hidden; transition: transform 0.2s, border-color 0.2s;
     }
-    .track-time {
-      color: rgba(255,255,255,0.3);
-      font-family: monospace;
-      font-size: 0.8rem;
-    }
-    .track-status {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      font-weight: 500;
-    }
-    .track-status.confirmed {
-      background: rgba(0, 200, 100, 0.1);
-      color: #00c864;
-    }
-    .track-status.id {
-      background: rgba(255, 77, 0, 0.1);
-      color: #ff4d00;
-    }
-    .related-djs {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .related-djs h2 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
+    .related-grid .dj-card:hover { transform: translateY(-3px); border-color: rgba(255,77,0,0.4); }
+    .related-grid .dj-card-image { aspect-ratio: 1/1; background: #111; overflow: hidden; }
+    .related-grid .dj-card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .related-grid .dj-card-body { padding: 0.75rem 1rem; }
+    .related-grid .dj-card-body h3 { font-size: 1rem; margin: 0 0 0.35rem; }
+    .related-grid .dj-card-meta { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+    .related-grid .dj-card-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 100%; font-size: 3rem; background: #111; color: #ff4d00;
     }
     @media (max-width: 768px) {
       .dj-page-header { flex-direction: column; align-items: center; text-align: center; }
       .dj-page-avatar { width: 120px; height: 120px; }
       .dj-page-info h1 { font-size: 2rem; }
+      .dj-page-meta { justify-content: center; }
+      .dj-page-genres { justify-content: center; }
     }
   </style>
-    <meta property="og:title" content="Folamour | DJ Library — 3TRES6 Records" />
 </head>
 <body>
   <header class="header" id="mainHeader" role="banner">
@@ -197,13 +119,9 @@
         <span class="logo-text">3TRES6</span>
         <span class="logo-subtitle">RECORDS</span>
       </a>
-
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
       <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
         <div class="nav-group nav-group-store">
           <a href="/3tres6muntanerRecords/#catalogo" class="nav-item">Catálogo</a>
@@ -215,7 +133,6 @@
           <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
         </div>
       </nav>
-
       <div class="header-actions">
         <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
         <a href="/3tres6muntanerRecords/" class="cart-icon" aria-label="Carrito">
@@ -228,7 +145,6 @@
         </a>
       </div>
     </div>
-
     <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
       <div class="mobile-nav-group-label">Tienda</div>
       <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
@@ -243,860 +159,954 @@
   </header>
 
   <nav class="dj-hub-subnav" aria-label="Navegación DJ Hub">
-      <div class="subnav-container">
-        <a href="/3tres6muntanerRecords/" class="subnav-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          Tienda
-        </a>
-        <div class="subnav-divider"></div>
-        <div class="subnav-tabs">
-          <a href="../blog.html" class="subnav-tab">Blog</a>
-          <a href="../dj-library.html" class="subnav-tab active" aria-current="page">DJ Library</a>
-          <a href="../3d-brain.html" class="subnav-tab">Neural</a>
-          <a href="../toolhub/" class="subnav-tab">Herramientas</a>
-          <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
-        </div>
-      </div>
-    </nav>
-
-  <main data-swup>
-  <section class="dj-page-hero">
-    <div class="dj-page-header">
-      <img src="https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg" alt="Folamour" class="dj-page-avatar"
-        onerror="this.parentElement.querySelector('.dj-page-avatar').style.display='none'" />
-      <div class="dj-page-info">
-        <h1>Folamour</h1>
-        <div class="dj-page-meta">
-          
-          
-          <span>9 sets</span>
-          <span>125 tracks</span>
-          <span>120 identificados (96%)</span>
-        </div>
-        <div class="dj-page-genres">
-          <span class="genre-tag">House</span><span class="genre-tag">Disco</span><span class="genre-tag">Tech House</span><span class="genre-tag">Nu Disco</span>
-        </div>
-        <p class="dj-page-bio"></p>
+    <div class="subnav-container">
+      <a href="/3tres6muntanerRecords/" class="subnav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Tienda
+      </a>
+      <div class="subnav-divider"></div>
+      <div class="subnav-tabs">
+        <a href="../blog.html" class="subnav-tab">Blog</a>
+        <a href="../dj-library.html" class="subnav-tab active" aria-current="page">DJ Library</a>
+        <a href="../3d-brain.html" class="subnav-tab">Neural</a>
+        <a href="../toolhub/" class="subnav-tab">Herramientas</a>
+        <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section class="sets-section">
-    <h2>Sets</h2>
-    <div class="set-card">
-          <div class="set-header">
-            <h3>Cercle @ Cathédrale Saint-Pierre, Geneva</h3>
-            <div class="set-meta">
-              <span>📍 Cercle, St. Pierre Cathedral, Geneva, Switzerland</span>
-              <span>📅 2023-07-10</span>
-              <span>⏱️ 1:53:43</span>
-              <span>🎵 22 tracks</span>
-            </div>
+  <main data-swup>
+    <section class="dj-page-hero">
+      <div class="dj-page-header">
+        <img src="https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg" alt="Folamour" class="dj-page-avatar"
+          onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E'" />
+        <div class="dj-page-info">
+          <h1>Folamour</h1>
+          <div class="dj-page-meta">
+            
+            
+            <span>•</span><span><strong>10</strong> sets</span>
+            <span><strong>139</strong> tracks</span>
+            <span><strong>14</strong> identificados (10%)</span>
           </div>
-          <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/YDJEo-rQrfw" title="Cercle @ Cathédrale Saint-Pierre, Geneva" allowfullscreen loading="lazy"></iframe>
+          <div class="dj-page-genres"><span class="genre-tag">House</span><span class="genre-tag">Disco</span><span class="genre-tag">Tech House</span><span class="genre-tag">Nu Disco</span></div>
+          
         </div>
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time">00:00</span></td>
-              <td>September</td>
-              <td>Ostavi Trag</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">00:45</span></td>
-              <td>General Ehi Duncan, The Africa Army</td>
-              <td>Express ft. The Ibibio Horns - Africa (My No. 1) (Captain Planet Remix)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">05:52</span></td>
-              <td>Mike Simonetti</td>
-              <td>Midnight Or Late Afternoon</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">09:20</span></td>
-              <td>Donna Washington</td>
-              <td>You Can't Hide From The Boogie</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">12:40</span></td>
-              <td>Crown Heights Affair</td>
-              <td>I See The Light</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">16:23</span></td>
+      </div>
+    </section>
+
+    <section class="sets-section">
+      <h2>▶ Sets</h2>
+      <div class="set-card">
+    <div class="set-header">
+      <h3>BBC Radio 1 Residency</h3>
+      <div class="set-meta">
+        <span>📍 BBC Radio 1, UK</span>
+        <span>📅 2022-01-20</span>
+        
+        <span>🎵 12 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>Folamour</td>
-              <td>Fearless<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Simple Song</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">20:38</span></td>
-              <td>Cotonete, Dimitri From Paris</td>
-              <td>The Hustle Parisian<br><small style="color:rgba(255,255,255,0.3)">Heavenly Sweetness</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Demis Roussos</td>
+              <td>L.O.V.E. (Folamour Edit)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">26:10</span></td>
-              <td>Ten City</td>
-              <td>Be Free (Emmaculate & Shannon Chambers Mix)<br><small style="color:rgba(255,255,255,0.3)">Ultra</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">30:40</span></td>
-              <td>Folamour ft. Amadou & Mariam</td>
-              <td>Voyage<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">34:50</span></td>
-              <td>Easttown</td>
-              <td>Breeze<br><small style="color:rgba(255,255,255,0.3)">House Of Love</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">38:20</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Folamour</td>
-              <td>Paradiso</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>I Know It Has Been Done Before</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">44:24</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Doug Willis</td>
+              <td>Doug&#39;s Disco Theme</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Saraba</td>
+              <td>Barlia (Kulandjagnho)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>Folamour</td>
-              <td>Poundland Anthem<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>The Journey</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">49:19</span></td>
-              <td>Udo Jürgens</td>
-              <td>Peace Now (Folamour Remix)<br><small style="color:rgba(255,255,255,0.3)">Sony</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kleeer</td>
+              <td>Open Your Mind (Joey Negro Seeekret Mix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">53:20</span></td>
-              <td>Kathy Brown</td>
-              <td>Get Another Love (Warren Clarke Dub Mix)<br><small style="color:rgba(255,255,255,0.3)">Glitterbox</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Parviz</td>
+              <td>The Widow&#39;s Lament In Springtime</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">57:36</span></td>
-              <td>Jamie Lewis ft. Michael Watford</td>
-              <td>For You (Original Demo Mix)<br><small style="color:rgba(255,255,255,0.3)">Purple Music</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Underdog</td>
+              <td>In Need Of That Phone</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">01:02:45</span></td>
-              <td>Saison</td>
-              <td>Man Of Soul<br><small style="color:rgba(255,255,255,0.3)">No Fuss</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Jorge Ben Jor</td>
+              <td>A Cegonha Me Deixou Em Madureira (Aroop Roy Edit)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">01:07:54</span></td>
-              <td>Ferry Ultra ft. Gwen McCrae</td>
-              <td>Happy (Folamour Remix)<br><small style="color:rgba(255,255,255,0.3)">Peppermint Jam</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Pure Energy</td>
+              <td>Party On</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time">01:12:17</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Folamour</td>
-              <td>Bonifacio</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">01:18:02</span></td>
-              <td>Dasco</td>
-              <td>Feel My Love</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">01:22:46</span></td>
-              <td>Danny Snowden</td>
-              <td>Energy</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">01:26:32</span></td>
-              <td>Folamour</td>
-              <td>Post Tenebras Lux</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">01:31:08</span></td>
-              <td>Folamour</td>
-              <td>When A Piano Saves The Day<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>St Moskov</td>
+              <td><span class="track-status">?</span></td>
             </tr></tbody>
-            </table>
-          </div>
-        </div>
+      </table>
+    </div>
+  </div>
 <div class="set-card">
-          <div class="set-header">
-            <h3>Boiler Room x Sugar Mountain 2024</h3>
-            <div class="set-meta">
-              <span>📍 Sugar Mountain, Melbourne, Australia</span>
-              <span>📅 2024-01-20</span>
-              <span>⏱️ 59:45</span>
-              <span>🎵 12 tracks</span>
-            </div>
-          </div>
-          <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/IC5EOU0vZjw" title="Boiler Room x Sugar Mountain 2024" allowfullscreen loading="lazy"></iframe>
-        </div>
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time">00:00</span></td>
+    <div class="set-header">
+      <h3>Boiler Room x FLY Open Air Festival</h3>
+      <div class="set-meta">
+        <span>📍 FLY Open Air Festival, Edinburgh, UK</span>
+        <span>📅 2019-05-18</span>
+        
+        <span>🎵 12 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Odyssey</td>
+              <td>Going Back To My Roots (Ziggy Phunk Re-Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Banda Black Rio</td>
+              <td>Chega Mais (Imaginei Você Dançando) (Folamour Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Esa</td>
+              <td>A Muto</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Elaine &amp; Ellen</td>
+              <td>Fill Me Up</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>COEO</td>
+              <td>Don&#39;t Oho</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Fronzena Harris</td>
+              <td>Lovetime Guarantee</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Mighty Mouse</td>
+              <td>Midnight Mouse (Revised)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Light Of The World</td>
+              <td>Time (Koko Paradisco Re-Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Sean Smith &amp; MC Edits</td>
+              <td>Funky Disco Music (Original Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Di Melo</td>
+              <td>A E I O U</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Cotonete &amp; Dimitri From Paris</td>
+              <td>Parribean Disco</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>George Michael</td>
+              <td>Freedom! &#39;90 (Remastered)</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Boiler Room x Sugar Mountain 2024</h3>
+      <div class="set-meta">
+        
+        
+        <span>⏱️ 59:45</span>
+        <span>🎵 14 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/IC5EOU0vZjw" title="Boiler Room x Sugar Mountain 2024"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>D Stone</td>
-              <td>Total Unison<br><small style="color:rgba(255,255,255,0.3)">Cécille</small></td>
+              <td>Total Unison x Folamour&#39;s Manifesto</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">00:00</span></td>
-              <td>Folamour</td>
-              <td>Manifesto (Vocal)</td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Urban Blues Project ft Bobby Pruitt</td>
+              <td>We Are One (Jazz&#39;N&#39;Groove Hands Up Vocal Remix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">07:00</span></td>
-              <td>Urban Blues Project ft. Bobby Pruitt</td>
-              <td>We Are One (Jazz-N-Groove Hands Up Vocal Remix)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">13:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Da Lukas</td>
-              <td>Satisfy Your Soul (Extended Mix)<br><small style="color:rgba(255,255,255,0.3)">Groove Culture</small></td>
+              <td>Satisfy Your Soul (Extended Mix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">18:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Dam Swindle</td>
-              <td>That's Right<br><small style="color:rgba(255,255,255,0.3)">Heist</small></td>
+              <td>That&#39;s Right</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">23:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>MoD, Luisen</td>
               <td>Small Town Boy (Supermini Mega Dub)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">28:00</span></td>
-              <td>Lone Dog</td>
-              <td>Straight From The Underground<br><small style="color:rgba(255,255,255,0.3)">Frappé</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Løne Døg</td>
+              <td>Straight From The Underground</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">32:00</span></td>
-              <td>Bongoloverz ft. An-Tonic</td>
-              <td>Power Of Music<br><small style="color:rgba(255,255,255,0.3)">Soulfuric Trax</small></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Bongoloverz ft An</td>
+              <td>Tonic - Power Of Music</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">39:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Folamour</td>
-              <td>Pressure Makes Diamonds</td>
+              <td>ID TBA</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">44:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Madonna</td>
-              <td>Vogue (DJ Meme Remix)<br><small style="color:rgba(255,255,255,0.3)">Sire</small></td>
+              <td>Vogue (Dj Meme Remix)</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">50:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Melon Bomb</td>
-              <td>Fantazia<br><small style="color:rgba(255,255,255,0.3)">Melon Bomb</small></td>
+              <td>ID TBA</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr><tr>
-              <td><span class="track-time">55:00</span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Folamour</td>
-              <td>Unreleased</td>
+              <td>ID TBA That closing track 😭🥹❤‍🔥 please release the naaaame ♥</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Melon Bomb</td>
+              <td>Fantazia (iirc it was a free DL via their facebook page)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>The seatbelts</td>
+              <td>Cowboy Bebop theme?</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Madonna</td>
+              <td>Vogue (Dj Meme Remix)!!I</td>
               <td><span class="track-status confirmed">✓</span></td>
             </tr></tbody>
-            </table>
-          </div>
-        </div>
+      </table>
+    </div>
+  </div>
 <div class="set-card">
-          <div class="set-header">
-            <h3>DJ Mag HQ Sessions</h3>
-            <div class="set-meta">
-              <span>📍 DJ Mag HQ, London, UK</span>
-              <span>📅 2019-04-18</span>
-              <span>⏱️ 1:03:51</span>
-              <span>🎵 14 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time">00:00</span></td>
-              <td>Brian Auger's Oblivion Express</td>
-              <td>Maiden Voyage</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">00:22</span></td>
-              <td>Fingerman</td>
-              <td>Your Love</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">06:09</span></td>
-              <td>Kazuko Ishibashi</td>
-              <td>Iyo<br><small style="color:rgba(255,255,255,0.3)">INVITATION</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">10:10</span></td>
-              <td>Sunlightsquare</td>
-              <td>I Believe In Miracles (Broken Party Animal Mix)<br><small style="color:rgba(255,255,255,0.3)">Sunlightsquare Records</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">14:15</span></td>
-              <td>Lakeside</td>
-              <td>Fantastic Voyage<br><small style="color:rgba(255,255,255,0.3)">Unidisc</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">18:03</span></td>
-              <td>Sharp Soul</td>
-              <td>Another Brick (Edit)<br><small style="color:rgba(255,255,255,0.3)">Groove Democracy</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">22:03</span></td>
-              <td>Lee McDonald</td>
-              <td>I'll Do Anything For You (Patchworks Remix)<br><small style="color:rgba(255,255,255,0.3)">Favourite Recordings</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">27:39</span></td>
-              <td>D.J. Rogers</td>
-              <td>Reason To Dance (Aroop Roy Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">32:22</span></td>
-              <td>The Disco Dog</td>
-              <td>I'm Gonna Break Your Bones<br><small style="color:rgba(255,255,255,0.3)">ZYX</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">36:17</span></td>
-              <td>Light Of The World</td>
-              <td>Time<br><small style="color:rgba(255,255,255,0.3)">Mercury</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">43:08</span></td>
-              <td>Yta Jourias</td>
-              <td>Adome Nyueto<br><small style="color:rgba(255,255,255,0.3)">Hot Casa</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">49:19</span></td>
-              <td>Songhoi Band</td>
-              <td>Africa Africa (Faze Action Edit)<br><small style="color:rgba(255,255,255,0.3)">Z Records</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">53:29</span></td>
-              <td>Voilaaa ft. Sir Jean</td>
-              <td>Spies Are Watching Me<br><small style="color:rgba(255,255,255,0.3)">Favorite</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:00:15</span></td>
-              <td>Folamour ft. Elbi</td>
-              <td>After Winter Must Come Spring<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr></tbody>
-            </table>
-          </div>
-        </div>
-<div class="set-card">
-          <div class="set-header">
-            <h3>Boiler Room x FLY Open Air Festival</h3>
-            <div class="set-meta">
-              <span>📍 FLY Open Air Festival, Edinburgh, UK</span>
-              <span>📅 2019-05-18</span>
-              <span>⏱️ 59:42</span>
-              <span>🎵 12 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time">00:00</span></td>
-              <td>Odyssey</td>
-              <td>Going Back To My Roots (Ziggy Phunk Re-Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">07:00</span></td>
-              <td>Banda Black Rio</td>
-              <td>Chega Mais (Imaginei Você Dançando) (Folamour Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">10:00</span></td>
-              <td>Esa</td>
-              <td>A Muto</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">17:00</span></td>
-              <td>Elaine & Ellen</td>
-              <td>Fill Me Up<br><small style="color:rgba(255,255,255,0.3)">Funky Delicacies</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">22:00</span></td>
-              <td>COEO</td>
-              <td>Don't Oho<br><small style="color:rgba(255,255,255,0.3)">Razor-N-Tape</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">27:00</span></td>
-              <td>Fronzena Harris</td>
-              <td>Lovetime Guarantee</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">31:00</span></td>
-              <td>Mighty Mouse</td>
-              <td>Midnight Mouse (Revised)<br><small style="color:rgba(255,255,255,0.3)">Space Native</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">34:00</span></td>
-              <td>Light Of The World</td>
-              <td>Time (Koko Paradisco Re-Edit)<br><small style="color:rgba(255,255,255,0.3)">Basic Fingers</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">40:00</span></td>
-              <td>Sean Smith & MC Edits</td>
-              <td>Funky Disco Music (Original Edit)<br><small style="color:rgba(255,255,255,0.3)">Smooth Edits</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">47:00</span></td>
-              <td>Di Melo</td>
-              <td>A E I O U</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">52:00</span></td>
-              <td>Cotonete & Dimitri From Paris</td>
-              <td>Parribean Disco<br><small style="color:rgba(255,255,255,0.3)">Heavenly Sweetness</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">56:00</span></td>
-              <td>George Michael</td>
-              <td>Freedom! '90 (Remastered)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr></tbody>
-            </table>
-          </div>
-        </div>
-<div class="set-card">
-          <div class="set-header">
-            <h3>Polaris Festival New Year's Eve</h3>
-            <div class="set-meta">
-              <span>📍 Polaris Festival, Verbier, Switzerland</span>
-              <span>📅 2019-12-31</span>
-              <span>⏱️ </span>
-              <span>🎵 13 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time"></span></td>
-              <td>Father's Children</td>
-              <td>Dance Do It</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Rare Cuts</td>
-              <td>Out To Get'cha</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Veronique Sanson</td>
-              <td>Bernard's Song (Young Pulse Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Enchantment</td>
-              <td>Give It Up</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Gayle Adams</td>
-              <td>Emergency</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour</td>
-              <td>I Know It Has Been Done Before</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Isaac Hayes</td>
-              <td>Fever</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour</td>
-              <td>Jazz Session For No Future People</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Faze Action & Zeke Manyika</td>
-              <td>Mangwana</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Rhyze</td>
-              <td>I Found Love In You</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Mass Production</td>
-              <td>Maybe, Maybe</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Martin Solveig</td>
-              <td>Jealousy</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>George Michael</td>
-              <td>Fastlove</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr></tbody>
-            </table>
-          </div>
-        </div>
-<div class="set-card">
-          <div class="set-header">
-            <h3>Lost Paradise</h3>
-            <div class="set-meta">
-              <span>📍 Lost Paradise, Australia</span>
-              <span>📅 2022-12-30</span>
-              <span>⏱️ 1:28:50</span>
-              <span>🎵 18 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time">00:00</span></td>
-              <td>Lenny Williams</td>
-              <td>When I'm Dancin' (Marc Green Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Kaleta</td>
-              <td>ID</td>
-              <td><span class="track-status id">ID</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Afshin & Kiss My Black Jazz</td>
-              <td>The Seduction</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Gaoulé Mizik</td>
-              <td>A Ka Titine (Dam Swindle Edit)<br><small style="color:rgba(255,255,255,0.3)">Heist</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">25:00</span></td>
-              <td>Fixed Angles</td>
-              <td>Anikana<br><small style="color:rgba(255,255,255,0.3)">Bonfido Disques</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">29:30</span></td>
-              <td>Kaz James</td>
-              <td>Footprints<br><small style="color:rgba(255,255,255,0.3)">Another Record Label</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">35:30</span></td>
-              <td>Folamour</td>
-              <td>ID</td>
-              <td><span class="track-status id">ID</span></td>
-            </tr><tr>
-              <td><span class="track-time">41:00</span></td>
-              <td>H20</td>
-              <td>Nobody's Business<br><small style="color:rgba(255,255,255,0.3)">AM:PM</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">46:00</span></td>
-              <td>Marc Cotterell</td>
-              <td>Make Me Feel<br><small style="color:rgba(255,255,255,0.3)">Plastik People</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">51:00</span></td>
-              <td>Ferry Ultra ft. Gwen McCrae</td>
-              <td>Happy (Folamour Remix)<br><small style="color:rgba(255,255,255,0.3)">Peppermint Jam</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">55:00</span></td>
-              <td>Ten City</td>
-              <td>Be Free (Emmaculate & Shannon Chambers Remix)<br><small style="color:rgba(255,255,255,0.3)">Ultra</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">59:30</span></td>
-              <td>Koko</td>
-              <td>7 Days In The Hotel (M-High Remix)<br><small style="color:rgba(255,255,255,0.3)">Surge</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:02:30</span></td>
-              <td>Robbie Doherty & FOLEY (UK)</td>
-              <td>Let The Bass<br><small style="color:rgba(255,255,255,0.3)">Avenu</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:07:00</span></td>
-              <td>Marsolo</td>
-              <td>ID</td>
-              <td><span class="track-status id">ID</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:10:00</span></td>
-              <td>Folamour</td>
-              <td>ID</td>
-              <td><span class="track-status id">ID</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:15:30</span></td>
-              <td>Daan Steenman</td>
-              <td>Djingoo</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:20:00</span></td>
-              <td>Herbert Leonard</td>
-              <td>Chante Avec Moi (Young Pulse Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time">1:24:00</span></td>
-              <td>Patrice Rushen</td>
-              <td>Forget Me Nots<br><small style="color:rgba(255,255,255,0.3)">Elektra</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr></tbody>
-            </table>
-          </div>
-        </div>
-<div class="set-card">
-          <div class="set-header">
-            <h3>Yuma, Coachella 2024 (Weekend 2)</h3>
-            <div class="set-meta">
-              <span>📍 Yuma, Coachella, USA</span>
-              <span>📅 2024-04-21</span>
-              <span>⏱️ </span>
-              <span>🎵 11 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time"></span></td>
+    <div class="set-header">
+      <h3>Boiler Room x Sugar Mountain 2024</h3>
+      <div class="set-meta">
+        <span>📍 Sugar Mountain, Melbourne, Australia</span>
+        <span>📅 2024-01-20</span>
+        
+        <span>🎵 12 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/IC5EOU0vZjw" title="Boiler Room x Sugar Mountain 2024"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>D Stone</td>
               <td>Total Unison</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Udo Juergens</td>
-              <td>Peace Now (Folamour Remix)</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Manifesto (Vocal)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Chevals</td>
-              <td>Everybody Dance</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Urban Blues Project ft. Bobby Pruitt</td>
+              <td>We Are One (Jazz-N-Groove Hands Up Vocal Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Da Lukas</td>
+              <td>Satisfy Your Soul (Extended Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Dam Swindle</td>
+              <td>That&#39;s Right</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>MoD, Luisen</td>
+              <td>Small Town Boy (Supermini Mega Dub)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Lone Dog</td>
+              <td>Straight From The Underground</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Bongoloverz ft. An-Tonic</td>
+              <td>Power Of Music</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Pressure Makes Diamonds</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Madonna</td>
+              <td>Vogue (DJ Meme Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Melon Bomb</td>
+              <td>Fantazia</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Unreleased</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Cercle @ Cathédrale Saint-Pierre, Geneva</h3>
+      <div class="set-meta">
+        <span>📍 Cercle, St. Pierre Cathedral, Geneva, Switzerland</span>
+        <span>📅 2023-07-10</span>
+        
+        <span>🎵 22 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/YDJEo-rQrfw" title="Cercle @ Cathédrale Saint-Pierre, Geneva"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>September</td>
+              <td>Ostavi Trag</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>General Ehi Duncan, The Africa Army</td>
+              <td>Express ft. The Ibibio Horns - Africa (My No. 1) (Captain Planet Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Mike Simonetti</td>
+              <td>Midnight Or Late Afternoon</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Donna Washington</td>
+              <td>You Can&#39;t Hide From The Boogie</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>Crown Heights Affair</td>
               <td>I See The Light</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Born To Funk</td>
-              <td>Souma Bana</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Fearless</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour ft. Amadou & Mariam</td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Cotonete, Dimitri From Paris</td>
+              <td>The Hustle Parisian</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Ten City</td>
+              <td>Be Free (Emmaculate &amp; Shannon Chambers Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour ft. Amadou &amp; Mariam</td>
               <td>Voyage</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Jasper Street Company</td>
-              <td>Another Day</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Easttown</td>
+              <td>Breeze</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>The Trammps</td>
-              <td>I've Gotta Stand Up (Brand New Man) (Dave Lee Garage City Mix)</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Paradiso</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>People's Choice</td>
-              <td>Here We Go Agin (Joey Negro Philly Stomp Mix)</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Poundland Anthem</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Jackie Moore</td>
-              <td>This Time Baby</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Billy Paul</td>
-              <td>Only The Strong Survive</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr></tbody>
-            </table>
-          </div>
-        </div>
-<div class="set-card">
-          <div class="set-header">
-            <h3>Complex Sessions 074</h3>
-            <div class="set-meta">
-              <span>📍 Radio/Podcast</span>
-              <span>📅 2023-07-26</span>
-              <span>⏱️ 1:25:32</span>
-              <span>🎵 11 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time"></span></td>
-              <td>Dave Lee ZR & Joey Montenegro</td>
-              <td>Make A Move On Me<br><small style="color:rgba(255,255,255,0.3)">Z Records</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Udo Jürgens</td>
-              <td>Peace Now (Folamour Remix)<br><small style="color:rgba(255,255,255,0.3)">Sony</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>Peace Now (Folamour Remix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Joï</td>
-              <td>Akalelo</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kathy Brown</td>
+              <td>Get Another Love (Warren Clarke Dub Mix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Easttown</td>
-              <td>Breeze<br><small style="color:rgba(255,255,255,0.3)">House Of Love</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Robbie Doherty & FOLEY (UK)</td>
-              <td>ID</td>
-              <td><span class="track-status id">ID</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Easttown</td>
-              <td>Enchance</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Duke</td>
-              <td>So In Love With You (Full Intention Remix)<br><small style="color:rgba(255,255,255,0.3)">Virgin</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Ferry Ultra ft. Gwen McCrae</td>
-              <td>Happy (Folamour Remix)<br><small style="color:rgba(255,255,255,0.3)">Peppermint Jam</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
+              <td><span class="track-time">--:--</span></td>
               <td>Jamie Lewis ft. Michael Watford</td>
-              <td>For You<br><small style="color:rgba(255,255,255,0.3)">Purple Music</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td>For You (Original Demo Mix)</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Dub Syndicate Productions</td>
-              <td>No Longer<br><small style="color:rgba(255,255,255,0.3)">Nice N Ripe</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Saison</td>
+              <td>Man Of Soul</td>
+              <td><span class="track-status">?</span></td>
             </tr><tr>
-              <td><span class="track-time"></span></td>
+              <td><span class="track-time">--:--</span></td>
+              <td>Ferry Ultra ft. Gwen McCrae</td>
+              <td>Happy (Folamour Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Bonifacio</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
               <td>Dasco</td>
               <td>Feel My Love</td>
-              <td><span class="track-status confirmed">✓</span></td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Danny Snowden</td>
+              <td>Energy</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Post Tenebras Lux</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>When A Piano Saves The Day</td>
+              <td><span class="track-status">?</span></td>
             </tr></tbody>
-            </table>
-          </div>
-        </div>
-<div class="set-card">
-          <div class="set-header">
-            <h3>BBC Radio 1 Residency</h3>
-            <div class="set-meta">
-              <span>📍 BBC Radio 1, UK</span>
-              <span>📅 2022-01-20</span>
-              <span>⏱️ </span>
-              <span>🎵 12 tracks</span>
-            </div>
-          </div>
-          
-          <div class="tracklist-section">
-            <div class="section-label">Tracklist</div>
-            <table class="tracklist-table">
-              <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-              <tbody><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour</td>
-              <td>Simple Song</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Demis Roussos</td>
-              <td>L.O.V.E. (Folamour Edit)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour</td>
-              <td>I Know It Has Been Done Before<br><small style="color:rgba(255,255,255,0.3)">Noire & Blanche</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Doug Willis</td>
-              <td>Doug's Disco Theme</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Saraba</td>
-              <td>Barlia (Kulandjagnho)</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour</td>
-              <td>The Journey<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Kleeer</td>
-              <td>Open Your Mind (Joey Negro Seeekret Mix)<br><small style="color:rgba(255,255,255,0.3)">Warner</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Parviz</td>
-              <td>The Widow's Lament In Springtime<br><small style="color:rgba(255,255,255,0.3)">Kitsune Musique Singles</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Underdog</td>
-              <td>In Need Of That Phone</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Jorge Ben Jor</td>
-              <td>A Cegonha Me Deixou Em Madureira (Aroop Roy Edit)<br><small style="color:rgba(255,255,255,0.3)">Som Livre</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Pure Energy</td>
-              <td>Party On</td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr><tr>
-              <td><span class="track-time"></span></td>
-              <td>Folamour</td>
-              <td>St Moskov<br><small style="color:rgba(255,255,255,0.3)">FHUO</small></td>
-              <td><span class="track-status confirmed">✓</span></td>
-            </tr></tbody>
-            </table>
-          </div>
-        </div>
-  </section>
-
-  <section class="related-djs">
-    <h2>DJs Relacionados</h2>
-    <div class="related-grid" id="relatedGrid">
-      <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+      </table>
     </div>
-  </section>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Complex Sessions 074</h3>
+      <div class="set-meta">
+        <span>📍 Radio/Podcast</span>
+        <span>📅 2023-07-26</span>
+        
+        <span>🎵 11 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Dave Lee ZR &amp; Joey Montenegro</td>
+              <td>Make A Move On Me</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Udo Jürgens</td>
+              <td>Peace Now (Folamour Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Joï</td>
+              <td>Akalelo</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Easttown</td>
+              <td>Breeze</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Robbie Doherty &amp; FOLEY (UK)</td>
+              <td>ID</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Easttown</td>
+              <td>Enchance</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Duke</td>
+              <td>So In Love With You (Full Intention Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Ferry Ultra ft. Gwen McCrae</td>
+              <td>Happy (Folamour Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Jamie Lewis ft. Michael Watford</td>
+              <td>For You</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Dub Syndicate Productions</td>
+              <td>No Longer</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Dasco</td>
+              <td>Feel My Love</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>DJ Mag HQ Sessions</h3>
+      <div class="set-meta">
+        <span>📍 DJ Mag HQ, London, UK</span>
+        <span>📅 2019-04-18</span>
+        
+        <span>🎵 14 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Brian Auger&#39;s Oblivion Express</td>
+              <td>Maiden Voyage</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Fingerman</td>
+              <td>Your Love</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kazuko Ishibashi</td>
+              <td>Iyo</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Sunlightsquare</td>
+              <td>I Believe In Miracles (Broken Party Animal Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Lakeside</td>
+              <td>Fantastic Voyage</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Sharp Soul</td>
+              <td>Another Brick (Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Lee McDonald</td>
+              <td>I&#39;ll Do Anything For You (Patchworks Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>D.J. Rogers</td>
+              <td>Reason To Dance (Aroop Roy Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>The Disco Dog</td>
+              <td>I&#39;m Gonna Break Your Bones</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Light Of The World</td>
+              <td>Time</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Yta Jourias</td>
+              <td>Adome Nyueto</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Songhoi Band</td>
+              <td>Africa Africa (Faze Action Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Voilaaa ft. Sir Jean</td>
+              <td>Spies Are Watching Me</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour ft. Elbi</td>
+              <td>After Winter Must Come Spring</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Lost Paradise</h3>
+      <div class="set-meta">
+        <span>📍 Lost Paradise, Australia</span>
+        <span>📅 2022-12-30</span>
+        
+        <span>🎵 18 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Lenny Williams</td>
+              <td>When I&#39;m Dancin&#39; (Marc Green Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kaleta</td>
+              <td>ID</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Afshin &amp; Kiss My Black Jazz</td>
+              <td>The Seduction</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Gaoulé Mizik</td>
+              <td>A Ka Titine (Dam Swindle Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Fixed Angles</td>
+              <td>Anikana</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Kaz James</td>
+              <td>Footprints</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>ID</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>H20</td>
+              <td>Nobody&#39;s Business</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Marc Cotterell</td>
+              <td>Make Me Feel</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Ferry Ultra ft. Gwen McCrae</td>
+              <td>Happy (Folamour Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Ten City</td>
+              <td>Be Free (Emmaculate &amp; Shannon Chambers Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Koko</td>
+              <td>7 Days In The Hotel (M-High Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Robbie Doherty &amp; FOLEY (UK)</td>
+              <td>Let The Bass</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Marsolo</td>
+              <td>ID</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>ID</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Daan Steenman</td>
+              <td>Djingoo</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Herbert Leonard</td>
+              <td>Chante Avec Moi (Young Pulse Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Patrice Rushen</td>
+              <td>Forget Me Nots</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Polaris Festival New Year&#39;s Eve</h3>
+      <div class="set-meta">
+        <span>📍 Polaris Festival, Verbier, Switzerland</span>
+        <span>📅 2019-12-31</span>
+        
+        <span>🎵 13 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Father&#39;s Children</td>
+              <td>Dance Do It</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Rare Cuts</td>
+              <td>Out To Get&#39;cha</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Veronique Sanson</td>
+              <td>Bernard&#39;s Song (Young Pulse Edit)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Enchantment</td>
+              <td>Give It Up</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Gayle Adams</td>
+              <td>Emergency</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>I Know It Has Been Done Before</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Isaac Hayes</td>
+              <td>Fever</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour</td>
+              <td>Jazz Session For No Future People</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Faze Action &amp; Zeke Manyika</td>
+              <td>Mangwana</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Rhyze</td>
+              <td>I Found Love In You</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Mass Production</td>
+              <td>Maybe, Maybe</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Martin Solveig</td>
+              <td>Jealousy</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>George Michael</td>
+              <td>Fastlove</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+<div class="set-card">
+    <div class="set-header">
+      <h3>Yuma, Coachella 2024 (Weekend 2)</h3>
+      <div class="set-meta">
+        <span>📍 Yuma, Coachella, USA</span>
+        <span>📅 2024-04-21</span>
+        
+        <span>🎵 11 tracks</span>
+      </div>
+    </div>
+    
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>D Stone</td>
+              <td>Total Unison</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Udo Juergens</td>
+              <td>Peace Now (Folamour Remix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Chevals</td>
+              <td>Everybody Dance</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Crown Heights Affair</td>
+              <td>I See The Light</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Born To Funk</td>
+              <td>Souma Bana</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Folamour ft. Amadou &amp; Mariam</td>
+              <td>Voyage</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Jasper Street Company</td>
+              <td>Another Day</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>The Trammps</td>
+              <td>I&#39;ve Gotta Stand Up (Brand New Man) (Dave Lee Garage City Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>People&#39;s Choice</td>
+              <td>Here We Go Agin (Joey Negro Philly Stomp Mix)</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Jackie Moore</td>
+              <td>This Time Baby</td>
+              <td><span class="track-status">?</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Billy Paul</td>
+              <td>Only The Strong Survive</td>
+              <td><span class="track-status">?</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+    </section>
 
+    <section class="related-djs">
+      <h2>DJs Relacionados</h2>
+      <div class="related-grid" id="relatedGrid">
+        <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
-      <p>3TRES6 Records</p>
+      <p>3TRES6 Records — Barcelona → México</p>
       <nav class="footer-nav">
         <a href="/">Catálogo</a>
         <a href="../blog.html">Blog</a>
@@ -1107,57 +1117,48 @@
   </footer>
 
   <script>
-      // DJ page initializer (Swup-compatible)
-      function initDjPage_folamour() {
-    // Load related DJs from cross-references
-    fetch('../data/djs/cross-references.json')
-      .then(r => r.json())
-      .then(data => {
-        const related = (data.shared_artists['folamour'] || []).slice(0, 4);
-        if (related.length === 0) {
-          document.getElementById('relatedGrid').innerHTML =
-            '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
-          return;
-        }
-        Promise.all(related.map(id =>
-          fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
-            const dj = idx.djs.find(d => d.id === id);
-            return dj ? `
-              <a href="${id}.html" class="dj-card">
-                <div class="dj-card-image">
-                  <img src="${dj.image || ''}" alt="${dj.name}" loading="lazy"
-                    onerror="this.parentElement.innerHTML='<div class=\'dj-card-placeholder\'>🎧</div>'" />
-                </div>
-                <div class="dj-card-body">
-                  <h3>${dj.name}</h3>
-                  <div class="dj-card-meta">
-                    <span>${dj.stats.sets} sets</span>
-                    <span>${dj.stats.completion_rate}% ID</span>
-                  </div>
-                </div>
-              </a>
-            ` : '';
-          })
-        )).then(cards => {
-          document.getElementById('relatedGrid').innerHTML = cards.join('');
-        });
-      })
-      .catch(() => {
-        document.getElementById('relatedGrid').innerHTML =
-          '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
-      });
-      }
-      initDjPage_folamour();
-      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-        window.Muntaner336.onPageView(function () {
-          if (document.getElementById('relatedGrid')) initDjPage_folamour();
-        });
-      }
-    </script>
-<!-- Swup: seamless page transitions so the audio player never cuts off -->
-    <script src="../js/vendor/swup.umd.js" defer></script>
-    <script src="../js/swup-init.js" defer></script>
-
-    <script src="../player-init.js" defer></script>
+    // Related DJs loader — fetches cross-references and renders up to 4
+    function initRelated_folamour() {
+      const grid = document.getElementById('relatedGrid');
+      if (!grid) return;
+      fetch('../data/djs/cross-references.json')
+        .then(r => r.ok ? r.json() : null)
+        .then(cr => {
+          if (!cr) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
+          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('folamour'));
+          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('folamour'));
+          const relatedIds = new Set();
+          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== 'folamour') relatedIds.add(id); }));
+          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== 'folamour') relatedIds.add(id); }));
+          const ids = Array.from(relatedIds).slice(0, 6);
+          if (!ids.length) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
+          return fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
+            const cards = ids.map(id => {
+              const d = (idx.djs || []).find(x => x.id === id);
+              if (!d) return '';
+              const img = d.image || '';
+              return '<a href="' + id + '.html" class="dj-card">'
+                + '<div class="dj-card-image">' + (img
+                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=&#92;&#92;\&#39;dj-card-placeholder&#92;&#92;\&#39;>🎧</div>\'"/>'
+                    : '<div class="dj-card-placeholder">🎧</div>')
+                + '</div>'
+                + '<div class="dj-card-body"><h3>' + d.name + '</h3>'
+                + '<div class="dj-card-meta"><span>' + (d.stats?.sets || 0) + ' sets</span> <span>' + (d.stats?.completion_rate || 0) + '% ID</span></div>'
+                + '</div></a>';
+            }).join('');
+            grid.innerHTML = cards || '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+          });
+        })
+        .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
+    }
+    initRelated_folamour();
+    if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+      window.Muntaner336.onPageView(function () { initRelated_folamour(); });
+    }
+  </script>
+  <!-- Swup: seamless page transitions so the audio player never cuts off -->
+  <script src="../js/vendor/swup.umd.js" defer></script>
+  <script src="../js/swup-init.js" defer></script>
+  <script src="../player-init.js" defer></script>
 </body>
 </html>

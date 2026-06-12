@@ -1,19 +1,30 @@
 /**
  * DJ Relationship Graph — D3.js Force-Directed View
- * Shows connections between DJs via shared tracks
+ * Shows connections between DJs via shared tracks.
+ *
+ * v2 (perf fix):
+ *   - Drops per-set and per-track "noise" nodes (was 839 nodes; now ~58).
+ *   - Renders only DJs (51) + shared-track connector nodes (7) for clarity.
+ *   - Initializes node positions in a circle so the first frame is visible.
+ *   - Uses bounded forces (forceX/forceY) to keep the layout inside the viewBox.
  */
 const DJGraph = {
   graphData: null,
 
   init: async function () {
+    const el = document.getElementById('djGraphContainer');
+    if (el) {
+      el.innerHTML =
+        '<div class="graph-placeholder" style="display:flex;align-items:center;justify-content:center;height:500px"><div style="text-align:center;color:rgba(255,255,255,0.2)"><div style="font-size:3rem;margin-bottom:0.5rem">\ud83d\udd0d</div><h3 style="color:rgba(255,255,255,0.3)">Cargando grafo\u2026</h3></div></div>';
+    }
     await this.loadData();
     if (this.graphData && this.graphData.nodes.length > 0) {
       this.renderGraph();
     } else {
-      const el = document.getElementById('djGraphContainer');
-      if (el)
+      if (el) {
         el.innerHTML =
-          '<div class="graph-placeholder" style="display:flex;align-items:center;justify-content:center;height:500px"><div style="text-align:center;color:rgba(255,255,255,0.2)"><div style="font-size:3rem;margin-bottom:0.5rem">\ud83d\udd0d</div><h3 style="color:rgba(255,255,255,0.3)">Loading...</h3></div></div>';
+          '<div class="graph-placeholder" style="display:flex;align-items:center;justify-content:center;height:500px"><div style="text-align:center;color:rgba(255,255,255,0.2)"><div style="font-size:3rem;margin-bottom:0.5rem">\ud83d\udd17</div><h3 style="color:rgba(255,255,255,0.3);margin-bottom:0.5rem">A\u00fan no hay conexiones</h3><p style="color:rgba(255,255,255,0.2);font-size:0.9rem">Tracks compartidos entre DJs aparecer\u00e1n aqu\u00ed cuando se identifiquen.</p></div></div>';
+      }
     }
   },
 
@@ -23,11 +34,11 @@ const DJGraph = {
       const idx = await idxRes.json();
       const djs = idx.djs || [];
 
-      const nodes = [],
-        edges = [];
+      const nodes = [];
+      const edges = [];
       const nodeMap = {};
 
-      // DJ nodes
+      // DJ nodes (the primary actors)
       djs.forEach((dj) => {
         const nid = 'dj_' + dj.id;
         nodes.push({
@@ -40,62 +51,22 @@ const DJGraph = {
         nodeMap[dj.id] = nid;
       });
 
-      // Set nodes + DJ→Set edges
-      djs.forEach((dj) => {
-        (dj.sets || []).forEach((setId) => {
-          const sid = 'set_' + setId;
-          nodes.push({
-            id: sid,
-            label: setId
-              .replace(/-/g, ' ')
-              .replace(/\b\w/g, (l) => l.toUpperCase())
-              .slice(0, 40),
-            type: 'set',
-            parent: dj.id,
-          });
-          edges.push({ source: nodeMap[dj.id], target: sid, type: 'dj-set' });
-        });
-      });
-
-      // Track registry — exact track overlaps
+      // Shared-track connector nodes (only tracks played by 2+ DJs).
+      // This is the key insight: shared tracks connect DJs visually.
       try {
         const trRes = await fetch('data/djs/tracks/track-registry.json');
         const tr = await trRes.json();
-
-        // Group tracks by played_by for cross-DJ connections
-        const artistDJs = {};
         tr.tracks.forEach((track) => {
-          // Track→DJ edges
-          track.played_by.forEach((djId) => {
-            if (nodeMap[djId]) {
-              const tid = 'tr_' + track.id;
-              if (!nodes.find((n) => n.id === tid)) {
-                nodes.push({
-                  id: tid,
-                  label: (track.title || '').slice(0, 35),
-                  artist: track.artist,
-                  type: 'track',
-                });
-              }
-              edges.push({ source: nodeMap[djId], target: tid, type: 'track' });
-            }
-          });
-        });
-
-        // Cross-DJ connections via SHARED EXACT TRACKS only
-        const trackDJs = {};
-        tr.tracks.forEach((track) => {
-          const djArr = track.played_by.filter((djId) => nodeMap[djId]);
+          const djArr = (track.played_by || []).filter((djId) => nodeMap[djId]);
           if (djArr.length >= 2) {
-            // Create a shared-track connection node
             const sharedId = 'shared_' + track.id;
-            if (!nodes.find((n) => n.id === sharedId)) {
-              nodes.push({
-                id: sharedId,
-                label: (track.title || '').slice(0, 30),
-                type: 'shared-track',
-              });
-            }
+            const artistSuffix = track.artist ? ' \u2014 ' + track.artist : '';
+            nodes.push({
+              id: sharedId,
+              label: ((track.title || '').slice(0, 30)) + artistSuffix,
+              artist: track.artist,
+              type: 'shared-track',
+            });
             djArr.forEach((djId) => {
               edges.push({ source: nodeMap[djId], target: sharedId, type: 'shared-track' });
             });
@@ -116,9 +87,19 @@ const DJGraph = {
     const container = document.getElementById('djGraphContainer');
     if (!container || !this.graphData || this.graphData.nodes.length === 0) return;
 
-    const width = container.clientWidth || 900,
-      height = 550;
+    const width = container.clientWidth || 900;
+    const height = 550;
     container.innerHTML = '';
+
+    // Initialize node positions in a circle so the first frame is visible
+    // (otherwise force-many-body launches them outside the viewBox).
+    const total = this.graphData.nodes.length;
+    const radius = Math.min(width, height) * 0.35;
+    this.graphData.nodes.forEach((n, i) => {
+      const angle = (i / total) * 2 * Math.PI;
+      n.x = width / 2 + Math.cos(angle) * radius;
+      n.y = height / 2 + Math.sin(angle) * radius;
+    });
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', width);
@@ -149,9 +130,10 @@ const DJGraph = {
     d3.select(svg).call(zoom);
 
     const colorMap = { dj: '#ff4d00', set: '#7c4dff', track: '#00bcd4', 'shared-track': '#00c864' };
-    const sizeMap = { dj: 20, set: 8, track: 5, 'shared-track': 12 };
+    const sizeMap = { dj: 14, set: 8, track: 5, 'shared-track': 10 };
     const edgeStyles = { 'dj-set': '#7c4dff', track: '#00bcd4', 'shared-track': '#00c864' };
 
+    // Bounded forces: weaker charge + x/y gravity to keep things inside the viewBox.
     const simulation = d3
       .forceSimulation(data.nodes)
       .force(
@@ -159,13 +141,16 @@ const DJGraph = {
         d3
           .forceLink(data.edges)
           .id((d) => d.id)
-          .distance((d) => (d.type === 'artist' ? 150 : 100))
+          .distance(70)
+          .strength(0.6)
       )
-      .force('charge', d3.forceManyBody().strength(-250))
+      .force('charge', d3.forceManyBody().strength(-180))
       .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('x', d3.forceX(width / 2).strength(0.05))
+      .force('y', d3.forceY(height / 2).strength(0.05))
       .force(
         'collision',
-        d3.forceCollide((d) => sizeMap[d.type] + 5)
+        d3.forceCollide((d) => sizeMap[d.type] + 8)
       );
 
     const link = d3
@@ -175,11 +160,11 @@ const DJGraph = {
       .enter()
       .append('line')
       .attr('stroke', (d) => edgeStyles[d.type] || 'rgba(255,255,255,0.06)')
-      .attr('stroke-width', (d) => (d.type === 'artist' ? 1.5 : 1))
+      .attr('stroke-width', (d) => (d.type === 'shared-track' ? 1.5 : 1))
       .attr('stroke-dasharray', (d) =>
         d.type === 'artist' ? '4,3' : d.type === 'festival' ? '2,4' : ''
       )
-      .attr('opacity', (d) => (d.type === 'artist' ? 0.5 : 0.15));
+      .attr('opacity', (d) => (d.type === 'shared-track' ? 0.6 : 0.2));
 
     const node = d3
       .select(g)
@@ -210,16 +195,16 @@ const DJGraph = {
       .append('circle')
       .attr('r', (d) => sizeMap[d.type])
       .attr('fill', (d) => colorMap[d.type])
-      .attr('opacity', (d) => (d.type === 'dj' ? 0.9 : 0.5))
+      .attr('opacity', (d) => (d.type === 'dj' ? 0.9 : 0.7))
       .attr('stroke', (d) => (d.type === 'dj' ? '#fff' : 'transparent'))
       .attr('stroke-width', (d) => (d.type === 'dj' ? 2 : 0));
 
     node
       .append('text')
       .text((d) => (d.label.length > 22 ? d.label.slice(0, 20) + '...' : d.label))
-      .attr('x', (d) => (d.type === 'dj' ? 26 : 14))
+      .attr('x', (d) => (d.type === 'dj' ? 18 : 14))
       .attr('y', 4)
-      .attr('fill', (d) => (d.type === 'dj' ? '#fff' : 'rgba(255,255,255,0.4)'))
+      .attr('fill', (d) => (d.type === 'dj' ? '#fff' : 'rgba(255,255,255,0.55)'))
       .attr('font-size', (d) => (d.type === 'dj' ? 12 : 9))
       .attr('font-weight', (d) => (d.type === 'dj' ? 700 : 400))
       .attr('font-family', 'Space Grotesk, sans-serif')
@@ -239,18 +224,16 @@ const DJGraph = {
 
     // Legend
     const legendItems = [
-      { label: 'DJ', color: '#ff4d00', size: 10 },
-      { label: 'Set', color: '#7c4dff', size: 7 },
-      { label: 'Track', color: '#00bcd4', size: 5 },
-      { label: 'Shared Track', color: '#00c864', size: 8 },
+      { label: 'DJ', color: '#ff4d00', size: 9 },
+      { label: 'Track compartido', color: '#00c864', size: 7 },
     ];
     const lg = d3
       .select(svg)
       .append('g')
-      .attr('transform', 'translate(' + (width - 160) + ',15)');
+      .attr('transform', 'translate(' + (width - 180) + ',15)');
     legendItems.forEach((l, i) => {
       const r = lg.append('g').attr('transform', 'translate(0,' + i * 20 + ')');
-      r.append('circle').attr('r', l.size).attr('fill', l.color).attr('opacity', 0.7);
+      r.append('circle').attr('r', l.size).attr('fill', l.color).attr('opacity', 0.8);
       r.append('text')
         .attr('x', 16)
         .attr('y', 4)
@@ -264,7 +247,7 @@ const DJGraph = {
       .append('text')
       .attr('x', 15)
       .attr('y', height - 15)
-      .text('Drag nodes \u2022 Scroll to zoom \u2022 Orange dashed = shared artist')
+      .text('Arrastra nodos \u2022 Scroll para zoom \u2022 Verde = track compartido entre 2+ DJs')
       .attr('fill', 'rgba(255,255,255,0.15)')
       .attr('font-size', 10)
       .attr('font-family', 'Space Grotesk, sans-serif');
