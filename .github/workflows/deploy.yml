@@ -22,6 +22,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Refresh event calendar from sources
+        # Safe: only ADDS new events as 'pending'. Exits silently if all scrapers fail.
+        # Run with --no-fail-on-scraper-error so we never block a deploy on calendar data.
+        run: |
+          if ! node scripts/curate-events.js refresh 2>&1; then
+            echo "::warning::curate-events refresh failed — continuing deploy with existing calendar"
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -41,6 +52,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Refresh event calendar from sources
+        run: |
+          if ! node scripts/curate-events.js refresh 2>&1; then
+            echo "::warning::curate-events refresh failed — continuing deploy with existing calendar"
+          fi
 
       - name: Install SSH key
         run: |
