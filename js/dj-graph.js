@@ -93,8 +93,10 @@ const DJGraph = {
 
     // Initialize node positions in a circle so the first frame is visible
     // (otherwise force-many-body launches them outside the viewBox).
+    // Radius reduced to 0.28 so labels (which extend ~60px right) stay inside.
     const total = this.graphData.nodes.length;
-    const radius = Math.min(width, height) * 0.35;
+    const radius = Math.min(width, height) * 0.28;
+    const labelPad = 70; // keep DJ labels visible (label is ~60px wide)
     this.graphData.nodes.forEach((n, i) => {
       const angle = (i / total) * 2 * Math.PI;
       n.x = width / 2 + Math.cos(angle) * radius;
@@ -133,7 +135,8 @@ const DJGraph = {
     const sizeMap = { dj: 14, set: 8, track: 5, 'shared-track': 10 };
     const edgeStyles = { 'dj-set': '#7c4dff', track: '#00bcd4', 'shared-track': '#00c864' };
 
-    // Bounded forces: weaker charge + x/y gravity to keep things inside the viewBox.
+    // Bounded forces: weaker charge + stronger x/y gravity to keep things inside the viewBox.
+    // Strength bumped 0.05 → 0.18 so the 60-node simulation actually settles inside the SVG.
     const simulation = d3
       .forceSimulation(data.nodes)
       .force(
@@ -146,8 +149,8 @@ const DJGraph = {
       )
       .force('charge', d3.forceManyBody().strength(-180))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('x', d3.forceX(width / 2).strength(0.05))
-      .force('y', d3.forceY(height / 2).strength(0.05))
+      .force('x', d3.forceX(width / 2).strength(0.18))
+      .force('y', d3.forceY(height / 2).strength(0.18))
       .force(
         'collision',
         d3.forceCollide((d) => sizeMap[d.type] + 8)
@@ -214,6 +217,13 @@ const DJGraph = {
     node.append('title').text((d) => d.label);
 
     simulation.on('tick', () => {
+      // Clamp every node inside the viewBox so labels (which extend ~60px right of
+      // the node) never escape the SVG. Force x/y isn't strong enough on its own.
+      const pad = 20;
+      data.nodes.forEach((d) => {
+        d.x = Math.max(pad, Math.min(width - pad, d.x));
+        d.y = Math.max(pad, Math.min(height - pad, d.y));
+      });
       link
         .attr('x1', (d) => d.source.x)
         .attr('y1', (d) => d.source.y)
