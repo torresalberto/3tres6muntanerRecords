@@ -145,7 +145,7 @@ function pageHTML(djs, sets, pageNum, totalPages) {
   <title>DJ Library${pageNum > 1 ? ` — Página ${pageNum}` : ''} — 3TRES6 Records</title>
   <meta name="description" content="Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de YouTube.">
   <link rel="canonical" href="https://3tres6records.albto.me/dj-library/${pageNum > 1 ? `page-${pageNum}.html` : ''}" />
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/dj-library.css">
   <link rel="preconnect" href="https://i.ytimg.com">
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
