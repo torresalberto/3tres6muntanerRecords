@@ -1,6 +1,648 @@
 {
   "shared_tracks": [
     {
+      "track": "recondite - glim",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "donato dozzy - gol",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "function - against the wall",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "andy stott - numb",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        }
+      ]
+    },
+    {
+      "track": "recondite - drgn",
+      "djs": [
+        "ame",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "ame-br-innervisions-ade-2012",
+          "title": "Boiler Room x Innervisions ADE 2012",
+          "artist": "ame"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "terrence dixon - one bedroom apartment",
+      "djs": [
+        "call-super",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "the field - over the ice",
+      "djs": [
+        "call-super",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "octave one - blackwater",
+      "djs": [
+        "carl-craig",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "seth-troxler"
+      ],
+      "sets": [
+        {
+          "id": "carl-craig-br-rbma-2013",
+          "title": "Set",
+          "artist": "carl-craig"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "seth-troxler-br-mexico-2014",
+          "title": "Boiler Room Stay True Mexico 2014",
+          "artist": "seth-troxler"
+        }
+      ]
+    },
+    {
+      "track": "tale of us - another earth",
+      "djs": [
+        "carl-craig",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "carl-craig-br-rbma-2013",
+          "title": "Set",
+          "artist": "carl-craig"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "floating points - problems",
+      "djs": [
+        "etapp-kyle",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "etapp-kyle-lot-radio-2023",
+          "title": "The Lot Radio New York 2023",
+          "artist": "etapp-kyle"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "four tet - school",
+      "djs": [
+        "four-tet",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "four-tet-br-london-2015",
+          "title": "Boiler Room London 2015",
+          "artist": "four-tet"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "boards of canada - split your infinities",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "moritz von oswald - watamu beach rework",
+      "djs": [
+        "apollonia",
+        "donato-dozzy",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "apollonia-br-epizode-2019",
+          "title": "Boiler Room x Epizode Festival Vietnam 2019",
+          "artist": "apollonia"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "levon vincent - double joint (part 2)",
+      "djs": [
+        "call-super",
+        "donato-dozzy",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "shed - shot rhythm",
+      "djs": [
+        "call-super",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "spacetime continuum - drug",
+      "djs": [
+        "donato-dozzy",
+        "peggy-gou",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "peggy-cercle",
+          "title": "Cercle @ Palais des Beaux-Arts Lille",
+          "artist": "peggy-gou"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "spacetime continuum - drug #6",
+      "djs": [
+        "donato-dozzy",
+        "peggy-gou",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "peggy-gou-cercle-lille-2024",
+          "title": "Cercle @ Palais des Beaux-Arts de Lille",
+          "artist": "peggy-gou"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "aleksi perala - uk74r1512110",
+      "djs": [
+        "donato-dozzy",
+        "pangaea",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "pangaea-br-dekmantel-2015",
+          "title": "Set",
+          "artist": "pangaea"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "floating points - fast forward",
+      "djs": [
+        "floating-points",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "floating-points-br-nyc-5hr",
+          "title": "5 Hour Set | Boiler Room: New York",
+          "artist": "floating-points"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "surgeon - bite (killa mix)",
+      "djs": [
+        "marcel-dettmann",
+        "mark-broom",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "mark-broom-br-bogota-2024",
+          "title": "Boiler Room Bogotá 2024",
+          "artist": "mark-broom"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "mark broom - 909 workout",
+      "djs": [
+        "marcel-dettmann",
+        "mark-broom",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "mark-broom-br-bogota-2024",
+          "title": "Boiler Room Bogotá 2024",
+          "artist": "mark-broom"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "stephan bodzin - lx (marc romboy remix)",
+      "djs": [
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
       "track": "ame - asa",
       "djs": [
         "ame",
@@ -35,6 +677,25 @@
           "id": "dixon-cercle-2024",
           "title": "Cercle Festival 2024",
           "artist": "dixon"
+        }
+      ]
+    },
+    {
+      "track": "monoloc - shame",
+      "djs": [
+        "ame",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "ame-br-innervisions-ade-2012",
+          "title": "Boiler Room x Innervisions ADE 2012",
+          "artist": "ame"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
         }
       ]
     },
@@ -77,10 +738,48 @@
       ]
     },
     {
-      "track": "octave one - blackwater",
+      "track": "boards of canada - transmisiones ferox",
+      "djs": [
+        "call-super",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "marcel dettmann - shena (t++ remix)",
+      "djs": [
+        "call-super",
+        "marcel-dettmann"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        }
+      ]
+    },
+    {
+      "track": "moodymann - got 2 make it",
       "djs": [
         "carl-craig",
-        "seth-troxler"
+        "quest"
       ],
       "sets": [
         {
@@ -89,9 +788,28 @@
           "artist": "carl-craig"
         },
         {
-          "id": "seth-troxler-br-mexico-2014",
-          "title": "Boiler Room Stay True Mexico 2014",
-          "artist": "seth-troxler"
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "model 500 - neptune",
+      "djs": [
+        "carl-craig",
+        "marcel-dettmann"
+      ],
+      "sets": [
+        {
+          "id": "carl-craig-br-rbma-2013",
+          "title": "Set",
+          "artist": "carl-craig"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
         }
       ]
     },
@@ -115,6 +833,44 @@
       ]
     },
     {
+      "track": "speedy j - the fun equations",
+      "djs": [
+        "etapp-kyle",
+        "marcel-dettmann"
+      ],
+      "sets": [
+        {
+          "id": "etapp-kyle-lot-radio-2023",
+          "title": "The Lot Radio New York 2023",
+          "artist": "etapp-kyle"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        }
+      ]
+    },
+    {
+      "track": "aphex twin - xmas_evet1 n",
+      "djs": [
+        "four-tet",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "four-tet-br-london-2015",
+          "title": "Boiler Room London 2015",
+          "artist": "four-tet"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
       "track": "earth people - dance",
       "djs": [
         "joe-claussell",
@@ -132,9 +888,340 @@
           "artist": "masters-at-work"
         }
       ]
+    },
+    {
+      "track": "mark broom - funky sounds",
+      "djs": [
+        "marcel-dettmann",
+        "mark-broom"
+      ],
+      "sets": [
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "mark-broom-br-bogota-2024",
+          "title": "Boiler Room Bogotá 2024",
+          "artist": "mark-broom"
+        }
+      ]
+    },
+    {
+      "track": "moodymann - j.a.n.",
+      "djs": [
+        "moodymann",
+        "recondite"
+      ],
+      "sets": [
+        {
+          "id": "moodymann-rbma-2010",
+          "title": "RBMA Rollerskating Jam London 2010",
+          "artist": "moodymann"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        }
+      ]
+    },
+    {
+      "track": "red axes - too late to samba",
+      "djs": [
+        "seth-troxler",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "seth-troxler-br-mexico-2014",
+          "title": "Boiler Room Stay True Mexico 2014",
+          "artist": "seth-troxler"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
     }
   ],
   "shared_artists": [
+    {
+      "artist": "Recondite",
+      "djs": [
+        "alex-do-clr-305",
+        "ame",
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Glim",
+        "Drgn"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "ame-br-innervisions-ade-2012",
+        "donato-dozzy-br-rome",
+        "quest-mixmag-lab-rome",
+        "quest-section-2026",
+        "recondite-cercle-bernay",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Floating Points",
+      "djs": [
+        "call-super",
+        "etapp-kyle",
+        "floating-points",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Mimoun Marhaba",
+        "Problems",
+        "Fast Forward"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "etapp-kyle-lot-radio-2023",
+        "floating-points-br-nyc-5hr",
+        "quest-mixmag-lab-rome",
+        "recondite-cercle-bernay",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Boards Of Canada",
+      "djs": [
+        "alex-do-clr-305",
+        "call-super",
+        "donato-dozzy",
+        "quest",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Split Your Infinities",
+        "Transmisiones Ferox"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "call-super-br-dekmantel-2015",
+        "donato-dozzy-br-rome",
+        "quest-mixmag-lab-rome",
+        "quest-section-2026",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Donato Dozzy",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Gol"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "donato-dozzy-br-rome",
+        "quest-mixmag-lab-rome",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Function",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "tracks": [
+        "Against The Wall"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "donato-dozzy-br-rome",
+        "marcel-dettmann-br-berlin",
+        "quest-mixmag-lab-rome"
+      ]
+    },
+    {
+      "artist": "Andy Stott",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite"
+      ],
+      "tracks": [
+        "Numb"
+      ],
+      "sets": [
+        "alex-do-clr-305",
+        "donato-dozzy-br-rome",
+        "quest-mixmag-lab-rome",
+        "quest-section-2026",
+        "recondite-cercle-bernay"
+      ]
+    },
+    {
+      "artist": "Terrence Dixon",
+      "djs": [
+        "call-super",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "tracks": [
+        "One Bedroom Apartment"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "donato-dozzy-br-rome",
+        "marcel-dettmann-br-berlin",
+        "quest-mixmag-lab-rome",
+        "quest-section-2026"
+      ]
+    },
+    {
+      "artist": "Levon Vincent",
+      "djs": [
+        "call-super",
+        "donato-dozzy",
+        "larry-heard-mr-fingers",
+        "quest"
+      ],
+      "tracks": [
+        "Double Joint (Part 2)",
+        "Man Or Mistress"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "donato-dozzy-br-rome",
+        "larry-heard-mr-fingers-mix-2012",
+        "quest-section-2026"
+      ]
+    },
+    {
+      "artist": "The Field",
+      "djs": [
+        "call-super",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Over The Ice"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "quest-mixmag-lab-rome",
+        "recondite-cercle-bernay",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Octave One",
+      "djs": [
+        "carl-craig",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "seth-troxler"
+      ],
+      "tracks": [
+        "Blackwater"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "donato-dozzy-br-rome",
+        "marcel-dettmann-br-berlin",
+        "seth-troxler-br-mexico-2014"
+      ]
+    },
+    {
+      "artist": "Moodymann",
+      "djs": [
+        "carl-craig",
+        "moodymann",
+        "quest",
+        "recondite"
+      ],
+      "tracks": [
+        "Got 2 Make It",
+        "Shades Of Jae",
+        "J.A.N."
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "moodymann-rbma-2010",
+        "quest-section-2026",
+        "recondite-cercle-bernay"
+      ]
+    },
+    {
+      "artist": "Tale Of Us",
+      "djs": [
+        "carl-craig",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Another Earth"
+      ],
+      "sets": [
+        "carl-craig-br-rbma-2013",
+        "quest-section-2026",
+        "recondite-cercle-bernay",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Four Tet",
+      "djs": [
+        "four-tet",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "School"
+      ],
+      "sets": [
+        "four-tet-br-london-2015",
+        "quest-mixmag-lab-rome",
+        "recondite-cercle-bernay",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
+    {
+      "artist": "Stephan Bodzin",
+      "djs": [
+        "laurent-garnier",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Lx (Marc Romboy Lost In Leploops Remix)",
+        "Lx (Marc Romboy Remix)"
+      ],
+      "sets": [
+        "laurent-garnier-br-lyon",
+        "quest-section-2026",
+        "recondite-cercle-bernay",
+        "stephan-bodzin-cercle-piz-gloria"
+      ]
+    },
     {
       "artist": "Ian Pooley",
       "djs": [
@@ -155,21 +1242,19 @@
       ]
     },
     {
-      "artist": "Floating Points",
+      "artist": "Moritz Von Oswald",
       "djs": [
-        "call-super",
-        "etapp-kyle",
-        "floating-points"
+        "apollonia",
+        "donato-dozzy",
+        "quest"
       ],
       "tracks": [
-        "Mimoun Marhaba",
-        "Problems",
-        "Fast Forward"
+        "Watamu Beach Rework"
       ],
       "sets": [
-        "call-super-br-dekmantel-2015",
-        "etapp-kyle-lot-radio-2023",
-        "floating-points-br-nyc-5hr"
+        "apollonia-br-epizode-2019",
+        "donato-dozzy-br-rome",
+        "quest-mixmag-lab-rome"
       ]
     },
     {
@@ -191,6 +1276,22 @@
       ]
     },
     {
+      "artist": "Shed",
+      "djs": [
+        "call-super",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "tracks": [
+        "Shot Rhythm"
+      ],
+      "sets": [
+        "call-super-br-dekmantel-2015",
+        "marcel-dettmann-br-berlin",
+        "quest-section-2026"
+      ]
+    },
+    {
       "artist": "X-Press 2",
       "djs": [
         "carl-cox",
@@ -206,6 +1307,40 @@
         "carl-cox-ibiza-villa",
         "ian-pooley-paloma-berlin-2023",
         "palms-trax-dekmantel-2024"
+      ]
+    },
+    {
+      "artist": "Spacetime Continuum",
+      "djs": [
+        "donato-dozzy",
+        "peggy-gou",
+        "quest"
+      ],
+      "tracks": [
+        "Drug",
+        "Drug #6"
+      ],
+      "sets": [
+        "donato-dozzy-br-rome",
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024",
+        "quest-section-2026"
+      ]
+    },
+    {
+      "artist": "Aleksi Perala",
+      "djs": [
+        "donato-dozzy",
+        "pangaea",
+        "quest"
+      ],
+      "tracks": [
+        "UK74R1512110"
+      ],
+      "sets": [
+        "donato-dozzy-br-rome",
+        "pangaea-br-dekmantel-2015",
+        "quest-mixmag-lab-rome"
       ]
     },
     {
@@ -227,18 +1362,37 @@
       ]
     },
     {
-      "artist": "Boards Of Canada",
+      "artist": "Surgeon",
       "djs": [
-        "alex-do-clr-305",
-        "call-super"
+        "marcel-dettmann",
+        "mark-broom",
+        "quest"
       ],
       "tracks": [
-        "Split Your Infinities",
-        "Transmisiones Ferox"
+        "Bite (Killa Mix)"
       ],
       "sets": [
-        "alex-do-clr-305",
-        "call-super-br-dekmantel-2015"
+        "marcel-dettmann-br-berlin",
+        "mark-broom-br-bogota-2024",
+        "quest-section-2026"
+      ]
+    },
+    {
+      "artist": "Mark Broom",
+      "djs": [
+        "marcel-dettmann",
+        "mark-broom",
+        "quest"
+      ],
+      "tracks": [
+        "909 Workout",
+        "Funky Sounds",
+        "Soul Reverse"
+      ],
+      "sets": [
+        "marcel-dettmann-br-berlin",
+        "mark-broom-br-bogota-2024",
+        "quest-section-2026"
       ]
     },
     {
@@ -272,21 +1426,6 @@
       ]
     },
     {
-      "artist": "Recondite",
-      "djs": [
-        "alex-do-clr-305",
-        "ame"
-      ],
-      "tracks": [
-        "Glim",
-        "Drgn"
-      ],
-      "sets": [
-        "alex-do-clr-305",
-        "ame-br-innervisions-ade-2012"
-      ]
-    },
-    {
       "artist": "Ame",
       "djs": [
         "ame",
@@ -299,6 +1438,20 @@
       "sets": [
         "ame-br-innervisions-ade-2012",
         "dixon-cercle-2024"
+      ]
+    },
+    {
+      "artist": "Monoloc",
+      "djs": [
+        "ame",
+        "quest"
+      ],
+      "tracks": [
+        "Shame"
+      ],
+      "sets": [
+        "ame-br-innervisions-ade-2012",
+        "quest-section-2026"
       ]
     },
     {
@@ -364,22 +1517,21 @@
       ]
     },
     {
-      "artist": "Levon Vincent",
+      "artist": "Marcel Dettmann",
       "djs": [
         "call-super",
-        "larry-heard-mr-fingers"
+        "marcel-dettmann"
       ],
       "tracks": [
-        "Double Joint (Part 2)",
-        "Man Or Mistress"
+        "Shena (T++ Remix)"
       ],
       "sets": [
         "call-super-br-dekmantel-2015",
-        "larry-heard-mr-fingers-mix-2012"
+        "marcel-dettmann-br-berlin"
       ]
     },
     {
-"artist": "Trevor Rockcliffe",
+      "artist": "Trevor Rockcliffe",
       "djs": [
         "carl-cox",
         "chaos-in-the-cbd"
@@ -394,33 +1546,17 @@
       ]
     },
     {
-      "artist": "Octave One",
+      "artist": "Model 500",
       "djs": [
         "carl-craig",
-        "seth-troxler"
+        "marcel-dettmann"
       ],
       "tracks": [
-        "Blackwater"
+        "Neptune"
       ],
       "sets": [
         "carl-craig-br-rbma-2013",
-        "seth-troxler-br-mexico-2014"
-      ]
-    },
-    {
-      "artist": "Moodymann",
-      "djs": [
-        "carl-craig",
-        "moodymann"
-      ],
-      "tracks": [
-        "Got 2 Make It",
-        "Shades Of Jae",
-        "J.A.N."
-      ],
-      "sets": [
-        "carl-craig-br-rbma-2013",
-        "moodymann-rbma-2010"
+        "marcel-dettmann-br-berlin"
       ]
     },
     {
@@ -467,6 +1603,20 @@
       "sets": [
         "dj-koze-various",
         "four-tet-br-london-2015"
+      ]
+    },
+    {
+      "artist": "Speedy J",
+      "djs": [
+        "etapp-kyle",
+        "marcel-dettmann"
+      ],
+      "tracks": [
+        "The FUN Equations"
+      ],
+      "sets": [
+        "etapp-kyle-lot-radio-2023",
+        "marcel-dettmann-br-berlin"
       ]
     },
     {
@@ -533,6 +1683,20 @@
       "sets": [
         "folamour-polaris-verbier-2020",
         "tiger-woods-br-london"
+      ]
+    },
+    {
+      "artist": "Aphex Twin",
+      "djs": [
+        "four-tet",
+        "quest"
+      ],
+      "tracks": [
+        "Xmas_Evet1 N"
+      ],
+      "sets": [
+        "four-tet-br-london-2015",
+        "quest-mixmag-lab-rome"
       ]
     },
     {
@@ -721,11 +1885,10 @@
         "mall-grab"
       ],
       "tracks": [
-        "Yosemite",
-        "Sort It Out",
         "If U Want My Heart (Ft.KLP)",
         "It Gets Better (Forever Mix)",
         "Man With the Second Face (unreleased)",
+        "Yosemite",
         "Sort it Out",
         "Rok Da House",
         "Feel Emotion"
@@ -751,6 +1914,24 @@
       ]
     },
     {
+      "artist": "Kraftwerk",
+      "djs": [
+        "marcel-dettmann",
+        "peggy-gou"
+      ],
+      "tracks": [
+        "Aerodynamik",
+        "Expo 2000",
+        "Aerodynamik (François K Aero Mix)",
+        "Expo 2000 (DJ Rolando Remix)"
+      ],
+      "sets": [
+        "marcel-dettmann-br-berlin",
+        "peggy-cercle",
+        "peggy-gou-cercle-lille-2024"
+      ]
+    },
+    {
       "artist": "Marshall Jefferson",
       "djs": [
         "masters-at-work",
@@ -763,6 +1944,20 @@
       "sets": [
         "maw-br-london-2014",
         "moodymann-rbma-2010"
+      ]
+    },
+    {
+      "artist": "Red Axes",
+      "djs": [
+        "seth-troxler",
+        "stephan-bodzin"
+      ],
+      "tracks": [
+        "Too Late To Samba"
+      ],
+      "sets": [
+        "seth-troxler-br-mexico-2014",
+        "stephan-bodzin-cercle-piz-gloria"
       ]
     }
   ],
@@ -811,29 +2006,19 @@
         "kettama-br-london",
         "maw-br-london-2014"
       ]
+    },
+    "Boiler Room, Berlin": {
+      "djs": [
+        "maceo-plex",
+        "marcel-dettmann"
+      ],
+      "sets": [
+        "maceo-plex-br-berlin-2014",
+        "marcel-dettmann-br-berlin"
+      ]
     }
   },
   "label_affinity": {
-    "Nite Grooves": {
-      "djs": [
-        "chaos-in-the-cbd",
-        "kerri-chandler"
-      ],
-      "tracks": [
-        {
-          "artist": "Stephanie Cooke",
-          "title": "Here With My Best Friend (Louie Vega Drumz)",
-          "djId": "chaos-in-the-cbd",
-          "setId": "chaos-glitch-2022"
-        },
-        {
-          "artist": "Kerri Chandler",
-          "title": "So Let The Wind Come",
-          "djId": "kerri-chandler",
-          "setId": "kerri-chandler-br-nyc-136"
-        }
-      ]
-    },
     "Ultra": {
       "djs": [
         "folamour",
@@ -862,18 +2047,6 @@
     }
   },
   "genre_bridges": {
-    "Deep House": {
-      "djs": [
-        "chaos-in-the-cbd",
-        "david-august",
-        "kerri-chandler"
-      ],
-      "sets": [
-        "chaos-in-the-cbd-br-glitch-2022",
-        "david-august-br-berlin-2014",
-        "kerri-chandler-br-nyc-136"
-      ]
-    },
     "Techno": {
       "djs": [
         "david-august",
@@ -890,11 +2063,20 @@
         "peggy-gou-cercle-lille-2024"
       ]
     },
+    "Deep House": {
+      "djs": [
+        "david-august",
+        "kerri-chandler"
+      ],
+      "sets": [
+        "david-august-br-berlin-2014",
+        "kerri-chandler-br-nyc-136"
+      ]
+    },
     "House": {
       "djs": [
         "folamour",
         "hunee",
-        "kettama",
         "mall-grab",
         "peggy-gou"
       ],
@@ -937,18 +2119,221 @@
         "helena-hauff-br-dekmantel-2017",
         "peggy-gou-cercle-lille-2024"
       ]
-    },
-    "Garage": {
-      "djs": [
-        "kerri-chandler",
-        "kettama"
-      ],
-      "sets": [
-        "kerri-chandler-br-nyc-136"
-      ]
     }
   },
   "super_connectors": [
+    {
+      "dj_id": "quest",
+      "name": "Quest",
+      "connection_count": 44,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "recondite",
+        "stephan-bodzin",
+        "marcel-dettmann",
+        "ame",
+        "apollonia",
+        "call-super",
+        "carl-craig",
+        "peggy-gou",
+        "pangaea",
+        "etapp-kyle",
+        "four-tet",
+        "mark-broom",
+        "floating-points",
+        "larry-heard-mr-fingers",
+        "moodymann",
+        "laurent-garnier"
+      ]
+    },
+    {
+      "dj_id": "donato-dozzy",
+      "name": "Donato Dozzy",
+      "connection_count": 23,
+      "shared_with": [
+        "alex-do-clr-305",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "marcel-dettmann",
+        "apollonia",
+        "call-super",
+        "carl-craig",
+        "seth-troxler",
+        "peggy-gou",
+        "pangaea",
+        "ame",
+        "larry-heard-mr-fingers"
+      ]
+    },
+    {
+      "dj_id": "stephan-bodzin",
+      "name": "Stephan Bodzin",
+      "connection_count": 20,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "ame",
+        "call-super",
+        "carl-craig",
+        "etapp-kyle",
+        "floating-points",
+        "four-tet",
+        "seth-troxler",
+        "laurent-garnier"
+      ]
+    },
+    {
+      "dj_id": "marcel-dettmann",
+      "name": "Marcel Dettmann",
+      "connection_count": 20,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "call-super",
+        "carl-craig",
+        "seth-troxler",
+        "etapp-kyle",
+        "mark-broom",
+        "peggy-gou"
+      ]
+    },
+    {
+      "dj_id": "recondite",
+      "name": "Recondite",
+      "connection_count": 18,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "stephan-bodzin",
+        "ame",
+        "call-super",
+        "carl-craig",
+        "etapp-kyle",
+        "floating-points",
+        "four-tet",
+        "moodymann",
+        "laurent-garnier"
+      ]
+    },
+    {
+      "dj_id": "call-super",
+      "name": "Call Super",
+      "connection_count": 14,
+      "shared_with": [
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest",
+        "stephan-bodzin",
+        "recondite",
+        "alex-do-clr-305",
+        "etapp-kyle",
+        "floating-points",
+        "seth-troxler",
+        "shonky-b2b-dan-ghenacia",
+        "larry-heard-mr-fingers"
+      ]
+    },
+    {
+      "dj_id": "alex-do-clr-305",
+      "name": "Alex Do Clr 305",
+      "connection_count": 12,
+      "shared_with": [
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "marcel-dettmann",
+        "call-super",
+        "mark-broom",
+        "shonky-b2b-dan-ghenacia",
+        "ame"
+      ]
+    },
+    {
+      "dj_id": "carl-craig",
+      "name": "Carl Craig",
+      "connection_count": 9,
+      "shared_with": [
+        "donato-dozzy",
+        "marcel-dettmann",
+        "seth-troxler",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "moodymann",
+        "mark-broom"
+      ]
+    },
+    {
+      "dj_id": "ame",
+      "name": "Ame",
+      "connection_count": 8,
+      "shared_with": [
+        "dixon",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "ian-pooley-hor",
+        "ian-pooley-paloma"
+      ]
+    },
+    {
+      "dj_id": "four-tet",
+      "name": "Four Tet",
+      "connection_count": 7,
+      "shared_with": [
+        "dj-koze-various",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "ben-ufo"
+      ]
+    },
+    {
+      "dj_id": "mark-broom",
+      "name": "Mark Broom",
+      "connection_count": 7,
+      "shared_with": [
+        "marcel-dettmann",
+        "quest",
+        "alex-do-clr-305",
+        "carl-craig"
+      ]
+    },
+    {
+      "dj_id": "seth-troxler",
+      "name": "Seth Troxler",
+      "connection_count": 6,
+      "shared_with": [
+        "carl-craig",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "stephan-bodzin",
+        "call-super",
+        "shonky-b2b-dan-ghenacia",
+        "honey-dijon"
+      ]
+    },
+    {
+      "dj_id": "peggy-gou",
+      "name": "Peggy Gou",
+      "connection_count": 6,
+      "shared_with": [
+        "donato-dozzy",
+        "quest",
+        "etapp-kyle",
+        "ian-pooley-hor",
+        "marcel-dettmann"
+      ]
+    },
     {
       "dj_id": "masters-at-work",
       "name": "Masters At Work",
@@ -975,17 +2360,6 @@
       ]
     },
     {
-      "dj_id": "ame",
-      "name": "Ame",
-      "connection_count": 5,
-      "shared_with": [
-        "dixon",
-        "alex-do-clr-305",
-        "ian-pooley-hor",
-        "ian-pooley-paloma"
-      ]
-    },
-    {
       "dj_id": "ben-ufo",
       "name": "Ben Ufo",
       "connection_count": 5,
@@ -993,6 +2367,20 @@
         "kink",
         "pangaea",
         "four-tet"
+      ]
+    },
+    {
+      "dj_id": "etapp-kyle",
+      "name": "Etapp Kyle",
+      "connection_count": 5,
+      "shared_with": [
+        "marcel-dettmann",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "call-super",
+        "floating-points",
+        "peggy-gou"
       ]
     },
     {
@@ -1010,24 +2398,13 @@
       ]
     },
     {
-      "dj_id": "carl-craig",
-      "name": "Carl Craig",
+      "dj_id": "pangaea",
+      "name": "Pangaea",
       "connection_count": 4,
       "shared_with": [
-        "seth-troxler",
-        "moodymann",
-        "mark-broom"
-      ]
-    },
-    {
-      "dj_id": "seth-troxler",
-      "name": "Seth Troxler",
-      "connection_count": 4,
-      "shared_with": [
-        "carl-craig",
-        "call-super",
-        "shonky-b2b-dan-ghenacia",
-        "honey-dijon"
+        "ben-ufo",
+        "donato-dozzy",
+        "quest"
       ]
     },
     {
@@ -1041,30 +2418,6 @@
       ]
     },
     {
-      "dj_id": "alex-do-clr-305",
-      "name": "Alex Do Clr 305",
-      "connection_count": 4,
-      "shared_with": [
-        "call-super",
-        "mark-broom",
-        "shonky-b2b-dan-ghenacia",
-        "ame"
-      ]
-    },
-    {
-      "dj_id": "call-super",
-      "name": "Call Super",
-      "connection_count": 4,
-      "shared_with": [
-        "alex-do-clr-305",
-        "etapp-kyle",
-        "floating-points",
-        "seth-troxler",
-        "shonky-b2b-dan-ghenacia",
-        "larry-heard-mr-fingers"
-      ]
-    },
-    {
       "dj_id": "dixon",
       "name": "Dixon",
       "connection_count": 3,
@@ -1073,12 +2426,14 @@
       ]
     },
     {
-      "dj_id": "four-tet",
-      "name": "Four Tet",
+      "dj_id": "moodymann",
+      "name": "Moodymann",
       "connection_count": 3,
       "shared_with": [
-        "dj-koze-various",
-        "ben-ufo"
+        "recondite",
+        "carl-craig",
+        "quest",
+        "masters-at-work"
       ]
     },
     {
@@ -1114,16 +2469,17 @@
       ]
     },
     {
-      "dj_id": "kink",
-      "name": "Kink",
+      "dj_id": "apollonia",
+      "name": "Apollonia",
       "connection_count": 2,
       "shared_with": [
-        "ben-ufo"
+        "donato-dozzy",
+        "quest"
       ]
     },
     {
-      "dj_id": "pangaea",
-      "name": "Pangaea",
+      "dj_id": "kink",
+      "name": "Kink",
       "connection_count": 2,
       "shared_with": [
         "ben-ufo"
@@ -1138,12 +2494,15 @@
       ]
     },
     {
-      "dj_id": "mark-broom",
-      "name": "Mark Broom",
+      "dj_id": "floating-points",
+      "name": "Floating Points",
       "connection_count": 2,
       "shared_with": [
-        "alex-do-clr-305",
-        "carl-craig"
+        "recondite",
+        "stephan-bodzin",
+        "call-super",
+        "etapp-kyle",
+        "quest"
       ]
     },
     {
@@ -1166,21 +2525,13 @@
       ]
     },
     {
-      "dj_id": "etapp-kyle",
-      "name": "Etapp Kyle",
-      "connection_count": 2,
-      "shared_with": [
-        "call-super",
-        "floating-points",
-        "peggy-gou"
-      ]
-    },
-    {
       "dj_id": "larry-heard-mr-fingers",
       "name": "Larry Heard Mr Fingers",
       "connection_count": 2,
       "shared_with": [
         "call-super",
+        "donato-dozzy",
+        "quest",
         "joe-claussell"
       ]
     },
@@ -1205,21 +2556,14 @@
       ]
     },
     {
-      "dj_id": "moodymann",
-      "name": "Moodymann",
+      "dj_id": "laurent-garnier",
+      "name": "Laurent Garnier",
       "connection_count": 2,
       "shared_with": [
-        "carl-craig",
-        "masters-at-work"
-      ]
-    },
-    {
-      "dj_id": "peggy-gou",
-      "name": "Peggy Gou",
-      "connection_count": 2,
-      "shared_with": [
-        "etapp-kyle",
-        "ian-pooley-hor"
+        "maceo-plex",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
       ]
     },
     {
@@ -1228,15 +2572,6 @@
       "connection_count": 1,
       "shared_with": [
         "cassius"
-      ]
-    },
-    {
-      "dj_id": "floating-points",
-      "name": "Floating Points",
-      "connection_count": 1,
-      "shared_with": [
-        "call-super",
-        "etapp-kyle"
       ]
     },
     {
@@ -1296,14 +2631,6 @@
       ]
     },
     {
-      "dj_id": "laurent-garnier",
-      "name": "Laurent Garnier",
-      "connection_count": 1,
-      "shared_with": [
-        "maceo-plex"
-      ]
-    },
-    {
       "dj_id": "maceo-plex",
       "name": "Maceo Plex",
       "connection_count": 1,
@@ -1312,8 +2639,8 @@
       ]
     }
   ],
-  "total_shared_tracks": 7,
-  "total_shared_artists": 39,
-  "total_connections": 46,
-  "generated_at": "2026-05-29T16:24:04.404Z"
+  "total_shared_tracks": 38,
+  "total_shared_artists": 60,
+  "total_connections": 98,
+  "generated_at": "2026-06-12T08:42:31.076Z"
 }

@@ -1,0 +1,117 @@
+{
+  "id": "quest-section-2026",
+  "dj_id": "quest",
+  "title": "Quest @ SECTION. (Vinyl Set)",
+  "venue": "SECTION., Rome",
+  "date": "2026-02-08",
+  "youtube_url": "https://www.youtube.com/watch?v=B2pacpcPOAU",
+  "youtube_embed_id": "B2pacpcPOAU",
+  "duration_minutes": 95,
+  "duration_formatted": "1:35:00",
+  "view_count": 0,
+  "genres": [
+    "Deep Dub Techno",
+    "Ambient",
+    "Dub Techno"
+  ],
+  "tracklist": [
+    {
+      "artist": "Boards Of Canada",
+      "title": "Split Your Infinities",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Recondite",
+      "title": "Drgn",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Andy Stott",
+      "title": "Numb",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Spacetime Continuum",
+      "title": "Drug",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Spacetime Continuum",
+      "title": "Drug #6",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Terrence Dixon",
+      "title": "One Bedroom Apartment",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Moodymann",
+      "title": "Got 2 Make It",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Levon Vincent",
+      "title": "Double Joint (Part 2)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Stephan Bodzin",
+      "title": "Lx (Marc Romboy Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Monoloc",
+      "title": "Shame",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Surgeon",
+      "title": "Bite (Killa Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Mark Broom",
+      "title": "909 Workout",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Shed",
+      "title": "Shot Rhythm",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    },
+    {
+      "artist": "Tale Of Us",
+      "title": "Another Earth",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 14
+    }
+  ]
+}

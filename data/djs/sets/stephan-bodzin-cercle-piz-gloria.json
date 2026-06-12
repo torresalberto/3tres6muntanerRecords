@@ -1,0 +1,96 @@
+{
+  "id": "stephan-bodzin-cercle-piz-gloria",
+  "dj_id": "stephan-bodzin",
+  "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+  "venue": "Piz Gloria, Interlaken, Switzerland",
+  "date": "2018-07-21",
+  "youtube_url": "https://www.youtube.com/watch?v=xF_QkfZI1mM",
+  "youtube_embed_id": "xF_QkfZI1mM",
+  "duration_minutes": 89,
+  "duration_formatted": "1:29:00",
+  "view_count": 0,
+  "genres": [
+    "Melodic Techno",
+    "Deep Techno",
+    "Live"
+  ],
+  "tracklist": [
+    {
+      "artist": "Stephan Bodzin",
+      "title": "Lx (Marc Romboy Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Tale Of Us",
+      "title": "Another Earth",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Recondite",
+      "title": "Glim",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Recondite",
+      "title": "Drgn",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Floating Points",
+      "title": "Problems",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Floating Points",
+      "title": "Fast Forward",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "The Field",
+      "title": "Over The Ice",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Boards Of Canada",
+      "title": "Transmisiones Ferox",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Four Tet",
+      "title": "School",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Donato Dozzy",
+      "title": "Gol",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Red Axes",
+      "title": "Too Late To Samba",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    }
+  ]
+}

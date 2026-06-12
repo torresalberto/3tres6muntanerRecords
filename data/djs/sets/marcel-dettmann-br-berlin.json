@@ -1,0 +1,103 @@
+{
+  "id": "marcel-dettmann-br-berlin",
+  "dj_id": "marcel-dettmann",
+  "title": "Boiler Room Berlin: Marcel Dettmann",
+  "venue": "Boiler Room, Berlin",
+  "date": "2014-05-22",
+  "youtube_url": "https://www.youtube.com/watch?v=ic7P_qWkdE8",
+  "youtube_embed_id": "ic7P_qWkdE8",
+  "duration_minutes": 62,
+  "duration_formatted": "1:02:00",
+  "view_count": 0,
+  "genres": [
+    "Techno",
+    "Deep Techno",
+    "Electro"
+  ],
+  "tracklist": [
+    {
+      "artist": "Marcel Dettmann",
+      "title": "Shena (T++ Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Shed",
+      "title": "Shot Rhythm",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Surgeon",
+      "title": "Bite (Killa Mix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Mark Broom",
+      "title": "909 Workout",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Mark Broom",
+      "title": "Funky Sounds",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Function",
+      "title": "Against The Wall",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Terrence Dixon",
+      "title": "One Bedroom Apartment",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Octave One",
+      "title": "Blackwater",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Speedy J",
+      "title": "The FUN Equations",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Model 500",
+      "title": "Neptune",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Kraftwerk",
+      "title": "Aerodynamik",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Kraftwerk",
+      "title": "Expo 2000",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    }
+  ]
+}

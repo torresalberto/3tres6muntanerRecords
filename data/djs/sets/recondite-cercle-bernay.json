@@ -1,0 +1,89 @@
+{
+  "id": "recondite-cercle-bernay",
+  "dj_id": "recondite",
+  "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+  "venue": "Abbatiale de Bernay, Normandy, France",
+  "date": "2017-08-18",
+  "youtube_url": "https://www.youtube.com/watch?v=q4ic2xA8pys",
+  "youtube_embed_id": "q4ic2xA8pys",
+  "duration_minutes": 72,
+  "duration_formatted": "1:12:00",
+  "view_count": 0,
+  "genres": [
+    "Deep House",
+    "Melodic Techno",
+    "Minimal"
+  ],
+  "tracklist": [
+    {
+      "artist": "Recondite",
+      "title": "Glim",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Recondite",
+      "title": "Drgn",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Floating Points",
+      "title": "Problems",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Floating Points",
+      "title": "Fast Forward",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Stephan Bodzin",
+      "title": "Lx (Marc Romboy Remix)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "The Field",
+      "title": "Over The Ice",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Tale Of Us",
+      "title": "Another Earth",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Andy Stott",
+      "title": "Numb",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Four Tet",
+      "title": "School",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Moodymann",
+      "title": "J.A.N.",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    }
+  ]
+}

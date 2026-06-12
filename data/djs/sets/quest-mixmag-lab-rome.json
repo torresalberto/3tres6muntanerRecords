@@ -1,0 +1,110 @@
+{
+  "id": "quest-mixmag-lab-rome",
+  "dj_id": "quest",
+  "title": "Quest @ Mixmag Lab Rome",
+  "venue": "Mixmag Lab Rome (A|X Armani Exchange)",
+  "date": "2019-03-15",
+  "youtube_url": "https://www.youtube.com/watch?v=pXvHkSLxCoA",
+  "youtube_embed_id": "pXvHkSLxCoA",
+  "duration_minutes": 73,
+  "duration_formatted": "1:13:00",
+  "view_count": 0,
+  "genres": [
+    "Deep Dub Techno",
+    "Ambient",
+    "Dub Techno"
+  ],
+  "tracklist": [
+    {
+      "artist": "Donato Dozzy",
+      "title": "Gol",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Recondite",
+      "title": "Glim",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Recondite",
+      "title": "Drgn",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Moritz Von Oswald",
+      "title": "Watamu Beach Rework",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Andy Stott",
+      "title": "Numb",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Boards Of Canada",
+      "title": "Split Your Infinities",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Aphex Twin",
+      "title": "Xmas_Evet1 N",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Aleksi Perala",
+      "title": "UK74R1512110",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Function",
+      "title": "Against The Wall",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Terrence Dixon",
+      "title": "One Bedroom Apartment",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Floating Points",
+      "title": "Problems",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "The Field",
+      "title": "Over The Ice",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    },
+    {
+      "artist": "Four Tet",
+      "title": "School",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 13
+    }
+  ]
+}

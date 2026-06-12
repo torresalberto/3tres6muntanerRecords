@@ -1,0 +1,103 @@
+{
+  "id": "donato-dozzy-br-rome",
+  "dj_id": "donato-dozzy",
+  "title": "Boiler Room: Donato Dozzy",
+  "venue": "Boiler Room, Rome",
+  "date": "2015-11-12",
+  "youtube_url": "https://www.youtube.com/watch?v=Dhzp6esYfeY",
+  "youtube_embed_id": "Dhzp6esYfeY",
+  "duration_minutes": 58,
+  "duration_formatted": "0:58:00",
+  "view_count": 0,
+  "genres": [
+    "Ambient",
+    "Deep Techno",
+    "Minimal"
+  ],
+  "tracklist": [
+    {
+      "artist": "Donato Dozzy",
+      "title": "Gol",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 1
+    },
+    {
+      "artist": "Spacetime Continuum",
+      "title": "Drug",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 2
+    },
+    {
+      "artist": "Spacetime Continuum",
+      "title": "Drug #6",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 3
+    },
+    {
+      "artist": "Function",
+      "title": "Against The Wall",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 4
+    },
+    {
+      "artist": "Andy Stott",
+      "title": "Numb",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 5
+    },
+    {
+      "artist": "Boards Of Canada",
+      "title": "Split Your Infinities",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 6
+    },
+    {
+      "artist": "Recondite",
+      "title": "Glim",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 7
+    },
+    {
+      "artist": "Aleksi Perala",
+      "title": "UK74R1512110",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 8
+    },
+    {
+      "artist": "Moritz Von Oswald",
+      "title": "Watamu Beach Rework",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 9
+    },
+    {
+      "artist": "Terrence Dixon",
+      "title": "One Bedroom Apartment",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 10
+    },
+    {
+      "artist": "Octave One",
+      "title": "Blackwater",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 11
+    },
+    {
+      "artist": "Levon Vincent",
+      "title": "Double Joint (Part 2)",
+      "timestamp": "",
+      "status": "confirmed",
+      "position": 12
+    }
+  ]
+}
