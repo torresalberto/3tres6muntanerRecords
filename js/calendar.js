@@ -10,9 +10,12 @@ const EventCalendar = {
 
   init: async function() {
     await this.fetchEvents();
+    this.currentYear = new Date().getFullYear();
+    this.currentMonth = new Date().getMonth();
     this.renderCalendar();
     this.bindDayClicks();
     this.bindModalClose();
+    this.bindNavButtons();
   },
 
   fetchEvents: async function() {
@@ -47,9 +50,9 @@ const EventCalendar = {
     const container = document.getElementById('dynamicCalendar');
     if (!container) return;
 
+    const year = this.currentYear;
+    const month = this.currentMonth;
     const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth();
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -97,13 +100,47 @@ const EventCalendar = {
       `;
     }
 
+    // Count BCN events in this view for the subtitle
+    const bcnCount = this.events.filter(e => {
+      if (!e.country || e.country !== 'ES') return false;
+      if (e.recurring) return false; // recurring is CDMX
+      if (!e.date) return false;
+      const d = new Date(e.date);
+      return d.getFullYear() === year && d.getMonth() === month;
+    }).length;
+
     container.innerHTML = `
       <div class="calendar-month-header">
-        <span>${this.MONTHS[month]} ${year}</span>
+        <button class="cal-nav cal-nav-prev" id="calPrevMonth" aria-label="Mes anterior">‹</button>
+        <span class="cal-month-label">${this.MONTHS_FULL[month].toUpperCase()} ${year}</span>
+        <button class="cal-nav cal-nav-next" id="calNextMonth" aria-label="Mes siguiente">›</button>
       </div>
+      <div class="cal-event-count">${bcnCount} ${bcnCount === 1 ? 'evento BCN' : 'eventos BCN'} este mes</div>
       ${header}
       <div class="calendar-body">${cells}</div>
     `;
+  },
+
+  bindNavButtons: function() {
+    const container = document.getElementById('dynamicCalendar');
+    if (!container) return;
+    // Use event delegation so nav buttons work after every re-render
+    container.addEventListener('click', (ev) => {
+      if (ev.target.id === 'calPrevMonth') this.navigateMonth(-1);
+      else if (ev.target.id === 'calNextMonth') this.navigateMonth(1);
+    });
+  },
+
+  navigateMonth: function(delta) {
+    this.currentMonth += delta;
+    if (this.currentMonth < 0) {
+      this.currentMonth = 11;
+      this.currentYear -= 1;
+    } else if (this.currentMonth > 11) {
+      this.currentMonth = 0;
+      this.currentYear += 1;
+    }
+    this.renderCalendar();
   },
 
   bindDayClicks: function() {
