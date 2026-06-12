@@ -72,49 +72,34 @@ function renderSetBlock(set) {
 }
 
 function renderProfilePage(dj, sets) {
-  // Renders a full standalone HTML page (not just a fragment) so that:
-  //   1) Direct access at /data/djs/profiles/<id>.html works (charset, noindex,
-  //      meta-refresh redirect to the canonical dj-library page).
-  //   2) The inner detail (set blocks) is also usable as innerHTML for the
-  //      lazy-load expand in dj-library.html — the innerHTML parser strips
-  //      html/head/body context tags and leaves the set-block content intact.
-  const djName = esc(dj.name);
+  // Renders a PURE FRAGMENT — just the set blocks, no html/head/body wrapper.
+  //
+  // Why a fragment (not a full standalone page)?
+  //   This file is consumed by dj-library.html via fetch() + innerHTML when the
+  //   user clicks a gallery card to expand it inline. The browser DOES NOT
+  //   strip <meta>, <style>, <title>, <link> tags from innerHTML assignments
+  //   — it moves them to the document's <head>. A <meta http-equiv="refresh">
+  //   in the fragment would IMMEDIATELY fire and navigate the page (the bug we
+  //   fixed on 2026-06-11). <style> would leak into the host page. <title>
+  //   would override the page title.
+  //
+  //   By producing a clean fragment we avoid all of those side effects. The
+  //   fragment is self-contained: <div class="set-block">...</div> elements
+  //   with their own classes/tables/styles. If anyone visits the URL
+  //   /data/djs/profiles/<id>.html directly, the browser renders the set
+  //   blocks as raw HTML (no chrome), which is acceptable because:
+  //     - The canonical standalone pages live at /dj/<id>.html
+  //     - The fragment is the source of truth for innerHTML expansion
+  //     - These URLs are not linked from any other page on the site
+  //       (search engines have no way to discover them)
   const inner = (sets || []).map(renderSetBlock).join('');
-  const canonicalHash = `#dj-${esc(dj.id)}`;
-  const canonicalUrl = `https://3tres6records.albto.me/dj-library.html${canonicalHash}`;
-  return `<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="refresh" content="0;url=/dj-library.html${canonicalHash}">
-  <link rel="canonical" href="${canonicalUrl}">
-  <title>${djName} — 3TRES6 Records</title>
-  <style>
-    body { font-family: system-ui, sans-serif; background: #111; color: #eee;
-           display: flex; align-items: center; justify-content: center;
-           min-height: 100vh; margin: 0; padding: 2rem; text-align: center; }
-    a { color: #ff4d00; }
-  </style>
-</head>
-<body>
-  <div class="set-block-wrapper">
-    ${inner}
-    <p style="margin-top:2rem;font-size:.9rem;opacity:.7">
-      Redirigiendo a <a href="/dj-library.html${canonicalHash}">${djName} en DJ Library</a>…
-    </p>
-  </div>
-  <script>setTimeout(function(){location.replace('/dj-library.html${canonicalHash}')},50);</script>
-</body>
-</html>
-`;
+  // Leading HTML comment so anyone reading the raw file knows it's a
+  // fragment meant for innerHTML injection, not a standalone page.
+  return `<!-- profile fragment: innerHTML-only, do not navigate to directly. Canonical: /dj/${esc(dj.id)}.html -->\n${inner}`;
 }
 
 function renderProfileInner(dj, sets) {
-  // Backwards-compatible alias — now returns a full standalone page.
-  // The innerHTML parser in dj-library.html still consumes this correctly:
-  // html/head/body context tags are stripped, leaving the set-block divs.
+  // Backwards-compatible alias for the inner fragment used by dj-library.html.
   return renderProfilePage(dj, sets);
 }
 
