@@ -65,6 +65,66 @@
         console.error('[swup-init] onPageView handler failed:', err);
       }
     });
+    // Also fix the subnav active tab, which lives OUTSIDE the swup
+    // container and therefore keeps the .active class from the previous
+    // page. Without this, clicking "Blog" on dj-library leaves "DJ Library"
+    // highlighted on the new page.
+    updateSubnavActive();
+  }
+
+  /**
+   * Map a subnav tab's href to a section id.
+   *   blog.html               -> "blog"
+   *   dj-library.html         -> "library"
+   *   3d-brain.html           -> "neural"
+   *   ./  or ../toolhub/      -> "tools"
+   *   ./#hardware             -> "hardware"
+   */
+  function getTabSection(tab) {
+    var href = (tab.getAttribute('href') || '').toLowerCase();
+    if (!href) return '';
+    if (href.indexOf('#hardware') !== -1) return 'hardware';
+    if (href.indexOf('blog.html') !== -1 || href.endsWith('/blog/')) return 'blog';
+    if (href.indexOf('dj-library') !== -1 || href.indexOf('/dj/') !== -1) return 'library';
+    if (href.indexOf('3d-brain') !== -1) return 'neural';
+    if (href.indexOf('toolhub') !== -1) return 'tools';
+    return '';
+  }
+
+  /**
+   * Map the current URL to a section id. Falls back to the optional
+   * <body data-page-section="..."> attribute when set.
+   */
+  function getCurrentSection() {
+    var explicit = (document.body.getAttribute('data-page-section') || '').toLowerCase();
+    if (explicit) return explicit;
+
+    var path = window.location.pathname;
+    var hash = window.location.hash || '';
+    if (path.endsWith('/blog.html') || path === '/blog/' || path.endsWith('/blog')) return 'blog';
+    if (path.endsWith('/dj-library.html')) return 'library';
+    if (/\/dj\/[^/]+\.html?$/.test(path)) return 'library';
+    if (path.endsWith('/3d-brain.html')) return 'neural';
+    if (path.indexOf('/toolhub/') !== -1 || path.endsWith('/toolhub')) {
+      return hash === '#hardware' ? 'hardware' : 'tools';
+    }
+    return '';
+  }
+
+  function updateSubnavActive() {
+    var subnavTabs = document.querySelectorAll('.subnav-tab');
+    if (subnavTabs.length === 0) return;
+
+    var section = getCurrentSection();
+    if (!section) return;
+
+    subnavTabs.forEach(function (tab) {
+      if (getTabSection(tab) === section) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
   }
 
   // Run handlers on the initial page load too.
