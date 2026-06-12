@@ -1099,7 +1099,8 @@
           name: d.name,
           genre: d.genre,
           color: getGenreColor(d.genre),
-          connections: 0,
+          connections: 0,           // total (track + artist bridges) — used for stats
+          trackConnections: 0,      // only direct track overlaps — used for node SIZE
           x3: 0,
           y3: 0,
           z3: 0,
@@ -1128,6 +1129,8 @@
                     links.push({ source: na, target: nb, track: t.track, sets: t.sets });
                     na.connections++;
                     nb.connections++;
+                    na.trackConnections++;
+                    nb.trackConnections++;
                   }
                 }
               }
@@ -1539,7 +1542,9 @@
           sorted.forEach((ne) => {
             const n = ne.data;
             const s = n.scale;
-            const r = Math.max(5, n.connections * 2.5 + 5) * s;
+            // Use trackConnections (not connections) so artist bridges don't inflate node size
+            const connCount = n.trackConnections;
+            const r = Math.max(5, connCount * 2.5 + 5) * s;
             const isActive = !activeIds || activeIds.has(n.id);
             const isHovered = n.id === hoveredId;
             const isSelected = n.id === selectedId;
@@ -1549,7 +1554,7 @@
             ne.label.setAttribute('x', n.x2);
             ne.label.setAttribute('y', n.y2);
             ne.label.setAttribute('dy', r + 12 * s);
-            ne.label.setAttribute('font-size', (n.connections > 0 ? 10 : 9) * s + 'px');
+            ne.label.setAttribute('font-size', (connCount > 0 ? 10 : 9) * s + 'px');
 
             // Z-occlusion combined with interaction state
             const zOpacity = n.z2 < -50 ? 0.3 : 1;
@@ -1559,13 +1564,13 @@
               zOpacity * (isActive ? (isHovered || isSelected ? 1 : 0.7) : 0);
 
             if (isHovered || isSelected) {
-              ne.circle.setAttribute('r', Math.max(8, n.connections * 3 + 8));
+              ne.circle.setAttribute('r', Math.max(8, connCount * 3 + 8));
               ne.circle.setAttribute('filter', 'url(#glow-strong)');
               ne.circle.setAttribute('stroke-width', 3);
             } else {
-              ne.circle.setAttribute('r', Math.max(5, n.connections * 2.5 + 5));
-              ne.circle.setAttribute('filter', n.connections > 0 ? 'url(#glow)' : '');
-              ne.circle.setAttribute('stroke-width', n.connections > 0 ? 2 : 1);
+              ne.circle.setAttribute('r', Math.max(5, connCount * 2.5 + 5));
+              ne.circle.setAttribute('filter', connCount > 0 ? 'url(#glow)' : '');
+              ne.circle.setAttribute('stroke-width', connCount > 0 ? 2 : 1);
             }
           });
 
@@ -1676,6 +1681,7 @@
                     linkGroup.appendChild(line);
                     linkEls.push({ el: line, data: linkObj });
 
+                    // Artist bridges are a secondary signal — do NOT inflate node size
                     na.connections++;
                     nb.connections++;
                     artistLinksAdded++;
