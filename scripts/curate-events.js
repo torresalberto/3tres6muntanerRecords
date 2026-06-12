@@ -76,12 +76,16 @@ function nextId(title) {
 function validateEvent(e) {
   const errors = [];
   if (!e.title) errors.push('missing title');
-  if (!e.date) errors.push('missing date');
-  if (!e.venue) errors.push('missing venue');
-  if (!e.city) errors.push('missing city');
+  // Recurring events use recurringDays instead of date
+  if (!e.recurring && !e.date) errors.push('missing date (or set recurring:true + recurringDays)');
+  if (e.recurring && (!Array.isArray(e.recurringDays) || e.recurringDays.length === 0)) {
+    errors.push('recurring event must have recurringDays[]');
+  }
   if (e.date && e.date !== 'weekly' && !/^\d{4}-\d{2}-\d{2}/.test(e.date)) {
     errors.push(`date should be YYYY-MM-DD or "weekly", got: ${e.date}`);
   }
+  if (!e.venue) errors.push('missing venue');
+  if (!e.city) errors.push('missing city');
   if (!Array.isArray(e.djs)) errors.push('djs must be an array');
   if (!Array.isArray(e.genres)) errors.push('genres must be an array');
   if (!e.status) errors.push('missing status (approved|pending)');

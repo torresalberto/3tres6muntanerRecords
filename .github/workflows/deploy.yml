@@ -33,6 +33,13 @@ jobs:
           if ! node scripts/curate-events.js refresh 2>&1; then
             echo "::warning::curate-events refresh failed — continuing deploy with existing calendar"
           fi
+      - name: Build static DJ Library
+        # Pre-renders dj-library/index.html + page-2..N.html with inlined data
+        # and lazy YouTube embeds. Replaces the slow dynamic loader.
+        run: |
+          if ! node scripts/build-dj-library.js 2>&1; then
+            echo "::warning::build-dj-library failed — continuing deploy with old library page"
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -60,6 +67,11 @@ jobs:
         run: |
           if ! node scripts/curate-events.js refresh 2>&1; then
             echo "::warning::curate-events refresh failed — continuing deploy with existing calendar"
+          fi
+      - name: Build static DJ Library
+        run: |
+          if ! node scripts/build-dj-library.js 2>&1; then
+            echo "::warning::build-dj-library failed — continuing deploy with old library page"
           fi
 
       - name: Install SSH key

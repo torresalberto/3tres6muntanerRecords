@@ -1132,3 +1132,139 @@
   height: 100%;
   border: 0;
 }
+
+/* ===== YT-LAZY (click-to-play) — for static dj-library pages ===== */
+.yt-lazy {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+  cursor: pointer;
+  display: block;
+}
+.yt-lazy img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.yt-lazy:hover img { opacity: 1; }
+.yt-lazy .yt-play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px; height: 48px;
+  background: rgba(255, 0, 0, 0.9);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 24px;
+  opacity: 0.9;
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+  z-index: 2;
+}
+.yt-lazy:hover .yt-play-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgba(255, 0, 0, 1);
+}
+.yt-lazy:focus-visible {
+  outline: 3px solid #ff4d00;
+  outline-offset: 2px;
+}
+.yt-lazy.yt-active { padding-bottom: 56.25%; }
+
+/* ===== Library pagination ===== */
+.library-pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem 0 2rem;
+  padding: 1.5rem 0;
+}
+.library-pagination .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.library-pagination .page-link:hover:not(.disabled):not(.active) {
+  background: rgba(255, 77, 0, 0.1);
+  border-color: #ff4d00;
+  color: #ff4d00;
+}
+.library-pagination .page-link.active {
+  background: #ff4d00;
+  border-color: #ff4d00;
+  color: #000;
+  font-weight: 700;
+}
+.library-pagination .page-link.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ===== Library intro & stats ===== */
+.dj-library-intro {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.dj-library-intro h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(135deg, #ff4d00 0%, #ff9100 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dj-library-intro p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1.5rem;
+}
+.library-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.library-stats strong {
+  color: #ff4d00;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+.set-permalink {
+  font-size: 0.85rem;
+  color: #ff4d00;
+  text-decoration: none;
+  white-space: nowrap;
+  align-self: center;
+  border: 1px solid rgba(255, 77, 0, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.set-permalink:hover {
+  background: rgba(255, 77, 0, 0.1);
+}

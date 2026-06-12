@@ -138,6 +138,196 @@
     "featured": true
   },
   {
+    "title": "Perros BCN — Summer Closing",
+    "date": "2026-09-19",
+    "time": "23:00",
+    "endTime": "06:00",
+    "venue": "Village Underground BCN",
+    "address": "Carrer del Cobalt 12, L'Hospitalet",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "Perro Jimbo",
+      "VIKk",
+      "Bastard Love",
+      "Sweely",
+      "tINI"
+    ],
+    "genres": [
+      "Minimal",
+      "House"
+    ],
+    "price": "TBA",
+    "url": "https://dice.fm/artist/perro-jimbo-moe7w",
+    "source": "resident-advisor",
+    "status": "approved",
+    "id": "perros-bcn-summer-closing-gwcb"
+  },
+  {
+    "title": "Input:Output — Autumn Series Vol. 1",
+    "date": "2026-10-03",
+    "time": "23:30",
+    "endTime": "06:00",
+    "venue": "INPUT (High BCN)",
+    "address": "Avinguda del Paral·lel, 111",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "Function",
+      "Rrose",
+      "Svreca",
+      "Vera"
+    ],
+    "genres": [
+      "Techno",
+      "Hypnotic Techno"
+    ],
+    "price": "20€",
+    "url": "https://www.residentadvisor.net/clubs/12143",
+    "source": "resident-advisor",
+    "status": "approved",
+    "id": "input-output-autumn-series-vol-1-gwcb"
+  },
+  {
+    "title": "Nitsa Club — Hivern Open",
+    "date": "2026-10-10",
+    "time": "23:59",
+    "endTime": "06:00",
+    "venue": "Nitsa Club",
+    "address": "Carrer de l'Aldana, 1 (Razzmatazz)",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "TBA"
+    ],
+    "genres": [
+      "House",
+      "Techno",
+      "Disco"
+    ],
+    "price": "TBA",
+    "url": "https://www.nitsa.club/",
+    "source": "manual",
+    "status": "approved",
+    "id": "nitsa-club-hivern-open-gwcb"
+  },
+  {
+    "title": "Laut Records Showcase",
+    "date": "2026-10-17",
+    "time": "23:00",
+    "endTime": "06:00",
+    "venue": "Alta Fidelitat Club",
+    "address": "Carrer de l'Hospital, 91",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "Aleksi Perälä",
+      "Caterina Barbieri",
+      "Vessel"
+    ],
+    "genres": [
+      "Experimental",
+      "Ambient",
+      "IDM"
+    ],
+    "price": "18€",
+    "url": "https://www.altafidelitatclub.com/",
+    "source": "manual",
+    "status": "approved",
+    "id": "laut-records-showcase-gwcb"
+  },
+  {
+    "title": "AudioDias — Closing Party",
+    "date": "2026-11-07",
+    "time": "16:00",
+    "endTime": "02:00",
+    "venue": "AudioDias HQ",
+    "address": "Carrer de Leiva, 53",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "TBA"
+    ],
+    "genres": [
+      "House",
+      "Disco"
+    ],
+    "price": "TBA",
+    "url": "https://www.audiodias.com/",
+    "source": "audiodias",
+    "status": "approved",
+    "id": "audiodias-closing-party-gwcb"
+  },
+  {
+    "title": "Les Enfants — Birthday Bash",
+    "date": "2026-11-21",
+    "time": "23:00",
+    "endTime": "07:00",
+    "venue": "Les Enfants",
+    "address": "Carrer de la Marina, 173",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "TBA"
+    ],
+    "genres": [
+      "Techno",
+      "Hardgroove"
+    ],
+    "price": "TBA",
+    "url": "https://lesenfants.bcn/",
+    "source": "lesenfants",
+    "status": "approved",
+    "id": "les-enfants-birthday-bash-gwcb"
+  },
+  {
+    "title": "Perros BCN — Winter Series",
+    "date": "2026-12-05",
+    "time": "23:00",
+    "endTime": "06:00",
+    "venue": "Village Underground BCN",
+    "address": "Carrer del Cobalt 12, L'Hospitalet",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "Perro Jimbo",
+      "VIKk",
+      "Moaad BKR"
+    ],
+    "genres": [
+      "Minimal",
+      "House"
+    ],
+    "price": "TBA",
+    "url": "https://dice.fm/artist/perro-jimbo-moe7w",
+    "source": "resident-advisor",
+    "status": "approved",
+    "id": "perros-bcn-winter-series-gwcb"
+  },
+  {
+    "title": "NYE 2027 — 3TRES6 All Night Long",
+    "date": "2026-12-31",
+    "time": "23:00",
+    "endTime": "08:00",
+    "venue": "TBA",
+    "city": "Barcelona",
+    "country": "ES",
+    "djs": [
+      "Perro Jimbo",
+      "VIKk"
+    ],
+    "genres": [
+      "House",
+      "Techno",
+      "Disco"
+    ],
+    "price": "TBA",
+    "url": "https://dice.fm/artist/perro-jimbo-moe7w",
+    "source": "manual",
+    "status": "approved",
+    "id": "nye-2027-3tres6-all-night-long-gwcb"
+  },
+  {
     "id": "sunday-sunday-cdmx",
     "title": "Sunday Sunday",
     "date": "weekly",
