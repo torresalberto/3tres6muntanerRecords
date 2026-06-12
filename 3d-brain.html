@@ -1302,21 +1302,21 @@
           g.style.transition = 'opacity 0.3s';
 
           const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          const r = Math.max(5, n.connections * 2.5 + 5);
+          const r = 3 + Math.min(5, n.trackConnections * 0.15);
           circle.setAttribute('r', r);
           circle.setAttribute('fill', n.color);
-          circle.setAttribute('stroke', n.connections > 0 ? '#fff' : 'rgba(255,255,255,0.2)');
-          circle.setAttribute('stroke-width', n.connections > 0 ? 2 : 1);
-          circle.setAttribute('filter', n.connections > 0 ? 'url(#glow)' : '');
+          circle.setAttribute('stroke', n.trackConnections > 0 ? '#fff' : 'rgba(255,255,255,0.2)');
+          circle.setAttribute('stroke-width', n.trackConnections > 0 ? 2 : 1);
+          circle.setAttribute('filter', n.trackConnections > 0 ? 'url(#glow)' : '');
           circle.style.transition = 'r 0.3s, stroke-width 0.3s, opacity 0.3s';
 
           const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
           label.textContent = n.name;
           label.setAttribute('fill', '#fff');
-          label.setAttribute('font-size', n.connections > 0 ? '10px' : '9px');
-          label.setAttribute('font-weight', n.connections > 0 ? '600' : '400');
+          label.setAttribute('font-size', n.trackConnections > 0 ? '10px' : '9px');
+          label.setAttribute('font-weight', n.trackConnections > 0 ? '600' : '400');
           label.setAttribute('font-family', 'Space Grotesk, sans-serif');
-          label.setAttribute('dy', r + 12);
+          label.setAttribute('dy', r + 10);
           label.setAttribute('text-anchor', 'middle');
           label.style.pointerEvents = 'none';
           label.style.transition = 'opacity 0.3s';
@@ -1542,9 +1542,10 @@
           sorted.forEach((ne) => {
             const n = ne.data;
             const s = n.scale;
-            // Use trackConnections (not connections) so artist bridges don't inflate node size
+            // Use trackConnections (not connections) so artist bridges don't inflate node size.
+            // Cap at r=8 max — the design relies on small uniform dots, not huge bubbles.
             const connCount = n.trackConnections;
-            const r = Math.max(5, connCount * 2.5 + 5) * s;
+            const r = (3 + Math.min(5, connCount * 0.15)) * s;
             const isActive = !activeIds || activeIds.has(n.id);
             const isHovered = n.id === hoveredId;
             const isSelected = n.id === selectedId;
@@ -1553,7 +1554,7 @@
             ne.circle.setAttribute('r', r / s);
             ne.label.setAttribute('x', n.x2);
             ne.label.setAttribute('y', n.y2);
-            ne.label.setAttribute('dy', r + 12 * s);
+            ne.label.setAttribute('dy', r + 10 * s);
             ne.label.setAttribute('font-size', (connCount > 0 ? 10 : 9) * s + 'px');
 
             // Z-occlusion combined with interaction state
@@ -1564,11 +1565,11 @@
               zOpacity * (isActive ? (isHovered || isSelected ? 1 : 0.7) : 0);
 
             if (isHovered || isSelected) {
-              ne.circle.setAttribute('r', Math.max(8, connCount * 3 + 8));
+              ne.circle.setAttribute('r', Math.max(7, 3 + connCount * 0.3));
               ne.circle.setAttribute('filter', 'url(#glow-strong)');
               ne.circle.setAttribute('stroke-width', 3);
             } else {
-              ne.circle.setAttribute('r', Math.max(5, connCount * 2.5 + 5));
+              ne.circle.setAttribute('r', 3 + Math.min(5, connCount * 0.15));
               ne.circle.setAttribute('filter', connCount > 0 ? 'url(#glow)' : '');
               ne.circle.setAttribute('stroke-width', connCount > 0 ? 2 : 1);
             }
