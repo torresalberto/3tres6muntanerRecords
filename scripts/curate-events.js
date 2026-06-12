@@ -13,13 +13,39 @@
  *   node scripts/curate-events.js export-pending          # dump localStorage-style pending events
  *
  * Source scrapers (scripts/curate-events.js refresh):
- *   - Instagram: @3tresrecords (manual paste for now; IG API requires business account)
+ *   - Instagram: target accounts to monitor (manual paste for now; IG API requires business account)
+ *       Barcelona artists:    @perro_jimbo, @thomas_kick, @oblicuos_party
+ *       Barcelona producers:  @audiodice_bcn (AudioDyce), @sonido_alta_fidelidad
+ *       Mexico venues:        @bucifame, @sundaysunday.mx
  *   - AudioDias: https://www.audiodias.com/  (live HTML scrape; selectors in scrapeAudioDias)
  *   - Alta Fidelitat Club: https://www.altafidelitatclub.com/  (live HTML scrape)
  *   - Les Enfants: https://lesenfants.bcn/  (live HTML scrape)
+ *   - Bucifame (MX): https://www.bucifame.com/  (live HTML scrape; selectors in scrapeBucifame)
  *
  * Each scraper returns [] on failure (network/selector mismatch) so refresh is safe to run.
+ *
+ * INSTAGRAM_TARGETS — list of accounts to follow for event research:
  */
+const INSTAGRAM_TARGETS = {
+  barcelona: {
+    artists: [
+      { handle: '@perro_jimbo',     name: 'Perro Jimbo',     notes: 'Resident @ Chez Perros / Perros OFF' },
+      { handle: '@thomas_kick',     name: 'Thomas Kick',     notes: 'Tech-house / electro producer' },
+      { handle: '@oblicuos_party',  name: 'Oblicuos Party',  notes: 'Event series promoter' },
+    ],
+    producers: [
+      { handle: '@audiodice_bcn',           name: 'AudioDyce',            notes: 'Event producer' },
+      { handle: '@sonido_alta_fidelidad',   name: 'Sonido Alta Fidelidad', notes: 'Event producer' },
+    ],
+  },
+  mexico: {
+    venues: [
+      { handle: '@bucifame',         name: 'Bucifame',     notes: 'Mexico City venue' },
+      { handle: '@sundaysunday.mx',  name: 'Sunday Sunday', notes: 'Recurring Sunday party, CDMX' },
+    ],
+  },
+};
+// (end INSTAGRAM_TARGETS)
 
 const fs = require('fs');
 const path = require('path');
@@ -307,6 +333,31 @@ async function scrapeLesEnfants() {
   }
 }
 
+async function scrapeBucifame() {
+  // Mexico City venue — https://www.bucifame.com/
+  try {
+    const html = await fetchText('https://www.bucifame.com/');
+    const eventBlocks = html.match(/<article[\s\S]*?<\/article>/gi) || html.match(/<div[^>]*class="[^"]*event[^"]*"[\s\S]*?<\/div>\s*<\/div>/gi) || [];
+    return eventBlocks.slice(0, 10).map((block, i) => ({
+      id: `bucifame-${i}-${Date.now().toString(36)}`,
+      title: (block.match(/<h[23][^>]*>(.*?)<\/h[23]>/i) || [])[1]?.replace(/<[^>]+>/g, '').trim() || 'Bucifame Event',
+      date: 'TBA',
+      venue: 'Bucifame',
+      city: 'Ciudad de México',
+      country: 'MX',
+      djs: [],
+      genres: ['House', 'Techno'],
+      price: 'TBA',
+      url: 'https://www.bucifame.com/',
+      source: 'bucifame',
+      status: 'pending',
+    }));
+  } catch (e) {
+    console.warn(`  [Bucifame] skipped: ${e.message}`);
+    return [];
+  }
+}
+
 async function scrapeInstagram() {
   // Instagram requires auth. Manual workflow:
   //   1. Open @3tresrecords, copy event posts
@@ -317,7 +368,7 @@ async function scrapeInstagram() {
 
 async function cmdRefresh() {
   console.log('Pulling from sources...\n');
-  const sources = [scrapeAudioDias, scrapeAltaFidelitat, scrapeLesEnfants, scrapeInstagram];
+  const sources = [scrapeAudioDias, scrapeAltaFidelitat, scrapeLesEnfants, scrapeBucifame, scrapeInstagram];
   const allNew = [];
   for (const src of sources) {
     try {
@@ -365,6 +416,22 @@ function cmdExportPending() {
   console.log(`Wrote ${pending.length} pending events to ${out}`);
 }
 
+function cmdTargets() {
+  console.log('\n=== Instagram Targets (event research) ===\n');
+  for (const [region, groups] of Object.entries(INSTAGRAM_TARGETS)) {
+    console.log(`[${region.toUpperCase()}]`);
+    for (const [type, list] of Object.entries(groups)) {
+      console.log(`  ${type}:`);
+      for (const t of list) {
+        console.log(`    ${t.handle.padEnd(28)} ${t.name.padEnd(28)} ${t.notes}`);
+      }
+    }
+    console.log();
+  }
+  console.log('Workflow: open each handle in browser, copy event posts, then run:');
+  console.log('  node scripts/curate-events.js add ig-batch.json');
+}
+
 // ----------------------------------------------------------------------------
 // Main
 // ----------------------------------------------------------------------------
@@ -380,6 +447,7 @@ function main() {
     case 'dedupe':       return cmdDedupe();
     case 'refresh':      return cmdRefresh();
     case 'export-pending': return cmdExportPending();
+    case 'targets':      return cmdTargets();
     default:
       console.log(`Usage: node scripts/curate-events.js <command> [args]
 
@@ -390,8 +458,9 @@ Commands:
   approve <id>            Change status pending -> approved
   validate                Validate all events
   dedupe                  Remove duplicate events
-  refresh                 Pull from scrapers (AudioDias, Alta Fidelitat, Les Enfants, IG)
-  export-pending          Dump pending.json to scripts/.tmp/`);
+  refresh                 Pull from scrapers (AudioDias, Alta Fidelitat, Les Enfants, Bucifame, IG)
+  export-pending          Dump pending.json to scripts/.tmp/
+  targets                 List Instagram accounts to monitor for event research`);
   }
 }
 

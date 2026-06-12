@@ -12,7 +12,7 @@ const TRACKLISTS = {
         "venue": "CLR Podcast",
         "date": "2014-12-29",
         "duration": "",
-        "youtube": "",
+        "youtube": "zcsiplkf1KA",
         "views": 0,
         "genre": [],
         "tracks_identified": 14,
@@ -103,7 +103,7 @@ const TRACKLISTS = {
         "venue": "ADE, Amsterdam",
         "date": "2012-10-18",
         "duration": "",
-        "youtube": "",
+        "youtube": "yANX378KYkQ",
         "views": 0,
         "genre": [],
         "tracks_identified": 7,
@@ -276,7 +276,7 @@ const TRACKLISTS = {
         "venue": "Sugar Mountain, Melbourne",
         "date": "2025-01-18",
         "duration": "",
-        "youtube": "",
+        "youtube": "FvtjyRHN-hk",
         "views": 0,
         "genre": [],
         "tracks_identified": 12,
@@ -403,7 +403,7 @@ const TRACKLISTS = {
         "venue": "Dekmantel Festival, Amsterdam",
         "date": "2015-07-31",
         "duration": "",
-        "youtube": "",
+        "youtube": "erAR5S0mBsU",
         "views": 0,
         "genre": [],
         "tracks_identified": 15,
@@ -575,7 +575,7 @@ const TRACKLISTS = {
         "venue": "",
         "date": "",
         "duration": "",
-        "youtube": "",
+        "youtube": "ETn1ZyMB4L4",
         "views": 0,
         "genre": [],
         "tracks_identified": 8,
@@ -985,119 +985,6 @@ const TRACKLISTS = {
             "title": "Unknown Track"
           }
         ]
-      },
-      {
-        "id": "chaos-in-the-cbd-br-glitch-2022",
-        "title": "Boiler Room x Glitch Festival 2022",
-        "venue": "Glitch Festival, Malta",
-        "date": "2022-08-15",
-        "duration": "57:50",
-        "youtube": "gArS5VA3Vxk",
-        "views": 328881,
-        "genre": [
-          "Deep House",
-          "Afro House",
-          "Acid House"
-        ],
-        "tracks_identified": 14,
-        "tracks_total": 20,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "00:00",
-            "artist": "Stephanie Cooke",
-            "title": "Here With My Best Friend (Louie Vega Drumz)",
-            "label": "Nite Grooves"
-          },
-          {
-            "time": "03:00",
-            "artist": "DJ Duke",
-            "title": "Tribal Trance (Tribal Mix)",
-            "label": "Power"
-          },
-          {
-            "time": "06:00",
-            "artist": "Modal",
-            "title": "Boy (Girl (Boy Girl)",
-            "label": "Sounds."
-          },
-          {
-            "time": "11:00",
-            "artist": "Alec Wizz",
-            "title": "Drummin'",
-            "label": "ADA UK"
-          },
-          {
-            "time": "13:00",
-            "artist": "The Absolute Family",
-            "title": "Snaky Way",
-            "label": "Adult Only"
-          },
-          {
-            "time": "17:00",
-            "artist": "Unknown",
-            "title": "ID",
-            "note": "ID"
-          },
-          {
-            "time": "20:00",
-            "artist": "Didier Sinclair & DJ Chris Pi",
-            "title": "Groove 2 Me"
-          },
-          {
-            "time": "23:00",
-            "artist": "Circulation",
-            "title": "Orange (Mix A)"
-          },
-          {
-            "time": "26:00",
-            "artist": "Unknown",
-            "title": "ID",
-            "note": "ID"
-          },
-          {
-            "time": "34:00",
-            "artist": "Jerome",
-            "title": "G-Birth",
-            "label": "Music Man"
-          },
-          {
-            "time": "41:00",
-            "artist": "A Jackin' Phreak",
-            "title": "Raw Jackin'",
-            "label": "Brique Rouge"
-          },
-          {
-            "time": "44:00",
-            "artist": "Unknown",
-            "title": "ID",
-            "note": "ID"
-          },
-          {
-            "time": "47:00",
-            "artist": "Olav Basoski",
-            "title": "Get Over",
-            "label": "Armada"
-          },
-          {
-            "time": "50:00",
-            "artist": "Samuel L. Session",
-            "title": "Danses D'Afrique",
-            "label": "SLS"
-          },
-          {
-            "time": "54:00",
-            "artist": "R-Play",
-            "title": "Mojito",
-            "label": "Mix Trax"
-          },
-          {
-            "time": "55:00",
-            "artist": "Devilfish",
-            "title": "Manalive",
-            "label": "Bush"
-          }
-        ]
       }
     ]
   },
@@ -1180,7 +1067,7 @@ const TRACKLISTS = {
         "venue": "Cercle Festival",
         "date": "2024-05-25",
         "duration": "",
-        "youtube": "",
+        "youtube": "8ClF-beNXII",
         "views": 0,
         "genre": [],
         "tracks_identified": 10,
@@ -1318,7 +1205,7 @@ const TRACKLISTS = {
         "venue": "The Lot Radio, New York",
         "date": "2023-05-26",
         "duration": "",
-        "youtube": "",
+        "youtube": "DBxwFhjlYow",
         "views": 0,
         "genre": [],
         "tracks_identified": 6,
@@ -2670,7 +2557,7 @@ const TRACKLISTS = {
         "venue": "Boiler Room, London",
         "date": "2015-05-14",
         "duration": "",
-        "youtube": "",
+        "youtube": "s_Bn6FlvflM",
         "views": 0,
         "genre": [],
         "tracks_identified": 9,
@@ -3158,7 +3045,7 @@ const TRACKLISTS = {
         "venue": "HÖR, Berlin",
         "date": "2023-01-20",
         "duration": "",
-        "youtube": "",
+        "youtube": "QltgvSxi924",
         "views": 0,
         "genre": [],
         "tracks_identified": 8,
@@ -3219,7 +3106,7 @@ const TRACKLISTS = {
         "venue": "Paloma, Berlin",
         "date": "2023-09-01",
         "duration": "",
-        "youtube": "",
+        "youtube": "QltgvSxi924",
         "views": 0,
         "genre": [],
         "tracks_identified": 18,
@@ -3621,7 +3508,7 @@ const TRACKLISTS = {
         "venue": "Boiler Room, New York City",
         "date": "2022-09-23",
         "duration": "",
-        "youtube": "",
+        "youtube": "K6XiDub2Wc4",
         "views": 0,
         "genre": [],
         "tracks_identified": 29,
@@ -3782,87 +3669,6 @@ const TRACKLISTS = {
     "artist_id": "kettama",
     "sets": [
       {
-        "id": "kettama-br-london-2025",
-        "title": "Boiler Room London 2025",
-        "venue": "Boiler Room, London, UK",
-        "date": "2025-07-31",
-        "duration": "57:23",
-        "youtube": "JUDUC87VuPU",
-        "views": 1300000,
-        "genre": [
-          "House",
-          "Bass",
-          "Garage",
-          "UKG"
-        ],
-        "tracks_identified": 12,
-        "tracks_total": 12,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "00:24",
-            "artist": "Soul Mass Transit System",
-            "title": "Jump (Rushing Mix)"
-          },
-          {
-            "time": "06:00",
-            "artist": "Sidney Charles & BUGS",
-            "title": "Trip Advisor (Rhythm, Snare, Bass) [2025 Warp Mix]"
-          },
-          {
-            "time": "09:12",
-            "artist": "Calvin Harris & Clementine Douglas",
-            "title": "Blessings (KETTAMA Remix)"
-          },
-          {
-            "time": "14:12",
-            "artist": "FYAH",
-            "title": "RealSpill"
-          },
-          {
-            "time": "15:36",
-            "artist": "Sir Spyro",
-            "title": "Topper Top (Feat. Teddy Bruckshot, Lady Chann & Killa P)"
-          },
-          {
-            "time": "19:36",
-            "artist": "2 Unlimited",
-            "title": "No Limit"
-          },
-          {
-            "time": "22:48",
-            "artist": "KETTAMA, DJ HEARTSTRING & KLP",
-            "title": "If U Want My Heart (Ft. KLP)"
-          },
-          {
-            "time": "29:48",
-            "artist": "Unknown",
-            "title": "ID",
-            "note": "ID"
-          },
-          {
-            "time": "40:24",
-            "artist": "GlennRoy",
-            "title": "Carbon Spaghetti"
-          },
-          {
-            "time": "42:24",
-            "artist": "Paqué",
-            "title": "Are You Ready?"
-          },
-          {
-            "time": "45:24",
-            "artist": "KETTAMA & Interplanetary Criminal",
-            "title": "Yosemite"
-          },
-          {
-            "time": "51:36",
-            "artist": "KETTAMA & Clouds",
-            "title": "Sort It Out"
-          }
-        ]
-      },
-      {
         "id": "kettama-br-london",
         "title": "Boiler Room London 2025",
         "venue": "Boiler Room, London",
@@ -3954,7 +3760,7 @@ const TRACKLISTS = {
         "venue": "",
         "date": "",
         "duration": "",
-        "youtube": "",
+        "youtube": "osS2zsW8mLk",
         "views": 0,
         "genre": [],
         "tracks_identified": 5,
@@ -4237,7 +4043,7 @@ const TRACKLISTS = {
         "venue": "Boiler Room, Berlin",
         "date": "2014-09-17",
         "duration": "",
-        "youtube": "",
+        "youtube": "5vHRUsP20dQ",
         "views": 16600000,
         "genre": [],
         "tracks_identified": 8,
@@ -4499,7 +4305,7 @@ const TRACKLISTS = {
         "venue": "",
         "date": "",
         "duration": "",
-        "youtube": "",
+        "youtube": "YNPGycZY8TI",
         "views": 0,
         "genre": [],
         "tracks_identified": 6,
@@ -4621,7 +4427,7 @@ const TRACKLISTS = {
         "venue": "Renaissance Rooms, London",
         "date": "2010-03-04",
         "duration": "",
-        "youtube": "",
+        "youtube": "Gm_PzInGTCA",
         "views": 0,
         "genre": [],
         "tracks_identified": 13,
@@ -5307,7 +5113,7 @@ const TRACKLISTS = {
         "venue": "Boiler Room, Mexico City",
         "date": "2014-03-20",
         "duration": "",
-        "youtube": "",
+        "youtube": "gjMBua_1J4Y",
         "views": 0,
         "genre": [],
         "tracks_identified": 6,
@@ -5520,7 +5326,7 @@ const TRACKLISTS = {
         "venue": "",
         "date": "",
         "duration": "",
-        "youtube": "",
+        "youtube": "I1mhJjxtJx4",
         "views": 0,
         "genre": [],
         "tracks_identified": 5,
@@ -5637,6 +5443,486 @@ const TRACKLISTS = {
             "time": "",
             "artist": "Avalon Emerson",
             "title": "Entombed in Ice (Young Marco remix)"
+          }
+        ]
+      }
+    ]
+  },
+  "quest": {
+    "artist": "Quest",
+    "artist_id": "quest",
+    "sets": [
+      {
+        "id": "quest-mixmag-lab-rome",
+        "title": "Quest @ Mixmag Lab Rome",
+        "venue": "Mixmag Lab Rome (A|X Armani Exchange)",
+        "date": "2019-03-15",
+        "duration": "",
+        "youtube": "pXvHkSLxCoA",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 13,
+        "tracks_total": 13,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Donato Dozzy",
+            "title": "Gol"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Moritz Von Oswald",
+            "title": "Watamu Beach Rework"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Split Your Infinities"
+          },
+          {
+            "time": "",
+            "artist": "Aphex Twin",
+            "title": "Xmas_Evet1 N"
+          },
+          {
+            "time": "",
+            "artist": "Aleksi Perala",
+            "title": "UK74R1512110"
+          },
+          {
+            "time": "",
+            "artist": "Function",
+            "title": "Against The Wall"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Problems"
+          },
+          {
+            "time": "",
+            "artist": "The Field",
+            "title": "Over The Ice"
+          },
+          {
+            "time": "",
+            "artist": "Four Tet",
+            "title": "School"
+          }
+        ]
+      },
+      {
+        "id": "quest-section-2026",
+        "title": "Quest @ SECTION. (Vinyl Set)",
+        "venue": "SECTION., Rome",
+        "date": "2026-02-08",
+        "duration": "",
+        "youtube": "B2pacpcPOAU",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 14,
+        "tracks_total": 14,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Split Your Infinities"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug #6"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Moodymann",
+            "title": "Got 2 Make It"
+          },
+          {
+            "time": "",
+            "artist": "Levon Vincent",
+            "title": "Double Joint (Part 2)"
+          },
+          {
+            "time": "",
+            "artist": "Stephan Bodzin",
+            "title": "Lx (Marc Romboy Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Monoloc",
+            "title": "Shame"
+          },
+          {
+            "time": "",
+            "artist": "Surgeon",
+            "title": "Bite (Killa Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Mark Broom",
+            "title": "909 Workout"
+          },
+          {
+            "time": "",
+            "artist": "Shed",
+            "title": "Shot Rhythm"
+          },
+          {
+            "time": "",
+            "artist": "Tale Of Us",
+            "title": "Another Earth"
+          }
+        ]
+      }
+    ]
+  },
+  "donato-dozzy": {
+    "artist": "Donato Dozzy",
+    "artist_id": "donato-dozzy",
+    "sets": [
+      {
+        "id": "donato-dozzy-br-rome",
+        "title": "Boiler Room: Donato Dozzy",
+        "venue": "Boiler Room, Rome",
+        "date": "2015-11-12",
+        "duration": "",
+        "youtube": "Dhzp6esYfeY",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 12,
+        "tracks_total": 12,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Donato Dozzy",
+            "title": "Gol"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug #6"
+          },
+          {
+            "time": "",
+            "artist": "Function",
+            "title": "Against The Wall"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Split Your Infinities"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Aleksi Perala",
+            "title": "UK74R1512110"
+          },
+          {
+            "time": "",
+            "artist": "Moritz Von Oswald",
+            "title": "Watamu Beach Rework"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Octave One",
+            "title": "Blackwater"
+          },
+          {
+            "time": "",
+            "artist": "Levon Vincent",
+            "title": "Double Joint (Part 2)"
+          }
+        ]
+      }
+    ]
+  },
+  "marcel-dettmann": {
+    "artist": "Marcel Dettmann",
+    "artist_id": "marcel-dettmann",
+    "sets": [
+      {
+        "id": "marcel-dettmann-br-berlin",
+        "title": "Boiler Room Berlin: Marcel Dettmann",
+        "venue": "Boiler Room, Berlin",
+        "date": "2014-05-22",
+        "duration": "",
+        "youtube": "ic7P_qWkdE8",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 12,
+        "tracks_total": 12,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Marcel Dettmann",
+            "title": "Shena (T++ Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Shed",
+            "title": "Shot Rhythm"
+          },
+          {
+            "time": "",
+            "artist": "Surgeon",
+            "title": "Bite (Killa Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Mark Broom",
+            "title": "909 Workout"
+          },
+          {
+            "time": "",
+            "artist": "Mark Broom",
+            "title": "Funky Sounds"
+          },
+          {
+            "time": "",
+            "artist": "Function",
+            "title": "Against The Wall"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Octave One",
+            "title": "Blackwater"
+          },
+          {
+            "time": "",
+            "artist": "Speedy J",
+            "title": "The FUN Equations"
+          },
+          {
+            "time": "",
+            "artist": "Model 500",
+            "title": "Neptune"
+          },
+          {
+            "time": "",
+            "artist": "Kraftwerk",
+            "title": "Aerodynamik"
+          },
+          {
+            "time": "",
+            "artist": "Kraftwerk",
+            "title": "Expo 2000"
+          }
+        ]
+      }
+    ]
+  },
+  "stephan-bodzin": {
+    "artist": "Stephan Bodzin",
+    "artist_id": "stephan-bodzin",
+    "sets": [
+      {
+        "id": "stephan-bodzin-cercle-piz-gloria",
+        "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+        "venue": "Piz Gloria, Interlaken, Switzerland",
+        "date": "2018-07-21",
+        "duration": "",
+        "youtube": "xF_QkfZI1mM",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 11,
+        "tracks_total": 11,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Stephan Bodzin",
+            "title": "Lx (Marc Romboy Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Tale Of Us",
+            "title": "Another Earth"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Problems"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Fast Forward"
+          },
+          {
+            "time": "",
+            "artist": "The Field",
+            "title": "Over The Ice"
+          },
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Transmisiones Ferox"
+          },
+          {
+            "time": "",
+            "artist": "Four Tet",
+            "title": "School"
+          },
+          {
+            "time": "",
+            "artist": "Donato Dozzy",
+            "title": "Gol"
+          },
+          {
+            "time": "",
+            "artist": "Red Axes",
+            "title": "Too Late To Samba"
+          }
+        ]
+      }
+    ]
+  },
+  "recondite": {
+    "artist": "Recondite",
+    "artist_id": "recondite",
+    "sets": [
+      {
+        "id": "recondite-cercle-bernay",
+        "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+        "venue": "Abbatiale de Bernay, Normandy, France",
+        "date": "2017-08-18",
+        "duration": "",
+        "youtube": "q4ic2xA8pys",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 10,
+        "tracks_total": 10,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Problems"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Fast Forward"
+          },
+          {
+            "time": "",
+            "artist": "Stephan Bodzin",
+            "title": "Lx (Marc Romboy Remix)"
+          },
+          {
+            "time": "",
+            "artist": "The Field",
+            "title": "Over The Ice"
+          },
+          {
+            "time": "",
+            "artist": "Tale Of Us",
+            "title": "Another Earth"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Four Tet",
+            "title": "School"
+          },
+          {
+            "time": "",
+            "artist": "Moodymann",
+            "title": "J.A.N."
           }
         ]
       }

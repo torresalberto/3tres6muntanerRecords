@@ -4,13 +4,15 @@ const EventCalendar = {
   monthlyEvents: [],
 
   MONTHS: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
+  MONTHS_FULL: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
   DAYS: ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB', 'DOM'],
   WEEKDAY_EN: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 
   init: async function() {
     await this.fetchEvents();
-    this.renderUpcoming();
     this.renderCalendar();
+    this.bindDayClicks();
+    this.bindModalClose();
   },
 
   fetchEvents: async function() {
@@ -26,67 +28,19 @@ const EventCalendar = {
     }
   },
 
-  getUpcomingEvents: function() {
-    const today = new Date();
-    return this.events
-      .filter(e => {
-        if (e.recurring) return true;
-        return new Date(e.date) >= new Date(today.toDateString());
-      })
-      .sort((a, b) => {
-        if (a.recurring && b.recurring) return 0;
-        if (a.recurring) return 1;
-        if (b.recurring) return -1;
-        return new Date(a.date) - new Date(b.date);
-      })
-      .slice(0, 6);
-  },
-
-  renderUpcoming: function() {
-    const container = document.getElementById('upcomingEvents');
-    if (!container) return;
-
-    const events = this.getUpcomingEvents();
-    if (events.length === 0) {
-      container.innerHTML = '<div class="no-events-msg">No upcoming events yet</div>';
-      return;
-    }
-
-    container.innerHTML = events.map(e => {
-      const djList = e.djs && e.djs.length > 0
-        ? e.djs.slice(0, 3).join(', ') + (e.djs.length > 3 ? ' +' + (e.djs.length - 3) : '')
-        : 'TBA';
-
-      let dateStr = '';
+  // Return all events that fall on a specific date string (YYYY-MM-DD) in the current month
+  getEventsForDate: function(dateStr) {
+    return this.events.filter(e => {
       if (e.recurring) {
-        dateStr = '<span class="event-badge weekly-badge">C/ DOM</span>';
-      } else {
-        const d = new Date(e.date);
-        dateStr = `<span class="event-date-num">${d.getDate()}</span><span class="event-date-month">${this.MONTHS[d.getMonth()]}</span>`;
+        if (Array.isArray(e.recurringDays) && e.recurringDays.length) {
+          const d = new Date(dateStr + 'T00:00:00');
+          const dayName = this.WEEKDAY_EN[d.getDay()];
+          return e.recurringDays.includes(dayName);
+        }
+        return false;
       }
-
-      const priceTag = e.price && e.price.toLowerCase().includes('free')
-        ? '<span class="price-tag free-tag">GRATIS</span>'
-        : e.price !== 'TBA' ? `<span class="price-tag paid-tag">${e.price}</span>` : '';
-
-      return `
-        <div class="upcoming-event-card">
-          <div class="event-date-badge">${dateStr}</div>
-          <div class="event-info">
-            <div class="event-card-header">
-              <h4>${e.title}</h4>
-              ${priceTag}
-            </div>
-            <div class="event-meta">
-              <span>📍 ${e.venue}, ${e.city}</span>
-              <span>🎧 ${djList}</span>
-              ${e.time ? `<span>⏱ ${e.time}${e.endTime && e.endTime !== 'late' ? ' - ' + e.endTime : ''}</span>` : ''}
-            </div>
-            ${e.url ? `<a href="${e.url}" target="_blank" rel="noopener" class="event-link">Info / Tickets →</a>` : ''}
-          </div>
-        </div>
-      `;
-    }).join('');
+      return e.date === dateStr;
+    });
   },
 
   renderCalendar: function() {
@@ -111,22 +65,12 @@ const EventCalendar = {
     }
     for (let day = 1; day <= daysInMonth; day++) {
       const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      const dayDate = new Date(year, month, day);
-      // getDay: Sun=0..Sat=6; index into WEEKDAY_EN directly for English name match
-      const dayNameEn = this.WEEKDAY_EN[dayDate.getDay()];
-      const dayEvents = this.events.filter(e => {
-        if (e.recurring) {
-          if (Array.isArray(e.recurringDays) && e.recurringDays.length) {
-            return e.recurringDays.includes(dayNameEn);
-          }
-          return false; // recurring but no recurringDays = no grid match
-        }
-        return e.date === dateStr;
-      });
+      const dayEvents = this.getEventsForDate(dateStr);
       const hasEvents = dayEvents.length > 0;
       const isToday = day === now.getDate() && month === now.getMonth() && year === now.getFullYear();
       const todayClass = isToday ? 'today' : '';
       const eventClass = hasEvents ? 'has-events' : '';
+      const clickable = hasEvents ? 'clickable' : '';
 
       let eventHtml = '';
       if (hasEvents) {
@@ -137,14 +81,16 @@ const EventCalendar = {
             <div class="calendar-event ${type}-event" title="${e.title}">
               <span class="event-platform ${platformClass}">${e.recurring ? '🔄 C/DOM' : type}</span>
               <span class="event-name">${e.title.length > 20 ? e.title.slice(0, 18) + '...' : e.title}</span>
-              ${e.url ? `<a href="${e.url}" target="_blank" class="event-watch-link">→</a>` : ''}
             </div>
           `;
         }).join('');
+        if (dayEvents.length > 2) {
+          eventHtml += `<div class="calendar-more-events">+${dayEvents.length - 2} más</div>`;
+        }
       }
 
       cells += `
-        <div class="calendar-day ${todayClass} ${eventClass}">
+        <div class="calendar-day ${todayClass} ${eventClass} ${clickable}" data-date="${dateStr}">
           <span class="day-number">${day}</span>
           ${eventHtml}
         </div>
@@ -158,6 +104,102 @@ const EventCalendar = {
       ${header}
       <div class="calendar-body">${cells}</div>
     `;
+  },
+
+  bindDayClicks: function() {
+    const container = document.getElementById('dynamicCalendar');
+    if (!container) return;
+    container.addEventListener('click', (ev) => {
+      const day = ev.target.closest('.calendar-day.clickable');
+      if (!day) return;
+      const dateStr = day.getAttribute('data-date');
+      this.openDayModal(dateStr);
+    });
+  },
+
+  openDayModal: function(dateStr) {
+    const modal = document.getElementById('dayEventsModal');
+    const titleEl = document.getElementById('dayEventsTitle');
+    const listEl = document.getElementById('dayEventsList');
+    if (!modal || !titleEl || !listEl) return;
+
+    const events = this.getEventsForDate(dateStr);
+    if (events.length === 0) return;
+
+    // Format date: "Lunes 16 de Junio, 2026"
+    const d = new Date(dateStr + 'T00:00:00');
+    const wd = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'][d.getDay()];
+    const pretty = `${wd} ${d.getDate()} de ${this.MONTHS_FULL[d.getMonth()]}, ${d.getFullYear()}`;
+    titleEl.textContent = pretty;
+
+    listEl.innerHTML = events.map(e => this.renderEventCard(e)).join('');
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  },
+
+  renderEventCard: function(e) {
+    const djList = e.djs && e.djs.length > 0
+      ? e.djs.map(d => `<span class="dj-pill">${d}</span>`).join('')
+      : '<span class="dj-pill dj-pill-tba">TBA</span>';
+
+    const timeStr = e.time
+      ? `<span>⏱ ${e.time}${e.endTime && e.endTime !== 'late' ? ' – ' + e.endTime : ''}</span>`
+      : '';
+
+    const genresStr = e.genres && e.genres.length > 0
+      ? e.genres.map(g => `<span class="genre-pill">${g}</span>`).join(' ')
+      : '';
+
+    const priceStr = e.price && e.price.toLowerCase().includes('free')
+      ? '<span class="price-tag free-tag">GRATIS</span>'
+      : e.price && e.price !== 'TBA' ? `<span class="price-tag paid-tag">${e.price}</span>` : '';
+
+    const recurringTag = e.recurring
+      ? '<span class="recurring-tag">🔄 Evento recurrente</span>'
+      : '';
+
+    return `
+      <article class="day-event-card">
+        <div class="day-event-header">
+          <h4>${e.title}</h4>
+          ${priceStr}
+        </div>
+        <div class="day-event-meta">
+          <span>📍 <strong>${e.venue}</strong>${e.address ? `, ${e.address}` : ''}</span>
+          <span>🏙 ${e.city}${e.country ? ', ' + e.country : ''}</span>
+          ${timeStr}
+          ${recurringTag}
+        </div>
+        ${genresStr ? `<div class="day-event-genres">${genresStr}</div>` : ''}
+        ${djList ? `<div class="day-event-djs"><span class="djs-label">🎧 Lineup:</span> ${djList}</div>` : ''}
+        <div class="day-event-actions">
+          ${e.url ? `<a href="${e.url}" target="_blank" rel="noopener" class="event-link-primary">Info / Tickets →</a>` : '<span class="no-link-msg">Sin link público</span>'}
+        </div>
+      </article>
+    `;
+  },
+
+  closeDayModal: function() {
+    const modal = document.getElementById('dayEventsModal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  },
+
+  bindModalClose: function() {
+    const modal = document.getElementById('dayEventsModal');
+    const closeBtn = document.getElementById('closeDayEvents');
+    if (!modal) return;
+    if (closeBtn) closeBtn.addEventListener('click', () => this.closeDayModal());
+    modal.addEventListener('click', (ev) => {
+      if (ev.target === modal) this.closeDayModal();
+    });
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') this.closeDayModal();
+    });
   }
 };
 

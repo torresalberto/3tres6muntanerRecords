@@ -332,24 +332,14 @@
 <!-- Weekly Calendar Section -->
        <section class="section calendar-section" id="calendario" aria-label="Calendario de eventos">
        <div class="section-header">
-         <h2>Esta Semana</h2>
-         <span class="section-subtitle">Eventos, Lives y Sets en CDMX</span>
-       </div>
-
-       <!-- Próximos Eventos -->
-       <div class="upcoming-section">
-         <div class="upcoming-header">
-           <h3>Próximos Eventos</h3>
-           <button class="submit-event-btn" id="openEventSubmit">
-             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-             </svg>
-             Promociona tu evento
-           </button>
-         </div>
-         <div class="upcoming-events" id="upcomingEvents">
-           <div class="loading-events">Cargando eventos...</div>
-         </div>
+         <h2>Calendario</h2>
+         <span class="section-subtitle">Eventos, Lives y Sets — Toca un día con eventos para ver detalles</span>
+         <button class="submit-event-btn" id="openEventSubmit" style="margin-top:1rem">
+           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+           </svg>
+           Promociona tu evento
+         </button>
        </div>
 
        <!-- Calendar Mesh -->
@@ -1213,6 +1203,17 @@
 
           <p class="submit-footer-note">Recibimos tu propuesta, la revisamos y si todo est\u00e1 bien la publicamos en el calendario. F\u00e1cil.</p>
         </form>
+      </div>
+    </div>
+
+    <!-- Calendar Day Events Modal -->
+    <div class="modal" id="dayEventsModal" role="dialog" aria-labelledby="dayEventsTitle" aria-hidden="true">
+      <div class="modal-content modal-large" style="max-width: 700px; max-height: 85vh; overflow-y: auto;">
+        <button class="modal-close" id="closeDayEvents" aria-label="Cerrar">×</button>
+        <div style="padding: 2rem;">
+          <h3 id="dayEventsTitle" style="margin-bottom: 1.5rem; color: var(--color-text);">Eventos del día</h3>
+          <div id="dayEventsList"></div>
+        </div>
       </div>
     </div>
 
