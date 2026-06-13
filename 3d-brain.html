@@ -1514,6 +1514,15 @@
         });
 
         // ======== ANIMATION LOOP ========
+        // Pre-compute which labels to show by default (top 8 most-connected DJs).
+        // All other labels only appear on hover/select/filter — prevents overlap with 56 nodes.
+        const topLabelIds = new Set(
+          [...nodes]
+            .sort((a, b) => b.trackConnections - a.trackConnections)
+            .slice(0, 8)
+            .map((n) => n.id)
+        );
+
         function animate() {
           // Smooth rotation
           if (autoRotate) {
@@ -1562,7 +1571,9 @@
             const stateOpacity = isActive ? 1 : 0.1;
             ne.g.style.opacity = zOpacity * stateOpacity;
             ne.label.style.opacity =
-              zOpacity * (isActive ? (isHovered || isSelected ? 1 : 0.7) : 0);
+              zOpacity * (isActive
+                ? (isHovered || isSelected || topLabelIds.has(n.id) ? 1 : 0)
+                : 0);
 
             if (isHovered || isSelected) {
               ne.circle.setAttribute('r', Math.max(7, 3 + connCount * 0.3));
