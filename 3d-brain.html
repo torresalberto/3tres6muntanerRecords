@@ -1167,9 +1167,11 @@
           n.z3 = positions[i].z;
         });
 
-        // Relax: connected nodes attract, all nodes repel
+        // Relax: connected nodes attract, all nodes repel.
+        // No re-projection during relaxation — lets forces find natural
+        // equilibrium. Nodes are normalized to sphere surface once at the end.
         for (let iter = 0; iter < 200; iter++) {
-          // Attraction
+          // Attraction — pull connected nodes toward each other
           links.forEach((l) => {
             const dx = l.target.x3 - l.source.x3;
             const dy = l.target.y3 - l.source.y3;
@@ -1186,7 +1188,7 @@
             l.target.y3 -= fy;
             l.target.z3 -= fz;
           });
-          // Repulsion
+          // Repulsion — push all nodes apart
           for (let i = 0; i < nodes.length; i++) {
             for (let j = i + 1; j < nodes.length; j++) {
               const a = nodes[i],
@@ -1207,14 +1209,14 @@
               b.z3 -= fz;
             }
           }
-          // Re-project to sphere surface
-          nodes.forEach((n) => {
-            const dist = Math.sqrt(n.x3 * n.x3 + n.y3 * n.y3 + n.z3 * n.z3) || 1;
-            n.x3 = (n.x3 / dist) * radius;
-            n.y3 = (n.y3 / dist) * radius;
-            n.z3 = (n.z3 / dist) * radius;
-          });
         }
+        // Normalize to sphere surface once after relaxation settles
+        nodes.forEach((n) => {
+          const dist = Math.sqrt(n.x3 * n.x3 + n.y3 * n.y3 + n.z3 * n.z3) || 1;
+          n.x3 = (n.x3 / dist) * radius;
+          n.y3 = (n.y3 / dist) * radius;
+          n.z3 = (n.z3 / dist) * radius;
+        });
 
         // ======== 3D PROJECTION ========
         let rotX = 0.4,
