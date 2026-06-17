@@ -4824,6 +4824,314 @@
         }
       }
         </style>
+
+      /* ===== 3D Brain page-specific styles (restored) ===== */
+      }
+
+      /* RESET BUTTON */
+      .viz-reset {
+        position: absolute;
+        top: 6rem;
+        right: 1.5rem;
+        z-index: 15;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.2s;
+        backdrop-filter: blur(8px);
+      }
+      .viz-reset:hover {
+        background: rgba(255, 77, 0, 0.15);
+        border-color: #ff4d00;
+        color: #ff4d00;
+      }
+
+      /* CANVAS */
+      #network-container {
+        position: relative;
+        overflow: hidden;
+        cursor: grab;
+        /* Fill viewport above the fold, below fixed header */
+        height: calc(100vh - 80px);
+        flex: none;
+      }
+      #network-container:active {
+        cursor: grabbing;
+      }
+      #network-container svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      /* BACKGROUND GRID */
+      .bg-grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.15;
+        background-image:
+          radial-gradient(circle at 50% 50%, rgba(255, 77, 0, 0.08) 0%, transparent 60%),
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size:
+          100% 100%,
+          60px 60px,
+          60px 60px;
+      }
+
+      /* STATS BAR */
+      .network-stats {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0.6rem 2rem;
+        background: rgba(5, 5, 5, 0.95);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.3);
+        z-index: 10;
+        flex-shrink: 0;
+      }
+      .network-stats strong {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 4px;
+      }
+      .dj-dot {
+        background: #ff4d00;
+      }
+      .conn-dot {
+        background: #00c864;
+      }
+
+      /* INFO PANEL */
+      .network-info {
+        position: fixed;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%) translateX(20px);
+        z-index: 20;
+        background: rgba(12, 12, 12, 0.97);
+        border: 1px solid rgba(255, 77, 0, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem 2rem;
+        width: 380px;
+        max-height: 70vh;
+        overflow-y: auto;
+        backdrop-filter: blur(24px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.4s,
+          transform 0.4s,
+          visibility 0.4s;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      }
+      .network-info.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-50%) translateX(0);
+      }
+      .info-close {
+        position: absolute;
+        top: 0.7rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 1.4rem;
+        cursor: pointer;
+        font-family: inherit;
+        transition: color 0.2s;
+      }
+      .info-close:hover {
+        color: #ff4d00;
+      }
+      .info-name {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        color: #ff4d00;
+      }
+      .info-genre {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.35);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1.2rem;
+      }
+      .info-summary {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .info-group {
+        margin-bottom: 1.2rem;
+      }
+      .info-group-title {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.35);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .info-group-title::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #00c864;
+      }
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0.6rem 0.8rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 10px;
+        font-size: 0.82rem;
+        margin-bottom: 0.4rem;
+        transition: background 0.2s;
+        cursor: pointer;
+      }
+      .info-item:hover {
+        background: rgba(255, 77, 0, 0.08);
+      }
+      .info-track {
+        color: #fff;
+        font-weight: 500;
+        flex: 1;
+        line-height: 1.4;
+      }
+      .info-set {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.3);
+        margin-top: 0.15rem;
+      }
+
+      /* NEW: Track-grouped info panel */
+      .info-track-group {
+        margin-bottom: 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .info-track-header {
+        padding: 1rem 1.2rem;
+        background: linear-gradient(90deg, rgba(255, 77, 0, 0.08), transparent);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .info-track-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.3;
+        margin-bottom: 0.3rem;
+      }
+      .tracklist-badge {
+        color: var(--primary, #ff4d00);
+        font-size: 0.65rem;
+        font-weight: 600;
+        margin-left: 0.3rem;
+      }
+      .info-track-artist {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .info-track-djs {
+        padding: 0.8rem 1.2rem;
+      }
+      .info-track-dj {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .info-track-dj:last-child {
+        border-bottom: none;
+      }
+      .info-dj-name {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        min-width: 120px;
+        flex-shrink: 0;
+      }
+      .info-dj-sets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .info-set-tag {
+        display: inline-block;
+        padding: 0.25rem 0.6rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.3;
+      }
+
+      /* TOOLTIP */
+      .graph-tooltip {
+        position: absolute;
+        padding: 0.5rem 0.8rem;
+        background: rgba(0, 0, 0, 0.92);
+        border: 1px solid rgba(255, 77, 0, 0.3);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 600;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 30;
+        transition: opacity 0.15s;
+        white-space: nowrap;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+      .graph-tooltip.visible {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .network-header {
+          padding: 0.8rem 1rem;
+          gap: 0.8rem;
+          flex-wrap: wrap;
+        }
+        .network-stats {
+          gap: 1rem;
+          font-size: 0.65rem;
+        }
+        .network-info {
+          width: 90%;
+          right: 5%;
+          transform: translateY(-50%) translateX(0);
+          top: 50%;
+        }
+      }
+      /* ===== End 3D Brain styles ===== */
     <!-- Favicon -->
     <link
       rel="icon"
