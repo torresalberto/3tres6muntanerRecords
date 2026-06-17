@@ -40,6 +40,15 @@ jobs:
           if ! node scripts/build-dj-library.js 2>&1; then
             echo "::warning::build-dj-library failed — continuing deploy with old library page"
           fi
+      - name: Build DJ Brain data
+        # Regenerates data/tracklists/tracklists.js, data/djs/cross-references.json,
+        # data/djs/tracks/track-registry.json, data/djs/index.json from the
+        # source-of-truth set JSONs in data/djs/sets/. Without this, the
+        # 3D Brain can show stale data on deploy.
+        run: |
+          if ! node scripts/build-dj-data.js 2>&1; then
+            echo "::warning::build-dj-data failed — continuing deploy with existing compiled data"
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -72,6 +81,11 @@ jobs:
         run: |
           if ! node scripts/build-dj-library.js 2>&1; then
             echo "::warning::build-dj-library failed — continuing deploy with old library page"
+          fi
+      - name: Build DJ Brain data
+        run: |
+          if ! node scripts/build-dj-data.js 2>&1; then
+            echo "::warning::build-dj-data failed — continuing deploy with existing compiled data"
           fi
 
       - name: Install SSH key

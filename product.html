@@ -417,7 +417,7 @@
           <p class="product-price">$950 MXN</p>
 
           <div class="product-actions">
-            <a href="https://www.discogs.com/sell/item/XXXXXX" class="btn-primary" target="_blank">
+            <a id="product-discogs-link" href="#" class="btn-primary" target="_blank" rel="noopener">
               Comprar en Discogs
             </a>
             <button class="btn-secondary" onclick="scrollToAudio()">
@@ -441,7 +441,9 @@
             <div class="audio-player">
               <!-- YouTube embed for the track -->
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                id="product-preview-iframe-secondary"
+                src="about:blank"
+                data-video-id=""
                 title="Audio Preview"
                 allow="
                   accelerometer;
@@ -549,6 +551,22 @@
           });
         });
 
+        // Wire Discogs link + YouTube preview from URL params (?id=...&yt=...)
+        var params = new URLSearchParams(window.location.search);
+        var listingId = params.get('id');
+        var ytId = params.get('yt');
+        var discogsLink = document.getElementById('product-discogs-link');
+        if (discogsLink && listingId && /^\d+$/.test(listingId)) {
+          discogsLink.href = 'https://www.discogs.com/sell/item/' + listingId;
+        } else if (discogsLink) {
+          // Hide the broken buy button if no real listing id was passed
+          discogsLink.style.display = 'none';
+        }
+        var previewIframe = document.getElementById('product-preview-iframe');
+        if (previewIframe && ytId && /^[A-Za-z0-9_-]{6,15}$/.test(ytId)) {
+          previewIframe.src = 'https://www.youtube-nocookie.com/embed/' + ytId;
+        }
+
         // Header scroll effect (idempotent)
         if (!window._productScrollBound) {
           window._productScrollBound = true;
@@ -562,10 +580,21 @@
         document.getElementById('audioSection')?.scrollIntoView({ behavior: 'smooth' });
       };
       initProductPage();
-      if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-        window.Muntaner336.onPageView(function () {
-          if (document.querySelector('.product-thumb')) initProductPage();
-        });
+      // Defer Swup re-init registration until swup-init.js has loaded.
+      var registerSwupHook = function () {
+        if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+          window.Muntaner336.onPageView(function () {
+            if (document.querySelector('.product-thumb')) initProductPage();
+          });
+          return true;
+        }
+        return false;
+      };
+      if (!registerSwupHook()) {
+        var tries = 0;
+        var poll = setInterval(function () {
+          if (registerSwupHook() || ++tries > 40) clearInterval(poll);
+        }, 50);
       }
     </script>
   <!-- Swup: seamless page transitions so the audio player never cuts off -->

@@ -1195,6 +1195,87 @@ const TRACKLISTS = {
       }
     ]
   },
+  "donato-dozzy": {
+    "artist": "Donato Dozzy",
+    "artist_id": "donato-dozzy",
+    "sets": [
+      {
+        "id": "donato-dozzy-br-rome",
+        "title": "Boiler Room: Donato Dozzy",
+        "venue": "Boiler Room, Rome",
+        "date": "2015-11-12",
+        "duration": "",
+        "youtube": "Dhzp6esYfeY",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 12,
+        "tracks_total": 12,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Donato Dozzy",
+            "title": "Gol"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug #6"
+          },
+          {
+            "time": "",
+            "artist": "Function",
+            "title": "Against The Wall"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Split Your Infinities"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Aleksi Perala",
+            "title": "UK74R1512110"
+          },
+          {
+            "time": "",
+            "artist": "Moritz Von Oswald",
+            "title": "Watamu Beach Rework"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Octave One",
+            "title": "Blackwater"
+          },
+          {
+            "time": "",
+            "artist": "Levon Vincent",
+            "title": "Double Joint (Part 2)"
+          }
+        ]
+      }
+    ]
+  },
   "etapp-kyle": {
     "artist": "Etapp Kyle",
     "artist_id": "etapp-kyle",
@@ -4295,6 +4376,87 @@ const TRACKLISTS = {
       }
     ]
   },
+  "marcel-dettmann": {
+    "artist": "Marcel Dettmann",
+    "artist_id": "marcel-dettmann",
+    "sets": [
+      {
+        "id": "marcel-dettmann-br-berlin",
+        "title": "Boiler Room Berlin: Marcel Dettmann",
+        "venue": "Boiler Room, Berlin",
+        "date": "2014-05-22",
+        "duration": "",
+        "youtube": "ic7P_qWkdE8",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 12,
+        "tracks_total": 12,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Marcel Dettmann",
+            "title": "Shena (T++ Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Shed",
+            "title": "Shot Rhythm"
+          },
+          {
+            "time": "",
+            "artist": "Surgeon",
+            "title": "Bite (Killa Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Mark Broom",
+            "title": "909 Workout"
+          },
+          {
+            "time": "",
+            "artist": "Mark Broom",
+            "title": "Funky Sounds"
+          },
+          {
+            "time": "",
+            "artist": "Function",
+            "title": "Against The Wall"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Octave One",
+            "title": "Blackwater"
+          },
+          {
+            "time": "",
+            "artist": "Speedy J",
+            "title": "The FUN Equations"
+          },
+          {
+            "time": "",
+            "artist": "Model 500",
+            "title": "Neptune"
+          },
+          {
+            "time": "",
+            "artist": "Kraftwerk",
+            "title": "Aerodynamik"
+          },
+          {
+            "time": "",
+            "artist": "Kraftwerk",
+            "title": "Expo 2000"
+          }
+        ]
+      }
+    ]
+  },
   "mark-broom": {
     "artist": "Mark Broom",
     "artist_id": "mark-broom",
@@ -5063,6 +5225,248 @@ const TRACKLISTS = {
       }
     ]
   },
+  "quest": {
+    "artist": "Quest",
+    "artist_id": "quest",
+    "sets": [
+      {
+        "id": "quest-mixmag-lab-rome",
+        "title": "Quest @ Mixmag Lab Rome",
+        "venue": "Mixmag Lab Rome (A|X Armani Exchange)",
+        "date": "2019-03-15",
+        "duration": "",
+        "youtube": "pXvHkSLxCoA",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 13,
+        "tracks_total": 13,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Donato Dozzy",
+            "title": "Gol"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Moritz Von Oswald",
+            "title": "Watamu Beach Rework"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Split Your Infinities"
+          },
+          {
+            "time": "",
+            "artist": "Aphex Twin",
+            "title": "Xmas_Evet1 N"
+          },
+          {
+            "time": "",
+            "artist": "Aleksi Perala",
+            "title": "UK74R1512110"
+          },
+          {
+            "time": "",
+            "artist": "Function",
+            "title": "Against The Wall"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Problems"
+          },
+          {
+            "time": "",
+            "artist": "The Field",
+            "title": "Over The Ice"
+          },
+          {
+            "time": "",
+            "artist": "Four Tet",
+            "title": "School"
+          }
+        ]
+      },
+      {
+        "id": "quest-section-2026",
+        "title": "Quest @ SECTION. (Vinyl Set)",
+        "venue": "SECTION., Rome",
+        "date": "2026-02-08",
+        "duration": "",
+        "youtube": "B2pacpcPOAU",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 14,
+        "tracks_total": 14,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Split Your Infinities"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug"
+          },
+          {
+            "time": "",
+            "artist": "Spacetime Continuum",
+            "title": "Drug #6"
+          },
+          {
+            "time": "",
+            "artist": "Terrence Dixon",
+            "title": "One Bedroom Apartment"
+          },
+          {
+            "time": "",
+            "artist": "Moodymann",
+            "title": "Got 2 Make It"
+          },
+          {
+            "time": "",
+            "artist": "Levon Vincent",
+            "title": "Double Joint (Part 2)"
+          },
+          {
+            "time": "",
+            "artist": "Stephan Bodzin",
+            "title": "Lx (Marc Romboy Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Monoloc",
+            "title": "Shame"
+          },
+          {
+            "time": "",
+            "artist": "Surgeon",
+            "title": "Bite (Killa Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Mark Broom",
+            "title": "909 Workout"
+          },
+          {
+            "time": "",
+            "artist": "Shed",
+            "title": "Shot Rhythm"
+          },
+          {
+            "time": "",
+            "artist": "Tale Of Us",
+            "title": "Another Earth"
+          }
+        ]
+      }
+    ]
+  },
+  "recondite": {
+    "artist": "Recondite",
+    "artist_id": "recondite",
+    "sets": [
+      {
+        "id": "recondite-cercle-bernay",
+        "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+        "venue": "Abbatiale de Bernay, Normandy, France",
+        "date": "2017-08-18",
+        "duration": "",
+        "youtube": "q4ic2xA8pys",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 10,
+        "tracks_total": 10,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Problems"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Fast Forward"
+          },
+          {
+            "time": "",
+            "artist": "Stephan Bodzin",
+            "title": "Lx (Marc Romboy Remix)"
+          },
+          {
+            "time": "",
+            "artist": "The Field",
+            "title": "Over The Ice"
+          },
+          {
+            "time": "",
+            "artist": "Tale Of Us",
+            "title": "Another Earth"
+          },
+          {
+            "time": "",
+            "artist": "Andy Stott",
+            "title": "Numb"
+          },
+          {
+            "time": "",
+            "artist": "Four Tet",
+            "title": "School"
+          },
+          {
+            "time": "",
+            "artist": "Moodymann",
+            "title": "J.A.N."
+          }
+        ]
+      }
+    ]
+  },
   "rey-colino-br": {
     "artist": "Rey Colino Br",
     "artist_id": "rey-colino-br",
@@ -5185,6 +5589,82 @@ const TRACKLISTS = {
             "time": "",
             "artist": "Paperclip People",
             "title": "Throw (Slam RTM Remix)"
+          }
+        ]
+      }
+    ]
+  },
+  "stephan-bodzin": {
+    "artist": "Stephan Bodzin",
+    "artist_id": "stephan-bodzin",
+    "sets": [
+      {
+        "id": "stephan-bodzin-cercle-piz-gloria",
+        "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+        "venue": "Piz Gloria, Interlaken, Switzerland",
+        "date": "2018-07-21",
+        "duration": "",
+        "youtube": "xF_QkfZI1mM",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 11,
+        "tracks_total": 11,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Stephan Bodzin",
+            "title": "Lx (Marc Romboy Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Tale Of Us",
+            "title": "Another Earth"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Glim"
+          },
+          {
+            "time": "",
+            "artist": "Recondite",
+            "title": "Drgn"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Problems"
+          },
+          {
+            "time": "",
+            "artist": "Floating Points",
+            "title": "Fast Forward"
+          },
+          {
+            "time": "",
+            "artist": "The Field",
+            "title": "Over The Ice"
+          },
+          {
+            "time": "",
+            "artist": "Boards Of Canada",
+            "title": "Transmisiones Ferox"
+          },
+          {
+            "time": "",
+            "artist": "Four Tet",
+            "title": "School"
+          },
+          {
+            "time": "",
+            "artist": "Donato Dozzy",
+            "title": "Gol"
+          },
+          {
+            "time": "",
+            "artist": "Red Axes",
+            "title": "Too Late To Samba"
           }
         ]
       }
@@ -5443,486 +5923,6 @@ const TRACKLISTS = {
             "time": "",
             "artist": "Avalon Emerson",
             "title": "Entombed in Ice (Young Marco remix)"
-          }
-        ]
-      }
-    ]
-  },
-  "quest": {
-    "artist": "Quest",
-    "artist_id": "quest",
-    "sets": [
-      {
-        "id": "quest-mixmag-lab-rome",
-        "title": "Quest @ Mixmag Lab Rome",
-        "venue": "Mixmag Lab Rome (A|X Armani Exchange)",
-        "date": "2019-03-15",
-        "duration": "",
-        "youtube": "pXvHkSLxCoA",
-        "views": 0,
-        "genre": [],
-        "tracks_identified": 13,
-        "tracks_total": 13,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "",
-            "artist": "Donato Dozzy",
-            "title": "Gol"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Glim"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Drgn"
-          },
-          {
-            "time": "",
-            "artist": "Moritz Von Oswald",
-            "title": "Watamu Beach Rework"
-          },
-          {
-            "time": "",
-            "artist": "Andy Stott",
-            "title": "Numb"
-          },
-          {
-            "time": "",
-            "artist": "Boards Of Canada",
-            "title": "Split Your Infinities"
-          },
-          {
-            "time": "",
-            "artist": "Aphex Twin",
-            "title": "Xmas_Evet1 N"
-          },
-          {
-            "time": "",
-            "artist": "Aleksi Perala",
-            "title": "UK74R1512110"
-          },
-          {
-            "time": "",
-            "artist": "Function",
-            "title": "Against The Wall"
-          },
-          {
-            "time": "",
-            "artist": "Terrence Dixon",
-            "title": "One Bedroom Apartment"
-          },
-          {
-            "time": "",
-            "artist": "Floating Points",
-            "title": "Problems"
-          },
-          {
-            "time": "",
-            "artist": "The Field",
-            "title": "Over The Ice"
-          },
-          {
-            "time": "",
-            "artist": "Four Tet",
-            "title": "School"
-          }
-        ]
-      },
-      {
-        "id": "quest-section-2026",
-        "title": "Quest @ SECTION. (Vinyl Set)",
-        "venue": "SECTION., Rome",
-        "date": "2026-02-08",
-        "duration": "",
-        "youtube": "B2pacpcPOAU",
-        "views": 0,
-        "genre": [],
-        "tracks_identified": 14,
-        "tracks_total": 14,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "",
-            "artist": "Boards Of Canada",
-            "title": "Split Your Infinities"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Drgn"
-          },
-          {
-            "time": "",
-            "artist": "Andy Stott",
-            "title": "Numb"
-          },
-          {
-            "time": "",
-            "artist": "Spacetime Continuum",
-            "title": "Drug"
-          },
-          {
-            "time": "",
-            "artist": "Spacetime Continuum",
-            "title": "Drug #6"
-          },
-          {
-            "time": "",
-            "artist": "Terrence Dixon",
-            "title": "One Bedroom Apartment"
-          },
-          {
-            "time": "",
-            "artist": "Moodymann",
-            "title": "Got 2 Make It"
-          },
-          {
-            "time": "",
-            "artist": "Levon Vincent",
-            "title": "Double Joint (Part 2)"
-          },
-          {
-            "time": "",
-            "artist": "Stephan Bodzin",
-            "title": "Lx (Marc Romboy Remix)"
-          },
-          {
-            "time": "",
-            "artist": "Monoloc",
-            "title": "Shame"
-          },
-          {
-            "time": "",
-            "artist": "Surgeon",
-            "title": "Bite (Killa Mix)"
-          },
-          {
-            "time": "",
-            "artist": "Mark Broom",
-            "title": "909 Workout"
-          },
-          {
-            "time": "",
-            "artist": "Shed",
-            "title": "Shot Rhythm"
-          },
-          {
-            "time": "",
-            "artist": "Tale Of Us",
-            "title": "Another Earth"
-          }
-        ]
-      }
-    ]
-  },
-  "donato-dozzy": {
-    "artist": "Donato Dozzy",
-    "artist_id": "donato-dozzy",
-    "sets": [
-      {
-        "id": "donato-dozzy-br-rome",
-        "title": "Boiler Room: Donato Dozzy",
-        "venue": "Boiler Room, Rome",
-        "date": "2015-11-12",
-        "duration": "",
-        "youtube": "Dhzp6esYfeY",
-        "views": 0,
-        "genre": [],
-        "tracks_identified": 12,
-        "tracks_total": 12,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "",
-            "artist": "Donato Dozzy",
-            "title": "Gol"
-          },
-          {
-            "time": "",
-            "artist": "Spacetime Continuum",
-            "title": "Drug"
-          },
-          {
-            "time": "",
-            "artist": "Spacetime Continuum",
-            "title": "Drug #6"
-          },
-          {
-            "time": "",
-            "artist": "Function",
-            "title": "Against The Wall"
-          },
-          {
-            "time": "",
-            "artist": "Andy Stott",
-            "title": "Numb"
-          },
-          {
-            "time": "",
-            "artist": "Boards Of Canada",
-            "title": "Split Your Infinities"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Glim"
-          },
-          {
-            "time": "",
-            "artist": "Aleksi Perala",
-            "title": "UK74R1512110"
-          },
-          {
-            "time": "",
-            "artist": "Moritz Von Oswald",
-            "title": "Watamu Beach Rework"
-          },
-          {
-            "time": "",
-            "artist": "Terrence Dixon",
-            "title": "One Bedroom Apartment"
-          },
-          {
-            "time": "",
-            "artist": "Octave One",
-            "title": "Blackwater"
-          },
-          {
-            "time": "",
-            "artist": "Levon Vincent",
-            "title": "Double Joint (Part 2)"
-          }
-        ]
-      }
-    ]
-  },
-  "marcel-dettmann": {
-    "artist": "Marcel Dettmann",
-    "artist_id": "marcel-dettmann",
-    "sets": [
-      {
-        "id": "marcel-dettmann-br-berlin",
-        "title": "Boiler Room Berlin: Marcel Dettmann",
-        "venue": "Boiler Room, Berlin",
-        "date": "2014-05-22",
-        "duration": "",
-        "youtube": "ic7P_qWkdE8",
-        "views": 0,
-        "genre": [],
-        "tracks_identified": 12,
-        "tracks_total": 12,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "",
-            "artist": "Marcel Dettmann",
-            "title": "Shena (T++ Remix)"
-          },
-          {
-            "time": "",
-            "artist": "Shed",
-            "title": "Shot Rhythm"
-          },
-          {
-            "time": "",
-            "artist": "Surgeon",
-            "title": "Bite (Killa Mix)"
-          },
-          {
-            "time": "",
-            "artist": "Mark Broom",
-            "title": "909 Workout"
-          },
-          {
-            "time": "",
-            "artist": "Mark Broom",
-            "title": "Funky Sounds"
-          },
-          {
-            "time": "",
-            "artist": "Function",
-            "title": "Against The Wall"
-          },
-          {
-            "time": "",
-            "artist": "Terrence Dixon",
-            "title": "One Bedroom Apartment"
-          },
-          {
-            "time": "",
-            "artist": "Octave One",
-            "title": "Blackwater"
-          },
-          {
-            "time": "",
-            "artist": "Speedy J",
-            "title": "The FUN Equations"
-          },
-          {
-            "time": "",
-            "artist": "Model 500",
-            "title": "Neptune"
-          },
-          {
-            "time": "",
-            "artist": "Kraftwerk",
-            "title": "Aerodynamik"
-          },
-          {
-            "time": "",
-            "artist": "Kraftwerk",
-            "title": "Expo 2000"
-          }
-        ]
-      }
-    ]
-  },
-  "stephan-bodzin": {
-    "artist": "Stephan Bodzin",
-    "artist_id": "stephan-bodzin",
-    "sets": [
-      {
-        "id": "stephan-bodzin-cercle-piz-gloria",
-        "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
-        "venue": "Piz Gloria, Interlaken, Switzerland",
-        "date": "2018-07-21",
-        "duration": "",
-        "youtube": "xF_QkfZI1mM",
-        "views": 0,
-        "genre": [],
-        "tracks_identified": 11,
-        "tracks_total": 11,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "",
-            "artist": "Stephan Bodzin",
-            "title": "Lx (Marc Romboy Remix)"
-          },
-          {
-            "time": "",
-            "artist": "Tale Of Us",
-            "title": "Another Earth"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Glim"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Drgn"
-          },
-          {
-            "time": "",
-            "artist": "Floating Points",
-            "title": "Problems"
-          },
-          {
-            "time": "",
-            "artist": "Floating Points",
-            "title": "Fast Forward"
-          },
-          {
-            "time": "",
-            "artist": "The Field",
-            "title": "Over The Ice"
-          },
-          {
-            "time": "",
-            "artist": "Boards Of Canada",
-            "title": "Transmisiones Ferox"
-          },
-          {
-            "time": "",
-            "artist": "Four Tet",
-            "title": "School"
-          },
-          {
-            "time": "",
-            "artist": "Donato Dozzy",
-            "title": "Gol"
-          },
-          {
-            "time": "",
-            "artist": "Red Axes",
-            "title": "Too Late To Samba"
-          }
-        ]
-      }
-    ]
-  },
-  "recondite": {
-    "artist": "Recondite",
-    "artist_id": "recondite",
-    "sets": [
-      {
-        "id": "recondite-cercle-bernay",
-        "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
-        "venue": "Abbatiale de Bernay, Normandy, France",
-        "date": "2017-08-18",
-        "duration": "",
-        "youtube": "q4ic2xA8pys",
-        "views": 0,
-        "genre": [],
-        "tracks_identified": 10,
-        "tracks_total": 10,
-        "source": "Compiled from DJ Library",
-        "tracklist": [
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Glim"
-          },
-          {
-            "time": "",
-            "artist": "Recondite",
-            "title": "Drgn"
-          },
-          {
-            "time": "",
-            "artist": "Floating Points",
-            "title": "Problems"
-          },
-          {
-            "time": "",
-            "artist": "Floating Points",
-            "title": "Fast Forward"
-          },
-          {
-            "time": "",
-            "artist": "Stephan Bodzin",
-            "title": "Lx (Marc Romboy Remix)"
-          },
-          {
-            "time": "",
-            "artist": "The Field",
-            "title": "Over The Ice"
-          },
-          {
-            "time": "",
-            "artist": "Tale Of Us",
-            "title": "Another Earth"
-          },
-          {
-            "time": "",
-            "artist": "Andy Stott",
-            "title": "Numb"
-          },
-          {
-            "time": "",
-            "artist": "Four Tet",
-            "title": "School"
-          },
-          {
-            "time": "",
-            "artist": "Moodymann",
-            "title": "J.A.N."
           }
         ]
       }

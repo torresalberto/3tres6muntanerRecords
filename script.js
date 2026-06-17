@@ -288,13 +288,15 @@ document.addEventListener('DOMContentLoaded', function () {
                             <p class="product-label">${labels[0]?.name || ''} · ${year}</p>
                             <div class="product-footer">
                                 <span class="product-price">${price} ${currency}</span>
-                                <button class="buy-btn" 
-                                        data-id="${listing.id}"
-                                        data-title="${artistName} – ${title}"
-                                        data-price="${price}"
-                                        data-image="${imageUrl}">
-                                    Agregar
-                                </button>
+                                <a class="buy-btn"
+                                   href="${listing.uri || 'https://www.discogs.com/seller/3tres6records'}"
+                                   target="_blank"
+                                   rel="noopener"
+                                   data-id="${listing.id}"
+                                   data-title="${artistName} – ${title}"
+                                   data-price="${price}">
+                                    Comprar en Discogs
+                                </a>
                             </div>
                         </div>
                     </article>
@@ -501,9 +503,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         <p class="product-label">${product.label} · ${product.year}</p>
                         <div class="product-footer">
                             <span class="product-price">$${product.price} MXN</span>
-                            <button class="buy-btn" data-id="${product.id}" data-title="${product.artist} – ${product.title}" data-price="${product.price}">
-                                Agregar
-                            </button>
+                            <a class="buy-btn"
+                               href="https://www.discogs.com/seller/3tres6records"
+                               target="_blank"
+                               rel="noopener"
+                               data-id="${product.id}"
+                               data-title="${product.artist} – ${product.title}"
+                               data-price="${product.price}">
+                                Comprar en Discogs
+                            </a>
                         </div>
                     </div>
                 </article>
@@ -535,14 +543,16 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     attachProductListeners() {
-      // Buy buttons
+      // Buy buttons: now <a target="_blank" href="listing.uri"> per the
+      // buy-via-Discogs refactor. The browser handles navigation; we just
+      // log the click so GA4 still sees the funnel.
       document.querySelectorAll('.buy-btn').forEach((btn) => {
         btn.addEventListener('click', function () {
-          Cart.addItem({
-            id: this.dataset.id,
-            title: this.dataset.title,
+          trackEvent('select_item', {
+            item_id: this.dataset.id,
+            item_name: this.dataset.title,
             price: parseFloat(this.dataset.price),
-            image: this.dataset.image || DiscogsAPI.getPlaceholderImage(),
+            destination: this.href,
           });
         });
       });
@@ -616,11 +626,8 @@ document.addEventListener('DOMContentLoaded', function () {
       this.render();
       this.showNotification('¡Agregado al carrito!');
 
-      trackEvent('add_to_cart', {
-        currency: 'MXN',
-        value: item.price,
-        items: [{ item_id: item.id, item_name: item.title, price: item.price }],
-      });
+      // NOTE: add_to_cart GA4 event was removed in the buy-via-Discogs refactor.
+      // Purchases now route directly to Discogs; the local cart is cosmetic.
     },
 
     removeItem(id) {
@@ -975,9 +982,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target.id === 'quickViewModal') this.close();
       });
 
-      document.getElementById('quickViewAddToCart')?.addEventListener('click', () => {
-        Cart.addItem(this.currentProduct);
-        this.close();
+      // Quick-view "Comprar en Discogs" link: open listing in new tab.
+      // The link's href is set per-product in open() below.
+      const buyLink = document.getElementById('quickViewAddToCart');
+      buyLink?.addEventListener('click', (e) => {
+        // anchor with target=_blank opens via the browser — no preventDefault.
+        if (buyLink.tagName === 'A' && this.currentProduct) {
+          trackEvent('select_item', {
+            item_id: this.currentProduct.id,
+            item_name: this.currentProduct.title,
+            destination: buyLink.href,
+          });
+        }
+        setTimeout(() => this.close(), 50);
       });
     },
 
@@ -999,6 +1016,15 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('quickViewSleeveCondition').textContent = product.condition;
       document.getElementById('quickViewImage').src =
         product.image || DiscogsAPI.getPlaceholderImage();
+
+      // Point the buy link at this product's Discogs listing (or seller page fallback)
+      const buyLink = document.getElementById('quickViewAddToCart');
+      if (buyLink) {
+        buyLink.href =
+          product.discogs && product.discogs.length > 0
+            ? product.discogs
+            : 'https://www.discogs.com/seller/3tres6records';
+      }
 
       // Audio Preview
       this.renderAudioPreview(product.audio);
