@@ -835,7 +835,7 @@
     <div class="cart-overlay" id="cartOverlay"></div>
 
     <!-- Checkout Modal (Shopify-style) -->
-    <div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-modal" id="checkoutModal" style="display: none" aria-hidden="true">
       <div class="checkout-content">
         <button class="checkout-close" id="checkoutClose">×</button>
 
@@ -1054,9 +1054,9 @@
             </div>
             <div class="quick-view-footer">
               <span class="quick-view-price" id="quickViewPrice">$0 MXN</span>
-              <button class="add-to-cart-btn-large" id="quickViewAddToCart">
-                Agregar al Carrito
-              </button>
+              <a class="add-to-cart-btn-large" id="quickViewAddToCart" href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">
+                Comprar en Discogs
+              </a>
             </div>
           </div>
         </div>
