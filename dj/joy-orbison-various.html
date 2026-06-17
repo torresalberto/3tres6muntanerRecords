@@ -245,7 +245,7 @@
 
   <script>
     // Related DJs loader — fetches cross-references and renders up to 4
-    function initRelated_joy-orbison-various() {
+    function initRelated_joy_orbison_various() {
       const grid = document.getElementById('relatedGrid');
       if (!grid) return;
       fetch('../data/djs/cross-references.json')
@@ -278,9 +278,9 @@
         })
         .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
     }
-    initRelated_joy-orbison-various();
+    initRelated_joy_orbison_various();
     if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-      window.Muntaner336.onPageView(function () { initRelated_joy-orbison-various(); });
+      window.Muntaner336.onPageView(function () { initRelated_joy_orbison_various(); });
     }
   </script>
   <!-- Swup: seamless page transitions so the audio player never cuts off -->

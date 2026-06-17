@@ -319,7 +319,7 @@
 
   <script>
     // Related DJs loader — fetches cross-references and renders up to 4
-    function initRelated_call-super() {
+    function initRelated_call_super() {
       const grid = document.getElementById('relatedGrid');
       if (!grid) return;
       fetch('../data/djs/cross-references.json')
@@ -352,9 +352,9 @@
         })
         .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
     }
-    initRelated_call-super();
+    initRelated_call_super();
     if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-      window.Muntaner336.onPageView(function () { initRelated_call-super(); });
+      window.Muntaner336.onPageView(function () { initRelated_call_super(); });
     }
   </script>
   <!-- Swup: seamless page transitions so the audio player never cuts off -->

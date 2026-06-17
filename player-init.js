@@ -25,7 +25,7 @@
   if (!window.AudioPlayer) {
     const s = document.createElement('script');
     // Detect if we're in a subdirectory (dj/ or toolhub/)
-    const isSubdir = window.location.pathname.includes('/dj/') || window.location.pathname.includes('/toolhub/');
+    const isSubdir = window.location.pathname.includes('/dj/') || window.location.pathname.includes('/toolhub/') || window.location.pathname.includes('/dj-library/');
     s.src = isSubdir ? '../audio.js' : 'audio.js';
     document.body.appendChild(s);
   }

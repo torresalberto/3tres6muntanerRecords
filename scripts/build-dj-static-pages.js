@@ -31,6 +31,10 @@ const CROSS = path.join(DATA, 'cross-references.json');
 const PLACEHOLDER_IMG =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E";
 
+function jsId(s) {
+  return String(s ?? '').replace(/[^A-Za-z0-9_]/g, '_');
+}
+
 function esc(s) {
   return String(s ?? '')
     .replace(/&/g, '&amp;')
@@ -345,7 +349,7 @@ function renderPage(dj, sets) {
 
   <script>
     // Related DJs loader — fetches cross-references and renders up to 4
-    function initRelated_${esc(dj.id)}() {
+    function initRelated_${jsId(dj.id)}() {
       const grid = document.getElementById('relatedGrid');
       if (!grid) return;
       fetch('../data/djs/cross-references.json')
@@ -378,9 +382,9 @@ function renderPage(dj, sets) {
         })
         .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
     }
-    initRelated_${esc(dj.id)}();
+    initRelated_${jsId(dj.id)}();
     if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-      window.Muntaner336.onPageView(function () { initRelated_${esc(dj.id)}(); });
+      window.Muntaner336.onPageView(function () { initRelated_${jsId(dj.id)}(); });
     }
   </script>
   <!-- Swup: seamless page transitions so the audio player never cuts off -->
