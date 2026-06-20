@@ -5825,7 +5825,9 @@
 
         // Groups for z-sorting
         const glowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        glowGroup.id = 'glow-layer';
         const wireGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        wireGroup.id = 'wire-layer';
         const linkGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         const labelGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
