@@ -369,7 +369,7 @@ window.Muntaner336.init3DBrain = function () {
   }
 
   // Place connected DJs closer together using force relaxation
-  const radius = 280;
+  const radius = 220;
   const positions = fibonacciSphere(nodes.length, radius);
 
   // Seed initial positions

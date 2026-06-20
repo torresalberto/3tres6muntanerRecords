@@ -1,36 +1,700 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DJ Library | 3TRES6 Records</title>
-    <link rel="canonical" href="https://3tres6records.albto.me/dj-library/" />
-    <meta http-equiv="refresh" content="0; url=./dj-library/" />
-    <style>
-      body {
-        background: #0a0a0a;
-        color: #ff4d00;
-        font-family: system-ui, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-      }
-      a {
-        color: #ff4d00;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p>
-        Redirigiendo a la nueva DJ Library…<br />
-        <a href="./dj-library/">Continuar manualmente</a>
-      </p>
-    </main>
+    <title>DJ Library — 3TRES6 Records</title>
+    <meta
+      name="description"
+      content="Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de YouTube."
+    />
+    <link rel="canonical" href="https://3tres6records.albto.me/dj-library.html" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+    <link rel="preconnect" href="https://d3js.org" />
+
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css?v=1" />
+    <link rel="stylesheet" href="css/dj-library.css?v=3" />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
     <script>
-      window.location.replace('./dj-library/');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-G042PFG6TG', {
+        cookie_flags: 'SameSite=None;Secure',
+        send_page_view: true,
+      });
     </script>
+  </head>
+  <body class="dj-library-page">
+    <!-- Top Banner with Ticker Animation -->
+    <div class="top-banner">
+      <div class="ticker-wrapper">
+        <div class="ticker-content">
+          <span class="ticker-item">🎵 Vinilos europeos directo de Barcelona</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">📦 Envíos a todo México</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">💳 Paga con Mercado Pago</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">🎧 Escucha antes de comprar</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">✨ Nuevas llegadas cada semana</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">🎵 Vinilos europeos directo de Barcelona</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">📦 Envíos a todo México</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">💳 Paga con Mercado Pago</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">🎧 Escucha antes de comprar</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">✨ Nuevas llegadas cada semana</span>
+          <span class="ticker-separator">•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="mainHeader" role="banner">
+      <div class="header-container">
+        <a href="/3tres6muntanerRecords/" class="logo" aria-label="3TRES6 Records Home">
+          <span class="logo-text">3TRES6</span>
+          <span class="logo-subtitle">RECORDS</span>
+        </a>
+
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+          <div class="nav-group nav-group-store">
+            <a href="/3tres6muntanerRecords/#catalogo" class="nav-item">Catálogo</a>
+            <a href="/3tres6muntanerRecords/#calendario" class="nav-item">Calendario</a>
+            <a href="/3tres6muntanerRecords/#nosotros" class="nav-item">Nosotros</a>
+          </div>
+          <div class="nav-separator"></div>
+          <div class="nav-group nav-group-content">
+            <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <a
+            href="https://www.discogs.com/seller/3tres6records"
+            target="_blank"
+            rel="noopener"
+            class="discogs-link"
+            >Discogs</a
+          >
+          <a href="/3tres6muntanerRecords/" class="cart-icon" aria-label="Carrito">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+        <div class="mobile-nav-group-label">Tienda</div>
+        <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
+        <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
+        <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
+        <div class="mobile-nav-group-label">Contenido</div>
+        <a href="/3tres6muntanerRecords/3d-brain.html">DJ Hub</a>
+        <div class="mobile-nav-group-label">Redes</div>
+        <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
+        <a
+          href="https://www.discogs.com/seller/3tres6records"
+          target="_blank"
+          rel="noopener"
+          >Discogs</a
+        >
+      </nav>
+    </header>
+
+    <!-- DJ Hub Sub-Nav -->
+    <nav class="dj-hub-subnav" aria-label="Navegación DJ Hub">
+      <div class="subnav-container">
+        <a href="/3tres6muntanerRecords/" class="subnav-back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Tienda
+        </a>
+        <div class="subnav-divider"></div>
+        <div class="subnav-tabs">
+          <a href="/3tres6muntanerRecords/blog.html" class="subnav-tab">Blog</a>
+          <a
+            href="/3tres6muntanerRecords/dj-library.html"
+            class="subnav-tab active"
+            aria-current="page"
+            >DJ Library</a
+          >
+          <a href="/3tres6muntanerRecords/3d-brain.html" class="subnav-tab">Neural</a>
+          <a href="/3tres6muntanerRecords/toolhub/" class="subnav-tab">Herramientas</a>
+          <a href="/3tres6muntanerRecords/toolhub/#hardware" class="subnav-tab"
+            >Equipo DJ</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main data-swup>
+      <!-- Hero Section -->
+      <section class="dj-library-hero">
+        <div class="hero-content-wrapper">
+          <div class="dj-library-badge">🎧 DJ Library</div>
+          <h1 class="dj-library-title">Sets &amp; Tracklists</h1>
+          <p class="dj-library-subtitle">
+            Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de
+            YouTube.
+          </p>
+          <div class="dj-library-stats" id="heroStats">
+            <span class="stat-pill"> DJs: <strong id="statDjs">—</strong> </span>
+            <span class="stat-pill"> Sets: <strong id="statSets">—</strong> </span>
+            <span class="stat-pill"> Tracks: <strong id="statTracks">—</strong> </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search Bar -->
+      <section class="dj-search-section">
+        <div class="dj-search-container">
+          <input
+            type="text"
+            id="djSearch"
+            class="dj-search-input"
+            placeholder="Buscar DJ o set..."
+            autocomplete="off"
+            aria-label="Buscar DJ o set"
+          />
+        </div>
+      </section>
+
+      <!-- DJ Grid (Gallery) -->
+      <section class="dj-grid-section" id="djGridSection">
+        <div class="dj-grid" id="djGrid">
+          <div class="dj-grid-loading">
+            <div class="loading-spinner"></div>
+            <span>Cargando DJs...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- DJ Graph Section -->
+      <section class="dj-graph-section" id="djGraphSection">
+        <div class="dj-graph-header">
+          <h2>Red de Conexiones</h2>
+          <p>Relaciones entre DJs por tracks compartidos</p>
+        </div>
+        <div class="dj-graph-container" id="djGraphContainer">
+          <div class="dj-graph-loading">
+            <div class="loading-spinner"></div>
+            <span>Cargando grafo...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>3TRES6 Records — Barcelona → México</p>
+          <nav class="footer-nav">
+            <a href="/3tres6muntanerRecords/">Catálogo</a>
+            <a href="/3tres6muntanerRecords/blog.html">Blog</a>
+            <a href="/3tres6muntanerRecords/dj-library.html">DJ Library</a>
+            <a href="/3tres6muntanerRecords/toolhub/">Herramientas</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Mobile Menu + Header Scroll Script -->
+    <script>
+      (function () {
+        /* Mobile menu toggle */
+        var btn = document.getElementById('mobileMenuBtn');
+        var nav = document.getElementById('mobileNav');
+        if (btn && nav) {
+          btn.addEventListener('click', function () {
+            btn.classList.toggle('active');
+            nav.classList.toggle('active');
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+          });
+          nav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              btn.classList.remove('active');
+              nav.classList.remove('active');
+              btn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+        /* Header scroll effect */
+        window.addEventListener('scroll', function () {
+          var header = document.querySelector('.header');
+          if (header) header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+      })();
+    </script>
+
+    <!-- D3.js for Graph Visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- DJ Library Main Script -->
+    <script>
+      (function () {
+        'use strict';
+
+        var BASE = '';
+        var DJ_INDEX_URL = BASE + 'data/djs/index.json';
+        var SETS_DIR = BASE + 'data/djs/sets/';
+
+        /* ── State ── */
+        var allDjs = [];
+        var allSets = [];
+        var expandedCards = {};
+
+        /* ── DOM refs ── */
+        var gridEl = document.getElementById('djGrid');
+        var searchEl = document.getElementById('djSearch');
+        var statDjsEl = document.getElementById('statDjs');
+        var statSetsEl = document.getElementById('statSets');
+        var statTracksEl = document.getElementById('statTracks');
+
+        /* ── Fetch helpers ── */
+        function fetchJSON(url) {
+          return fetch(url).then(function (r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+          });
+        }
+
+        /* ── Init ── */
+        function init() {
+          fetchJSON(DJ_INDEX_URL)
+            .then(function (data) {
+              allDjs = data.djs || [];
+              updateStats();
+              var setPromises = allDjs.map(function (dj) {
+                return fetchSetFiles(dj);
+              });
+              return Promise.all(setPromises);
+            })
+            .then(function () {
+              renderGrid(allDjs);
+              initSearch();
+              loadGraph();
+            })
+            .catch(function (err) {
+              console.error('DJ Library init failed:', err);
+              gridEl.innerHTML =
+                '<p class="dj-grid-error">Error cargando la biblioteca. Intenta recargar.</p>';
+            });
+        }
+
+        /* ── Fetch set JSONs for a DJ ── */
+        function fetchSetFiles(dj) {
+          if (!dj.sets || !dj.sets.length) return Promise.resolve();
+          var promises = dj.sets.map(function (setId) {
+            return fetchJSON(SETS_DIR + setId + '.json')
+              .then(function (setData) {
+                allSets.push(setData);
+                dj._setsData = dj._setsData || [];
+                dj._setsData.push(setData);
+              })
+              .catch(function () {
+                /* skip missing set files */
+              });
+          });
+          return Promise.all(promises);
+        }
+
+        /* ── Stats ── */
+        function updateStats() {
+          var totalTracks = 0;
+          allDjs.forEach(function (dj) {
+            totalTracks += (dj.stats && dj.stats.tracks) || 0;
+          });
+          statDjsEl.textContent = allDjs.length;
+          statSetsEl.textContent = allSets.length || totalTracks > 0 ? allSets.length : '—';
+          statTracksEl.textContent = totalTracks || '—';
+        }
+
+        /* ── Render grid ── */
+        function renderGrid(djs) {
+          gridEl.innerHTML = '';
+          if (!djs.length) {
+            gridEl.innerHTML = '<p class="dj-grid-empty">No se encontraron DJs.</p>';
+            return;
+          }
+          djs.forEach(function (dj) {
+            gridEl.appendChild(createDjCard(dj));
+          });
+        }
+
+        /* ── Create gallery card ── */
+        function createDjCard(dj) {
+          var card = document.createElement('div');
+          card.className = 'dj-gallery-card';
+          card.dataset.djId = dj.id;
+          card.dataset.searchText = (dj.name + ' ' + (dj.genres || []).join(' ')).toLowerCase();
+
+          var completion = (dj.stats && dj.stats.completion_rate) || 0;
+          var setsCount = (dj.stats && dj.stats.sets) || (dj._setsData && dj._setsData.length) || 0;
+          var trackCount = (dj.stats && dj.stats.tracks) || 0;
+
+          /* Thumbnail */
+          var thumbUrl = dj.image || '';
+          if (!thumbUrl && dj._setsData && dj._setsData[0] && dj._setsData[0].youtube_embed_id) {
+            thumbUrl = 'https://i.ytimg.com/vi/' + dj._setsData[0].youtube_embed_id + '/hqdefault.jpg';
+          }
+
+          card.innerHTML =
+            '<div class="dj-card-image">' +
+            (thumbUrl
+              ? '<img src="' + thumbUrl + '" alt="' + escHtml(dj.name) + '" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML=\'<div class=\\\'dj-card-placeholder\\\'>🎧</div>\'" />'
+              : '<div class="dj-card-placeholder">🎧</div>') +
+            '</div>' +
+            '<div class="dj-card-body">' +
+            '<h3 class="dj-card-name">' + escHtml(dj.name) + '</h3>' +
+            '<div class="dj-card-meta">' +
+            setsCount + ' set' + (setsCount !== 1 ? 's' : '') +
+            ' · ' + trackCount + ' tracks' +
+            '</div>' +
+            '<div class="dj-card-completion">' +
+            '<div class="completion-bar"><div class="completion-fill" style="width:' + completion + '%"></div></div>' +
+            '<span class="completion-label">' + completion + '% identificados</span>' +
+            '</div>' +
+            '<button class="dj-card-toggle" data-dj-id="' + dj.id + '">' +
+            'Ver tracklist ▸' +
+            '</button>' +
+            '</div>';
+
+          /* Expanded content container */
+          var expandContainer = document.createElement('div');
+          expandContainer.className = 'dj-card-expanded';
+          expandContainer.id = 'expanded-' + dj.id;
+          card.appendChild(expandContainer);
+
+          /* Toggle click */
+          var toggleBtn = card.querySelector('.dj-card-toggle');
+          toggleBtn.addEventListener('click', function () {
+            toggleExpand(dj, card);
+          });
+
+          return card;
+        }
+
+        /* ── Toggle expand/collapse ── */
+        function toggleExpand(dj, card) {
+          var container = card.querySelector('.dj-card-expanded');
+          var toggleBtn = card.querySelector('.dj-card-toggle');
+          var isExpanded = expandedCards[dj.id];
+
+          if (isExpanded) {
+            container.innerHTML = '';
+            container.classList.remove('open');
+            toggleBtn.textContent = 'Ver tracklist ▸';
+            delete expandedCards[dj.id];
+          } else {
+            renderExpandedContent(dj, container);
+            container.classList.add('open');
+            toggleBtn.textContent = 'Cerrar ▾';
+            expandedCards[dj.id] = true;
+          }
+        }
+
+        /* ── Render expanded content ── */
+        function renderExpandedContent(dj, container) {
+          var sets = dj._setsData || [];
+          if (!sets.length) {
+            container.innerHTML = '<p class="no-sets-msg">No hay sets disponibles aún.</p>';
+            return;
+          }
+
+          var html = '';
+          sets.forEach(function (s) {
+            /* Video embed */
+            if (s.youtube_embed_id) {
+              html +=
+                '<div class="expanded-video">' +
+                '<div class="video-wrapper">' +
+                '<iframe src="https://www.youtube-nocookie.com/embed/' + s.youtube_embed_id + '" ' +
+                'title="' + escHtml(s.title || dj.name) + '" ' +
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+                'allowfullscreen loading="lazy"></iframe>' +
+                '</div>' +
+                '</div>';
+            }
+
+            /* Set info */
+            html += '<div class="expanded-set-info">';
+            html += '<div class="section-label">▶ Set</div>';
+            html += '<h4 class="set-title">' + escHtml(s.title || '') + '</h4>';
+            html += '<div class="set-meta">';
+            if (s.venue) html += '<span>📍 ' + escHtml(s.venue) + '</span>';
+            if (s.date) html += '<span>📅 ' + escHtml(s.date) + '</span>';
+            if (s.duration_formatted) html += '<span>⏱️ ' + escHtml(s.duration_formatted) + '</span>';
+            html += '</div></div>';
+
+            /* Tracklist */
+            var tracklist = s.tracklist || [];
+            if (tracklist.length) {
+              html += '<div class="expanded-tracklist">';
+              html += '<div class="section-label">🎵 Tracklist (' + tracklist.length + ' tracks)</div>';
+              html += '<table class="tracklist-table"><thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead><tbody>';
+              tracklist.forEach(function (t) {
+                var statusClass = t.status === 'confirmed' ? 'status-confirmed' : t.status === 'id' ? 'status-id' : 'status-pending';
+                var statusLabel = t.status === 'confirmed' ? '✓ confirmed' : t.status === 'id' ? '? ID' : '— pending';
+                html +=
+                  '<tr>' +
+                  '<td>' + (t.position || '') + '</td>' +
+                  '<td><span class="track-time">' + (t.timestamp || '--:--') + '</span></td>' +
+                  '<td>' + escHtml(t.artist || '') + '</td>' +
+                  '<td>' + escHtml(t.title || '') + '</td>' +
+                  '<td><span class="track-status ' + statusClass + '">' + statusLabel + '</span></td>' +
+                  '</tr>';
+              });
+              html += '</tbody></table></div>';
+            }
+
+            /* Facts */
+            var confirmed = tracklist.filter(function (t) { return t.status === 'confirmed'; }).length;
+            html += '<div class="facts-section">';
+            html += '<div class="section-label">📊 Datos</div>';
+            html += '<div class="facts-grid">';
+            html += '<div class="fact-card"><div class="fact-number">' + (s.view_count || 0) + '</div><div class="fact-label">total comments</div></div>';
+            html += '<div class="fact-card"><div class="fact-number">' + confirmed + '</div><div class="fact-label">confirmed tracks</div></div>';
+            html += '</div></div>';
+          });
+
+          container.innerHTML = html;
+        }
+
+        /* ── Search ── */
+        function initSearch() {
+          searchEl.addEventListener('input', function () {
+            var q = searchEl.value.toLowerCase().trim();
+            var cards = gridEl.querySelectorAll('.dj-gallery-card');
+            cards.forEach(function (card) {
+              var match = !q || card.dataset.searchText.indexOf(q) !== -1;
+              card.style.display = match ? '' : 'none';
+            });
+          });
+        }
+
+        /* ── D3 Graph ── */
+        function loadGraph() {
+          if (typeof d3 === 'undefined') {
+            console.warn('D3.js not loaded, skipping graph.');
+            var gc = document.getElementById('djGraphContainer');
+            if (gc) gc.innerHTML = '<p class="dj-graph-fallback">Visualización del grafo no disponible.</p>';
+            return;
+          }
+
+          var graphContainer = document.getElementById('djGraphContainer');
+          if (!graphContainer) return;
+
+          /* Build nodes from djs */
+          var nodes = allDjs.map(function (dj) {
+            return {
+              id: dj.id,
+              name: dj.name,
+              sets: (dj.stats && dj.stats.sets) || 0,
+              tracks: (dj.stats && dj.stats.tracks) || 0,
+              image: dj.image || '',
+            };
+          });
+
+          /* Build links from shared tracks in cross-references */
+          var links = [];
+          fetchJSON(BASE + 'data/djs/cross-references.json')
+            .then(function (cr) {
+              if (cr && cr.shared_tracks) {
+                cr.shared_tracks.forEach(function (st) {
+                  var djs = st.djs || [];
+                  for (var i = 0; i < djs.length; i++) {
+                    for (var j = i + 1; j < djs.length; j++) {
+                      links.push({ source: djs[i], target: djs[j], track: st.track || '' });
+                    }
+                  }
+                });
+              }
+              renderGraph(graphContainer, nodes, links);
+            })
+            .catch(function () {
+              renderGraph(graphContainer, nodes, links);
+            });
+        }
+
+        function renderGraph(container, nodes, links) {
+          container.innerHTML = '';
+          var width = container.clientWidth || 800;
+          var height = Math.min(500, width * 0.6);
+
+          var svg = d3.select(container)
+            .append('svg')
+            .attr('width', '100%')
+            .attr('height', height)
+            .attr('viewBox', '0 0 ' + width + ' ' + height);
+
+          /* Filter to only nodes with at least one link */
+          var linkedIds = new Set();
+          links.forEach(function (l) {
+            linkedIds.add(typeof l.source === 'object' ? l.source.id : l.source);
+            linkedIds.add(typeof l.target === 'object' ? l.target.id : l.target);
+          });
+          var visibleNodes = nodes.filter(function (n) { return linkedIds.has(n.id); });
+          if (!visibleNodes.length) {
+            visibleNodes = nodes.slice(0, 20);
+          }
+
+          var simulation = d3.forceSimulation(visibleNodes)
+            .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(100))
+            .force('charge', d3.forceManyBody().strength(-150))
+            .force('center', d3.forceCenter(width / 2, height / 2))
+            .force('collision', d3.forceCollide().radius(30));
+
+          var link = svg.append('g')
+            .selectAll('line')
+            .data(links)
+            .enter()
+            .append('line')
+            .attr('stroke', 'rgba(255, 77, 0, 0.2)')
+            .attr('stroke-width', 1);
+
+          var node = svg.append('g')
+            .selectAll('g')
+            .data(visibleNodes)
+            .enter()
+            .append('g')
+            .call(d3.drag()
+              .on('start', dragstarted)
+              .on('drag', dragged)
+              .on('end', dragended));
+
+          node.append('circle')
+            .attr('r', function (d) { return Math.max(6, Math.min(18, d.tracks / 3 + 4)); })
+            .attr('fill', '#ff4d00')
+            .attr('stroke', '#0a0a0a')
+            .attr('stroke-width', 2)
+            .style('cursor', 'pointer');
+
+          node.append('text')
+            .text(function (d) { return d.name; })
+            .attr('x', 0)
+            .attr('y', function (d) { return Math.max(6, Math.min(18, d.tracks / 3 + 4)) + 14; })
+            .attr('text-anchor', 'middle')
+            .attr('fill', 'rgba(255,255,255,0.6)')
+            .attr('font-size', '10px')
+            .attr('font-family', "'Space Grotesk', sans-serif");
+
+          node.on('mouseover', function (event, d) {
+            link.attr('stroke', function (l) {
+              var sid = typeof l.source === 'object' ? l.source.id : l.source;
+              var tid = typeof l.target === 'object' ? l.target.id : l.target;
+              return sid === d.id || tid === d.id ? '#ff4d00' : 'rgba(255, 77, 0, 0.1)';
+            }).attr('stroke-width', function (l) {
+              var sid = typeof l.source === 'object' ? l.source.id : l.source;
+              var tid = typeof l.target === 'object' ? l.target.id : l.target;
+              return sid === d.id || tid === d.id ? 2.5 : 1;
+            });
+            d3.select(this).select('circle').attr('r', function () {
+              return Math.max(8, Math.min(22, d.tracks / 3 + 6));
+            });
+          }).on('mouseout', function () {
+            link.attr('stroke', 'rgba(255, 77, 0, 0.2)').attr('stroke-width', 1);
+            node.select('circle').attr('r', function (d) {
+              return Math.max(6, Math.min(18, d.tracks / 3 + 4));
+            });
+          });
+
+          simulation.on('tick', function () {
+            link
+              .attr('x1', function (d) { return d.source.x; })
+              .attr('y1', function (d) { return d.source.y; })
+              .attr('x2', function (d) { return d.target.x; })
+              .attr('y2', function (d) { return d.target.y; });
+            node.attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+          });
+
+          function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+          }
+          function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+          }
+          function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+          }
+        }
+
+        /* ── Helpers ── */
+        function escHtml(str) {
+          var div = document.createElement('div');
+          div.appendChild(document.createTextNode(str));
+          return div.innerHTML;
+        }
+
+        /* ── Boot ── */
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+      })();
+    </script>
+
+    <!-- Player Init -->
+    <script src="player-init.js" defer></script>
   </body>
 </html>
