@@ -725,13 +725,13 @@
 
     panel.innerHTML = html;
     panel.style.display = 'block';
-    panel.classList.add('active');
+    panel.classList.add('visible');
   }
 
   function hideSidePanel() {
     var panel = document.getElementById('networkInfo');
     if (panel) {
-      panel.classList.remove('active');
+      panel.classList.remove('visible');
       panel.style.display = 'none';
     }
   }
