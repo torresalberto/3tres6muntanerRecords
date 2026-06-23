@@ -810,9 +810,11 @@
     if (!container || !svg) return;
     w = container.clientWidth;
     h = container.clientHeight;
+    RADIUS = Math.min(w, h) * 0.38;
     svg.setAttribute('width', String(w));
     svg.setAttribute('height', String(h));
     svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    relaxPositions();
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────
@@ -824,6 +826,7 @@
 
     w = container.clientWidth;
     h = container.clientHeight;
+    RADIUS = Math.min(w, h) * 0.38;
     svg.setAttribute('width', String(w));
     svg.setAttribute('height', String(h));
     svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);

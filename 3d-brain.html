@@ -4927,7 +4927,7 @@
         border: 1px solid rgba(255, 77, 0, 0.2);
         border-radius: 16px;
         padding: 1.5rem 2rem;
-        width: 380px;
+        width: min(380px, 30vw);
         max-height: 70vh;
         overflow-y: auto;
         backdrop-filter: blur(24px);
@@ -4938,6 +4938,19 @@
           transform 0.4s,
           visibility 0.4s;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      }
+      @media (max-width: 768px) {
+        .network-info {
+          width: calc(100vw - 2rem);
+          right: 1rem;
+          top: auto;
+          bottom: 80px;
+          max-height: 50vh;
+          transform: translateY(20px);
+        }
+        .network-info.visible {
+          transform: translateY(0);
+        }
       }
       .network-info.visible {
         opacity: 1;
