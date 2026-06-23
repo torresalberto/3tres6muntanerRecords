@@ -631,7 +631,7 @@
     });
 
     // Reset button
-    var resetBtn = document.getElementById('resetRotation');
+    var resetBtn = document.getElementById('resetViewBtn');
     if (resetBtn) {
       resetBtn.addEventListener('click', function() {
         targetRotX = 0.35;
@@ -645,7 +645,7 @@
     }
 
     // Close panel button
-    var closeBtn = document.getElementById('closeNetworkInfo');
+    var closeBtn = document.getElementById('infoClose');
     if (closeBtn) {
       closeBtn.addEventListener('click', function() {
         selectedNode = null;
@@ -739,7 +739,7 @@
   // ─── Genre Legend ──────────────────────────────────────────────────────────
 
   function buildGenreLegend() {
-    var legendEl = document.getElementById('genre-legend');
+    var legendEl = document.getElementById('genreLegend');
     if (!legendEl) return;
 
     var genreCounts = {};
