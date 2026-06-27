@@ -1,0 +1,154 @@
+{
+  "id": "chaos-br-barcelona-nitsa",
+  "dj_id": "chaos-in-the-cbd",
+  "title": "Boiler Room Barcelona: Nitsa",
+  "venue": "Nitsa, Barcelona, Spain",
+  "date": "2019-09-01",
+  "youtube_url": "https://www.youtube.com/watch?v=pEWXK1r3-kM",
+  "youtube_embed_id": "pEWXK1r3-kM",
+  "duration_minutes": 60,
+  "duration_formatted": "1:00:26",
+  "view_count": null,
+  "channel": "Boiler Room",
+  "source": "YouTube",
+  "genres": ["Deep House", "House", "Disco"],
+  "tracklist": [
+    {
+      "position": 1,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified",
+      "notes": "Set opening"
+    },
+    {
+      "position": 2,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 3,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 4,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 5,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 6,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 7,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 8,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 9,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 10,
+      "timestamp": "",
+      "artist": "Cinthie",
+      "title": "This Bomb Is Mine",
+      "status": "confirmed",
+      "label": "803 Crystal Grooves",
+      "notes": "Confirmed via 1001tracklists"
+    },
+    {
+      "position": 11,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 12,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 13,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 14,
+      "timestamp": "",
+      "artist": "Urban Soul",
+      "title": "My Urban Soul (Club 69 Urban Vibe)",
+      "status": "confirmed",
+      "label": "King Street",
+      "notes": "Confirmed via 1001tracklists"
+    },
+    {
+      "position": 15,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 16,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 17,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    },
+    {
+      "position": 18,
+      "timestamp": "",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified"
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 2,
+    "unidentified_tracks": 16,
+    "source_notes": "Tracklist partially reconstructed from 1001tracklists. Full tracklist not publicly available. Two tracks confirmed: Cinthie - This Bomb Is Mine and Urban Soul - My Urban Soul (Club 69 Urban Vibe).",
+    "event_date_note": "Event took place on August 31, 2019 (Boiler Room lists it as 2019-08-31). YouTube upload date is September 2019."
+  }
+}

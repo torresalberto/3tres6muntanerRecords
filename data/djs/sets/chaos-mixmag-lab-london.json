@@ -1,0 +1,159 @@
+{
+  "id": "chaos-mixmag-lab-london",
+  "dj_id": "chaos-in-the-cbd",
+  "title": "Mixmag Lab London",
+  "venue": "Mixmag Lab, London, UK",
+  "date": "2025-05-08",
+  "youtube_url": "https://www.youtube.com/watch?v=qLbWviHoBOM",
+  "youtube_embed_id": "qLbWviHoBOM",
+  "duration_minutes": 62,
+  "duration_formatted": "1:02:17",
+  "view_count": null,
+  "channel": "Mixmag",
+  "source": "YouTube",
+  "genres": ["Deep House", "House", "Soulful House"],
+  "tracklist": [
+    {
+      "position": 1,
+      "timestamp": "0:00",
+      "artist": "Fazed Idjuts",
+      "title": "Dust of Life (Full Mix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 2,
+      "timestamp": "5:48",
+      "artist": "Onda",
+      "title": "Waiting for Your Love (François K. Dub)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 3,
+      "timestamp": "9:48",
+      "artist": "Jon Cutler",
+      "title": "Living (J.C's Demo Mix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 4,
+      "timestamp": "13:48",
+      "artist": "Megamen & SolyMar",
+      "title": "All I Need",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 5,
+      "timestamp": "18:36",
+      "artist": "Sellens",
+      "title": "Back Down (Off Key Remix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 6,
+      "timestamp": "19:12",
+      "artist": "Brick Nation",
+      "title": "Speak to Me (feat. Craig Travis)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 7,
+      "timestamp": "23:00",
+      "artist": "Christian Smith",
+      "title": "Traction (Paride Saraceni Remix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 8,
+      "timestamp": "23:48",
+      "artist": "Home & Garden",
+      "title": "Get U Down",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 9,
+      "timestamp": "25:24",
+      "artist": "Distant Sun",
+      "title": "Machine lernt",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 10,
+      "timestamp": "29:00",
+      "artist": "The Underground Workshop",
+      "title": "Does Your Mama Know (Franky G Club Mix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 11,
+      "timestamp": "32:48",
+      "artist": "Needless",
+      "title": "Unnamed Feelings (Steal Vybe Mesmerized Soul Mix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 12,
+      "timestamp": "36:48",
+      "artist": "Noche",
+      "title": "Unknown Track",
+      "status": "unidentified",
+      "notes": "Set79 analysis - track from Noche"
+    },
+    {
+      "position": 13,
+      "timestamp": "39:48",
+      "artist": "Megamen & SolyMar",
+      "title": "All I Need",
+      "status": "confirmed",
+      "notes": "Set79 analysis - second play"
+    },
+    {
+      "position": 14,
+      "timestamp": "42:12",
+      "artist": "Unknown",
+      "title": "Unknown Track",
+      "status": "unidentified",
+      "notes": "Set79 analysis - ID requested"
+    },
+    {
+      "position": 15,
+      "timestamp": "51:24",
+      "artist": "Geoffrey C",
+      "title": "Yo Barnum (Jihad Muhammad Btd Remix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 16,
+      "timestamp": "53:00",
+      "artist": "Armin van Buuren & Perpetuous Dreamer",
+      "title": "The Sound of Goodbye (Armin's Tribal Feel Mix)",
+      "status": "confirmed",
+      "notes": "Set79 analysis"
+    },
+    {
+      "position": 17,
+      "timestamp": "57:24",
+      "artist": "Chaos In The CBD",
+      "title": "Marlboro Sounds",
+      "status": "confirmed",
+      "notes": "Set79 analysis - closing track"
+    }
+  ],
+  "curious_facts": {
+    "confirmed_tracks": 15,
+    "unidentified_tracks": 2,
+    "source_notes": "Tracklist reconstructed from set79.com SoundCloud analysis. Set recorded to celebrate Mixmag cover and debut album 'A Deeper Life'.",
+    "duplicate_plays": ["Megamen & SolyMar - All I Need (played twice)"]
+  }
+}

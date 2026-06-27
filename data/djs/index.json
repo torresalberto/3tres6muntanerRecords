@@ -240,10 +240,12 @@
       "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
       "sets": [
         "chaos-glitch-2022",
-        "chaos-in-the-cbd-ballantines-lebanon"
+        "chaos-in-the-cbd-ballantines-lebanon",
+        "chaos-br-barcelona-nitsa",
+        "chaos-mixmag-lab-london"
       ],
       "stats": {
-        "sets": 2,
+        "sets": 4,
         "tracks": 41,
         "known": 41,
         "completion_rate": 100

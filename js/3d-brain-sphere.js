@@ -27,7 +27,6 @@
   var nodes = [];
   var links = [];
   var nodeMap = {};
-  var filteredGenre = null;
   var hoveredNode = null;
   var selectedNode = null;
 
@@ -426,15 +425,8 @@
         linkElements[lk].setAttribute('opacity', '0');
         continue;
       }
-      var srcVisible = !filteredGenre || src.genre === filteredGenre;
-      var tgtVisible = !filteredGenre || tgt.genre === filteredGenre;
       var hoverHighlight = hoveredNode && (l.source === hoveredNode.id || l.target === hoveredNode.id);
       var selectHighlight = selectedNode && (l.source === selectedNode.id || l.target === selectedNode.id);
-
-      if (!srcVisible && !tgtVisible) {
-        linkElements[lk].setAttribute('opacity', '0');
-        continue;
-      }
 
       var zNormSrc = (src.z2 + RADIUS) / (2 * RADIUS);
       var zNormTgt = (tgt.z2 + RADIUS) / (2 * RADIUS);
@@ -458,7 +450,6 @@
       var item = projected[pi];
       var nd = item.node;
       var idx = item.index;
-      var visible = !filteredGenre || nd.genre === filteredGenre;
       var isHovered = hoveredNode && nd.id === hoveredNode.id;
       var isSelected = selectedNode && nd.id === selectedNode.id;
       var isConnected = false;
@@ -488,9 +479,7 @@
       var nodeScale = 0.6 + (nd.scale - 0.75) * 2.0;
       var r = (3 + Math.min(5, nd.trackConnections * 0.15)) * nodeScale;
 
-      if (!visible) {
-        nodeOpacity = 0;
-      } else if (isHovered || isSelected) {
+      if (isHovered || isSelected) {
         nodeOpacity = 1;
         r *= 1.3;
       } else if (hoveredNode || selectedNode) {
@@ -515,8 +504,6 @@
       } else if (!hoveredNode && !selectedNode && zNorm > 0.6) {
         labelOp = (zNorm - 0.6) * 1.5;
       }
-
-      if (!visible) labelOp = 0;
 
       labelElements[idx].setAttribute('x', String(nd.x2));
       labelElements[idx].setAttribute('y', String(nd.y2 - r - 4));
@@ -794,48 +781,7 @@
     }
   }
 
-  // ─── Genre Legend ──────────────────────────────────────────────────────────
-
-  function buildGenreLegend() {
-    var legendEl = document.getElementById('genreLegend');
-    if (!legendEl) return;
-
-    var genreCounts = {};
-    nodes.forEach(function(n) {
-      genreCounts[n.genre] = (genreCounts[n.genre] || 0) + 1;
-    });
-
-    var html = '';
-    Object.keys(genreCounts).sort(function(a, b) {
-      return genreCounts[b] - genreCounts[a];
-    }).forEach(function(genre) {
-      var color = GENRE_COLORS[genre] || GENRE_COLORS.Unknown;
-      var count = genreCounts[genre];
-      var isActive = filteredGenre === genre;
-      html += '<div class="genre-dot' + (isActive ? ' active' : '') + '" data-genre="' + genre + '" style="display:inline-flex;align-items:center;gap:4px;margin:2px 6px;cursor:pointer;opacity:' + (isActive || !filteredGenre ? '1' : '0.3') + ';">';
-      html += '<span style="width:8px;height:8px;border-radius:50%;background:' + color + ';display:inline-block;"></span>';
-      html += '<span style="color:white;font-size:10px;">' + genre + ' (' + count + ')</span>';
-      html += '</div>';
-    });
-
-    legendEl.innerHTML = html;
-
-    // Click to filter
-    legendEl.querySelectorAll('.genre-dot').forEach(function(dot) {
-      dot.addEventListener('click', function() {
-        var genre = this.getAttribute('data-genre');
-        if (filteredGenre === genre) {
-          filteredGenre = null;
-        } else {
-          filteredGenre = genre;
-        }
-        buildGenreLegend();
-        updateStats();
-      });
-    });
-  }
-
-  // ─── Stats ────────────────────────────────────────────────────────────────
+  // ─── Stats
 
   function updateStats() {
     var statDJs = document.getElementById('statDJs');
@@ -851,13 +797,9 @@
       else artistConnCount++;
     });
 
-    var visibleCount = filteredGenre
-      ? nodes.filter(function(n) { return n.genre === filteredGenre; }).length
-      : nodes.length;
-
     if (statDJs) statDJs.textContent = nodes.length;
     if (statConns) statConns.textContent = links.length;
-    if (statVis) statVis.textContent = visibleCount;
+    if (statVis) statVis.textContent = nodes.length;
     if (statFromTracklists) statFromTracklists.textContent = trackConnCount;
     if (statArtistBridges) statArtistBridges.textContent = artistConnCount;
   }
