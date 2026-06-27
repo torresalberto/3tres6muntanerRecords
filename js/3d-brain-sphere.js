@@ -52,6 +52,7 @@
   var nodeElements = [];
   var linkElements = [];
   var labelElements = [];
+  var crossRefData = null;
 
   // ─── Data Loading ─────────────────────────────────────────────────────────
 
@@ -60,7 +61,7 @@
     var indexData = await indexRes.json();
 
     var crossRefRes = await fetch('data/djs/cross-references.json');
-    var crossRefData = await crossRefRes.json();
+    crossRefData = await crossRefRes.json();
 
     var djsList = indexData.djs || [];
     nodes = [];
@@ -690,38 +691,95 @@
     var panel = document.getElementById('networkInfo');
     if (!panel) return;
 
-    var conns = [];
-    links.forEach(function(l) {
-      if (l.source === node.id) {
-        conns.push({ dj: nodeMap[l.target], type: l.type });
-      } else if (l.target === node.id) {
-        conns.push({ dj: nodeMap[l.source], type: l.type });
-      }
-    });
+    // Find all shared tracks for this DJ
+    var sharedTracks = [];
+    if (crossRefData && crossRefData.shared_tracks) {
+      crossRefData.shared_tracks.forEach(function(st) {
+        if (st.djs && st.djs.indexOf(node.id) >= 0) {
+          sharedTracks.push(st);
+        }
+      });
+    }
+
+    // Find all shared artists for this DJ
+    var sharedArtists = [];
+    if (crossRefData && crossRefData.shared_artists) {
+      crossRefData.shared_artists.forEach(function(sa) {
+        if (sa.djs && sa.djs.indexOf(node.id) >= 0) {
+          sharedArtists.push(sa);
+        }
+      });
+    }
 
     var html = '';
     if (node.image) {
-      html += '<img src="' + node.image + '" alt="' + node.name + '" style="width:100%;max-height:200px;object-fit:cover;border-radius:8px;margin-bottom:12px;">';
+      html += '<img src="' + node.image + '" alt="' + node.name + '" style="width:100%;max-height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px;">';
     }
-    html += '<h3 style="margin:0 0 4px;color:#ff4d00;">' + node.name + '</h3>';
-    html += '<div style="color:rgba(255,255,255,0.6);margin-bottom:12px;">' + node.genre + '</div>';
+    html += '<h3 style="margin:0 0 4px;color:#ff4d00;font-size:1.2rem;">' + node.name + '</h3>';
+    html += '<div style="color:rgba(255,255,255,0.6);margin-bottom:16px;font-size:0.85rem;">' + node.genre + '</div>';
 
-    if (conns.length > 0) {
-      html += '<div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:6px;">CONNECTIONS (' + conns.length + ')</div>';
-      html += '<div style="max-height:300px;overflow-y:auto;">';
-      conns.forEach(function(c) {
-        var typeIcon = c.type === 'track' ? '♪' : '🎤';
-        var typeColor = c.type === 'track' ? '#ff4d00' : '#42a5f5';
-        html += '<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.05);">';
-        html += '<span style="color:' + typeColor + ';font-size:14px;">' + typeIcon + '</span>';
-        html += '<span style="color:white;font-size:12px;">' + (c.dj ? c.dj.name : 'Unknown') + '</span>';
-        html += '<span style="color:rgba(255,255,255,0.3);font-size:10px;margin-left:auto;">' + c.type + '</span>';
+    // Shared Tracks section
+    if (sharedTracks.length > 0) {
+      html += '<div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase;">Shared Tracks (' + sharedTracks.length + ')</div>';
+      html += '<div style="max-height:350px;overflow-y:auto;margin-bottom:16px;">';
+      sharedTracks.forEach(function(st) {
+        var trackName = st.track;
+        var otherDjs = st.djs.filter(function(d) { return d !== node.id; });
+        var setsForTrack = st.sets || [];
+
+        html += '<div style="margin-bottom:12px;padding:8px;background:rgba(255,77,0,0.06);border-radius:8px;border-left:3px solid #ff4d00;">';
+        html += '<div style="color:#ff4d00;font-size:13px;font-weight:600;margin-bottom:4px;">♪ ' + trackName + '</div>';
+        html += '<div style="font-size:11px;color:rgba(255,255,255,0.7);margin-bottom:4px;">Also played by:</div>';
+        otherDjs.forEach(function(djId) {
+          var djNode = nodeMap[djId];
+          var djName = djNode ? djNode.name : djId;
+          html += '<div style="color:rgba(255,255,255,0.9);font-size:12px;padding:1px 0;">• ' + djName + '</div>';
+        });
+
+        if (setsForTrack.length > 0) {
+          html += '<div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;">Sets:</div>';
+          setsForTrack.forEach(function(s) {
+            var setTitle = typeof s === 'object' ? s.title : s;
+            var setArtist = typeof s === 'object' ? (s.artist || '') : '';
+            var setArtistName = nodeMap[setArtist] ? nodeMap[setArtist].name : setArtist;
+            html += '<div style="color:rgba(255,255,255,0.5);font-size:10px;padding:1px 0;">— ' + setTitle;
+            if (setArtistName) html += ' <span style="color:rgba(255,255,255,0.3);">(' + setArtistName + ')</span>';
+            html += '</div>';
+          });
+        }
         html += '</div>';
       });
       html += '</div>';
     }
 
-    html += '<a href="dj-library.html" style="display:inline-block;margin-top:12px;color:#ff4d00;text-decoration:none;font-size:12px;font-weight:600;">Ver en DJ Library →</a>';
+    // Shared Artists section
+    if (sharedArtists.length > 0) {
+      html += '<div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase;">Shared Artists (' + sharedArtists.length + ')</div>';
+      html += '<div style="max-height:250px;overflow-y:auto;margin-bottom:12px;">';
+      sharedArtists.forEach(function(sa) {
+        var otherDjs = sa.djs.filter(function(d) { return d !== node.id; });
+        var tracks = sa.tracks || [];
+        html += '<div style="margin-bottom:8px;padding:8px;background:rgba(66,165,245,0.06);border-radius:8px;border-left:3px solid #42a5f5;">';
+        html += '<div style="color:#42a5f5;font-size:13px;font-weight:600;margin-bottom:2px;">🎤 ' + sa.artist + '</div>';
+        if (tracks.length > 0) {
+          html += '<div style="font-size:11px;color:rgba(255,255,255,0.6);">Tracks: ' + tracks.join(', ') + '</div>';
+        }
+        html += '<div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:3px;">Also played by: ';
+        html += otherDjs.map(function(djId) {
+          var djNode = nodeMap[djId];
+          return djNode ? djNode.name : djId;
+        }).join(', ');
+        html += '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+
+    if (sharedTracks.length === 0 && sharedArtists.length === 0) {
+      html += '<div style="color:rgba(255,255,255,0.3);font-size:13px;text-align:center;padding:20px 0;">No shared tracks or artists found in the library yet.</div>';
+    }
+
+    html += '<a href="dj-library.html" style="display:inline-block;margin-top:12px;padding:8px 16px;background:rgba(255,77,0,0.1);border:1px solid rgba(255,77,0,0.3);border-radius:6px;color:#ff4d00;text-decoration:none;font-size:12px;font-weight:600;text-align:center;">Ver en DJ Library →</a>';
 
     panel.innerHTML = html;
     panel.style.display = 'block';
