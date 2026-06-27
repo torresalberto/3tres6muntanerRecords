@@ -721,7 +721,7 @@
       html += '</div>';
     }
 
-    html += '<a href="dj-library.html?id=' + node.id + '" style="display:inline-block;margin-top:12px;color:#ff4d00;text-decoration:none;font-size:12px;font-weight:600;">Ver en DJ Library →</a>';
+    html += '<a href="dj-library.html" style="display:inline-block;margin-top:12px;color:#ff4d00;text-decoration:none;font-size:12px;font-weight:600;">Ver en DJ Library →</a>';
 
     panel.innerHTML = html;
     panel.style.display = 'block';
