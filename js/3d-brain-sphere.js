@@ -835,7 +835,6 @@
     relaxPositions();
     createSVGElements();
     setupInteractions();
-    buildGenreLegend();
     updateStats();
     animate();
 
