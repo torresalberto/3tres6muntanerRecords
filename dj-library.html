@@ -325,6 +325,7 @@
               return Promise.all(setPromises);
             })
             .then(function () {
+              updateStats();
               renderGrid(allDjs);
               initSearch();
               loadGraph();
