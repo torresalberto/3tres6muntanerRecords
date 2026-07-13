@@ -1,0 +1,126 @@
+{
+  "venues": [
+    {
+      "id": "les-enfants-brillants",
+      "name": "Les Enfants Brillants",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.3780,
+        "lng": 2.1737
+      },
+      "address": "Carrer de Guàrdia, 3, 08002 Barcelona",
+      "genres": ["House", "Techno", "Disco"],
+      "curated_by": "3tres6 crew",
+      "notes": "Intimate club in the heart of El Raval. Known for underground electronic music.",
+      "links": {
+        "ra": "https://ra.co/clubs/195409",
+        "instagram": "https://www.instagram.com/lesenfantsclub/",
+        "website": "https://www.lesenfantsclub.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "studio-stereo",
+      "name": "Studio Stereo",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.3833,
+        "lng": 2.1689
+      },
+      "address": "08007 Barcelona",
+      "genres": ["House", "Techno", "Ambient"],
+      "curated_by": "3tres6 crew",
+      "notes": "Audiophile social club. Hi-Fi sound system, vinyl turntables, rotary mixers. 19th-century Catalan estate transformed into a haven for sound.",
+      "links": {
+        "ra": "https://ra.co/clubs/220017",
+        "instagram": "https://www.instagram.com/studiostereoclub/"
+      },
+      "capacity": 150,
+      "soundsystem": "Hi-Fi"
+    },
+    {
+      "id": "yuyu",
+      "name": "Yuyu",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.4213,
+        "lng": -99.1531
+      },
+      "address": "Dr. Carmona y Valle 129, Juárez, CDMX",
+      "genres": ["House", "Techno", "Disco"],
+      "curated_by": "3tres6 crew",
+      "notes": "Iconic CDMX club. Reopened at new location. Martin Audio sound system.",
+      "links": {
+        "ra": "https://ra.co/clubs/144659",
+        "instagram": "https://www.instagram.com/yuyucineclub/"
+      },
+      "capacity": null,
+      "soundsystem": "Martin Audio Blackline X Series"
+    },
+    {
+      "id": "funk-club",
+      "name": "Fünk",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.4102,
+        "lng": -99.1675
+      },
+      "address": "Av. Insurgentes Sur 377, Hipódromo Condesa, CDMX",
+      "genres": ["House", "Techno", "Funk"],
+      "curated_by": "3tres6 crew",
+      "notes": "Basement club in Condesa. Powered by Funktion One sound system.",
+      "links": {
+        "ra": "https://ra.co/clubs/176300",
+        "instagram": "https://www.instagram.com/funk_club/",
+        "website": "https://www.funkclub.mx/"
+      },
+      "capacity": null,
+      "soundsystem": "Funktion One"
+    },
+    {
+      "id": "drama-radio",
+      "name": "Drama Radio",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.4146,
+        "lng": -99.1614
+      },
+      "address": "Querétaro 188, Roma Norte, CDMX",
+      "genres": ["House", "Techno", "Disco", "Ambient"],
+      "curated_by": "3tres6 crew",
+      "notes": "Multifaceted space: independent radio, bar, and cinema. Record store, wines, merch, music, books and café. Born in 2023.",
+      "links": {
+        "instagram": "https://www.instagram.com/dramaradiobar/",
+        "website": "https://dramaradio.mx/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    }
+  ],
+  "cities": [
+    {
+      "name": "Barcelona",
+      "country": "Spain",
+      "center": {
+        "lat": 41.3851,
+        "lng": 2.1734
+      },
+      "zoom": 14
+    },
+    {
+      "name": "Mexico City",
+      "country": "Mexico",
+      "center": {
+        "lat": 19.4126,
+        "lng": -99.1660
+      },
+      "zoom": 14
+    }
+  ]
+}
