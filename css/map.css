@@ -106,6 +106,30 @@
   min-height: 600px;
 }
 
+/* Responsive: stack map + sidebar on mobile */
+@media (max-width: 1024px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: auto;
+  }
+
+  .map-sidebar {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-layout {
+    min-height: 500px;
+  }
+
+  .map-sidebar {
+    max-height: 35vh;
+  }
+}
+
 /* Map Container */
 .map-container {
   position: relative;

@@ -722,28 +722,68 @@
 .dj-card-expanded .expanded-tracklist table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
-.dj-card-expanded .expanded-tracklist th {
+.dj-card-expanded .expanded-tracklist thead th {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+  z-index: 10;
   text-align: left;
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 500;
-  padding: 0.4rem 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
+.dj-card-expanded .expanded-tracklist th,
 .dj-card-expanded .expanded-tracklist td {
-  padding: 0.35rem 0.5rem;
-  color: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+}
+
+.dj-card-expanded .expanded-tracklist td {
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .dj-card-expanded .expanded-tracklist tr:hover td {
-  background: rgba(255, 77, 0, 0.05);
+  background: rgba(255, 77, 0, 0.08);
+}
+
+.dj-card-expanded .expanded-tracklist .track-time {
+  color: #ff4d00;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.dj-card-expanded .expanded-tracklist .track-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dj-card-expanded .expanded-tracklist .status-confirmed {
+  background: rgba(0, 255, 100, 0.15);
+  color: #00ff64;
+}
+
+.dj-card-expanded .expanded-tracklist .status-id {
+  background: rgba(255, 77, 0, 0.15);
+  color: #ff4d00;
+}
+
+.dj-card-expanded .expanded-tracklist .status-unidentified {
+  background: rgba(255, 77, 0, 0.15);
+  color: #ff4d00;
 }
 
 .dj-gallery-detail {

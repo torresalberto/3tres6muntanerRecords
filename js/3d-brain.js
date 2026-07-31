@@ -14,7 +14,8 @@ window.Muntaner336.init3DBrain = function () {
     init() {
       const welcomeScreen = document.getElementById('welcomeScreen');
       const welcomeEnterBtn = document.getElementById('welcomeEnterBtn');
-      const welcomeSkipBtn = document.getElementById('welcomeSkipBtn');
+      const welcomeDismiss = document.getElementById('welcomeDismiss');
+      const welcomeHelpBtn = document.getElementById('welcomeHelpBtn');
       const helpModal = document.getElementById('helpModal');
       const helpClose = document.getElementById('helpClose');
       const helpEnterBtn = document.getElementById('helpEnterBtn');
@@ -31,13 +32,24 @@ window.Muntaner336.init3DBrain = function () {
       }
 
       welcomeEnterBtn?.addEventListener('click', () => this.enter());
-      welcomeSkipBtn?.addEventListener('click', () => this.showHelp());
+      welcomeDismiss?.addEventListener('click', () => this.enter());
+      welcomeHelpBtn?.addEventListener('click', () => this.showHelp());
       helpClose?.addEventListener('click', () => this.hideHelp());
       helpEnterBtn?.addEventListener('click', () => this.enter());
 
       // Hide help modal when clicking outside
       helpModal?.addEventListener('click', (e) => {
         if (e.target === helpModal) this.hideHelp();
+      });
+
+      // ESC key closes help modal
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && helpModal && helpModal.classList.contains('active')) {
+          this.hideHelp();
+        }
+        if (e.key === 'Escape' && welcomeScreen && !welcomeScreen.classList.contains('hidden')) {
+          this.enter();
+        }
       });
     },
 
@@ -934,7 +946,7 @@ window.Muntaner336.init3DBrain = function () {
   document.getElementById('helpStatConns').textContent = links.length;
 
   // Count unique tracks in connections
-  const uniqueTracks = new Set(links.map(l => l.track)).size;
+  const uniqueTracks = new Set(links.map((l) => l.track)).size;
   document.getElementById('helpStatTracks').textContent = uniqueTracks;
 
   // Add tracklist source indicator to stats

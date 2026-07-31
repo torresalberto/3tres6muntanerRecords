@@ -5385,18 +5385,68 @@
     <meta property="og:title" content="3TRES6 Neural — Conexiones entre DJs" />
   </head>
   <body>
-    <!-- Welcome Screen -->
+<!-- Welcome Screen -->
     <div class="welcome-screen" id="welcomeScreen">
       <div class="welcome-content">
+        <button class="welcome-dismiss" id="welcomeDismiss" aria-label="Saltar">×</button>
         <div class="welcome-logo">3TRES6</div>
         <div class="welcome-tagline">DJ Connection Neural Network</div>
         <div class="welcome-sub">Explore connections between DJs via shared tracks</div>
+        <div class="welcome-stats">
+          <span class="welcome-stat"><strong>48</strong> DJs</span>
+          <span class="welcome-stat"><strong>305</strong> Tracks</span>
+          <span class="welcome-stat"><strong>16</strong> Conexiones</span>
+        </div>
         <button class="welcome-enter-btn" id="welcomeEnterBtn">
           <span class="play-icon">▶</span>
           Explorar
         </button>
-        <button class="welcome-skip-btn" id="welcomeSkipBtn">¿Qué es esto? → Ver ayuda</button>
+        <button class="welcome-help-btn" id="welcomeHelpBtn">¿Qué es esto? → Ver ayuda</button>
       </div>
+    </div>
+
+    <!-- Help Modal for Curious Explorers -->
+    <div class="help-modal" id="helpModal" role="dialog" aria-hidden="true" aria-labelledby="helpTitle">
+      <div class="help-content">
+        <button class="help-close" id="helpClose" aria-label="Cerrar">&times;</button>
+        <h2 id="helpTitle">¿Qué es esta visualización?</h2>
+        <p>
+          Este es un "Neural Network" que mapea las conexiones entre DJs basado en los tracks que
+          comparten en sus sets.
+        </p>
+        <p>
+          Cada punto representa a un DJ. Las líneas que los conectan representan tracks que ambos
+          han tocado.
+        </p>
+        <div class="help-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="helpStatDJs">48</div>
+            <div class="stat-label">DJs</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="helpStatConns">16</div>
+            <div class="stat-label">Conexiones</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="helpStatTracks">305</div>
+            <div class="stat-label">Tracks</div>
+          </div>
+        </div>
+        <p><strong>Cómo usarlo:</strong></p>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem">
+          <li>Haz clic en cualquier punto para ver información del DJ</li>
+          <li>Las líneas verdes son conexiones (tracks compartidos)</li>
+          <li>Los puntos naranjas son DJs principales</li>
+          <li>Arrastra para rotar la vista 3D</li>
+          <li>Usa la rueda del mouse para hacer zoom</li>
+        </ul>
+        <div class="help-actions">
+          <button class="help-btn primary" id="helpEnterBtn">
+            <span class="play-icon">▶</span> Explorar
+          </button>
+        </div>
+      </div>
+    </div>
     </div>
 
     <!-- Help Modal for Curious Explorers -->
