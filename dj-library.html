@@ -22,7 +22,7 @@
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-      onload="this.rel='stylesheet'"
+      onload="this.rel = 'stylesheet'"
     />
     <noscript>
       <link
@@ -86,12 +86,7 @@
           <span class="logo-subtitle">RECORDS</span>
         </a>
 
-        <button
-          class="mobile-menu-btn"
-          id="mobileMenuBtn"
-          aria-label="Menú"
-          aria-expanded="false"
-        >
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -130,9 +125,7 @@
             >
               <circle cx="9" cy="21" r="1"></circle>
               <circle cx="20" cy="21" r="1"></circle>
-              <path
-                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-              ></path>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
             <span class="cart-count" id="cartCount">0</span>
           </a>
@@ -150,10 +143,7 @@
         <a href="/3tres6muntanerRecords/mapa.html">Mapa</a>
         <div class="mobile-nav-group-label">Redes</div>
         <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
-        <a
-          href="https://www.discogs.com/seller/3tres6records"
-          target="_blank"
-          rel="noopener"
+        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
           >Discogs</a
         >
       </nav>
@@ -394,26 +384,43 @@
           /* Thumbnail */
           var thumbUrl = dj.image || '';
           if (!thumbUrl && dj._setsData && dj._setsData[0] && dj._setsData[0].youtube_embed_id) {
-            thumbUrl = 'https://i.ytimg.com/vi/' + dj._setsData[0].youtube_embed_id + '/hqdefault.jpg';
+            thumbUrl =
+              'https://i.ytimg.com/vi/' + dj._setsData[0].youtube_embed_id + '/hqdefault.jpg';
           }
 
           card.innerHTML =
             '<div class="dj-card-image">' +
             (thumbUrl
-              ? '<img src="' + thumbUrl + '" alt="' + escHtml(dj.name) + '" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML=\'<div class=\\\'dj-card-placeholder\\\'>🎧</div>\'" />'
+              ? '<img src="' +
+                thumbUrl +
+                '" alt="' +
+                escHtml(dj.name) +
+                '" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML=\'<div class=\\\'dj-card-placeholder\\\'>🎧</div>\'" />'
               : '<div class="dj-card-placeholder">🎧</div>') +
             '</div>' +
             '<div class="dj-card-body">' +
-            '<h3 class="dj-card-name">' + escHtml(dj.name) + '</h3>' +
+            '<h3 class="dj-card-name">' +
+            escHtml(dj.name) +
+            '</h3>' +
             '<div class="dj-card-meta">' +
-            setsCount + ' set' + (setsCount !== 1 ? 's' : '') +
-            ' · ' + trackCount + ' tracks' +
+            setsCount +
+            ' set' +
+            (setsCount !== 1 ? 's' : '') +
+            ' · ' +
+            trackCount +
+            ' tracks' +
             '</div>' +
             '<div class="dj-card-completion">' +
-            '<div class="completion-bar"><div class="completion-fill" style="width:' + completion + '%"></div></div>' +
-            '<span class="completion-label">' + completion + '% identificados</span>' +
+            '<div class="completion-bar"><div class="completion-fill" style="width:' +
+            completion +
+            '%"></div></div>' +
+            '<span class="completion-label">' +
+            completion +
+            '% identificados</span>' +
             '</div>' +
-            '<button class="dj-card-toggle" data-dj-id="' + dj.id + '">' +
+            '<button class="dj-card-toggle" data-dj-id="' +
+            dj.id +
+            '">' +
             'Ver tracklist ▸' +
             '</button>' +
             '</div>';
@@ -467,8 +474,12 @@
               html +=
                 '<div class="expanded-video">' +
                 '<div class="video-wrapper">' +
-                '<iframe src="https://www.youtube-nocookie.com/embed/' + s.youtube_embed_id + '" ' +
-                'title="' + escHtml(s.title || dj.name) + '" ' +
+                '<iframe src="https://www.youtube-nocookie.com/embed/' +
+                s.youtube_embed_id +
+                '" ' +
+                'title="' +
+                escHtml(s.title || dj.name) +
+                '" ' +
                 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
                 'allowfullscreen loading="lazy"></iframe>' +
                 '</div>' +
@@ -482,37 +493,70 @@
             html += '<div class="set-meta">';
             if (s.venue) html += '<span>📍 ' + escHtml(s.venue) + '</span>';
             if (s.date) html += '<span>📅 ' + escHtml(s.date) + '</span>';
-            if (s.duration_formatted) html += '<span>⏱️ ' + escHtml(s.duration_formatted) + '</span>';
+            if (s.duration_formatted)
+              html += '<span>⏱️ ' + escHtml(s.duration_formatted) + '</span>';
             html += '</div></div>';
 
             /* Tracklist */
             var tracklist = s.tracklist || [];
             if (tracklist.length) {
               html += '<div class="expanded-tracklist">';
-              html += '<div class="section-label">🎵 Tracklist (' + tracklist.length + ' tracks)</div>';
-              html += '<table class="tracklist-table"><thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead><tbody>';
+              html +=
+                '<div class="section-label">🎵 Tracklist (' + tracklist.length + ' tracks)</div>';
+              html +=
+                '<div class="expanded-tracklist-wrapper"><table class="tracklist-table"><thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead><tbody>';
               tracklist.forEach(function (t) {
-                var statusClass = t.status === 'confirmed' ? 'status-confirmed' : t.status === 'id' ? 'status-id' : 'status-pending';
-                var statusLabel = t.status === 'confirmed' ? '✓ confirmed' : t.status === 'id' ? '? ID' : '— pending';
+                var statusClass =
+                  t.status === 'confirmed'
+                    ? 'status-confirmed'
+                    : t.status === 'id'
+                      ? 'status-id'
+                      : 'status-pending';
+                var statusLabel =
+                  t.status === 'confirmed'
+                    ? '✓ confirmed'
+                    : t.status === 'id'
+                      ? '? ID'
+                      : '— pending';
                 html +=
                   '<tr>' +
-                  '<td>' + (t.position || '') + '</td>' +
-                  '<td><span class="track-time">' + (t.timestamp || '--:--') + '</span></td>' +
-                  '<td>' + escHtml(t.artist || '') + '</td>' +
-                  '<td>' + escHtml(t.title || '') + '</td>' +
-                  '<td><span class="track-status ' + statusClass + '">' + statusLabel + '</span></td>' +
+                  '<td>' +
+                  (t.position || '') +
+                  '</td>' +
+                  '<td><span class="track-time">' +
+                  (t.timestamp || '--:--') +
+                  '</span></td>' +
+                  '<td>' +
+                  escHtml(t.artist || '') +
+                  '</td>' +
+                  '<td>' +
+                  escHtml(t.title || '') +
+                  '</td>' +
+                  '<td><span class="track-status ' +
+                  statusClass +
+                  '">' +
+                  statusLabel +
+                  '</span></td>' +
                   '</tr>';
               });
-              html += '</tbody></table></div>';
+              html += '</tbody></table></div></div>';
             }
 
             /* Facts */
-            var confirmed = tracklist.filter(function (t) { return t.status === 'confirmed'; }).length;
+            var confirmed = tracklist.filter(function (t) {
+              return t.status === 'confirmed';
+            }).length;
             html += '<div class="facts-section">';
             html += '<div class="section-label">📊 Datos</div>';
             html += '<div class="facts-grid">';
-            html += '<div class="fact-card"><div class="fact-number">' + (s.view_count || 0) + '</div><div class="fact-label">total comments</div></div>';
-            html += '<div class="fact-card"><div class="fact-number">' + confirmed + '</div><div class="fact-label">confirmed tracks</div></div>';
+            html +=
+              '<div class="fact-card"><div class="fact-number">' +
+              (s.view_count || 0) +
+              '</div><div class="fact-label">total comments</div></div>';
+            html +=
+              '<div class="fact-card"><div class="fact-number">' +
+              confirmed +
+              '</div><div class="fact-label">confirmed tracks</div></div>';
             html += '</div></div>';
           });
 
@@ -536,7 +580,9 @@
           if (typeof d3 === 'undefined') {
             console.warn('D3.js not loaded, skipping graph.');
             var gc = document.getElementById('djGraphContainer');
-            if (gc) gc.innerHTML = '<p class="dj-graph-fallback">Visualización del grafo no disponible.</p>';
+            if (gc)
+              gc.innerHTML =
+                '<p class="dj-graph-fallback">Visualización del grafo no disponible.</p>';
             return;
           }
 
@@ -580,7 +626,8 @@
           var width = container.clientWidth || 800;
           var height = Math.min(500, width * 0.6);
 
-          var svg = d3.select(container)
+          var svg = d3
+            .select(container)
             .append('svg')
             .attr('width', '100%')
             .attr('height', height)
@@ -592,18 +639,30 @@
             linkedIds.add(typeof l.source === 'object' ? l.source.id : l.source);
             linkedIds.add(typeof l.target === 'object' ? l.target.id : l.target);
           });
-          var visibleNodes = nodes.filter(function (n) { return linkedIds.has(n.id); });
+          var visibleNodes = nodes.filter(function (n) {
+            return linkedIds.has(n.id);
+          });
           if (!visibleNodes.length) {
             visibleNodes = nodes.slice(0, 20);
           }
 
-          var simulation = d3.forceSimulation(visibleNodes)
-            .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(100))
+          var simulation = d3
+            .forceSimulation(visibleNodes)
+            .force(
+              'link',
+              d3
+                .forceLink(links)
+                .id(function (d) {
+                  return d.id;
+                })
+                .distance(100)
+            )
             .force('charge', d3.forceManyBody().strength(-150))
             .force('center', d3.forceCenter(width / 2, height / 2))
             .force('collision', d3.forceCollide().radius(30));
 
-          var link = svg.append('g')
+          var link = svg
+            .append('g')
             .selectAll('line')
             .data(links)
             .enter()
@@ -611,59 +670,81 @@
             .attr('stroke', 'rgba(255, 77, 0, 0.2)')
             .attr('stroke-width', 1);
 
-          var node = svg.append('g')
+          var node = svg
+            .append('g')
             .selectAll('g')
             .data(visibleNodes)
             .enter()
             .append('g')
-            .call(d3.drag()
-              .on('start', dragstarted)
-              .on('drag', dragged)
-              .on('end', dragended));
+            .call(d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended));
 
-          node.append('circle')
-            .attr('r', function (d) { return Math.max(6, Math.min(18, d.tracks / 3 + 4)); })
+          node
+            .append('circle')
+            .attr('r', function (d) {
+              return Math.max(6, Math.min(18, d.tracks / 3 + 4));
+            })
             .attr('fill', '#ff4d00')
             .attr('stroke', '#0a0a0a')
             .attr('stroke-width', 2)
             .style('cursor', 'pointer');
 
-          node.append('text')
-            .text(function (d) { return d.name; })
+          node
+            .append('text')
+            .text(function (d) {
+              return d.name;
+            })
             .attr('x', 0)
-            .attr('y', function (d) { return Math.max(6, Math.min(18, d.tracks / 3 + 4)) + 14; })
+            .attr('y', function (d) {
+              return Math.max(6, Math.min(18, d.tracks / 3 + 4)) + 14;
+            })
             .attr('text-anchor', 'middle')
             .attr('fill', 'rgba(255,255,255,0.6)')
             .attr('font-size', '10px')
             .attr('font-family', "'Space Grotesk', sans-serif");
 
-          node.on('mouseover', function (event, d) {
-            link.attr('stroke', function (l) {
-              var sid = typeof l.source === 'object' ? l.source.id : l.source;
-              var tid = typeof l.target === 'object' ? l.target.id : l.target;
-              return sid === d.id || tid === d.id ? '#ff4d00' : 'rgba(255, 77, 0, 0.1)';
-            }).attr('stroke-width', function (l) {
-              var sid = typeof l.source === 'object' ? l.source.id : l.source;
-              var tid = typeof l.target === 'object' ? l.target.id : l.target;
-              return sid === d.id || tid === d.id ? 2.5 : 1;
+          node
+            .on('mouseover', function (event, d) {
+              link
+                .attr('stroke', function (l) {
+                  var sid = typeof l.source === 'object' ? l.source.id : l.source;
+                  var tid = typeof l.target === 'object' ? l.target.id : l.target;
+                  return sid === d.id || tid === d.id ? '#ff4d00' : 'rgba(255, 77, 0, 0.1)';
+                })
+                .attr('stroke-width', function (l) {
+                  var sid = typeof l.source === 'object' ? l.source.id : l.source;
+                  var tid = typeof l.target === 'object' ? l.target.id : l.target;
+                  return sid === d.id || tid === d.id ? 2.5 : 1;
+                });
+              d3.select(this)
+                .select('circle')
+                .attr('r', function () {
+                  return Math.max(8, Math.min(22, d.tracks / 3 + 6));
+                });
+            })
+            .on('mouseout', function () {
+              link.attr('stroke', 'rgba(255, 77, 0, 0.2)').attr('stroke-width', 1);
+              node.select('circle').attr('r', function (d) {
+                return Math.max(6, Math.min(18, d.tracks / 3 + 4));
+              });
             });
-            d3.select(this).select('circle').attr('r', function () {
-              return Math.max(8, Math.min(22, d.tracks / 3 + 6));
-            });
-          }).on('mouseout', function () {
-            link.attr('stroke', 'rgba(255, 77, 0, 0.2)').attr('stroke-width', 1);
-            node.select('circle').attr('r', function (d) {
-              return Math.max(6, Math.min(18, d.tracks / 3 + 4));
-            });
-          });
 
           simulation.on('tick', function () {
             link
-              .attr('x1', function (d) { return d.source.x; })
-              .attr('y1', function (d) { return d.source.y; })
-              .attr('x2', function (d) { return d.target.x; })
-              .attr('y2', function (d) { return d.target.y; });
-            node.attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+              .attr('x1', function (d) {
+                return d.source.x;
+              })
+              .attr('y1', function (d) {
+                return d.source.y;
+              })
+              .attr('x2', function (d) {
+                return d.target.x;
+              })
+              .attr('y2', function (d) {
+                return d.target.y;
+              });
+            node.attr('transform', function (d) {
+              return 'translate(' + d.x + ',' + d.y + ')';
+            });
           });
 
           function dragstarted(event, d) {
