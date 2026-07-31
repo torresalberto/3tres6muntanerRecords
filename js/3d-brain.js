@@ -7,6 +7,90 @@ window.Muntaner336.init3DBrain = function () {
   var brain = { rafIds: [], listeners: [] };
   window.Muntaner336._brain = brain;
 
+  // ======== WELCOME SCREEN & HELP MODAL ========
+  const WelcomeScreen = {
+    STORAGE_KEY: 'muntaner336_welcome_seen',
+
+    init() {
+      const welcomeScreen = document.getElementById('welcomeScreen');
+      const welcomeEnterBtn = document.getElementById('welcomeEnterBtn');
+      const welcomeSkipBtn = document.getElementById('welcomeSkipBtn');
+      const helpModal = document.getElementById('helpModal');
+      const helpClose = document.getElementById('helpClose');
+      const helpEnterBtn = document.getElementById('helpEnterBtn');
+
+      // Check if user has seen welcome before
+      const hasSeen = localStorage.getItem(this.STORAGE_KEY) === 'true';
+
+      if (hasSeen && welcomeScreen) {
+        welcomeScreen.classList.add('hidden');
+        // Reveal the 3D brain after a short delay
+        setTimeout(() => {
+          document.getElementById('network-container')?.classList.remove('hidden');
+        }, 300);
+      }
+
+      welcomeEnterBtn?.addEventListener('click', () => this.enter());
+      welcomeSkipBtn?.addEventListener('click', () => this.showHelp());
+      helpClose?.addEventListener('click', () => this.hideHelp());
+      helpEnterBtn?.addEventListener('click', () => this.enter());
+
+      // Hide help modal when clicking outside
+      helpModal?.addEventListener('click', (e) => {
+        if (e.target === helpModal) this.hideHelp();
+      });
+    },
+
+    enter() {
+      const welcomeScreen = document.getElementById('welcomeScreen');
+      const helpModal = document.getElementById('helpModal');
+
+      // Hide welcome screen
+      if (welcomeScreen) {
+        welcomeScreen.classList.add('hidden');
+        localStorage.setItem(this.STORAGE_KEY, 'true');
+      }
+
+      // Show the 3D brain
+      setTimeout(() => {
+        document.getElementById('network-container')?.classList.remove('hidden');
+        this.trackEvent('welcome_completed');
+      }, 300);
+    },
+
+    showHelp() {
+      const welcomeScreen = document.getElementById('welcomeScreen');
+      const helpModal = document.getElementById('helpModal');
+
+      if (welcomeScreen) welcomeScreen.classList.add('hidden');
+      if (helpModal) helpModal.classList.add('active');
+
+      this.trackEvent('welcome_help_shown');
+    },
+
+    hideHelp() {
+      const welcomeScreen = document.getElementById('welcomeScreen');
+      const helpModal = document.getElementById('helpModal');
+
+      if (helpModal) helpModal.classList.remove('active');
+      if (welcomeScreen) welcomeScreen.classList.remove('hidden');
+
+      this.trackEvent('welcome_help_closed');
+    },
+
+    trackEvent(eventName, params = {}) {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, {
+          ...params,
+          page: 'dj-hub',
+        });
+      }
+    },
+  };
+
+  // Initialize welcome screen first
+  WelcomeScreen.init();
+
   // ======== DATA ========
   const GENRE_COLORS = {
     House: '#ff4d00',
@@ -844,6 +928,14 @@ window.Muntaner336.init3DBrain = function () {
   document.getElementById('statDJs').textContent = nodes.length;
   document.getElementById('statConns').textContent = links.length;
   document.getElementById('statVis').textContent = nodes.length;
+
+  // Update help modal stats
+  document.getElementById('helpStatDJs').textContent = nodes.length;
+  document.getElementById('helpStatConns').textContent = links.length;
+
+  // Count unique tracks in connections
+  const uniqueTracks = new Set(links.map(l => l.track)).size;
+  document.getElementById('helpStatTracks').textContent = uniqueTracks;
 
   // Add tracklist source indicator to stats
   const tracklistCount = TRACKLIST_CONNECTIONS.length;

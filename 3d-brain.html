@@ -10,11 +10,20 @@
       content="Interactive 3D sphere visualization of DJ connections via shared tracks."
     />
     <!-- Preload font CSS non-blocking (browser fetches but doesn't block render) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" /></noscript>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    /></noscript>
     <style>
-/* Full styles.css inlined (no render-blocking external request). */
-/* Font loaded via <link rel="preload"> in <head>. */
+      /* Full styles.css inlined (no render-blocking external request). */
+      /* Font loaded via <link rel="preload"> in <head>. */
       /* ========================================
          MUNTANER336 - Complete Stylesheet v3
          With Ticker, Cart, Checkout, Audio Preview
@@ -176,6 +185,110 @@
       }
 
       .welcome-skip-btn:hover {
+        color: var(--color-text);
+      }
+
+      .help-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        padding: 20px;
+      }
+
+      .help-modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .help-content {
+        background: var(--color-bg-card);
+        border-radius: var(--radius-lg);
+        max-width: 500px;
+        width: 100%;
+        padding: 40px;
+        position: relative;
+      }
+
+      .help-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: var(--color-text-muted);
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .help-content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: var(--color-text);
+      }
+
+      .help-content p {
+        color: var(--color-text-muted);
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .help-stats {
+        display: flex;
+        gap: 30px;
+        margin: 20px 0;
+        font-size: 14px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-value {
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--color-accent);
+      }
+
+      .stat-label {
+        color: var(--color-text-muted);
+      }
+
+      .help-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .help-btn {
+        flex: 1;
+        padding: 12px;
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .help-btn.primary {
+        background: var(--color-accent);
+        color: white;
+      }
+
+      .help-btn.secondary {
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
         color: var(--color-text);
       }
 
@@ -422,9 +535,13 @@
 
       .nav-item::before {
         content: '';
-        position: absolute; top: -2px; left: 50%;
+        position: absolute;
+        top: -2px;
+        left: 50%;
         transform: translateX(-50%) scale(0);
-        width: 3px; height: 3px; border-radius: 50%;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
         background: var(--color-accent);
         transition: transform 0.3s ease;
       }
@@ -455,8 +572,6 @@
       .nav-item.affiliate:hover {
         color: rgba(255, 200, 100, 0.8);
       }
-
-
 
       .nav-item.active {
         color: rgba(255, 255, 255, 0.9);
@@ -499,7 +614,10 @@
         min-width: 180px;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease,
+          visibility 0.3s ease;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -518,7 +636,9 @@
         font-weight: 300;
         letter-spacing: 1.5px;
         color: rgba(255, 255, 255, 0.5);
-        transition: color 0.2s ease, background 0.2s ease;
+        transition:
+          color 0.2s ease,
+          background 0.2s ease;
         text-decoration: none;
         text-transform: uppercase;
         white-space: nowrap;
@@ -629,7 +749,9 @@
         z-index: 999;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.4s ease, visibility 0.4s ease;
+        transition:
+          opacity 0.4s ease,
+          visibility 0.4s ease;
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
       }
@@ -706,7 +828,9 @@
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 6px;
-        transition: color 0.3s ease, background 0.3s ease;
+        transition:
+          color 0.3s ease,
+          background 0.3s ease;
         white-space: nowrap;
         flex-shrink: 0;
       }
@@ -753,7 +877,9 @@
         text-decoration: none;
         padding: 8px 16px;
         border-radius: 6px;
-        transition: color 0.3s ease, background 0.3s ease;
+        transition:
+          color 0.3s ease,
+          background 0.3s ease;
         white-space: nowrap;
         flex-shrink: 0;
       }
@@ -822,7 +948,10 @@
         border-radius: 16px;
         padding: 32px 28px;
         text-decoration: none;
-        transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+        transition:
+          border-color 0.3s ease,
+          background 0.3s ease,
+          transform 0.3s ease;
       }
 
       .dj-hub-card:hover {
@@ -3151,7 +3280,9 @@
         overflow: hidden;
         background: var(--color-bg-card);
         border: 1px solid rgba(255, 255, 255, 0.04);
-        transition: border-color 0.2s, transform 0.2s;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
       }
 
       .lineup-card:hover {
@@ -4021,14 +4152,16 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.85);
+        background: rgba(0, 0, 0, 0.85);
         z-index: 10000;
         display: flex;
         align-items: center;
         justify-content: center;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
+        transition:
+          opacity 0.3s,
+          visibility 0.3s;
         overflow-y: auto;
         padding: 2rem;
       }
@@ -4040,7 +4173,7 @@
 
       .event-submit-content {
         background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
-        border: 1px solid rgba(255,77,0,0.2);
+        border: 1px solid rgba(255, 77, 0, 0.2);
         border-radius: 20px;
         max-width: 640px;
         width: 100%;
@@ -4059,7 +4192,7 @@
         width: 56px;
         height: 56px;
         border-radius: 50%;
-        background: rgba(255,77,0,0.1);
+        background: rgba(255, 77, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -4074,7 +4207,7 @@
       }
 
       .submit-subtitle {
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         font-size: 0.9rem;
       }
 
@@ -4084,7 +4217,7 @@
         right: 1.5rem;
         background: none;
         border: none;
-        color: rgba(255,255,255,0.4);
+        color: rgba(255, 255, 255, 0.4);
         font-size: 1.8rem;
         cursor: pointer;
         transition: color 0.2s;
@@ -4116,16 +4249,17 @@
       .form-group label {
         font-size: 0.78rem;
         font-weight: 600;
-        color: rgba(255,255,255,0.6);
+        color: rgba(255, 255, 255, 0.6);
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
 
-      .submit-input, .submit-textarea {
+      .submit-input,
+      .submit-textarea {
         width: 100%;
         padding: 0.8rem 1rem;
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         color: #fff;
         font-size: 0.9rem;
@@ -4134,14 +4268,16 @@
         box-sizing: border-box;
       }
 
-      .submit-input:focus, .submit-textarea:focus {
+      .submit-input:focus,
+      .submit-textarea:focus {
         outline: none;
         border-color: #ff4d00;
-        box-shadow: 0 0 0 3px rgba(255,77,0,0.1);
+        box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.1);
       }
 
-      .submit-input::placeholder, .submit-textarea::placeholder {
-        color: rgba(255,255,255,0.25);
+      .submit-input::placeholder,
+      .submit-textarea::placeholder {
+        color: rgba(255, 255, 255, 0.25);
       }
 
       .submit-textarea {
@@ -4157,9 +4293,9 @@
 
       .add-dj-btn {
         background: none;
-        border: 1px dashed rgba(255,255,255,0.15);
+        border: 1px dashed rgba(255, 255, 255, 0.15);
         border-radius: 8px;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         padding: 0.5rem;
         font-size: 0.78rem;
         cursor: pointer;
@@ -4185,12 +4321,12 @@
       }
 
       .submit-status.success {
-        background: rgba(0,200,100,0.1);
+        background: rgba(0, 200, 100, 0.1);
         color: #00c864;
       }
 
       .submit-status.error {
-        background: rgba(255,23,68,0.1);
+        background: rgba(255, 23, 68, 0.1);
         color: #ff1744;
       }
 
@@ -4223,7 +4359,7 @@
 
       .submit-footer-note {
         text-align: center;
-        color: rgba(255,255,255,0.3);
+        color: rgba(255, 255, 255, 0.3);
         font-size: 0.75rem;
       }
 
@@ -4252,8 +4388,8 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.65rem 1.25rem;
-        background: rgba(255,77,0,0.1);
-        border: 1px solid rgba(255,77,0,0.3);
+        background: rgba(255, 77, 0, 0.1);
+        border: 1px solid rgba(255, 77, 0, 0.3);
         border-radius: 50px;
         color: #ff4d00;
         font-size: 0.85rem;
@@ -4275,7 +4411,7 @@
       }
 
       .loading-events {
-        color: rgba(255,255,255,0.3);
+        color: rgba(255, 255, 255, 0.3);
         text-align: center;
         padding: 2rem;
         font-size: 0.9rem;
@@ -4303,7 +4439,7 @@
         justify-content: center;
         min-width: 56px;
         min-height: 56px;
-        background: rgba(255,77,0,0.1);
+        background: rgba(255, 77, 0, 0.1);
         border-radius: 12px;
         padding: 0.5rem;
         flex-shrink: 0;
@@ -4319,7 +4455,7 @@
       .event-date-month {
         font-size: 0.65rem;
         font-weight: 600;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin-top: 0.15rem;
@@ -4362,12 +4498,12 @@
       }
 
       .free-tag {
-        background: rgba(0,200,100,0.15);
+        background: rgba(0, 200, 100, 0.15);
         color: #00c864;
       }
 
       .paid-tag {
-        background: rgba(255,77,0,0.15);
+        background: rgba(255, 77, 0, 0.15);
         color: #ff4d00;
       }
 
@@ -4376,7 +4512,7 @@
         flex-wrap: wrap;
         gap: 0.5rem 1rem;
         font-size: 0.8rem;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
       }
 
       .event-link {
@@ -4395,7 +4531,9 @@
       /* ===== CLICKABLE CALENDAR DAYS + DAY EVENTS MODAL ===== */
       .calendar-day.clickable {
         cursor: pointer;
-        transition: background 0.15s, transform 0.1s;
+        transition:
+          background 0.15s,
+          transform 0.1s;
       }
       .calendar-day.clickable:hover {
         background: rgba(255, 77, 0, 0.08);
@@ -4413,8 +4551,8 @@
       }
 
       .day-event-card {
-        background: var(--bg-card, rgba(255,255,255,0.03));
-        border: 1px solid var(--border, rgba(255,255,255,0.08));
+        background: var(--bg-card, rgba(255, 255, 255, 0.03));
+        border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
         border-radius: var(--radius, 12px);
         padding: 1.25rem;
         margin-bottom: 1rem;
@@ -4445,11 +4583,11 @@
         flex-wrap: wrap;
         gap: 0.4rem 1rem;
         font-size: 0.8rem;
-        color: rgba(255,255,255,0.55);
+        color: rgba(255, 255, 255, 0.55);
         margin-bottom: 0.65rem;
       }
       .day-event-meta strong {
-        color: rgba(255,255,255,0.85);
+        color: rgba(255, 255, 255, 0.85);
         font-weight: 600;
       }
       .day-event-genres {
@@ -4461,12 +4599,12 @@
       .genre-pill {
         display: inline-block;
         padding: 0.15rem 0.55rem;
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 50px;
         font-size: 0.65rem;
         font-weight: 600;
-        color: rgba(255,255,255,0.7);
+        color: rgba(255, 255, 255, 0.7);
         text-transform: uppercase;
         letter-spacing: 0.04em;
       }
@@ -4476,12 +4614,12 @@
         gap: 0.3rem;
         align-items: center;
         font-size: 0.8rem;
-        color: rgba(255,255,255,0.7);
+        color: rgba(255, 255, 255, 0.7);
         margin-bottom: 0.85rem;
       }
       .djs-label {
         font-weight: 600;
-        color: rgba(255,255,255,0.85);
+        color: rgba(255, 255, 255, 0.85);
         margin-right: 0.2rem;
       }
       .dj-pill {
@@ -4495,9 +4633,9 @@
         color: #ff4d00;
       }
       .dj-pill-tba {
-        background: rgba(255,255,255,0.05);
-        border-color: rgba(255,255,255,0.1);
-        color: rgba(255,255,255,0.4);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.4);
       }
       .recurring-tag {
         display: inline-block;
@@ -4520,7 +4658,9 @@
         font-weight: 700;
         text-decoration: none;
         border-radius: 50px;
-        transition: background 0.2s, transform 0.1s;
+        transition:
+          background 0.2s,
+          transform 0.1s;
       }
       .event-link-primary:hover {
         background: #ff6a26;
@@ -4528,7 +4668,7 @@
       }
       .no-link-msg {
         font-size: 0.75rem;
-        color: rgba(255,255,255,0.35);
+        color: rgba(255, 255, 255, 0.35);
         font-style: italic;
       }
 
@@ -4557,8 +4697,8 @@
       }
 
       .cal-nav {
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         color: #fff;
         font-size: 1.4rem;
         font-weight: 700;
@@ -4595,12 +4735,12 @@
       }
 
       .calendar-day-header {
-        background: rgba(255,255,255,0.03);
+        background: rgba(255, 255, 255, 0.03);
         padding: 0.6rem 0.3rem;
         text-align: center;
         font-size: 0.7rem;
         font-weight: 600;
-        color: rgba(255,255,255,0.4);
+        color: rgba(255, 255, 255, 0.4);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         border-radius: 8px;
@@ -4609,7 +4749,7 @@
       .calendar-day-header span {
         display: block;
         font-size: 0.9rem;
-        color: rgba(255,255,255,0.6);
+        color: rgba(255, 255, 255, 0.6);
         margin-top: 0.15rem;
       }
 
@@ -4620,7 +4760,7 @@
       }
 
       .calendar-day {
-        background: rgba(255,255,255,0.02);
+        background: rgba(255, 255, 255, 0.02);
         border: 1px solid var(--border);
         border-radius: 8px;
         min-height: 80px;
@@ -4638,14 +4778,14 @@
       }
 
       .calendar-day.has-events {
-        background: rgba(255,77,0,0.03);
+        background: rgba(255, 77, 0, 0.03);
       }
 
       .day-number {
         display: block;
         font-size: 0.8rem;
         font-weight: 600;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         margin-bottom: 0.3rem;
       }
 
@@ -4654,7 +4794,7 @@
       }
 
       .no-events-msg {
-        color: rgba(255,255,255,0.2);
+        color: rgba(255, 255, 255, 0.2);
         text-align: center;
         padding: 2rem;
         font-style: italic;
@@ -4688,8 +4828,8 @@
       .brain-preview-section {
         padding: 5rem 2rem;
         background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0f0f0f 100%);
-        border-top: 1px solid rgba(255,255,255,0.05);
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .brain-preview-container {
@@ -4726,7 +4866,7 @@
       }
 
       .brain-preview-content p {
-        color: rgba(255,255,255,0.6);
+        color: rgba(255, 255, 255, 0.6);
         line-height: 1.7;
         margin-bottom: 1.5rem;
         max-width: 500px;
@@ -4739,7 +4879,7 @@
       }
 
       .brain-preview-stats span {
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         font-size: 0.9rem;
       }
 
@@ -4759,7 +4899,9 @@
         border-radius: 12px;
         font-weight: 600;
         font-size: 1rem;
-        transition: background 0.3s, transform 0.3s;
+        transition:
+          background 0.3s,
+          transform 0.3s;
       }
 
       .brain-preview-btn:hover {
@@ -4778,8 +4920,8 @@
         height: 300px;
         position: relative;
         border-radius: 50%;
-        background: radial-gradient(circle at center, rgba(255,77,0,0.05) 0%, transparent 70%);
-        border: 1px solid rgba(255,255,255,0.05);
+        background: radial-gradient(circle at center, rgba(255, 77, 0, 0.05) 0%, transparent 70%);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .brain-node {
@@ -4797,7 +4939,7 @@
       .brain-link {
         position: absolute;
         height: 1px;
-        background: linear-gradient(90deg, rgba(0,200,100,0.4), transparent);
+        background: linear-gradient(90deg, rgba(0, 200, 100, 0.4), transparent);
         left: var(--x1);
         top: var(--y1);
         width: calc((var(--x2) - var(--x1)) * 1px + (var(--y2) - var(--y1)) * 1px);
@@ -4806,8 +4948,15 @@
       }
 
       @keyframes brainPulse {
-        0%, 100% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.3); opacity: 0.7; }
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.3);
+          opacity: 0.7;
+        }
       }
 
       @media (max-width: 768px) {
@@ -4823,9 +4972,8 @@
           height: 200px;
         }
       }
-
-        </style>
-      <style>
+    </style>
+    <style>
       /* ===== 3D Brain page-specific styles (restored) ===== */
 
       /* RESET BUTTON */
@@ -5166,14 +5314,14 @@
         border-radius: 4px;
         transition: background 0.2s;
         font-size: 0.72rem;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
       }
       .genre-dot:hover {
-        background: rgba(255,255,255,0.05);
-        color: rgba(255,255,255,0.8);
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.8);
       }
       .genre-dot.active {
-        background: rgba(255,77,0,0.15);
+        background: rgba(255, 77, 0, 0.15);
         color: #ff4d00;
       }
       .genre-dot-circle {
@@ -5190,14 +5338,14 @@
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 0.75rem;
-        border: 2px solid rgba(255,77,0,0.3);
+        border: 2px solid rgba(255, 77, 0, 0.3);
       }
       .info-dj-link {
         display: block;
         margin-top: 1rem;
         padding: 0.6rem 1rem;
-        background: rgba(255,77,0,0.1);
-        border: 1px solid rgba(255,77,0,0.3);
+        background: rgba(255, 77, 0, 0.1);
+        border: 1px solid rgba(255, 77, 0, 0.3);
         border-radius: 6px;
         color: #ff4d00;
         font-size: 0.8rem;
@@ -5207,11 +5355,11 @@
         transition: background 0.2s;
       }
       .info-dj-link:hover {
-        background: rgba(255,77,0,0.2);
+        background: rgba(255, 77, 0, 0.2);
       }
 
       /* ===== End 3D Brain styles ===== */
-      </style>
+    </style>
     <!-- Favicon -->
     <link
       rel="icon"
@@ -5237,6 +5385,62 @@
     <meta property="og:title" content="3TRES6 Neural — Conexiones entre DJs" />
   </head>
   <body>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-content">
+        <div class="welcome-logo">3TRES6</div>
+        <div class="welcome-tagline">DJ Connection Neural Network</div>
+        <div class="welcome-sub">Explore connections between DJs via shared tracks</div>
+        <button class="welcome-enter-btn" id="welcomeEnterBtn">
+          <span class="play-icon">▶</span>
+          Explorar
+        </button>
+        <button class="welcome-skip-btn" id="welcomeSkipBtn">¿Qué es esto? → Ver ayuda</button>
+      </div>
+    </div>
+
+    <!-- Help Modal for Curious Explorers -->
+    <div class="help-modal" id="helpModal">
+      <div class="help-content">
+        <button class="help-close" id="helpClose">&times;</button>
+        <h2>¿Qué es esta visualización?</h2>
+        <p>
+          Este es un "Neural Network" que mapea las conexiones entre DJs basado en los tracks que
+          comparten en sus sets.
+        </p>
+        <p>
+          Cada punto representa a un DJ. Las líneas que los conectan representan tracks que ambos
+          han tocado.
+        </p>
+        <div class="help-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="helpStatDJs">48</div>
+            <div class="stat-label">DJs</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="helpStatConns">16</div>
+            <div class="stat-label">Conexiones</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="helpStatTracks">305</div>
+            <div class="stat-label">Tracks</div>
+          </div>
+        </div>
+        <p><strong>Cómo usarlo:</strong></p>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem">
+          <li>Haz clic en cualquier punto para ver información del DJ</li>
+          <li>Las líneas verdes son conexiones (tracks compartidos)</li>
+          <li>Los puntos naranjas son DJs principales</li>
+          <li>Arrastra para rotar la vista 3D</li>
+        </ul>
+        <div class="help-actions">
+          <button class="help-btn primary" id="helpEnterBtn">
+            <span class="play-icon">▶</span> Explorar
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- HEADER -->
     <header class="header" id="mainHeader" role="banner">
       <div class="header-container">
@@ -5260,6 +5464,9 @@
           <div class="nav-separator"></div>
           <div class="nav-group nav-group-content">
             <a href="3d-brain.html" class="nav-item active">DJ Hub</a>
+            <a href="crew.html" class="nav-item">Crew</a>
+            <a href="mapa.html" class="nav-item">Mapa</a>
+            <a href="toolhub/" class="nav-item">Herramientas</a>
           </div>
         </nav>
 
@@ -5296,6 +5503,9 @@
         <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
         <div class="mobile-nav-group-label">Contenido</div>
         <a href="3d-brain.html">DJ Hub</a>
+        <a href="crew.html">Crew</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="toolhub/">Herramientas</a>
         <div class="mobile-nav-group-label">Redes</div>
         <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
         <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
@@ -5318,8 +5528,9 @@
           <a href="blog.html" class="subnav-tab">Blog</a>
           <a href="dj-library.html" class="subnav-tab">DJ Library</a>
           <a href="3d-brain.html" class="subnav-tab active" aria-current="page">Neural</a>
-          <a href="/3tres6muntanerRecords/toolhub/" class="subnav-tab">Herramientas</a>
-          <a href="/3tres6muntanerRecords/toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
+          <a href="crew.html" class="subnav-tab">Crew</a>
+          <a href="mapa.html" class="subnav-tab">Mapa</a>
+          <a href="toolhub/" class="subnav-tab">Herramientas</a>
         </div>
       </div>
     </nav>
@@ -5338,7 +5549,7 @@
       </h1>
 
       <!-- CANVAS -->
-      <div id="network-container">
+      <div id="network-container" class="hidden">
         <div class="bg-grid"></div>
 
         <button class="viz-reset" id="resetViewBtn">⟲ Reset</button>
@@ -5370,57 +5581,10 @@
         <div class="info-summary" id="infoSummary"></div>
         <div id="infoList"></div>
         <a class="info-dj-link" id="infoDjLink" href="#">Ver en DJ Library →</a>
-      </div>
-
-      <!-- DJ HUB INTRO SECTION -->
-      <section class="dj-hub-intro" id="djHubIntro">
-        <div class="dj-hub-intro-header">
-          <h2>DJ Hub</h2>
-          <p>
-            Tu centro de recursos para DJs. Explora sets con tracklists completas, descubre
-            conexiones entre artistas, aprende técnicas y encuentra las mejores herramientas para
-            pinchar.
-          </p>
-        </div>
-        <div class="dj-hub-cards">
-          <a href="blog.html" class="dj-hub-card">
-            <div class="dj-hub-card-icon">📝</div>
-            <h3>Blog</h3>
-            <p>
-              Artículos y guías sobre vinilos, tornamesas, técnicas de DJ y cultura underground.
-            </p>
-          </a>
-          <a href="dj-library.html" class="dj-hub-card">
-            <div class="dj-hub-card-icon">🎧</div>
-            <h3>DJ Library</h3>
-            <p>
-              Sets completos con tracklists, IDs más solicitados y datos curiosos extraídos de
-              YouTube.
-            </p>
-          </a>
-          <a href="3d-brain.html" class="dj-hub-card">
-            <div class="dj-hub-card-icon">🧠</div>
-            <h3>Neural Graph</h3>
-            <p>Visualización interactiva de conexiones entre DJs a través de tracks compartidos.</p>
-          </a>
-          <a href="/3tres6muntanerRecords/toolhub/" class="dj-hub-card">
-            <div class="dj-hub-card-icon">🛠️</div>
-            <h3>Herramientas</h3>
-            <p>
-              Descarga música, configura tu USB, consulta el Camelot Wheel y descubre software DJ.
-            </p>
-          </a>
-          <a href="/3tres6muntanerRecords/toolhub/#hardware" class="dj-hub-card">
-            <div class="dj-hub-card-icon">🎛️</div>
-            <h3>Equipo DJ</h3>
-            <p>Productos recomendados: controladores, mezcladoras, audífonos y más.</p>
-          </a>
-        </div>
-      </section>
+</div>
 
       <!-- 3D Brain Sphere (feeds from DJ Library JSON) -->
       <script src="js/3d-brain-sphere.js?v=2" defer></script>
-
 
       <!-- Footer -->
       <footer class="footer">

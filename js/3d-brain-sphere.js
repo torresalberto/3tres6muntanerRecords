@@ -766,7 +766,7 @@
       html += '<div style="color:rgba(255,255,255,0.3);font-size:13px;text-align:center;padding:20px 0;">No shared tracks or artists found in the library yet.</div>';
     }
 
-    html += '<a href="dj-library.html" style="display:inline-block;margin-top:12px;padding:8px 16px;background:rgba(255,77,0,0.1);border:1px solid rgba(255,77,0,0.3);border-radius:6px;color:#ff4d00;text-decoration:none;font-size:12px;font-weight:600;text-align:center;">Ver en DJ Library →</a>';
+    html += '<a href="dj/' + node.id + '.html" style="display:inline-block;margin-top:12px;padding:8px 16px;background:rgba(255,77,0,0.1);border:1px solid rgba(255,77,0,0.3);border-radius:6px;color:#ff4d00;text-decoration:none;font-size:12px;font-weight:600;text-align:center;">Ver en DJ Library →</a>';
 
     panel.innerHTML = html;
     panel.style.display = 'block';

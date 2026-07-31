@@ -1,7 +1,7 @@
 // Standalone audio player - works on any page
 // Requires: player-init.js (injects controls)
 // Skipped if script.js already defines AudioPlayer
-(function() {
+(function () {
   if (window.AudioPlayer) return; // Already defined by script.js
 
   const DEFAULT_VIDEO_ID = 'qfF19hUzLo0';
@@ -15,19 +15,24 @@
     STORAGE_KEY: '3tres6_audio_state',
 
     saveState() {
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify({
-        videoId: this.currentVideoId,
-        title: this.currentTitle,
-        isMuted: this.isMuted,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(
+        this.STORAGE_KEY,
+        JSON.stringify({
+          videoId: this.currentVideoId,
+          title: this.currentTitle,
+          isMuted: this.isMuted,
+          timestamp: Date.now(),
+        })
+      );
     },
 
     loadState() {
       try {
         const raw = localStorage.getItem(this.STORAGE_KEY);
         return raw ? JSON.parse(raw) : null;
-      } catch (_) { return null; }
+      } catch (_) {
+        return null;
+      }
     },
 
     init() {
@@ -85,14 +90,16 @@
 
     mute() {
       const iframe = document.getElementById('ytPlayer');
-      if (iframe) iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
+      if (iframe)
+        iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
       this.isMuted = true;
       this.updateUI(true, this.currentTitle, true);
     },
 
     unmute() {
       const iframe = document.getElementById('ytPlayer');
-      if (iframe) iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+      if (iframe)
+        iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
       this.isMuted = false;
       this.updateUI(true, this.currentTitle, false);
     },

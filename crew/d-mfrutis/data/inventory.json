@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "title": "XXOS — Tape Series 01", "artist": "Various", "year": "2023", "genre": "House", "price": "650 MXN", "grade": "VG+" },
+    { "title": "Barcelona Nights", "artist": "MFRutis", "year": "2022", "genre": "Deep House", "price": "700 MXN", "grade": "NM" },
+    { "title": "Selva EP", "artist": "Crew", "year": "2024", "genre": "Techno", "price": "680 MXN", "grade": "VG+" },
+    { "title": "Afterhours Vol.3", "artist": "Unknown", "year": "2019", "genre": "House", "price": "590 MXN", "grade": "VG" },
+    { "title": "Mediterranean Sound", "artist": "Costa", "year": "2021", "genre": "Electro", "price": "720 MXN", "grade": "NM" },
+    { "title": "Boiler pt.II", "artist": "Various", "year": "2020", "genre": "Techno", "price": "620 MXN", "grade": "VG+" },
+    { "title": "Loft Sessions", "artist": "MFRutis", "year": "2023", "genre": "Deep House", "price": "660 MXN", "grade": "VG+" },
+    { "title": "Night Drive", "artist": "Synth", "year": "2018", "genre": "Electro", "price": "600 MXN", "grade": "VG" },
+    { "title": "Club 336", "artist": "Crew", "year": "2024", "genre": "House", "price": "690 MXN", "grade": "NM" },
+    { "title": "Raw Cuts", "artist": "Unknown", "year": "2017", "genre": "Techno", "price": "580 MXN", "grade": "G+" }
+  ]
+}

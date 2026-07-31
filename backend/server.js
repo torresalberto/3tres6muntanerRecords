@@ -476,7 +476,7 @@ app.get('/api/events', (req, res) => {
     }
     const data = fs.readFileSync(EVENTS_FILE, 'utf-8');
     const events = JSON.parse(data);
-    res.json({ success: true, events: events.filter(e => e.status === 'approved') });
+    res.json({ success: true, events: events.filter((e) => e.status === 'approved') });
   } catch (error) {
     console.error('❌ Events read error:', error.message);
     res.status(500).json({ success: false, error: error.message });
@@ -509,7 +509,7 @@ app.post('/api/events/submit', (req, res) => {
       submittedAt: new Date().toISOString(),
       source: 'submission',
       status: 'pending',
-      featured: false
+      featured: false,
     };
 
     let pending = [];

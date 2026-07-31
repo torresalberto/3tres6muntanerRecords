@@ -121,7 +121,11 @@
 
 /* Leaflet overrides for dark theme */
 .leaflet-container {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    'Space Grotesk',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 .leaflet-control-zoom a {
@@ -178,7 +182,9 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(255, 77, 0, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .marker-pin svg {

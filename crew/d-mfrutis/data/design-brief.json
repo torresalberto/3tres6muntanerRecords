@@ -1,0 +1,29 @@
+{
+  "artist_name": "d.mfrutis",
+  "eyebrow": "crew member #1",
+  "tagline": "after-hours sound · selections · a wall of records",
+  "site_title": "d.mfrutis — crew",
+  "mood": "dark-cinematic",
+  "source": "derived from design-brief-raw.json (PIL analysis of 21 Instagram images)",
+  "palette": {
+    "bg": "#0b0607",
+    "bg2": "#150c0e",
+    "fg": "#e7e3dd",
+    "muted": "#9a8b87",
+    "accent": "#e2231a",
+    "accent2": "#3b6ef0",
+    "line": "rgba(231,227,221,0.12)"
+  },
+  "font": {
+    "display": "\"Anton\", \"Arial Narrow\", \"Helvetica Neue\", sans-serif",
+    "body": "\"Inter\", \"Helvetica Neue\", Arial, sans-serif"
+  },
+  "direction": "Moody after-hours club aesthetic. Near-black wine base (#0b0607) lifted by off-white type. A single vivid-red accent (#e2231a) carries energy, with electric blue (#3b6ef0) as a secondary signal pulled from his blue-toned shots. Warm beige highlights (#e7e3dd) nod to analog/film grain. Heavy condensed display type, lots of negative space, sharp 1px hairlines. The Wall section bleeds his actual feed imagery so the page IS his visual language.",
+  "signals_from_images": {
+    "average_brightness": 93.6,
+    "aspect": "portrait-dominant (10 portrait / 9 square / 2 landscape)",
+    "dominant": "deep blacks + wine reds (#160607, #140304, #180a17)",
+    "pops": ["vivid red #e50b1b (0016)", "electric blue #0d37a7 (0012,0005)", "sky/teal #649fe2 (0019,0020,0001)", "warm beige #e0d9cb (0017)"],
+    "mood_words": ["nocturnal", "raw", "club", "analog", "electric"]
+  }
+}
