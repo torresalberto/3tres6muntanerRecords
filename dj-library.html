@@ -497,15 +497,14 @@
               html += '<span>⏱️ ' + escHtml(s.duration_formatted) + '</span>';
             html += '</div></div>';
 
-            /* Tracklist */
+            /* Tracklist - Simplified List View */
             var tracklist = s.tracklist || [];
             if (tracklist.length) {
               html += '<div class="expanded-tracklist">';
               html +=
                 '<div class="section-label">🎵 Tracklist (' + tracklist.length + ' tracks)</div>';
-              html +=
-                '<div class="expanded-tracklist-wrapper"><table class="tracklist-table"><thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead><tbody>';
-              tracklist.forEach(function (t) {
+              html += '<div class="tracklist-list">';
+              tracklist.forEach(function (t, i) {
                 var statusClass =
                   t.status === 'confirmed'
                     ? 'status-confirmed'
@@ -519,27 +518,29 @@
                       ? '? ID'
                       : '— pending';
                 html +=
-                  '<tr>' +
-                  '<td>' +
-                  (t.position || '') +
-                  '</td>' +
-                  '<td><span class="track-time">' +
+                  '<div class="track-item">' +
+                  '<span class="track-pos">' +
+                  (i + 1) +
+                  '.</span>' +
+                  '<span class="track-time">' +
                   (t.timestamp || '--:--') +
-                  '</span></td>' +
-                  '<td>' +
+                  '</span>' +
+                  '<div class="track-details">' +
+                  '<span class="track-artist">' +
                   escHtml(t.artist || '') +
-                  '</td>' +
-                  '<td>' +
+                  '</span>' +
+                  '<span class="track-title">' +
                   escHtml(t.title || '') +
-                  '</td>' +
-                  '<td><span class="track-status ' +
+                  '</span>' +
+                  '</div>' +
+                  '<span class="track-status ' +
                   statusClass +
                   '">' +
                   statusLabel +
-                  '</span></td>' +
-                  '</tr>';
+                  '</span>' +
+                  '</div>';
               });
-              html += '</tbody></table></div></div>';
+              html += '</div></div>';
             }
 
             /* Facts */
