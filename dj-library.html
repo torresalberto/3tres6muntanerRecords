@@ -167,19 +167,6 @@
         </div>
       </section>
 
-      <section class="dj-search-section">
-        <div class="dj-search-container">
-          <input
-            type="text"
-            id="djSearch"
-            class="dj-search-input"
-            placeholder="Buscar DJ o set..."
-            autocomplete="off"
-            aria-label="Buscar DJ o set"
-          />
-        </div>
-      </section>
-
       <section class="dj-grid-section" id="djGridSection">
         <div class="dj-grid" id="djGrid">
           <div class="dj-grid-loading">
@@ -255,7 +242,6 @@
         var expandedCards = {};
 
         var gridEl = document.getElementById('djGrid');
-        var searchEl = document.getElementById('djSearch');
 
         function escHtml(str) {
           return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -280,7 +266,6 @@
             .then(function () {
               renderGrid();
               updateStats();
-              initSearch();
               loadGraph();
             })
             .catch(function (err) {
@@ -398,25 +383,6 @@
             html += '</div>';
           });
           return html;
-        }
-
-        function initSearch() {
-          searchEl?.addEventListener('input', function () {
-            var q = this.value.toLowerCase().trim();
-            var cards = gridEl.querySelectorAll('.dj-card');
-            cards.forEach(function (card) {
-              var match = !q || card.dataset.searchText?.indexOf(q) !== -1;
-              card.style.display = match ? '' : 'none';
-            });
-          });
-        }
-
-        function updateStats() {
-          document.getElementById('statDjs').textContent = allDjs.length || 0;
-          var totalSets = allDjs.reduce(function (a, d) {
-            return a + (d._setsData ? d._setsData.length : 0);
-          }, 0);
-          document.getElementById('statSets').textContent = totalSets || 0;
         }
 
         function loadGraph() {

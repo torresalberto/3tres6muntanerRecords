@@ -164,26 +164,6 @@ body {
   color: var(--primary);
 }
 
-.dj-search-section {
-  padding: 1rem;
-}
-.dj-search-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-.dj-search-input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1rem;
-}
-.dj-search-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
 .dj-grid-section {
   padding: 1.5rem 1rem 2rem;
 }
