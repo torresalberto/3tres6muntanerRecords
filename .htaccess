@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # /crew → /crew.html   /crew/ → /crew.html
-RewriteRule ^crew/?$ crew.html [L,NC]
+RewriteRule ^crew/?$ crew.html [R=301,L]
 
 # /mapa → /mapa.html   /mapa/ → /mapa.html
-RewriteRule ^mapa/?$ mapa.html [L,NC]
+RewriteRule ^mapa/?$ mapa.html [R=301,L]
