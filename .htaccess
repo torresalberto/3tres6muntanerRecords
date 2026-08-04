@@ -1,0 +1,8 @@
+# 3TRES6 Records — clean URLs
+RewriteEngine On
+
+# /crew → /crew.html   /crew/ → /crew.html
+RewriteRule ^crew/?$ crew.html [L,NC]
+
+# /mapa → /mapa.html   /mapa/ → /mapa.html
+RewriteRule ^mapa/?$ mapa.html [L,NC]

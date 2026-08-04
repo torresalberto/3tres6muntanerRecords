@@ -6,10 +6,10 @@
       "city": "Barcelona",
       "country": "Spain",
       "coordinates": {
-        "lat": 41.3780,
-        "lng": 2.1737
+        "lat": 41.37805,
+        "lng": 2.17368
       },
-      "address": "Carrer de Guàrdia, 3, 08002 Barcelona",
+      "address": "Carrer de Guàrdia 3, 08002 Barcelona",
       "genres": ["House", "Techno", "Disco"],
       "curated_by": "3tres6 crew",
       "notes": "Intimate club in the heart of El Raval. Known for underground electronic music.",
@@ -27,13 +27,13 @@
       "city": "Barcelona",
       "country": "Spain",
       "coordinates": {
-        "lat": 41.3833,
-        "lng": 2.1689
+        "lat": 41.38880,
+        "lng": 2.16622
       },
-      "address": "08007 Barcelona",
+      "address": "Rambla de Catalunya 23, 08007 Barcelona",
       "genres": ["House", "Techno", "Ambient"],
       "curated_by": "3tres6 crew",
-      "notes": "Audiophile social club. Hi-Fi sound system, vinyl turntables, rotary mixers. 19th-century Catalan estate transformed into a haven for sound.",
+      "notes": "Audiophile social club and listening room in the Eixample. Hi-Fi sound system, vinyl turntables, rotary mixers and terraces.",
       "links": {
         "ra": "https://ra.co/clubs/220017",
         "instagram": "https://www.instagram.com/studiostereoclub/"
@@ -42,24 +42,102 @@
       "soundsystem": "Hi-Fi"
     },
     {
+      "id": "input-high-fidelity",
+      "name": "Input High Fidelity",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.36864,
+        "lng": 2.14848
+      },
+      "address": "Av. de Francesc Ferrer i Guàrdia 13, 08038 Barcelona · Poble Espanyol",
+      "genres": ["House", "Techno", "Disco"],
+      "curated_by": "3tres6 crew",
+      "notes": "High-fidelity dance club inside Poble Espanyol. Funktion-One sound and immersive visuals, focused on headsy house and techno.",
+      "links": {
+        "instagram": "https://www.instagram.com/inputdanceclub/",
+        "website": "https://inputbcn.com/"
+      },
+      "capacity": 700,
+      "soundsystem": "Funktion-One"
+    },
+    {
+      "id": "nitsa",
+      "name": "Nitsa (Sala Apolo)",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.37307,
+        "lng": 2.16804
+      },
+      "address": "Carrer Nou de la Rambla 113, 08004 Barcelona",
+      "genres": ["Techno", "House", "Electro", "Disco"],
+      "curated_by": "3tres6 crew",
+      "notes": "Temple of electronic music inside Sala Apolo since 1996. Raw, sweaty atmosphere with legendary international bookings.",
+      "links": {
+        "ra": "https://ra.co/clubs/2072",
+        "website": "https://www.sala-apolo.com/en/clubs/nitsa"
+      },
+      "capacity": 900,
+      "soundsystem": null
+    },
+    {
+      "id": "moog",
+      "name": "Moog Club",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.37807,
+        "lng": 2.17508
+      },
+      "address": "Carrer de l'Arc del Teatre 3, 08001 Barcelona",
+      "genres": ["Techno", "House"],
+      "curated_by": "3tres6 crew",
+      "notes": "Iconic Raval club open since 1996 in the former Villa Rosa tablao. Resident DJs keep the essence of local techno and house alive.",
+      "links": {
+        "ra": "https://ra.co/clubs/2253",
+        "website": "https://moogbarcelona.com/"
+      },
+      "capacity": 220,
+      "soundsystem": null
+    },
+    {
+      "id": "garage-bass-valley",
+      "name": "Garage of The Bass Valley",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.35440,
+        "lng": 2.10723
+      },
+      "address": "Passatge Can Polític 13, 08907 L'Hospitalet de Llobregat",
+      "genres": ["Techno", "Experimental"],
+      "curated_by": "3tres6 crew",
+      "notes": "Warehouse-turned-club by The Bass Valley academy. One of the best sounding dance floors in the greater Barcelona area.",
+      "links": {
+        "website": "https://thebassvalley.com/the-garage"
+      },
+      "capacity": 300,
+      "soundsystem": "Pioneer Pro Audio XY-3B"
+    },
+    {
       "id": "yuyu",
       "name": "Yuyu",
       "city": "Mexico City",
       "country": "Mexico",
       "coordinates": {
-        "lat": 19.4213,
-        "lng": -99.1531
+        "lat": 19.42499,
+        "lng": -99.15283
       },
-      "address": "Dr. Carmona y Valle 129, Juárez, CDMX",
-      "genres": ["House", "Techno", "Disco"],
+      "address": "Dr. Carmona y Valle 135, Col. Doctores, Cuauhtémoc, CDMX",
+      "genres": ["House", "Techno", "Minimal"],
       "curated_by": "3tres6 crew",
-      "notes": "Iconic CDMX club. Reopened at new location. Martin Audio sound system.",
+      "notes": "Iconic underground club, reborn in September 2025 in an ex-casino in the Doctores. Now includes a cinema, bar and Martin Audio sound.",
       "links": {
-        "ra": "https://ra.co/clubs/144659",
         "instagram": "https://www.instagram.com/yuyucineclub/"
       },
       "capacity": null,
-      "soundsystem": "Martin Audio Blackline X Series"
+      "soundsystem": "Martin Audio"
     },
     {
       "id": "funk-club",
@@ -67,13 +145,13 @@
       "city": "Mexico City",
       "country": "Mexico",
       "coordinates": {
-        "lat": 19.4102,
-        "lng": -99.1675
+        "lat": 19.41020,
+        "lng": -99.16750
       },
       "address": "Av. Insurgentes Sur 377, Hipódromo Condesa, CDMX",
-      "genres": ["House", "Techno", "Funk"],
+      "genres": ["House", "Nu-Disco", "Funk"],
       "curated_by": "3tres6 crew",
-      "notes": "Basement club in Condesa. Powered by Funktion One sound system.",
+      "notes": "Basement dance club on the edge of Roma and Hipódromo, focused on acoustic fidelity. Vinyl selectors and Funktion One sound.",
       "links": {
         "ra": "https://ra.co/clubs/176300",
         "instagram": "https://www.instagram.com/funk_club/",
@@ -88,16 +166,73 @@
       "city": "Mexico City",
       "country": "Mexico",
       "coordinates": {
-        "lat": 19.4146,
-        "lng": -99.1614
+        "lat": 19.41460,
+        "lng": -99.16140
       },
       "address": "Querétaro 188, Roma Norte, CDMX",
       "genres": ["House", "Techno", "Disco", "Ambient"],
       "curated_by": "3tres6 crew",
-      "notes": "Multifaceted space: independent radio, bar, and cinema. Record store, wines, merch, music, books and café. Born in 2023.",
+      "notes": "Multifaceted space born in 2023: independent radio, bar, cinema, record store and café in one. A community hub for music.",
       "links": {
         "instagram": "https://www.instagram.com/dramaradiobar/",
         "website": "https://dramaradio.mx/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "departamento",
+      "name": "Departamento",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.41799,
+        "lng": -99.16221
+      },
+      "address": "Av. Álvaro Obregón 154 (primer piso), Roma Norte, CDMX",
+      "genres": ["Techno", "House", "Disco"],
+      "curated_by": "3tres6 crew",
+      "notes": "Multi-level Roma Norte space with a sprawling terrace. Rotating floors mixing techno, disco and funk in an intimate setting.",
+      "links": {
+        "website": "https://www.departamento.tv/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "looloo-studio",
+      "name": "LooLoo Studio",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.42429,
+        "lng": -99.16737
+      },
+      "address": "Londres 195, Col. Juárez, CDMX",
+      "genres": ["Deep House", "Techno", "Tech-House"],
+      "curated_by": "3tres6 crew",
+      "notes": "Hidden behind a neutral Juárez facade. The 'Studio' room is all LED panels and riffs on deep house and techno with high-profile guests.",
+      "links": {
+        "website": "https://wearelooloo.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "sunday-sunday",
+      "name": "Sunday Sunday",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.43350,
+        "lng": -99.14700
+      },
+      "address": "Tabaqueros 16, Centro Histórico, CDMX",
+      "genres": ["House", "Electro", "Techno"],
+      "curated_by": "3tres6 crew",
+      "notes": "Multi-level Centro venue with a speakeasy area and a rooftop overlooking the city. Sunday house sessions with an international crowd.",
+      "links": {
+        "ra": "https://ra.co/clubs/115425"
       },
       "capacity": null,
       "soundsystem": null
@@ -108,8 +243,8 @@
       "name": "Barcelona",
       "country": "Spain",
       "center": {
-        "lat": 41.3851,
-        "lng": 2.1734
+        "lat": 41.3780,
+        "lng": 2.1680
       },
       "zoom": 14
     },
@@ -117,8 +252,8 @@
       "name": "Mexico City",
       "country": "Mexico",
       "center": {
-        "lat": 19.4126,
-        "lng": -99.1660
+        "lat": 19.4180,
+        "lng": -99.1550
       },
       "zoom": 14
     }

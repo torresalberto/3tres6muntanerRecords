@@ -101,7 +101,7 @@ function renderCrewGrid() {
       <div style="display:flex;gap:1.5rem;align-items:flex-start;">
         <div style="width:120px;height:120px;border-radius:12px;overflow:hidden;background:#111;position:relative;">
           <img src="${member.image}" alt="${member.name}" style="width:100%;height:100%;object-fit:cover;" 
-               onerror="this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E👤%3C/text%3E%3C/svg%3E'"/>
+               onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20fill=%27%23111%27%20width=%27100%27%20height=%27100%27/%3E%3Ctext%20fill=%27%23ff4d00%27%20x=%2750%27%20y=%2755%27%20text-anchor=%27middle%27%20font-size=%2740%27%3E%F0%9F%91%A4%3C/text%3E%3C/svg%3E'"/>
           ${member.isPilot ? '<span style="position:absolute;top:8px;right:8px;background:#ff4d00;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600;">Piloto</span>' : ''}
         </div>
         <div style="flex:1;">

@@ -10,10 +10,18 @@ const VenueMap = {
 
   async init() {
     await this.loadData();
+    this.renderStats();
     this.renderMap();
     this.renderCityTabs();
     this.renderVenueList();
     setTimeout(() => this.fitAll(), 300);
+  },
+
+  renderStats() {
+    const venuesEl = document.getElementById('statVenues');
+    const citiesEl = document.getElementById('statCities');
+    if (venuesEl) venuesEl.textContent = this.venues.length;
+    if (citiesEl) citiesEl.textContent = this.cities.length;
   },
 
   async loadData() {
