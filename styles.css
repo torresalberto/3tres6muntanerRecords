@@ -2742,6 +2742,10 @@ button {
     overflow-x: auto;
   }
 
+  .calendar-mesh {
+    overflow-x: auto;
+  }
+
   .calendar-header-row,
   .calendar-body {
     min-width: 800px;

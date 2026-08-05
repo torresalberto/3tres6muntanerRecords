@@ -236,6 +236,8 @@
         var BASE = '';
         var DJ_INDEX_URL = BASE + 'data/djs/index.json';
         var SETS_DIR = BASE + 'data/djs/sets/';
+        var FALLBACK_IMG =
+          "data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 300%22%3E%3Crect fill=%22%23111%22 width=%22300%22 height=%22300%22/%3E%3Ctext fill=%22%23ff4d00%22 x=%22150%22 y=%22170%22 text-anchor=%22middle%22 font-size=%2250%22%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E";
 
         var allDjs = [];
         var allSets = [];
@@ -274,17 +276,21 @@
         }
 
         function fetchSetFiles(dj) {
-          return fetch(SETS_DIR + dj.id + '.json')
-            .then(function (r) {
-              if (!r.ok) throw new Error('No set file');
-              return r.json();
+          var slugs = dj.sets && dj.sets.length ? dj.sets : [dj.id];
+          return Promise.all(
+            slugs.map(function (slug) {
+              return fetch(SETS_DIR + slug + '.json')
+                .then(function (r) {
+                  if (!r.ok) throw new Error('No set file');
+                  return r.json();
+                })
+                .catch(function () {
+                  return null;
+                });
             })
-            .then(function (s) {
-              dj._setsData = [s];
-            })
-            .catch(function () {
-              dj._setsData = [];
-            });
+          ).then(function (sets) {
+            dj._setsData = sets.filter(Boolean);
+          });
         }
 
         function renderGrid() {
@@ -297,9 +303,8 @@
         }
 
         function createCard(dj) {
-          var thumbUrl = '/data/djs/profiles/' + dj.id + '.jpg';
-          var card = document.createElement('a');
-          card.href = 'dj/' + dj.id + '.html';
+          var thumbUrl = dj.image || FALLBACK_IMG;
+          var card = document.createElement('div');
           card.className = 'dj-card';
           card.innerHTML =
             '<div class="dj-card-image">' +
@@ -307,7 +312,9 @@
             thumbUrl +
             '" alt="' +
             escHtml(dj.name) +
-            '" loading="lazy" onerror="this.src=\'/images/dj-placeholder.svg\'" />' +
+            '" loading="lazy" onerror="this.onerror=null;this.src=\'' +
+            FALLBACK_IMG +
+            '\'" />' +
             '</div>' +
             '<div class="dj-card-body">' +
             '<h3 class="dj-card-name">' +
@@ -320,13 +327,20 @@
             (dj.tracks || 0) +
             ' tracks' +
             '</div>' +
+            '<div class="dj-card-actions">' +
             '<button class="dj-card-toggle" data-dj-id="' +
             dj.id +
             '">Ver tracklist ▸</button>' +
+            '<a class="set-permalink" href="dj/' +
+            dj.id +
+            '.html">Ver perfil →</a>' +
+            '</div>' +
             '</div>';
 
           card.addEventListener('click', function (e) {
-            if (!card.classList.contains('expanded')) toggleExpand(dj, card);
+            if (e.target.closest && e.target.closest('a')) return;
+            e.preventDefault();
+            toggleExpand(dj, card);
           });
 
           return card;
@@ -348,6 +362,10 @@
 
         function renderExpandedContent(dj) {
           var html = '';
+          html +=
+            '<a class="set-permalink" href="dj/' +
+            dj.id +
+            '.html">Ver perfil completo →</a>';
           (dj._setsData || []).forEach(function (s) {
             html += '<div class="expanded-set">';
             html += '<div class="set-title">' + escHtml(s.title || '') + '</div>';
@@ -383,6 +401,27 @@
             html += '</div>';
           });
           return html;
+        }
+
+        function updateStats() {
+          var djsEl = document.getElementById('statDjs');
+          var setsEl = document.getElementById('statSets');
+          var tracksEl = document.getElementById('statTracks');
+          if (djsEl) djsEl.textContent = allDjs.length;
+          if (setsEl) {
+            setsEl.textContent = allDjs.reduce(function (n, dj) {
+              return n + (dj._setsData ? dj._setsData.length : 0);
+            }, 0);
+          }
+          if (tracksEl) {
+            var n = 0;
+            allDjs.forEach(function (dj) {
+              (dj._setsData || []).forEach(function (s) {
+                n += (s.tracklist || []).length;
+              });
+            });
+            tracksEl.textContent = n;
+          }
         }
 
         function loadGraph() {

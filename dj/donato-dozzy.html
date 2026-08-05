@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donato Dozzy | DJ Library — 3TRES6 Records</title>
+  <meta name="description" content="Sets completos de Donato Dozzy con tracklists, IDs y datos curiosos. 1 sets, 12 tracks." />
+  <link rel="canonical" href="https://3tres6records.albto.me/dj/donato-dozzy.html" />
+  <meta property="og:title" content="Donato Dozzy | DJ Library — 3TRES6 Records" />
+  <meta property="og:description" content="Sets completos de Donato Dozzy con tracklists, IDs y datos curiosos. 1 sets, 12 tracks." />
+  <meta property="og:url" content="https://3tres6records.albto.me/dj/donato-dozzy.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://i.ytimg.com/vi/Dhzp6esYfeY/hqdefault.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../css/dj-library.css" />
+  <style>
+    .dj-page-hero {
+      position: relative;
+      padding: 6rem 2rem 3rem;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+      overflow: hidden;
+    }
+    .dj-page-hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, #ff4d00, transparent);
+    }
+    .dj-page-header {
+      display: flex; align-items: flex-start; gap: 2rem;
+      max-width: 1200px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .dj-page-avatar {
+      width: 160px; height: 160px; border-radius: 50%;
+      border: 3px solid #ff4d00; object-fit: cover;
+      box-shadow: 0 0 60px rgba(255,77,0,0.3); flex-shrink: 0;
+      background: #111;
+    }
+    .dj-page-info h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; }
+    .dj-page-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+    .dj-page-meta strong { color: #ff9100; font-weight: 600; }
+    .dj-page-genres { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .genre-tag {
+      display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+      background: rgba(255,77,0,0.1); border: 1px solid rgba(255,77,0,0.3);
+      color: #ff9100; font-size: 0.8rem; font-weight: 500;
+    }
+    .dj-page-bio { color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 600px; }
+    .sets-section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    .sets-section h2 {
+      font-size: 1.5rem; color: #fff; margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .set-card {
+      background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
+      overflow: hidden; margin-bottom: 2rem;
+    }
+    .set-header { padding: 2rem 2rem 1rem; }
+    .set-header h3 { font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem; }
+    .set-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; background: #000; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .tracklist-section { padding: 1.5rem 2rem; }
+    .tracklist-section .section-label {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35); margin-bottom: 1rem;
+    }
+    .tracklist-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .tracklist-table th {
+      text-align: left; padding: 0.75rem; color: rgba(255,255,255,0.4);
+      font-weight: 500; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .tracklist-table td {
+      padding: 0.6rem 0.75rem; color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .tracklist-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .track-time { color: rgba(255,255,255,0.3); font-family: monospace; font-size: 0.8rem; }
+    .track-status { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 500; }
+    .track-status.confirmed { background: rgba(0, 200, 100, 0.1); color: #00c864; }
+    .track-status.id { background: rgba(255, 77, 0, 0.1); color: #ff4d00; }
+    .no-tracks { color: rgba(255,255,255,0.3); font-size: 0.9rem; padding: 1rem 0; }
+    .related-djs { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    .related-djs h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .related-grid .dj-card {
+      display: block; text-decoration: none; color: #fff;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; overflow: hidden; transition: transform 0.2s, border-color 0.2s;
+    }
+    .related-grid .dj-card:hover { transform: translateY(-3px); border-color: rgba(255,77,0,0.4); }
+    .related-grid .dj-card-image { aspect-ratio: 1/1; background: #111; overflow: hidden; }
+    .related-grid .dj-card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .related-grid .dj-card-body { padding: 0.75rem 1rem; }
+    .related-grid .dj-card-body h3 { font-size: 1rem; margin: 0 0 0.35rem; }
+    .related-grid .dj-card-meta { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+    .related-grid .dj-card-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 100%; font-size: 3rem; background: #111; color: #ff4d00;
+    }
+    @media (max-width: 768px) {
+      .dj-page-header { flex-direction: column; align-items: center; text-align: center; }
+      .dj-page-avatar { width: 120px; height: 120px; }
+      .dj-page-info h1 { font-size: 2rem; }
+      .dj-page-meta { justify-content: center; }
+      .dj-page-genres { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="mainHeader" role="banner">
+    <div class="header-container">
+      <a href="/3tres6muntanerRecords/" class="logo" aria-label="3TRES6 Records Home">
+        <span class="logo-text">3TRES6</span>
+        <span class="logo-subtitle">RECORDS</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+        <div class="nav-group nav-group-store">
+          <a href="/3tres6muntanerRecords/#catalogo" class="nav-item">Catálogo</a>
+          <a href="/3tres6muntanerRecords/#calendario" class="nav-item">Calendario</a>
+          <a href="/3tres6muntanerRecords/#nosotros" class="nav-item">Nosotros</a>
+        </div>
+        <div class="nav-separator"></div>
+        <div class="nav-group nav-group-content">
+          <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
+        <a href="/3tres6muntanerRecords/" class="cart-icon" aria-label="Carrito">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <div class="mobile-nav-group-label">Tienda</div>
+      <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
+      <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
+      <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
+      <div class="mobile-nav-group-label">Contenido</div>
+      <a href="/3tres6muntanerRecords/3d-brain.html">DJ Hub</a>
+      <div class="mobile-nav-group-label">Redes</div>
+      <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
+      <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+    </nav>
+  </header>
+
+  <nav class="dj-hub-subnav" aria-label="Navegación DJ Hub">
+    <div class="subnav-container">
+      <a href="/3tres6muntanerRecords/" class="subnav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Tienda
+      </a>
+      <div class="subnav-divider"></div>
+      <div class="subnav-tabs">
+        <a href="../blog.html" class="subnav-tab">Blog</a>
+        <a href="../dj-library.html" class="subnav-tab active" aria-current="page">DJ Library</a>
+        <a href="../3d-brain.html" class="subnav-tab">Neural</a>
+        <a href="../toolhub/" class="subnav-tab">Herramientas</a>
+        <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
+      </div>
+    </div>
+  </nav>
+
+  <main data-swup>
+    <section class="dj-page-hero">
+      <div class="dj-page-header">
+        <img src="https://i.ytimg.com/vi/Dhzp6esYfeY/hqdefault.jpg" alt="Donato Dozzy" class="dj-page-avatar"
+          onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E'" />
+        <div class="dj-page-info">
+          <h1>Donato Dozzy</h1>
+          <div class="dj-page-meta">
+            <span>📍 Rome, Italy</span>
+            <span>•</span><span>Activo desde 2002</span>
+            <span>•</span><span><strong>1</strong> set</span>
+            <span><strong>12</strong> tracks</span>
+            <span><strong>12</strong> identificados (100%)</span>
+          </div>
+          <div class="dj-page-genres"><span class="genre-tag">Ambient</span><span class="genre-tag">Deep Techno</span><span class="genre-tag">Minimal</span><span class="genre-tag">Dub Techno</span></div>
+          <p class="dj-page-bio">Italian producer and DJ, co-founder of Voices from the Lake with Neel. Releases on Tresor, Spectrum Spools, and his own Spazio Disponibile label. Master of hypnotic, immersive ambient-techno journeys.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sets-section">
+      <h2>▶ Sets</h2>
+      <div class="set-card">
+    <div class="set-header">
+      <h3>Boiler Room: Donato Dozzy</h3>
+      <div class="set-meta">
+        <span>📍 Boiler Room, Rome</span>
+        <span>📅 2015-11-12</span>
+        <span>⏱️ 0:58:00</span>
+        <span>🎵 12 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/Dhzp6esYfeY" title="Boiler Room: Donato Dozzy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <table class="tracklist-table">
+        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
+        <tbody><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Donato Dozzy</td>
+              <td>Gol</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Spacetime Continuum</td>
+              <td>Drug</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Spacetime Continuum</td>
+              <td>Drug #6</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Function</td>
+              <td>Against The Wall</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Andy Stott</td>
+              <td>Numb</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Boards Of Canada</td>
+              <td>Split Your Infinities</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Recondite</td>
+              <td>Glim</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Aleksi Perala</td>
+              <td>UK74R1512110</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Moritz Von Oswald</td>
+              <td>Watamu Beach Rework</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Terrence Dixon</td>
+              <td>One Bedroom Apartment</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Octave One</td>
+              <td>Blackwater</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr><tr>
+              <td><span class="track-time">--:--</span></td>
+              <td>Levon Vincent</td>
+              <td>Double Joint (Part 2)</td>
+              <td><span class="track-status confirmed">✓</span></td>
+            </tr></tbody>
+      </table>
+    </div>
+  </div>
+    </section>
+
+    <section class="related-djs">
+      <h2>DJs Relacionados</h2>
+      <div class="related-grid" id="relatedGrid">
+        <p style="color:rgba(255,255,255,0.3)">Cargando conexiones...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>3TRES6 Records — Barcelona → México</p>
+      <nav class="footer-nav">
+        <a href="/">Catálogo</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../3d-brain.html">Neural</a>
+        <a href="../dj-library.html">DJ Library</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Related DJs loader — fetches cross-references and renders up to 4
+    function initRelated_donato_dozzy() {
+      const grid = document.getElementById('relatedGrid');
+      if (!grid) return;
+      fetch('../data/djs/cross-references.json')
+        .then(r => r.ok ? r.json() : null)
+        .then(cr => {
+          if (!cr) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
+          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('donato-dozzy'));
+          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('donato-dozzy'));
+          const relatedIds = new Set();
+          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== 'donato-dozzy') relatedIds.add(id); }));
+          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== 'donato-dozzy') relatedIds.add(id); }));
+          const ids = Array.from(relatedIds).slice(0, 6);
+          if (!ids.length) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
+          return fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
+            const cards = ids.map(id => {
+              const d = (idx.djs || []).find(x => x.id === id);
+              if (!d) return '';
+              const img = d.image || '';
+              return '<a href="' + id + '.html" class="dj-card">'
+                + '<div class="dj-card-image">' + (img
+                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=&#92;&#92;\&#39;dj-card-placeholder&#92;&#92;\&#39;>🎧</div>\'"/>'
+                    : '<div class="dj-card-placeholder">🎧</div>')
+                + '</div>'
+                + '<div class="dj-card-body"><h3>' + d.name + '</h3>'
+                + '<div class="dj-card-meta"><span>' + (d.stats?.sets || 0) + ' sets</span> <span>' + (d.stats?.completion_rate || 0) + '% ID</span></div>'
+                + '</div></a>';
+            }).join('');
+            grid.innerHTML = cards || '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>';
+          });
+        })
+        .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
+    }
+    initRelated_donato_dozzy();
+    if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+      window.Muntaner336.onPageView(function () { initRelated_donato_dozzy(); });
+    }
+  </script>
+  <!-- Swup: seamless page transitions so the audio player never cuts off -->
+  <script src="../js/vendor/swup.umd.js" defer></script>
+  <script src="../js/swup-init.js" defer></script>
+  <script src="../player-init.js" defer></script>
+</body>
+</html>

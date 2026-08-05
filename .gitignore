@@ -32,6 +32,7 @@ yarn-error.log*
 # Local-only scratch
 tmp/
 audit/screenshots/
+qa/screenshots/
 agent-browser-tmp/
 .agent-browser/
 

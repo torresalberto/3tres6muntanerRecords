@@ -225,6 +225,29 @@ body {
   text-decoration: underline;
 }
 
+.dj-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dj-card-actions .set-permalink,
+.dj-card-expanded .set-permalink {
+  color: var(--primary, #ff4d00);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.dj-card-actions .set-permalink:hover,
+.dj-card-expanded .set-permalink:hover {
+  text-decoration: underline;
+}
+.dj-card-expanded .set-permalink {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
 .dj-card-expanded {
   margin-top: 1rem;
   padding: 0 1rem 1rem;
