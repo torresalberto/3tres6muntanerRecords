@@ -147,18 +147,30 @@ async function collect(page, cap, p) {
   };
 }
 
-async function menuAudit(page, cap) {
+async function menuAudit(page, vp) {
   await page.waitForTimeout(400);
-  const r = await page.evaluate(() => {
+  const r = await page.evaluate((mobileVp) => {
     const btn = document.getElementById('mobileMenuBtn');
     const nav = document.getElementById('mainNav');
+    const mobileNav = document.getElementById('mobileNav');
     const btnVisible = btn ? getComputedStyle(btn).display !== 'none' : false;
-    const navBefore = nav ? getComputedStyle(nav).display : null;
+    const drawer = mobileVp && mobileNav ? mobileNav : nav;
+    const state = (el) => {
+      if (!el) return null;
+      const cs = getComputedStyle(el);
+      const cls = el.classList.contains('active') || el.classList.contains('nav-open');
+      const visible =
+        cs.display !== 'none' && cs.visibility !== 'hidden' && parseFloat(cs.opacity) > 0.5;
+      return cls || visible ? 'open' : 'closed';
+    };
+    const before = state(drawer);
     if (btn) btn.click();
-    const navAfter = nav ? getComputedStyle(nav).display : null;
+    const after = state(drawer);
     const btnActive = btn ? btn.classList.contains('active') : false;
     const links = [];
-    for (const a of document.querySelectorAll('#mainNav a, .subnav-tabs a, .footer-nav a')) {
+    for (const a of document.querySelectorAll(
+      '#mainNav a, #mobileNav a, .subnav-tabs a, .footer-nav a'
+    )) {
       const href = a.getAttribute('href') || '';
       const txt = (a.textContent || '').trim().slice(0, 30);
       const isHash = /^#/.test(href);
@@ -170,14 +182,15 @@ async function menuAudit(page, cap) {
     );
     return {
       btnVisible,
-      navBefore,
-      navAfter,
+      drawer: drawer ? drawer.id : null,
+      navBefore: before,
+      navAfter: after,
       btnActive,
       links,
       active,
       logo: document.querySelector('.logo')?.getAttribute('href') || null,
     };
-  });
+  }, vp === 'mobile');
   return r;
 }
 
@@ -213,7 +226,7 @@ async function main() {
         entry.screenshot = path.relative(process.cwd(), file);
       }
       if (MAIN.some((m) => m.path === p.path)) {
-        entry.menu = await menuAudit(page, cap);
+        entry.menu = await menuAudit(page, vp);
       }
       rec.viewports[vp] = entry;
       await context.close();
@@ -265,15 +278,15 @@ function writeReport(results) {
 
   L.push('## Menu audit (main pages)');
   L.push('');
-  L.push('| Page | VP | mobile btn | nav before | nav after click | active | links |');
-  L.push('|------|----|-----------|------------|-----------------|--------|-------|');
+  L.push('| Page | VP | mobile btn | drawer | before | after click | active | links |');
+  L.push('|------|----|-----------|--------|--------|-------------|--------|-------|');
   for (const r of results) {
     for (const [vp, e] of Object.entries(r.viewports)) {
       if (!e.menu) continue;
       const m = e.menu;
-      const open = m.navAfter && m.navAfter !== 'none';
+      const open = m.navAfter === 'open';
       L.push(
-        `| ${r.path} | ${vp} | ${m.btnVisible} | ${m.navBefore} | ${m.navAfter} ${open ? '✅opens' : '❌stays-hidden'} | ${m.active.join(',') || '—'} | ${m.links.length} |`
+        `| ${r.path} | ${vp} | ${m.btnVisible} | ${m.drawer || '—'} | ${m.navBefore || '—'} | ${m.navAfter || '—'} ${open ? '✅opens' : '❌stays-hidden'} | ${m.active.join(',') || '—'} | ${m.links.length} |`
       );
     }
   }

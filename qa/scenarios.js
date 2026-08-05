@@ -321,10 +321,17 @@ s('s07', 'Tools: each toolhub tab loads without errors', DESKTOP, async (t) => {
       .catch(() => {});
     await t.page.waitForTimeout(350);
   }
+  const camelotIdx = (await tabs.allTextContents()).findIndex((n) =>
+    n.toLowerCase().includes('camelot')
+  );
+  if (camelotIdx >= 0) {
+    await tabs.nth(camelotIdx).click();
+    await t.page.waitForTimeout(600);
+  }
   t.check(
-    (await t.page.locator('#camelot-wheel, canvas').count()) > 0,
+    (await t.page.locator('#camelotWheel svg, #camelotWheel').count()) > 0,
     'Camelot wheel tool present',
-    'canvas/camelot found'
+    'wheelSvg found'
   );
 });
 
