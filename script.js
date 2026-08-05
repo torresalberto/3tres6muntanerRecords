@@ -322,7 +322,9 @@ document.addEventListener('DOMContentLoaded', function () {
       } catch (_) {}
 
       const playlistMap = {};
-      playlistData.forEach(p => { playlistMap[p.releaseId] = p.videoId; });
+      playlistData.forEach((p) => {
+        playlistMap[p.releaseId] = p.videoId;
+      });
 
       const playlistVideos = [];
       for (const card of cards) {
@@ -348,25 +350,35 @@ document.addEventListener('DOMContentLoaded', function () {
           // Use playlist.json video ID for this release
           const videoId = playlistMap[parseInt(releaseId)];
           if (videoId) {
-            const artistName = release.artists?.[0]?.name || card.querySelector('.product-title')?.textContent?.split(' – ')[0] || '';
-            const title = release.title || card.querySelector('.product-title')?.textContent?.split(' – ')[1] || '';
+            const artistName =
+              release.artists?.[0]?.name ||
+              card.querySelector('.product-title')?.textContent?.split(' – ')[0] ||
+              '';
+            const title =
+              release.title ||
+              card.querySelector('.product-title')?.textContent?.split(' – ')[1] ||
+              '';
             playlistVideos.push({ videoId, title: `${artistName} – ${title}`, imageUrl });
           }
-        } catch (_) { /* skip */ }
+        } catch (_) {
+          /* skip */
+        }
       }
 
       // Populate hero playlist with matched YouTube tracks (audio only)
       if (playlistVideos.length > 0) {
-        HeroPlaylist.populateFromInventory(playlistVideos.map((v, i) => ({
-          release: {
-            artist: v.title.split(' – ')[0] || '',
-            title: v.title.split(' – ')[1] || v.title,
-            videos: [{ uri: `https://www.youtube.com/watch?v=${v.videoId}` }],
-            thumbnail: v.imageUrl || '',
-            images: v.imageUrl ? [{ uri: v.imageUrl }] : [],
-          },
-          id: i,
-        })));
+        HeroPlaylist.populateFromInventory(
+          playlistVideos.map((v, i) => ({
+            release: {
+              artist: v.title.split(' – ')[0] || '',
+              title: v.title.split(' – ')[1] || v.title,
+              videos: [{ uri: `https://www.youtube.com/watch?v=${v.videoId}` }],
+              thumbnail: v.imageUrl || '',
+              images: v.imageUrl ? [{ uri: v.imageUrl }] : [],
+            },
+            id: i,
+          }))
+        );
       }
     },
 
@@ -381,7 +393,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Deep House',
           price: 550,
           condition: 'VG+',
-          image: 'https://i.discogs.com/qKAa9EDfnFVDSQqGUp1w8W8Xkrdxrzjdw9Gzwp77rPw/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczNDUt/MTM4NjY1MTgxMi00/NzI1LmpwZWc.jpeg',
+          image:
+            'https://i.discogs.com/qKAa9EDfnFVDSQqGUp1w8W8Xkrdxrzjdw9Gzwp77rPw/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczNDUt/MTM4NjY1MTgxMi00/NzI1LmpwZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=JvVw1XFBL7c',
         },
         {
@@ -393,7 +406,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Techno',
           price: 850,
           condition: 'M',
-          image: 'https://i.discogs.com/4LFnA2YxKMzvfGDNHAVzQigIDECG1uctYegrcZC-yjc/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzODYt/MTE1NjMzMjg5NS5q/cGVn.jpeg',
+          image:
+            'https://i.discogs.com/4LFnA2YxKMzvfGDNHAVzQigIDECG1uctYegrcZC-yjc/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzODYt/MTE1NjMzMjg5NS5q/cGVn.jpeg',
           audio: 'https://www.youtube.com/watch?v=DwjfXA5SC8w',
         },
         {
@@ -405,7 +419,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'House',
           price: 720,
           condition: 'VG+',
-          image: 'https://i.discogs.com/5vfgKE4zqf4BBw_gJtAcwJNt6mRLU8D7OHxSxBXGgk0/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxMjcw/OTYtMTQ1NTY0NjAx/Ny02OTcwLmpwZWc.jpeg',
+          image:
+            'https://i.discogs.com/5vfgKE4zqf4BBw_gJtAcwJNt6mRLU8D7OHxSxBXGgk0/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxMjcw/OTYtMTQ1NTY0NjAx/Ny02OTcwLmpwZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=6TJR6szPHxk',
         },
         {
@@ -417,7 +432,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Minimal',
           price: 680,
           condition: 'VG',
-          image: 'https://i.discogs.com/kdbX4KoSmyhQJZz-SGSo8QKpabY8WNfnNnyjH2u57Ns/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NzI2/Mi0xNDEzNDc3Nzc3/LTkxODAuanBlZw.jpeg',
+          image:
+            'https://i.discogs.com/kdbX4KoSmyhQJZz-SGSo8QKpabY8WNfnNnyjH2u57Ns/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NzI2/Mi0xNDEzNDc3Nzc3/LTkxODAuanBlZw.jpeg',
           audio: 'https://www.youtube.com/watch?v=JaU4V0rQF_Y',
         },
         {
@@ -429,7 +445,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Disco',
           price: 480,
           condition: 'VG+',
-          image: 'https://i.discogs.com/GMZM_CAtJCWOmpI5Qyu9HYg5nrKg1D7OVIGCMjAGO10/rs:fit/g:sm/q:90/h:584/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MDcx/MDYtMTI1NTA4NTk3/NS5qcGVn.jpeg',
+          image:
+            'https://i.discogs.com/GMZM_CAtJCWOmpI5Qyu9HYg5nrKg1D7OVIGCMjAGO10/rs:fit/g:sm/q:90/h:584/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MDcx/MDYtMTI1NTA4NTk3/NS5qcGVn.jpeg',
           audio: 'https://www.youtube.com/watch?v=Nm-ISatLDG0',
         },
         {
@@ -441,7 +458,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Electro',
           price: 1200,
           condition: 'M',
-          image: 'https://i.discogs.com/_Z7fBaiXlVORVWohPGt_CBLyQvdHZZ4OdTgkK8npWK8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczOS0x/MTI4NTk5MTg4Lmpw/ZWc.jpeg',
+          image:
+            'https://i.discogs.com/_Z7fBaiXlVORVWohPGt_CBLyQvdHZZ4OdTgkK8npWK8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczOS0x/MTI4NTk5MTg4Lmpw/ZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=cZ2RYr_E8SE',
         },
         {
@@ -453,7 +471,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Deep House',
           price: 950,
           condition: 'VG+',
-          image: 'https://i.discogs.com/M-ir2aAKwTKQoLWMp-sOTTIEQYXe6rURk_NHXIUMWRg/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwNDAt/MTEyNDk4NDYxNi5q/cGc.jpeg',
+          image:
+            'https://i.discogs.com/M-ir2aAKwTKQoLWMp-sOTTIEQYXe6rURk_NHXIUMWRg/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwNDAt/MTEyNDk4NDYxNi5q/cGc.jpeg',
           audio: 'https://www.youtube.com/watch?v=wKpmFSfA59c',
         },
         {
@@ -465,7 +484,8 @@ document.addEventListener('DOMContentLoaded', function () {
           genre: 'Techno',
           price: 780,
           condition: 'VG',
-          image: 'https://i.discogs.com/GSgKYU7mH2xaJlP6VtsQvlqLfGqKp0Al2YBgB6aZDQ0/rs:fit/g:sm/q:90/h:567/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNjQw/Ny0xMTQyMjY4MzI3/LmpwZWc.jpeg',
+          image:
+            'https://i.discogs.com/GSgKYU7mH2xaJlP6VtsQvlqLfGqKp0Al2YBgB6aZDQ0/rs:fit/g:sm/q:90/h:567/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNjQw/Ny0xMTQyMjY4MzI3/LmpwZWc.jpeg',
           audio: 'https://www.youtube.com/watch?v=DwFs1PNz0fc',
         },
       ];
@@ -1133,19 +1153,24 @@ document.addEventListener('DOMContentLoaded', function () {
     STORAGE_KEY: '3tres6_audio_state',
 
     saveState() {
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify({
-        videoId: this.currentVideoId,
-        title: this.currentTitle,
-        isMuted: this.isMuted,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(
+        this.STORAGE_KEY,
+        JSON.stringify({
+          videoId: this.currentVideoId,
+          title: this.currentTitle,
+          isMuted: this.isMuted,
+          timestamp: Date.now(),
+        })
+      );
     },
 
     loadState() {
       try {
         const raw = localStorage.getItem(this.STORAGE_KEY);
         return raw ? JSON.parse(raw) : null;
-      } catch (_) { return null; }
+      } catch (_) {
+        return null;
+      }
     },
 
     init() {
@@ -1821,29 +1846,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Mobile Navigation
   // ========================================
 
-  const MobileNav = {
-    init() {
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileNav = document.getElementById('mobileNav');
-
-      if (mobileMenuBtn && mobileNav) {
-        mobileMenuBtn.addEventListener('click', function () {
-          const isOpen = mobileNav.classList.toggle('active');
-          this.classList.toggle('active');
-          this.setAttribute('aria-expanded', isOpen);
-          document.body.classList.toggle('menu-open', isOpen);
-        });
-
-        mobileNav.querySelectorAll('a').forEach((link) => {
-          link.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
-            document.body.classList.remove('menu-open');
-          });
-        });
-      }
-    },
-  };
+  // Mobile nav is handled by the shared js/nav.js (delegation-based, swup-safe).
 
   // ========================================
   // Smooth Scroll
@@ -2025,7 +2028,6 @@ document.addEventListener('DOMContentLoaded', function () {
     QuickView.init();
     HeroPlaylist.init();
     CatalogFilters.init();
-    MobileNav.init();
     ExitIntent.init();
     InstagramCarousel.init();
     CalendarLiveTabs.init();

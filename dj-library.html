@@ -31,6 +31,7 @@
 
     <link rel="stylesheet" href="styles.css?v=1" />
     <link rel="stylesheet" href="css/dj-library.css?v=4" />
+    <link rel="stylesheet" href="css/nav.css" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
     <script>
@@ -122,6 +123,7 @@
         <a href="3d-brain.html">DJ Hub</a>
         <a href="crew.html">Crew</a>
         <a href="mapa.html">Mapa</a>
+        <a href="toolhub/">Herramientas</a>
         <div class="mobile-nav-group-label">Redes</div>
         <a href="/#instagram">Instagram</a>
         <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
@@ -205,28 +207,11 @@
     </main>
 
     <script>
-      (function () {
-        var btn = document.getElementById('mobileMenuBtn');
-        var nav = document.getElementById('mobileNav');
-        if (btn && nav) {
-          btn.addEventListener('click', function () {
-            btn.classList.toggle('active');
-            nav.classList.toggle('active');
-            btn.setAttribute('aria-expanded', String(btn.getAttribute('aria-expanded') !== 'true'));
-          });
-          nav.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-              btn.classList.remove('active');
-              nav.classList.remove('active');
-              btn.setAttribute('aria-expanded', 'false');
-            });
-          });
-        }
-        window.addEventListener('scroll', function () {
-          document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
-        });
-      })();
+      window.addEventListener('scroll', function () {
+        document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
+      });
     </script>
+    <script src="js/nav.js" defer></script>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>

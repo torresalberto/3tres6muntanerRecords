@@ -52,14 +52,17 @@ function fmtTime(ts) {
     const h = Math.floor(total / 3600);
     const m = Math.floor((total % 3600) / 60);
     const s = total % 60;
-    return h ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${m}:${String(s).padStart(2, '0')}`;
+    return h
+      ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+      : `${m}:${String(s).padStart(2, '0')}`;
   }
   return ts;
 }
 
 function statusBadge(status) {
   if (status === 'confirmed') return '<span class="track-status confirmed">✓</span>';
-  if (status === 'id' || status === 'unidentified') return '<span class="track-status id">ID</span>';
+  if (status === 'id' || status === 'unidentified')
+    return '<span class="track-status id">ID</span>';
   return `<span class="track-status">${esc(status || '?')}</span>`;
 }
 
@@ -117,9 +120,7 @@ function renderPage(dj, sets) {
   const completion = trackCount ? Math.round((knownCount / trackCount) * 100) : 0;
 
   const heroImg = dj.image || PLACEHOLDER_IMG;
-  const genres = (dj.genres || [])
-    .map((g) => `<span class="genre-tag">${esc(g)}</span>`)
-    .join('');
+  const genres = (dj.genres || []).map((g) => `<span class="genre-tag">${esc(g)}</span>`).join('');
 
   const pageUrl = `https://3tres6records.albto.me/dj/${dj.id}.html`;
   const title = `${dj.name} | DJ Library — 3TRES6 Records`;
@@ -143,6 +144,7 @@ function renderPage(dj, sets) {
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../css/dj-library.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
   <style>
     .dj-page-hero {
       position: relative;
@@ -258,6 +260,9 @@ function renderPage(dj, sets) {
         <div class="nav-separator"></div>
         <div class="nav-group nav-group-content">
           <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
+          <a href="/3tres6muntanerRecords/crew.html" class="nav-item">Crew</a>
+          <a href="/3tres6muntanerRecords/mapa.html" class="nav-item">Mapa</a>
+          <a href="/3tres6muntanerRecords/toolhub/" class="nav-item">Herramientas</a>
         </div>
       </nav>
       <div class="header-actions">
@@ -279,6 +284,9 @@ function renderPage(dj, sets) {
       <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
       <div class="mobile-nav-group-label">Contenido</div>
       <a href="/3tres6muntanerRecords/3d-brain.html">DJ Hub</a>
+      <a href="/3tres6muntanerRecords/crew.html">Crew</a>
+      <a href="/3tres6muntanerRecords/mapa.html">Mapa</a>
+      <a href="/3tres6muntanerRecords/toolhub/">Herramientas</a>
       <div class="mobile-nav-group-label">Redes</div>
       <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
       <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
@@ -390,6 +398,7 @@ function renderPage(dj, sets) {
   <!-- Swup: seamless page transitions so the audio player never cuts off -->
   <script src="../js/vendor/swup.umd.js" defer></script>
   <script src="../js/swup-init.js" defer></script>
+  <script src="../js/nav.js" defer></script>
   <script src="../player-init.js" defer></script>
 </body>
 </html>
@@ -412,8 +421,11 @@ function build() {
     for (const setId of dj.sets || []) {
       const p = path.join(SETS, `${setId}.json`);
       if (fs.existsSync(p)) {
-        try { sets.push(JSON.parse(fs.readFileSync(p, 'utf-8'))); }
-        catch (e) { console.warn(`  ! ${setId}.json: ${e.message}`); }
+        try {
+          sets.push(JSON.parse(fs.readFileSync(p, 'utf-8')));
+        } catch (e) {
+          console.warn(`  ! ${setId}.json: ${e.message}`);
+        }
       }
     }
     const html = renderPage(dj, sets);
@@ -431,7 +443,11 @@ function watch() {
     clearTimeout(debounce);
     debounce = setTimeout(() => {
       console.log('Change detected, rebuilding...');
-      try { build(); } catch (e) { console.error('Build failed:', e.message); }
+      try {
+        build();
+      } catch (e) {
+        console.error('Build failed:', e.message);
+      }
     }, 300);
   };
   fs.watch(DATA, { recursive: true }, (event, filename) => {

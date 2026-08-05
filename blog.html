@@ -41,6 +41,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/nav.css" />
 
     <!-- Blog CSS -->
     <style>
@@ -584,6 +585,7 @@
             <a href="3d-brain.html" class="nav-item">DJ Hub</a>
             <a href="crew.html" class="nav-item">Crew</a>
             <a href="mapa.html" class="nav-item">Mapa</a>
+            <a href="toolhub/" class="nav-item">Herramientas</a>
           </div>
         </nav>
 
@@ -622,6 +624,7 @@
         <a href="3d-brain.html">DJ Hub</a>
         <a href="crew.html">Crew</a>
         <a href="mapa.html">Mapa</a>
+        <a href="toolhub/">Herramientas</a>
         <div class="mobile-nav-group-label">Redes</div>
         <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
         <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
@@ -1797,18 +1800,6 @@
     <script>
       // Blog page initializer (Swup-compatible)
       function initBlogPage() {
-        // Mobile menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        if (mobileMenuBtn && !mobileMenuBtn.dataset.bound) {
-          mobileMenuBtn.dataset.bound = '1';
-          mobileMenuBtn.addEventListener('click', function () {
-            const mobileNav = document.getElementById('mobileNav');
-            const isOpen = mobileNav.classList.toggle('active');
-            this.classList.toggle('active');
-            this.setAttribute('aria-expanded', isOpen);
-          });
-        }
-
         // Blog category filter
         document.querySelectorAll('.blog-cat-btn:not([data-bound])').forEach((btn) => {
           btn.dataset.bound = '1';
@@ -1864,6 +1855,7 @@
     <!-- Swup: seamless page transitions so the audio player never cuts off -->
     <script src="../js/vendor/swup.umd.js" defer></script>
     <script src="../js/swup-init.js" defer></script>
+    <script src="js/nav.js" defer></script>
 
     <script src="../player-init.js" defer></script>
   </body>

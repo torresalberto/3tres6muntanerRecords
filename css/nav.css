@@ -1,0 +1,56 @@
+/* 3TRES6 — shared mobile navigation drawer.
+ * Loaded last on every page so it overrides per-page nav styles. */
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    margin: 0;
+    padding: 96px 28px 32px;
+    background: #0d0d0f;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+    gap: 4px;
+  }
+
+  .main-nav.nav-open .nav-group {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2px;
+  }
+
+  .main-nav.nav-open .nav-group-content {
+    margin-top: 8px;
+  }
+
+  .main-nav.nav-open .nav-separator {
+    display: none;
+  }
+
+  .main-nav.nav-open .nav-item {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  body.menu-open::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 999;
+  }
+}

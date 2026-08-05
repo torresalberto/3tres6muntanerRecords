@@ -1,0 +1,4137 @@
+[
+  {
+    "path": "/",
+    "label": "home",
+    "viewports": {
+      "desktop": {
+        "title": "3TRES6 Records | Vinilos Europeos de Segunda Mano | Barcelona → México",
+        "h1": "Escucha. Conecta. Colecciona.",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [
+          "https://3tres6records.albto.me/"
+        ],
+        "spinners": [
+          "loading-spinner"
+        ],
+        "elems": {
+          ".product-grid a, .product-grid .product-card": 44,
+          "#dynamicCalendar .calendar-body": 1
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913258679&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=649990554.1785913259&frm=0&ngs=1&pscdl=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&cpn=9ArGJ0TdRR06lJK6&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C34390%2C30",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=9ArGJ0TdRR06lJK6&ei=q99yaoatNIeulu8P9evN-AQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=9ArGJ0TdRR06lJK6&ver=2&cmt=0.014&fmt=396&fs=0&rt=0.915&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=950&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913258679&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=649990554.1785913259&frm=0&",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/home-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": true,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "#catalogo",
+              "abs": null
+            },
+            {
+              "txt": "Calendario",
+              "href": "#calendario",
+              "abs": null
+            },
+            {
+              "txt": "Nosotros",
+              "href": "#nosotros",
+              "abs": null
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "Catálogo"
+          ],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "3TRES6 Records | Vinilos Europeos de Segunda Mano | Barcelona → México",
+        "h1": "Escucha. Conecta. Colecciona.",
+        "sw": 464,
+        "vw": 390,
+        "broken": [
+          "https://3tres6records.albto.me/"
+        ],
+        "spinners": [],
+        "elems": {
+          ".product-grid a, .product-grid .product-card": 44,
+          "#dynamicCalendar .calendar-body": 1
+        },
+        "console": [
+          "Access to fetch at 'https://api.discogs.com/releases/165457' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/233738' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/103287' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/1463763' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/18112' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/807445' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/58967' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/29781781' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/909930' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/241908' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/1163965' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/847310' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/31015558' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913264438&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=468070095.1785913265&frm=0&ngs=1&pscdl=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=K9B6-UpmOq96u0sc&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934865&ei=sd9yaszHG7Sjir4P1oO7mAg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AH5uxBRqrPEckEW0i65jEgKVG16C_St",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913264438&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=468070095.1785913265&frm=0&",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=K9B6-UpmOq96u0sc&ei=sd9yaszHG7Sjir4P1oO7mAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=K9B6-UpmOq96u0sc&ver=2&cmt=0.016&fmt=396&fs=0&rt=0.547&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=580&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/165457",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/233738",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/103287",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/1463763",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/18112",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/807445",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/58967",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/29781781",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/909930",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/241908",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/1163965",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/847310",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/31015558",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/260788",
+            "err": "net::ERR_FAILED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/home-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": true,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "#catalogo",
+              "abs": null
+            },
+            {
+              "txt": "Calendario",
+              "href": "#calendario",
+              "abs": null
+            },
+            {
+              "txt": "Nosotros",
+              "href": "#nosotros",
+              "abs": null
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "Catálogo"
+          ],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/3d-brain.html",
+    "label": "brain",
+    "viewports": {
+      "desktop": {
+        "title": "3TRES6 Neural — DJ Connection Sphere",
+        "h1": "3TRES6 Neural — Conexiones entre DJs",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [
+          "https://3tres6records.albto.me/3d-brain.html"
+        ],
+        "spinners": [],
+        "elems": {
+          "#sphere-svg circle": 57
+        },
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=r3Yey-4j4o0HvTzM&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C100702%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934871&ei=t99yauS5MdHcybgPyJjBuQ8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ALpl3UXEyq0KbWaclb1zW1IHRZSVvpI",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=r3Yey-4j4o0HvTzM&ver=2&cmt=0.021&fmt=396&fs=0&rt=0.833&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=878&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=r3Yey-4j4o0HvTzM&ei=t99yauS5MdHcybgPyJjBuQ8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/3d-brain-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "/toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "DJ Hub"
+          ],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "3TRES6 Neural — DJ Connection Sphere",
+        "h1": "3TRES6 Neural — Conexiones entre DJs",
+        "sw": 390,
+        "vw": 390,
+        "broken": [
+          "https://3tres6records.albto.me/3d-brain.html"
+        ],
+        "spinners": [],
+        "elems": {
+          "#sphere-svg circle": 57
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934876&ei=vN9yasTHF9SFybgP--6VAQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGMxbS25Rcl5lQ2YTIiNO4NS2ea8Vjqn",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=rTTFFLJqKWT2dWIU&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C65300%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=rTTFFLJqKWT2dWIU&ei=vN9yasTHF9SFybgP--6VAQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=rTTFFLJqKWT2dWIU&ver=2&cmt=0.006&fmt=396&fs=0&rt=0.565&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=597&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=rTTFFLJqKWT2dWIU&ver=2&cmt=1.404&fmt=396&fs=0&rt=2.002&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2033&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/3d-brain-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "/toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "DJ Hub"
+          ],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/crew.html",
+    "label": "crew",
+    "viewports": {
+      "desktop": {
+        "title": "El Crew — 3TRES6 Records",
+        "h1": "El Crew de 3TRES6",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          "#crewGrid .dj-card": 5
+        },
+        "console": [
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [
+          {
+            "status": 404,
+            "url": "https://i.ytimg.com/vi/5r9kD5d0VhI/hqdefault.jpg"
+          },
+          {
+            "status": 404,
+            "url": "https://i.ytimg.com/vi/Pl5d5U5r0dI/hqdefault.jpg"
+          },
+          {
+            "status": 404,
+            "url": "https://i.ytimg.com/vi/5h5h5h5h5h5/hqdefault.jpg"
+          },
+          {
+            "status": 404,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e1f3c2e3e3e3e3e3e3e3e3e3e"
+          }
+        ],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913279992&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=2060746207.1785913280&frm=0&ngs=1&pscdl",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934880&ei=wN9yapXjMKOIlu8P68bliA4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABmE-g0LM-zd8BQmwOrsCtV-lAFl7T4",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=rB-rq9jB3RPZTkBh&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=rB-rq9jB3RPZTkBh&ver=2&cmt=0.027&fmt=396&fs=0&rt=0.551&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=582&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=rB-rq9jB3RPZTkBh&ei=wN9yapXjMKOIlu8P68bliA4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/crew-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "../toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "Crew"
+          ],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "El Crew — 3TRES6 Records",
+        "h1": "El Crew de 3TRES6",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          "#crewGrid .dj-card": 5
+        },
+        "console": [
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Failed to load resource: the server responded with a status of 404 ()",
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ],
+        "pageErrors": [],
+        "http": [
+          {
+            "status": 404,
+            "url": "https://i.ytimg.com/vi/Pl5d5U5r0dI/hqdefault.jpg"
+          },
+          {
+            "status": 404,
+            "url": "https://i.ytimg.com/vi/5h5h5h5h5h5/hqdefault.jpg"
+          },
+          {
+            "status": 404,
+            "url": "https://i.ytimg.com/vi/5r9kD5d0VhI/hqdefault.jpg"
+          },
+          {
+            "status": 404,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e1f3c2e3e3e3e3e3e3e3e3e3e"
+          }
+        ],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913284496&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1191476315.1785913285&frm=0&ngs=1&pscdl",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=ku_E2oeW1K42TItD&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34394%2C30",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934885&ei=xd9yat2ECOyklu8P7u7MsAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AKuJPivEEVFpPj8NQFRxh3_hdEgOQQe",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ku_E2oeW1K42TItD&ei=xd9yat2ECOyklu8P7u7MsAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ku_E2oeW1K42TItD&ver=2&cmt=0.03&fmt=397&fs=0&rt=1.022&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1053&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=ku_E2oeW1K42TItD&ver=2&cmt=2.009&fmt=397&fs=0&rt=3.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=3032&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/crew-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "../toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "Crew"
+          ],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/mapa.html",
+    "label": "mapa",
+    "viewports": {
+      "desktop": {
+        "title": "Mapa — 3TRES6 Records",
+        "h1": "Nuestro Territorio",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".leaflet-marker-icon": 12
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913289015&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1700751323.1785913289&frm=0&ngs=1&pscdl",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=m41yQsGbaFhhNwf5&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934889&ei=yd9yasvKLt-ilu8PgrOWoQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AE85adfl9lzuYutRoDZ0wMruj1ZDM92",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=m41yQsGbaFhhNwf5&ei=yd9yasvKLt-ilu8PgrOWoQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=m41yQsGbaFhhNwf5&ver=2&cmt=0.037&fmt=397&fs=0&rt=0.598&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=629&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/mapa-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "/3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "/crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "/mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "/toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Blog",
+              "href": "/blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "/dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "/3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "/crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "/mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "/toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "Mapa — 3TRES6 Records",
+        "h1": "Nuestro Territorio",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".leaflet-marker-icon": 12
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913293531&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1750985516.1785913294&frm=0&ngs=1&pscdl",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934894&ei=zt9yau-vEsWlir4Pvvjy2Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AMkNmOpZ-9TprtHlJ5xCnvAp4otuodb",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=WKibcyRA0AC7yjYS&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=WKibcyRA0AC7yjYS&ei=zt9yau-vEsWlir4Pvvjy2Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=WKibcyRA0AC7yjYS&ver=2&cmt=0.028&fmt=396&fs=0&rt=0.534&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=565&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/mapa-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "/3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "/crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "/mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "/toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Blog",
+              "href": "/blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "/dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "/3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "/crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "/mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "/toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/blog.html",
+    "label": "blog",
+    "viewports": {
+      "desktop": {
+        "title": "Blog | 3TRES6 Records – Aprende sobre Vinilos, Tornamesas y DJ",
+        "h1": "Blog & Educación Vinyl",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".blog-card, article": 8
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913297985&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=180485946.1785913298&frm=0&ngs=1&pscdl=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934898&ei=0t9yarrpKp6Uir4P3tvgoAY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJRFjtMmhuaa9YzXxDxEfiCoGQKeqM5",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=8jwCAoo7Qatw-jIO&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=8jwCAoo7Qatw-jIO&ei=0t9yarrpKp6Uir4P3tvgoAY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=8jwCAoo7Qatw-jIO&ver=2&cmt=0.045&fmt=396&fs=0&rt=0.539&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=572&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/blog-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": true,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "../crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "../mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "../toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "Blog | 3TRES6 Records – Aprende sobre Vinilos, Tornamesas y DJ",
+        "h1": "Blog & Educación Vinyl",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".blog-card, article": 8
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913303927&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1482374450.1785913304&frm=0&ngs=1&pscdl",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=VXi_iyw22D2omHby&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C33146%2C32",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934904&ei=2N9yauLTJfecybgP8bGNqAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APQ2z7jZ3U_hJ-nDGBh4dKpiyQ7pvBE",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=VXi_iyw22D2omHby&ei=2N9yauLTJfecybgP8bGNqAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=VXi_iyw22D2omHby&ver=2&cmt=0.013&fmt=396&fs=0&rt=0.525&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=554&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913303927&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1482374450.1785913304&",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/blog-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": true,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "../crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "../mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "../toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/dj-library.html",
+    "label": "dj-library",
+    "viewports": {
+      "desktop": {
+        "title": "DJ Library — 3TRES6 Records",
+        "h1": "Sets & Tracklists",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".dj-card": 56
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913310963&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1426176527.1785913311&frm=0&ngs=1&pscdl",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/dj-library-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": true,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "DJ Library — 3TRES6 Records",
+        "h1": "Sets & Tracklists",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".dj-card": 56
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6831v9241802264za200zd9241802264&_p=1785913315771&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=587664747.1785913316&frm=0&ngs=1&pscdl=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/dj-library-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": true,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Blog",
+              "href": "blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "toolhub/",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/product.html",
+    "label": "product",
+    "viewports": {
+      "desktop": {
+        "title": "Larry Heard – Missing You | Muntaner336",
+        "h1": "Larry Heard – Missing You",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".product-detail, .product-info": 1
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=OTpJxjBBmHK6x-Py&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934923&ei=699yau74EPKLlu8Pr_S42Qk&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AL8rMAORTbJSpTuSQtrSDUiGT3j8yve",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=OTpJxjBBmHK6x-Py&ver=2&cmt=0.035&fmt=396&fs=0&rt=0.549&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=584&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=OTpJxjBBmHK6x-Py&ei=699yau74EPKLlu8Pr_S42Qk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/product-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            }
+          ],
+          "active": [
+            "Catálogo"
+          ],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "Larry Heard – Missing You | Muntaner336",
+        "h1": "Larry Heard – Missing You",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          ".product-detail, .product-info": 1
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934927&ei=799yaqDtItmglu8P44yT-QE&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ACMmgKrdSe5j5Q1WxuVOugBt1GGLZ8G",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=410umgJ9W0qyX4lw&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=410umgJ9W0qyX4lw&ei=799yaqDtItmglu8P44yT-QE&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=410umgJ9W0qyX4lw&ver=2&cmt=0.039&fmt=396&fs=0&rt=0.509&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=537&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/product-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "none",
+          "navAfter": "none",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/#catalogo",
+              "abs": "https://3tres6records.albto.me/#catalogo"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            }
+          ],
+          "active": [
+            "Catálogo"
+          ],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/toolhub/",
+    "label": "toolhub",
+    "viewports": {
+      "desktop": {
+        "title": "3TRES6 Tools | Herramientas para DJ",
+        "h1": "Toolkit para DJ",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          "#camelot-wheel, .camelot-wheel, [id*=\"camelot\"]": 1
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934932&ei=899yap_AO-2Klu8PiovkgQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ALqePVa42l_FKPg9GicDewCWtN2rtrN",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=8zU3r0RPJnm19I8C&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C35",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=8zU3r0RPJnm19I8C&ei=899yap_AO-2Klu8PiovkgQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=8zU3r0RPJnm19I8C&ver=2&cmt=0.032&fmt=397&fs=0&rt=0.553&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=583&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/toolhub_-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "/3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "/crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "/mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "./",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Blog",
+              "href": "../blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "../dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "../3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "../crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "../mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "./",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "Herramientas"
+          ],
+          "logo": "/"
+        }
+      },
+      "mobile": {
+        "title": "3TRES6 Tools | Herramientas para DJ",
+        "h1": "Toolkit para DJ",
+        "sw": 832,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "elems": {
+          "#camelot-wheel, .camelot-wheel, [id*=\"camelot\"]": 1
+        },
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934936&ei=-N9yavLnKYaO2_gP7LzGwAo&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ANhExCs-E9jRIKIErPuO4EXzKXsV-li",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=IQflOX5Mrv01ZXBw&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C47715%2C76959%2C117689%2C9252%2C3479%2C13030%2C23206%2C35",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=IQflOX5Mrv01ZXBw&ei=-N9yavLnKYaO2_gP7LzGwAo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=IQflOX5Mrv01ZXBw&ver=2&cmt=0.021&fmt=397&fs=0&rt=0.541&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=569&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/toolhub_-mobile.png",
+        "menu": {
+          "btnVisible": true,
+          "navBefore": "flex",
+          "navAfter": "flex",
+          "btnActive": false,
+          "links": [
+            {
+              "txt": "Catálogo",
+              "href": "/",
+              "abs": "https://3tres6records.albto.me/"
+            },
+            {
+              "txt": "Calendario",
+              "href": "/#calendario",
+              "abs": "https://3tres6records.albto.me/#calendario"
+            },
+            {
+              "txt": "Nosotros",
+              "href": "/#nosotros",
+              "abs": "https://3tres6records.albto.me/#nosotros"
+            },
+            {
+              "txt": "DJ Hub",
+              "href": "/3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "/crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "/mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "./",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            },
+            {
+              "txt": "Blog",
+              "href": "../blog.html",
+              "abs": "https://3tres6records.albto.me/blog.html"
+            },
+            {
+              "txt": "DJ Library",
+              "href": "../dj-library.html",
+              "abs": "https://3tres6records.albto.me/dj-library.html"
+            },
+            {
+              "txt": "Neural",
+              "href": "../3d-brain.html",
+              "abs": "https://3tres6records.albto.me/3d-brain.html"
+            },
+            {
+              "txt": "Crew",
+              "href": "../crew.html",
+              "abs": "https://3tres6records.albto.me/crew.html"
+            },
+            {
+              "txt": "Mapa",
+              "href": "../mapa.html",
+              "abs": "https://3tres6records.albto.me/mapa.html"
+            },
+            {
+              "txt": "Herramientas",
+              "href": "./",
+              "abs": "https://3tres6records.albto.me/toolhub/"
+            }
+          ],
+          "active": [
+            "Herramientas"
+          ],
+          "logo": "/"
+        }
+      }
+    }
+  },
+  {
+    "path": "/dj-library/",
+    "label": "dj-library-static",
+    "viewports": {
+      "desktop": {
+        "title": "DJ Library — 3TRES6 Records",
+        "h1": "DJ Library",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=xevNPY7oz3oBNjMR&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934942&ei=_t9yas2pBqGVir4PjYrwwQk&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJmaJQlYxMHtMG6Mq5hajOzBphAorSB",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=xevNPY7oz3oBNjMR&ver=2&cmt=0.102&fmt=396&fs=0&rt=0.824&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=882&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=xevNPY7oz3oBNjMR&ei=_t9yas2pBqGVir4PjYrwwQk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=xevNPY7oz3oBNjMR&ver=2&cmt=1.28&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2059&cl=958593234&state=playin",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/dj-library_-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": null,
+          "navAfter": null,
+          "btnActive": false,
+          "links": [],
+          "active": [],
+          "logo": "../"
+        }
+      },
+      "mobile": {
+        "title": "DJ Library — 3TRES6 Records",
+        "h1": "DJ Library",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=zx29XH1nA1Rb1EDa&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C97",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=zx29XH1nA1Rb1EDa&ver=2&cmt=0.008&fmt=396&fs=0&rt=0.549&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=577&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=zx29XH1nA1Rb1EDa&ei=A-ByarS1G_iP2_gPlsPewQo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/dj-library_-mobile.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": null,
+          "navAfter": null,
+          "btnActive": false,
+          "links": [],
+          "active": [],
+          "logo": "../"
+        }
+      }
+    }
+  },
+  {
+    "path": "/dj-library/page-2.html",
+    "label": "dj-library-static-p2",
+    "viewports": {
+      "desktop": {
+        "title": "DJ Library — Página 2 — 3TRES6 Records",
+        "h1": "DJ Library",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934953&ei=CeByavXSGJPc2_gP0tKfgQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ANUbgP0d5YB3rRiowrPAOU_YfpP4P6Y",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=r5CPRuLkG5zgTsDM&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=r5CPRuLkG5zgTsDM&ei=CeByavXSGJPc2_gP0tKfgQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=r5CPRuLkG5zgTsDM&ver=2&cmt=0.006&fmt=396&fs=0&rt=0.441&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=473&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/dj-library_page-2-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": null,
+          "navAfter": null,
+          "btnActive": false,
+          "links": [],
+          "active": [],
+          "logo": "../"
+        }
+      },
+      "mobile": {
+        "title": "DJ Library — Página 2 — 3TRES6 Records",
+        "h1": "DJ Library",
+        "sw": 390,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934959&ei=D-Byao-6C9y0ir4Pp_CymQY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ACueBdlRTDAR5Z9CCX3V0sTmyJXJDdS",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=6HugUorH3HdRuydj&el=embedded&ns=yt&fexp=v1%2C23848212%2C156432%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=6HugUorH3HdRuydj&ei=D-Byao-6C9y0ir4Pp_CymQY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=6HugUorH3HdRuydj&ver=2&cmt=0.041&fmt=396&fs=0&rt=0.513&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=553&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ],
+        "screenshot": "qa/screenshots/display/dj-library_page-2-mobile.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": null,
+          "navAfter": null,
+          "btnActive": false,
+          "links": [],
+          "active": [],
+          "logo": "../"
+        }
+      }
+    }
+  },
+  {
+    "path": "/crew/d-mfrutis/",
+    "label": "crew-d-mfrutis",
+    "viewports": {
+      "desktop": {
+        "title": "d.mfrutis — crew",
+        "h1": "d.mfrutis",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [],
+        "screenshot": "qa/screenshots/display/crew_d-mfrutis_-desktop.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": null,
+          "navAfter": null,
+          "btnActive": false,
+          "links": [],
+          "active": [],
+          "logo": null
+        }
+      },
+      "mobile": {
+        "title": "d.mfrutis — crew",
+        "h1": "d.mfrutis",
+        "sw": 491,
+        "vw": 390,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [],
+        "screenshot": "qa/screenshots/display/crew_d-mfrutis_-mobile.png",
+        "menu": {
+          "btnVisible": false,
+          "navBefore": null,
+          "navAfter": null,
+          "btnActive": false,
+          "links": [],
+          "active": [],
+          "logo": null
+        }
+      }
+    }
+  },
+  {
+    "path": "/dj/alex-do-clr-305.html",
+    "label": "dj/alex-do-clr-305",
+    "viewports": {
+      "desktop": {
+        "title": "Alex Do Clr 305 | DJ Library — 3TRES6 Records",
+        "h1": "Alex Do Clr 305",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=jS1qpddhm4NqFsGY&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C65299%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934975&ei=H-ByatTYKc-Glu8P09SyoA8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AD4pz_Wh2OE-SWrJcB75DV3D1FMsNwQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=jS1qpddhm4NqFsGY&ei=H-ByatTYKc-Glu8P09SyoA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=jS1qpddhm4NqFsGY&ver=2&cmt=0.014&fmt=397&fs=0&rt=1.005&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1035&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/ame.html",
+    "label": "dj/ame",
+    "viewports": {
+      "desktop": {
+        "title": "Ame | DJ Library — 3TRES6 Records",
+        "h1": "Ame",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=wJmMqf1o6Fz4DCew&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6256%2C16950%2C10",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934979&ei=I-Byar7CE4m1ir4Pv8_PwQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AKEwgwCQ_s9JmWX0vFwdd7nl3K_Rm7b",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=wJmMqf1o6Fz4DCew&ei=I-Byar7CE4m1ir4Pv8_PwQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=wJmMqf1o6Fz4DCew&ver=2&cmt=0.027&fmt=396&fs=0&rt=1.078&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1111&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/apollonia.html",
+    "label": "dj/apollonia",
+    "viewports": {
+      "desktop": {
+        "title": "Apollonia | DJ Library — 3TRES6 Records",
+        "h1": "Apollonia",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=2I5DxYZo_S98Vc5K&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934983&ei=J-ByaqXMFKWDlu8Ph82Z8Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEuK6ycZ33s-h2RnaDxrjTPlxrMPUse",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=2I5DxYZo_S98Vc5K&ei=J-ByaqXMFKWDlu8Ph82Z8Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=2I5DxYZo_S98Vc5K&ver=2&cmt=0.031&fmt=396&fs=0&rt=1.065&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1091&cl=958593234&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/avalon-emerson.html",
+    "label": "dj/avalon-emerson",
+    "viewports": {
+      "desktop": {
+        "title": "Avalon Emerson | DJ Library — 3TRES6 Records",
+        "h1": "Avalon Emerson",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=FxN7TQaKUdyDTkIj&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C65300%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934987&ei=K-ByaoymFcKbybgPyPXcGQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ACleD-4qTpNKBxAUb76DuiDDqLIuv-Tj",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=FxN7TQaKUdyDTkIj&ver=2&cmt=0.026&fmt=397&fs=0&rt=0.758&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=782&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=FxN7TQaKUdyDTkIj&ei=K-ByaoymFcKbybgPyPXcGQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/ben-ufo.html",
+    "label": "dj/ben-ufo",
+    "viewports": {
+      "desktop": {
+        "title": "Ben Ufo | DJ Library — 3TRES6 Records",
+        "h1": "Ben Ufo",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934991&ei=L-ByavSNDpTwybgP-NCKgQU&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AIH-aO4e8oz0tJyAdBdtOGNzk8zgBrF",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=x6lqRCan-VL4R-Ej&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=x6lqRCan-VL4R-Ej&ei=L-ByavSNDpTwybgP-NCKgQU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=x6lqRCan-VL4R-Ej&ver=2&cmt=0.065&fmt=396&fs=0&rt=0.865&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=893&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/blessed-madonna.html",
+    "label": "dj/blessed-madonna",
+    "viewports": {
+      "desktop": {
+        "title": "Blessed Madonna | DJ Library — 3TRES6 Records",
+        "h1": "Blessed Madonna",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=-tf4Sa_zsFmSxuDn&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934995&ei=M-Byaof1BKulir4PxcXYoAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGooGPToWyYsYhyvqlH8WMOAkQktUzK",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-tf4Sa_zsFmSxuDn&ver=2&cmt=0.018&fmt=396&fs=0&rt=0.912&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=945&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-tf4Sa_zsFmSxuDn&ei=M-Byaof1BKulir4PxcXYoAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/call-super.html",
+    "label": "dj/call-super",
+    "viewports": {
+      "desktop": {
+        "title": "Call Super | DJ Library — 3TRES6 Records",
+        "h1": "Call Super",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=lYn80Mfs2N8kW-Wx&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785934998&ei=NuByat2-Nrnwir4Prd3LqQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AAgHSzPaZXLh68_sA9m3UQlrUiGHHwm",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=lYn80Mfs2N8kW-Wx&ei=NuByat2-Nrnwir4Prd3LqQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=lYn80Mfs2N8kW-Wx&ver=2&cmt=0.005&fmt=397&fs=0&rt=0.896&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=929&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/carl-cox.html",
+    "label": "dj/carl-cox",
+    "viewports": {
+      "desktop": {
+        "title": "Carl Cox | DJ Library — 3TRES6 Records",
+        "h1": "Carl Cox",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=J6RS9kjQghiIAnj-&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935002&ei=OuByasOCO6iElu8P0be2iQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AOipxsrJO6BGKAAQ-Zsqu9uWyrsfFrk",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=J6RS9kjQghiIAnj-&ei=OuByasOCO6iElu8P0be2iQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=J6RS9kjQghiIAnj-&ver=2&cmt=0.012&fmt=396&fs=0&rt=0.735&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=757&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=J6RS9kjQghiIAnj-&ver=2&cmt=1.261&fmt=396&fs=0&rt=2.004&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2026&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/carl-craig.html",
+    "label": "dj/carl-craig",
+    "viewports": {
+      "desktop": {
+        "title": "Carl Craig | DJ Library — 3TRES6 Records",
+        "h1": "Carl Craig",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=-srVs8r7JbaDMbI4&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-srVs8r7JbaDMbI4&ei=PuByaurBM9auybgPhryX8Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-srVs8r7JbaDMbI4&ver=2&cmt=0.027&fmt=397&fs=0&rt=0.875&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=905&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=-srVs8r7JbaDMbI4&ver=2&cmt=2.156&fmt=397&fs=0&rt=3.009&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=3039&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/cassius.html",
+    "label": "dj/cassius",
+    "viewports": {
+      "desktop": {
+        "title": "Cassius | DJ Library — 3TRES6 Records",
+        "h1": "Cassius",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=LsrCw8sIpLUdN1kU&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C35",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935010&ei=QuByap-mM9OU2_gPhKGKkAk&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABNrVBGXEYvBQo9YDQXIeAU6Z6k6Iyf",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=LsrCw8sIpLUdN1kU&ei=QuByap-mM9OU2_gPhKGKkAk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=LsrCw8sIpLUdN1kU&ver=2&cmt=0.022&fmt=396&fs=0&rt=0.887&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=931&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/chaos-in-the-cbd.html",
+    "label": "dj/chaos-in-the-cbd",
+    "viewports": {
+      "desktop": {
+        "title": "Chaos In The CBD | DJ Library — 3TRES6 Records",
+        "h1": "Chaos In The CBD",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&cpn=ElSo1G8i-7upvYSH&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr3---sn-9gv7dn7l.googlevideo.com/videoplayback?expire=1785935014&ei=RuByatKKNbiAlu8Pwc-EoAg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFXUlnCX6x2ihnAyk7juBE5GixJqhfbk2yGXpt",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ElSo1G8i-7upvYSH&ver=2&cmt=0.014&fmt=396&fs=0&rt=1.671&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1704&cl=958593234&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ElSo1G8i-7upvYSH&ei=RuByatKKNbiAlu8Pwc-EoAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/david-august.html",
+    "label": "dj/david-august",
+    "viewports": {
+      "desktop": {
+        "title": "David August | DJ Library — 3TRES6 Records",
+        "h1": "David August",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=OXlv7eeKlzEuwWm4&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C33143%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935019&ei=S-Byaoq_Dq__-coPo6KXKA&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AOFFY0MqvC1dP0B35tyuTbr1XU3i4IbK",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=OXlv7eeKlzEuwWm4&ei=S-Byaoq_Dq__-coPo6KXKA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=OXlv7eeKlzEuwWm4&ver=2&cmt=0.065&fmt=396&fs=0&rt=0.772&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=795&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/dixon.html",
+    "label": "dj/dixon",
+    "viewports": {
+      "desktop": {
+        "title": "Dixon | DJ Library — 3TRES6 Records",
+        "h1": "Dixon",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=b6wi2vQ5zibjVdrv&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C6256%2C16950%2C1007",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935023&ei=T-Byap_ZAY7y-coP7IWv4Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABJi39TaG_mQ5lF2m9b3MLGz3yB6qlR",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=b6wi2vQ5zibjVdrv&ver=2&cmt=0.016&fmt=396&fs=0&rt=0.959&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=990&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=b6wi2vQ5zibjVdrv&ei=T-Byap_ZAY7y-coP7IWv4Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/dj-koze-various.html",
+    "label": "dj/dj-koze-various",
+    "viewports": {
+      "desktop": {
+        "title": "Dj Koze Various | DJ Library — 3TRES6 Records",
+        "h1": "Dj Koze Various",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935027&ei=UuByavWdO8PW2_gP9pK42Ao&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGd9W2-tENzmR9FN-dfzamkD3HlzvOP",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=DI8gMsxr_1CgM_O0&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=DI8gMsxr_1CgM_O0&ver=2&cmt=0.047&fmt=396&fs=0&rt=0.523&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=553&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=DI8gMsxr_1CgM_O0&ei=UuByavWdO8PW2_gP9pK42Ao&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/dj-pierre.html",
+    "label": "dj/dj-pierre",
+    "viewports": {
+      "desktop": {
+        "title": "Dj Pierre | DJ Library — 3TRES6 Records",
+        "h1": "Dj Pierre",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=1NMvjbM5PkSSYoS4&el=embedded&ns=yt&fexp=v1%2C23848210%2C156434%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1NMvjbM5PkSSYoS4&ei=VuByatKcN-Calu8P3cbSwQo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1NMvjbM5PkSSYoS4&ver=2&cmt=0.01&fmt=396&fs=0&rt=0.778&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=811&cl=958081982&mos=1&volume=1",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/donato-dozzy.html",
+    "label": "dj/donato-dozzy",
+    "viewports": {
+      "desktop": {
+        "title": "Donato Dozzy | DJ Library — 3TRES6 Records",
+        "h1": "Donato Dozzy",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935034&ei=WuByarGpL-bhlu8PlbWQ6Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ANow-7SLwq4fR8Rcx4itO7hYEJsX14P",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=9jniuD1rcScV9_bl&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=9jniuD1rcScV9_bl&ver=2&cmt=0.005&fmt=396&fs=0&rt=0.69&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=715&cl=958081982&mos=1&volume=1",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=9jniuD1rcScV9_bl&ei=WuByarGpL-bhlu8PlbWQ6Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/etapp-kyle.html",
+    "label": "dj/etapp-kyle",
+    "viewports": {
+      "desktop": {
+        "title": "Etapp Kyle | DJ Library — 3TRES6 Records",
+        "h1": "Etapp Kyle",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=yCzjC4SavpRFYAeA&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935038&ei=XuByaunLNYi1ir4PwrqfyAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJIgbBVk8Ychdn9sOuk2dO7g-8Vy2A5",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=yCzjC4SavpRFYAeA&ei=XuByaunLNYi1ir4PwrqfyAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=yCzjC4SavpRFYAeA&ver=2&cmt=0.008&fmt=396&fs=0&rt=0.861&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=892&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=yCzjC4SavpRFYAeA&ver=2&cmt=1.177&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2032&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/floating-points.html",
+    "label": "dj/floating-points",
+    "viewports": {
+      "desktop": {
+        "title": "Floating Points | DJ Library — 3TRES6 Records",
+        "h1": "Floating Points",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935042&ei=YuByatrcLaqa2_gP-bOAsQY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEDUY6Or9PipLgf2IgFxjFtwBuvUcpa",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=Epl7m_doxi8lIJGs&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C15",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Epl7m_doxi8lIJGs&ver=2&cmt=0.065&fmt=396&fs=0&rt=0.864&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=896&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Epl7m_doxi8lIJGs&ei=YuByatrcLaqa2_gP-bOAsQY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/floorplan.html",
+    "label": "dj/floorplan",
+    "viewports": {
+      "desktop": {
+        "title": "Floorplan | DJ Library — 3TRES6 Records",
+        "h1": "Floorplan",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=uQLknLpkAM-3gO9R&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935046&ei=ZuByapO8LL2b2_gP1obQmQo&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABebL43kxCfxG0ZMZ51QZAXTpYk55Ks",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=uQLknLpkAM-3gO9R&ver=2&cmt=0.011&fmt=396&fs=0&rt=0.789&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=813&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=uQLknLpkAM-3gO9R&ei=ZuByapO8LL2b2_gP1obQmQo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/folamour.html",
+    "label": "dj/folamour",
+    "viewports": {
+      "desktop": {
+        "title": "Folamour | DJ Library — 3TRES6 Records",
+        "h1": "Folamour",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=y9lvvy1JPcsrew6j&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935051&ei=a-ByaoCMAZjoybgP-__z4As&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABof3XbkVUUuYHaha0Irpr3xCS8kj2Q",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=y9lvvy1JPcsrew6j&ei=a-ByaoCMAZjoybgP-__z4As&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=y9lvvy1JPcsrew6j&ver=2&cmt=0.021&fmt=396&fs=0&rt=1.603&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1641&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/four-tet.html",
+    "label": "dj/four-tet",
+    "viewports": {
+      "desktop": {
+        "title": "Four Tet | DJ Library — 3TRES6 Records",
+        "h1": "Four Tet",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=U__fC_YCL26AUrSw&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C68548%2C321",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935055&ei=b-ByaqjDLOO0ir4P2aKjEA&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AP8Kcr-R7HDk18itQw5cDVvbKld9nKrn",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=U__fC_YCL26AUrSw&ei=b-ByaqjDLOO0ir4P2aKjEA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=U__fC_YCL26AUrSw&ver=2&cmt=0.009&fmt=396&fs=0&rt=0.889&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=925&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/frankie-knuckles.html",
+    "label": "dj/frankie-knuckles",
+    "viewports": {
+      "desktop": {
+        "title": "Frankie Knuckles | DJ Library — 3TRES6 Records",
+        "h1": "Frankie Knuckles",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=Ky9IrYgzAksaKkbm&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935060&ei=dOByasXxAq-Hlu8P_qCrkAQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ADiJbwUuOJvmd91-SGQ4J12ItmS6Tmi",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Ky9IrYgzAksaKkbm&ver=2&cmt=0.055&fmt=397&fs=0&rt=0.979&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1026&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Ky9IrYgzAksaKkbm&ei=dOByasXxAq-Hlu8P_qCrkAQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=Ky9IrYgzAksaKkbm&ver=2&cmt=0.072&fmt=397&fs=0&rt=0.994&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1041&cl=958081982&state=pause",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/helena-hauff.html",
+    "label": "dj/helena-hauff",
+    "viewports": {
+      "desktop": {
+        "title": "Helena Hauff | DJ Library — 3TRES6 Records",
+        "h1": "Helena Hauff",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=I1fTyZJDL3WdIHoo&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935063&ei=d-ByatXzKs2sir4P9O23-Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AA4u-O11jfoVlVZucjl839CqZyyNaYQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=I1fTyZJDL3WdIHoo&ei=d-ByatXzKs2sir4P9O23-Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=I1fTyZJDL3WdIHoo&ver=2&cmt=0.025&fmt=396&fs=0&rt=0.941&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=975&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/honey-dijon.html",
+    "label": "dj/honey-dijon",
+    "viewports": {
+      "desktop": {
+        "title": "Honey Dijon | DJ Library — 3TRES6 Records",
+        "h1": "Honey Dijon",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=T8fdcdKqUrzkn1KM&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47715%2C76959%2C117689%2C9252%2C3479%2C13030%2C6256%2C16950%2C1007",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935067&ei=e-ByavnJKdWR2_gPk4qxwQg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ACCM1Eq3bzJOgKbDIZ_IHZaURbMNmLr",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=T8fdcdKqUrzkn1KM&ver=2&cmt=0.049&fmt=396&fs=0&rt=0.966&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1004&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=T8fdcdKqUrzkn1KM&ei=e-ByavnJKdWR2_gPk4qxwQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/hunee.html",
+    "label": "dj/hunee",
+    "viewports": {
+      "desktop": {
+        "title": "Hunee | DJ Library — 3TRES6 Records",
+        "h1": "Hunee",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=LOzvTYLRop5Qergz&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C1",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935071&ei=f-ByatvRHOnfybgPovmssAg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AL5DZeFK357Ndh3QkwuU9SVJhh51MjI",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=LOzvTYLRop5Qergz&ei=f-ByatvRHOnfybgPovmssAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=LOzvTYLRop5Qergz&ver=2&cmt=0.015&fmt=396&fs=0&rt=1.455&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1489&cl=958593234&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/ian-pooley-hor.html",
+    "label": "dj/ian-pooley-hor",
+    "viewports": {
+      "desktop": {
+        "title": "Ian Pooley Hor | DJ Library — 3TRES6 Records",
+        "h1": "Ian Pooley Hor",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=YLafHBsUyLpXvMkv&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935075&ei=g-ByasjgI-yhlu8P_4ag6Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AOuSOp-PLgvCguMSzsSR7Q3-WakDzST",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=YLafHBsUyLpXvMkv&ei=g-ByasjgI-yhlu8P_4ag6Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=YLafHBsUyLpXvMkv&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.875&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=908&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=YLafHBsUyLpXvMkv&ver=2&cmt=1.163&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2034&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/ian-pooley-paloma.html",
+    "label": "dj/ian-pooley-paloma",
+    "viewports": {
+      "desktop": {
+        "title": "Ian Pooley Paloma | DJ Library — 3TRES6 Records",
+        "h1": "Ian Pooley Paloma",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=NJwrSqf1o-I4XMjP&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935079&ei=h-Byas3tJNmwlu8PooKv2Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AIlZyHHJ6RFF1x5BUM1lMN1i5ocCJCu",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=NJwrSqf1o-I4XMjP&ei=h-Byas3tJNmwlu8PooKv2Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=NJwrSqf1o-I4XMjP&ver=2&cmt=0.055&fmt=396&fs=0&rt=0.928&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=952&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/job-jobse-dekmantel.html",
+    "label": "dj/job-jobse-dekmantel",
+    "viewports": {
+      "desktop": {
+        "title": "Job Jobse Dekmantel | DJ Library — 3TRES6 Records",
+        "h1": "Job Jobse Dekmantel",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=VhOkl1OAQIebjLiC&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935083&ei=i-ByaqjyIdb9-coPi93foAg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AH_LatGZ4qdPWxTqQ_bqJhW4HMnN_Ah",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=VhOkl1OAQIebjLiC&ei=i-ByaqjyIdb9-coPi93foAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=VhOkl1OAQIebjLiC&ver=2&cmt=0.016&fmt=397&fs=0&rt=0.901&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=941&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/joe-claussell.html",
+    "label": "dj/joe-claussell",
+    "viewports": {
+      "desktop": {
+        "title": "Joe Claussell | DJ Library — 3TRES6 Records",
+        "h1": "Joe Claussell",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=bvwPCKbuaiETUG4q&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=bvwPCKbuaiETUG4q&ei=j-ByatmkGt3kir4PwdqCgQU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=bvwPCKbuaiETUG4q&ver=2&cmt=0.031&fmt=396&fs=0&rt=0.965&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=996&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/joy-orbison-various.html",
+    "label": "dj/joy-orbison-various",
+    "viewports": {
+      "desktop": {
+        "title": "Joy Orbison Various | DJ Library — 3TRES6 Records",
+        "h1": "Joy Orbison Various",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=FWPNvYO-ZAgayZMk&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C35402%2C653",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=FWPNvYO-ZAgayZMk&ver=2&cmt=0.044&fmt=397&fs=0&rt=0.597&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=628&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=FWPNvYO-ZAgayZMk&ei=k-ByaufVHYeM2_gPuIexwQE&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/kerri-chandler.html",
+    "label": "dj/kerri-chandler",
+    "viewports": {
+      "desktop": {
+        "title": "Kerri Chandler | DJ Library — 3TRES6 Records",
+        "h1": "Kerri Chandler",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=qFqIz0jZNLe2FggE&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C33144%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935095&ei=l-ByatbQHa-Hlu8P_qCrkAQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AB-c5C_7UnlgfIZVzQeol7UheiCKm5v",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=qFqIz0jZNLe2FggE&ei=l-ByatbQHa-Hlu8P_qCrkAQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=qFqIz0jZNLe2FggE&ver=2&cmt=0.009&fmt=397&fs=0&rt=1.467&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1509&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/kettama.html",
+    "label": "dj/kettama",
+    "viewports": {
+      "desktop": {
+        "title": "KETTAMA | DJ Library — 3TRES6 Records",
+        "h1": "KETTAMA",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=-lXCyjocqHcaWm6J&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-lXCyjocqHcaWm6J&ver=2&cmt=0.021&fmt=397&fs=0&rt=0.893&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=915&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-lXCyjocqHcaWm6J&ei=m-ByavL1LPakir4P1PTDkQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/kink.html",
+    "label": "dj/kink",
+    "viewports": {
+      "desktop": {
+        "title": "Kink | DJ Library — 3TRES6 Records",
+        "h1": "Kink",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=gMM-utZWpJEb_0TV&el=embedded&ns=yt&fexp=v1%2C23848223%2C156421%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935103&ei=n-Byao7jM8-iybgPr6WauQg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AK2GzkvcdxCArAQCac5xya-K-oZB0S2",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=gMM-utZWpJEb_0TV&ver=2&cmt=0.025&fmt=396&fs=0&rt=0.8&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=824&cl=958081982&mos=1&volume=10",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=gMM-utZWpJEb_0TV&ei=n-Byao7jM8-iybgPr6WauQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/larry-heard-mr-fingers.html",
+    "label": "dj/larry-heard-mr-fingers",
+    "viewports": {
+      "desktop": {
+        "title": "Larry Heard Mr Fingers | DJ Library — 3TRES6 Records",
+        "h1": "Larry Heard Mr Fingers",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935107&ei=o-ByapbgLpeb2_gPtK7vyAc&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AOsp3XVlTIma6VjF917ca-2eFFP8Al2",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=202By2Z-kT928pvm&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C65299%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=202By2Z-kT928pvm&ei=o-ByapbgLpeb2_gPtK7vyAc&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=202By2Z-kT928pvm&ver=2&cmt=0.042&fmt=397&fs=0&rt=0.561&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=598&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/laurent-garnier.html",
+    "label": "dj/laurent-garnier",
+    "viewports": {
+      "desktop": {
+        "title": "Laurent Garnier | DJ Library — 3TRES6 Records",
+        "h1": "Laurent Garnier",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=zD56QsTVup9StwpM&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47714%2C76960%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C343",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935111&ei=p-Byaqb1MPedlu8Py4SowQo&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AMm5ijtEGqDSSJGORfMlRug8LgbsChb",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=zD56QsTVup9StwpM&ver=2&cmt=0.015&fmt=396&fs=0&rt=1.154&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1181&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=zD56QsTVup9StwpM&ei=p-Byaqb1MPedlu8Py4SowQo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/maceo-plex.html",
+    "label": "dj/maceo-plex",
+    "viewports": {
+      "desktop": {
+        "title": "Maceo Plex | DJ Library — 3TRES6 Records",
+        "h1": "Maceo Plex",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&cpn=INFxFoJKx7PkRi2q&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12228%2C250",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785935115&ei=q-ByaoCPNfLDlu8P_rKVuQw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFr2KgGv2vbjVm4p0gZM1mXMhV0mMQ9",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=INFxFoJKx7PkRi2q&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.931&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=973&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=INFxFoJKx7PkRi2q&ei=q-ByaoCPNfLDlu8P_rKVuQw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/mall-grab.html",
+    "label": "dj/mall-grab",
+    "viewports": {
+      "desktop": {
+        "title": "Mall Grab | DJ Library — 3TRES6 Records",
+        "h1": "Mall Grab",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=lFGTPQdPFRjekCuH&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935119&ei=r-Byarm8M-vair4PhajpqQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGA4meATsvSNmxBMNFv0IkANrAqTk53",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=lFGTPQdPFRjekCuH&ver=2&cmt=0.059&fmt=396&fs=0&rt=1.298&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1327&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=lFGTPQdPFRjekCuH&ei=r-Byarm8M-vair4PhajpqQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/marcel-dettmann.html",
+    "label": "dj/marcel-dettmann",
+    "viewports": {
+      "desktop": {
+        "title": "Marcel Dettmann | DJ Library — 3TRES6 Records",
+        "h1": "Marcel Dettmann",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=EIkJ_3PH0mMDIKvf&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935124&ei=tOByatv3B57xybgPs7nZgAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGBzkyMPNOEsrQqN8Etf5iKMuMJaXVs",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=EIkJ_3PH0mMDIKvf&ver=2&cmt=0.021&fmt=396&fs=0&rt=1.024&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1048&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=EIkJ_3PH0mMDIKvf&ei=tOByatv3B57xybgPs7nZgAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/mark-broom.html",
+    "label": "dj/mark-broom",
+    "viewports": {
+      "desktop": {
+        "title": "Mark Broom | DJ Library — 3TRES6 Records",
+        "h1": "Mark Broom",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935127&ei=t-Byapm7OZGsir4PvKaw4Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFwFVRoaLBx-marPrzduMSvy-_ZV6J1",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=x49_6D1ox_3FmfAH&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C97",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=x49_6D1ox_3FmfAH&ei=t-Byapm7OZGsir4PvKaw4Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=x49_6D1ox_3FmfAH&ver=2&cmt=0.079&fmt=396&fs=0&rt=0.824&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=846&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/masters-at-work.html",
+    "label": "dj/masters-at-work",
+    "viewports": {
+      "desktop": {
+        "title": "Masters At Work | DJ Library — 3TRES6 Records",
+        "h1": "Masters At Work",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=aOuFkH5nZuiW-tES&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C100702%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935131&ei=u-ByauvEOZzxybgPjczhkAs&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AHWXACBpxfGPuEZKAmrZ5W3r2FBFPtn",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=aOuFkH5nZuiW-tES&ei=u-ByauvEOZzxybgPjczhkAs&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=aOuFkH5nZuiW-tES&ver=2&cmt=0.038&fmt=396&fs=0&rt=0.844&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=869&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=aOuFkH5nZuiW-tES&ver=2&cmt=1.208&fmt=396&fs=0&rt=2.003&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2028&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/moodymann.html",
+    "label": "dj/moodymann",
+    "viewports": {
+      "desktop": {
+        "title": "Moodymann | DJ Library — 3TRES6 Records",
+        "h1": "Moodymann",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=_tCMaMXQjinFCszr&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C33144%2C32",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935135&ei=v-Byaq_dM_jXvPEP6b6cmQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJh3SiBePJ3wUJrsailhJuIeIJPjmRk",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=_tCMaMXQjinFCszr&ei=v-Byaq_dM_jXvPEP6b6cmQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=_tCMaMXQjinFCszr&ver=2&cmt=0.02&fmt=397&fs=0&rt=0.967&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=990&cl=958081982&mos=1&volume=1",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/motor-city-drum-ensemble.html",
+    "label": "dj/motor-city-drum-ensemble",
+    "viewports": {
+      "desktop": {
+        "title": "Motor City Drum Ensemble | DJ Library — 3TRES6 Records",
+        "h1": "Motor City Drum Ensemble",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=rox1hS4jr5tTdhQr&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935139&ei=w-ByavytM_edir4P4LWxqAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ANFobmHb-R7r5FusfaJLmYNzz_g0hv6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=rox1hS4jr5tTdhQr&ver=2&cmt=0.021&fmt=397&fs=0&rt=1.011&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1036&cl=958593234&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=rox1hS4jr5tTdhQr&ei=w-ByavytM_edir4P4LWxqAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/objekt-various.html",
+    "label": "dj/objekt-various",
+    "viewports": {
+      "desktop": {
+        "title": "Objekt Various | DJ Library — 3TRES6 Records",
+        "h1": "Objekt Various",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935143&ei=x-ByaqWNL6uZ-coP18_H8QQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AC6FU8OV3TT7WjW_8EMkdC5Y7dE5syb",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=UQUes6VRJrFzq8bC&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=UQUes6VRJrFzq8bC&ei=x-ByaqWNL6uZ-coP18_H8QQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=UQUes6VRJrFzq8bC&ver=2&cmt=0.046&fmt=396&fs=0&rt=0.597&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=654&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/palms-trax.html",
+    "label": "dj/palms-trax",
+    "viewports": {
+      "desktop": {
+        "title": "Palms Trax | DJ Library — 3TRES6 Records",
+        "h1": "Palms Trax",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=O0z6ftwL5Js1LPdQ&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935147&ei=y-Byat73I9joybgPu9euwQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AHF-caeCx1Ztp5MqOQT-OTOXP-0f69c",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=O0z6ftwL5Js1LPdQ&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.85&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=880&cl=958081982&mos=1&volume=1",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=O0z6ftwL5Js1LPdQ&ei=y-Byat73I9joybgPu9euwQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=O0z6ftwL5Js1LPdQ&ver=2&cmt=1.178&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2032&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/pangaea.html",
+    "label": "dj/pangaea",
+    "viewports": {
+      "desktop": {
+        "title": "Pangaea | DJ Library — 3TRES6 Records",
+        "h1": "Pangaea",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=jjqFPowWWsCDt-ou&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C65300%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=jjqFPowWWsCDt-ou&ei=z-ByauHFH6Klir4Pupvk6Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=jjqFPowWWsCDt-ou&ver=2&cmt=0.051&fmt=396&fs=0&rt=0.582&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=616&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/peggy-gou.html",
+    "label": "dj/peggy-gou",
+    "viewports": {
+      "desktop": {
+        "title": "Peggy Gou | DJ Library — 3TRES6 Records",
+        "h1": "Peggy Gou",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=5SsHhlUv5SHpr1cA&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935155&ei=0-ByaoS2Ieiplu8Ptd-zsAg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AAWj8_HeeqrFzzOMrWcZZ1a-vS44Ms6",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=5SsHhlUv5SHpr1cA&ei=0-ByaoS2Ieiplu8Ptd-zsAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=5SsHhlUv5SHpr1cA&ver=2&cmt=0.03&fmt=396&fs=0&rt=1.349&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1386&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=5SsHhlUv5SHpr1cA&ver=2&cmt=1.691&fmt=396&fs=0&rt=3.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=3038&cl=958081982&state=playi",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/quest.html",
+    "label": "dj/quest",
+    "viewports": {
+      "desktop": {
+        "title": "Quest | DJ Library — 3TRES6 Records",
+        "h1": "Quest",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=n0t13tVA9kyXjTld&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935159&ei=1-Byat-bLdClir4Pl8_14Ak&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AAdDVwrLMeLM6oWuzP5I5BC93b1PUaE",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=n0t13tVA9kyXjTld&ei=1-Byat-bLdClir4Pl8_14Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=n0t13tVA9kyXjTld&ver=2&cmt=0.019&fmt=396&fs=0&rt=1.141&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1164&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/recondite.html",
+    "label": "dj/recondite",
+    "viewports": {
+      "desktop": {
+        "title": "Recondite | DJ Library — 3TRES6 Records",
+        "h1": "Recondite",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=38wUmupIAHM_tWt3&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935163&ei=2-Byavz9LeXwybgPjK3BgAY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AABilnswbJLMX--VH0ZZIMArV0H5Vrh",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=38wUmupIAHM_tWt3&ei=2-Byavz9LeXwybgPjK3BgAY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=38wUmupIAHM_tWt3&ver=2&cmt=0.109&fmt=396&fs=0&rt=0.888&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=920&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/rey-colino-br.html",
+    "label": "dj/rey-colino-br",
+    "viewports": {
+      "desktop": {
+        "title": "Rey Colino Br | DJ Library — 3TRES6 Records",
+        "h1": "Rey Colino Br",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=o0_ZIKlgrZUcEXiR&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C1247%2C309",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935167&ei=3-ByasePJ9Lkir4PhJyV0Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFZVjSOfJ5AqMvRoo0CAicWbGjF3U7J",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=o0_ZIKlgrZUcEXiR&ei=3-ByasePJ9Lkir4PhJyV0Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=o0_ZIKlgrZUcEXiR&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.916&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=956&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/richie-hawtin.html",
+    "label": "dj/richie-hawtin",
+    "viewports": {
+      "desktop": {
+        "title": "Richie Hawtin | DJ Library — 3TRES6 Records",
+        "h1": "Richie Hawtin",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=2-tk1gFafXVjQTa0&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=2-tk1gFafXVjQTa0&ver=2&cmt=0.044&fmt=397&fs=0&rt=0.844&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=868&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=2-tk1gFafXVjQTa0&ei=4-ByasWsIca-lu8Pl77j4Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/seth-troxler.html",
+    "label": "dj/seth-troxler",
+    "viewports": {
+      "desktop": {
+        "title": "Seth Troxler | DJ Library — 3TRES6 Records",
+        "h1": "Seth Troxler",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935175&ei=5-Byao3NHar-2_gPuuGC4A8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AIgHuFA_YYbro4jkYc2k-zN92z9H6De",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=rkGHQCKpD7J4BwYF&ei=5-Byao3NHar-2_gPuuGC4A8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=rkGHQCKpD7J4BwYF&ver=2&cmt=0.019&fmt=396&fs=0&rt=1.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1034&cl=958081982&mos=1&volume",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/shonky-b2b-dan-ghenacia.html",
+    "label": "dj/shonky-b2b-dan-ghenacia",
+    "viewports": {
+      "desktop": {
+        "title": "Shonky B2b Dan Ghenacia | DJ Library — 3TRES6 Records",
+        "h1": "Shonky B2b Dan Ghenacia",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935179&ei=6-ByaoSBE6GU2_gP5p3qYQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEFfUIuSdHQ5aQPtzQNqbPgeswg15x0U",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=WzYQLdu-Sf7L6lVe&el=embedded&ns=yt&fexp=v1%2C23853953%2C150691%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=WzYQLdu-Sf7L6lVe&ei=6-ByaoSBE6GU2_gP5p3qYQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=WzYQLdu-Sf7L6lVe&ver=2&cmt=0.049&fmt=396&fs=0&rt=0.641&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=674&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/stephan-bodzin.html",
+    "label": "dj/stephan-bodzin",
+    "viewports": {
+      "desktop": {
+        "title": "Stephan Bodzin | DJ Library — 3TRES6 Records",
+        "h1": "Stephan Bodzin",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935183&ei=7-ByaqXiE8CuvPEP_tXs8AM&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AKpYuxPurKsJzmtcl1dTI036I-EbHde",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=tUsour14Fc_DM91z&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C35",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=tUsour14Fc_DM91z&ei=7-ByaqXiE8CuvPEP_tXs8AM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=tUsour14Fc_DM91z&ver=2&cmt=0.058&fmt=397&fs=0&rt=0.816&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=844&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/tiger-woods.html",
+    "label": "dj/tiger-woods",
+    "viewports": {
+      "desktop": {
+        "title": "Tiger Woods | DJ Library — 3TRES6 Records",
+        "h1": "Tiger Woods",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=Bx6I7gPhYkwp1LJv&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C65299%2C28",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935187&ei=8-ByapX7DdXGlu8P2pSQiA4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGcqVdXpocL7e8XVCILcJ0HWPhRThEX",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Bx6I7gPhYkwp1LJv&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.78&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=804&cl=958081982&mos=1&volume=1",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Bx6I7gPhYkwp1LJv&ei=8-ByapX7DdXGlu8P2pSQiA4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/vtss.html",
+    "label": "dj/vtss",
+    "viewports": {
+      "desktop": {
+        "title": "Vtss | DJ Library — 3TRES6 Records",
+        "h1": "Vtss",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=i2vs4UHQom4M1q6E&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C3",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785935191&ei=9-ByaoDmD-qU2_gPkJehsQg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ADr5wpj3dsgV9j8Bh-D3aM-tNNM0UYy",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=i2vs4UHQom4M1q6E&ei=9-ByaoDmD-qU2_gPkJehsQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=i2vs4UHQom4M1q6E&ver=2&cmt=0.006&fmt=396&fs=0&rt=0.693&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=718&cl=958593234&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/dj/young-marco.html",
+    "label": "dj/young-marco",
+    "viewports": {
+      "desktop": {
+        "title": "Young Marco | DJ Library — 3TRES6 Records",
+        "h1": "Young Marco",
+        "sw": 1440,
+        "vw": 1440,
+        "broken": [],
+        "spinners": [],
+        "console": [],
+        "pageErrors": [],
+        "http": [],
+        "failed": [
+          {
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=8h844jg_tvJSssmm&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=8h844jg_tvJSssmm&ver=2&cmt=0.005&fmt=397&fs=0&rt=0.868&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=901&cl=958081982&mos=1&volume=",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=8h844jg_tvJSssmm&ei=-uByas7aPKyR2_gPqOPHuA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  }
+]
