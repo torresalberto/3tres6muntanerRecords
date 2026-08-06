@@ -572,7 +572,8 @@ button {
 
 .dj-hub-subnav {
   position: sticky;
-  top: 80px;
+  top: 121px;
+  margin-top: 121px;
   z-index: 999;
   background: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);

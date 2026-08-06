@@ -34,8 +34,14 @@ function createCapture(page) {
     if (res.status() >= 400) cap.http.push({ status: res.status(), url: res.url().slice(0, 200) });
   });
 
-  page.on('framenavigated', (frame) => {
-    if (frame === page.mainFrame()) cap.navigations.push(Date.now());
+  // Real main-frame navigations (full page loads). Swup SPA transitions use
+  // history.pushState and do NOT produce a navigation request, so this reliably
+  // distinguishes full reloads from SPA swaps. (frame 'navigated' events also
+  // fire on same-document pushState changes, so they are NOT a reliable signal.)
+  page.on('request', (req) => {
+    if (req.resourceType() === 'document' && req.isNavigationRequest()) {
+      cap.navigations.push(Date.now());
+    }
   });
 
   cap.reset = function reset() {
