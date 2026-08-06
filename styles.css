@@ -895,6 +895,8 @@ button {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
+  width: 100%;
+  min-width: 0;
 }
 
 .playlist-header {
