@@ -194,8 +194,59 @@ async function menuAudit(page, vp) {
   return r;
 }
 
+/** Audit one page at one viewport with a fresh context; if the browser or
+ *  page dies mid-run (heavy pages can crash the renderer / exhaust memory),
+ *  relaunch the browser and retry. */
+async function auditViewport(state, p, vp) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    let context;
+    try {
+      context = await state.browser.newContext({
+        viewport: VIEWPORTS[vp],
+        ignoreHTTPSErrors: true,
+        locale: 'es-MX',
+      });
+    } catch (e) {
+      state.browser = await launchBrowser();
+      continue;
+    }
+    const page = await context.newPage();
+    const cap = createCapture(page);
+    try {
+      const entry = await collect(page, cap, p);
+      if (MAIN.some((m) => m.path === p.path) && !NO_SHOTS) {
+        const file = path.join(shotDir, `${slug(p)}-${vp}.png`);
+        await page.screenshot({ path: file, fullPage: false }).catch(() => {});
+        entry.screenshot = path.relative(process.cwd(), file);
+      }
+      if (MAIN.some((m) => m.path === p.path)) {
+        entry.menu = await menuAudit(page, vp);
+      }
+      await context.close();
+      return entry;
+    } catch (e) {
+      await context.close().catch(() => {});
+      if (attempt === 2) {
+        console.log(`  [${vp}] ${p.path}  ⚠️ audit error: ${e.message}`);
+        return { sw: 0, vw: 0, error: e.message, broken: [], http: [], failed: [], pageErrors: [] };
+      }
+    }
+  }
+}
+
+async function launchBrowser() {
+  return chromium.launch({
+    headless: true,
+    args: ['--disable-dev-shm-usage', '--no-sandbox'],
+  });
+}
+
+/** Proactively recycle the browser every few pages to avoid memory growth
+ *  crashing the renderer on long runs (67+ page/viewport audits). */
+const RECYCLE_EVERY = 20;
+
 async function main() {
-  const browser = await chromium.launch({ headless: true });
+  const state = { browser: await launchBrowser() };
   const pages = [...MAIN, ...djPages()];
   const results = [];
 
@@ -212,24 +263,12 @@ async function main() {
     const rec = { path: p.path, label: p.label, viewports: {} };
 
     for (const vp of viewports) {
-      const context = await browser.newContext({
-        viewport: VIEWPORTS[vp],
-        ignoreHTTPSErrors: true,
-        locale: 'es-MX',
-      });
-      const page = await context.newPage();
-      const cap = createCapture(page);
-      const entry = await collect(page, cap, p);
-      if (MAIN.some((m) => m.path === p.path) && !NO_SHOTS) {
-        const file = path.join(shotDir, `${slug(p)}-${vp}.png`);
-        await page.screenshot({ path: file, fullPage: false }).catch(() => {});
-        entry.screenshot = path.relative(process.cwd(), file);
+      if (results.length > 0 && results.length % RECYCLE_EVERY === 0) {
+        await state.browser.close().catch(() => {});
+        state.browser = await launchBrowser();
       }
-      if (MAIN.some((m) => m.path === p.path)) {
-        entry.menu = await menuAudit(page, vp);
-      }
+      const entry = await auditViewport(state, p, vp);
       rec.viewports[vp] = entry;
-      await context.close();
       console.log(
         `  [${vp}] ${p.path}  overflow=${entry.sw}->${entry.vw}  broken=${entry.broken.length}  http>=400=${entry.http.length}  errs=${entry.pageErrors.length}`
       );
@@ -237,7 +276,7 @@ async function main() {
     results.push(rec);
   }
 
-  await browser.close();
+  await state.browser.close();
   writeReport(results);
   writeJson(results);
   const bad = results.filter((r) => {

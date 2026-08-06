@@ -1,6 +1,6 @@
 # 3TRES6 QA — Display Audit Report
 
-- **Date:** 2026-08-05T16:59:53.120Z
+- **Date:** 2026-08-06T19:14:39.104Z
 - **Target:** `https://3tres6records.albto.me`
 - **Pages audited:** 67
 
@@ -118,97 +118,120 @@
 
 ### / (home)
 **desktop** — 3TRES6 Records | Vinilos Europeos de Segunda Mano | Barcelona → México
+- 📸 qa/screenshots/display/home-desktop.png
 - ⚠️ visible spinners: loading-spinner
 - menu: logo=/ active=[Catálogo]
 - links(16): Catálogo→#catalogo | Calendario→#calendario | Nosotros→#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→#catalogo | Calendario→#calendario | Nosotros→#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→#instagram | Discogs→https://www.discogs.com/seller/3tres6records
 **mobile** — 3TRES6 Records | Vinilos Europeos de Segunda Mano | Barcelona → México
-- 📝 console: Access to fetch at 'https://api.discogs.com/releases/443504' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.; Failed to load resource: net::ERR_FAILED; Access to fetch at 'https://api.discogs.com/releases/170264' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.; Failed to load resource: net::ERR_FAILED; Access to fetch at 'https://api.discogs.com/releases/75229' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+- 📸 qa/screenshots/display/home-mobile.png
+- 📝 console: Access to fetch at 'https://api.discogs.com/releases/103287' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.; Failed to load resource: net::ERR_FAILED; Access to fetch at 'https://api.discogs.com/releases/1463763' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.; Failed to load resource: net::ERR_FAILED; Access to fetch at 'https://api.discogs.com/releases/18112' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 - ⚠️ visible spinners: loading-spinner
 - menu: logo=/ active=[Catálogo]
 - links(16): Catálogo→#catalogo | Calendario→#calendario | Nosotros→#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→#catalogo | Calendario→#calendario | Nosotros→#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→#instagram | Discogs→https://www.discogs.com/seller/3tres6records
 
 ### /3d-brain.html (brain)
 **desktop** — 3TRES6 Neural — DJ Connection Sphere
+- 📸 qa/screenshots/display/3d-brain-desktop.png
 - menu: logo=/ active=[DJ Hub]
 - links(26): Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/ | Blog→blog.html | DJ Library→dj-library.html | Herramientas→/toolhub/
 **mobile** — 3TRES6 Neural — DJ Connection Sphere
+- 📸 qa/screenshots/display/3d-brain-mobile.png
 - menu: logo=/ active=[DJ Hub]
 - links(26): Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/ | Blog→blog.html | DJ Library→dj-library.html | Herramientas→/toolhub/
 
 ### /crew.html (crew)
 **desktop** — El Crew — 3TRES6 Records
+- 📸 qa/screenshots/display/crew-desktop.png
 - menu: logo=/ active=[Crew]
 - links(27): Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→../toolhub/ | Catálogo→/ | Blog→blog.html | DJ Library→dj-library.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/
 **mobile** — El Crew — 3TRES6 Records
+- 📸 qa/screenshots/display/crew-mobile.png
 - menu: logo=/ active=[Crew]
 - links(27): Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→../toolhub/ | Catálogo→/ | Blog→blog.html | DJ Library→dj-library.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/
 
 ### /mapa.html (mapa)
 **desktop** — Mapa — 3TRES6 Records
+- 📸 qa/screenshots/display/mapa-desktop.png
 - menu: logo=/ active=[Mapa]
 - links(22): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→/toolhub/ | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→/toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→/blog.html | DJ Library→/dj-library.html | Neural→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→/toolhub/
 **mobile** — Mapa — 3TRES6 Records
+- 📸 qa/screenshots/display/mapa-mobile.png
 - menu: logo=/ active=[Mapa]
 - links(22): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→/toolhub/ | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→/toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→/blog.html | DJ Library→/dj-library.html | Neural→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→/toolhub/
 
 ### /blog.html (blog)
 **desktop** — Blog | 3TRES6 Records – Aprende sobre Vinilos, Tornamesas y DJ
+- 📸 qa/screenshots/display/blog-desktop.png
 - menu: logo=/ active=[]
 - links(22): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→../crew.html | Mapa→../mapa.html | Herramientas→../toolhub/
 **mobile** — Blog | 3TRES6 Records – Aprende sobre Vinilos, Tornamesas y DJ
+- 📸 qa/screenshots/display/blog-mobile.png
 - menu: logo=/ active=[]
 - links(22): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→../crew.html | Mapa→../mapa.html | Herramientas→../toolhub/
 
 ### /dj-library.html (dj-library)
 **desktop** — DJ Library — 3TRES6 Records
+- 📸 qa/screenshots/display/dj-library-desktop.png
 - menu: logo=/ active=[]
 - links(27): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/ | Blog→blog.html | DJ Library→dj-library.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/
 **mobile** — DJ Library — 3TRES6 Records
+- 📸 qa/screenshots/display/dj-library-mobile.png
 - menu: logo=/ active=[]
 - links(27): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→blog.html | DJ Library→dj-library.html | Neural→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/ | Blog→blog.html | DJ Library→dj-library.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/
 
 ### /product.html (product)
 **desktop** — Larry Heard – Missing You | Muntaner336
+- 📸 qa/screenshots/display/product-desktop.png
 - menu: logo=/ active=[Catálogo]
 - links(16): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records
 **mobile** — Larry Heard – Missing You | Muntaner336
+- 📸 qa/screenshots/display/product-mobile.png
 - menu: logo=/ active=[Catálogo]
 - links(16): Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Catálogo→/#catalogo | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→3d-brain.html | Crew→crew.html | Mapa→mapa.html | Herramientas→toolhub/ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records
 
 ### /toolhub/ (toolhub)
 **desktop** — 3TRES6 Tools | Herramientas para DJ
+- 📸 qa/screenshots/display/toolhub_-desktop.png
 - menu: logo=/ active=[Herramientas]
 - links(22): Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→./ | Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→./ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→../blog.html | DJ Library→../dj-library.html | Neural→../3d-brain.html | Crew→../crew.html | Mapa→../mapa.html | Herramientas→./
 **mobile** — 3TRES6 Tools | Herramientas para DJ
+- 📸 qa/screenshots/display/toolhub_-mobile.png
 - menu: logo=/ active=[Herramientas]
 - links(22): Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→./ | Catálogo→/ | Calendario→/#calendario | Nosotros→/#nosotros | DJ Hub→/3d-brain.html | Crew→/crew.html | Mapa→/mapa.html | Herramientas→./ | Instagram→/#instagram | Discogs→https://www.discogs.com/seller/3tres6records | Blog→../blog.html | DJ Library→../dj-library.html | Neural→../3d-brain.html | Crew→../crew.html | Mapa→../mapa.html | Herramientas→./
 
 ### /dj-library/ (dj-library-static)
 **desktop** — DJ Library — 3TRES6 Records
+- 📸 qa/screenshots/display/dj-library_-desktop.png
 - menu: logo=../ active=[]
 - links(0): 
 **mobile** — DJ Library — 3TRES6 Records
+- 📸 qa/screenshots/display/dj-library_-mobile.png
 - menu: logo=../ active=[]
 - links(0): 
 
 ### /dj-library/page-2.html (dj-library-static-p2)
 **desktop** — DJ Library — Página 2 — 3TRES6 Records
+- 📸 qa/screenshots/display/dj-library_page-2-desktop.png
 - menu: logo=../ active=[]
 - links(0): 
 **mobile** — DJ Library — Página 2 — 3TRES6 Records
+- 📸 qa/screenshots/display/dj-library_page-2-mobile.png
 - menu: logo=../ active=[]
 - links(0): 
 
 ### /crew/d-mfrutis/ (crew-d-mfrutis)
 **desktop** — d.mfrutis — crew
+- 📸 qa/screenshots/display/crew_d-mfrutis_-desktop.png
 - menu: logo=null active=[]
 - links(0): 
 **mobile** — d.mfrutis — crew
+- 📸 qa/screenshots/display/crew_d-mfrutis_-mobile.png
 - menu: logo=null active=[]
 - links(0): 
 
 ### /dj/alex-do-clr-305.html (dj/alex-do-clr-305)
 **desktop** — Alex Do Clr 305 | DJ Library — 3TRES6 Records
+- 📝 console: Permissions policy violation: compute-pressure is not allowed in this document.
 
 ### /dj/ame.html (dj/ame)
 **desktop** — Ame | DJ Library — 3TRES6 Records
@@ -263,6 +286,7 @@
 
 ### /dj/floorplan.html (dj/floorplan)
 **desktop** — Floorplan | DJ Library — 3TRES6 Records
+- 📝 console: Permissions policy violation: compute-pressure is not allowed in this document.
 
 ### /dj/folamour.html (dj/folamour)
 **desktop** — Folamour | DJ Library — 3TRES6 Records
@@ -275,6 +299,7 @@
 
 ### /dj/helena-hauff.html (dj/helena-hauff)
 **desktop** — Helena Hauff | DJ Library — 3TRES6 Records
+- 📝 console: Permissions policy violation: compute-pressure is not allowed in this document.
 
 ### /dj/honey-dijon.html (dj/honey-dijon)
 **desktop** — Honey Dijon | DJ Library — 3TRES6 Records
@@ -284,6 +309,7 @@
 
 ### /dj/ian-pooley-hor.html (dj/ian-pooley-hor)
 **desktop** — Ian Pooley Hor | DJ Library — 3TRES6 Records
+- 📝 console: Permissions policy violation: compute-pressure is not allowed in this document.
 
 ### /dj/ian-pooley-paloma.html (dj/ian-pooley-paloma)
 **desktop** — Ian Pooley Paloma | DJ Library — 3TRES6 Records
@@ -309,6 +335,7 @@
 
 ### /dj/larry-heard-mr-fingers.html (dj/larry-heard-mr-fingers)
 **desktop** — Larry Heard Mr Fingers | DJ Library — 3TRES6 Records
+- 📝 console: Permissions policy violation: compute-pressure is not allowed in this document.
 
 ### /dj/laurent-garnier.html (dj/laurent-garnier)
 **desktop** — Laurent Garnier | DJ Library — 3TRES6 Records
@@ -357,7 +384,6 @@
 
 ### /dj/richie-hawtin.html (dj/richie-hawtin)
 **desktop** — Richie Hawtin | DJ Library — 3TRES6 Records
-- 📝 console: Permissions policy violation: compute-pressure is not allowed in this document.
 
 ### /dj/seth-troxler.html (dj/seth-troxler)
 **desktop** — Seth Troxler | DJ Library — 3TRES6 Records

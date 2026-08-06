@@ -21,30 +21,31 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948855089&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=27823855.1785948856&frm=0&ngs=1&pscdl=n",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6852h2v9241802264za200zd9241802264&_p=1786043335425&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=2105180881.1786043336&frm=0&ngs=1&psc",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=n3m09ZvR6t_89AcU&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=-0a62XDSM2oyfbNe&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970456&ei=uGpzauCTBtyY-coPmuqAwAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEtmMu0RpKm3q6f324NunVLoD2jhdlY",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786064936&ei=yNt0atWCI_rfybgP0Z7s6QI&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AHhznH3sOG6zzZv2aWzd_vGSj7CY8Pxe6",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=n3m09ZvR6t_89AcU&ei=uGpzauCTBtyY-coPmuqAwAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-0a62XDSM2oyfbNe&ei=yNt0atWCI_rfybgP0Z7s6QI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=n3m09ZvR6t_89AcU&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.68&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=711&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-0a62XDSM2oyfbNe&ver=2&cmt=0.02&fmt=396&fs=0&rt=0.868&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=901&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948855089&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=27823855.1785948856&frm=0&n",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6852h2v9241802264za200zd9241802264&_p=1786043335425&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=2105180881.1786043336&frm",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/home-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -153,86 +154,53 @@
           "#dynamicCalendar .calendar-body": 1
         },
         "console": [
-          "Access to fetch at 'https://api.discogs.com/releases/443504' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/170264' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/75229' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/443504' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/170264' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/75229' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/110924' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/82256' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/165457' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/233738' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-          "Failed to load resource: net::ERR_FAILED",
           "Access to fetch at 'https://api.discogs.com/releases/103287' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
           "Failed to load resource: net::ERR_FAILED",
           "Access to fetch at 'https://api.discogs.com/releases/1463763' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
           "Failed to load resource: net::ERR_FAILED",
-          "Access to fetch at 'https://api.discogs.com/releases/18112' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+          "Access to fetch at 'https://api.discogs.com/releases/18112' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/807445' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/58967' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/29781781' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/909930' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/241908' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/1163965' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/847310' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/31015558' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED",
+          "Access to fetch at 'https://api.discogs.com/releases/260788' from origin 'https://3tres6records.albto.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+          "Failed to load resource: net::ERR_FAILED"
         ],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948860547&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1367860830.1785948861&frm=0&ngs=1&pscdl",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043341162&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=775817427.1786043342&frm=0&ngs=1&pscdl=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970461&ei=vWpzau70HbWmlu8Psojv-Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFTckFN7w-SEGDQDavbm1vf7NtxJVb6",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=LiGnEcg_DF6LnAdX&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C15",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://api.discogs.com/releases/443504",
-            "err": "net::ERR_FAILED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=eYk8VJet4KQhacSA&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C68548%2C321",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043341162&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=775817427.1786043342&frm=0&",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://api.discogs.com/releases/170264",
-            "err": "net::ERR_FAILED"
-          },
-          {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948860547&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=1367860830.1785948861&frm=0",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=LiGnEcg_DF6LnAdX&ei=ztt0aoO8FY3HybgPsrux-Q8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=eYk8VJet4KQhacSA&ei=vWpzau70HbWmlu8Psojv-Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=LiGnEcg_DF6LnAdX&ver=2&cmt=0.034&fmt=396&fs=0&rt=0.544&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=578&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=eYk8VJet4KQhacSA&ver=2&cmt=0.03&fmt=396&fs=0&rt=0.592&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=630&cl=958081982&mos=1&volume=1",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://api.discogs.com/releases/75229",
-            "err": "net::ERR_FAILED"
-          },
-          {
-            "url": "https://api.discogs.com/releases/110924",
-            "err": "net::ERR_FAILED"
-          },
-          {
-            "url": "https://api.discogs.com/releases/82256",
-            "err": "net::ERR_FAILED"
-          },
-          {
-            "url": "https://api.discogs.com/releases/165457",
-            "err": "net::ERR_FAILED"
-          },
-          {
-            "url": "https://api.discogs.com/releases/233738",
-            "err": "net::ERR_FAILED"
           },
           {
             "url": "https://api.discogs.com/releases/103287",
@@ -261,8 +229,29 @@
           {
             "url": "https://api.discogs.com/releases/909930",
             "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/241908",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/1163965",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/847310",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/31015558",
+            "err": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://api.discogs.com/releases/260788",
+            "err": "net::ERR_FAILED"
           }
         ],
+        "screenshot": "qa/screenshots/display/home-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -378,22 +367,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=FlvdTbtyUmPJtz6f&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C3",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=1jTTDRNXGsdp2Jsb&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970467&ei=w2pzaoysMtywlu8PqpnRsQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABvO84P2lh6EPReu7V-z5SW0bd5aXuQ",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786064948&ei=1Nt0au6bNs2Y2_gP5I616A4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ACCAGm3OQ7U7yvf8RkhcdeL5NdlQ9GH5qjXAS8g",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=FlvdTbtyUmPJtz6f&ei=w2pzaoysMtywlu8PqpnRsQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1jTTDRNXGsdp2Jsb&ei=1Nt0au6bNs2Y2_gP5I616A4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=FlvdTbtyUmPJtz6f&ver=2&cmt=0.023&fmt=397&fs=0&rt=0.976&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1025&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1jTTDRNXGsdp2Jsb&ver=2&cmt=0.047&fmt=396&fs=0&rt=1.134&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1224&cl=958593234&mos=1&volume",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/3d-brain-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -553,22 +543,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970472&ei=x2pzas_yObm1ir4PzM-R4Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AOYIvthcWnfpF7ewTOx7ApgeEBkJHNr",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=yku1jF5U6X4f0ILD&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C68",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=FO-9ZnMk3kGmcO5b&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C47714%2C76960%2C117689%2C9252%2C3479%2C13030%2C23206%2C68",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=yku1jF5U6X4f0ILD&ver=2&cmt=0.016&fmt=396&fs=0&rt=0.85&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=885&cl=959237608&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=FO-9ZnMk3kGmcO5b&ei=x2pzas_yObm1ir4PzM-R4Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=FO-9ZnMk3kGmcO5b&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.609&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=644&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=yku1jF5U6X4f0ILD&ei=2dt0av6yM-Gjlu8P7pWu-A0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/3d-brain-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -734,26 +721,27 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948875474&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=844791546.1785948876&frm=0&ngs=1&pscdl=",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850h1v9241802264za200zd9241802264&_p=1786043357377&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=2046764417.1786043358&frm=0&ngs=1&psc",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970476&ei=zGpzaqi0B5Txir4P2tO4-As&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AK7Z0abF---m1DOqUZsX1h5CxO3PgxT",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786064958&ei=3tt0as75B47kir4PvczLqQM&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ABpydMG0A3B_wpn6GrkQeYbDEP5HmHJkm",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=v4ZApBAfeCTUV8Gh&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C1248%2C309",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=vVVPYa6DA65-gAE0&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=v4ZApBAfeCTUV8Gh&ver=2&cmt=0.064&fmt=397&fs=0&rt=0.594&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=627&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=vVVPYa6DA65-gAE0&ei=3tt0as75B47kir4PvczLqQM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=v4ZApBAfeCTUV8Gh&ei=zGpzaqi0B5Txir4P2tO4-As&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=vVVPYa6DA65-gAE0&ver=2&cmt=0.048&fmt=396&fs=0&rt=0.585&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=617&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/crew-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -918,26 +906,27 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948879743&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=918955646.1785948880&frm=0&ngs=1&pscdl=",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043361825&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1378212761.1786043362&frm=0&ngs=1&pscdl",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970480&ei=0GpzapjUFovHybgPs-HyyAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEkoyhtuI51oDdf2sd9VHYZjzgdMjZJ",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786064962&ei=4tt0aoDcJJaV2_gP28q32Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AMGR346vre_NTHr413wZmqduTC2MyPQRI",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=nAdrMixy5RnCwhsu&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35401%2C65301%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=X3MZDzwiSTt1OpbF&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C97",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=nAdrMixy5RnCwhsu&ei=0GpzapjUFovHybgPs-HyyAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=X3MZDzwiSTt1OpbF&ver=2&cmt=0.021&fmt=397&fs=0&rt=0.642&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=682&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=nAdrMixy5RnCwhsu&ver=2&cmt=0.028&fmt=397&fs=0&rt=0.549&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=579&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=X3MZDzwiSTt1OpbF&ei=4tt0aoDcJJaV2_gP28q32Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/crew-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -1108,26 +1097,27 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948884218&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1730062329.1785948885&frm=0&ngs=1&pscdl",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043366397&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=908528531.1786043367&frm=0&ngs=1&pscdl=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970484&ei=1GpzavO3Otvtir4PlKKdwAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFByVCO3MbSe44WOyoisrOhS9UxiKoD",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786064967&ei=59t0avznDLuIlu8Pw4DG0Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AOTa2bHwcSbXDS5v7uextYbuTLF-X5HBIROlzzb",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=us_-0K3U1EtZN3WM&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C35402%2C343",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=yBLW-ZWpmN7uV8-5&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=us_-0K3U1EtZN3WM&ver=2&cmt=0.067&fmt=396&fs=0&rt=0.61&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=648&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=yBLW-ZWpmN7uV8-5&ver=2&cmt=0.057&fmt=396&fs=0&rt=0.618&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=659&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=us_-0K3U1EtZN3WM&ei=1GpzavO3Otvtir4PlKKdwAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=yBLW-ZWpmN7uV8-5&ei=59t0avznDLuIlu8Pw4DG0Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/mapa-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -1267,26 +1257,27 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948888603&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=2018855684.1785948889&frm=0&ngs=1&pscdl",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043370985&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1816731187.1786043371&frm=0&ngs=1&pscdl",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970489&ei=2WpzasugIMilir4PnI3PKQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABXQMCNZRsAnunKypmnRmd5MwNoNMJvI",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786064971&ei=69t0aqKKLt-kir4PrpWuwAU&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AN57KvmRF1OXSp9BJFiN0wovIudCjNfs6",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=pe708gqvBLFq38eW&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C34393%2C30",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=cty4k0azvM0UY_ZX&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C97",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=pe708gqvBLFq38eW&ver=2&cmt=0.013&fmt=396&fs=0&rt=0.655&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=684&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=cty4k0azvM0UY_ZX&ei=69t0aqKKLt-kir4PrpWuwAU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=pe708gqvBLFq38eW&ei=2WpzasugIMilir4PnI3PKQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=cty4k0azvM0UY_ZX&ver=2&cmt=0.011&fmt=396&fs=0&rt=0.563&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=595&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/mapa-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -1432,26 +1423,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948893083&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=2006503389.1785948893&frm=0&ngs=1&pscdl",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043375474&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1765323921.1786043376&frm=0&ngs=1&pscdl",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=jEXjydYR_QnQf4LH&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C35",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=bUfo5S6tczcosj7S&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970493&ei=3WpzatzoL__rir4PnvXOoAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AAnOzWV2KybQcwWUFnuzSP0ipFuZ4oz",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=bUfo5S6tczcosj7S&ver=2&cmt=0.007&fmt=397&fs=0&rt=0.49&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=518&cl=959237608&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=jEXjydYR_QnQf4LH&ver=2&cmt=0.01&fmt=397&fs=0&rt=0.547&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=584&cl=958081982&mos=1&volume=1",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=jEXjydYR_QnQf4LH&ei=3WpzatzoL__rir4PnvXOoAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=bUfo5S6tczcosj7S&ei=8Nt0avj3DPKtir4PzJucCQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/blog-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -1589,30 +1577,31 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948898976&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=894843445.1785948899&frm=0&ngs=1&pscdl=",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043381454&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1957035680.1786043382&frm=0&ngs=1&pscdl",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970499&ei=42pzauDUL-Wklu8P09-EwQg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ACo8I9u4pwUqPKtG65OsxZYjwcP-5DS",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786064982&ei=9tt0arjLCYi1ir4P5J_j8Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AKEPiyAk0Hixh7XKr8zQFuU0Z4jgOwBm1R0-o-T",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=Eim2USGUk-Mx4xFZ&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=6PUCU6UQrTzXa_Gg&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Eim2USGUk-Mx4xFZ&ver=2&cmt=0.046&fmt=396&fs=0&rt=0.519&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=552&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=6PUCU6UQrTzXa_Gg&ei=9tt0arjLCYi1ir4P5J_j8Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Eim2USGUk-Mx4xFZ&ei=42pzauDUL-Wklu8P09-EwQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=6PUCU6UQrTzXa_Gg&ver=2&cmt=0.03&fmt=396&fs=0&rt=0.507&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=543&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=Eim2USGUk-Mx4xFZ&ver=2&cmt=3.529&fmt=396&fs=0&rt=4.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=4034&cl=958081982&state=playi",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043381454&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1957035680.1786043382&",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/blog-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -1756,10 +1745,11 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948906052&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1790402069.1785948906&frm=0&ngs=1&pscdl",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6852h2v9241802264za200zd9241802264&_p=1786043388677&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1562753798.1786043389&frm=0&ngs=1&psc",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/dj-library-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -1922,10 +1912,11 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6840v9241802264za200zd9241802264&_p=1785948910745&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=291153677.1785948911&frm=0&ngs=1&pscdl=",
+            "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G042PFG6TG&gtm=45je6850v9241802264za200zd9241802264&_p=1786043393569&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=649599783.1786043394&frm=0&ngs=1&pscdl=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/dj-library-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -2094,22 +2085,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970518&ei=9mpzasCpAaaoir4PgIzs4Qc&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGI_d81fqYnD_WR-ZscCOIfknM8RerA",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065001&ei=Cdx0aqmMCa7_ir4Puduj6Q8&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ADsokpXKMu-NZSv4-3X8wyIMDyYDTbow6",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=w3ZXSu90Mcp-BQoP&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=sOnG5gsVnpTu9v6t&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=w3ZXSu90Mcp-BQoP&ei=9mpzasCpAaaoir4PgIzs4Qc&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=sOnG5gsVnpTu9v6t&ei=Cdx0aqmMCa7_ir4Puduj6Q8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=w3ZXSu90Mcp-BQoP&ver=2&cmt=0.046&fmt=396&fs=0&rt=0.546&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=578&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=sOnG5gsVnpTu9v6t&ver=2&cmt=0.04&fmt=396&fs=0&rt=0.523&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=554&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/product-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -2219,22 +2211,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970522&ei=-mpzatTjIe-cvPEPoKvo4Qk&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AH_OlJmhn9lB8MXyFLkVK9tY4seEGOv",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065005&ei=Ddx0atDsGYyklu8Pv7y3gQk&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AKlAo4q8axCq40knfqjioyjPoPbXRaslLBNjusQ",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=m-SaNoUBiRGuEfPB&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=9S9B_egDsknrtd-a&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C15",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=m-SaNoUBiRGuEfPB&ver=2&cmt=0.051&fmt=396&fs=0&rt=0.638&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=668&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=9S9B_egDsknrtd-a&ver=2&cmt=0.032&fmt=396&fs=0&rt=0.56&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=588&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=m-SaNoUBiRGuEfPB&ei=-mpzatTjIe-cvPEPoKvo4Qk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=9S9B_egDsknrtd-a&ei=Ddx0atDsGYyklu8Pv7y3gQk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/product-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -2350,26 +2343,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970527&ei=_mpzaqucPLedlu8Pvt_AoQ8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APf39Aqs2JNMzh7flkrYf54SJH6rjwl",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065010&ei=Etx0ap3QApLUzN0P_-eR8Ac&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AMaUy0xDzZzXj_OOfy11TtN_NwcNcqZToQQW1FvU",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=GBuQL2gnH3l2Y89w&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&cpn=4JqP_0iEGVtMDpCp&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=GBuQL2gnH3l2Y89w&ver=2&cmt=0.014&fmt=396&fs=0&rt=0.571&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=602&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=4JqP_0iEGVtMDpCp&ei=Etx0ap3QApLUzN0P_-eR8Ac&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=GBuQL2gnH3l2Y89w&ei=_mpzaqucPLedlu8Pvt_AoQ8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=GBuQL2gnH3l2Y89w&ver=2&cmt=2.419&fmt=396&fs=0&rt=3.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=3033&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=4JqP_0iEGVtMDpCp&ver=2&cmt=0.044&fmt=396&fs=0&rt=0.725&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=756&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/toolhub_-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": "mainNav",
@@ -2509,22 +2499,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970531&ei=A2tzapHZOaKKlu8PxMOJgQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AE2fWdqTExXV0pZWNDh2YFHKgmGteUv",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065015&ei=Ftx0avvlPNKizN0Pma6iwQ0&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ADIYgcfK3OL6uD2LuPdTQY21t0D7ZpqOM",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=W_m78hUDHa4senFO&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=5-H1rkC_dwfrxl-e&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=W_m78hUDHa4senFO&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.453&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=481&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=5-H1rkC_dwfrxl-e&ei=Ftx0avvlPNKizN0Pma6iwQ0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=W_m78hUDHa4senFO&ei=A2tzapHZOaKKlu8PxMOJgQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=5-H1rkC_dwfrxl-e&ver=2&cmt=0.037&fmt=396&fs=0&rt=0.665&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=702&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/toolhub_-mobile.png",
         "menu": {
           "btnVisible": true,
           "drawer": "mobileNav",
@@ -2667,22 +2658,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=ugDSJy1Qs7iirjba&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C69795%2C309",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065019&ei=G9x0aviUL8iR2_gPp5K0EA&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AHPNbWJVEWHjeEmOs3kq5l-JcblzWwQQhm",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ugDSJy1Qs7iirjba&ei=CGtzaq2FMvKtir4P44basAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=BEh2TvVd1Ea59rZm&ei=G9x0aviUL8iR2_gPp5K0EA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ugDSJy1Qs7iirjba&ver=2&cmt=0.038&fmt=396&fs=0&rt=0.547&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=584&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=ugDSJy1Qs7iirjba&ver=2&cmt=3.492&fmt=396&fs=0&rt=4.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=4038&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=BEh2TvVd1Ea59rZm&ver=2&cmt=0.064&fmt=396&fs=0&rt=0.614&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=656&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/dj-library_-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": null,
@@ -2706,18 +2694,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=Dvoig5wsIOiDPPXd&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C97",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=R4hX6gE7NfwjV0ct&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Dvoig5wsIOiDPPXd&ei=Dmtzas3JDojy-coPzrCFwAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Dvoig5wsIOiDPPXd&ver=2&cmt=0.038&fmt=396&fs=0&rt=0.513&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=552&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=R4hX6gE7NfwjV0ct&ei=Idx0apmUG_6dybgP47XQkAM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/dj-library_-mobile.png",
         "menu": {
           "btnVisible": false,
           "drawer": null,
@@ -2747,22 +2732,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970548&ei=FGtzavmWKazoybgPpNDiwAg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AM8FRivwzFVthejRIZTJx2CsLx4ii5f",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=ciWBB-G0xA5yY-H7&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=IJpW2KdQiZKC_buf&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C68547%2C321",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ciWBB-G0xA5yY-H7&ei=J9x0atztFvvwir4Pzf-k4AU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=IJpW2KdQiZKC_buf&ei=FGtzavmWKazoybgPpNDiwAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=IJpW2KdQiZKC_buf&ver=2&cmt=0.011&fmt=396&fs=0&rt=0.47&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=503&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ciWBB-G0xA5yY-H7&ver=2&cmt=0.02&fmt=397&fs=0&rt=0.579&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=608&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/dj-library_page-2-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": null,
@@ -2786,26 +2768,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970554&ei=GmtzapmOGPyL2_gP3a-xwQo&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ANmpwaYdHqVCoKMxXtAfkoPQaI6WKQ1",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=1LN32Xr3mui_nW73&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=XeStYcJrueUPQ8p9&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C3540",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1LN32Xr3mui_nW73&ei=Ldx0auTPFJzoybgP3_CYgQQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=XeStYcJrueUPQ8p9&ver=2&cmt=0.04&fmt=396&fs=0&rt=0.549&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=579&cl=959602276&mos=1&volume=1",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=XeStYcJrueUPQ8p9&ei=GmtzapmOGPyL2_gP3a-xwQo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=XeStYcJrueUPQ8p9&ver=2&cmt=1.493&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2031&cl=959602276&state=playi",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1LN32Xr3mui_nW73&ver=2&cmt=0.005&fmt=396&fs=0&rt=0.521&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=555&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ],
+        "screenshot": "qa/screenshots/display/dj-library_page-2-mobile.png",
         "menu": {
           "btnVisible": false,
           "drawer": null,
@@ -2834,6 +2809,7 @@
         "pageErrors": [],
         "http": [],
         "failed": [],
+        "screenshot": "qa/screenshots/display/crew_d-mfrutis_-desktop.png",
         "menu": {
           "btnVisible": false,
           "drawer": null,
@@ -2856,6 +2832,7 @@
         "pageErrors": [],
         "http": [],
         "failed": [],
+        "screenshot": "qa/screenshots/display/crew_d-mfrutis_-mobile.png",
         "menu": {
           "btnVisible": false,
           "drawer": null,
@@ -2880,24 +2857,22 @@
         "vw": 1440,
         "broken": [],
         "spinners": [],
-        "console": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=1KoD4GHe2YDtP-6l&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C47715%2C76959%2C117689%2C9252%2C3479%2C13030%2C6257%2C169",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=raTpEOiqysmkf_Ob&el=embedded&ns=yt&fexp=v1%2C23894289%2C110355%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970570&ei=KmtzavbFA7Py-coPuc662Ak&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AAzRFcI3PMAEnKYKhGe3QEFq9PWROZn",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=raTpEOiqysmkf_Ob&ver=2&cmt=0.008&fmt=396&fs=0&rt=0.762&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=785&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1KoD4GHe2YDtP-6l&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.77&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=796&cl=958081982&mos=1&volume=1",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1KoD4GHe2YDtP-6l&ei=KmtzavbFA7Py-coPuc662Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=raTpEOiqysmkf_Ob&ei=QNx0aonGBeaOlu8PkoSO-A0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -2920,19 +2895,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=EZlhSnWq2Jzman2T&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=pW9ls8ATV2Z1WB9m&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C100702%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970574&ei=Lmtzao3pA720ir4PkavxuAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEtMQGbtrIBRGwk33v3Xy76dYnTUuWB",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065059&ei=Q9x0ar77NZ6tir4PjvaPyAk&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AAMuvfLeNfefLl8U3Ijurzy8gRi_OkhARmGrZM9n",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=EZlhSnWq2Jzman2T&ver=2&cmt=0.033&fmt=396&fs=0&rt=0.872&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=894&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=pW9ls8ATV2Z1WB9m&ver=2&cmt=0.017&fmt=396&fs=0&rt=0.97&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1002&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=EZlhSnWq2Jzman2T&ei=Lmtzao3pA720ir4PkavxuAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=pW9ls8ATV2Z1WB9m&ei=Q9x0ar77NZ6tir4PjvaPyAk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -2955,19 +2930,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=go8DVEZJOSozk_TY&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C3",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=yd-laylvONKiTm9X&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6255%2C16951%2C100702%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970578&ei=MmtzaoHeAdmwlu8PooKv2Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APnGFjxEh5bvDM5mJ0ylPM8lqpmrqLL",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065063&ei=R9x0apmUMOqXlu8Pl6qk-Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AHcJGgP5ipqiyUtdmw6CmWY67PFD5hbhP",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=go8DVEZJOSozk_TY&ver=2&cmt=0.01&fmt=396&fs=0&rt=0.872&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=897&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=yd-laylvONKiTm9X&ver=2&cmt=0.018&fmt=396&fs=0&rt=0.829&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=862&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=go8DVEZJOSozk_TY&ei=MmtzaoHeAdmwlu8PooKv2Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=yd-laylvONKiTm9X&ei=R9x0apmUMOqXlu8Pl6qk-Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=yd-laylvONKiTm9X&ver=2&cmt=1.207&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2035&cl=958593234&state=playi",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -2990,19 +2969,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970581&ei=NWtzaqbUOISilu8PmrzgSQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEE1cFc6s8Wc5oW4ODUbKMs_XdP83JS_",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065067&ei=S9x0avzvOaiZ-coP6uDq2Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AMWpQVvi_bS1IFaTBevSl2YhWVjq_m2XzJrli5B",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=XUxDd_kmi6SE_5Zb&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=TnBkkz1HvO7tmt6t&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=XUxDd_kmi6SE_5Zb&ei=NWtzaqbUOISilu8PmrzgSQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=TnBkkz1HvO7tmt6t&ver=2&cmt=0.01&fmt=396&fs=0&rt=0.751&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=777&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=XUxDd_kmi6SE_5Zb&ver=2&cmt=0.077&fmt=396&fs=0&rt=0.81&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=834&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=TnBkkz1HvO7tmt6t&ei=S9x0avzvOaiZ-coP6uDq2Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3025,19 +3004,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=pmNEMh8Q3qilFNsN&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065071&ei=T9x0aqjLM_2klu8PopKk2Qo&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AEIy6zLX1YCnDBglpxTVcd8BYN6Tna3GOigVr-f",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970585&ei=OWtzatyJNeiP2_gP4Ke7wAo&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AHTn67BSBNAmtnyEbaN2vbSFDrq9mDh",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=jj7WvKo3gbvWcUIC&el=embedded&ns=yt&fexp=v1%2C23853953%2C150691%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C69",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=pmNEMh8Q3qilFNsN&ei=OWtzatyJNeiP2_gP4Ke7wAo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=jj7WvKo3gbvWcUIC&ver=2&cmt=0.058&fmt=397&fs=0&rt=0.829&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=853&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=pmNEMh8Q3qilFNsN&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.909&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=949&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=jj7WvKo3gbvWcUIC&ei=T9x0aqjLM_2klu8PopKk2Qo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3060,19 +3039,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=m50588Vht8zwFGB7&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C100702%2C15",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=MDoD5YSDy_swRIUt&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970590&ei=PmtzaqC7Admkir4PqIvSoQw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APTDlsL424PYQaW2jBO2jFFFaWblBq_",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065075&ei=U9x0as_BOdGsir4PtPmfyQs&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AOOi9cIVz5MhNPIcBnhcSkosJBbqZV-CRhS3cZv3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=m50588Vht8zwFGB7&ver=2&cmt=0.028&fmt=396&fs=0&rt=0.755&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=779&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=MDoD5YSDy_swRIUt&ei=U9x0as_BOdGsir4PtPmfyQs&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=m50588Vht8zwFGB7&ei=PmtzaqC7Admkir4PqIvSoQw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=MDoD5YSDy_swRIUt&ver=2&cmt=0.009&fmt=396&fs=0&rt=0.734&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=759&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3095,23 +3074,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=YXVlga8wScJvBf_i&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C30906%2C15",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=-wdCJBy3ZrFQmMg_&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970593&ei=QWtzavfLLe3Blu8PopPX2Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFW3xLvQ8oPjzBI53ko8Z8TaQbd1LsR",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065079&ei=V9x0ap-kMMfdybgPg5uPwAU&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ABFbm1LFi-V-u0JNQSWRkzf47dQ389Xu2",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=YXVlga8wScJvBf_i&ei=QWtzavfLLe3Blu8PopPX2Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-wdCJBy3ZrFQmMg_&ver=2&cmt=0.019&fmt=397&fs=0&rt=0.935&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=983&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=YXVlga8wScJvBf_i&ver=2&cmt=0.021&fmt=396&fs=0&rt=0.813&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=852&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=YXVlga8wScJvBf_i&ver=2&cmt=1.179&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2039&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-wdCJBy3ZrFQmMg_&ei=V9x0ap-kMMfdybgPg5uPwAU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3134,19 +3109,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=-fGEoLZ-_ceQyXQP&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C33146%2C32",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065083&ei=W9x0av7EKcCwlu8P-NGd8AI&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ABg90V5sJtHpbNWc9F9qU5voTK1EYIay8h3xvk0",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970597&ei=RWtzaozGKq3dybgP_bGkIA&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AN_WZqOexMj6jLZAt2ZaRHJ-4ynPVYc7",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=nRfB5jqiV9fTCJf2&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-fGEoLZ-_ceQyXQP&ei=RWtzaozGKq3dybgP_bGkIA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=nRfB5jqiV9fTCJf2&ei=W9x0av7EKcCwlu8P-NGd8AI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-fGEoLZ-_ceQyXQP&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.888&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=922&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=nRfB5jqiV9fTCJf2&ver=2&cmt=0.009&fmt=396&fs=0&rt=0.757&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=783&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3169,19 +3144,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970601&ei=SWtzapHAK9aClu8PppC96Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJw6_d8eF7IRVwNkwAk7tFEEbH2gtH0",
+            "url": "https://rr4---sn-uvu5a2a5t-hxmle.googlevideo.com/videoplayback?expire=1786065087&ei=X9x0aoCqMJmllu8P59LpkA8&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AEbm3c_hV2wnDqW8SlbXb-qkLjD5-gPwl",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=4Z1R8SKJS1wbVuLD&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=MeoooOIGreJBfFrP&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=4Z1R8SKJS1wbVuLD&ei=SWtzapHAK9aClu8PppC96Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=MeoooOIGreJBfFrP&ei=X9x0aoCqMJmllu8P59LpkA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=4Z1R8SKJS1wbVuLD&ver=2&cmt=0.045&fmt=397&fs=0&rt=0.82&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=847&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=MeoooOIGreJBfFrP&ver=2&cmt=0.069&fmt=396&fs=0&rt=0.653&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=677&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3204,19 +3179,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=UnAjZg2-51nh8qZl&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C35",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=gZNZiXW-w3uEkOXW&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C69796%2C309",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970606&ei=TWtzap3YO4Delu8Pgb7lqA8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AIQHbXg4785r798z3q7fQJqN7l4pbgF",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=gZNZiXW-w3uEkOXW&ei=Y9x0auGFNJfbir4PlrmPCA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=UnAjZg2-51nh8qZl&ei=TWtzap3YO4Delu8Pgb7lqA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=gZNZiXW-w3uEkOXW&ver=2&cmt=0.014&fmt=397&fs=0&rt=0.673&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=715&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=UnAjZg2-51nh8qZl&ver=2&cmt=0.01&fmt=396&fs=0&rt=0.633&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=656&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=gZNZiXW-w3uEkOXW&ver=2&cmt=0.021&fmt=397&fs=0&rt=0.693&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=734&cl=958593234&state=paused",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3239,19 +3214,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=1btBEJjioKkVJFCa&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=iVn0wZw8Yd-okxQc&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C30906%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970610&ei=UmtzapyKC-jdybgPibHDsQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFOtUD8R_mH9rUHQyE36P4Uj8Xk9kLg",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065096&ei=aNx0arWuE_ib2_gPjIjI0Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ALv7fqnwdCfKJ9SmSZW7tx5aAxGJtJRc6",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1btBEJjioKkVJFCa&ei=UmtzapyKC-jdybgPibHDsQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=iVn0wZw8Yd-okxQc&ei=aNx0arWuE_ib2_gPjIjI0Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1btBEJjioKkVJFCa&ver=2&cmt=0.013&fmt=396&fs=0&rt=1.274&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1298&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=iVn0wZw8Yd-okxQc&ver=2&cmt=0.014&fmt=396&fs=0&rt=1.375&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1399&cl=958593234&mos=1&volume",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3274,19 +3249,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970614&ei=VmtzaoymBaeilu8Pg9yqkQg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AHG38leNFtL1JtaHixNIAW-3za5BIct",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065100&ei=bNx0au77IZ21ir4Pxd_rmQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AMnIdRox5wk8Xf3QgoQ7LPsXUmr9W8La7",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=teqYVGXiiDv3J6ep&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=V9H7ODQwegEG3w05&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C30906%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=teqYVGXiiDv3J6ep&ei=VmtzaoymBaeilu8Pg9yqkQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=V9H7ODQwegEG3w05&ei=bNx0au77IZ21ir4Pxd_rmQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=teqYVGXiiDv3J6ep&ver=2&cmt=0.012&fmt=396&fs=0&rt=0.782&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=821&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=V9H7ODQwegEG3w05&ver=2&cmt=0.021&fmt=396&fs=0&rt=0.823&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=862&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3309,19 +3284,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=3jpLiwj65OPbhcHW&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C35405%2C331",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=4rvrnIToR9t8l-wO&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970617&ei=WWtzasT3MOGjlu8P7pWu-A0&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGvDp8N_A4E3l6A8N86Z9voIeXVCNDI",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=4rvrnIToR9t8l-wO&ei=cNx0asvjHOqx2_gP7sa08Qk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=3jpLiwj65OPbhcHW&ver=2&cmt=0.01&fmt=397&fs=0&rt=1.054&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1085&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=3jpLiwj65OPbhcHW&ei=WWtzasT3MOGjlu8P7pWu-A0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=4rvrnIToR9t8l-wO&ver=2&cmt=0.013&fmt=397&fs=0&rt=0.91&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=951&cl=959237608&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3344,15 +3315,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970622&ei=XmtzauK_CNXlir4P_p6q-QQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AA74rfq1bfaQPYLoO9lXCzGSAMkpTXG",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=OPt2tXBnDzP6-iIe&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=zN21SoOiJQIJAM8b&ei=XmtzauK_CNXlir4P_p6q-QQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065108&ei=dNx0aoe9MNLfybgPl8nu6Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AEaZq-1ssiZKaZpR96dfAIoJfIX0NAqsKcTRuzE",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=zN21SoOiJQIJAM8b&ver=2&cmt=0.011&fmt=396&fs=0&rt=0.46&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=494&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=OPt2tXBnDzP6-iIe&ver=2&cmt=0.01&fmt=396&fs=0&rt=0.49&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=530&cl=958593234&mos=1&volume=10",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=OPt2tXBnDzP6-iIe&ei=dNx0aoe9MNLfybgPl8nu6Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=OPt2tXBnDzP6-iIe&ver=2&cmt=1.48&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2041&cl=958593234&state=playin",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3375,15 +3354,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=N8Ufg846fohTCg9f&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C34392%2C30",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=99EbArDm47TpEYED&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C1248%2C309",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=N8Ufg846fohTCg9f&ei=YmtzatOKBc_wzN0PlPCE2AM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=99EbArDm47TpEYED&ver=2&cmt=0.015&fmt=397&fs=0&rt=0.789&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=810&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=N8Ufg846fohTCg9f&ver=2&cmt=0.017&fmt=397&fs=0&rt=0.881&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=921&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=99EbArDm47TpEYED&ei=eNx0aqr2M9Xlir4P-MbO0Qs&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3406,19 +3385,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970630&ei=ZWtzapGWOI_elu8PndaO6AY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJYCrKE07gZ0o4cDbdbLxGMNJ8XObp3",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065116&ei=fNx0aofLI8zrlu8P6IKg-Q0&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ALl3S8OxOsdxz6Rrij7Om9zbRvXLlYUgD",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=gQCbRI8oAYPjWo3R&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=mp76tWhWWKopO1k1&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=gQCbRI8oAYPjWo3R&ei=ZWtzapGWOI_elu8PndaO6AY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=mp76tWhWWKopO1k1&ver=2&cmt=0.043&fmt=396&fs=0&rt=0.808&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=841&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=gQCbRI8oAYPjWo3R&ver=2&cmt=0.006&fmt=396&fs=0&rt=0.757&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=782&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=mp76tWhWWKopO1k1&ei=fNx0aofLI8zrlu8P6IKg-Q0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3441,19 +3420,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=erur3DCiDfksgD44&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C1248%2C309",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=PV8RZlQqSdxhPx0M&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47714%2C76960%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970634&ei=aWtzasDTOMLt2_gP5pvD0Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ALLWs285N212IgnmPaoFK0P3JjRU2fP",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=PV8RZlQqSdxhPx0M&ei=gNx0auvfKtLeybgPsYHLwQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=erur3DCiDfksgD44&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.759&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=792&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=erur3DCiDfksgD44&ei=aWtzasDTOMLt2_gP5pvD0Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=PV8RZlQqSdxhPx0M&ver=2&cmt=0.018&fmt=397&fs=0&rt=0.885&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=910&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3476,19 +3451,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=hXOiID5RhgOpv0Yz&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C3",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=7ypOclMbRUQxsPWo&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970637&ei=bWtzat6pMNacir4Ps_m76Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AHWcIaDHBX6NQ82OugwyF0jzKkpAJ3t",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065124&ei=hNx0aobcKOKelu8P07KiyAI&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AI-5YGCr5S3aboQkBEMZL_OUCpSNLvPP-",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=hXOiID5RhgOpv0Yz&ei=bWtzat6pMNacir4Ps_m76Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=7ypOclMbRUQxsPWo&ei=hNx0aobcKOKelu8P07KiyAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=hXOiID5RhgOpv0Yz&ver=2&cmt=0.047&fmt=396&fs=0&rt=0.948&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=980&cl=958593234&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=7ypOclMbRUQxsPWo&ver=2&cmt=0.02&fmt=396&fs=0&rt=0.945&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=971&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3506,24 +3481,26 @@
         "vw": 1440,
         "broken": [],
         "spinners": [],
-        "console": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=Ab3yiJJyLwwJCIWB&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065128&ei=iNx0asDqF_Sjlu8PnfKqyQg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AM9yrGLB3UQrk-1x1hpJu2d07FCvAJlrqMAL-90",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970641&ei=cWtzaqf3OKuVlu8Ph-nuiA4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJtMl4U2ezXbSHtrfa__FG5PHmajm4c",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=rjLSmqKZmO6Ixt9Y&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Ab3yiJJyLwwJCIWB&ei=cWtzaqf3OKuVlu8Ph-nuiA4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=rjLSmqKZmO6Ixt9Y&ei=iNx0asDqF_Sjlu8PnfKqyQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Ab3yiJJyLwwJCIWB&ver=2&cmt=0.016&fmt=396&fs=0&rt=0.771&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=797&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=rjLSmqKZmO6Ixt9Y&ver=2&cmt=0.077&fmt=396&fs=0&rt=0.834&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=868&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3546,19 +3523,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=0IDt0Pu93ZkbDbuF&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C6",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=dxWMdaZv71w0dE-p&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970646&ei=dmtzatGiHJ7yir4PuaXZqQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AIJn7flkvAIKY5Jr8aaNm9n0y0H4JSO",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065132&ei=jNx0asXVIsPpybgP14T1gQQ&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AB0OpgYmks-fyj1ZEDqq_OQqa9W6ybws3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=0IDt0Pu93ZkbDbuF&ver=2&cmt=0.047&fmt=397&fs=0&rt=1.513&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1573&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=dxWMdaZv71w0dE-p&ei=jNx0asXVIsPpybgP14T1gQQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=0IDt0Pu93ZkbDbuF&ei=dmtzatGiHJ7yir4PuaXZqQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=dxWMdaZv71w0dE-p&ver=2&cmt=0.018&fmt=396&fs=0&rt=1.068&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1094&cl=958593234&mos=1&volume",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3581,19 +3558,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=BkY9UsIHkLFF8KHk&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C68548%2C321",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=TfkgLv2ZILhlPpIq&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970651&ei=e2tzaracAoi1ir4PpJ-b4A4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APFdqH6GE9jS7GUWnMhgA2TJGX0D_8i",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065137&ei=kdx0at_nEOikir4P6Oe40Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ANHgrT2OaOhUE4pC_o1XiUXZgmvw-Eo1G",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=BkY9UsIHkLFF8KHk&ver=2&cmt=0.02&fmt=396&fs=0&rt=0.929&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=967&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=TfkgLv2ZILhlPpIq&ei=kdx0at_nEOikir4P6Oe40Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=BkY9UsIHkLFF8KHk&ei=e2tzaracAoi1ir4PpJ-b4A4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=TfkgLv2ZILhlPpIq&ver=2&cmt=0.02&fmt=397&fs=0&rt=0.725&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=747&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3616,19 +3593,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=icthHp5mcSrfG6wt&el=embedded&ns=yt&fexp=v1%2C23848210%2C156434%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C3",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=RdWSekttJXDWVbg-&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970655&ei=f2tzauvbCKbpybgPpLDTqQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AIegIHB6xdZUBN8qULls-aeXXCmuJEq",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065141&ei=ldx0aq3QEO_0vPEPrbvboQg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AF7JsCIGqDCcWOmEF2roiuwOranv1JFCdWOi0ke",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=icthHp5mcSrfG6wt&ei=f2tzauvbCKbpybgPpLDTqQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=RdWSekttJXDWVbg-&ei=ldx0aq3QEO_0vPEPrbvboQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=icthHp5mcSrfG6wt&ver=2&cmt=0.044&fmt=396&fs=0&rt=1.267&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1335&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=RdWSekttJXDWVbg-&ver=2&cmt=0.02&fmt=397&fs=0&rt=1.225&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1248&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3646,24 +3623,26 @@
         "vw": 1440,
         "broken": [],
         "spinners": [],
-        "console": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=-XcFfmEQTF-JXAYC&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C97",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065145&ei=mdx0aoXtDMidir4PysueoAU&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ADFGeIwYukNUmN0sFvCZUKb9z5SU74RT5",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970659&ei=g2tzavWZA6yl-coPyr-duAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AA-VIcBqxs1z2mPkdfwQerle3ARX495",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=AcueVRKEfxQARmfA&ei=mdx0aoXtDMidir4PysueoAU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-XcFfmEQTF-JXAYC&ei=g2tzavWZA6yl-coPyr-duAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=AcueVRKEfxQARmfA&ver=2&cmt=0.021&fmt=396&fs=0&rt=1.002&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1030&cl=958593234&mos=1&volume",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-XcFfmEQTF-JXAYC&ver=2&cmt=0.031&fmt=396&fs=0&rt=0.875&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=900&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=AcueVRKEfxQARmfA&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3686,19 +3665,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=mJt02QcKvvQhYcwy&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065149&ei=ndx0atmTDKaSvPEP3KWxkQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AAcyJxMTPHYpE2mS_t8b9S_tTlAU-5Bks",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr4---sn-uvu5a2a5t-hxmle.googlevideo.com/videoplayback?expire=1785970663&ei=hmtzaomoO8Kxlu8PwoDc-Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABtOFhZ1q6nDGLVCUmWDsHJhxuUup6M",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=CwqUO0BtJCiBzQu2&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C97",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=mJt02QcKvvQhYcwy&ver=2&cmt=0.141&fmt=397&fs=0&rt=1.049&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1080&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=CwqUO0BtJCiBzQu2&ei=ndx0atmTDKaSvPEP3KWxkQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=mJt02QcKvvQhYcwy&ei=hmtzaomoO8Kxlu8PwoDc-Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=CwqUO0BtJCiBzQu2&ver=2&cmt=0.005&fmt=396&fs=0&rt=0.733&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=762&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3721,19 +3700,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=ChCRd-e28ZAjP-5f&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=uN2XUu1NzNXIptKM&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970666&ei=imtzauO3Oc7HybgPjbT7-Ak&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AMYLMU3gcyrG0VJC6rqWhErn2o6MFxO",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065153&ei=odx0are4D_vl2_gP9dmt0Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ALfVuJ4QumyiXoFk_-c_shcgCtR0qhcNM",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ChCRd-e28ZAjP-5f&ei=imtzauO3Oc7HybgPjbT7-Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=uN2XUu1NzNXIptKM&ei=odx0are4D_vl2_gP9dmt0Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ChCRd-e28ZAjP-5f&ver=2&cmt=0.049&fmt=396&fs=0&rt=1.45&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1497&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=uN2XUu1NzNXIptKM&ver=2&cmt=0.017&fmt=396&fs=0&rt=0.933&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=956&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3751,28 +3730,26 @@
         "vw": 1440,
         "broken": [],
         "spinners": [],
-        "console": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=RoJ7Snoa-uhSUP67&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C3",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065157&ei=pdx0avbeB8joir4PvOTpmAk&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AJbouJ3DTWh4FdcwEnMz21sGpIHCmvwBqF8Kwpw",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970671&ei=jmtzavjKO_yDlu8P3P_Q0Q8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AO0ngaDOCLJx7mlc5J1ZU0NlHaYtV-Q",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=r0BIaPjcq0lAUqz2&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=RoJ7Snoa-uhSUP67&ei=jmtzavjKO_yDlu8P3P_Q0Q8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=r0BIaPjcq0lAUqz2&ei=pdx0avbeB8joir4PvOTpmAk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=RoJ7Snoa-uhSUP67&ver=2&cmt=0.031&fmt=396&fs=0&rt=0.795&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=821&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=RoJ7Snoa-uhSUP67&ver=2&cmt=0.06&fmt=396&fs=0&rt=0.819&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=845&cl=958081982&state=paused&",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=r0BIaPjcq0lAUqz2&ver=2&cmt=0.064&fmt=396&fs=0&rt=0.746&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=770&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3795,15 +3772,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=680BQVNjHXBYGcR7&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34393%2C30",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=G0N0wog6pykYdKRB&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=680BQVNjHXBYGcR7&ver=2&cmt=0.018&fmt=397&fs=0&rt=0.793&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=817&cl=958081982&mos=1&volume=",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065161&ei=qdx0apCpBd2pir4PxJDTqA8&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AHu-d_qNhH4b1m0pcN3pMRWWXvSSBVo6LUPEwqhe",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=680BQVNjHXBYGcR7&ei=kmtzapq9PLCGlu8P68nv4Qk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=G0N0wog6pykYdKRB&ei=qdx0apCpBd2pir4PxJDTqA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=G0N0wog6pykYdKRB&ver=2&cmt=0.008&fmt=396&fs=0&rt=0.708&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=732&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3826,19 +3807,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=_l-OXzsLzwUmLDr4&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C34393%2C30",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=SkKGM7PU2AFUoGS8&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970679&ei=l2tzar-8BMatir4PlJzl-Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ALXUhXNYNzIv5Jd9Uj1BzRQTP3w4f_i",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065165&ei=rdx0ap_6AZ7xybgPq9rW0A4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AKPhaT91ffHuOWieh9uMtLSBa4XxAmh61nAoyO85",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=_l-OXzsLzwUmLDr4&ei=l2tzar-8BMatir4PlJzl-Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=SkKGM7PU2AFUoGS8&ei=rdx0ap_6AZ7xybgPq9rW0A4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=_l-OXzsLzwUmLDr4&ver=2&cmt=0.021&fmt=397&fs=0&rt=0.818&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=841&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=SkKGM7PU2AFUoGS8&ver=2&cmt=0.008&fmt=397&fs=0&rt=0.757&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=785&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3861,19 +3842,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970682&ei=mmtzauGtMcCilu8Psp7L2Ac&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ACkPWmWmceOC4UC5RWhkdww3xhY3rD_",
+            "url": "https://rr4---sn-uvu5a2a5t-hxmle.googlevideo.com/videoplayback?expire=1786065168&ei=sNx0arLYNOfdybgPmY-O0Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ABfHY_xJUGn9zvw1Zo1F0gENpa4KJYMiL",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=FHflb-VZVorbrzak&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=KpnzQsunhQKlhXdp&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=FHflb-VZVorbrzak&ver=2&cmt=0.067&fmt=397&fs=0&rt=0.812&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=836&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=KpnzQsunhQKlhXdp&ver=2&cmt=0.01&fmt=397&fs=0&rt=0.695&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=717&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=FHflb-VZVorbrzak&ei=mmtzauGtMcCilu8Psp7L2Ac&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=KpnzQsunhQKlhXdp&ei=sNx0arLYNOfdybgPmY-O0Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3896,19 +3877,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970686&ei=nmtzav3kLryE2_gPmMTm4A0&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFqwVIsTYCp5ktMkiQhFM_vAvUMc8Aq",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=ujB1huVC3rHtPepG&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=UsH1XWsf6nlWNpOG&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C10",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065172&ei=tNx0aseIOZ7yir4Pzcai2A4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AGvqrEF8oQi-cLnexcGOI6zj_QKcrqB1s",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=UsH1XWsf6nlWNpOG&ver=2&cmt=0.008&fmt=396&fs=0&rt=0.456&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=493&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ujB1huVC3rHtPepG&ei=tNx0aseIOZ7yir4Pzcai2A4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=UsH1XWsf6nlWNpOG&ei=nmtzav3kLryE2_gPmMTm4A0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ujB1huVC3rHtPepG&ver=2&cmt=0.042&fmt=396&fs=0&rt=0.525&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=553&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3933,19 +3914,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=r8vutWeRZLvIVKz1&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=r7YhvUW2hQv_u4pJ&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970690&ei=omtzauPKKOO0ir4PzY8m&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AFxwy5tI47BdMeU49j-SadRTaRWnCYNhN3",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065176&ei=uNx0atLYNtDcybgP3bPy4Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ACA6kwW1GGrN7Y0Zak1qN4euvKlReDL7eRE6tKsn",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=r8vutWeRZLvIVKz1&ei=omtzauPKKOO0ir4PzY8m&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ.T",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=r7YhvUW2hQv_u4pJ&ver=2&cmt=0.034&fmt=397&fs=0&rt=1&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1023&cl=959237608&mos=1&volume=100",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=r8vutWeRZLvIVKz1&ver=2&cmt=0.049&fmt=396&fs=0&rt=1.476&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1508&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=r7YhvUW2hQv_u4pJ&ei=uNx0atLYNtDcybgP3bPy4Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -3968,19 +3949,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970695&ei=p2tzauD0AY6Jlu8Pse_g6A4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AP3ZZwN-T7mMAHMQ-8UW0DAFpyjHVvh",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=X_v22sy5PkUSg1Tw&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=XBDyyvntbbDGSXSj&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C34391%2C30",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=X_v22sy5PkUSg1Tw&ver=2&cmt=0.034&fmt=397&fs=0&rt=0.788&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=814&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=XBDyyvntbbDGSXSj&ei=p2tzauD0AY6Jlu8Pse_g6A4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=XBDyyvntbbDGSXSj&ver=2&cmt=0.049&fmt=397&fs=0&rt=0.945&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=981&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=X_v22sy5PkUSg1Tw&ei=vdx0auWICJuK2_gP7bqg6QI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4003,19 +3980,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970699&ei=q2tzapM4mOjJuA_4zIGhDA&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ALIgj8Ko312EoAEVruxZW1rjg52Hozws",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=-kvfPeHIZxBiDqqN&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C10",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=tnhpfLCnVn80-Lll&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C1247%2C309",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=-kvfPeHIZxBiDqqN&ver=2&cmt=0.037&fmt=397&fs=0&rt=0.696&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=718&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=tnhpfLCnVn80-Lll&ei=q2tzapM4mOjJuA_4zIGhDA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=tnhpfLCnVn80-Lll&ver=2&cmt=0.008&fmt=396&fs=0&rt=0.837&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=864&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=-kvfPeHIZxBiDqqN&ei=wNx0auOQNJLfybgP1oOc2A8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4033,24 +4006,26 @@
         "vw": 1440,
         "broken": [],
         "spinners": [],
-        "console": [],
+        "console": [
+          "Permissions policy violation: compute-pressure is not allowed in this document."
+        ],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=0Qi1n9z-glpDBtDp&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065188&ei=xNx0areRLNGsir4Pl9mgqQE&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-APwRUR8OqbWp5b793if8FepFjvFBJGWaPHkKX3zI",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=0Qi1n9z-glpDBtDp&ei=rmtzaoXJMpboybgP59aAkQg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=rW3g1EL8jGLFjzdb&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6255%2C16951%2C69",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=0Qi1n9z-glpDBtDp&ver=2&cmt=0.032&fmt=396&fs=0&rt=0.546&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=577&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=rW3g1EL8jGLFjzdb&ver=2&cmt=0.04&fmt=396&fs=0&rt=0.505&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=534&cl=959237608&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=0Qi1n9z-glpDBtDp&ver=2&cmt=1.488&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2033&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=rW3g1EL8jGLFjzdb&ei=xNx0areRLNGsir4Pl9mgqQE&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4073,19 +4048,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=Hsid56-Mwma3pv3s&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065192&ei=yNx0aonkJYi1ir4Pj7ngyAk&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ABI1NDkKVbbXZNVCWZWcBihtNl06_LvN_",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970706&ei=smtzasXkKcn1vPEPqrSngAk&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AKmoGkYtwT8NKh46HVF_rh-FGjo6kuA",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=BAMpQXpd1-1arFVr&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Hsid56-Mwma3pv3s&ver=2&cmt=0.053&fmt=397&fs=0&rt=0.996&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1020&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=BAMpQXpd1-1arFVr&ei=yNx0aonkJYi1ir4Pj7ngyAk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Hsid56-Mwma3pv3s&ei=smtzasXkKcn1vPEPqrSngAk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=BAMpQXpd1-1arFVr&ver=2&cmt=0.095&fmt=396&fs=0&rt=0.797&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=822&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4108,19 +4083,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=ZRZMViWVcDGL3zNZ&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065196&ei=zNx0atrBJLaelu8P2pKa8Ak&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AKh3g01xSaSBQOnfV9Qpeb-BZt6olBVSLX6_Ign",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970710&ei=tmtzara2KLeslu8P3peO4Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJgI3zTtl9U0p-XDm7JPL1Zy3ljIeDn",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=k5Cxq9CNsjzhSogR&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C30906%2C15",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=ZRZMViWVcDGL3zNZ&ei=tmtzara2KLeslu8P3peO4Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=k5Cxq9CNsjzhSogR&ver=2&cmt=0.069&fmt=396&fs=0&rt=0.703&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=723&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=ZRZMViWVcDGL3zNZ&ver=2&cmt=0.022&fmt=397&fs=0&rt=0.842&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=870&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=k5Cxq9CNsjzhSogR&ei=zNx0atrBJLaelu8P2pKa8Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4143,19 +4118,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=3lXNn2c5lPrsu2sT&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=dh1wguLqeaq0Hv_Y&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970714&ei=umtzaqvqI4rfybgPq4bGqAY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AEXbKMeT7n5VGdnvNmzqdb5XXy6D0Ki",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065200&ei=0Nx0aqTcL42-lu8P2fSimAg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ACc-rL5Sqt8dn_VYSy4_HaLyuyqCgQtPa",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=3lXNn2c5lPrsu2sT&ver=2&cmt=0.019&fmt=396&fs=0&rt=1.241&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1272&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=dh1wguLqeaq0Hv_Y&ver=2&cmt=0.017&fmt=396&fs=0&rt=1.237&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1265&cl=958593234&mos=1&volume",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=3lXNn2c5lPrsu2sT&ei=umtzaqvqI4rfybgPq4bGqAY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=dh1wguLqeaq0Hv_Y&ei=0Nx0aqTcL42-lu8P2fSimAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4178,19 +4153,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970718&ei=vmtzaurAMsWIir4P5dXU4Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ANZ9KKxjuWh0hba129p40BPFCZaqBq9",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=NE5fgswoiJjfB06D&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C10",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=cdCE0XI4GG2Vjygu&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C28",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065204&ei=1Nx0aoL0JKGVir4PmoejwQ8&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ADh_z4bqHAo2LYYDYedi0y5ZrtqTkPRBshKCmim",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=cdCE0XI4GG2Vjygu&ei=vmtzaurAMsWIir4P5dXU4Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=NE5fgswoiJjfB06D&ei=1Nx0aoL0JKGVir4PmoejwQ8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=cdCE0XI4GG2Vjygu&ver=2&cmt=0.073&fmt=396&fs=0&rt=0.899&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=949&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=NE5fgswoiJjfB06D&ver=2&cmt=0.022&fmt=396&fs=0&rt=0.85&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=879&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4213,19 +4188,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=EMlIygKhyyS7o2pF&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35401%2C65301%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=1jFuerf6N3yiBQfO&el=embedded&ns=yt&fexp=v1%2C24004644%2C494890%2C26564109%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970722&ei=wmtzap7xJtejir4PtZue6AM&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AISJKfQmMCJzdmgUAO-o_bsoCAYdtmy",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065208&ei=2Nx0atjJLdOjlu8P5unV4Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AFuKu1DMQ9mRjBFqeflO19foJfvvBa94nwny4Yy",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=EMlIygKhyyS7o2pF&ei=wmtzap7xJtejir4PtZue6AM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1jFuerf6N3yiBQfO&ei=2Nx0atjJLdOjlu8P5unV4Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=EMlIygKhyyS7o2pF&ver=2&cmt=0.017&fmt=396&fs=0&rt=0.79&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=816&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1jFuerf6N3yiBQfO&ver=2&cmt=0.017&fmt=397&fs=0&rt=0.618&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=640&cl=959237608&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4248,75 +4223,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=dcrLSuGJcd1hM1fI&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69796%2C3",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=uuu9dzOEejhBRN56&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970726&ei=xmtzasCSOMadvPEPxML5oAQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APu29g7LHrt6yTl8DkXkip2-jPdxIhM",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065212&ei=3Nx0aoHEHa-Q2_gPhKWP6Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AFaVJbNn3NcgOxqbrLNNnMPaDWQU1qiPT",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=dcrLSuGJcd1hM1fI&ei=xmtzasCSOMadvPEPxML5oAQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=uuu9dzOEejhBRN56&ei=3Nx0aoHEHa-Q2_gPhKWP6Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=dcrLSuGJcd1hM1fI&ver=2&cmt=0.017&fmt=396&fs=0&rt=0.681&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=705&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=uuu9dzOEejhBRN56&ver=2&cmt=0.005&fmt=397&fs=0&rt=0.818&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=847&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=dcrLSuGJcd1hM1fI&ver=2&cmt=1.332&fmt=396&fs=0&rt=2.002&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2026&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=uuu9dzOEejhBRN56&ver=2&cmt=1.199&fmt=397&fs=0&rt=2.006&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2035&cl=958593234&state=playi",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4339,19 +4262,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=1-I87TjJcMQ0e8U6&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C32155%2C28",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=F-qbi656z5YzZ-tq&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C100702%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970730&ei=ymtzasjqLvCN2_gP1eeFaQ&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AE4vfslT71F9l6lkvMis8kopzjCmDcSI",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=F-qbi656z5YzZ-tq&ei=4Nx0atjqGObnir4P-vvm6AQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1-I87TjJcMQ0e8U6&ei=ymtzasjqLvCN2_gP1eeFaQ&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1-I87TjJcMQ0e8U6&ver=2&cmt=0.024&fmt=396&fs=0&rt=0.952&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=979&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=F-qbi656z5YzZ-tq&ver=2&cmt=0.082&fmt=396&fs=0&rt=0.767&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=789&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4374,23 +4293,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=Ct7RyvXgxJrL8Me5&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065220&ei=5Nx0api3E6HE1AHckNT4Ag&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ADYJ20cS4a5Q5ph5N_uyGIm4T0-dbWcndmkdRKA6T",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970734&ei=zmtzarSFJIi1ir4PvJKO-AM&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ADxvAjY5dsmEK_36wQVTu3dROmGf3be",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=L564NlBWcUDmpmV7&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C32155%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=Ct7RyvXgxJrL8Me5&ver=2&cmt=0.088&fmt=396&fs=0&rt=0.977&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1015&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=L564NlBWcUDmpmV7&ver=2&cmt=0.068&fmt=396&fs=0&rt=0.808&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=871&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=Ct7RyvXgxJrL8Me5&ei=zmtzarSFJIi1ir4PvJKO-AM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=Ct7RyvXgxJrL8Me5&ver=2&cmt=2.116&fmt=396&fs=0&rt=3.002&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=3040&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=L564NlBWcUDmpmV7&ei=5Nx0api3E6HE1AHckNT4Ag&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4413,19 +4328,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970738&ei=0mtzapKII-3kir4PyabnkA8&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ABrzMCN0DZ84AYMs-fFTvyiU1H_zY-z",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=qnZ1gVdpgq_2rCFo&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=B1br_fqRkxjNiTdO&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47714%2C76960%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C309",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=qnZ1gVdpgq_2rCFo&ver=2&cmt=0.005&fmt=396&fs=0&rt=0.427&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=454&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=B1br_fqRkxjNiTdO&ei=0mtzapKII-3kir4PyabnkA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=B1br_fqRkxjNiTdO&ver=2&cmt=0.043&fmt=396&fs=0&rt=0.564&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=613&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=qnZ1gVdpgq_2rCFo&ei=6Nx0asqOEIS1ir4PwqaIqA8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4448,19 +4359,23 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970742&ei=1mtzaqO8GMDeybgPh7OY0Q4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AOajnZ6Zb-_UqRdyff7RHsEFKipiVwO",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=DB_ouZXnLs1-G5b_&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=n3U67bjVpDu-M57i&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065228&ei=7Nx0avZzy-jJuA_8k4qABA&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-APjGJwSW5C_PULm2k0XDauyCeSHiYQhmK3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=n3U67bjVpDu-M57i&ei=1mtzaqO8GMDeybgPh7OY0Q4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=DB_ouZXnLs1-G5b_&ver=2&cmt=0.089&fmt=396&fs=0&rt=0.827&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=862&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=n3U67bjVpDu-M57i&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.75&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=774&cl=958081982&mos=1&volume=1",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=DB_ouZXnLs1-G5b_&ei=7Nx0avZzy-jJuA_8k4qABA&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxggQ",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=DB_ouZXnLs1-G5b_&ver=2&cmt=1.271&fmt=396&fs=0&rt=2.008&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2042&cl=958593234&state=playi",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4483,23 +4398,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=xyicbmNjTSXCPlS7&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35404%2C65298%2C28",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065232&ei=8Nx0auvrGK7AvPEP8t6f2Ak&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AJ9c58N2UQ531hv_8K0WokdyPCXbbHkbCmdlbyT",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970746&ei=2mtzaoHXFebhlu8PlbWQ6Qg&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ADhDtqWY-mR0ZR8WZ9lV3zWRGe5sRnM",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=tVbKM1vPWNFP3Nhe&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=xyicbmNjTSXCPlS7&ei=2mtzaoHXFebhlu8PlbWQ6Qg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=tVbKM1vPWNFP3Nhe&ver=2&cmt=0.053&fmt=396&fs=0&rt=0.609&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=637&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=xyicbmNjTSXCPlS7&ver=2&cmt=0.007&fmt=397&fs=0&rt=0.541&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=574&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=xyicbmNjTSXCPlS7&ver=2&cmt=1.426&fmt=397&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2034&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=tVbKM1vPWNFP3Nhe&ei=8Nx0auvrGK7AvPEP8t6f2Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4522,19 +4433,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=2CEH-i5oR1A6yV9I&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C1247%2C309",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=s9kSuvRSB1RGVdYl&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C69795%2C30907%2C28",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970750&ei=3mtzaqyXGNXGlu8P2pSQiA4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AM-vOJb7w58J4LpBXwL8zF_FIXyN4UP",
+            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1786065236&ei=9Nx0avDJF63SybgPx_eFoQw&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AL9A3CdF2hsi31uY47DWEfc5z2kiHg5Sz",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=2CEH-i5oR1A6yV9I&ver=2&cmt=0.019&fmt=396&fs=0&rt=1.505&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1533&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=s9kSuvRSB1RGVdYl&ei=9Nx0avDJF63SybgPx_eFoQw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=2CEH-i5oR1A6yV9I&ei=3mtzaqyXGNXGlu8P2pSQiA4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=s9kSuvRSB1RGVdYl&ver=2&cmt=0.049&fmt=396&fs=0&rt=0.911&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=943&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4557,19 +4468,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=csU1otuDnCCFluHd&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C100702%2C15",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=1webORD95BhPx1SS&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47714%2C76960%2C117689%2C9252%2C3479%2C13030%2C6258%2C16948%2C1007",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1785970754&ei=4mtzavy4H8KrvPEPiqOAqQ0&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-APUJG0aZXCX362uVxaHXla6D-5vwZEB",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065240&ei=-Nx0avuBJ5m1ir4P7bLm0A4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AIozG9g6qAT82xn8VzhpKN5zRhi1KxPEo",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=csU1otuDnCCFluHd&ver=2&cmt=0.009&fmt=396&fs=0&rt=1.236&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1264&cl=958081982&mos=1&volume",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=1webORD95BhPx1SS&ver=2&cmt=0.008&fmt=397&fs=0&rt=1.19&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=1214&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=csU1otuDnCCFluHd&ei=4mtzavy4H8KrvPEPiqOAqQ0&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=1webORD95BhPx1SS&ei=-Nx0avuBJ5m1ir4P7bLm0A4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4592,19 +4503,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970758&ei=5mtzasDnF82N2_gPoJDaiQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AMGyJH_WCUHRgCd1uu_6mzQxOVey6Ks",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=bI2VL3aR-RrFhKtb&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=S4l0SyfD7ElzSsTx&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C33145%2C32",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065244&ei=_Nx0asjqIomK2_gP2ITy4A8&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ANDE8TRhu2T-xh1RzEJoVfAIa0S_Hk8mo",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=S4l0SyfD7ElzSsTx&ei=5mtzasDnF82N2_gPoJDaiQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=bI2VL3aR-RrFhKtb&ei=_Nx0asjqIomK2_gP2ITy4A8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=S4l0SyfD7ElzSsTx&ver=2&cmt=0.073&fmt=396&fs=0&rt=0.897&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=929&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=bI2VL3aR-RrFhKtb&ver=2&cmt=0.05&fmt=397&fs=0&rt=0.757&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=780&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4627,23 +4538,15 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=XhDoKfR33L-Vx0WG&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C35404%2C652",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=p1hKyjknIBLqt-PK&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47715%2C76959%2C117689%2C9252%2C3479%2C13030%2C23206%2C68547%2C321",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970762&ei=6mtzasCeH9joybgPu9euwQI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AAqiAUodWm_DBDLNMXtY4hR51uarQYf",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=p1hKyjknIBLqt-PK&ver=2&cmt=0.055&fmt=397&fs=0&rt=0.718&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=741&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=XhDoKfR33L-Vx0WG&ver=2&cmt=0.011&fmt=396&fs=0&rt=0.741&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=765&cl=958081982&mos=1&volume=",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=XhDoKfR33L-Vx0WG&ei=6mtzasCeH9joybgPu9euwQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=XhDoKfR33L-Vx0WG&ver=2&cmt=1.255&fmt=396&fs=0&rt=2.001&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=2026&cl=958081982&state=playi",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=p1hKyjknIBLqt-PK&ei=AN10arqfINvtir4Puf7pmAM&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4661,26 +4564,20 @@
         "vw": 1440,
         "broken": [],
         "spinners": [],
-        "console": [
-          "Permissions policy violation: compute-pressure is not allowed in this document."
-        ],
+        "console": [],
         "pageErrors": [],
         "http": [],
         "failed": [
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970766&ei=7mtzatnkFYKLlu8PwNa7iQU&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-ADd16YsutcwYclpRbH4jnun_Oh41LJ9",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=7SpAhlRWTIR6FhD1&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=cxDmb7rAr_Chs8T9&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2877%2C12",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=7SpAhlRWTIR6FhD1&ei=BN10aq-5IffpybgP1suUkQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=cxDmb7rAr_Chs8T9&ei=7mtzatnkFYKLlu8PwNa7iQU&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
-            "err": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=cxDmb7rAr_Chs8T9&ver=2&cmt=0.045&fmt=397&fs=0&rt=0.815&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=841&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=7SpAhlRWTIR6FhD1&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.798&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=829&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4703,19 +4600,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=sJzVBRsGjqlAY8rR&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C65297%2C28",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065256&ei=CN10aoXEGv_oybgPnrz4kAk&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ACUJrcw959-P3T5ocw0TMbGHycRNOE30NAKv3kz",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970770&ei=8mtzasPuC8LGlu8P2M3ukAY&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AJuIXGovFtWMN1CdHUu6KC600Wil9v3",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=NiiWU6V0-J4sCtQC&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C3",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=sJzVBRsGjqlAY8rR&ver=2&cmt=0.018&fmt=396&fs=0&rt=0.768&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=791&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=NiiWU6V0-J4sCtQC&ei=CN10aoXEGv_oybgPnrz4kAk&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=sJzVBRsGjqlAY8rR&ei=8mtzasPuC8LGlu8P2M3ukAY&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=NiiWU6V0-J4sCtQC&ver=2&cmt=0.04&fmt=397&fs=0&rt=0.86&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=891&cl=958593234&mos=1&volume=10",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4738,15 +4635,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=A5mB9qS2aFXNB4Ue&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C6257%2C16949%2C100702%2C28",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065260&ei=DN10aoSvCcmKlu8PzLPMkQI&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AKsS8DG-3UlbtfPZ5tr0ULP0rRaI0s6JTsCeilOx",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=A5mB9qS2aFXNB4Ue&ei=9mtzaqnWA5yM2_gPr9iJ8Ak&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=erJ0XbZATZ67pVOl&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=A5mB9qS2aFXNB4Ue&ver=2&cmt=0.011&fmt=397&fs=0&rt=0.476&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=509&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=erJ0XbZATZ67pVOl&ei=DN10aoSvCcmKlu8PzLPMkQI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "err": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=erJ0XbZATZ67pVOl&ver=2&cmt=0.028&fmt=396&fs=0&rt=0.53&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=557&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4769,19 +4670,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=yTNhNBksgn5HeIQj&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C33145%2C32",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065264&ei=EN10avvNE6elir4Pl_P4yAg&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AAQMy-utnsEnNeCrd6gDLFjarMd8I5EDXv12USDW",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970777&ei=-Wtzaq3wONHcybgPuey_0QI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AGPJNri-GmaM8kPwc2O-nPgfzh7n0j8",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=0QCf5saABxuxYziI&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C15105%2C2",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=yTNhNBksgn5HeIQj&ver=2&cmt=0.019&fmt=396&fs=0&rt=0.853&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=879&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=0QCf5saABxuxYziI&ei=EN10avvNE6elir4Pl_P4yAg&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=yTNhNBksgn5HeIQj&ei=-Wtzaq3wONHcybgPuey_0QI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=0QCf5saABxuxYziI&ver=2&cmt=0.007&fmt=396&fs=0&rt=0.828&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=853&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4804,63 +4705,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970782&ei=_mtzaqKdDLzGybgPycCmqAw&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AHm-VYZ8SF0VzSZlPs_eo4zP4Z9vRUp",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=dGdIEgZ--YfUCQUw&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=397&afmt=251&cpn=UpnUnvWWje6GswdG&el=embedded&ns=yt&fexp=v1%2C24004644%2C494888%2C26564111%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35403%2C6",
+            "url": "https://rr1---sn-uvu5a2a5t-hxmey.googlevideo.com/videoplayback?expire=1786065268&ei=FN10ar3wFfyP2_gPiYOUkQ4&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AJRcF9W9YoWNuvZHl__rP7gJOVFs_ALjL",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://csp.withgoogle.com/csp/script-inclusions/1a74b362328347702024274e29d77eb5",
-            "err": "net::ERR_BLOCKED_BY_ORB"
-          },
-          {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=UpnUnvWWje6GswdG&ei=_mtzaqKdDLzGybgPycCmqAw&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=dGdIEgZ--YfUCQUw&ei=FN10ar3wFfyP2_gPiYOUkQ4&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=UpnUnvWWje6GswdG&ver=2&cmt=0.054&fmt=397&fs=0&rt=0.858&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=883&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=dGdIEgZ--YfUCQUw&ver=2&cmt=0.036&fmt=397&fs=0&rt=0.75&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=773&cl=958593234&mos=1&volume=1",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4883,19 +4740,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=7ka_oMcP1M3disrK&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C35405%2C33142%2C12",
+            "url": "https://rr5---sn-9gv7enly.googlevideo.com/videoplayback?expire=1786065272&ei=GN10at73Hobiir4Pw9LuoQc&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-ABu-dqJXx2aTKi65lrfj4cC_Impn6LYRXfqrkyp0",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970786&ei=AmxzavSTEdHnir4P4r-6qAI&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AASBpCf-WCxt8wMAr5XzY458vAE1D1u",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=OI7ez_czPuHGKEh6&el=embedded&ns=yt&fexp=v1%2C24004644%2C494889%2C26564110%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=7ka_oMcP1M3disrK&ver=2&cmt=0.018&fmt=396&fs=0&rt=0.792&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=819&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=OI7ez_czPuHGKEh6&ver=2&cmt=0.082&fmt=396&fs=0&rt=0.763&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=792&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=7ka_oMcP1M3disrK&ei=AmxzavSTEdHnir4P4r-6qAI&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=OI7ez_czPuHGKEh6&ei=GN10at73Hobiir4Pw9LuoQc&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
@@ -4918,19 +4775,19 @@
         "http": [],
         "failed": [
           {
-            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=y8fjQUn8CZeSnrNK&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C100702%2C2878%2C12",
+            "url": "https://rr5---sn-2o9gv5-5g.googlevideo.com/videoplayback?expire=1786065276&ei=HN10av2REOuJir4PhLOx0A8&ip=2806%3A2f0%3Aad80%3Afd97%3A360%3A9fc4%3A5007%3A8b4&id=o-AGGxgjcpS9GLFiQAblMdTV9JbIT8YI5Zyax-trB",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://rr5---sn-uvu5a2a5t-hxmll.googlevideo.com/videoplayback?expire=1785970790&ei=BmxzasbcCo2slu8PhaXbwAo&ip=2806%3A2f0%3Aad80%3Afd97%3A2a9d%3Ac0f3%3Ae4df%3A4f0f&id=o-AL2wU8Dw_jHqVEzK_Mkvu1Dlf9JmxdB",
+            "url": "https://www.youtube.com/api/stats/qoe?fmt=396&afmt=251&cpn=mWQQtPk2cESim7jA&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C124674%2C117689%2C9252%2C3479%2C13030%2C23206%2C68548%2C32154%2C15",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=y8fjQUn8CZeSnrNK&ver=2&cmt=0.006&fmt=396&fs=0&rt=0.819&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=844&cl=958081982&mos=1&volume=",
+            "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=mWQQtPk2cESim7jA&ver=2&cmt=0.006&fmt=396&fs=0&rt=0.626&euri=https%3A%2F%2F3tres6records.albto.me%2F&lact=647&cl=958593234&mos=1&volume=",
             "err": "net::ERR_ABORTED"
           },
           {
-            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=y8fjQUn8CZeSnrNK&ei=BmxzasbcCo2slu8PhaXbwAo&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
+            "url": "https://www.youtube.com/ptracking?html5=1&video_id=qfF19hUzLo0&cpn=mWQQtPk2cESim7jA&ei=HN10av2REOuJir4PhLOx0A8&ptk=youtube_multi&oid=BtscXOksyqSTYfLFAiFZaw.FC2eKtA5s0rO1t00zXGoeg.J8vAyKuNSYBIN_9RIdxgg",
             "err": "net::ERR_ABORTED"
           }
         ]
