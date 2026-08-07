@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio 3TRES6 · Propuesta e investigación — 3TRES6 Records</title>
+    <meta
+      name="description"
+      content="Investigación ejecutiva y propuesta para montar una radio de internet real dentro de 3tres6records.albto.me. Escenarios, precios, pros/contras y roadmap."
+    />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --bg-light: #111111;
+        --card: #161616;
+        --card-hover: #1a1a1a;
+        --text: #ffffff;
+        --muted: #888888;
+        --accent: #ff4d00;
+        --accent-hover: #ff6a2f;
+        --border: #222222;
+        --ok: #00ff88;
+        --bad: #ff5f56;
+        --blue: #00bcff;
+        --yellow: #f5c518;
+        --radius: 12px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background: var(--bg);
+      }
+      body {
+        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ---------- deck scaffolding (JS on) ---------- */
+      .deck {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: clamp(24px, 5vw, 72px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(18px);
+        transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+        overflow: hidden;
+        background:
+          radial-gradient(900px 420px at 85% -10%, rgba(255, 77, 0, 0.14), transparent 60%),
+          var(--bg);
+      }
+      .slide.active {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .slide-inner {
+        width: 100%;
+        max-width: 1080px;
+        max-height: 100%;
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent) transparent;
+      }
+
+      /* ---------- readable fallback (no JS) ---------- */
+      html:not(.js) body {
+        overflow: auto;
+      }
+      html:not(.js) .deck {
+        height: auto;
+      }
+      html:not(.js) .slide {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        min-height: 60vh;
+        margin-bottom: 4px;
+        border-bottom: 1px solid var(--border);
+      }
+      html:not(.js) .controls,
+      html:not(.js) .deckbar {
+        display: none;
+      }
+
+      /* ---------- typography ---------- */
+      h1 {
+        font-size: clamp(30px, 5.2vw, 64px);
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      h2 {
+        font-size: clamp(22px, 3.2vw, 36px);
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin-bottom: 18px;
+      }
+      h3 {
+        font-size: clamp(16px, 1.8vw, 21px);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: clamp(14px, 1.35vw, 18px);
+        line-height: 1.55;
+        color: #c9c9c9;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .small {
+        font-size: 13px;
+      }
+      b,
+      strong {
+        color: var(--text);
+      }
+      em {
+        color: var(--accent-hover);
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 14px;
+      }
+      .kicker::before {
+        content: '';
+        width: 22px;
+        height: 2px;
+        background: var(--accent);
+      }
+
+      /* ---------- cards / grids ---------- */
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+      .g2 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      .g3 {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .g4 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+      }
+      .card.hot {
+        border-color: var(--accent);
+        background: linear-gradient(180deg, rgba(255, 77, 0, 0.08), var(--card));
+      }
+      .price {
+        font-size: clamp(26px, 3.4vw, 44px);
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+      }
+      .price small {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--muted);
+      }
+      .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        background: var(--accent);
+        color: #fff;
+      }
+      .badge.gray {
+        background: #2a2a2a;
+        color: var(--muted);
+      }
+      .badge.green {
+        background: rgba(0, 255, 136, 0.15);
+        color: var(--ok);
+      }
+      .badge.blue {
+        background: rgba(0, 188, 255, 0.15);
+        color: var(--blue);
+      }
+      .badge.yellow {
+        background: rgba(245, 197, 24, 0.15);
+        color: var(--yellow);
+      }
+
+      /* PROS / CONS */
+      .pcs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+        margin-top: 16px;
+      }
+      .pc {
+        border-radius: var(--radius);
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+      }
+      .pc.pros {
+        background: rgba(0, 255, 136, 0.05);
+        border-color: rgba(0, 255, 136, 0.25);
+      }
+      .pc.cons {
+        background: rgba(255, 95, 86, 0.05);
+        border-color: rgba(255, 95, 86, 0.25);
+      }
+      .pc h4 {
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .pc.pros h4 {
+        color: var(--ok);
+      }
+      .pc.cons h4 {
+        color: var(--bad);
+      }
+      .pc ul {
+        list-style: none;
+      }
+      .pc li {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #cfcfcf;
+        padding-left: 22px;
+        position: relative;
+        margin-bottom: 6px;
+      }
+      .pc.pros li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--ok);
+      }
+      .pc.cons li::before {
+        content: '✕';
+        position: absolute;
+        left: 0;
+        color: var(--bad);
+      }
+
+      /* tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: clamp(12px, 1.15vw, 15px);
+        margin-top: 12px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      th {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border-bottom: 1px solid #333;
+      }
+      td {
+        color: #d5d5d5;
+        line-height: 1.45;
+      }
+      td .ok {
+        color: var(--ok);
+      }
+      td .no {
+        color: var(--bad);
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      .hl-row td {
+        background: rgba(255, 77, 0, 0.07);
+      }
+
+      /* steps / roadmap */
+      .phase {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 16px;
+        margin-top: 14px;
+      }
+      .phase .n {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 700;
+        background: var(--accent);
+        color: #fff;
+      }
+      .phase h3 {
+        margin-bottom: 2px;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .footnote {
+        margin-top: 18px;
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      /* ---------- controls ---------- */
+      .controls {
+        position: fixed;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(10, 10, 10, 0.85);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 6px 10px;
+        z-index: 50;
+        backdrop-filter: blur(6px);
+      }
+      .controls button {
+        background: none;
+        border: none;
+        color: var(--text);
+        font-size: 16px;
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s;
+        font-family: inherit;
+      }
+      .controls button:hover {
+        background: var(--accent);
+      }
+      .counter {
+        font-size: 12px;
+        color: var(--muted);
+        min-width: 46px;
+        text-align: center;
+        font-variant-numeric: tabular-nums;
+      }
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--accent);
+        z-index: 60;
+        transition: width 0.25s ease;
+      }
+      .brandmark {
+        position: fixed;
+        top: 20px;
+        left: 24px;
+        z-index: 50;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.04em;
+      }
+      .brandmark span {
+        color: var(--accent);
+      }
+      .brandmark a {
+        color: var(--text);
+        text-decoration: none;
+      }
+      .hint {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 50;
+        font-size: 11px;
+        color: var(--muted);
+        text-align: right;
+        line-height: 1.6;
+      }
+
+      /* overview */
+      .overview {
+        position: fixed;
+        inset: 0;
+        background: rgba(6, 6, 6, 0.97);
+        z-index: 100;
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 10px;
+        padding: clamp(20px, 5vw, 60px);
+        overflow: auto;
+      }
+      .overview.show {
+        display: grid;
+      }
+      .overview button {
+        background: var(--card);
+        border: 1px solid var(--border);
+        color: var(--text);
+        border-radius: 10px;
+        padding: 14px 16px;
+        text-align: left;
+        cursor: pointer;
+        font-family: inherit;
+        transition: border-color 0.15s;
+      }
+      .overview button:hover {
+        border-color: var(--accent);
+      }
+      .overview button .n {
+        color: var(--accent);
+        font-weight: 700;
+        margin-right: 6px;
+      }
+
+      /* ---------- print ---------- */
+      @media print {
+        body {
+          overflow: visible;
+        }
+        .deck {
+          height: auto;
+        }
+        .slide {
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          min-height: auto;
+          page-break-after: always;
+          padding: 24px;
+        }
+        .controls,
+        .progress,
+        .brandmark,
+        .hint {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+
+    <div class="progress" id="progress"></div>
+    <div class="brandmark"><a href="https://3tres6records.albto.me/">3TRES6<span>·RADIO</span></a></div>
+
+    <div class="deck" id="deck">
+
+      <!-- 1 · PORTADA -->
+      <section class="slide active" data-kicker="Documento ejecutivo">
+        <div class="slide-inner" style="text-align: center">
+          <span class="kicker" style="justify-content: center">Documento ejecutivo · investigación & propuesta</span>
+          <h1 style="margin-bottom: 18px">
+            Radio <span style="color: var(--accent)">3TRES6</span><br />una radio de internet real, dentro del sitio
+          </h1>
+          <p style="max-width: 720px; margin: 0 auto">
+            Sí se puede: <em>icecast.org</em> es el software libre que impulsa miles de radios reales.
+            Este deck resume todas las opciones —open source y de pago—, sus precios, pros y contras,
+            y termina con <b>dos escenarios concretos (~15 USD y ~50 USD/mes)</b> y un roadmap para construirlo.
+          </p>
+          <div class="pill-row" style="justify-content: center; margin-top: 26px">
+            <span class="badge">9 opciones analizadas</span>
+            <span class="badge gray">3 escenarios de precio</span>
+            <span class="badge green">recomendación incluida</span>
+          </div>
+          <p class="footnote" style="margin-top: 30px">
+            Úsalo con ← → · flechas · toques · o <b>G</b> para el índice. Hojas: <b>P</b> para imprimir/PDF.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2 · TL;DR -->
+      <section class="slide" data-kicker="Resumen ejecutivo">
+        <div class="slide-inner">
+          <span class="kicker">Resumen ejecutivo</span>
+          <h2>Lo que hay que saber en 30 segundos</h2>
+          <div class="grid g3">
+            <div class="card">
+              <h3>1 · Sí es “radio de verdad”</h3>
+              <p class="small">
+                <b>Icecast</b> es el servidor open source que literalmente transmite la emisión a
+                cualquier reproductor. Con <b>Liquidsoap</b> como automatizador, la radio suena
+                24/7 sola y permite <b>shows programados</b> y <b>DJ en vivo</b>.
+              </p>
+            </div>
+            <div class="card">
+              <h3>2 · La decisión real no es el software</h3>
+              <p class="small">
+                Es <b>dónde corre</b> (tu VPS vs un servicio) y <b>qué música</b> transmites
+                (eso decide si necesitas licencias). El sitio estático de GitHub Pages no puede
+                emitir; necesita un servidor de streaming aparte.
+              </p>
+            </div>
+            <div class="card">
+              <h3>3 · Dos escenarios claros</h3>
+              <p class="small">
+                <b>~15 USD/mes:</b> AzuraCast (suite open source) en un VPS propio — control total,
+                dashboard web, shows + live.
+                <b>~50 USD/mes:</b> Live365 — todo gestionado y <b>con licencias de música incluidas</b>
+                para EE. UU., Canadá y México.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · CONTEXTO -->
+      <section class="slide" data-kicker="Contexto">
+        <div class="slide-inner">
+          <span class="kicker">Contexto — lo que ya tenemos</span>
+          <h2>Punto de partida de 3TRES6</h2>
+          <div class="grid g2">
+            <div class="card">
+              <h3>El sitio</h3>
+              <p class="small">
+                Estático en <b>GitHub Pages</b> (HTTPS) en <em>3tres6records.albto.me</em>.
+                Cualquier stream real debe servirse también por <b>HTTPS</b> — los navegadores
+                bloquean audio HTTP en páginas HTTPS (se resuelve con un certificado gratuito
+                Let's Encrypt).
+              </p>
+              <p class="small" style="margin-top: 8px">
+                El hosting compartido de <b>A2 Hosting</b> (donde vive <em>jobs.albto.me</em>)
+                <b>no puede</b> correr Icecast: no admite procesos persistentes ni puertos.
+                Su <b>VPS no gestionado</b> sí.
+              </p>
+            </div>
+            <div class="card">
+              <h3>El contenido</h3>
+              <p class="small">
+                <b>73 sets / 858 tracks</b> ya curados en la DJ Library, más vinilos comprados
+                alrededor del mundo y pistas de Bandcamp adquiridas. Es combustible perfecto
+                para una estación 24/7.
+              </p>
+              <p class="small" style="margin-top: 8px">
+                Audiencia principal: <b>México</b>. Ese dato define cuál plataforma cubre tus
+                licencias (solo Live365 incluye México).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 · LICENCIAS -->
+      <section class="slide" data-kicker="La parte legal">
+        <div class="slide-inner">
+          <span class="kicker">La parte legal — no la saltes</span>
+          <h2>Comprar la música ≠ derecho a transmitirla</h2>
+          <p style="max-width: 860px">
+            Comprar un vinilo o una pista en Bandcamp te da derecho a <b>escucharla tú</b>.
+            Transmitirla al público por radio es una <b>comunicación pública</b> que requiere
+            derechos de ejecución (<b>SACM</b> en México, más el territorio de cada oyente).
+            Incluso dentro de un DJ mix.
+          </p>
+          <div class="grid g2" style="margin-top: 20px">
+            <div class="card">
+              <h3>Cómo manejarlo</h3>
+              <p class="small">
+                <b>Opción A:</b> tramitar licencia propia (SACM / gestión del territorio) o
+                emitir mayormente contenido 100% original / CC-licensed / oscuro.
+                <br />
+                <b>Opción B:</b> usar <b>Live365</b>, que <b>incluye la cobertura de licencias
+                EE. UU. + Canadá + México</b> con reporte de regalías en el precio del plan.
+              </p>
+            </div>
+            <div class="card hot">
+              <h3>⚠️ Cómo NO funciona</h3>
+              <p class="small">
+                El plan de <b>radio.co</b>, <b>Zeno.fm</b> o un Icecast propio <b>no incluye
+                licencias</b>. Zeno solo emite un “royalties report” (un reporte, no una cobertura
+                legal). En todos esos casos la responsabilidad de licenciar es tuya.
+              </p>
+            </div>
+          </div>
+          <p class="footnote">
+            Conclusión: si vas a sonar con vinilos comerciales + Bandcamp comprado, la licencia
+            es el factor que puede decantar la decisión hacia ~50 USD/mes.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5 · MAPA DE OPCIONES -->
+      <section class="slide" data-kicker="Mapa de opciones">
+        <div class="slide-inner">
+          <span class="kicker">Mapa de opciones</span>
+          <h2>9 caminos hacia una radio</h2>
+          <div class="grid g3">
+            <div class="card">
+              <span class="price">$0</span>
+              <p class="small"><b>Player en el sitio</b> — reproduce tus mixes ya existentes (YouTube). No es emisión real.</p>
+            </div>
+            <div class="card">
+              <span class="price">$4–10<small>/mes</small></span>
+              <p class="small"><b>Icecast + Liquidsoap</b> en VPS propio — el camino icecast.org. Radio real, 100% tuyo.</p>
+            </div>
+            <div class="card hot">
+              <span class="price">$12–28<small>/mes</small></span>
+              <p class="small"><b>AzuraCast</b> en VPS — Icecast + panel web: AutoDJ, programación, DJ en vivo.</p>
+            </div>
+            <div class="card">
+              <span class="price">$4–16<small>/mes</small></span>
+              <p class="small"><b>Centova Cast gestionado</b> — un tercero corre el servidor, tú solo el panel.</p>
+            </div>
+            <div class="card">
+              <span class="price">$35–59<small>/mes</small></span>
+              <p class="small"><b>radio.co</b> — SaaS pulido: programación, live desde el navegador, apps.</p>
+            </div>
+            <div class="card">
+              <span class="price">$35–60<small>/mes</small></span>
+              <p class="small"><b>Zeno.fm</b> — oyentes y ancho de banda ilimitados, distribución, precios locales.</p>
+            </div>
+            <div class="card hot">
+              <span class="price">$59–79<small>/mes</small></span>
+              <p class="small"><b>Live365</b> — <b>licencias de música US/CA/MX incluidas</b> + reporte de regalías.</p>
+            </div>
+            <div class="card">
+              <span class="price">$49+<small>/mes</small></span>
+              <p class="small"><b>Mixlr</b> — ideal para sets en vivo puntuales, no para 24/7 automático.</p>
+            </div>
+            <div class="card gray" style="border-color: var(--border)">
+              <span class="price" style="color: var(--muted)">$∞</span>
+              <p class="small"><b>Pro streaming (Triton, StreamGuys)</b> — para radios con publicidad y escala comercial.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · OPCIÓN 1 -->
+      <section class="slide" data-kicker="Opción 1 · $0">
+        <div class="slide-inner">
+          <span class="kicker">Opción 1 · <b>$0</b></span>
+          <h2>“Radio” como player continuo en el sitio</h2>
+          <p class="small" style="max-width: 820px">
+            Una sección que reproduce tus mixes existentes (YouTube/SoundCloud) en bucle con
+            reproductor propio. <b>Sin servidor, sin coste, en días.</b>
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Cero infraestructura y cero coste mensual</li>
+                <li>Se publica en el sitio estático en un fin de semana</li>
+                <li>Reutiliza los 73 sets que ya existen</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>No es una emisión real: sin now-playing, sin DJ en vivo</li>
+                <li>Sin oyentes propios ni métricas de escucha</li>
+                <li>El audio sale de YouTube, no de ti (depende de terceros)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="footnote">Veredicto: perfecta como <b>Fase 0</b> de validación; no es la meta.</p>
+        </div>
+      </section>
+
+      <!-- 7 · OPCIÓN 2 ICEGAST -->
+      <section class="slide" data-kicker="Opción 2 · Icecast.org · $4–10/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 2 · Icecast.org (open source) · <b>~$4–10/mes</b></span>
+          <h2>Esto ES literalmente una radio</h2>
+          <p class="small" style="max-width: 860px">
+            <b>Icecast 2</b> (Xiph.Org, licencia GPL, gratis) es el servidor que miles de radios
+            usan para distribuir la señal. Con <b>Liquidsoap</b> (también libre) la estación suena
+            sola desde tu librería, permite montajes múltiples, metadatos “ahora suena” y
+            <b>DJ en vivo</b> (OBS, Butt o una mesa mezcladora).
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Software 100% gratis y sin límites de oyentes</li>
+                <li>Un VPS de 1GB (≈$5–6) sirve a cientos de oyentes</li>
+                <li>Control total: calidad, montajes, HTTPS, TuneIn/Radio Garden</li>
+                <li>Verdadero streaming con metadata y live</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>Requiere VPS Linux y nociones de administración</li>
+                <li>Sin dashboard bonito: configuración por archivos/CLI</li>
+                <li>Programar shows = más trabajo manual que con AzuraCast</li>
+                <li>Licencias de música a tu cargo</li>
+              </ul>
+            </div>
+          </div>
+          <p class="footnote">Ideal si quieres el control total al menor precio y aceptas administrar un servidor.</p>
+        </div>
+      </section>
+
+      <!-- 8 · OPCIÓN 3 AZURACAST -->
+      <section class="slide" data-kicker="Opción 3 · AzuraCast · $12–28/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 3 · AzuraCast (open source) · <b>~$12–28/mes</b></span>
+          <h2>La misma radio, con panel web</h2>
+          <p class="small" style="max-width: 860px">
+            <b>AzuraCast</b> empaqueta Icecast + Liquidsoap + una interfaz web moderna:
+            subes tus mixes, armas playlists, <b>programas shows en un calendario</b>, y los DJ
+            entran en vivo desde el navegador o con su software. Es <b>gratis (AGPL)</b>; pagas
+            solo el VPS.
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Dashboard completo: AutoDJ, programación, estadísticas</li>
+                <li>Shows programados + DJ en vivo sin tocar terminal</li>
+                <li>Multi-formato (MP3/AAC/Opus), reproductor embebible</li>
+                <li>Open source: sin cuota mensual de software</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>Necesita VPS de 2–4GB (≈$12–28) y mantenimiento mensual</li>
+                <li>Sigues administrando el servidor (instalar, actualizar)</li>
+                <li>Licencias de música a tu cargo</li>
+              </ul>
+            </div>
+          </div>
+          <p class="footnote">Mi recomendación para el escenario de <b>~15 USD/mes</b>: la mejor relación control/uso.</p>
+        </div>
+      </section>
+
+      <!-- 9 · OPCIÓN 4 CENTOVA -->
+      <section class="slide" data-kicker="Opción 4 · Centova gestionado · $4–16/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 4 · Centova Cast gestionado · <b>~$4–16/mes</b></span>
+          <h2>Radio con servidor ajeno</h2>
+          <p class="small" style="max-width: 860px">
+            Proveedores como <b>MyAutoDJ</b> o <b>Hired Hosting</b> corren Icecast + el panel
+            <b>Centova Cast</b> por ti. Tú obtienes AutoDJ, programación, SSL y un reproductor
+            listo. Sin tocar Linux.
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Mantenimiento cero (lo opera el proveedor)</li>
+                <li>Panel con AutoDJ, programación y live</li>
+                <li>Muy barato para empezar (desde ~$4/mes)</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>Límite de oyentes por plan (10 a 250)</li>
+                <li>Menos control y dependencia del proveedor</li>
+                <li>Licencias de música a tu cargo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · OPCIÓN 5 RADIO.CO -->
+      <section class="slide" data-kicker="Opción 5 · radio.co · $35–59/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 5 · radio.co (SaaS) · <b>$35–59/mes</b></span>
+          <h2>Plataforma todo-en-uno</h2>
+          <p class="small" style="max-width: 860px">
+            <b>Lite $35</b> (500 oyentes, 2GB) · <b>Standard $59</b> (20k oyentes, 20GB).
+            Reproductor embebible, programación, broadcasting en vivo desde el navegador y
+            soporte. Apps móviles en planes altos ($139+).
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Polido, rápido de lanzar, prueba de 14 días</li>
+                <li>Programación + live en el navegador</li>
+                <li>Sin administrar nada</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>No incluye licencias de música</li>
+                <li>Almacenamiento limitado en planes bajos</li>
+                <li>Cuota recurrente desde $35</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · OPCIÓN 6 ZENO -->
+      <section class="slide" data-kicker="Opción 6 · Zeno.fm · $35–60/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 6 · Zeno.fm · <b>$35–60/mes</b></span>
+          <h2>Escala sin límite de oyentes</h2>
+          <p class="small" style="max-width: 860px">
+            <b>Starter $35</b> (1 estación) · <b>Prime $60</b> (3 estaciones, 25k oyentes,
+            ilimitado de ancho de banda). AutoDJ, programación, distribución y
+            <b>precios localizados</b> (más barato según tu región).
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Oyentes y ancho de banda ilimitados</li>
+                <li>Distribución + reporte de regalías</li>
+                <li>Sin administración; microsite propia</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>El “royalties report” <b>no</b> es cobertura legal de licencias</li>
+                <li>Sin plan gratuito desde 2025</li>
+                <li>Menos control de infraestructura</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 · OPCIÓN 7 LIVE365 -->
+      <section class="slide" data-kicker="Opción 7 · Live365 · $59–79/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 7 · Live365 · <b>$59–79/mes</b> ⭐ licencias incluidas</span>
+          <h2>La única que cubre México</h2>
+          <p class="small" style="max-width: 860px">
+            <b>Broadcast 1: $59/mes</b> (1,500 horas de escucha, 30GB, anuncios opcionales) o
+            <b>$79 sin anuncios</b>. <b>Incluye la cobertura de licencias de música para
+            EE. UU., Canadá y México</b> + reporte de regalías. Programación, live y distribución.
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li><b>Licencias US/CA/MX incluidas</b> con reporte de regalías</li>
+                <li>Todo gestionado: reproductor, programación, live</li>
+                <li>Distribución (iHeart/TuneIn en planes superiores)</li>
+                <li>Tranquilidad legal para tu audiencia mexicana</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>Límite de horas de escucha (1,500 TLH base; $0.05/hr extra)</li>
+                <li>El más caro para empezar</li>
+                <li>Anuncios de Live365 por defecto (se quitan a $79)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="footnote">La opción correcta <b>si el objetivo es sonar música comercial legalmente desde el día 1</b>.</p>
+        </div>
+      </section>
+
+      <!-- 13 · OPCIÓN 8 MIXLR -->
+      <section class="slide" data-kicker="Opción 8 · Mixlr · $49+/mes">
+        <div class="slide-inner">
+          <span class="kicker">Opción 8 · Mixlr · <b>$49+/mes</b></span>
+          <h2>Para eventos en vivo, no para 24/7</h2>
+          <p class="small" style="max-width: 860px">
+            Plataforma de <b>broadcasting en vivo</b> orientada a DJs y artistas: transmites el
+            set en el momento, con sala social e integración. Buena para streams puntuales.
+          </p>
+          <div class="pcs">
+            <div class="pc pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Excelente para sets en vivo espontáneos</li>
+                <li>Simple, sin infraestructura</li>
+                <li>Función social/chat con tu audiencia</li>
+              </ul>
+            </div>
+            <div class="pc cons">
+              <h4>Contras</h4>
+              <ul>
+                <li>No pensada para una radio automática 24/7</li>
+                <li>Automación y embebido limitados</li>
+                <li>Licencias a tu cargo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14 · ESCENARIO A -->
+      <section class="slide" data-kicker="Escenario A · ~$15/mes">
+        <div class="slide-inner">
+          <span class="kicker">Escenario A · <b>~15 USD/mes</b></span>
+          <h2>Radio propia con AzuraCast</h2>
+          <p class="small" style="max-width: 860px">
+            <b>AzuraCast en un VPS de 2GB (~$12/mes)</b> — DigitalOcean, Vultr o el VPS no
+            gestionado de A2 (ya pagas ahí). Uno o dos fines de semana para montarlo, luego
+            operación desde el navegador.
+          </p>
+          <table>
+            <thead>
+              <tr><th></th><th>A1 · AzuraCast ⭐</th><th>A2 · Centova gestionado</th><th>A3 · Icecast puro</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Coste</b></td><td>~$12 (VPS) · software gratis</td><td>~$10–16</td><td>~$4–6 (VPS)</td></tr>
+              <tr><td><b>Dashboard</b></td><td class="ok">Sí (web)</td><td class="ok">Sí (panel)</td><td class="no">No (CLI)</td></tr>
+              <tr><td><b>Shows programados</b></td><td class="ok">Sí</td><td class="ok">Sí</td><td class="no">Manual</td></tr>
+              <tr><td><b>DJ en vivo</b></td><td class="ok">Sí (OBS/Butt)</td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
+              <tr><td><b>Oyentes</b></td><td>Cientos</td><td>50–250 (cap)</td><td>Cientos</td></tr>
+              <tr><td><b>Mantenimiento</b></td><td>~30–60 min/mes</td><td class="ok">Cero</td><td>Bajo, pero CLI</td></tr>
+              <tr><td><b>Licencias</b></td><td>Tuya</td><td>Tuya</td><td>Tuya</td></tr>
+            </tbody>
+          </table>
+          <p class="footnote">
+            Recomendado: <b>A1</b>. Es la única opción a este precio con shows programados + DJ en
+            vivo sin vivir en la terminal, y es Icecast bajo el capó (sin cuotas de software).
+          </p>
+        </div>
+      </section>
+
+      <!-- 15 · ESCENARIO B -->
+      <section class="slide" data-kicker="Escenario B · ~$50/mes">
+        <div class="slide-inner">
+          <span class="kicker">Escenario B · <b>~50 USD/mes</b></span>
+          <h2>Radio gestionada con licencias incluidas</h2>
+          <p class="small" style="max-width: 860px">
+            <b>Live365 Broadcast 1 ($59/mes)</b> — cero administración y, sobre todo,
+            <b>licencias de música US/CA/MX cubiertas</b>. Justo lo que necesita una estación
+            que sonará con vinilos y Bandcamp comprados hacia audiencia mexicana.
+          </p>
+          <table>
+            <thead>
+              <tr><th></th><th>B1 · Live365 ⭐</th><th>B2 · Zeno Prime</th><th>B3 · radio.co Standard</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Coste</b></td><td>$59 ($79 sin anuncios)</td><td>~$60 (o Starter $35)</td><td>$59</td></tr>
+              <tr><td><b>Licencias US/CA/MX</b></td><td class="ok">✅ Incluidas</td><td class="no">No (solo reporte)</td><td class="no">No</td></tr>
+              <tr><td><b>AutoDJ + programación</b></td><td class="ok">Sí</td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
+              <tr><td><b>DJ en vivo</b></td><td class="ok">Sí</td><td class="ok">Sí</td><td class="ok">Sí (navegador)</td></tr>
+              <tr><td><b>Oyentes</b></td><td>1,500 h/mes base</td><td>Ilimitados</td><td>20k concurrentes</td></tr>
+              <tr><td><b>Operación</b></td><td class="ok">Cero (SaaS)</td><td class="ok">Cero</td><td class="ok">Cero</td></tr>
+            </tbody>
+          </table>
+          <p class="footnote">
+            Recomendado: <b>B1</b>. Es la única opción — a cualquier precio — que resuelve la
+            licencia para una audiencia mexicana reproduciendo música comercial.
+          </p>
+        </div>
+      </section>
+
+      <!-- 16 · A VS B -->
+      <section class="slide" data-kicker="Comparativa final">
+        <div class="slide-inner">
+          <span class="kicker">Comparativa final</span>
+          <h2>¿~15 USD o ~50 USD?</h2>
+          <table>
+            <thead>
+              <tr><th>Necesidad</th><th>~15 USD/mes (AzuraCast)</th><th>~50 USD/mes (Live365)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Es una radio real (Icecast)</b></td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
+              <tr><td><b>Shows programados</b></td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
+              <tr><td><b>DJ en vivo</b></td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
+              <tr><td><b>Música comercial legal</b></td><td class="no">Tú gestionas licencia</td><td class="ok">✅ US/CA/MX incluidas</td></tr>
+              <tr><td><b>Administración</b></td><td class="no">VPS + ~30–60 min/mes</td><td class="ok">Cero</td></tr>
+              <tr><td><b>Propiedad total / control</b></td><td class="ok">Sí</td><td class="no">Plataforma</td></tr>
+              <tr><td><b>Escalabilidad</b></td><td>Cientos de oyentes</td><td>Escala ilimitada</td></tr>
+              <tr class="hl-row"><td><b>Coste mensual</b></td><td><b>~$12</b></td><td><b>~$59</b></td></tr>
+            </tbody>
+          </table>
+          <p class="footnote" style="margin-top: 16px">
+            Regla simple: <b>licencia es la prioridad → Live365. Control y coste → AzuraCast.</b>
+          </p>
+        </div>
+      </section>
+
+      <!-- 17 · ROADMAP -->
+      <section class="slide" data-kicker="Recomendación y roadmap">
+        <div class="slide-inner">
+          <span class="kicker">Recomendación y roadmap</span>
+          <h2>Empezar pequeño, crecer con intención</h2>
+          <div class="phase">
+            <div class="n">0</div>
+            <div>
+              <h3>Fase 0 · Player “Radio 3TRES6” en el sitio · <b>$0</b></h3>
+              <p class="small">
+                Sección que reproduce continuamente tus mejores mixes existentes. Valida el
+                concepto con tu audiencia sin invertir nada. <em>Días de trabajo.</em>
+              </p>
+            </div>
+          </div>
+          <div class="phase">
+            <div class="n" style="background: #c43a00">1</div>
+            <div>
+              <h3>Fase 1 · Radio real con AzuraCast · <b>~$12/mes</b></h3>
+              <p class="small">
+                VPS + AzuraCast: emisión 24/7, ahora-suena (metadata), reproductor embebido,
+                shows programados y DJ en vivo vía OBS. Listado en TuneIn/Radio Garden.
+                <em>Un fin de semana de setup.</em>
+              </p>
+            </div>
+          </div>
+          <div class="phase">
+            <div class="n" style="background: #0f6e4a">2</div>
+            <div>
+              <h3>Fase 2 · Migrar a Live365 si la licencia importa · <b>~$59/mes</b></h3>
+              <p class="small">
+                Si al crecer decides sonar vinilos comerciales + Bandcamp con cobertura legal
+                US/CA/MX, se migra el stream (mismo reproductor en el sitio). <em>Sin trabajo perdido.</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 18 · INTEGRACIÓN -->
+      <section class="slide" data-kicker="Integración en el sitio">
+        <div class="slide-inner">
+          <span class="kicker">Integración dentro de 3tres6records.albto.me</span>
+          <h2>Cómo se vería la radio en el sitio</h2>
+          <div class="grid g2">
+            <div class="card">
+              <h3>Sección <em>/radio/</em></h3>
+              <p class="small">
+                Nueva página alineada al diseño actual (dark + naranja, Space Grotesk), accesible
+                desde la navegación (DJ Hub / Herramientas) y desde el footer. Enlazable como
+                <em>radio.albto.me</em>.
+              </p>
+              <ul class="small" style="list-style: none; margin-top: 10px; color: #cfcfcf">
+                <li>✓ Reproductor HTML5 embebido (stream HTTPS)</li>
+                <li>✓ Widget “Ahora suena” (título/artista vía JSON de Icecast)</li>
+                <li>✓ Parrilla de la semana (shows programados)</li>
+                <li>✓ Botón “EN VIVO” cuando un DJ está al aire</li>
+                <li>✓ Responsive (móvil = tu público mexicano)</li>
+              </ul>
+            </div>
+            <div class="card hot">
+              <h3>Stack objetivo</h3>
+              <p class="small" style="font-family: monospace; color: #d5d5d5; line-height: 1.7">
+                Sitio (estático, GitHub Pages)<br />
+                &nbsp;&nbsp;└── reproductor embebido → stream HTTPS<br />
+                Servidor streaming (VPS)<br />
+                &nbsp;&nbsp;├── Icecast 2 (emisión + metadata)<br />
+                &nbsp;&nbsp;├── Liquidsoap / AutoDJ (playlist 24/7)<br />
+                &nbsp;&nbsp;├── OBS / Butt (DJ en vivo)<br />
+                &nbsp;&nbsp;└── Let's Encrypt (HTTPS) + TuneIn
+              </p>
+              <p class="small" style="margin-top: 8px">
+                En el escenario B, el mismo reproductor apunta al stream de Live365 en vez del VPS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 19 · DECISIÓN -->
+      <section class="slide" data-kicker="Decisión">
+        <div class="slide-inner">
+          <span class="kicker">Siguiente paso</span>
+          <h2>¿Qué escenario seguimos?</h2>
+          <div class="grid g3">
+            <div class="card">
+              <span class="price">$12<small>/mes</small></span>
+              <h3 style="margin: 6px 0">A · AzuraCast</h3>
+              <p class="small">Radio propia, control total, shows + live. Tú administras el servidor.</p>
+              <span class="badge" style="margin-top: 8px">recomendado para empezar</span>
+            </div>
+            <div class="card hot">
+              <span class="price">$59<small>/mes</small></span>
+              <h3 style="margin: 6px 0">B · Live365</h3>
+              <p class="small">Cero administración y licencias US/CA/MX incluidas. El camino legal para música comercial.</p>
+              <span class="badge green" style="margin-top: 8px">licencias incluidas</span>
+            </div>
+            <div class="card">
+              <span class="price">Fase 0<small> · $0</small></span>
+              <h3 style="margin: 6px 0">Player primero</h3>
+              <p class="small">Valida el concepto con la sección “Radio” reproduciendo tus mixes actuales, y decidimos con datos.</p>
+              <span class="badge blue" style="margin-top: 8px">cero riesgo</span>
+            </div>
+          </div>
+          <p class="footnote" style="margin-top: 22px">
+            Documento interno (no indexado). Precios aproximados a mediados de 2026 — se validan
+            con cada proveedor antes de contratar. El siguiente entregable, al elegir escenario,
+            es el <b>plan de implementación detallado</b> de la radio dentro del sitio.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="overview" id="overview"></div>
+
+    <div class="controls">
+      <button id="prev" aria-label="Anterior">‹</button>
+      <button id="ovBtn" aria-label="Índice">☰</button>
+      <span class="counter" id="counter">1 / 19</span>
+      <button id="next" aria-label="Siguiente">›</button>
+    </div>
+    <div class="hint">
+      ← → para navegar · <b>G</b> índice<br />Esc para salir · <b>P</b> imprimir
+    </div>
+
+    <script>
+      (function () {
+        var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+        var overview = document.getElementById('overview');
+        var counter = document.getElementById('counter');
+        var progress = document.getElementById('progress');
+        var current = 0;
+
+        function parseHash() {
+          var m = (location.hash || '').match(/^#(\d+)$/);
+          var i = m ? parseInt(m[1], 10) - 1 : 0;
+          return Math.max(0, Math.min(slides.length - 1, i));
+        }
+
+        function go(i) {
+          current = Math.max(0, Math.min(slides.length - 1, i));
+          slides.forEach(function (s, k) {
+            s.classList.toggle('active', k === current);
+          });
+          var s = slides[current];
+          counter.textContent = current + 1 + ' / ' + slides.length;
+          progress.style.width = ((current + 1) / slides.length) * 100 + '%';
+          var inner = s.querySelector('.slide-inner');
+          if (inner) inner.scrollTop = 0;
+          history.replaceState(null, '', '#' + (current + 1));
+        }
+
+        function next() {
+          go(current + 1);
+        }
+        function prev() {
+          go(current - 1);
+        }
+
+        function buildOverview() {
+          overview.innerHTML = '';
+          slides.forEach(function (s, i) {
+            var b = document.createElement('button');
+            b.innerHTML = '<span class="n">' + (i + 1) + '</span>' + (s.dataset.kicker || '');
+            b.addEventListener('click', function () {
+              toggleOverview(false);
+              go(i);
+            });
+            overview.appendChild(b);
+          });
+        }
+        function toggleOverview(on) {
+          var show = on === undefined ? !overview.classList.contains('show') : on;
+          overview.classList.toggle('show', show);
+          slides.forEach(function (s) {
+            s.setAttribute('aria-hidden', show ? 'true' : 'false');
+          });
+        }
+
+        document.getElementById('next').addEventListener('click', next);
+        document.getElementById('prev').addEventListener('click', prev);
+        document.getElementById('ovBtn').addEventListener('click', function () {
+          toggleOverview();
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (overview.classList.contains('show')) {
+            if (e.key === 'Escape' || e.key === 'g' || e.key === 'G') toggleOverview(false);
+            return;
+          }
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            next();
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
+            e.preventDefault();
+            prev();
+          } else if (e.key === 'Home') {
+            go(0);
+          } else if (e.key === 'End') {
+            go(slides.length - 1);
+          } else if (e.key === 'g' || e.key === 'G') {
+            toggleOverview(true);
+          }
+        });
+
+        var touchX = null;
+        document.addEventListener(
+          'touchstart',
+          function (e) {
+            touchX = e.changedTouches[0].clientX;
+          },
+          { passive: true }
+        );
+        document.addEventListener(
+          'touchend',
+          function (e) {
+            if (touchX === null) return;
+            var dx = e.changedTouches[0].clientX - touchX;
+            if (Math.abs(dx) > 48) (dx < 0 ? next : prev)();
+            touchX = null;
+          },
+          { passive: true }
+        );
+
+        window.addEventListener('hashchange', function () {
+          if (!overview.classList.contains('show')) go(parseHash());
+        });
+
+        buildOverview();
+        go(parseHash());
+      })();
+    </script>
+  </body>
+</html>

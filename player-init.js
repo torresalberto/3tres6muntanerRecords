@@ -30,3 +30,20 @@
     document.body.appendChild(s);
   }
 })();
+
+// Inject a "Sitemap" link into page footers (covers DJ pages + library/toolhub/etc.)
+(function () {
+  function addSitemapLink() {
+    const nav = document.querySelector('.footer-nav');
+    if (!nav || nav.querySelector('a[href="/sitemap.html"]')) return;
+    const a = document.createElement('a');
+    a.href = '/sitemap.html';
+    a.textContent = 'Sitemap';
+    nav.appendChild(a);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addSitemapLink);
+  } else {
+    addSitemapLink();
+  }
+})();

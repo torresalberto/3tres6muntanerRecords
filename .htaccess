@@ -6,3 +6,6 @@ RewriteRule ^crew/?$ crew.html [R=301,L]
 
 # /mapa → /mapa.html   /mapa/ → /mapa.html
 RewriteRule ^mapa/?$ mapa.html [R=301,L]
+
+# /sitemap → /sitemap.html   /sitemap/ → /sitemap.html
+RewriteRule ^sitemap/?$ sitemap.html [R=301,L]
