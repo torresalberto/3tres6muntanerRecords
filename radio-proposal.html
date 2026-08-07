@@ -41,7 +41,11 @@
         background: var(--bg);
       }
       body {
-        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family:
+          'Space Grotesk',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
         color: var(--text);
         background: var(--bg);
         overflow: hidden;
@@ -65,7 +69,10 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(18px);
-        transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease,
+          visibility 0.35s;
         overflow: hidden;
         background:
           radial-gradient(900px 420px at 85% -10%, rgba(255, 77, 0, 0.14), transparent 60%),
@@ -502,21 +509,26 @@
     </script>
 
     <div class="progress" id="progress"></div>
-    <div class="brandmark"><a href="https://3tres6records.albto.me/">3TRES6<span>·RADIO</span></a></div>
+    <div class="brandmark">
+      <a href="https://3tres6records.albto.me/">3TRES6<span>·RADIO</span></a>
+    </div>
 
     <div class="deck" id="deck">
-
       <!-- 1 · PORTADA -->
       <section class="slide active" data-kicker="Documento ejecutivo">
         <div class="slide-inner" style="text-align: center">
-          <span class="kicker" style="justify-content: center">Documento ejecutivo · investigación & propuesta</span>
+          <span class="kicker" style="justify-content: center"
+            >Documento ejecutivo · investigación & propuesta</span
+          >
           <h1 style="margin-bottom: 18px">
-            Radio <span style="color: var(--accent)">3TRES6</span><br />una radio de internet real, dentro del sitio
+            Radio <span style="color: var(--accent)">3TRES6</span><br />una radio de internet real,
+            dentro del sitio
           </h1>
           <p style="max-width: 720px; margin: 0 auto">
-            Sí se puede: <em>icecast.org</em> es el software libre que impulsa miles de radios reales.
-            Este deck resume todas las opciones —open source y de pago—, sus precios, pros y contras,
-            y termina con <b>dos escenarios concretos (~15 USD y ~50 USD/mes)</b> y un roadmap para construirlo.
+            Sí se puede: <em>icecast.org</em> es el software libre que impulsa miles de radios
+            reales. Este deck resume todas las opciones —open source y de pago—, sus precios, pros y
+            contras, y termina con <b>dos escenarios concretos (~15 USD y ~50 USD/mes)</b> y un
+            roadmap para construirlo.
           </p>
           <div class="pill-row" style="justify-content: center; margin-top: 26px">
             <span class="badge">9 opciones analizadas</span>
@@ -524,7 +536,8 @@
             <span class="badge green">recomendación incluida</span>
           </div>
           <p class="footnote" style="margin-top: 30px">
-            Úsalo con ← → · flechas · toques · o <b>G</b> para el índice. Hojas: <b>P</b> para imprimir/PDF.
+            Úsalo con ← → · flechas · toques · o <b>G</b> para el índice. Hojas: <b>P</b> para
+            imprimir/PDF.
           </p>
         </div>
       </section>
@@ -539,24 +552,24 @@
               <h3>1 · Sí es “radio de verdad”</h3>
               <p class="small">
                 <b>Icecast</b> es el servidor open source que literalmente transmite la emisión a
-                cualquier reproductor. Con <b>Liquidsoap</b> como automatizador, la radio suena
-                24/7 sola y permite <b>shows programados</b> y <b>DJ en vivo</b>.
+                cualquier reproductor. Con <b>Liquidsoap</b> como automatizador, la radio suena 24/7
+                sola y permite <b>shows programados</b> y <b>DJ en vivo</b>.
               </p>
             </div>
             <div class="card">
               <h3>2 · La decisión real no es el software</h3>
               <p class="small">
-                Es <b>dónde corre</b> (tu VPS vs un servicio) y <b>qué música</b> transmites
-                (eso decide si necesitas licencias). El sitio estático de GitHub Pages no puede
-                emitir; necesita un servidor de streaming aparte.
+                Es <b>dónde corre</b> (tu VPS vs un servicio) y <b>qué música</b> transmites (eso
+                decide si necesitas licencias). El sitio estático de GitHub Pages no puede emitir;
+                necesita un servidor de streaming aparte.
               </p>
             </div>
             <div class="card">
               <h3>3 · Dos escenarios claros</h3>
               <p class="small">
                 <b>~15 USD/mes:</b> AzuraCast (suite open source) en un VPS propio — control total,
-                dashboard web, shows + live.
-                <b>~50 USD/mes:</b> Live365 — todo gestionado y <b>con licencias de música incluidas</b>
+                dashboard web, shows + live. <b>~50 USD/mes:</b> Live365 — todo gestionado y
+                <b>con licencias de música incluidas</b>
                 para EE. UU., Canadá y México.
               </p>
             </div>
@@ -575,21 +588,21 @@
               <p class="small">
                 Estático en <b>GitHub Pages</b> (HTTPS) en <em>3tres6records.albto.me</em>.
                 Cualquier stream real debe servirse también por <b>HTTPS</b> — los navegadores
-                bloquean audio HTTP en páginas HTTPS (se resuelve con un certificado gratuito
-                Let's Encrypt).
+                bloquean audio HTTP en páginas HTTPS (se resuelve con un certificado gratuito Let's
+                Encrypt).
               </p>
               <p class="small" style="margin-top: 8px">
                 El hosting compartido de <b>A2 Hosting</b> (donde vive <em>jobs.albto.me</em>)
-                <b>no puede</b> correr Icecast: no admite procesos persistentes ni puertos.
-                Su <b>VPS no gestionado</b> sí.
+                <b>no puede</b> correr Icecast: no admite procesos persistentes ni puertos. Su
+                <b>VPS no gestionado</b> sí.
               </p>
             </div>
             <div class="card">
               <h3>El contenido</h3>
               <p class="small">
                 <b>73 sets / 858 tracks</b> ya curados en la DJ Library, más vinilos comprados
-                alrededor del mundo y pistas de Bandcamp adquiridas. Es combustible perfecto
-                para una estación 24/7.
+                alrededor del mundo y pistas de Bandcamp adquiridas. Es combustible perfecto para
+                una estación 24/7.
               </p>
               <p class="small" style="margin-top: 8px">
                 Audiencia principal: <b>México</b>. Ese dato define cuál plataforma cubre tus
@@ -608,32 +621,33 @@
           <p style="max-width: 860px">
             Comprar un vinilo o una pista en Bandcamp te da derecho a <b>escucharla tú</b>.
             Transmitirla al público por radio es una <b>comunicación pública</b> que requiere
-            derechos de ejecución (<b>SACM</b> en México, más el territorio de cada oyente).
-            Incluso dentro de un DJ mix.
+            derechos de ejecución (<b>SACM</b> en México, más el territorio de cada oyente). Incluso
+            dentro de un DJ mix.
           </p>
           <div class="grid g2" style="margin-top: 20px">
             <div class="card">
               <h3>Cómo manejarlo</h3>
               <p class="small">
-                <b>Opción A:</b> tramitar licencia propia (SACM / gestión del territorio) o
-                emitir mayormente contenido 100% original / CC-licensed / oscuro.
+                <b>Opción A:</b> tramitar licencia propia (SACM / gestión del territorio) o emitir
+                mayormente contenido 100% original / CC-licensed / oscuro.
                 <br />
-                <b>Opción B:</b> usar <b>Live365</b>, que <b>incluye la cobertura de licencias
-                EE. UU. + Canadá + México</b> con reporte de regalías en el precio del plan.
+                <b>Opción B:</b> usar <b>Live365</b>, que
+                <b>incluye la cobertura de licencias EE. UU. + Canadá + México</b> con reporte de
+                regalías en el precio del plan.
               </p>
             </div>
             <div class="card hot">
               <h3>⚠️ Cómo NO funciona</h3>
               <p class="small">
-                El plan de <b>radio.co</b>, <b>Zeno.fm</b> o un Icecast propio <b>no incluye
-                licencias</b>. Zeno solo emite un “royalties report” (un reporte, no una cobertura
-                legal). En todos esos casos la responsabilidad de licenciar es tuya.
+                El plan de <b>radio.co</b>, <b>Zeno.fm</b> o un Icecast propio
+                <b>no incluye licencias</b>. Zeno solo emite un “royalties report” (un reporte, no
+                una cobertura legal). En todos esos casos la responsabilidad de licenciar es tuya.
               </p>
             </div>
           </div>
           <p class="footnote">
-            Conclusión: si vas a sonar con vinilos comerciales + Bandcamp comprado, la licencia
-            es el factor que puede decantar la decisión hacia ~50 USD/mes.
+            Conclusión: si vas a sonar con vinilos comerciales + Bandcamp comprado, la licencia es
+            el factor que puede decantar la decisión hacia ~50 USD/mes.
           </p>
         </div>
       </section>
@@ -646,39 +660,61 @@
           <div class="grid g3">
             <div class="card">
               <span class="price">$0</span>
-              <p class="small"><b>Player en el sitio</b> — reproduce tus mixes ya existentes (YouTube). No es emisión real.</p>
+              <p class="small">
+                <b>Player en el sitio</b> — reproduce tus mixes ya existentes (YouTube). No es
+                emisión real.
+              </p>
             </div>
             <div class="card">
               <span class="price">$4–10<small>/mes</small></span>
-              <p class="small"><b>Icecast + Liquidsoap</b> en VPS propio — el camino icecast.org. Radio real, 100% tuyo.</p>
+              <p class="small">
+                <b>Icecast + Liquidsoap</b> en VPS propio — el camino icecast.org. Radio real, 100%
+                tuyo.
+              </p>
             </div>
             <div class="card hot">
               <span class="price">$12–28<small>/mes</small></span>
-              <p class="small"><b>AzuraCast</b> en VPS — Icecast + panel web: AutoDJ, programación, DJ en vivo.</p>
+              <p class="small">
+                <b>AzuraCast</b> en VPS — Icecast + panel web: AutoDJ, programación, DJ en vivo.
+              </p>
             </div>
             <div class="card">
               <span class="price">$4–16<small>/mes</small></span>
-              <p class="small"><b>Centova Cast gestionado</b> — un tercero corre el servidor, tú solo el panel.</p>
+              <p class="small">
+                <b>Centova Cast gestionado</b> — un tercero corre el servidor, tú solo el panel.
+              </p>
             </div>
             <div class="card">
               <span class="price">$35–59<small>/mes</small></span>
-              <p class="small"><b>radio.co</b> — SaaS pulido: programación, live desde el navegador, apps.</p>
+              <p class="small">
+                <b>radio.co</b> — SaaS pulido: programación, live desde el navegador, apps.
+              </p>
             </div>
             <div class="card">
               <span class="price">$35–60<small>/mes</small></span>
-              <p class="small"><b>Zeno.fm</b> — oyentes y ancho de banda ilimitados, distribución, precios locales.</p>
+              <p class="small">
+                <b>Zeno.fm</b> — oyentes y ancho de banda ilimitados, distribución, precios locales.
+              </p>
             </div>
             <div class="card hot">
               <span class="price">$59–79<small>/mes</small></span>
-              <p class="small"><b>Live365</b> — <b>licencias de música US/CA/MX incluidas</b> + reporte de regalías.</p>
+              <p class="small">
+                <b>Live365</b> — <b>licencias de música US/CA/MX incluidas</b> + reporte de
+                regalías.
+              </p>
             </div>
             <div class="card">
               <span class="price">$49+<small>/mes</small></span>
-              <p class="small"><b>Mixlr</b> — ideal para sets en vivo puntuales, no para 24/7 automático.</p>
+              <p class="small">
+                <b>Mixlr</b> — ideal para sets en vivo puntuales, no para 24/7 automático.
+              </p>
             </div>
             <div class="card gray" style="border-color: var(--border)">
               <span class="price" style="color: var(--muted)">$∞</span>
-              <p class="small"><b>Pro streaming (Triton, StreamGuys)</b> — para radios con publicidad y escala comercial.</p>
+              <p class="small">
+                <b>Pro streaming (Triton, StreamGuys)</b> — para radios con publicidad y escala
+                comercial.
+              </p>
             </div>
           </div>
         </div>
@@ -711,7 +747,9 @@
               </ul>
             </div>
           </div>
-          <p class="footnote">Veredicto: perfecta como <b>Fase 0</b> de validación; no es la meta.</p>
+          <p class="footnote">
+            Veredicto: perfecta como <b>Fase 0</b> de validación; no es la meta.
+          </p>
         </div>
       </section>
 
@@ -746,7 +784,9 @@
               </ul>
             </div>
           </div>
-          <p class="footnote">Ideal si quieres el control total al menor precio y aceptas administrar un servidor.</p>
+          <p class="footnote">
+            Ideal si quieres el control total al menor precio y aceptas administrar un servidor.
+          </p>
         </div>
       </section>
 
@@ -756,10 +796,9 @@
           <span class="kicker">Opción 3 · AzuraCast (open source) · <b>~$12–28/mes</b></span>
           <h2>La misma radio, con panel web</h2>
           <p class="small" style="max-width: 860px">
-            <b>AzuraCast</b> empaqueta Icecast + Liquidsoap + una interfaz web moderna:
-            subes tus mixes, armas playlists, <b>programas shows en un calendario</b>, y los DJ
-            entran en vivo desde el navegador o con su software. Es <b>gratis (AGPL)</b>; pagas
-            solo el VPS.
+            <b>AzuraCast</b> empaqueta Icecast + Liquidsoap + una interfaz web moderna: subes tus
+            mixes, armas playlists, <b>programas shows en un calendario</b>, y los DJ entran en vivo
+            desde el navegador o con su software. Es <b>gratis (AGPL)</b>; pagas solo el VPS.
           </p>
           <div class="pcs">
             <div class="pc pros">
@@ -780,7 +819,9 @@
               </ul>
             </div>
           </div>
-          <p class="footnote">Mi recomendación para el escenario de <b>~15 USD/mes</b>: la mejor relación control/uso.</p>
+          <p class="footnote">
+            Mi recomendación para el escenario de <b>~15 USD/mes</b>: la mejor relación control/uso.
+          </p>
         </div>
       </section>
 
@@ -822,8 +863,8 @@
           <h2>Plataforma todo-en-uno</h2>
           <p class="small" style="max-width: 860px">
             <b>Lite $35</b> (500 oyentes, 2GB) · <b>Standard $59</b> (20k oyentes, 20GB).
-            Reproductor embebible, programación, broadcasting en vivo desde el navegador y
-            soporte. Apps móviles en planes altos ($139+).
+            Reproductor embebible, programación, broadcasting en vivo desde el navegador y soporte.
+            Apps móviles en planes altos ($139+).
           </p>
           <div class="pcs">
             <div class="pc pros">
@@ -852,9 +893,9 @@
           <span class="kicker">Opción 6 · Zeno.fm · <b>$35–60/mes</b></span>
           <h2>Escala sin límite de oyentes</h2>
           <p class="small" style="max-width: 860px">
-            <b>Starter $35</b> (1 estación) · <b>Prime $60</b> (3 estaciones, 25k oyentes,
-            ilimitado de ancho de banda). AutoDJ, programación, distribución y
-            <b>precios localizados</b> (más barato según tu región).
+            <b>Starter $35</b> (1 estación) · <b>Prime $60</b> (3 estaciones, 25k oyentes, ilimitado
+            de ancho de banda). AutoDJ, programación, distribución y <b>precios localizados</b> (más
+            barato según tu región).
           </p>
           <div class="pcs">
             <div class="pc pros">
@@ -884,8 +925,9 @@
           <h2>La única que cubre México</h2>
           <p class="small" style="max-width: 860px">
             <b>Broadcast 1: $59/mes</b> (1,500 horas de escucha, 30GB, anuncios opcionales) o
-            <b>$79 sin anuncios</b>. <b>Incluye la cobertura de licencias de música para
-            EE. UU., Canadá y México</b> + reporte de regalías. Programación, live y distribución.
+            <b>$79 sin anuncios</b>.
+            <b>Incluye la cobertura de licencias de música para EE. UU., Canadá y México</b> +
+            reporte de regalías. Programación, live y distribución.
           </p>
           <div class="pcs">
             <div class="pc pros">
@@ -906,7 +948,10 @@
               </ul>
             </div>
           </div>
-          <p class="footnote">La opción correcta <b>si el objetivo es sonar música comercial legalmente desde el día 1</b>.</p>
+          <p class="footnote">
+            La opción correcta
+            <b>si el objetivo es sonar música comercial legalmente desde el día 1</b>.
+          </p>
         </div>
       </section>
 
@@ -916,8 +961,8 @@
           <span class="kicker">Opción 8 · Mixlr · <b>$49+/mes</b></span>
           <h2>Para eventos en vivo, no para 24/7</h2>
           <p class="small" style="max-width: 860px">
-            Plataforma de <b>broadcasting en vivo</b> orientada a DJs y artistas: transmites el
-            set en el momento, con sala social e integración. Buena para streams puntuales.
+            Plataforma de <b>broadcasting en vivo</b> orientada a DJs y artistas: transmites el set
+            en el momento, con sala social e integración. Buena para streams puntuales.
           </p>
           <div class="pcs">
             <div class="pc pros">
@@ -952,16 +997,56 @@
           </p>
           <table>
             <thead>
-              <tr><th></th><th>A1 · AzuraCast ⭐</th><th>A2 · Centova gestionado</th><th>A3 · Icecast puro</th></tr>
+              <tr>
+                <th></th>
+                <th>A1 · AzuraCast ⭐</th>
+                <th>A2 · Centova gestionado</th>
+                <th>A3 · Icecast puro</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td><b>Coste</b></td><td>~$12 (VPS) · software gratis</td><td>~$10–16</td><td>~$4–6 (VPS)</td></tr>
-              <tr><td><b>Dashboard</b></td><td class="ok">Sí (web)</td><td class="ok">Sí (panel)</td><td class="no">No (CLI)</td></tr>
-              <tr><td><b>Shows programados</b></td><td class="ok">Sí</td><td class="ok">Sí</td><td class="no">Manual</td></tr>
-              <tr><td><b>DJ en vivo</b></td><td class="ok">Sí (OBS/Butt)</td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
-              <tr><td><b>Oyentes</b></td><td>Cientos</td><td>50–250 (cap)</td><td>Cientos</td></tr>
-              <tr><td><b>Mantenimiento</b></td><td>~30–60 min/mes</td><td class="ok">Cero</td><td>Bajo, pero CLI</td></tr>
-              <tr><td><b>Licencias</b></td><td>Tuya</td><td>Tuya</td><td>Tuya</td></tr>
+              <tr>
+                <td><b>Coste</b></td>
+                <td>~$12 (VPS) · software gratis</td>
+                <td>~$10–16</td>
+                <td>~$4–6 (VPS)</td>
+              </tr>
+              <tr>
+                <td><b>Dashboard</b></td>
+                <td class="ok">Sí (web)</td>
+                <td class="ok">Sí (panel)</td>
+                <td class="no">No (CLI)</td>
+              </tr>
+              <tr>
+                <td><b>Shows programados</b></td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+                <td class="no">Manual</td>
+              </tr>
+              <tr>
+                <td><b>DJ en vivo</b></td>
+                <td class="ok">Sí (OBS/Butt)</td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+              </tr>
+              <tr>
+                <td><b>Oyentes</b></td>
+                <td>Cientos</td>
+                <td>50–250 (cap)</td>
+                <td>Cientos</td>
+              </tr>
+              <tr>
+                <td><b>Mantenimiento</b></td>
+                <td>~30–60 min/mes</td>
+                <td class="ok">Cero</td>
+                <td>Bajo, pero CLI</td>
+              </tr>
+              <tr>
+                <td><b>Licencias</b></td>
+                <td>Tuya</td>
+                <td>Tuya</td>
+                <td>Tuya</td>
+              </tr>
             </tbody>
           </table>
           <p class="footnote">
@@ -978,20 +1063,55 @@
           <h2>Radio gestionada con licencias incluidas</h2>
           <p class="small" style="max-width: 860px">
             <b>Live365 Broadcast 1 ($59/mes)</b> — cero administración y, sobre todo,
-            <b>licencias de música US/CA/MX cubiertas</b>. Justo lo que necesita una estación
-            que sonará con vinilos y Bandcamp comprados hacia audiencia mexicana.
+            <b>licencias de música US/CA/MX cubiertas</b>. Justo lo que necesita una estación que
+            sonará con vinilos y Bandcamp comprados hacia audiencia mexicana.
           </p>
           <table>
             <thead>
-              <tr><th></th><th>B1 · Live365 ⭐</th><th>B2 · Zeno Prime</th><th>B3 · radio.co Standard</th></tr>
+              <tr>
+                <th></th>
+                <th>B1 · Live365 ⭐</th>
+                <th>B2 · Zeno Prime</th>
+                <th>B3 · radio.co Standard</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td><b>Coste</b></td><td>$59 ($79 sin anuncios)</td><td>~$60 (o Starter $35)</td><td>$59</td></tr>
-              <tr><td><b>Licencias US/CA/MX</b></td><td class="ok">✅ Incluidas</td><td class="no">No (solo reporte)</td><td class="no">No</td></tr>
-              <tr><td><b>AutoDJ + programación</b></td><td class="ok">Sí</td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
-              <tr><td><b>DJ en vivo</b></td><td class="ok">Sí</td><td class="ok">Sí</td><td class="ok">Sí (navegador)</td></tr>
-              <tr><td><b>Oyentes</b></td><td>1,500 h/mes base</td><td>Ilimitados</td><td>20k concurrentes</td></tr>
-              <tr><td><b>Operación</b></td><td class="ok">Cero (SaaS)</td><td class="ok">Cero</td><td class="ok">Cero</td></tr>
+              <tr>
+                <td><b>Coste</b></td>
+                <td>$59 ($79 sin anuncios)</td>
+                <td>~$60 (o Starter $35)</td>
+                <td>$59</td>
+              </tr>
+              <tr>
+                <td><b>Licencias US/CA/MX</b></td>
+                <td class="ok">✅ Incluidas</td>
+                <td class="no">No (solo reporte)</td>
+                <td class="no">No</td>
+              </tr>
+              <tr>
+                <td><b>AutoDJ + programación</b></td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+              </tr>
+              <tr>
+                <td><b>DJ en vivo</b></td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí (navegador)</td>
+              </tr>
+              <tr>
+                <td><b>Oyentes</b></td>
+                <td>1,500 h/mes base</td>
+                <td>Ilimitados</td>
+                <td>20k concurrentes</td>
+              </tr>
+              <tr>
+                <td><b>Operación</b></td>
+                <td class="ok">Cero (SaaS)</td>
+                <td class="ok">Cero</td>
+                <td class="ok">Cero</td>
+              </tr>
             </tbody>
           </table>
           <p class="footnote">
@@ -1008,17 +1128,53 @@
           <h2>¿~15 USD o ~50 USD?</h2>
           <table>
             <thead>
-              <tr><th>Necesidad</th><th>~15 USD/mes (AzuraCast)</th><th>~50 USD/mes (Live365)</th></tr>
+              <tr>
+                <th>Necesidad</th>
+                <th>~15 USD/mes (AzuraCast)</th>
+                <th>~50 USD/mes (Live365)</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td><b>Es una radio real (Icecast)</b></td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
-              <tr><td><b>Shows programados</b></td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
-              <tr><td><b>DJ en vivo</b></td><td class="ok">Sí</td><td class="ok">Sí</td></tr>
-              <tr><td><b>Música comercial legal</b></td><td class="no">Tú gestionas licencia</td><td class="ok">✅ US/CA/MX incluidas</td></tr>
-              <tr><td><b>Administración</b></td><td class="no">VPS + ~30–60 min/mes</td><td class="ok">Cero</td></tr>
-              <tr><td><b>Propiedad total / control</b></td><td class="ok">Sí</td><td class="no">Plataforma</td></tr>
-              <tr><td><b>Escalabilidad</b></td><td>Cientos de oyentes</td><td>Escala ilimitada</td></tr>
-              <tr class="hl-row"><td><b>Coste mensual</b></td><td><b>~$12</b></td><td><b>~$59</b></td></tr>
+              <tr>
+                <td><b>Es una radio real (Icecast)</b></td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+              </tr>
+              <tr>
+                <td><b>Shows programados</b></td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+              </tr>
+              <tr>
+                <td><b>DJ en vivo</b></td>
+                <td class="ok">Sí</td>
+                <td class="ok">Sí</td>
+              </tr>
+              <tr>
+                <td><b>Música comercial legal</b></td>
+                <td class="no">Tú gestionas licencia</td>
+                <td class="ok">✅ US/CA/MX incluidas</td>
+              </tr>
+              <tr>
+                <td><b>Administración</b></td>
+                <td class="no">VPS + ~30–60 min/mes</td>
+                <td class="ok">Cero</td>
+              </tr>
+              <tr>
+                <td><b>Propiedad total / control</b></td>
+                <td class="ok">Sí</td>
+                <td class="no">Plataforma</td>
+              </tr>
+              <tr>
+                <td><b>Escalabilidad</b></td>
+                <td>Cientos de oyentes</td>
+                <td>Escala ilimitada</td>
+              </tr>
+              <tr class="hl-row">
+                <td><b>Coste mensual</b></td>
+                <td><b>~$12</b></td>
+                <td><b>~$59</b></td>
+              </tr>
             </tbody>
           </table>
           <p class="footnote" style="margin-top: 16px">
@@ -1037,8 +1193,8 @@
             <div>
               <h3>Fase 0 · Player “Radio 3TRES6” en el sitio · <b>$0</b></h3>
               <p class="small">
-                Sección que reproduce continuamente tus mejores mixes existentes. Valida el
-                concepto con tu audiencia sin invertir nada. <em>Días de trabajo.</em>
+                Sección que reproduce continuamente tus mejores mixes existentes. Valida el concepto
+                con tu audiencia sin invertir nada. <em>Días de trabajo.</em>
               </p>
             </div>
           </div>
@@ -1047,8 +1203,8 @@
             <div>
               <h3>Fase 1 · Radio real con AzuraCast · <b>~$12/mes</b></h3>
               <p class="small">
-                VPS + AzuraCast: emisión 24/7, ahora-suena (metadata), reproductor embebido,
-                shows programados y DJ en vivo vía OBS. Listado en TuneIn/Radio Garden.
+                VPS + AzuraCast: emisión 24/7, ahora-suena (metadata), reproductor embebido, shows
+                programados y DJ en vivo vía OBS. Listado en TuneIn/Radio Garden.
                 <em>Un fin de semana de setup.</em>
               </p>
             </div>
@@ -1059,7 +1215,8 @@
               <h3>Fase 2 · Migrar a Live365 si la licencia importa · <b>~$59/mes</b></h3>
               <p class="small">
                 Si al crecer decides sonar vinilos comerciales + Bandcamp con cobertura legal
-                US/CA/MX, se migra el stream (mismo reproductor en el sitio). <em>Sin trabajo perdido.</em>
+                US/CA/MX, se migra el stream (mismo reproductor en el sitio).
+                <em>Sin trabajo perdido.</em>
               </p>
             </div>
           </div>
@@ -1115,30 +1272,37 @@
             <div class="card">
               <span class="price">$12<small>/mes</small></span>
               <h3 style="margin: 6px 0">A · AzuraCast</h3>
-              <p class="small">Radio propia, control total, shows + live. Tú administras el servidor.</p>
+              <p class="small">
+                Radio propia, control total, shows + live. Tú administras el servidor.
+              </p>
               <span class="badge" style="margin-top: 8px">recomendado para empezar</span>
             </div>
             <div class="card hot">
               <span class="price">$59<small>/mes</small></span>
               <h3 style="margin: 6px 0">B · Live365</h3>
-              <p class="small">Cero administración y licencias US/CA/MX incluidas. El camino legal para música comercial.</p>
+              <p class="small">
+                Cero administración y licencias US/CA/MX incluidas. El camino legal para música
+                comercial.
+              </p>
               <span class="badge green" style="margin-top: 8px">licencias incluidas</span>
             </div>
             <div class="card">
               <span class="price">Fase 0<small> · $0</small></span>
               <h3 style="margin: 6px 0">Player primero</h3>
-              <p class="small">Valida el concepto con la sección “Radio” reproduciendo tus mixes actuales, y decidimos con datos.</p>
+              <p class="small">
+                Valida el concepto con la sección “Radio” reproduciendo tus mixes actuales, y
+                decidimos con datos.
+              </p>
               <span class="badge blue" style="margin-top: 8px">cero riesgo</span>
             </div>
           </div>
           <p class="footnote" style="margin-top: 22px">
-            Documento interno (no indexado). Precios aproximados a mediados de 2026 — se validan
-            con cada proveedor antes de contratar. El siguiente entregable, al elegir escenario,
-            es el <b>plan de implementación detallado</b> de la radio dentro del sitio.
+            Documento interno (no indexado). Precios aproximados a mediados de 2026 — se validan con
+            cada proveedor antes de contratar. El siguiente entregable, al elegir escenario, es el
+            <b>plan de implementación detallado</b> de la radio dentro del sitio.
           </p>
         </div>
       </section>
-
     </div>
 
     <div class="overview" id="overview"></div>
@@ -1218,7 +1382,12 @@
             if (e.key === 'Escape' || e.key === 'g' || e.key === 'G') toggleOverview(false);
             return;
           }
-          if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+          if (
+            e.key === 'ArrowRight' ||
+            e.key === 'ArrowDown' ||
+            e.key === 'PageDown' ||
+            e.key === ' '
+          ) {
             e.preventDefault();
             next();
           } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
