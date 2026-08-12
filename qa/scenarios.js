@@ -212,30 +212,34 @@ s('s04', 'Audio across full reloads (home→3d-brain→crew→mapa) + >5s loss',
 
 s('s05', 'DJ directions: library→card→profile→brain→crew→member', DESKTOP, async (t) => {
   await t.goto(t.base + '/dj-library.html', 7000);
-  const cards = await t.page.locator('.dj-card').count();
-  t.check(cards > 0, 'DJ library loads cards', `.dj-card = ${cards}`);
+  const cards = await t.page.locator('.sleeve').count();
+  t.check(cards > 0, 'DJ library loads cards', `.sleeve = ${cards}`);
 
   if (cards > 0) {
-    // Assert the actual behaviour of a card click: does it expand or navigate away?
+    const firstId = await t.page
+      .locator('.sleeve')
+      .first()
+      .getAttribute('data-dj')
+      .catch(() => null);
+
+    // Discoteca behaviour: a sleeve click opens the set sheet (dialog)
     await t.page
-      .locator('.dj-card')
+      .locator('.sleeve')
       .first()
       .click()
       .catch(() => {});
-    await t.page.waitForTimeout(2500);
-    const url = t.page.url();
-    const navAway = /\/dj\/[^/]+\.html/.test(url);
-    const expanded = await t.page.locator('.dj-card.expanded').count();
-    t.check(
-      expanded > 0 || !navAway,
-      'Card expand toggle works (does not orphan-navigate)',
-      `url=${url.split('/').pop()} expanded=${expanded}`
-    );
+    await t.page.waitForTimeout(2000);
+    const sheetOpen = await t.page.evaluate(() => {
+      const sheet = document.getElementById('setSheet');
+      return !!sheet && !sheet.hidden;
+    });
+    t.check(sheetOpen, 'Sleeve click opens the set sheet', `setSheet open=${sheetOpen}`);
 
-    // Follow to a DJ page via the card's "Ver perfil →" link
-    const perma = t.page.locator('.dj-card a.set-permalink').first();
-    if ((await perma.count()) > 0) {
-      await t.measureNav(async () => perma.click().catch(() => {}));
+    // Static DJ page still exists per DJ id (library→profile)
+    if (firstId) {
+      await t.measureNav(async () => {
+        await t.page.goto(`${t.base}/dj/${firstId}.html`, { waitUntil: 'domcontentloaded' });
+      });
     }
     t.check(
       /\/dj\//.test(t.page.url()),
@@ -333,6 +337,26 @@ s('s07', 'Tools: each toolhub tab loads without errors', DESKTOP, async (t) => {
     'Camelot wheel tool present',
     'wheelSvg found'
   );
+
+  const setsBtn = t.page.locator('.tool-tab[data-tool="sets"]');
+  if ((await setsBtn.count()) > 0) {
+    await setsBtn.click();
+    await t.page.waitForTimeout(600);
+    const cardCount = await t.page.locator('.set-card').count();
+    t.check(cardCount > 0, 'Sets tool renders cards', `set-cards = ${cardCount}`);
+    const firstHref = await t.page
+      .locator('.set-card .set-open')
+      .first()
+      .getAttribute('href')
+      .catch(() => null);
+    t.check(
+      !!firstHref && firstHref.includes('#set:'),
+      'Sets deep-link to Discoteca set sheet',
+      `href = ${firstHref}`
+    );
+  } else {
+    t.warn('sets.tool', 'Sets tab not present (skipped)');
+  }
 });
 
 s('s08', 'Blog: articles render and read-more targets resolve', DESKTOP, async (t) => {
@@ -592,7 +616,7 @@ s('s11', 'Mobile 390px: menu, buy, map, DJ library, no horizontal scroll', MOBIL
   );
 
   await t.goto(t.base + '/dj-library.html', 7000);
-  t.check((await t.page.locator('.dj-card').count()) > 0, 'DJ library on mobile', '.dj-card>0');
+  t.check((await t.page.locator('.sleeve').count()) > 0, 'DJ library on mobile', '.sleeve>0');
 });
 
 module.exports = { SCENARIOS };

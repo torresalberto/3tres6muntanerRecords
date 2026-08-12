@@ -39,6 +39,29 @@
     renderGraph();
     wireSheet();
     wireToolbar();
+    handleDeepLink();
+  }
+
+  // Deep-link support: dj-library.html#set:<setId> opens a specific set sheet
+  // (used by the Taller / Sets tool). Falls back silently if the set is unknown.
+  async function handleDeepLink() {
+    const m = window.location.hash.match(/^#set:(.+)$/);
+    if (!m) return;
+    const setId = decodeURIComponent(m[1]);
+    try {
+      const set = await Core.fetchSet(setId);
+      if (!set || !set.dj_id) return;
+      const dj =
+        Core.djById(set.dj_id) ||
+        (Core.index && Core.index.djs.find((d) => (d.sets || []).includes(setId))) ||
+        (Core.index && Core.index.djs.find((d) => d.id === setId));
+      if (!dj) return;
+      const sleeve = document.querySelector(`.sleeve[data-dj="${CSS.escape(dj.id)}"]`);
+      if (sleeve) sleeve.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      openSheet(dj.id, setId);
+    } catch (e) {
+      console.warn('Deep-link set not found:', setId);
+    }
   }
 
   function countUp(el, to) {
