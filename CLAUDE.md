@@ -59,9 +59,22 @@ Edit `data/venues/index.json` following the existing schema:
 To extract the tracklist of a DJ set into `data/djs/sets/*.json`, follow the
 `dj-tracklist-extraction` skill (`.agents/skills/dj-tracklist-extraction/SKILL.md`),
 the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
-`scripts/extract-tracklists-v2.py`. Covers all comment formats (timestamped,
-numbered, ID requests), descriptions, owner/pinned boosts, external cross-checks,
-and honest incomplete-set handling (`recheck_after`).
+  `scripts/extract-tracklists-v2.py`. Covers all comment formats (timestamped,
+  numbered, ID requests), descriptions, owner/pinned boosts, external cross-checks,
+  and honest incomplete-set handling (`recheck_after`).
+
+## DJ Library / Discoteca (canonical) + house design system
+
+- **Winner of the A/B:** "Discoteca 3TRES6" (`dj-library.html` + `css/dj-library.css`
+  + `js/dj-library-core.js` + `js/dj-library.js`). The runner-up "Cabina" is
+  archived (not linked) at `experiments/`.
+- **`DESIGN_SYSTEM.md`** is the house style for all content sections (tokens,
+  signature components, internal-linking conventions). Read it before touching
+  any section.
+- Data is build-generated: `node scripts/build-dj-data.js` (index, stats,
+  cross-references, tracklists, track-registry). Never hand-edit generated files.
+- Section redesign roadmap (one per pass): ✅ Taller (toolhub) · 🚧 Mapa ·
+  🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested before the next.
 
 <!-- autoskills:start -->
 

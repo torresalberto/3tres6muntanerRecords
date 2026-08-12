@@ -150,9 +150,11 @@ Player-first club console. Minimal header, left filter rail, ranked **set** list
 "now playing" bar with a scrub strip of timestamp chips.
 Logic: `js/dj-library-console.js`.
 
-> **Winner TBD.** Both variants are deployed for A/B. When a winner is chosen,
-> promote it to the canonical `dj-library.html`, retire the other page (+ its
-> CSS/JS), remove the link from nav/footer/subnav, and record the decision here.
+> **Winner: Discoteca 3TRES6** (canonical, `dj-library.html`). The runner-up
+> "Cabina" variant is archived at `experiments/dj-library-console.html` (+
+> `experiments/css/`, `experiments/js/`) for reference and is **not linked** from
+> the live site. The Discoteca system is codified in `DESIGN_SYSTEM.md` and is
+> the house style for the content sections (Herramientas, Mapa, Crew, Neural).
 
 ## Design System
 
