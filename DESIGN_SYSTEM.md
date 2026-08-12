@@ -78,7 +78,21 @@ Rules:
 ## Status
 
 - ✅ Discoteca (DJ Library) — canonical
-- ✅ Taller (toolhub) — redone in this system
+- ✅ Taller (toolhub) — redone in this system (adds Sets tool that deep-links
+  to the Discoteca via `dj-library.html#set:<id>`)
 - 🚧 Mapa — next
 - 🚧 Crew — next
 - 🚧 Neural — next
+
+## Known gaps / learnings (from past passes)
+
+- **swup page-init gap:** only `blog.html`, `index.html`, `product.html` and
+  `toolhub/` load `swup-init.js`. Navigations *into* `dj-library.html`,
+  `crew.html`, `mapa.html`, `3d-brain.html` from a swup page swap the content
+  without re-running those pages' scripts. Until those sections register
+  `window.Muntaner336.onPageView` re-inits, links that MUST fully initialize a
+  target section add `data-no-swup` (the Taller Sets tool does this for its
+  deep links). Revisit in the Mapa/Crew/Neural passes.
+- **Top-level `const` data files** (`HardwareDB`, `MusicDB`, `DJ_SETS`, …) are
+  NOT on `window`. Check with `typeof X === 'undefined'`, never
+  `window.X`. (Bite that cost two fixes in the Taller pass.)

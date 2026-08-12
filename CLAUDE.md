@@ -73,8 +73,10 @@ the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
   any section.
 - Data is build-generated: `node scripts/build-dj-data.js` (index, stats,
   cross-references, tracklists, track-registry). Never hand-edit generated files.
-- Section redesign roadmap (one per pass): ✅ Taller (toolhub) · 🚧 Mapa ·
-  🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested before the next.
+- Section redesign roadmap (one per pass): ✅ Taller (toolhub — editorial hero,
+  MOD rail, Sets tool that deep-links to the Discoteca; see `DESIGN_SYSTEM.md`
+  "Known gaps") · 🚧 Mapa · 🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested
+  before the next.
 
 <!-- autoskills:start -->
 
