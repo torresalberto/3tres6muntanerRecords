@@ -752,6 +752,113 @@ const TRACKLISTS = {
     "artist_id": "chaos-in-the-cbd",
     "sets": [
       {
+        "id": "chaos-br-barcelona-nitsa",
+        "title": "Boiler Room Barcelona: Nitsa",
+        "venue": "Nitsa, Barcelona, Spain",
+        "date": "2019-09-01",
+        "duration": "",
+        "youtube": "pEWXK1r3-kM",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 18,
+        "tracks_total": 18,
+        "source": "YouTube",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Cinthie",
+            "title": "This Bomb Is Mine",
+            "label": "803 Crystal Grooves"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Urban Soul",
+            "title": "My Urban Soul (Club 69 Urban Vibe)",
+            "label": "King Street"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          }
+        ]
+      },
+      {
         "id": "chaos-glitch-2022",
         "title": "Boiler Room x Glitch Festival 2022",
         "venue": "",
@@ -983,6 +1090,236 @@ const TRACKLISTS = {
             "time": "",
             "artist": "Unknown",
             "title": "Unknown Track"
+          }
+        ]
+      },
+      {
+        "id": "chaos-in-the-cbd-djoon-make-it-deep",
+        "title": "Make It Deep @ Djoon, Paris",
+        "venue": "Djoon, Paris, France",
+        "date": "2016-12-16",
+        "duration": "",
+        "youtube": "3dk8WEvRc6U",
+        "views": 125989,
+        "genre": [],
+        "tracks_identified": 23,
+        "tracks_total": 23,
+        "source": "YouTube comments (pinned tracklist)",
+        "tracklist": [
+          {
+            "time": "0:00",
+            "artist": "Kai Alce",
+            "title": "Take A Chance (Larry Heard Remix Instrumental #1)"
+          },
+          {
+            "time": "4:30",
+            "artist": "Chaos In The CBD",
+            "title": "Significant Others"
+          },
+          {
+            "time": "8:00",
+            "artist": "Ultra Nate",
+            "title": "A Wonderful Place (Bobby & Steve Mix)"
+          },
+          {
+            "time": "13:30",
+            "artist": "Black Coffee",
+            "title": "We Are One"
+          },
+          {
+            "time": "18:30",
+            "artist": "Cuisine Dub",
+            "title": "Mating Call"
+          },
+          {
+            "time": "22:20",
+            "artist": "Alton Miller",
+            "title": "Waiting For You"
+          },
+          {
+            "time": "25:20",
+            "artist": "The Vision",
+            "title": "Shardé"
+          },
+          {
+            "time": "30:00",
+            "artist": "Rhythm of Paradise",
+            "title": "Paradise"
+          },
+          {
+            "time": "34:30",
+            "artist": "Glenn Underground",
+            "title": "Forever Love"
+          },
+          {
+            "time": "40:00",
+            "artist": "Viola",
+            "title": "Little Girl"
+          },
+          {
+            "time": "42:30",
+            "artist": "Anane",
+            "title": "Heaven Knowns"
+          },
+          {
+            "time": "47:00",
+            "artist": "Ambrosia",
+            "title": "Believe In Me (Instrumental)"
+          },
+          {
+            "time": "51:20",
+            "artist": "The Joint Movement Project (aka Jovonn & Kai Alce)",
+            "title": "Find a Love (Original Vocal Mix)"
+          },
+          {
+            "time": "55:00",
+            "artist": "Kemeticjust",
+            "title": "Wishin'"
+          },
+          {
+            "time": "57:30",
+            "artist": "Janet Rushmore",
+            "title": "Try My Love (Instrumental Mix)"
+          },
+          {
+            "time": "1:01:20",
+            "artist": "Grant Nelson & Richard Purser",
+            "title": "Sensation 1"
+          },
+          {
+            "time": "1:05:30",
+            "artist": "Hardsoul feat. Ron Carroll",
+            "title": "Back Together"
+          },
+          {
+            "time": "1:09:30",
+            "artist": "Ly",
+            "title": "Back 2 Zanzibar (King Street Mix)"
+          },
+          {
+            "time": "1:13:30",
+            "artist": "GT X-Press",
+            "title": "My Sista"
+          },
+          {
+            "time": "1:19:00",
+            "artist": "Mental Instrum",
+            "title": "Flute Song"
+          },
+          {
+            "time": "1:22:00",
+            "artist": "Point G",
+            "title": "Parade"
+          },
+          {
+            "time": "1:24:00",
+            "artist": "Boo Williams",
+            "title": "Peaking Point"
+          },
+          {
+            "time": "1:26:40",
+            "artist": "NoNsToP feat. Roy Grant",
+            "title": "You Gotta Know (Dub Mix)"
+          }
+        ]
+      },
+      {
+        "id": "chaos-mixmag-lab-london",
+        "title": "Mixmag Lab London",
+        "venue": "Mixmag Lab, London, UK",
+        "date": "2025-05-08",
+        "duration": "",
+        "youtube": "qLbWviHoBOM",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 17,
+        "tracks_total": 17,
+        "source": "YouTube",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Fazed Idjuts",
+            "title": "Dust of Life (Full Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Onda",
+            "title": "Waiting for Your Love (François K. Dub)"
+          },
+          {
+            "time": "",
+            "artist": "Jon Cutler",
+            "title": "Living (J.C's Demo Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Megamen & SolyMar",
+            "title": "All I Need"
+          },
+          {
+            "time": "",
+            "artist": "Sellens",
+            "title": "Back Down (Off Key Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Brick Nation",
+            "title": "Speak to Me (feat. Craig Travis)"
+          },
+          {
+            "time": "",
+            "artist": "Christian Smith",
+            "title": "Traction (Paride Saraceni Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Home & Garden",
+            "title": "Get U Down"
+          },
+          {
+            "time": "",
+            "artist": "Distant Sun",
+            "title": "Machine lernt"
+          },
+          {
+            "time": "",
+            "artist": "The Underground Workshop",
+            "title": "Does Your Mama Know (Franky G Club Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Needless",
+            "title": "Unnamed Feelings (Steal Vybe Mesmerized Soul Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Noche",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Megamen & SolyMar",
+            "title": "All I Need"
+          },
+          {
+            "time": "",
+            "artist": "Unknown",
+            "title": "Unknown Track"
+          },
+          {
+            "time": "",
+            "artist": "Geoffrey C",
+            "title": "Yo Barnum (Jihad Muhammad Btd Remix)"
+          },
+          {
+            "time": "",
+            "artist": "Armin van Buuren & Perpetuous Dreamer",
+            "title": "The Sound of Goodbye (Armin's Tribal Feel Mix)"
+          },
+          {
+            "time": "",
+            "artist": "Chaos In The CBD",
+            "title": "Marlboro Sounds"
           }
         ]
       }
@@ -1280,6 +1617,117 @@ const TRACKLISTS = {
     "artist": "Etapp Kyle",
     "artist_id": "etapp-kyle",
     "sets": [
+      {
+        "id": "etapp-kyle-early-2000s-archive",
+        "title": "Early 2000s Archive: Tribal & Vocal House",
+        "venue": "Berlin",
+        "date": "2026-08-08",
+        "duration": "",
+        "youtube": "Q3qJ85_UJm0",
+        "views": 8045,
+        "genre": [],
+        "tracks_identified": 16,
+        "tracks_total": 16,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "",
+            "artist": "Kelela",
+            "title": "Washed Away",
+            "label": "Warp Records"
+          },
+          {
+            "time": "",
+            "artist": "The Persuader",
+            "title": "Untitled",
+            "label": "Svek"
+          },
+          {
+            "time": "",
+            "artist": "Wally Lopez",
+            "title": "Amman Retouched (Dub)",
+            "label": "Fluential"
+          },
+          {
+            "time": "",
+            "artist": "David Penn, DJ Chus",
+            "title": "Burning Paris (Fire FX)",
+            "label": "Stereo Cool!"
+          },
+          {
+            "time": "",
+            "artist": "Aisher, Brancaccio",
+            "title": "It's Gonna Be... (A Lovely Day) (Original Mix)",
+            "label": "Credence"
+          },
+          {
+            "time": "",
+            "artist": "R-One By Julien Creance",
+            "title": "Happy TV (Laurent Wolf Remix)",
+            "label": "Royal Flush Records"
+          },
+          {
+            "time": "",
+            "artist": "M-Gee",
+            "title": "Bodyswerve (feat. Mica Paris) (Club Mix)",
+            "label": "Swing City Records"
+          },
+          {
+            "time": "",
+            "artist": "Deux",
+            "title": "Sun Rising Up (Vocal Mix)",
+            "label": "Urbana Recordings"
+          },
+          {
+            "time": "",
+            "artist": "Percy X, Mark Broom",
+            "title": "Lady Killer (Original Mix)",
+            "label": "Soma Quality Recordings"
+          },
+          {
+            "time": "",
+            "artist": "Mama Look Crew",
+            "title": "Oh No No No (Mama Che Mix)",
+            "label": "Azuli Records"
+          },
+          {
+            "time": "",
+            "artist": "Future Funk",
+            "title": "Wildberry Tracks (Main Mix)",
+            "label": "Ambassade Records"
+          },
+          {
+            "time": "",
+            "artist": "Groove Foundation, DJ Chus",
+            "title": "That Feeling (Original Stereo Mix)",
+            "label": "Defected"
+          },
+          {
+            "time": "",
+            "artist": "Kienzle & Iberle",
+            "title": "Touch Me (Original Mix)",
+            "label": "Skyline Records"
+          },
+          {
+            "time": "",
+            "artist": "Universal Love",
+            "title": "Ritmo Da Rua (Brian Tappert Prime Time Vibe)",
+            "label": "Soulfuric Deep"
+          },
+          {
+            "time": "",
+            "artist": "Pornorama feat. Louise Carver",
+            "title": "I'd Say Yes (Vocal Mix)",
+            "label": "Illustrious"
+          },
+          {
+            "time": "",
+            "artist": "Shakedown",
+            "title": "At Night (Afterlife Remix)",
+            "label": "Defected"
+          }
+        ]
+      },
       {
         "id": "etapp-kyle-lot-radio-2023",
         "title": "The Lot Radio New York 2023",

@@ -1,0 +1,169 @@
+{
+  "id": "etapp-kyle-early-2000s-archive",
+  "dj_id": "etapp-kyle",
+  "title": "Early 2000s Archive: Tribal & Vocal House",
+  "venue": "Berlin",
+  "date": "2026-08-08",
+  "youtube_url": "https://www.youtube.com/watch?v=Q3qJ85_UJm0",
+  "youtube_embed_id": "Q3qJ85_UJm0",
+  "duration_minutes": 69,
+  "duration_formatted": "1:08:03",
+  "view_count": 8045,
+  "channel": "Etapp Kyle",
+  "genres": ["Tribal House", "Vocal House", "House"],
+  "tracks_identified": 16,
+  "tracks_total": 16,
+  "tracklist": [
+    {
+      "position": 1,
+      "artist": "Kelela",
+      "title": "Washed Away",
+      "label": "Warp Records",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 2,
+      "artist": "The Persuader",
+      "title": "Untitled",
+      "label": "Svek",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 3,
+      "artist": "Wally Lopez",
+      "title": "Amman Retouched (Dub)",
+      "label": "Fluential",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 4,
+      "artist": "David Penn, DJ Chus",
+      "title": "Burning Paris (Fire FX)",
+      "label": "Stereo Cool!",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 5,
+      "artist": "Aisher, Brancaccio",
+      "title": "It's Gonna Be... (A Lovely Day) (Original Mix)",
+      "label": "Credence",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 6,
+      "artist": "R-One By Julien Creance",
+      "title": "Happy TV (Laurent Wolf Remix)",
+      "label": "Royal Flush Records",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 7,
+      "artist": "M-Gee",
+      "title": "Bodyswerve (feat. Mica Paris) (Club Mix)",
+      "label": "Swing City Records",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 8,
+      "artist": "Deux",
+      "title": "Sun Rising Up (Vocal Mix)",
+      "label": "Urbana Recordings",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 9,
+      "artist": "Percy X, Mark Broom",
+      "title": "Lady Killer (Original Mix)",
+      "label": "Soma Quality Recordings",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 10,
+      "artist": "Mama Look Crew",
+      "title": "Oh No No No (Mama Che Mix)",
+      "label": "Azuli Records",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 11,
+      "artist": "Future Funk",
+      "title": "Wildberry Tracks (Main Mix)",
+      "label": "Ambassade Records",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist; commenter: 'Wildberry tracks :D'"
+    },
+    {
+      "position": 12,
+      "artist": "Groove Foundation, DJ Chus",
+      "title": "That Feeling (Original Stereo Mix)",
+      "label": "Defected",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 13,
+      "artist": "Kienzle & Iberle",
+      "title": "Touch Me (Original Mix)",
+      "label": "Skyline Records",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 14,
+      "artist": "Universal Love",
+      "title": "Ritmo Da Rua (Brian Tappert Prime Time Vibe)",
+      "label": "Soulfuric Deep",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 15,
+      "artist": "Pornorama feat. Louise Carver",
+      "title": "I'd Say Yes (Vocal Mix)",
+      "label": "Illustrious",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    },
+    {
+      "position": 16,
+      "artist": "Shakedown",
+      "title": "At Night (Afterlife Remix)",
+      "label": "Defected",
+      "status": "confirmed",
+      "notes": "DJ pinned tracklist"
+    }
+  ],
+  "most_requested_ids": [
+    {
+      "timestamp": "16:09",
+      "request_count": 1,
+      "sample_comments": ["16:09 Track ID for this banger?"],
+      "status": "unidentified",
+      "notes": "DJ pinned tracklist now available (no timestamps; likely around tracks 3-4)"
+    },
+    {
+      "timestamp": "37:34",
+      "request_count": 1,
+      "sample_comments": ["37:34 What a banger ! Any id ?"],
+      "status": "unidentified",
+      "notes": "DJ pinned tracklist now available (no timestamps; likely around tracks 7-8)"
+    }
+  ],
+  "curious_facts": {
+    "total_comments": 66,
+    "confirmed_tracks": 16,
+    "unidentified_tracks": 0,
+    "tracklist_source": "DJ pinned comment (@etappkyle): numbered list 'YouTube has recognised most of the tracks already but here it is:' — 16 tracks WITH labels",
+    "tracklist_format_note": "Numbered list (1. Artist - Title - Label) — not timestamped; the timestamp-based extractor missed it on first pass"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "id": "chaos-in-the-cbd-djoon-make-it-deep",
+  "dj_id": "chaos-in-the-cbd",
+  "title": "Make It Deep @ Djoon, Paris",
+  "venue": "Djoon, Paris, France",
+  "date": "2016-12-16",
+  "youtube_url": "https://www.youtube.com/watch?v=3dk8WEvRc6U",
+  "youtube_embed_id": "3dk8WEvRc6U",
+  "duration_minutes": 89,
+  "duration_formatted": "1:28:33",
+  "view_count": 125989,
+  "channel": "Make It Deep",
+  "genres": ["Deep House", "House", "Disco", "Soulful House"],
+  "source": "YouTube comments (pinned tracklist)",
+  "tracks_identified": 23,
+  "tracks_total": 23,
+  "tracklist": [
+    {
+      "position": 1,
+      "timestamp": "0:00",
+      "time": "0:00",
+      "artist": "Kai Alce",
+      "title": "Take A Chance (Larry Heard Remix Instrumental #1)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 2,
+      "timestamp": "4:30",
+      "time": "4:30",
+      "artist": "Chaos In The CBD",
+      "title": "Significant Others",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 3,
+      "timestamp": "8:00",
+      "time": "8:00",
+      "artist": "Ultra Nate",
+      "title": "A Wonderful Place (Bobby & Steve Mix)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 4,
+      "timestamp": "13:30",
+      "time": "13:30",
+      "artist": "Black Coffee",
+      "title": "We Are One",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 5,
+      "timestamp": "18:30",
+      "time": "18:30",
+      "artist": "Cuisine Dub",
+      "title": "Mating Call",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 6,
+      "timestamp": "22:20",
+      "time": "22:20",
+      "artist": "Alton Miller",
+      "title": "Waiting For You",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 7,
+      "timestamp": "25:20",
+      "time": "25:20",
+      "artist": "The Vision",
+      "title": "Shardé",
+      "status": "confirmed",
+      "notes": "Pinned tracklist gives 'DJ Kaos - Religious // or The Vision - Sharde'; commenter confirms The Vision - Shardé (1991 classic)"
+    },
+    {
+      "position": 8,
+      "timestamp": "30:00",
+      "time": "30:00",
+      "artist": "Rhythm of Paradise",
+      "title": "Paradise",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 9,
+      "timestamp": "34:30",
+      "time": "34:30",
+      "artist": "Glenn Underground",
+      "title": "Forever Love",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 10,
+      "timestamp": "40:00",
+      "time": "40:00",
+      "artist": "Viola",
+      "title": "Little Girl",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 11,
+      "timestamp": "42:30",
+      "time": "42:30",
+      "artist": "Anane",
+      "title": "Heaven Knowns",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 12,
+      "timestamp": "47:00",
+      "time": "47:00",
+      "artist": "Ambrosia",
+      "title": "Believe In Me (Instrumental)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist; also confirmed in comment"
+    },
+    {
+      "position": 13,
+      "timestamp": "51:20",
+      "time": "51:20",
+      "artist": "The Joint Movement Project (aka Jovonn & Kai Alce)",
+      "title": "Find a Love (Original Vocal Mix)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 14,
+      "timestamp": "55:00",
+      "time": "55:00",
+      "artist": "Kemeticjust",
+      "title": "Wishin'",
+      "status": "confirmed",
+      "notes": "Pinned tracklist; also confirmed in comment"
+    },
+    {
+      "position": 15,
+      "timestamp": "57:30",
+      "time": "57:30",
+      "artist": "Janet Rushmore",
+      "title": "Try My Love (Instrumental Mix)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist (answers ID request at 59:30)"
+    },
+    {
+      "position": 16,
+      "timestamp": "1:01:20",
+      "time": "1:01:20",
+      "artist": "Grant Nelson & Richard Purser",
+      "title": "Sensation 1",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 17,
+      "timestamp": "1:05:30",
+      "time": "1:05:30",
+      "artist": "Hardsoul feat. Ron Carroll",
+      "title": "Back Together",
+      "status": "confirmed",
+      "notes": "Pinned tracklist; comment calls it 'Frankie Knuckles - Get Back Together' drop"
+    },
+    {
+      "position": 18,
+      "timestamp": "1:09:30",
+      "time": "1:09:30",
+      "artist": "Ly",
+      "title": "Back 2 Zanzibar (King Street Mix)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 19,
+      "timestamp": "1:13:30",
+      "time": "1:13:30",
+      "artist": "GT X-Press",
+      "title": "My Sista",
+      "status": "confirmed",
+      "notes": "Pinned tracklist (answers heavy ID requests at 1:13:00/1:14:06)"
+    },
+    {
+      "position": 20,
+      "timestamp": "1:19:00",
+      "time": "1:19:00",
+      "artist": "Mental Instrum",
+      "title": "Flute Song",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 21,
+      "timestamp": "1:22:00",
+      "time": "1:22:00",
+      "artist": "Point G",
+      "title": "Parade",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 22,
+      "timestamp": "1:24:00",
+      "time": "1:24:00",
+      "artist": "Boo Williams",
+      "title": "Peaking Point",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    },
+    {
+      "position": 23,
+      "timestamp": "1:26:40",
+      "time": "1:26:40",
+      "artist": "NoNsToP feat. Roy Grant",
+      "title": "You Gotta Know (Dub Mix)",
+      "status": "confirmed",
+      "notes": "Pinned tracklist"
+    }
+  ],
+  "curious_facts": {
+    "total_comments": 128,
+    "track_relevant_comments": 28,
+    "confirmed_tracks": 23,
+    "unidentified_tracks": 0,
+    "tracklist_source": "Pinned comment (144 likes) contains the FULL 23-track list with timestamps — all IDs captured",
+    "crowd_id_requests": [
+      {
+        "timestamp": "1:13:00/1:14:06",
+        "request_count": 3,
+        "answer": "GT X-Press - My Sista (pinned list 1:13:30)"
+      },
+      {
+        "timestamp": "1:05:35",
+        "request_count": 2,
+        "answer": "Hardsoul feat. Ron Carroll - Back Together (1:05:30)"
+      },
+      {
+        "timestamp": "59:30",
+        "request_count": 1,
+        "answer": "Janet Rushmore - Try My Love (Instrumental Mix) (57:30)"
+      }
+    ]
+  }
+}

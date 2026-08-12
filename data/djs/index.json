@@ -239,15 +239,16 @@
       "bio": "",
       "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
       "sets": [
+        "chaos-br-barcelona-nitsa",
         "chaos-glitch-2022",
         "chaos-in-the-cbd-ballantines-lebanon",
-        "chaos-br-barcelona-nitsa",
+        "chaos-in-the-cbd-djoon-make-it-deep",
         "chaos-mixmag-lab-london"
       ],
       "stats": {
-        "sets": 4,
-        "tracks": 41,
-        "known": 41,
+        "sets": 5,
+        "tracks": 99,
+        "known": 99,
         "completion_rate": 100
       }
     },
@@ -376,12 +377,13 @@
       "bio": "",
       "image": "https://i.ytimg.com/vi/TBuJtKSgkN8/hqdefault.jpg",
       "sets": [
+        "etapp-kyle-early-2000s-archive",
         "etapp-kyle-lot-radio-2023"
       ],
       "stats": {
-        "sets": 1,
-        "tracks": 6,
-        "known": 6,
+        "sets": 2,
+        "tracks": 22,
+        "known": 22,
         "completion_rate": 100
       }
     },

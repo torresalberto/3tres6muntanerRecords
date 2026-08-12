@@ -47,3 +47,4 @@ toolhub/backend/node_modules/
 toolhub/backend/downloads/
 toolhub/backend/archived/
 toolhub/backend/cookies.txt
+__pycache__
