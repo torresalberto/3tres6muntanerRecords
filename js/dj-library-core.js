@@ -159,9 +159,25 @@
     </section>`;
   };
 
+  // Internal/extraction-metadata keys never shown as audience stats.
+  const FACT_SKIP = new Set([
+    'source',
+    'source_notes',
+    'tracklist_source',
+    'tracklist_format_note',
+    'event_date_note',
+    'note',
+    'notes',
+    'recheck_after',
+  ]);
+
   S.buildFacts = function (set) {
     const f = set.curious_facts || {};
-    const keys = Object.keys(f);
+    const keys = Object.keys(f).filter((k) => {
+      if (FACT_SKIP.has(k)) return false;
+      const v = f[k];
+      return typeof v === 'number' || String(v).length <= 40;
+    });
     if (!keys.length) return '';
     return `<section class="set-facts">
       ${keys.map((k) => `<div class="set-fact"><span class="set-fact-num">${S.esc(f[k])}</span><span class="set-fact-label">${S.esc(k.replace(/_/g, ' '))}</span></div>`).join('')}
