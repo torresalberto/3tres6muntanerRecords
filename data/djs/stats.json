@@ -1,0 +1,3678 @@
+{
+  "generated_at": "2026-08-12T05:13:19.053Z",
+  "aggregates": {
+    "djs": 56,
+    "sets": 77,
+    "tracks": 932,
+    "known": 926,
+    "hours": 82.5,
+    "minutes": 4951,
+    "connections": 98,
+    "shared_tracks": 38,
+    "shared_artists": 60,
+    "labeled_tracks": 149,
+    "requested_ids": 28,
+    "completion_rate": 99
+  },
+  "featured": {
+    "dj_id": "etapp-kyle",
+    "set_id": "etapp-kyle-early-2000s-archive",
+    "dj_name": "Etapp Kyle",
+    "image": "https://i.ytimg.com/vi/TBuJtKSgkN8/hqdefault.jpg",
+    "title": "Early 2000s Archive: Tribal & Vocal House",
+    "venue": "Berlin",
+    "date": "2026-08-08",
+    "genres": [
+      "Tribal House",
+      "Vocal House",
+      "House"
+    ],
+    "duration_formatted": "1:08:03",
+    "view_count": 8045,
+    "youtube_embed_id": "Q3qJ85_UJm0",
+    "tracks_identified": 16,
+    "tracks_total": 16,
+    "label_count": 16,
+    "requested_ids": 2,
+    "catalog": "Nº 001"
+  },
+  "catalog_numbers": {
+    "etapp-kyle": {
+      "num": "Nº 001",
+      "latest_date": "2026-08-08"
+    },
+    "quest": {
+      "num": "Nº 002",
+      "latest_date": "2026-02-08"
+    },
+    "kettama": {
+      "num": "Nº 003",
+      "latest_date": "2025-09-03"
+    },
+    "honey-dijon": {
+      "num": "Nº 004",
+      "latest_date": "2025-08-02"
+    },
+    "avalon-emerson": {
+      "num": "Nº 005",
+      "latest_date": "2025-08-01"
+    },
+    "dj-pierre": {
+      "num": "Nº 006",
+      "latest_date": "2025-07-18"
+    },
+    "chaos-in-the-cbd": {
+      "num": "Nº 007",
+      "latest_date": "2025-05-08"
+    },
+    "richie-hawtin": {
+      "num": "Nº 008",
+      "latest_date": "2025-05-03"
+    },
+    "ben-ufo": {
+      "num": "Nº 009",
+      "latest_date": "2025-01-18"
+    },
+    "floating-points": {
+      "num": "Nº 010",
+      "latest_date": "2024-09-04"
+    },
+    "young-marco": {
+      "num": "Nº 011",
+      "latest_date": "2024-08-04"
+    },
+    "palms-trax": {
+      "num": "Nº 012",
+      "latest_date": "2024-08-02"
+    },
+    "dixon": {
+      "num": "Nº 013",
+      "latest_date": "2024-05-25"
+    },
+    "folamour": {
+      "num": "Nº 014",
+      "latest_date": "2024-04-21"
+    },
+    "peggy-gou": {
+      "num": "Nº 015",
+      "latest_date": "2024-03-16"
+    },
+    "ian-pooley-paloma": {
+      "num": "Nº 016",
+      "latest_date": "2023-09-01"
+    },
+    "ian-pooley-hor": {
+      "num": "Nº 017",
+      "latest_date": "2023-01-20"
+    },
+    "mall-grab": {
+      "num": "Nº 018",
+      "latest_date": "2022-11-26"
+    },
+    "kerri-chandler": {
+      "num": "Nº 019",
+      "latest_date": "2022-09-23"
+    },
+    "apollonia": {
+      "num": "Nº 020",
+      "latest_date": "2019-01-23"
+    },
+    "stephan-bodzin": {
+      "num": "Nº 021",
+      "latest_date": "2018-07-21"
+    },
+    "recondite": {
+      "num": "Nº 022",
+      "latest_date": "2017-08-18"
+    },
+    "helena-hauff": {
+      "num": "Nº 023",
+      "latest_date": "2017-08-06"
+    },
+    "frankie-knuckles": {
+      "num": "Nº 024",
+      "latest_date": "2015-12-28"
+    },
+    "donato-dozzy": {
+      "num": "Nº 025",
+      "latest_date": "2015-11-12"
+    },
+    "laurent-garnier": {
+      "num": "Nº 026",
+      "latest_date": "2015-08-28"
+    },
+    "call-super": {
+      "num": "Nº 027",
+      "latest_date": "2015-07-31"
+    },
+    "hunee": {
+      "num": "Nº 028",
+      "latest_date": "2015-07-31"
+    },
+    "floorplan": {
+      "num": "Nº 029",
+      "latest_date": "2015-06-06"
+    },
+    "four-tet": {
+      "num": "Nº 030",
+      "latest_date": "2015-05-14"
+    },
+    "alex-do-clr-305": {
+      "num": "Nº 031",
+      "latest_date": "2014-12-29"
+    },
+    "maceo-plex": {
+      "num": "Nº 032",
+      "latest_date": "2014-09-17"
+    },
+    "masters-at-work": {
+      "num": "Nº 033",
+      "latest_date": "2014-08-10"
+    },
+    "motor-city-drum-ensemble": {
+      "num": "Nº 034",
+      "latest_date": "2014-08-03"
+    },
+    "marcel-dettmann": {
+      "num": "Nº 035",
+      "latest_date": "2014-05-22"
+    },
+    "david-august": {
+      "num": "Nº 036",
+      "latest_date": "2014-04-09"
+    },
+    "seth-troxler": {
+      "num": "Nº 037",
+      "latest_date": "2014-03-20"
+    },
+    "carl-cox": {
+      "num": "Nº 038",
+      "latest_date": "2013-08-15"
+    },
+    "ame": {
+      "num": "Nº 039",
+      "latest_date": "2012-10-18"
+    },
+    "moodymann": {
+      "num": "Nº 040",
+      "latest_date": "2010-03-04"
+    },
+    "blessed-madonna": {
+      "num": "Nº 041",
+      "latest_date": ""
+    },
+    "carl-craig": {
+      "num": "Nº 042",
+      "latest_date": ""
+    },
+    "cassius": {
+      "num": "Nº 043",
+      "latest_date": ""
+    },
+    "dj-koze-various": {
+      "num": "Nº 044",
+      "latest_date": ""
+    },
+    "job-jobse-dekmantel": {
+      "num": "Nº 045",
+      "latest_date": ""
+    },
+    "joe-claussell": {
+      "num": "Nº 046",
+      "latest_date": ""
+    },
+    "joy-orbison-various": {
+      "num": "Nº 047",
+      "latest_date": ""
+    },
+    "kink": {
+      "num": "Nº 048",
+      "latest_date": ""
+    },
+    "larry-heard-mr-fingers": {
+      "num": "Nº 049",
+      "latest_date": ""
+    },
+    "mark-broom": {
+      "num": "Nº 050",
+      "latest_date": ""
+    },
+    "objekt-various": {
+      "num": "Nº 051",
+      "latest_date": ""
+    },
+    "pangaea": {
+      "num": "Nº 052",
+      "latest_date": ""
+    },
+    "rey-colino-br": {
+      "num": "Nº 053",
+      "latest_date": ""
+    },
+    "shonky-b2b-dan-ghenacia": {
+      "num": "Nº 054",
+      "latest_date": ""
+    },
+    "tiger-woods": {
+      "num": "Nº 055",
+      "latest_date": ""
+    },
+    "vtss": {
+      "num": "Nº 056",
+      "latest_date": ""
+    }
+  },
+  "dj_rows": [
+    {
+      "id": "etapp-kyle",
+      "name": "Etapp Kyle",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "Electro",
+        "Ambient",
+        "Hypnotic Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/TBuJtKSgkN8/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 22,
+      "hours": 2.2,
+      "latest_date": "2026-08-08"
+    },
+    {
+      "id": "quest",
+      "name": "Quest",
+      "origin": "Rome, Italy",
+      "genres": [
+        "Deep Dub Techno",
+        "Ambient",
+        "Dub Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/pXvHkSLxCoA/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 27,
+      "hours": 2.8,
+      "latest_date": "2026-02-08"
+    },
+    {
+      "id": "kettama",
+      "name": "KETTAMA",
+      "origin": "",
+      "genres": [
+        "Bass",
+        "UKG",
+        "House",
+        "Garage"
+      ],
+      "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 13,
+      "hours": 1,
+      "latest_date": "2025-09-03"
+    },
+    {
+      "id": "honey-dijon",
+      "name": "Honey Dijon",
+      "origin": "",
+      "genres": [
+        "House",
+        "Techno",
+        "Soulful House",
+        "Disco"
+      ],
+      "image": "https://i.ytimg.com/vi/t5KwF_VsM50/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 9,
+      "hours": 2,
+      "latest_date": "2025-08-02"
+    },
+    {
+      "id": "avalon-emerson",
+      "name": "Avalon Emerson",
+      "origin": "",
+      "genres": [
+        "House",
+        "Techno",
+        "Electro",
+        "Breaks"
+      ],
+      "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 5,
+      "hours": 2,
+      "latest_date": "2025-08-01"
+    },
+    {
+      "id": "dj-pierre",
+      "name": "Dj Pierre",
+      "origin": "",
+      "genres": [
+        "Acid House",
+        "Chicago House",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 2,
+      "hours": 1.4,
+      "latest_date": "2025-07-18"
+    },
+    {
+      "id": "chaos-in-the-cbd",
+      "name": "Chaos In The CBD",
+      "origin": "",
+      "genres": [
+        "Afro House",
+        "Acid House",
+        "Deep House"
+      ],
+      "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 5,
+      "tracks": 99,
+      "hours": 5.5,
+      "latest_date": "2025-05-08"
+    },
+    {
+      "id": "richie-hawtin",
+      "name": "Richie Hawtin",
+      "origin": "",
+      "genres": [
+        "Minimal Techno",
+        "Techno",
+        "Acid",
+        "Experimental"
+      ],
+      "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 0,
+      "hours": 1.7,
+      "latest_date": "2025-05-03"
+    },
+    {
+      "id": "ben-ufo",
+      "name": "Ben Ufo",
+      "origin": "",
+      "genres": [
+        "House",
+        "Techno",
+        "Breaks",
+        "UK Bass"
+      ],
+      "image": "https://i.ytimg.com/vi/FvtjyRHN-hk/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 12,
+      "hours": 1.2,
+      "latest_date": "2025-01-18"
+    },
+    {
+      "id": "floating-points",
+      "name": "Floating Points",
+      "origin": "",
+      "genres": [
+        "House",
+        "Techno",
+        "Electronic",
+        "Jazz"
+      ],
+      "image": "https://i.ytimg.com/vi/kiy05zewUpg/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 21,
+      "hours": 5.5,
+      "latest_date": "2024-09-04"
+    },
+    {
+      "id": "young-marco",
+      "name": "Young Marco",
+      "origin": "",
+      "genres": [
+        "House",
+        "Disco",
+        "Balearic",
+        "Ambient"
+      ],
+      "image": "https://i.ytimg.com/vi/4z2bO7WizIg/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 13,
+      "hours": 1,
+      "latest_date": "2024-08-04"
+    },
+    {
+      "id": "palms-trax",
+      "name": "Palms Trax",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "House",
+        "Disco",
+        "Techno",
+        "Breakbeat"
+      ],
+      "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 31,
+      "hours": 3,
+      "latest_date": "2024-08-02"
+    },
+    {
+      "id": "dixon",
+      "name": "Dixon",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "House",
+        "Melodic Techno",
+        "Innervisions"
+      ],
+      "image": "https://i.ytimg.com/vi/JX4MiubWdRU/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 10,
+      "hours": 1.5,
+      "latest_date": "2024-05-25"
+    },
+    {
+      "id": "folamour",
+      "name": "Folamour",
+      "origin": "",
+      "genres": [
+        "House",
+        "Disco",
+        "Tech House",
+        "Nu Disco"
+      ],
+      "image": "https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg",
+      "completion_rate": 93,
+      "sets": 10,
+      "tracks": 148,
+      "hours": 3.1,
+      "latest_date": "2024-04-21"
+    },
+    {
+      "id": "peggy-gou",
+      "name": "Peggy Gou",
+      "origin": "",
+      "genres": [
+        "Electro",
+        "House",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/-UOMvxh4MYU/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 38,
+      "hours": 1.8,
+      "latest_date": "2024-03-16"
+    },
+    {
+      "id": "ian-pooley-paloma",
+      "name": "Ian Pooley Paloma",
+      "origin": "",
+      "genres": [
+        "House",
+        "Deep House",
+        "Disco",
+        "Chicago House"
+      ],
+      "image": "https://i.ytimg.com/vi/QltgvSxi924/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 18,
+      "hours": 3,
+      "latest_date": "2023-09-01"
+    },
+    {
+      "id": "ian-pooley-hor",
+      "name": "Ian Pooley Hor",
+      "origin": "",
+      "genres": [
+        "House",
+        "Deep House",
+        "Disco",
+        "Tech House"
+      ],
+      "image": "https://i.ytimg.com/vi/QltgvSxi924/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 8,
+      "hours": 1,
+      "latest_date": "2023-01-20"
+    },
+    {
+      "id": "mall-grab",
+      "name": "Mall Grab",
+      "origin": "",
+      "genres": [
+        "Breaks",
+        "House",
+        "Rave",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/ddeAyYF_uwg/hqdefault.jpg",
+      "completion_rate": 97,
+      "sets": 2,
+      "tracks": 33,
+      "hours": 1.5,
+      "latest_date": "2022-11-26"
+    },
+    {
+      "id": "kerri-chandler",
+      "name": "Kerri Chandler",
+      "origin": "",
+      "genres": [
+        "Soulful House",
+        "Deep House",
+        "Garage"
+      ],
+      "image": "https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 58,
+      "hours": 1.2,
+      "latest_date": "2022-09-23"
+    },
+    {
+      "id": "apollonia",
+      "name": "Apollonia",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "Tech House",
+        "Minimal",
+        "French Touch"
+      ],
+      "image": "https://i.ytimg.com/vi/oBFgjTi9ZTk/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 10,
+      "hours": 1,
+      "latest_date": "2019-01-23"
+    },
+    {
+      "id": "stephan-bodzin",
+      "name": "Stephan Bodzin",
+      "origin": "Bremen, Germany",
+      "genres": [
+        "Melodic Techno",
+        "Deep Techno",
+        "Live",
+        "Electronica"
+      ],
+      "image": "https://i.ytimg.com/vi/xF_QkfZI1mM/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 11,
+      "hours": 1.5,
+      "latest_date": "2018-07-21"
+    },
+    {
+      "id": "recondite",
+      "name": "Recondite",
+      "origin": "Lower Bavaria, Germany",
+      "genres": [
+        "Deep House",
+        "Melodic Techno",
+        "Minimal",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/q4ic2xA8pys/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 10,
+      "hours": 1.2,
+      "latest_date": "2017-08-18"
+    },
+    {
+      "id": "helena-hauff",
+      "name": "Helena Hauff",
+      "origin": "",
+      "genres": [
+        "Electro",
+        "Acid",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg",
+      "completion_rate": 94,
+      "sets": 1,
+      "tracks": 17,
+      "hours": 1,
+      "latest_date": "2017-08-06"
+    },
+    {
+      "id": "frankie-knuckles",
+      "name": "Frankie Knuckles",
+      "origin": "",
+      "genres": [
+        "House",
+        "Soulful House",
+        "Classic House",
+        "Disco"
+      ],
+      "image": "https://i.ytimg.com/vi/644UU55eyzk/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 10,
+      "hours": 2.9,
+      "latest_date": "2015-12-28"
+    },
+    {
+      "id": "donato-dozzy",
+      "name": "Donato Dozzy",
+      "origin": "Rome, Italy",
+      "genres": [
+        "Ambient",
+        "Deep Techno",
+        "Minimal",
+        "Dub Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/Dhzp6esYfeY/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 12,
+      "hours": 1,
+      "latest_date": "2015-11-12"
+    },
+    {
+      "id": "laurent-garnier",
+      "name": "Laurent Garnier",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "House",
+        "Deep House",
+        "French Touch"
+      ],
+      "image": "https://i.ytimg.com/vi/WG35-7LpIAc/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 33,
+      "hours": 2.9,
+      "latest_date": "2015-08-28"
+    },
+    {
+      "id": "call-super",
+      "name": "Call Super",
+      "origin": "",
+      "genres": [
+        "House",
+        "Techno",
+        "Breaks",
+        "Electro"
+      ],
+      "image": "https://i.ytimg.com/vi/erAR5S0mBsU/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 15,
+      "hours": 1,
+      "latest_date": "2015-07-31"
+    },
+    {
+      "id": "hunee",
+      "name": "Hunee",
+      "origin": "",
+      "genres": [
+        "House",
+        "Disco",
+        "Funk",
+        "Boogie"
+      ],
+      "image": "https://i.ytimg.com/vi/0RIU0cy6L1I/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 2,
+      "tracks": 21,
+      "hours": 2,
+      "latest_date": "2015-07-31"
+    },
+    {
+      "id": "floorplan",
+      "name": "Floorplan",
+      "origin": "",
+      "genres": [
+        "Gospel House",
+        "Detroit Techno",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/Ow530rJ9W9w/hqdefault.jpg",
+      "completion_rate": 88,
+      "sets": 1,
+      "tracks": 34,
+      "hours": 0,
+      "latest_date": "2015-06-06"
+    },
+    {
+      "id": "four-tet",
+      "name": "Four Tet",
+      "origin": "",
+      "genres": [
+        "Electronic",
+        "House",
+        "Experimental",
+        "UK Bass"
+      ],
+      "image": "https://i.ytimg.com/vi/Ca6pjR2TLns/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 9,
+      "hours": 1.4,
+      "latest_date": "2015-05-14"
+    },
+    {
+      "id": "alex-do-clr-305",
+      "name": "Alex Do Clr 305",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "Dub Techno",
+        "Hypnotic Techno",
+        "Ambient"
+      ],
+      "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 14,
+      "hours": 1,
+      "latest_date": "2014-12-29"
+    },
+    {
+      "id": "maceo-plex",
+      "name": "Maceo Plex",
+      "origin": "",
+      "genres": [
+        "Tech House",
+        "Techno",
+        "Electro",
+        "Melodic Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/5vHRUsP20dQ/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 8,
+      "hours": 1.5,
+      "latest_date": "2014-09-17"
+    },
+    {
+      "id": "masters-at-work",
+      "name": "Masters At Work",
+      "origin": "",
+      "genres": [
+        "House",
+        "Soulful House",
+        "Disco",
+        "Garage"
+      ],
+      "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 10,
+      "hours": 3.8,
+      "latest_date": "2014-08-10"
+    },
+    {
+      "id": "motor-city-drum-ensemble",
+      "name": "Motor City Drum Ensemble",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "House",
+        "Disco",
+        "Balearic",
+        "Soul"
+      ],
+      "image": "https://i.ytimg.com/vi/p6ozF0Y-PzU/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 5,
+      "hours": 0.8,
+      "latest_date": "2014-08-03"
+    },
+    {
+      "id": "marcel-dettmann",
+      "name": "Marcel Dettmann",
+      "origin": "Berlin, Germany",
+      "genres": [
+        "Techno",
+        "Deep Techno",
+        "Electro",
+        "Industrial"
+      ],
+      "image": "https://i.ytimg.com/vi/ic7P_qWkdE8/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 12,
+      "hours": 1,
+      "latest_date": "2014-05-22"
+    },
+    {
+      "id": "david-august",
+      "name": "David August",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "Melodic House",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/mRfwdJx0NDE/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 8,
+      "hours": 0,
+      "latest_date": "2014-04-09"
+    },
+    {
+      "id": "seth-troxler",
+      "name": "Seth Troxler",
+      "origin": "",
+      "genres": [
+        "House",
+        "Tech House",
+        "Chicago House",
+        "Minimal"
+      ],
+      "image": "https://i.ytimg.com/vi/QbeD_Q3l0ts/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 6,
+      "hours": 1.4,
+      "latest_date": "2014-03-20"
+    },
+    {
+      "id": "carl-cox",
+      "name": "Carl Cox",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "House",
+        "Tech House",
+        "Classic House"
+      ],
+      "image": "https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 11,
+      "hours": 0.7,
+      "latest_date": "2013-08-15"
+    },
+    {
+      "id": "ame",
+      "name": "Ame",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "Techno",
+        "Melodic House",
+        "Innervisions"
+      ],
+      "image": "https://i.ytimg.com/vi/yANX378KYkQ/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 7,
+      "hours": 4,
+      "latest_date": "2012-10-18"
+    },
+    {
+      "id": "moodymann",
+      "name": "Moodymann",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "Disco",
+        "Funk",
+        "Soul",
+        "Detroit"
+      ],
+      "image": "https://i.ytimg.com/vi/9buMWTbg9ko/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 13,
+      "hours": 2,
+      "latest_date": "2010-03-04"
+    },
+    {
+      "id": "blessed-madonna",
+      "name": "Blessed Madonna",
+      "origin": "",
+      "genres": [
+        "House",
+        "Deep House",
+        "Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/_IyMTaEeHTM/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 5,
+      "hours": 1.4,
+      "latest_date": ""
+    },
+    {
+      "id": "carl-craig",
+      "name": "Carl Craig",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "Detroit Techno"
+      ],
+      "image": "https://i.ytimg.com/vi/ETn1ZyMB4L4/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 8,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "cassius",
+      "name": "Cassius",
+      "origin": "",
+      "genres": [
+        "House",
+        "French Touch",
+        "Nu Disco"
+      ],
+      "image": "https://i.ytimg.com/vi/kv92f5__3UQ/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 20,
+      "hours": 1.6,
+      "latest_date": ""
+    },
+    {
+      "id": "dj-koze-various",
+      "name": "Dj Koze Various",
+      "origin": "",
+      "genres": [
+        "House",
+        "Electronica"
+      ],
+      "image": "https://i.ytimg.com/vi/o2RnxfYedbw/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 3,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "job-jobse-dekmantel",
+      "name": "Job Jobse Dekmantel",
+      "origin": "",
+      "genres": [
+        "House",
+        "Tech House",
+        "Deep House"
+      ],
+      "image": "https://i.ytimg.com/vi/IxhYDVRqdYY/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 1,
+      "hours": 1,
+      "latest_date": ""
+    },
+    {
+      "id": "joe-claussell",
+      "name": "Joe Claussell",
+      "origin": "",
+      "genres": [
+        "House",
+        "Soulful House",
+        "Disco",
+        "Latin"
+      ],
+      "image": "https://i.ytimg.com/vi/keb3u2g87J8/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 5,
+      "hours": 1.5,
+      "latest_date": ""
+    },
+    {
+      "id": "joy-orbison-various",
+      "name": "Joy Orbison Various",
+      "origin": "",
+      "genres": [
+        "UKG",
+        "Garage",
+        "House"
+      ],
+      "image": "https://i.ytimg.com/vi/kyzJamk5mNE/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 1,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "kink",
+      "name": "Kink",
+      "origin": "",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "image": "https://i.ytimg.com/vi/osS2zsW8mLk/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 5,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "larry-heard-mr-fingers",
+      "name": "Larry Heard Mr Fingers",
+      "origin": "",
+      "genres": [
+        "House",
+        "Deep House",
+        "Soul",
+        "Garage"
+      ],
+      "image": "https://i.ytimg.com/vi/nexIxpuSMGw/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 6,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "mark-broom",
+      "name": "Mark Broom",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "House"
+      ],
+      "image": "https://i.ytimg.com/vi/YNPGycZY8TI/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 6,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "objekt-various",
+      "name": "Objekt Various",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "Experimental"
+      ],
+      "image": "https://i.ytimg.com/vi/vrtNe0XNX1M/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 3,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "pangaea",
+      "name": "Pangaea",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "UK Bass",
+        "Dubstep"
+      ],
+      "image": "https://i.ytimg.com/vi/n1WrLfY-3s8/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 7,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "rey-colino-br",
+      "name": "Rey Colino Br",
+      "origin": "",
+      "genres": [
+        "House",
+        "Deep House",
+        "Tech House"
+      ],
+      "image": "https://i.ytimg.com/vi/GcWjJyuWyig/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 0,
+      "hours": 1,
+      "latest_date": ""
+    },
+    {
+      "id": "shonky-b2b-dan-ghenacia",
+      "name": "Shonky B2b Dan Ghenacia",
+      "origin": "",
+      "genres": [
+        "Deep House",
+        "House",
+        "Tech House"
+      ],
+      "image": "https://i.ytimg.com/vi/raWcqoNaCXk/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 3,
+      "hours": 0,
+      "latest_date": ""
+    },
+    {
+      "id": "tiger-woods",
+      "name": "Tiger Woods",
+      "origin": "",
+      "genres": [
+        "House",
+        "Disco",
+        "Tech House"
+      ],
+      "image": "https://i.ytimg.com/vi/zmqlJOb9yNc/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 21,
+      "hours": 1.9,
+      "latest_date": ""
+    },
+    {
+      "id": "vtss",
+      "name": "Vtss",
+      "origin": "",
+      "genres": [
+        "Techno",
+        "Industrial",
+        "Acid"
+      ],
+      "image": "https://i.ytimg.com/vi/I1mhJjxtJx4/hqdefault.jpg",
+      "completion_rate": 100,
+      "sets": 1,
+      "tracks": 5,
+      "hours": 0,
+      "latest_date": ""
+    }
+  ],
+  "sets": [
+    {
+      "id": "etapp-kyle-early-2000s-archive",
+      "dj_id": "etapp-kyle",
+      "dj_name": "Etapp Kyle",
+      "title": "Early 2000s Archive: Tribal & Vocal House",
+      "venue": "Berlin",
+      "date": "2026-08-08",
+      "genres": [
+        "Tribal House",
+        "Vocal House",
+        "House"
+      ],
+      "duration_formatted": "1:08:03",
+      "duration_minutes": 69,
+      "view_count": 8045,
+      "completion_rate": 100,
+      "tracks": 16,
+      "known": 16,
+      "requested_ids": 2,
+      "labels": 16,
+      "catalog": "Nº 001"
+    },
+    {
+      "id": "quest-section-2026",
+      "dj_id": "quest",
+      "dj_name": "Quest",
+      "title": "Quest @ SECTION. (Vinyl Set)",
+      "venue": "SECTION., Rome",
+      "date": "2026-02-08",
+      "genres": [
+        "Deep Dub Techno",
+        "Ambient",
+        "Dub Techno"
+      ],
+      "duration_formatted": "1:35:00",
+      "duration_minutes": 95,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 14,
+      "known": 14,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 002"
+    },
+    {
+      "id": "kettama-br-london",
+      "dj_id": "kettama",
+      "dj_name": "KETTAMA",
+      "title": "Boiler Room London 2025",
+      "venue": "Boiler Room, London",
+      "date": "2025-09-03",
+      "genres": [
+        "House",
+        "Bass",
+        "Garage",
+        "UKG"
+      ],
+      "duration_formatted": "57:23",
+      "duration_minutes": 57,
+      "view_count": 1300000,
+      "completion_rate": 100,
+      "tracks": 13,
+      "known": 13,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 003"
+    },
+    {
+      "id": "honey-dijon-dekmantel-2025",
+      "dj_id": "honey-dijon",
+      "dj_name": "Honey Dijon",
+      "title": "Dekmantel Festival 2025 (The Loop)",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2025-08-02",
+      "genres": [
+        "House",
+        "Techno",
+        "Disco",
+        "Soulful House"
+      ],
+      "duration_formatted": "1:59:55",
+      "duration_minutes": 120,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 9,
+      "known": 9,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 004"
+    },
+    {
+      "id": "avalon-emerson-dekmantel-2025",
+      "dj_id": "avalon-emerson",
+      "dj_name": "Avalon Emerson",
+      "title": "The Loop - Dekmantel Festival 2025",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2025-08-01",
+      "genres": [
+        "House",
+        "Techno",
+        "Electro",
+        "Breaks"
+      ],
+      "duration_formatted": "1:59:15",
+      "duration_minutes": 119,
+      "view_count": 152000,
+      "completion_rate": 100,
+      "tracks": 5,
+      "known": 5,
+      "requested_ids": 3,
+      "labels": 0,
+      "catalog": "Nº 005"
+    },
+    {
+      "id": "dj-pierre-br-chicago",
+      "dj_id": "dj-pierre",
+      "dj_name": "Dj Pierre",
+      "title": "Boiler Room Chicago 2025",
+      "venue": "Boiler Room, Chicago",
+      "date": "2025-07-18",
+      "genres": [
+        "Acid House",
+        "Techno",
+        "Chicago House",
+        "Acid Techno"
+      ],
+      "duration_formatted": "1:24:14",
+      "duration_minutes": 84,
+      "view_count": 78000,
+      "completion_rate": 100,
+      "tracks": 2,
+      "known": 2,
+      "requested_ids": 2,
+      "labels": 0,
+      "catalog": "Nº 006"
+    },
+    {
+      "id": "chaos-mixmag-lab-london",
+      "dj_id": "chaos-in-the-cbd",
+      "dj_name": "Chaos In The CBD",
+      "title": "Mixmag Lab London",
+      "venue": "Mixmag Lab, London, UK",
+      "date": "2025-05-08",
+      "genres": [
+        "Deep House",
+        "House",
+        "Soulful House"
+      ],
+      "duration_formatted": "1:02:17",
+      "duration_minutes": 62,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 17,
+      "known": 17,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 007"
+    },
+    {
+      "id": "richie-hawtin-br-paris",
+      "dj_id": "richie-hawtin",
+      "dj_name": "Richie Hawtin",
+      "title": "Boiler Room Paris 2025",
+      "venue": "Boiler Room, Paris",
+      "date": "2025-05-03",
+      "genres": [
+        "Minimal Techno",
+        "Techno",
+        "Acid",
+        "Experimental"
+      ],
+      "duration_formatted": "1:40:30",
+      "duration_minutes": 100,
+      "view_count": 212000,
+      "completion_rate": 100,
+      "tracks": 0,
+      "known": 0,
+      "requested_ids": 2,
+      "labels": 0,
+      "catalog": "Nº 008"
+    },
+    {
+      "id": "ben-ufo-br-sugar-mountain-2025",
+      "dj_id": "ben-ufo",
+      "dj_name": "Ben Ufo",
+      "title": "Boiler Room x Sugar Mountain 2025",
+      "venue": "Sugar Mountain, Melbourne",
+      "date": "2025-01-18",
+      "genres": [
+        "House",
+        "Techno",
+        "UK Bass",
+        "Breaks",
+        "Eclectic"
+      ],
+      "duration_formatted": "1:13:47",
+      "duration_minutes": 74,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 12,
+      "known": 12,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 009"
+    },
+    {
+      "id": "floating-points-br-nyc-5hr",
+      "dj_id": "floating-points",
+      "dj_name": "Floating Points",
+      "title": "5 Hour Set | Boiler Room: New York",
+      "venue": "Boiler Room, New York City",
+      "date": "2024-09-04",
+      "genres": [
+        "House",
+        "Techno",
+        "Electronic",
+        "Ambient",
+        "Jazz"
+      ],
+      "duration_formatted": "5:29:30",
+      "duration_minutes": 330,
+      "view_count": 2000000,
+      "completion_rate": 100,
+      "tracks": 21,
+      "known": 21,
+      "requested_ids": 3,
+      "labels": 0,
+      "catalog": "Nº 010"
+    },
+    {
+      "id": "young-marco-dekmantel-ten",
+      "dj_id": "young-marco",
+      "dj_name": "Young Marco",
+      "title": "Dekmantel Ten - Radar Stage 2024",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2024-08-04",
+      "genres": [
+        "House",
+        "Balearic",
+        "Disco",
+        "Ambient"
+      ],
+      "duration_formatted": "59:37",
+      "duration_minutes": 60,
+      "view_count": 136000,
+      "completion_rate": 100,
+      "tracks": 13,
+      "known": 13,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 011"
+    },
+    {
+      "id": "palms-trax-dekmantel-2024",
+      "dj_id": "palms-trax",
+      "dj_name": "Palms Trax",
+      "title": "10 Years Dekmantel Festival 2024",
+      "venue": "Dekmantel Festival, Amsterdamse Bos",
+      "date": "2024-08-02",
+      "genres": [
+        "House",
+        "Breakbeat",
+        "Techno"
+      ],
+      "duration_formatted": "1:58:31",
+      "duration_minutes": 119,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 11,
+      "known": 11,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 012"
+    },
+    {
+      "id": "dixon-cercle-2024",
+      "dj_id": "dixon",
+      "dj_name": "Dixon",
+      "title": "Cercle Festival 2024",
+      "venue": "Cercle Festival",
+      "date": "2024-05-25",
+      "genres": [
+        "Melodic Techno",
+        "House",
+        "Deep House",
+        "Innervisions"
+      ],
+      "duration_formatted": "1:28:31",
+      "duration_minutes": 88,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 10,
+      "known": 10,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 013"
+    },
+    {
+      "id": "folamour-yuma-coachella-2024",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Yuma, Coachella 2024 (Weekend 2)",
+      "venue": "Yuma, Coachella, USA",
+      "date": "2024-04-21",
+      "genres": [
+        "House",
+        "Disco"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 68,
+      "tracks": 19,
+      "known": 13,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "peggy-gou-cercle-lille-2024",
+      "dj_id": "peggy-gou",
+      "dj_name": "Peggy Gou",
+      "title": "Cercle @ Palais des Beaux-Arts de Lille",
+      "venue": "Palais des Beaux-Arts, Lille, France",
+      "date": "2024-03-16",
+      "genres": [
+        "House",
+        "Techno",
+        "Electro"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 2,
+      "view_count": 6104298,
+      "completion_rate": 100,
+      "tracks": 22,
+      "known": 22,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 015"
+    },
+    {
+      "id": "folamour-br-sugar-mountain-2024",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Boiler Room x Sugar Mountain 2024",
+      "venue": "Sugar Mountain, Melbourne, Australia",
+      "date": "2024-01-20",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 60,
+      "view_count": 3691617,
+      "completion_rate": 100,
+      "tracks": 12,
+      "known": 12,
+      "requested_ids": 0,
+      "labels": 7,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "ian-pooley-paloma-berlin-2023",
+      "dj_id": "ian-pooley-paloma",
+      "dj_name": "Ian Pooley Paloma",
+      "title": "Reopening Night, Paloma Berlin 2023",
+      "venue": "Paloma, Berlin",
+      "date": "2023-09-01",
+      "genres": [
+        "Deep House",
+        "House",
+        "Disco",
+        "Tech House"
+      ],
+      "duration_formatted": "3:00:00",
+      "duration_minutes": 180,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 18,
+      "known": 18,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 016"
+    },
+    {
+      "id": "folamour-complex-sessions-074-2023",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Complex Sessions 074",
+      "venue": "Radio/Podcast",
+      "date": "2023-07-26",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 1,
+      "view_count": 0,
+      "completion_rate": 91,
+      "tracks": 11,
+      "known": 10,
+      "requested_ids": 0,
+      "labels": 7,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "folamour-cercle-geneva-2023",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Cercle @ Cathédrale Saint-Pierre, Geneva",
+      "venue": "Cercle, St. Pierre Cathedral, Geneva, Switzerland",
+      "date": "2023-07-10",
+      "genres": [
+        "House",
+        "Nu Disco",
+        "Disco"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 2,
+      "view_count": 3000000,
+      "completion_rate": 100,
+      "tracks": 22,
+      "known": 22,
+      "requested_ids": 0,
+      "labels": 12,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "etapp-kyle-lot-radio-2023",
+      "dj_id": "etapp-kyle",
+      "dj_name": "Etapp Kyle",
+      "title": "The Lot Radio New York 2023",
+      "venue": "The Lot Radio, New York",
+      "date": "2023-05-26",
+      "genres": [
+        "Techno",
+        "Hypnotic Techno",
+        "Electro",
+        "Ambient"
+      ],
+      "duration_formatted": "1:00:00",
+      "duration_minutes": 60,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 6,
+      "known": 6,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 001"
+    },
+    {
+      "id": "ian-pooley-hor-berlin-2023",
+      "dj_id": "ian-pooley-hor",
+      "dj_name": "Ian Pooley Hor",
+      "title": "HÖR Berlin 2023",
+      "venue": "HÖR, Berlin",
+      "date": "2023-01-20",
+      "genres": [
+        "Deep House",
+        "House",
+        "Chicago House",
+        "Disco"
+      ],
+      "duration_formatted": "1:00:00",
+      "duration_minutes": 60,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 8,
+      "known": 8,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 017"
+    },
+    {
+      "id": "folamour-lost-paradise-2022",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Lost Paradise",
+      "venue": "Lost Paradise, Australia",
+      "date": "2022-12-30",
+      "genres": [
+        "House",
+        "Nu Disco",
+        "Disco"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 1,
+      "view_count": 0,
+      "completion_rate": 84,
+      "tracks": 19,
+      "known": 16,
+      "requested_ids": 0,
+      "labels": 10,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "mall-grab-br-melbourne-2022",
+      "dj_id": "mall-grab",
+      "dj_name": "Mall Grab",
+      "title": "Boiler Room Melbourne",
+      "venue": "Pica, Melbourne, Australia",
+      "date": "2022-11-26",
+      "genres": [
+        "House",
+        "Techno",
+        "Breaks",
+        "Rave"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 2,
+      "view_count": 2382681,
+      "completion_rate": 96,
+      "tracks": 25,
+      "known": 24,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 018"
+    },
+    {
+      "id": "kerri-chandler-br-nyc-136",
+      "dj_id": "kerri-chandler",
+      "dj_name": "Kerri Chandler",
+      "title": "Boiler Room New York (Reel-to-Reel Set)",
+      "venue": "Boiler Room, New York City",
+      "date": "2022-09-23",
+      "genres": [
+        "Deep House",
+        "Soulful House",
+        "Garage"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 2,
+      "view_count": 1496023,
+      "completion_rate": 100,
+      "tracks": 29,
+      "known": 29,
+      "requested_ids": 0,
+      "labels": 28,
+      "catalog": "Nº 019"
+    },
+    {
+      "id": "kerri-chandler-br-nyc-2022",
+      "dj_id": "kerri-chandler",
+      "dj_name": "Kerri Chandler",
+      "title": "Boiler Room New York 2022",
+      "venue": "Boiler Room, New York City",
+      "date": "2022-09-23",
+      "genres": [
+        "Deep House",
+        "Soulful House",
+        "Garage",
+        "Chicago House"
+      ],
+      "duration_formatted": "1:09:18",
+      "duration_minutes": 69,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 29,
+      "known": 29,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 019"
+    },
+    {
+      "id": "folamour-bbc-radio1-residency-2022",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "BBC Radio 1 Residency",
+      "venue": "BBC Radio 1, UK",
+      "date": "2022-01-20",
+      "genres": [
+        "House",
+        "Nu Disco",
+        "Disco"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 12,
+      "known": 12,
+      "requested_ids": 0,
+      "labels": 6,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "folamour-polaris-verbier-2020",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Polaris Festival New Year's Eve",
+      "venue": "Polaris Festival, Verbier, Switzerland",
+      "date": "2019-12-31",
+      "genres": [
+        "Disco",
+        "House",
+        "Nu Disco"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 13,
+      "known": 13,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "chaos-br-barcelona-nitsa",
+      "dj_id": "chaos-in-the-cbd",
+      "dj_name": "Chaos In The CBD",
+      "title": "Boiler Room Barcelona: Nitsa",
+      "venue": "Nitsa, Barcelona, Spain",
+      "date": "2019-09-01",
+      "genres": [
+        "Deep House",
+        "House",
+        "Disco"
+      ],
+      "duration_formatted": "1:00:26",
+      "duration_minutes": 60,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 18,
+      "known": 18,
+      "requested_ids": 0,
+      "labels": 2,
+      "catalog": "Nº 007"
+    },
+    {
+      "id": "folamour-br-fly-edinburgh-2019",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Boiler Room x FLY Open Air Festival",
+      "venue": "FLY Open Air Festival, Edinburgh, UK",
+      "date": "2019-05-18",
+      "genres": [
+        "Nu Disco",
+        "Disco",
+        "House"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 60,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 12,
+      "known": 12,
+      "requested_ids": 0,
+      "labels": 6,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "folamour-dj-mag-hq-2019",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "DJ Mag HQ Sessions",
+      "venue": "DJ Mag HQ, London, UK",
+      "date": "2019-04-18",
+      "genres": [
+        "Nu Disco",
+        "Disco"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 1,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 14,
+      "known": 14,
+      "requested_ids": 0,
+      "labels": 11,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "quest-mixmag-lab-rome",
+      "dj_id": "quest",
+      "dj_name": "Quest",
+      "title": "Quest @ Mixmag Lab Rome",
+      "venue": "Mixmag Lab Rome (A|X Armani Exchange)",
+      "date": "2019-03-15",
+      "genres": [
+        "Deep Dub Techno",
+        "Ambient",
+        "Dub Techno"
+      ],
+      "duration_formatted": "1:13:00",
+      "duration_minutes": 73,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 13,
+      "known": 13,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 002"
+    },
+    {
+      "id": "apollonia-br-epizode-2019",
+      "dj_id": "apollonia",
+      "dj_name": "Apollonia",
+      "title": "Boiler Room x Epizode Festival Vietnam 2019",
+      "venue": "Epizode Festival, Vietnam",
+      "date": "2019-01-23",
+      "genres": [
+        "Minimal",
+        "Deep House",
+        "Tech House",
+        "French Touch"
+      ],
+      "duration_formatted": "57:43",
+      "duration_minutes": 58,
+      "view_count": 290519,
+      "completion_rate": 100,
+      "tracks": 10,
+      "known": 10,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 020"
+    },
+    {
+      "id": "palms-trax-dekmantel-2018",
+      "dj_id": "palms-trax",
+      "dj_name": "Palms Trax",
+      "title": "Boiler Room x Dekmantel Festival 2018",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2018-08-03",
+      "genres": [
+        "House",
+        "Deep House",
+        "Disco",
+        "Balearic"
+      ],
+      "duration_formatted": "57:39",
+      "duration_minutes": 58,
+      "view_count": 1700000,
+      "completion_rate": 100,
+      "tracks": 20,
+      "known": 20,
+      "requested_ids": 1,
+      "labels": 0,
+      "catalog": "Nº 012"
+    },
+    {
+      "id": "stephan-bodzin-cercle-piz-gloria",
+      "dj_id": "stephan-bodzin",
+      "dj_name": "Stephan Bodzin",
+      "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+      "venue": "Piz Gloria, Interlaken, Switzerland",
+      "date": "2018-07-21",
+      "genres": [
+        "Melodic Techno",
+        "Deep Techno",
+        "Live"
+      ],
+      "duration_formatted": "1:29:00",
+      "duration_minutes": 89,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 11,
+      "known": 11,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 021"
+    },
+    {
+      "id": "recondite-cercle-bernay",
+      "dj_id": "recondite",
+      "dj_name": "Recondite",
+      "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+      "venue": "Abbatiale de Bernay, Normandy, France",
+      "date": "2017-08-18",
+      "genres": [
+        "Deep House",
+        "Melodic Techno",
+        "Minimal"
+      ],
+      "duration_formatted": "1:12:00",
+      "duration_minutes": 72,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 10,
+      "known": 10,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 022"
+    },
+    {
+      "id": "helena-hauff-br-dekmantel-2017",
+      "dj_id": "helena-hauff",
+      "dj_name": "Helena Hauff",
+      "title": "Boiler Room x Dekmantel Festival 2017",
+      "venue": "Dekmantel Festival, Amsterdamse Bos, Amsterdam",
+      "date": "2017-08-06",
+      "genres": [
+        "Electro",
+        "Acid",
+        "Techno"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 58,
+      "view_count": 1009963,
+      "completion_rate": 94,
+      "tracks": 17,
+      "known": 16,
+      "requested_ids": 0,
+      "labels": 14,
+      "catalog": "Nº 023"
+    },
+    {
+      "id": "chaos-in-the-cbd-ballantines-lebanon",
+      "dj_id": "chaos-in-the-cbd",
+      "dj_name": "Chaos In The CBD",
+      "title": "Boiler Room x Ballantine's True Music: Hybrid Sounds Lebanon",
+      "venue": "Beirut, Lebanon",
+      "date": "2017-05-12",
+      "genres": [
+        "Deep House",
+        "Acid House",
+        "Disco",
+        "Boogie"
+      ],
+      "duration_formatted": "1:00:52",
+      "duration_minutes": 60,
+      "view_count": 161577,
+      "completion_rate": 100,
+      "tracks": 27,
+      "known": 27,
+      "requested_ids": 10,
+      "labels": 0,
+      "catalog": "Nº 007"
+    },
+    {
+      "id": "chaos-in-the-cbd-djoon-make-it-deep",
+      "dj_id": "chaos-in-the-cbd",
+      "dj_name": "Chaos In The CBD",
+      "title": "Make It Deep @ Djoon, Paris",
+      "venue": "Djoon, Paris, France",
+      "date": "2016-12-16",
+      "genres": [
+        "Deep House",
+        "House",
+        "Disco",
+        "Soulful House"
+      ],
+      "duration_formatted": "1:28:33",
+      "duration_minutes": 89,
+      "view_count": 125989,
+      "completion_rate": 100,
+      "tracks": 23,
+      "known": 23,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 007"
+    },
+    {
+      "id": "frankie-knuckles-session-2015",
+      "dj_id": "frankie-knuckles",
+      "dj_name": "Frankie Knuckles",
+      "title": "In Session 2015 (Last Recorded Set)",
+      "venue": "Mixmag Studio, London",
+      "date": "2015-12-28",
+      "genres": [
+        "House",
+        "Soulful House",
+        "Classic House",
+        "Disco"
+      ],
+      "duration_formatted": "1:50:04",
+      "duration_minutes": 110,
+      "view_count": 399000,
+      "completion_rate": 100,
+      "tracks": 0,
+      "known": 0,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 024"
+    },
+    {
+      "id": "donato-dozzy-br-rome",
+      "dj_id": "donato-dozzy",
+      "dj_name": "Donato Dozzy",
+      "title": "Boiler Room: Donato Dozzy",
+      "venue": "Boiler Room, Rome",
+      "date": "2015-11-12",
+      "genres": [
+        "Ambient",
+        "Deep Techno",
+        "Minimal"
+      ],
+      "duration_formatted": "0:58:00",
+      "duration_minutes": 58,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 12,
+      "known": 12,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 025"
+    },
+    {
+      "id": "laurent-garnier-br-lyon",
+      "dj_id": "laurent-garnier",
+      "dj_name": "Laurent Garnier",
+      "title": "Boiler Room Lyon DJ Set",
+      "venue": "Lyon, France",
+      "date": "2015-08-28",
+      "genres": [
+        "House",
+        "Techno",
+        "Deep House",
+        "French Touch"
+      ],
+      "duration_formatted": "2:54:49",
+      "duration_minutes": 175,
+      "view_count": 1900000,
+      "completion_rate": 100,
+      "tracks": 33,
+      "known": 33,
+      "requested_ids": 5,
+      "labels": 0,
+      "catalog": "Nº 026"
+    },
+    {
+      "id": "call-super-br-dekmantel-2015",
+      "dj_id": "call-super",
+      "dj_name": "Call Super",
+      "title": "Boiler Room x Dekmantel Festival 2015",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2015-07-31",
+      "genres": [
+        "House",
+        "Techno",
+        "Electro",
+        "Breaks",
+        "Experimental"
+      ],
+      "duration_formatted": "1:00:00",
+      "duration_minutes": 60,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 15,
+      "known": 15,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 027"
+    },
+    {
+      "id": "hunee-br-dekmantel-2015",
+      "dj_id": "hunee",
+      "dj_name": "Hunee",
+      "title": "Boiler Room x Dekmantel Festival",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2015-07-31",
+      "genres": [
+        "Disco",
+        "House",
+        "Boogie",
+        "Funk"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 59,
+      "view_count": 1794251,
+      "completion_rate": 100,
+      "tracks": 18,
+      "known": 18,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 028"
+    },
+    {
+      "id": "floorplan-weather-paris-2015",
+      "dj_id": "floorplan",
+      "dj_name": "Floorplan",
+      "title": "Weather Festival Paris 2015 (Mixmag)",
+      "venue": "Weather Festival, Paris, France",
+      "date": "2015-06-06",
+      "genres": [
+        "Techno",
+        "Gospel House",
+        "Detroit Techno"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 2,
+      "view_count": 514000,
+      "completion_rate": 88,
+      "tracks": 34,
+      "known": 30,
+      "requested_ids": 0,
+      "labels": 26,
+      "catalog": "Nº 029"
+    },
+    {
+      "id": "four-tet-br-london-2015",
+      "dj_id": "four-tet",
+      "dj_name": "Four Tet",
+      "title": "Boiler Room London 2015",
+      "venue": "Boiler Room, London",
+      "date": "2015-05-14",
+      "genres": [
+        "House",
+        "Electronic",
+        "Experimental",
+        "UK Bass"
+      ],
+      "duration_formatted": "1:23:16",
+      "duration_minutes": 83,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 9,
+      "known": 9,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 030"
+    },
+    {
+      "id": "alex-do-clr-305",
+      "dj_id": "alex-do-clr-305",
+      "dj_name": "Alex Do Clr 305",
+      "title": "CLR Podcast 305",
+      "venue": "CLR Podcast",
+      "date": "2014-12-29",
+      "genres": [
+        "Techno",
+        "Hypnotic Techno",
+        "Dub Techno",
+        "Ambient"
+      ],
+      "duration_formatted": "1:00:00",
+      "duration_minutes": 60,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 14,
+      "known": 14,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 031"
+    },
+    {
+      "id": "maceo-plex-br-berlin-2014",
+      "dj_id": "maceo-plex",
+      "dj_name": "Maceo Plex",
+      "title": "Boiler Room Berlin 2014",
+      "venue": "Boiler Room, Berlin",
+      "date": "2014-09-17",
+      "genres": [
+        "Tech House",
+        "Melodic Techno",
+        "Electro",
+        "Ellum"
+      ],
+      "duration_formatted": "1:30:45",
+      "duration_minutes": 90,
+      "view_count": 16600000,
+      "completion_rate": 100,
+      "tracks": 8,
+      "known": 8,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 032"
+    },
+    {
+      "id": "maw-br-london-2014",
+      "dj_id": "masters-at-work",
+      "dj_name": "Masters At Work",
+      "title": "Boiler Room London 2014 (Defected)",
+      "venue": "Boiler Room, London",
+      "date": "2014-08-10",
+      "genres": [
+        "House",
+        "Soulful House",
+        "Disco",
+        "Garage",
+        "Latin"
+      ],
+      "duration_formatted": "3:44:45",
+      "duration_minutes": 225,
+      "view_count": 2880000,
+      "completion_rate": 100,
+      "tracks": 10,
+      "known": 10,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 033"
+    },
+    {
+      "id": "mcde-dekmantel-2014",
+      "dj_id": "motor-city-drum-ensemble",
+      "dj_name": "Motor City Drum Ensemble",
+      "title": "Boiler Room x Dekmantel Festival 2014",
+      "venue": "Dekmantel Festival, Amsterdam",
+      "date": "2014-08-03",
+      "genres": [
+        "House",
+        "Disco",
+        "Deep House",
+        "Soul",
+        "Balearic"
+      ],
+      "duration_formatted": "47:11",
+      "duration_minutes": 47,
+      "view_count": 4200000,
+      "completion_rate": 100,
+      "tracks": 5,
+      "known": 5,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 034"
+    },
+    {
+      "id": "marcel-dettmann-br-berlin",
+      "dj_id": "marcel-dettmann",
+      "dj_name": "Marcel Dettmann",
+      "title": "Boiler Room Berlin: Marcel Dettmann",
+      "venue": "Boiler Room, Berlin",
+      "date": "2014-05-22",
+      "genres": [
+        "Techno",
+        "Deep Techno",
+        "Electro"
+      ],
+      "duration_formatted": "1:02:00",
+      "duration_minutes": 62,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 12,
+      "known": 12,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 035"
+    },
+    {
+      "id": "david-august-br-berlin-2014",
+      "dj_id": "david-august",
+      "dj_name": "David August",
+      "title": "Boiler Room Berlin 2014",
+      "venue": "Boiler Room, Berlin, Germany",
+      "date": "2014-04-09",
+      "genres": [
+        "Melodic House",
+        "Techno",
+        "Deep House"
+      ],
+      "duration_formatted": "",
+      "duration_minutes": 1,
+      "view_count": 14500000,
+      "completion_rate": 100,
+      "tracks": 8,
+      "known": 8,
+      "requested_ids": 0,
+      "labels": 4,
+      "catalog": "Nº 036"
+    },
+    {
+      "id": "seth-troxler-br-mexico-2014",
+      "dj_id": "seth-troxler",
+      "dj_name": "Seth Troxler",
+      "title": "Boiler Room Stay True Mexico 2014",
+      "venue": "Boiler Room, Mexico City",
+      "date": "2014-03-20",
+      "genres": [
+        "Tech House",
+        "House",
+        "Minimal",
+        "Chicago House"
+      ],
+      "duration_formatted": "1:20:50",
+      "duration_minutes": 81,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 6,
+      "known": 6,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 037"
+    },
+    {
+      "id": "carl-cox-ibiza-villa",
+      "dj_id": "carl-cox",
+      "dj_name": "Carl Cox",
+      "title": "Boiler Room Ibiza Villa Takeovers",
+      "venue": "Ibiza Villa Takeovers, Ibiza",
+      "date": "2013-08-15",
+      "genres": [
+        "Tech House",
+        "House",
+        "Techno",
+        "Classic House"
+      ],
+      "duration_formatted": "44:09",
+      "duration_minutes": 44,
+      "view_count": 169000,
+      "completion_rate": 100,
+      "tracks": 11,
+      "known": 11,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 038"
+    },
+    {
+      "id": "frankie-knuckles-br-nyc",
+      "dj_id": "frankie-knuckles",
+      "dj_name": "Frankie Knuckles",
+      "title": "Boiler Room NYC DJ Set",
+      "venue": "Boiler Room, New York City",
+      "date": "2013-05-12",
+      "genres": [
+        "House",
+        "Classic House",
+        "Soulful House",
+        "Disco"
+      ],
+      "duration_formatted": "1:06:21",
+      "duration_minutes": 66,
+      "view_count": 4400000,
+      "completion_rate": 100,
+      "tracks": 10,
+      "known": 10,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 024"
+    },
+    {
+      "id": "ame-br-innervisions-ade-2012",
+      "dj_id": "ame",
+      "dj_name": "Ame",
+      "title": "Boiler Room x Innervisions ADE 2012",
+      "venue": "ADE, Amsterdam",
+      "date": "2012-10-18",
+      "genres": [
+        "Melodic House",
+        "Techno",
+        "Deep House",
+        "Innervisions"
+      ],
+      "duration_formatted": "4:00:00",
+      "duration_minutes": 240,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 7,
+      "known": 7,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 039"
+    },
+    {
+      "id": "moodymann-rbma-2010",
+      "dj_id": "moodymann",
+      "dj_name": "Moodymann",
+      "title": "RBMA Rollerskating Jam London 2010",
+      "venue": "Renaissance Rooms, London",
+      "date": "2010-03-04",
+      "genres": [
+        "Deep House",
+        "Funk",
+        "Disco",
+        "Soul",
+        "Detroit"
+      ],
+      "duration_formatted": "1:59:53",
+      "duration_minutes": 120,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 13,
+      "known": 13,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 040"
+    },
+    {
+      "id": "blessed-br",
+      "dj_id": "blessed-madonna",
+      "dj_name": "Blessed Madonna",
+      "title": "Boiler Room London",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "1:25:53",
+      "duration_minutes": 85,
+      "view_count": 446948,
+      "completion_rate": 100,
+      "tracks": 5,
+      "known": 5,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 041"
+    },
+    {
+      "id": "carl-craig-br-rbma-2013",
+      "dj_id": "carl-craig",
+      "dj_name": "Carl Craig",
+      "title": "Set",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 8,
+      "known": 8,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 042"
+    },
+    {
+      "id": "cassius-cercle-2017",
+      "dj_id": "cassius",
+      "dj_name": "Cassius",
+      "title": "Cercle @ Château de Champs-sur-Marne",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "1:34:11",
+      "duration_minutes": 94,
+      "view_count": 243317,
+      "completion_rate": 100,
+      "tracks": 20,
+      "known": 20,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 043"
+    },
+    {
+      "id": "chaos-glitch-2022",
+      "dj_id": "chaos-in-the-cbd",
+      "dj_name": "Chaos In The CBD",
+      "title": "Boiler Room x Glitch Festival 2022",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "57:50",
+      "duration_minutes": 57,
+      "view_count": 328881,
+      "completion_rate": 100,
+      "tracks": 14,
+      "known": 14,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 007"
+    },
+    {
+      "id": "dj-koze-various",
+      "dj_id": "dj-koze-various",
+      "dj_name": "Dj Koze Various",
+      "title": "Set",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 3,
+      "known": 3,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 044"
+    },
+    {
+      "id": "folamour-br-sugar",
+      "dj_id": "folamour",
+      "dj_name": "Folamour",
+      "title": "Boiler Room x Sugar Mountain 2024",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "59:45",
+      "duration_minutes": 59,
+      "view_count": 3691617,
+      "completion_rate": 100,
+      "tracks": 14,
+      "known": 14,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 014"
+    },
+    {
+      "id": "hunee-dekmantel",
+      "dj_id": "hunee",
+      "dj_name": "Hunee",
+      "title": "Boiler Room x Dekmantel Festival",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "58:53",
+      "duration_minutes": 58,
+      "view_count": 1794251,
+      "completion_rate": 100,
+      "tracks": 3,
+      "known": 3,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 028"
+    },
+    {
+      "id": "job-jobse-dekmantel",
+      "dj_id": "job-jobse-dekmantel",
+      "dj_name": "Job Jobse Dekmantel",
+      "title": "Boiler Room x Dekmantel Festival",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "59:01",
+      "duration_minutes": 59,
+      "view_count": 471905,
+      "completion_rate": 100,
+      "tracks": 1,
+      "known": 1,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 045"
+    },
+    {
+      "id": "joe-claussell-br-paris-2014",
+      "dj_id": "joe-claussell",
+      "dj_name": "Joe Claussell",
+      "title": "Boiler Room x Piknic Electronik Montreal 2024",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "1:31:26",
+      "duration_minutes": 91,
+      "view_count": 229995,
+      "completion_rate": 100,
+      "tracks": 5,
+      "known": 5,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 046"
+    },
+    {
+      "id": "joy-orbison-various",
+      "dj_id": "joy-orbison-various",
+      "dj_name": "Joy Orbison Various",
+      "title": "Various Sets",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 1,
+      "known": 1,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 047"
+    },
+    {
+      "id": "kink-br-moscow-2014",
+      "dj_id": "kink",
+      "dj_name": "Kink",
+      "title": "Set",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 5,
+      "known": 5,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 048"
+    },
+    {
+      "id": "larry-heard-mr-fingers-mix-2012",
+      "dj_id": "larry-heard-mr-fingers",
+      "dj_name": "Larry Heard Mr Fingers",
+      "title": "A Mr. Fingers Music Mix 2012",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 6,
+      "known": 6,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 049"
+    },
+    {
+      "id": "mallgrab-br",
+      "dj_id": "mall-grab",
+      "dj_name": "Mall Grab",
+      "title": "Boiler Room Melbourne",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "1:30:02",
+      "duration_minutes": 90,
+      "view_count": 2382681,
+      "completion_rate": 100,
+      "tracks": 8,
+      "known": 8,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 018"
+    },
+    {
+      "id": "mark-broom-br-bogota-2024",
+      "dj_id": "mark-broom",
+      "dj_name": "Mark Broom",
+      "title": "Boiler Room Bogotá 2024",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 6,
+      "known": 6,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 050"
+    },
+    {
+      "id": "objekt-various",
+      "dj_id": "objekt-various",
+      "dj_name": "Objekt Various",
+      "title": "Set",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 3,
+      "known": 3,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 051"
+    },
+    {
+      "id": "pangaea-br-dekmantel-2015",
+      "dj_id": "pangaea",
+      "dj_name": "Pangaea",
+      "title": "Set",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 7,
+      "known": 7,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 052"
+    },
+    {
+      "id": "peggy-cercle",
+      "dj_id": "peggy-gou",
+      "dj_name": "Peggy Gou",
+      "title": "Cercle @ Palais des Beaux-Arts Lille",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "1:48:21",
+      "duration_minutes": 108,
+      "view_count": 6104298,
+      "completion_rate": 100,
+      "tracks": 16,
+      "known": 16,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 015"
+    },
+    {
+      "id": "rey-colino-br",
+      "dj_id": "rey-colino-br",
+      "dj_name": "Rey Colino Br",
+      "title": "Listen! x Boiler Room",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "58:37",
+      "duration_minutes": 58,
+      "view_count": 24781,
+      "completion_rate": 100,
+      "tracks": 0,
+      "known": 0,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 053"
+    },
+    {
+      "id": "shonky-b2b-dan-ghenacia-ibiza-2014",
+      "dj_id": "shonky-b2b-dan-ghenacia",
+      "dj_name": "Shonky B2b Dan Ghenacia",
+      "title": "b2b Dan Ghenacia @ Ibiza 2014",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 3,
+      "known": 3,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 054"
+    },
+    {
+      "id": "tiger-woods-br-london",
+      "dj_id": "tiger-woods",
+      "dj_name": "Tiger Woods",
+      "title": "Boiler Room London DJ Set",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "1:55:21",
+      "duration_minutes": 115,
+      "view_count": 234139,
+      "completion_rate": 100,
+      "tracks": 21,
+      "known": 21,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 055"
+    },
+    {
+      "id": "vtss-br-glitch-2024",
+      "dj_id": "vtss",
+      "dj_name": "Vtss",
+      "title": "Boiler Room x Glitch Festival 2024",
+      "venue": "",
+      "date": "",
+      "genres": [],
+      "duration_formatted": "",
+      "duration_minutes": 0,
+      "view_count": 0,
+      "completion_rate": 100,
+      "tracks": 5,
+      "known": 5,
+      "requested_ids": 0,
+      "labels": 0,
+      "catalog": "Nº 056"
+    }
+  ],
+  "genres": [
+    {
+      "genre": "House",
+      "count": 35
+    },
+    {
+      "genre": "Disco",
+      "count": 21
+    },
+    {
+      "genre": "Techno",
+      "count": 19
+    },
+    {
+      "genre": "Deep House",
+      "count": 17
+    },
+    {
+      "genre": "Soulful House",
+      "count": 8
+    },
+    {
+      "genre": "Tech House",
+      "count": 7
+    },
+    {
+      "genre": "Electro",
+      "count": 7
+    },
+    {
+      "genre": "Ambient",
+      "count": 7
+    },
+    {
+      "genre": "Nu Disco",
+      "count": 6
+    },
+    {
+      "genre": "Minimal",
+      "count": 4
+    },
+    {
+      "genre": "Chicago House",
+      "count": 4
+    },
+    {
+      "genre": "Garage",
+      "count": 4
+    },
+    {
+      "genre": "Melodic Techno",
+      "count": 4
+    },
+    {
+      "genre": "Breaks",
+      "count": 4
+    },
+    {
+      "genre": "Classic House",
+      "count": 3
+    },
+    {
+      "genre": "Deep Techno",
+      "count": 3
+    },
+    {
+      "genre": "Balearic",
+      "count": 3
+    },
+    {
+      "genre": "Dub Techno",
+      "count": 3
+    },
+    {
+      "genre": "Experimental",
+      "count": 3
+    },
+    {
+      "genre": "Funk",
+      "count": 2
+    },
+    {
+      "genre": "Soul",
+      "count": 2
+    },
+    {
+      "genre": "Melodic House",
+      "count": 2
+    },
+    {
+      "genre": "Innervisions",
+      "count": 2
+    },
+    {
+      "genre": "Hypnotic Techno",
+      "count": 2
+    },
+    {
+      "genre": "Electronic",
+      "count": 2
+    },
+    {
+      "genre": "UK Bass",
+      "count": 2
+    },
+    {
+      "genre": "Boogie",
+      "count": 2
+    },
+    {
+      "genre": "French Touch",
+      "count": 2
+    },
+    {
+      "genre": "Acid House",
+      "count": 2
+    },
+    {
+      "genre": "Acid",
+      "count": 2
+    },
+    {
+      "genre": "Deep Dub Techno",
+      "count": 2
+    },
+    {
+      "genre": "Detroit",
+      "count": 1
+    },
+    {
+      "genre": "Latin",
+      "count": 1
+    },
+    {
+      "genre": "Ellum",
+      "count": 1
+    },
+    {
+      "genre": "Gospel House",
+      "count": 1
+    },
+    {
+      "genre": "Detroit Techno",
+      "count": 1
+    },
+    {
+      "genre": "Live",
+      "count": 1
+    },
+    {
+      "genre": "Rave",
+      "count": 1
+    },
+    {
+      "genre": "Breakbeat",
+      "count": 1
+    },
+    {
+      "genre": "Jazz",
+      "count": 1
+    },
+    {
+      "genre": "Eclectic",
+      "count": 1
+    },
+    {
+      "genre": "Minimal Techno",
+      "count": 1
+    },
+    {
+      "genre": "Acid Techno",
+      "count": 1
+    },
+    {
+      "genre": "Bass",
+      "count": 1
+    },
+    {
+      "genre": "UKG",
+      "count": 1
+    },
+    {
+      "genre": "Tribal House",
+      "count": 1
+    },
+    {
+      "genre": "Vocal House",
+      "count": 1
+    }
+  ],
+  "top_shared_tracks": [
+    {
+      "track": "recondite - glim",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "donato dozzy - gol",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "function - against the wall",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "andy stott - numb",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        }
+      ]
+    },
+    {
+      "track": "recondite - drgn",
+      "djs": [
+        "ame",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "ame-br-innervisions-ade-2012",
+          "title": "Boiler Room x Innervisions ADE 2012",
+          "artist": "ame"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "terrence dixon - one bedroom apartment",
+      "djs": [
+        "call-super",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    },
+    {
+      "track": "the field - over the ice",
+      "djs": [
+        "call-super",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "call-super-br-dekmantel-2015",
+          "title": "Boiler Room x Dekmantel Festival 2015",
+          "artist": "call-super"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "octave one - blackwater",
+      "djs": [
+        "carl-craig",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "seth-troxler"
+      ],
+      "sets": [
+        {
+          "id": "carl-craig-br-rbma-2013",
+          "title": "Set",
+          "artist": "carl-craig"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "marcel-dettmann-br-berlin",
+          "title": "Boiler Room Berlin: Marcel Dettmann",
+          "artist": "marcel-dettmann"
+        },
+        {
+          "id": "seth-troxler-br-mexico-2014",
+          "title": "Boiler Room Stay True Mexico 2014",
+          "artist": "seth-troxler"
+        }
+      ]
+    },
+    {
+      "track": "tale of us - another earth",
+      "djs": [
+        "carl-craig",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "carl-craig-br-rbma-2013",
+          "title": "Set",
+          "artist": "carl-craig"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "floating points - problems",
+      "djs": [
+        "etapp-kyle",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "etapp-kyle-lot-radio-2023",
+          "title": "The Lot Radio New York 2023",
+          "artist": "etapp-kyle"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "four tet - school",
+      "djs": [
+        "four-tet",
+        "quest",
+        "recondite",
+        "stephan-bodzin"
+      ],
+      "sets": [
+        {
+          "id": "four-tet-br-london-2015",
+          "title": "Boiler Room London 2015",
+          "artist": "four-tet"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "recondite-cercle-bernay",
+          "title": "Recondite @ Cercle (Abbatiale de Bernay, France)",
+          "artist": "recondite"
+        },
+        {
+          "id": "stephan-bodzin-cercle-piz-gloria",
+          "title": "Stephan Bodzin @ Cercle (Piz Gloria, Switzerland)",
+          "artist": "stephan-bodzin"
+        }
+      ]
+    },
+    {
+      "track": "boards of canada - split your infinities",
+      "djs": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest"
+      ],
+      "sets": [
+        {
+          "id": "alex-do-clr-305",
+          "title": "CLR Podcast 305",
+          "artist": "alex-do-clr-305"
+        },
+        {
+          "id": "donato-dozzy-br-rome",
+          "title": "Boiler Room: Donato Dozzy",
+          "artist": "donato-dozzy"
+        },
+        {
+          "id": "quest-mixmag-lab-rome",
+          "title": "Quest @ Mixmag Lab Rome",
+          "artist": "quest"
+        },
+        {
+          "id": "quest-section-2026",
+          "title": "Quest @ SECTION. (Vinyl Set)",
+          "artist": "quest"
+        }
+      ]
+    }
+  ],
+  "label_clout": [
+    {
+      "label": "Ultra",
+      "djs": [
+        "folamour",
+        "kerri-chandler"
+      ],
+      "tracks": 3
+    }
+  ],
+  "venues": [
+    {
+      "venue": "Dekmantel Festival, Amsterdam",
+      "djs": [
+        "avalon-emerson",
+        "call-super",
+        "honey-dijon",
+        "hunee",
+        "motor-city-drum-ensemble",
+        "palms-trax",
+        "young-marco"
+      ],
+      "sets": 7
+    },
+    {
+      "venue": "Boiler Room, New York City",
+      "djs": [
+        "floating-points",
+        "frankie-knuckles",
+        "kerri-chandler"
+      ],
+      "sets": 4
+    },
+    {
+      "venue": "Boiler Room, London",
+      "djs": [
+        "four-tet",
+        "kettama",
+        "masters-at-work"
+      ],
+      "sets": 3
+    },
+    {
+      "venue": "Boiler Room, Berlin",
+      "djs": [
+        "maceo-plex",
+        "marcel-dettmann"
+      ],
+      "sets": 2
+    }
+  ],
+  "super_connectors": [
+    {
+      "dj_id": "quest",
+      "name": "Quest",
+      "connection_count": 44,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "recondite",
+        "stephan-bodzin",
+        "marcel-dettmann",
+        "ame",
+        "apollonia",
+        "call-super",
+        "carl-craig",
+        "peggy-gou",
+        "pangaea",
+        "etapp-kyle",
+        "four-tet",
+        "mark-broom",
+        "floating-points",
+        "larry-heard-mr-fingers",
+        "moodymann",
+        "laurent-garnier"
+      ]
+    },
+    {
+      "dj_id": "donato-dozzy",
+      "name": "Donato Dozzy",
+      "connection_count": 23,
+      "shared_with": [
+        "alex-do-clr-305",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "marcel-dettmann",
+        "apollonia",
+        "call-super",
+        "carl-craig",
+        "seth-troxler",
+        "peggy-gou",
+        "pangaea",
+        "ame",
+        "larry-heard-mr-fingers"
+      ]
+    },
+    {
+      "dj_id": "stephan-bodzin",
+      "name": "Stephan Bodzin",
+      "connection_count": 20,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "ame",
+        "call-super",
+        "carl-craig",
+        "etapp-kyle",
+        "floating-points",
+        "four-tet",
+        "seth-troxler",
+        "laurent-garnier"
+      ]
+    },
+    {
+      "dj_id": "marcel-dettmann",
+      "name": "Marcel Dettmann",
+      "connection_count": 20,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "call-super",
+        "carl-craig",
+        "seth-troxler",
+        "etapp-kyle",
+        "mark-broom",
+        "peggy-gou"
+      ]
+    },
+    {
+      "dj_id": "recondite",
+      "name": "Recondite",
+      "connection_count": 18,
+      "shared_with": [
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "quest",
+        "stephan-bodzin",
+        "ame",
+        "call-super",
+        "carl-craig",
+        "etapp-kyle",
+        "floating-points",
+        "four-tet",
+        "moodymann",
+        "laurent-garnier"
+      ]
+    },
+    {
+      "dj_id": "call-super",
+      "name": "Call Super",
+      "connection_count": 14,
+      "shared_with": [
+        "donato-dozzy",
+        "marcel-dettmann",
+        "quest",
+        "stephan-bodzin",
+        "recondite",
+        "alex-do-clr-305",
+        "etapp-kyle",
+        "floating-points",
+        "seth-troxler",
+        "shonky-b2b-dan-ghenacia",
+        "larry-heard-mr-fingers"
+      ]
+    },
+    {
+      "dj_id": "alex-do-clr-305",
+      "name": "Alex Do Clr 305",
+      "connection_count": 12,
+      "shared_with": [
+        "donato-dozzy",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "marcel-dettmann",
+        "call-super",
+        "mark-broom",
+        "shonky-b2b-dan-ghenacia",
+        "ame"
+      ]
+    },
+    {
+      "dj_id": "carl-craig",
+      "name": "Carl Craig",
+      "connection_count": 9,
+      "shared_with": [
+        "donato-dozzy",
+        "marcel-dettmann",
+        "seth-troxler",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "moodymann",
+        "mark-broom"
+      ]
+    },
+    {
+      "dj_id": "ame",
+      "name": "Ame",
+      "connection_count": 8,
+      "shared_with": [
+        "dixon",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "alex-do-clr-305",
+        "donato-dozzy",
+        "ian-pooley-hor",
+        "ian-pooley-paloma"
+      ]
+    },
+    {
+      "dj_id": "four-tet",
+      "name": "Four Tet",
+      "connection_count": 7,
+      "shared_with": [
+        "dj-koze-various",
+        "quest",
+        "recondite",
+        "stephan-bodzin",
+        "ben-ufo"
+      ]
+    },
+    {
+      "dj_id": "mark-broom",
+      "name": "Mark Broom",
+      "connection_count": 7,
+      "shared_with": [
+        "marcel-dettmann",
+        "quest",
+        "alex-do-clr-305",
+        "carl-craig"
+      ]
+    },
+    {
+      "dj_id": "seth-troxler",
+      "name": "Seth Troxler",
+      "connection_count": 6,
+      "shared_with": [
+        "carl-craig",
+        "donato-dozzy",
+        "marcel-dettmann",
+        "stephan-bodzin",
+        "call-super",
+        "shonky-b2b-dan-ghenacia",
+        "honey-dijon"
+      ]
+    }
+  ]
+}

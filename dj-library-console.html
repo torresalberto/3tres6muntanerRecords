@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discoteca 3TRES6 — DJ Library</title>
+    <title>Cabina 3TRES6 — DJ Library</title>
     <meta
       name="description"
-      content="Discoteca 3TRES6: 77 sets con tracklists, labels, IDs más solicitados y la red de conexiones entre DJs, extraídos de YouTube."
+      content="Cabina 3TRES6: consola de sets con tracklists, labels e IDs pedidos por el público. Escucha y salta a cada track, minuto a minuto."
     />
-    <link rel="canonical" href="https://3tres6records.albto.me/dj-library.html" />
+    <link rel="canonical" href="https://3tres6records.albto.me/dj-library-console.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +30,7 @@
     </noscript>
 
     <link rel="stylesheet" href="styles.css?v=1" />
-    <link rel="stylesheet" href="css/dj-library.css?v=5" />
+    <link rel="stylesheet" href="css/dj-library-console.css?v=1" />
     <link rel="stylesheet" href="css/nav.css" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
@@ -46,7 +46,7 @@
       });
     </script>
   </head>
-  <body class="dj-library-page">
+  <body class="cabina-page">
     <div class="top-banner">
       <div class="ticker-wrapper">
         <div class="ticker-content">
@@ -143,8 +143,8 @@
         <div class="subnav-divider"></div>
         <div class="subnav-tabs">
           <a href="blog.html" class="subnav-tab">Blog</a>
-          <a href="dj-library.html" class="subnav-tab active" aria-current="page">Discoteca</a>
-          <a href="dj-library-console.html" class="subnav-tab">Cabina</a>
+          <a href="dj-library.html" class="subnav-tab">Discoteca</a>
+          <a href="dj-library-console.html" class="subnav-tab active" aria-current="page">Cabina</a>
           <a href="3d-brain.html" class="subnav-tab">Neural</a>
           <a href="crew.html" class="subnav-tab">Crew</a>
           <a href="mapa.html" class="subnav-tab">Mapa</a>
@@ -154,103 +154,57 @@
     </nav>
 
     <main data-swup>
-      <!-- HERO -->
-      <section class="disc-hero">
-        <div class="disc-hero-inner">
-          <div class="disc-hero-copy">
-            <span class="disc-kicker">Archivo sonoro · Barcelona → México</span>
-            <h1 class="disc-title">Discoteca<br />3<em>TRES</em>6</h1>
-            <p class="disc-lede">
-              Cada set es una pieza del archivo. Tracklists completos, labels, IDs pedidos por el
-              público y la red de conexiones entre DJs — escuchados track a track.
-            </p>
-            <div class="disc-counters" id="discCounters">
-              <span class="stat-pill"><strong>…</strong> Cargando</span>
-            </div>
-          </div>
-          <div class="disc-hero-art" aria-hidden="true">
-            <div class="vinyl">
-              <span class="vinyl-label">3TRES6<br />RECORDS</span>
-            </div>
-          </div>
-        </div>
+      <!-- HEADER -->
+      <section class="cabina-header">
+        <span class="cabina-kicker">Cabina · modo escucha</span>
+        <h1 class="cabina-title">Cabina 3TRES6</h1>
+        <p class="cabina-lede">
+          Los 77 sets del archivo en orden de llegada. Abre uno, elige un track de la timeline o
+          salta desde la barra de reproducción. Tracklists, labels e IDs pedidos por el público en
+          cada set.
+        </p>
+        <div class="cabina-counters" id="cabinaCounters"></div>
       </section>
 
-      <!-- FEATURED -->
-      <section class="disc-feat" id="discFeatured"></section>
-
-      <!-- CRATE -->
-      <section class="crate-section">
-        <div class="crate-toolbar">
-          <div class="crate-search">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </svg>
+      <!-- CONSOLE -->
+      <section class="cabina-main">
+        <aside class="cabina-rail">
+          <div class="cabina-search">
             <input
               type="search"
-              id="crateSearch"
-              placeholder="Busca DJ, set, venue o género…"
+              id="cabinaSearch"
+              placeholder="Buscar set, DJ, venue…"
               autocomplete="off"
-              aria-label="Buscar en la discoteca"
+              aria-label="Buscar en la cabina"
             />
           </div>
-          <select class="crate-sort" id="crateSort" aria-label="Ordenar">
-            <option value="recent">Nuevos primero</option>
-            <option value="name">A–Z</option>
-            <option value="connections">Más conectados</option>
-          </select>
-          <div
-            class="crate-genres"
-            id="genreChips"
-            role="group"
-            aria-label="Filtrar por género"
-          ></div>
-        </div>
-        <div class="sleeve-grid" id="sleeveGrid">
-          <div class="empty-state">
-            <div class="loading-spinner"></div>
-            Cargando la estantería…
+          <div class="rail-block">
+            <label for="cabinaSort">Ordenar</label>
+            <select class="rail-select" id="cabinaSort" aria-label="Ordenar sets">
+              <option value="recent">Nuevos primero</option>
+              <option value="name">DJ A–Z</option>
+              <option value="plays">Más vistos</option>
+              <option value="duration">Más largos</option>
+              <option value="completion">Mejor completados</option>
+            </select>
           </div>
-        </div>
-      </section>
-
-      <!-- EDITORIAL -->
-      <section class="disc-editorial">
-        <h2>El hilo que une a todos</h2>
-        <p class="ed-sub">
-          Tracks que cruzan sets enteros, labels que conectan DJs y los escenarios donde todo se
-          toca. La historia del archivo en tres planos.
-        </p>
-        <h3 style="font-size: 1rem; letter-spacing: -0.01em; margin: 0 0 0.8rem">
-          Tracks más compartidos
-        </h3>
-        <div class="ed-scroller" id="edTopTracks"></div>
-        <div class="ed-grid">
-          <div class="ed-panel">
-            <h3>Labels con peso</h3>
-            <div id="edLabels"></div>
+          <div class="rail-block">
+            <label>Género</label>
+            <div class="rail-genres" id="railGenres"></div>
           </div>
-          <div class="ed-panel">
-            <h3>Redes de venues</h3>
-            <div id="edVenues"></div>
-          </div>
+        </aside>
+        <div class="cabina-list" id="setList">
+          <div class="loading-spinner" style="margin-top: 2rem"></div>
+          <p class="cabina-lede" style="text-align: center">Cargando la cabina…</p>
         </div>
       </section>
 
       <!-- EL HILO -->
-      <section class="disc-graph">
+      <section class="cabina-graph">
         <h2>El Hilo</h2>
         <p class="ed-sub">
-          Grafo de conexiones: DJs unidos por tracks y artistas compartidos. Filtra por género para
-          ver quién sostiene el mismo hilo. Tamaño del nodo = número de conexiones.
+          Grafo de conexiones entre DJs por tracks y artistas compartidos. Tamaño del nodo =
+          conexiones; filtra por género.
         </p>
         <div class="hilo-filters" id="hiloFilters"></div>
         <div class="hilo" id="hiloGraph"></div>
@@ -276,31 +230,17 @@
       </footer>
     </main>
 
-    <!-- SET SHEET -->
-    <div
-      class="set-sheet"
-      id="setSheet"
-      hidden
-      role="dialog"
-      aria-modal="true"
-      aria-label="Set de la discoteca"
-    >
-      <div class="set-sheet-scrim"></div>
-      <aside class="set-sheet-panel">
-        <button class="set-sheet-close" aria-label="Cerrar">✕</button>
-        <div class="set-sheet-body">
-          <div id="setTabs"></div>
-          <div class="set-head">
-            <div class="set-dj" id="setDj"></div>
-            <h2 class="set-title" id="setTitle"></h2>
-            <div class="set-chips" id="setMeta"></div>
-          </div>
-          <div class="set-player" id="setPlayer"></div>
-          <h3 class="set-tl-title" id="setTracklistTitle">Tracklist</h3>
-          <ol class="tl" id="setTracklist"></ol>
-          <div class="set-extras" id="setExtras"></div>
-        </div>
-      </aside>
+    <!-- NOW PLAYING -->
+    <div class="now-bar" id="nowBar" aria-live="polite">
+      <div class="now-bar-top">
+        <span class="now-pulse" aria-hidden="true"></span>
+        <span class="now-info">
+          <span class="now-dj" id="nowDj"></span>
+          <span class="now-title" id="nowTitle"></span>
+        </span>
+        <button class="now-close" aria-label="Cerrar ahora suena">✕</button>
+      </div>
+      <div class="now-scrub" id="nowScrub"></div>
     </div>
 
     <script>
@@ -311,6 +251,6 @@
     <script src="js/nav.js" defer></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/dj-library-core.js" defer></script>
-    <script src="js/dj-library.js" defer></script>
+    <script src="js/dj-library-console.js" defer></script>
   </body>
 </html>

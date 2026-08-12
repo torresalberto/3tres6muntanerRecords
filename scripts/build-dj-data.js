@@ -1,11 +1,11 @@
 /**
  * DJ Data Compiler
- * 
+ *
  * Usage: node scripts/build-dj-data.js
- * 
+ *
  * Reads individual set JSON files from data/djs/sets/
  * and generates compiled outputs for the 3D Brain and DJ Library.
- * 
+ *
  * Generated files:
  *   - data/tracklists/tracklists.js     (inline load for 3D Brain)
  *   - data/djs/cross-references.json    (shared tracks, artists, venues, labels)
@@ -22,27 +22,77 @@ const OUT_DIR = path.join(ROOT, 'data');
 
 // Known aliases for filename → DJ ID mapping
 const ALIASES = {
-  'blessed': 'blessed-madonna',
-  'mallgrab': 'mall-grab',
-  'chaos': 'chaos-in-the-cbd',
-  'peggy': 'peggy-gou',
-  'hunee': 'hunee',
-  'maw': 'masters-at-work',
-  'mcde': 'motor-city-drum-ensemble',
+  blessed: 'blessed-madonna',
+  mallgrab: 'mall-grab',
+  chaos: 'chaos-in-the-cbd',
+  peggy: 'peggy-gou',
+  hunee: 'hunee',
+  maw: 'masters-at-work',
+  mcde: 'motor-city-drum-ensemble',
 };
 
 // Venue/event suffixes to strip for DJ ID extraction
 const VENUE_PATTERNS = [
-  '-br-', '-cercle-', '-dekmantel-', '-ibiza-', '-session-', '-mix-',
-  '-weather-', '-rbma-', '-various-', '-dj-mag-', '-complex-', '-bbc-',
-  '-lost-', '-polaris-', '-yuma-', '-ballantines-', '-glitch-', '-nyc-',
-  '-paris-', '-lyon-', '-berlin-', '-london-', '-moscow-', '-mexico-',
-  '-chicago-', '-bogota-', '-geneva-', '-lille-', '-melbourne-', '-sugar-',
-  '-fly-', '-edinburgh-', '-verbier-', '-coachella-', '-ade-', '-epizode-',
-  '-lot-', '-5hr-', '-136-', '-305-', '-2022-', '-2023-', '-2024-', '-2025-',
-  '-2010-', '-2012-', '-2013-', '-2014-', '-2015-', '-2017-', '-2019-',
-  '-2020-', '-074-', '-ten-', '-2021-', '-2016-', '-2018-', '-2011-',
-  '-2009-', '-2008-'
+  '-br-',
+  '-cercle-',
+  '-dekmantel-',
+  '-ibiza-',
+  '-session-',
+  '-mix-',
+  '-weather-',
+  '-rbma-',
+  '-various-',
+  '-dj-mag-',
+  '-complex-',
+  '-bbc-',
+  '-lost-',
+  '-polaris-',
+  '-yuma-',
+  '-ballantines-',
+  '-glitch-',
+  '-nyc-',
+  '-paris-',
+  '-lyon-',
+  '-berlin-',
+  '-london-',
+  '-moscow-',
+  '-mexico-',
+  '-chicago-',
+  '-bogota-',
+  '-geneva-',
+  '-lille-',
+  '-melbourne-',
+  '-sugar-',
+  '-fly-',
+  '-edinburgh-',
+  '-verbier-',
+  '-coachella-',
+  '-ade-',
+  '-epizode-',
+  '-lot-',
+  '-5hr-',
+  '-136-',
+  '-305-',
+  '-2022-',
+  '-2023-',
+  '-2024-',
+  '-2025-',
+  '-2010-',
+  '-2012-',
+  '-2013-',
+  '-2014-',
+  '-2015-',
+  '-2017-',
+  '-2019-',
+  '-2020-',
+  '-074-',
+  '-ten-',
+  '-2021-',
+  '-2016-',
+  '-2018-',
+  '-2011-',
+  '-2009-',
+  '-2008-',
 ];
 
 function resolveDJId(fileId, knownDJs) {
@@ -57,7 +107,7 @@ function resolveDJId(fileId, knownDJs) {
   }
 
   // Try aliases
-  const aliasBase = Object.keys(ALIASES).find(a => fileId === a || fileId.startsWith(a + '-'));
+  const aliasBase = Object.keys(ALIASES).find((a) => fileId === a || fileId.startsWith(a + '-'));
   if (aliasBase) return ALIASES[aliasBase];
 
   // Try stripping venue patterns to extract DJ ID
@@ -99,19 +149,39 @@ function isValidTrack(artist, title) {
   if (!artist || !title) return false;
   const a = artist.toLowerCase().trim();
   const t = title.toLowerCase().trim();
-  const invalidArtists = ['id', '?', 'unknown', 'unreleased', 'unreleased id', 'id unreleased', 'unidentified', ' unreleased'];
-  const invalidTitles = ['id', '?', 'unknown', 'unreleased', 'unreleased id', 'id unreleased', 'unidentified', ' unreleased', 'unreleased ', 'id remix'];
+  const invalidArtists = [
+    'id',
+    '?',
+    'unknown',
+    'unreleased',
+    'unreleased id',
+    'id unreleased',
+    'unidentified',
+    ' unreleased',
+  ];
+  const invalidTitles = [
+    'id',
+    '?',
+    'unknown',
+    'unreleased',
+    'unreleased id',
+    'id unreleased',
+    'unidentified',
+    ' unreleased',
+    'unreleased ',
+    'id remix',
+  ];
   if (invalidArtists.includes(a)) return false;
   if (invalidTitles.includes(t)) return false;
   return true;
 }
 
 function toTitleCase(str) {
-  return str.replace(/\b\w/g, c => c.toUpperCase());
+  return str.replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function loadSets() {
-  const files = fs.readdirSync(SETS_DIR).filter(f => f.endsWith('.json'));
+  const files = fs.readdirSync(SETS_DIR).filter((f) => f.endsWith('.json'));
   const sets = {};
   for (const file of files) {
     const fileId = file.replace('.json', '');
@@ -135,7 +205,7 @@ function buildTracklistsOutput(djsById, djSets) {
     tracklists[djId] = {
       artist: dj.name || toTitleCase(djId.replace(/-/g, ' ')),
       artist_id: djId,
-      sets: sets.map(set => ({
+      sets: sets.map((set) => ({
         id: set.id,
         title: set.title || set.id,
         venue: set.venue || '',
@@ -147,14 +217,14 @@ function buildTracklistsOutput(djsById, djSets) {
         tracks_identified: set.tracks_identified || (set.tracklist || []).length,
         tracks_total: set.tracks_total || (set.tracklist || []).length,
         source: set.source || 'Compiled from DJ Library',
-        tracklist: (set.tracklist || []).map(t => ({
+        tracklist: (set.tracklist || []).map((t) => ({
           time: t.time || '',
           artist: t.artist || '',
           title: t.title || '',
           label: t.label || undefined,
-          note: t.note || undefined
-        }))
-      }))
+          note: t.note || undefined,
+        })),
+      })),
     };
   }
 
@@ -171,7 +241,7 @@ function buildCrossReferences(djsById, djSets) {
   for (const [djId, sets] of Object.entries(djSets)) {
     for (const set of sets) {
       // Genre index
-      for (const g of (set.genre || [])) {
+      for (const g of set.genre || []) {
         if (!genreIndex[g]) genreIndex[g] = { djs: new Set(), sets: [] };
         genreIndex[g].djs.add(djId);
         genreIndex[g].sets.push(set.id);
@@ -184,7 +254,7 @@ function buildCrossReferences(djsById, djSets) {
         venueIndex[set.venue].sets.push(set.id);
       }
 
-      for (const track of (set.tracklist || [])) {
+      for (const track of set.tracklist || []) {
         const valid = isValidTrack(track.artist, track.title);
 
         const trackKey = normalizeTrackKey(track.artist, track.title);
@@ -195,7 +265,7 @@ function buildCrossReferences(djsById, djSets) {
             setId: set.id,
             setTitle: set.title,
             time: track.time,
-            label: track.label
+            label: track.label,
           });
         }
 
@@ -205,7 +275,7 @@ function buildCrossReferences(djsById, djSets) {
           artistIndex[normArtist].push({
             djId,
             track: track.title,
-            setId: set.id
+            setId: set.id,
           });
         }
 
@@ -216,7 +286,7 @@ function buildCrossReferences(djsById, djSets) {
             artist: track.artist,
             title: track.title,
             djId,
-            setId: set.id
+            setId: set.id,
           });
         }
       }
@@ -226,7 +296,7 @@ function buildCrossReferences(djsById, djSets) {
   // Shared tracks (2+ DJs)
   const sharedTracks = [];
   for (const [key, plays] of Object.entries(trackIndex)) {
-    const uniqueDJs = [...new Set(plays.map(p => p.djId))];
+    const uniqueDJs = [...new Set(plays.map((p) => p.djId))];
     if (uniqueDJs.length >= 2) {
       const displayTrack = key.replace(/\s*—\s*/g, ' - ');
       // Deduplicate sets per DJ
@@ -246,10 +316,10 @@ function buildCrossReferences(djsById, djSets) {
   // Shared artists (2+ DJs, different tracks)
   const sharedArtists = [];
   for (const [artist, plays] of Object.entries(artistIndex)) {
-    const uniqueDJs = [...new Set(plays.map(p => p.djId))];
+    const uniqueDJs = [...new Set(plays.map((p) => p.djId))];
     if (uniqueDJs.length >= 2) {
-      const tracks = [...new Set(plays.map(p => p.track))];
-      const sets = [...new Set(plays.map(p => p.setId))];
+      const tracks = [...new Set(plays.map((p) => p.track))];
+      const sets = [...new Set(plays.map((p) => p.setId))];
       sharedArtists.push({ artist: toTitleCase(artist), djs: uniqueDJs, tracks, sets });
     }
   }
@@ -260,7 +330,7 @@ function buildCrossReferences(djsById, djSets) {
     if (data.djs.size >= 2) {
       venueNetworks[venue] = {
         djs: [...data.djs],
-        sets: data.sets
+        sets: data.sets,
       };
     }
   }
@@ -271,7 +341,7 @@ function buildCrossReferences(djsById, djSets) {
     if (data.djs.size >= 2) {
       labelAffinity[label] = {
         djs: [...data.djs],
-        tracks: data.tracks
+        tracks: data.tracks,
       };
     }
   }
@@ -282,7 +352,7 @@ function buildCrossReferences(djsById, djSets) {
     if (data.djs.size >= 2) {
       genreBridges[genre] = {
         djs: [...data.djs],
-        sets: data.sets
+        sets: data.sets,
       };
     }
   }
@@ -313,7 +383,7 @@ function buildCrossReferences(djsById, djSets) {
       dj_id: djId,
       name: djsById[djId]?.name || toTitleCase(djId.replace(/-/g, ' ')),
       connection_count: data.count,
-      shared_with: [...data.shared_with]
+      shared_with: [...data.shared_with],
     }))
     .sort((a, b) => b.connection_count - a.connection_count);
 
@@ -327,7 +397,7 @@ function buildCrossReferences(djsById, djSets) {
     total_shared_tracks: sharedTracks.length,
     total_shared_artists: sharedArtists.length,
     total_connections: sharedTracks.length + sharedArtists.length,
-    generated_at: new Date().toISOString()
+    generated_at: new Date().toISOString(),
   };
 }
 
@@ -337,7 +407,7 @@ function buildTrackRegistry(djSets) {
 
   for (const [djId, sets] of Object.entries(djSets)) {
     for (const set of sets) {
-      for (const track of (set.tracklist || [])) {
+      for (const track of set.tracklist || []) {
         if (!isValidTrack(track.artist, track.title)) continue;
         const key = normalizeTrackKey(track.artist, track.title);
         if (!key) continue;
@@ -349,7 +419,7 @@ function buildTrackRegistry(djSets) {
             title: track.title,
             artist: track.artist,
             played_by: new Set(),
-            sets: []
+            sets: [],
           };
         }
         tracks[key].played_by.add(djId);
@@ -359,14 +429,14 @@ function buildTrackRegistry(djSets) {
   }
 
   return {
-    tracks: Object.values(tracks).map(t => ({
+    tracks: Object.values(tracks).map((t) => ({
       id: t.id,
       title: t.title,
       artist: t.artist,
       played_by: [...t.played_by],
-      sets: t.sets
+      sets: t.sets,
     })),
-    generated_at: new Date().toISOString()
+    generated_at: new Date().toISOString(),
   };
 }
 
@@ -376,10 +446,16 @@ function updateIndexJson(index, djsById, djSets) {
 
   for (const dj of djs) {
     const sets = djSets[dj.id] || [];
-    const setIds = sets.map(s => s.id).sort();
+    const setIds = sets.map((s) => s.id).sort();
     const trackCount = sets.reduce((sum, s) => sum + (s.tracklist || []).length, 0);
-    const knownCount = sets.reduce((sum, s) => sum + (s.tracks_identified || (s.tracklist || []).length), 0);
-    const totalTracks = sets.reduce((sum, s) => sum + (s.tracks_total || (s.tracklist || []).length), 0);
+    const knownCount = sets.reduce(
+      (sum, s) => sum + (s.tracks_identified || (s.tracklist || []).length),
+      0
+    );
+    const totalTracks = sets.reduce(
+      (sum, s) => sum + (s.tracks_total || (s.tracklist || []).length),
+      0
+    );
     // Backfill empty image from first set's youtube_embed_id
     let image = dj.image;
     if (!image && sets.length > 0 && sets[0].youtube_embed_id) {
@@ -394,18 +470,18 @@ function updateIndexJson(index, djsById, djSets) {
         sets: setIds.length,
         tracks: totalTracks,
         known: knownCount,
-        completion_rate: totalTracks > 0 ? Math.round((knownCount / totalTracks) * 100) : 100
-      }
+        completion_rate: totalTracks > 0 ? Math.round((knownCount / totalTracks) * 100) : 100,
+      },
     });
   }
 
   // Add new DJs not in index
-  const knownIds = new Set(djs.map(d => d.id));
+  const knownIds = new Set(djs.map((d) => d.id));
   for (const djId of Object.keys(djSets)) {
     if (knownIds.has(djId)) continue;
 
     const sets = djSets[djId];
-    const setIds = sets.map(s => s.id).sort();
+    const setIds = sets.map((s) => s.id).sort();
     const trackCount = sets.reduce((sum, s) => sum + (s.tracklist || []).length, 0);
     const firstYt = sets[0]?.youtube_embed_id;
     const image = firstYt ? `https://i.ytimg.com/vi/${firstYt}/hqdefault.jpg` : '';
@@ -415,7 +491,7 @@ function updateIndexJson(index, djsById, djSets) {
       name: toTitleCase(djId.replace(/-/g, ' ')),
       origin: '',
       active_since: '',
-      genres: (sets[0]?.genre || []),
+      genres: sets[0]?.genre || [],
       bio: '',
       image: image,
       sets: setIds,
@@ -423,12 +499,204 @@ function updateIndexJson(index, djsById, djSets) {
         sets: setIds.length,
         tracks: trackCount,
         known: trackCount,
-        completion_rate: 100
-      }
+        completion_rate: 100,
+      },
     });
   }
 
   return { djs: updated.sort((a, b) => a.name.localeCompare(b.name)) };
+}
+
+function fmtDurationToMin(dur) {
+  if (!dur) return 0;
+  if (typeof dur === 'number') return dur;
+  const m = String(dur).match(/(\d+):(\d{1,2})/);
+  if (m) return parseInt(m[1], 10) + Math.round(parseInt(m[2], 10) / 60);
+  return 0;
+}
+
+function buildStats(updatedIndex, djSets, crossRefs) {
+  const djs = updatedIndex.djs || [];
+  const allSets = [];
+  for (const [djId, sets] of Object.entries(djSets)) {
+    for (const s of sets) allSets.push({ djId, set: s });
+  }
+  allSets.sort((a, b) => String(a.set.date || '').localeCompare(String(b.set.date || '')));
+
+  const FEATURED_FIRST_CHOICE = 'etapp-kyle-early-2000s-archive';
+  const byRecency = [...allSets].reverse();
+  const featuredSetId =
+    byRecency.find((s) => s.set.id === FEATURED_FIRST_CHOICE)?.set.id || byRecency[0]?.set.id || '';
+
+  const featuredSet = allSets.find((s) => s.set.id === featuredSetId) || null;
+
+  let totalTracks = 0;
+  let knownTracks = 0;
+  let totalMinutes = 0;
+  let labeledTracks = 0;
+  let requestedIds = 0;
+  const genreCounts = {};
+
+  for (const { set } of allSets) {
+    const tl = set.tracklist || [];
+    totalTracks += tl.length;
+    knownTracks += set.tracks_identified != null ? set.tracks_identified : tl.length;
+    totalMinutes += fmtDurationToMin(
+      set.duration_minutes || set.duration || set.duration_formatted
+    );
+    const trackTime = set.duration_minutes || set.duration || 0;
+    labeledTracks += tl.filter((t) => t.label).length;
+    requestedIds += (set.most_requested_ids || []).length;
+    for (const g of set.genres || set.genre || []) {
+      if (!genreCounts[g]) genreCounts[g] = 0;
+      genreCounts[g]++;
+    }
+  }
+
+  const byId = {};
+  for (const dj of djs) byId[dj.id] = dj;
+
+  const djRows = djs.map((dj) => {
+    const sets = djSets[dj.id] || [];
+    const hours =
+      Math.round(
+        (sets.reduce(
+          (sum, s) =>
+            sum + fmtDurationToMin(s.duration_minutes || s.duration || s.duration_formatted),
+          0
+        ) /
+          60) *
+          10
+      ) / 10;
+    const latestDate =
+      sets
+        .map((s) => s.date || '')
+        .filter(Boolean)
+        .sort()
+        .slice(-1)[0] || '';
+    return {
+      id: dj.id,
+      name: dj.name || byId[dj.id]?.name || '',
+      origin: dj.origin || '',
+      genres: dj.genres || [],
+      image: dj.image || '',
+      completion_rate: dj.stats?.completion_rate ?? 100,
+      sets: (dj.sets || []).length,
+      tracks: dj.stats?.tracks ?? 0,
+      hours,
+      latest_date: latestDate,
+    };
+  });
+
+  djRows.sort(
+    (a, b) =>
+      String(b.latest_date).localeCompare(String(a.latest_date)) || a.name.localeCompare(b.name)
+  );
+  const catalogNumbers = {};
+  djRows.forEach((dj, i) => {
+    catalogNumbers[dj.id] = {
+      num: `Nº ${String(i + 1).padStart(3, '0')}`,
+      latest_date: dj.latest_date,
+    };
+  });
+
+  const labelClout = Object.entries(crossRefs.label_affinity || {})
+    .map(([label, data]) => ({ label, djs: data.djs, tracks: data.tracks.length }))
+    .sort((a, b) => b.tracks - a.tracks);
+
+  const venueList = Object.entries(crossRefs.venue_networks || {})
+    .map(([venue, data]) => ({ venue, djs: data.djs, sets: data.sets.length }))
+    .sort((a, b) => b.sets - a.sets);
+
+  const flatSets = allSets
+    .map(({ djId, set }) => {
+      const tl = set.tracklist || [];
+      const total = set.tracks_total != null ? set.tracks_total : tl.length;
+      const known = set.tracks_identified != null ? set.tracks_identified : tl.length;
+      return {
+        id: set.id,
+        dj_id: djId,
+        dj_name: byId[djId]?.name || djId,
+        title: set.title || set.id,
+        venue: set.venue || '',
+        date: set.date || '',
+        genres: set.genres || set.genre || [],
+        duration_formatted:
+          set.duration_formatted || (set.duration_minutes ? set.duration_minutes + ' min' : ''),
+        duration_minutes: fmtDurationToMin(
+          set.duration_minutes || set.duration || set.duration_formatted
+        ),
+        view_count: set.view_count || 0,
+        completion_rate: total > 0 ? Math.round((known / total) * 100) : 100,
+        tracks: total,
+        known,
+        requested_ids: (set.most_requested_ids || []).length,
+        labels: tl.filter((t) => t.label).length,
+        catalog: catalogNumbers[djId]?.num || '',
+      };
+    })
+    .sort(
+      (a, b) =>
+        String(b.date || '').localeCompare(String(a.date || '')) ||
+        a.dj_name.localeCompare(b.dj_name)
+    );
+
+  const featured = featuredSet
+    ? {
+        dj_id: featuredSet.djId,
+        set_id: featuredSet.set.id,
+        dj_name: byId[featuredSet.djId]?.name || featuredSet.djId,
+        image:
+          byId[featuredSet.djId]?.image ||
+          (featuredSet.set.youtube_embed_id
+            ? `https://i.ytimg.com/vi/${featuredSet.set.youtube_embed_id}/hqdefault.jpg`
+            : ''),
+        title: featuredSet.set.title || featuredSet.set.id,
+        venue: featuredSet.set.venue || '',
+        date: featuredSet.set.date || '',
+        genres: featuredSet.set.genres || featuredSet.set.genre || [],
+        duration_formatted:
+          featuredSet.set.duration_formatted ||
+          `${Math.round(fmtDurationToMin(featuredSet.set.duration_minutes || 0))} min`,
+        view_count: featuredSet.set.view_count || 0,
+        youtube_embed_id: featuredSet.set.youtube_embed_id || '',
+        tracks_identified:
+          featuredSet.set.tracks_identified ?? (featuredSet.set.tracklist || []).length,
+        tracks_total: featuredSet.set.tracks_total ?? (featuredSet.set.tracklist || []).length,
+        label_count: (featuredSet.set.tracklist || []).filter((t) => t.label).length,
+        requested_ids: (featuredSet.set.most_requested_ids || []).length,
+        catalog: catalogNumbers[featuredSet.djId]?.num || '',
+      }
+    : null;
+
+  return {
+    generated_at: new Date().toISOString(),
+    aggregates: {
+      djs: djs.length,
+      sets: allSets.length,
+      tracks: totalTracks,
+      known: knownTracks,
+      hours: Math.round((totalMinutes / 60) * 10) / 10,
+      minutes: totalMinutes,
+      connections: crossRefs.total_connections || 0,
+      shared_tracks: crossRefs.total_shared_tracks || 0,
+      shared_artists: crossRefs.total_shared_artists || 0,
+      labeled_tracks: labeledTracks,
+      requested_ids: requestedIds,
+      completion_rate: totalTracks > 0 ? Math.round((knownTracks / totalTracks) * 100) : 100,
+    },
+    featured,
+    catalog_numbers: catalogNumbers,
+    dj_rows: djRows,
+    sets: flatSets,
+    genres: Object.entries(genreCounts)
+      .map(([genre, count]) => ({ genre, count }))
+      .sort((a, b) => b.count - a.count),
+    top_shared_tracks: (crossRefs.shared_tracks || []).slice(0, 12),
+    label_clout: labelClout.slice(0, 12),
+    venues: venueList.slice(0, 12),
+    super_connectors: (crossRefs.super_connectors || []).slice(0, 12),
+  };
 }
 
 function main() {
@@ -479,11 +747,16 @@ const TRACKLISTS = ${JSON.stringify(tracklists, null, 2)};
 `;
   fs.writeFileSync(path.join(OUT_DIR, 'tracklists', 'tracklists.js'), tracklistsJs);
   const totalSets = Object.values(tracklists).reduce((sum, dj) => sum + dj.sets.length, 0);
-  console.log(`✅ data/tracklists/tracklists.js — ${Object.keys(tracklists).length} DJs, ${totalSets} sets`);
+  console.log(
+    `✅ data/tracklists/tracklists.js — ${Object.keys(tracklists).length} DJs, ${totalSets} sets`
+  );
 
   // 2. cross-references.json
   const crossRefs = buildCrossReferences(djsById, djSets);
-  fs.writeFileSync(path.join(OUT_DIR, 'djs', 'cross-references.json'), JSON.stringify(crossRefs, null, 2));
+  fs.writeFileSync(
+    path.join(OUT_DIR, 'djs', 'cross-references.json'),
+    JSON.stringify(crossRefs, null, 2)
+  );
   console.log(`✅ data/djs/cross-references.json`);
   console.log(`   • ${crossRefs.total_shared_tracks} shared tracks`);
   console.log(`   • ${crossRefs.total_shared_artists} shared artists`);
@@ -491,7 +764,9 @@ const TRACKLISTS = ${JSON.stringify(tracklists, null, 2)};
   console.log(`   • ${Object.keys(crossRefs.label_affinity).length} label affinities`);
   console.log(`   • ${crossRefs.super_connectors.length} super connectors`);
   if (crossRefs.super_connectors.length > 0) {
-    console.log(`   🏆 Top: ${crossRefs.super_connectors[0].name} (${crossRefs.super_connectors[0].connection_count} connections)`);
+    console.log(
+      `   🏆 Top: ${crossRefs.super_connectors[0].name} (${crossRefs.super_connectors[0].connection_count} connections)`
+    );
   }
 
   // 3. track-registry.json
@@ -505,6 +780,15 @@ const TRACKLISTS = ${JSON.stringify(tracklists, null, 2)};
   const updatedIndex = updateIndexJson(index, djsById, djSets);
   fs.writeFileSync(indexPath, JSON.stringify(updatedIndex, null, 2));
   console.log(`✅ data/djs/index.json — ${updatedIndex.djs.length} DJs`);
+
+  // 5. stats.json — aggregates + featured + catalog + editorial lists for both DJ Library designs
+  const stats = buildStats(updatedIndex, djSets, crossRefs);
+  fs.writeFileSync(path.join(OUT_DIR, 'djs', 'stats.json'), JSON.stringify(stats, null, 2));
+  console.log(`✅ data/djs/stats.json`);
+  console.log(
+    `   • ${stats.aggregates.djs} DJs · ${stats.aggregates.sets} sets · ${stats.aggregates.tracks} tracks · ${stats.aggregates.hours}h`
+  );
+  console.log(`   • Featured: ${stats.featured?.set_id || '—'} (${stats.featured?.catalog || ''})`);
 
   console.log('\n🎉 Build complete!');
   console.log('   Next: open dj-library.html or 3d-brain.html to see the enriched data.');
