@@ -80,7 +80,10 @@ Rules:
 - ✅ Discoteca (DJ Library) — canonical
 - ✅ Taller (toolhub) — redone in this system (adds Sets tool that deep-links
   to the Discoteca via `dj-library.html#set:<id>`)
-- 🚧 Mapa — next
+- ✅ Mapa — redone in this system (editorial hero, Discoteca-style rail,
+  keyless OpenFreeMap dark basemap, `mapa.html#venue:<id>` deep links,
+  popup "DJs que tocaron aquí / Sets en este club" + reciprocal set-sheet
+  venue chip)
 - 🚧 Crew — next
 - 🚧 Neural — next
 

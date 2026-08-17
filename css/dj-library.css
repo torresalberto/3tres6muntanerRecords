@@ -387,34 +387,6 @@
 .crate-sort option {
   background: var(--d-card);
 }
-.crate-genres {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  width: 100%;
-}
-.genre-chip {
-  font-family: var(--d-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  padding: 0.35rem 0.85rem;
-  border: 1px solid var(--d-border);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--d-text-dim);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.genre-chip:hover {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-.genre-chip.is-on {
-  color: #0a0a0a;
-  background: var(--d-primary);
-  border-color: var(--d-primary);
-  font-weight: 700;
-}
 
 /* ============================ SLEEVE GRID ============================ */
 
@@ -529,20 +501,6 @@
   letter-spacing: -0.01em;
   line-height: 1.1;
   margin: 0;
-}
-.sleeve-genres {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  min-height: 1.1rem;
-}
-.sleeve-genres span {
-  font-family: var(--d-mono);
-  font-size: 0.66rem;
-  color: var(--d-text-dim);
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--d-border);
-  border-radius: 999px;
 }
 .sleeve-stats {
   display: flex;
@@ -712,6 +670,18 @@
   border-radius: 999px;
   padding: 0.3rem 0.7rem;
   font-variant-numeric: tabular-nums;
+}
+a.set-chip-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--d-primary);
+  border-color: rgba(255, 77, 0, 0.35);
+  background: var(--d-primary-dim);
+  transition: all 0.2s;
+}
+a.set-chip-link:hover {
+  background: var(--d-primary);
+  color: #0a0a0a;
 }
 .set-tl-title {
   display: flex;
@@ -1000,12 +970,6 @@
 }
 .disc-graph .ed-sub {
   max-width: 60ch;
-}
-.hilo-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 .hilo {
   height: 560px;

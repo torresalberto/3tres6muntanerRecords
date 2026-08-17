@@ -16,10 +16,14 @@ disco). It is the curation pillar of the site: every venue is added on the judgm
 not scraped automatically.
 
 - **Page:** `mapa.html` (also served at `/mapa/` and `/mapa` via `.htaccess` rewrite).
-- **Library:** Leaflet 1.9.4 + CartoDB Dark Matter tiles (`{s}.basemaps.cartocdn.com/dark_all/...`).
-  **Deliberately NO Google Maps / Google Cloud** — do not replace the tile layer with Google.
-- **Renderer:** `js/map-loader.js` (`VenueMap`) — reads JSON, draws markers, popups, city-filter
-  tabs, sidebar list and fly-to navigation. No build step: edits to the JSON go live on next deploy.
+- **Library:** Leaflet 1.9.4 + **OpenFreeMap "dark"** vector basemap rendered via
+  MapLibre GL JS (`maplibre-gl@5.24.0`) + `@maplibre/maplibre-gl-leaflet`
+  (`L.maplibreGL`). **Keyless — no account, no API key** (house rule: no Google).
+  Falls back to CartoDB Dark Matter if the GL layer fails to init.
+- **Renderer:** `js/map-loader.js` (`VenueMap`) — reads JSON, draws markers, popups,
+  city-filter tabs, sidebar rail and fly-to navigation. Deep links:
+  `mapa.html#venue:<id>` (fly-to + open + highlight rail card).
+  No build step: edits to the JSON go live on next deploy.
 - **Data source (source of truth):** `data/venues/index.json` — `venues[]` + `cities[]`.
 
 ### Adding a venue
@@ -33,7 +37,6 @@ Edit `data/venues/index.json` following the existing schema:
   "country": "Spain",
   "coordinates": { "lat": 41.37805, "lng": 2.17368 },
   "address": "Carrer de Guàrdia 3, 08002 Barcelona",
-  "genres": ["House", "Techno"],
   "curated_by": "3tres6 crew",
   "notes": "One-line note on why it's on the map.",
   "links": { "ra": "...", "instagram": "...", "website": "..." },
@@ -47,9 +50,24 @@ Edit `data/venues/index.json` following the existing schema:
   are worse than no pin. Update `cities[].center/zoom` when a city's spread grows.
 - Keep notes in Spanish, brief, and describe the sound, not the business.
 
+### Cross-links with the Discoteca (DJ Library)
+- **Mapa popup → Discoteca:** popups render "DJs que tocaron aquí" + "Sets en este club →"
+  by matching the curated venue name against `venue_networks` in
+  `data/djs/cross-references.json` (distinctive-token matching; generic words like
+  "studio"/"club"/"sala" are ignored). Links use `dj-library.html#dj:<id>` / `#set:<id>`
+  with `data-no-swup`. No match = rows omitted (never a dead link).
+- **Discoteca set-sheet venue chip → Mapa:** `Core.buildMetaChips` turns the venue chip
+  into `mapa.html#venue:<id>` when the set venue matches `CURATED_MAP_VENUES`
+  (`js/dj-library-core.js`). **Keep that map in sync with `data/venues/index.json`** when
+  adding a curated venue (key = normalized set venue string).
+
 ### Gotchas
-- The Leaflet CSS `<link>` on `mapa.html` has a strict SRI `integrity` hash — if you bump the
-  Leaflet version, recompute it (a wrong hash silently blocks the whole stylesheet).
+- The Leaflet CSS/JS `<link>`/`<script>` on `mapa.html` have strict SRI `integrity`
+  hashes — same for the MapLibre GL + `@maplibre/maplibre-gl-leaflet` includes. If you
+  bump any version, recompute all hashes (a wrong hash silently blocks the asset).
+- **No swup on mapa.html** on purpose: it is a full-load section. Links *into* it from
+  swup-enabled pages (index, blog, product, toolhub) carry `data-no-swup` so its scripts
+  always run.
 - Venue links (Instagram / RA / website) are rendered conditionally — a venue with no links is fine.
 - Crew curation: new venue suggestions land via the "Sugerir un club →" CTA (Instagram DM) and are
   reviewed by the crew before being added here.
@@ -75,8 +93,9 @@ the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
   cross-references, tracklists, track-registry). Never hand-edit generated files.
 - Section redesign roadmap (one per pass): ✅ Taller (toolhub — editorial hero,
   MOD rail, Sets tool that deep-links to the Discoteca; see `DESIGN_SYSTEM.md`
-  "Known gaps") · 🚧 Mapa · 🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested
-  before the next.
+  "Known gaps") · ✅ Mapa (editorial hero, Discoteca-style rail, keyless dark
+  basemap, `#venue:` deep links + popup↔Discoteca cross-links) · 🚧 Crew ·
+  🚧 Neural. Each deploys + is smoke-tested before the next.
 
 <!-- autoskills:start -->
 

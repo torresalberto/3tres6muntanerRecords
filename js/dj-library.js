@@ -13,7 +13,7 @@
     return;
   }
 
-  const state = { query: '', genre: '', sort: 'recent' };
+  const state = { query: '', sort: 'recent' };
   let openDjId = null;
   let openSetId = null;
 
@@ -33,7 +33,6 @@
     }
     renderCounters();
     renderFeatured();
-    renderGenres();
     renderSleeves();
     renderEditorial();
     renderGraph();
@@ -43,11 +42,23 @@
   }
 
   // Deep-link support: dj-library.html#set:<setId> opens a specific set sheet
-  // (used by the Taller / Sets tool). Falls back silently if the set is unknown.
+  // (used by the Taller / Sets tool and Mapa popups). #dj:<id> opens that
+  // DJ's first set sheet. Falls back silently if the set/dj is unknown.
   async function handleDeepLink() {
-    const m = window.location.hash.match(/^#set:(.+)$/);
+    const m = window.location.hash.match(/^#(set|dj):(.+)$/);
     if (!m) return;
-    const setId = decodeURIComponent(m[1]);
+    const [kind, raw] = [m[1], decodeURIComponent(m[2])];
+    if (kind === 'dj') {
+      const dj = Core.djById(raw);
+      if (!dj) return;
+      const sets = await Core.setsOf(dj);
+      if (!sets.length) return;
+      const sleeve = document.querySelector(`.sleeve[data-dj="${CSS.escape(dj.id)}"]`);
+      if (sleeve) sleeve.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      openSheet(dj.id, sets[0].id);
+      return;
+    }
+    const setId = raw;
     try {
       const set = await Core.fetchSet(setId);
       if (!set || !set.dj_id) return;
@@ -102,7 +113,6 @@
     }
     const total = f.tracks_total || f.tracks_identified || 0;
     const known = f.tracks_identified || 0;
-    const genres = (f.genres || []).join(' · ');
     const meta = [f.venue, f.date, f.duration_formatted, Core.fmtViews(f.view_count) + ' plays']
       .filter(Boolean)
       .join('  ·  ');
@@ -119,7 +129,7 @@
     box.innerHTML = `
       <div class="disc-feat-head">
         <h2>Nueva llegada</h2>
-        <span>${Core.esc(f.catalog || '')} · ${Core.esc(genres)}</span>
+        <span>${Core.esc(f.catalog || '')}</span>
       </div>
       <button class="feat-card" data-dj="${Core.esc(f.dj_id)}" aria-haspopup="dialog">
         <span class="feat-sleeve"><span class="feat-num">${Core.esc(f.catalog || '')}</span><img src="${Core.esc(f.image || '')}" alt="${Core.esc(f.dj_name)}" loading="eager"></span>
@@ -134,26 +144,6 @@
   }
 
   // ---------------------------------------------------------------- toolbar
-
-  function renderGenres() {
-    const genres = (Core.stats.genres || []).map((g) => g.genre);
-    const box = $('#genreChips');
-    const chip = (g) =>
-      `<button class="genre-chip" data-genre="${Core.esc(g)}" aria-pressed="false">${Core.esc(g)}</button>`;
-    box.innerHTML = [chip('Todas'), ...genres.map(chip)].join('');
-    box.querySelectorAll('.genre-chip').forEach((btn) =>
-      btn.addEventListener('click', () => {
-        state.genre = btn.dataset.genre === 'Todas' ? '' : btn.dataset.genre;
-        box.querySelectorAll('.genre-chip').forEach((b) => {
-          const on = b === btn;
-          b.classList.toggle('is-on', on);
-          b.setAttribute('aria-pressed', on);
-        });
-        renderSleeves();
-      })
-    );
-    box.querySelector('.genre-chip').classList.add('is-on');
-  }
 
   function wireToolbar() {
     $('#crateSearch').addEventListener('input', (e) => {
@@ -184,7 +174,6 @@
           });
         if (!search.djIds.includes(dj.id) && !setMatch) return false;
       }
-      if (state.genre && !(dj.genres || []).includes(state.genre)) return false;
       return true;
     });
 
@@ -206,7 +195,7 @@
     const list = filterRows();
     if (!list.length) {
       grid.innerHTML =
-        '<div class="empty-state">Sin resultados — cambia la búsqueda o el género.</div>';
+        '<div class="empty-state">Sin resultados — cambia la búsqueda o el orden.</div>';
       return;
     }
     grid.innerHTML = list
@@ -221,10 +210,6 @@
           <span class="sleeve-art">${img}<span class="sleeve-disc" aria-hidden="true"></span></span>
           <span class="sleeve-body">
             <span class="sleeve-name">${Core.esc(dj.name)}</span>
-            <span class="sleeve-genres">${(dj.genres || [])
-              .slice(0, 3)
-              .map((g) => `<span>${Core.esc(g)}</span>`)
-              .join('')}</span>
             <span class="sleeve-stats">
               <span>${dj.sets} sets · ${dj.tracks} tracks · ${dj.hours || 0}h</span>
               <span class="sleeve-rate ${rate < 100 ? 'is-low' : ''}"><span class="rate-ring" ${Core.completionRing(rate)}>${rate}%</span></span>
@@ -368,32 +353,6 @@
     const box = $('#hiloGraph');
     const result = Core.initGraph(box);
     if (!result) return;
-
-    const genres = (Core.stats.genres || []).map((g) => g.genre).slice(0, 8);
-    const filterBox = $('#hiloFilters');
-    filterBox.innerHTML = genres
-      .map(
-        (g, i) =>
-          `<button class="genre-chip ${i === 0 ? 'is-on' : ''}" data-hilo-genre="${Core.esc(g)}">${Core.esc(g)}</button>`
-      )
-      .join('');
-
-    filterBox.querySelectorAll('[data-hilo-genre]').forEach((btn) =>
-      btn.addEventListener('click', () => {
-        const g = btn.dataset.hiloGenre;
-        filterBox.querySelectorAll('[data-hilo-genre]').forEach((b) => {
-          const on = b === btn;
-          b.classList.toggle('is-on', on);
-          b.setAttribute('aria-pressed', on);
-        });
-        result.nodes.forEach((n) => {
-          const inGenre = (n.genres || []).includes(g);
-          const el =
-            document.querySelector(`.hilo-node[data-dj="${CSS.escape(n.id)}"]`) || result.sim;
-          if (el && el.setAttribute) el.classList.toggle('is-dim', !inGenre);
-        });
-      })
-    );
 
     document
       .querySelectorAll('.hilo-node')

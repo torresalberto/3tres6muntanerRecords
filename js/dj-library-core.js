@@ -56,11 +56,6 @@
     return `${m}:${String(s).padStart(2, '0')}`;
   };
 
-  S.genresOf = function (set) {
-    const g = set.genres || set.genre || [];
-    return Array.isArray(g) ? g : [];
-  };
-
   S.djById = function (id) {
     return (S.index && S.index.djs.find((d) => d.id === id)) || null;
   };
@@ -82,7 +77,7 @@
       S.fetchJSON(BASE + 'data/djs/index.json'),
       S.fetchJSON(BASE + 'data/djs/cross-references.json'),
     ]);
-    S.stats = stats || { aggregates: {}, dj_rows: [], genres: [], catalog_numbers: {} };
+    S.stats = stats || { aggregates: {}, dj_rows: [], catalog_numbers: {} };
     S.index = index || { djs: [] };
     S.crossRefs = crossRefs || {};
     return S;
@@ -184,9 +179,35 @@
     </section>`;
   };
 
+  // Curated venues that also live on the Mapa (mapa.html). Keyed by the
+  // normalized set.venue string. Keep in sync with data/venues/index.json —
+  // adding a venue to the map without a row here just means the set-sheet
+  // chip stays a plain text chip (no dead link).
+  var CURATED_MAP_VENUES = {
+    'nitsa, barcelona, spain': { id: 'nitsa', name: 'Nitsa (Sala Apolo)' },
+  };
+
   S.buildMetaChips = function (set) {
     const chips = [];
-    if (set.venue) chips.push({ icon: '◎', text: set.venue });
+    if (set.venue) {
+      const venueKey = String(set.venue)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      const curated = CURATED_MAP_VENUES[venueKey];
+      if (curated) {
+        chips.push({
+          icon: '◎',
+          text: curated.name,
+          href: `/3tres6muntanerRecords/mapa.html#venue:${curated.id}`,
+          noSwup: true,
+        });
+      } else {
+        chips.push({ icon: '◎', text: set.venue });
+      }
+    }
     if (set.date) chips.push({ icon: '◷', text: set.date });
     chips.push({
       icon: '◫',
@@ -195,7 +216,11 @@
     if (set.view_count) chips.push({ icon: '▶', text: S.fmtViews(set.view_count) + ' plays' });
     return chips
       .filter((c) => c.text)
-      .map((c) => `<span class="set-chip">${c.icon} ${S.esc(c.text)}</span>`)
+      .map((c) =>
+        c.href
+          ? `<a class="set-chip set-chip-link" href="${S.esc(c.href)}"${c.noSwup ? ' data-no-swup' : ''}>${c.icon} ${S.esc(c.text)}</a>`
+          : `<span class="set-chip">${c.icon} ${S.esc(c.text)}</span>`
+      )
       .join('');
   };
 
@@ -218,10 +243,10 @@
     const djById = {};
     djs.forEach((d) => (djById[d.id] = d));
 
-    // match DJs by name/origin/genres
+    // match DJs by name/origin
     const matchedDj = new Set();
     djs.forEach((d) => {
-      const hay = [d.name, d.origin, (d.genres || []).join(' ')].join(' ').toLowerCase();
+      const hay = [d.name, d.origin].join(' ').toLowerCase();
       if (hay.includes(query)) {
         matchedDj.add(d.id);
         result.djIds.push(d.id);
@@ -230,9 +255,7 @@
 
     // match sets by id / title / venue / dj name (cheap, from flat stats.sets)
     (S.stats.sets || []).forEach((s) => {
-      const hay = [s.id, s.title, s.venue, s.dj_name, (s.genres || []).join(' ')]
-        .join(' ')
-        .toLowerCase();
+      const hay = [s.id, s.title, s.venue, s.dj_name].join(' ').toLowerCase();
       if (hay.includes(query)) {
         matchedDj.add(s.dj_id);
         result.setIds.push({ djId: s.dj_id, setId: s.id });
@@ -267,7 +290,6 @@
       name: d.name,
       r: 4 + Math.min(18, (connByDj[d.id] || 1) * 0.7),
       conn: connByDj[d.id] || 0,
-      genres: d.genres || [],
       sets: (d.sets || []).length,
     }));
 
