@@ -74,7 +74,6 @@ const VenueMap = {
       if (!container) return;
       this._containerEl = container;
 
-      this.renderStats();
       this.renderMap();
       this.renderCityTabs();
       this.renderVenueList();
@@ -131,15 +130,6 @@ const VenueMap = {
       const open = this.markers.find((m) => this.map && m.getPopup && m.getPopup().isOpen());
       if (open) this._renderPopup(open);
     });
-  },
-
-  // ---------------------------------------------------------------- stats
-
-  renderStats() {
-    const venuesEl = document.getElementById('statVenues');
-    const citiesEl = document.getElementById('statCities');
-    if (venuesEl) venuesEl.textContent = this.venues.length;
-    if (citiesEl) citiesEl.textContent = this.cities.length;
   },
 
   // ---------------------------------------------------------------- map

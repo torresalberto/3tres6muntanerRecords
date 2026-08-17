@@ -93,9 +93,9 @@ the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
   cross-references, tracklists, track-registry). Never hand-edit generated files.
 - Section redesign roadmap (one per pass): ✅ Taller (toolhub — editorial hero,
   MOD rail, Sets tool that deep-links to the Discoteca; see `DESIGN_SYSTEM.md`
-  "Known gaps") · ✅ Mapa (editorial hero, Discoteca-style rail, keyless dark
-  basemap, `#venue:` deep links + popup↔Discoteca cross-links) · 🚧 Crew ·
-  🚧 Neural. Each deploys + is smoke-tested before the next.
+  "Known gaps") · ✅ Mapa (hero removed — map-first layout, Discoteca-style
+  rail, keyless dark basemap, `#venue:` deep links + popup↔Discoteca
+  cross-links) · 🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested before the next.
 
 <!-- autoskills:start -->
 
