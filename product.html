@@ -101,7 +101,6 @@
         background: var(--color-accent);
       }
 
-
       .product-title {
         font-size: 36px;
         font-weight: 700;
@@ -298,15 +297,29 @@
       }
     </style>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/3tres6muntanerRecords/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/3tres6muntanerRecords/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/3tres6muntanerRecords/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/3tres6muntanerRecords/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/3tres6muntanerRecords/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/3tres6muntanerRecords/apple-touch-icon.png"
+    />
     <link rel="manifest" href="/3tres6muntanerRecords/manifest.json" />
     <meta name="theme-color" content="#ff4d00" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta property="og:title" content="Larry Heard – Missing You | 3TRES6 Records" />
-</head>
+    <meta property="og:title" content="Larry Heard – Missing You | 3TRES6 Records" />
+  </head>
   <body>
     <!-- Top Banner -->
     <div class="top-banner">
@@ -335,17 +348,32 @@
           </div>
           <div class="nav-separator"></div>
           <div class="nav-group nav-group-content">
-            <a href="3d-brain.html" class="nav-item">DJ Hub</a>
-            <a href="crew.html" class="nav-item">Crew</a>
+            <a href="dj-library.html" class="nav-item">Discoteca</a>
+            <a href="3d-brain.html" class="nav-item">Neural</a>
             <a href="mapa.html" class="nav-item" data-no-swup>Mapa</a>
+            <a href="crew.html" class="nav-item">Crew</a>
             <a href="toolhub/" class="nav-item">Herramientas</a>
+            <a href="blog.html" class="nav-item">Blog</a>
           </div>
         </nav>
 
         <div class="header-actions">
-          <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener" class="discogs-link">Discogs</a>
+          <a
+            href="https://www.discogs.com/seller/3tres6records"
+            target="_blank"
+            rel="noopener"
+            class="discogs-link"
+            >Discogs</a
+          >
           <a href="/3tres6muntanerRecords/" class="cart-icon" aria-label="Carrito">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
               <circle cx="9" cy="21" r="1"></circle>
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -361,13 +389,17 @@
         <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
         <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
         <div class="mobile-nav-group-label">Contenido</div>
-        <a href="3d-brain.html">DJ Hub</a>
-        <a href="crew.html">Crew</a>
+        <a href="dj-library.html">Discoteca</a>
+        <a href="3d-brain.html">Neural</a>
         <a href="mapa.html" data-no-swup>Mapa</a>
+        <a href="crew.html">Crew</a>
         <a href="toolhub/">Herramientas</a>
+        <a href="blog.html">Blog</a>
         <div class="mobile-nav-group-label">Redes</div>
         <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
-        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+        <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
+          >Discogs</a
+        >
       </nav>
     </header>
 
@@ -417,7 +449,13 @@
           <p class="product-price">$950 MXN</p>
 
           <div class="product-actions">
-            <a id="product-discogs-link" href="#" class="btn-primary" target="_blank" rel="noopener">
+            <a
+              id="product-discogs-link"
+              href="#"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
               Comprar en Discogs
             </a>
             <button class="btn-secondary" onclick="scrollToAudio()">
@@ -545,7 +583,9 @@
         document.querySelectorAll('.product-thumb:not([data-bound])').forEach((thumb) => {
           thumb.dataset.bound = '1';
           thumb.addEventListener('click', function () {
-            document.querySelectorAll('.product-thumb').forEach((t) => t.classList.remove('active'));
+            document
+              .querySelectorAll('.product-thumb')
+              .forEach((t) => t.classList.remove('active'));
             this.classList.add('active');
             // In real implementation, swap main image
           });
@@ -571,7 +611,9 @@
         if (!window._productScrollBound) {
           window._productScrollBound = true;
           window.addEventListener('scroll', function () {
-            document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
+            document
+              .querySelector('.header')
+              ?.classList.toggle('scrolled', window.pageYOffset > 50);
           });
         }
       }
@@ -597,11 +639,11 @@
         }, 50);
       }
     </script>
-  <!-- Swup: seamless page transitions so the audio player never cuts off -->
-  <script src="../js/vendor/swup.umd.js" defer></script>
-  <script src="../js/swup-init.js" defer></script>
-  <script src="js/nav.js" defer></script>
+    <!-- Swup: seamless page transitions so the audio player never cuts off -->
+    <script src="../js/vendor/swup.umd.js" defer></script>
+    <script src="../js/swup-init.js" defer></script>
+    <script src="js/nav.js" defer></script>
 
-  <script src="../player-init.js" defer></script>
-</body>
+    <script src="../player-init.js" defer></script>
+  </body>
 </html>

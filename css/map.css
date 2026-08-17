@@ -36,7 +36,7 @@
 .map-cities {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 169px);
+  height: calc(100vh - 161px);
   min-height: 640px;
 }
 

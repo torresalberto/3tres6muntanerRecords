@@ -232,6 +232,13 @@ button {
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
+/* Flow spacer replacing the former DJ Hub sub-nav: keeps content clear of the
+   fixed header (top 40px + 80px height = 121px) on content pages. */
+.header-spacer {
+  height: 121px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 .header-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -1245,35 +1252,6 @@ button {
   background: var(--color-bg);
 }
 
-.catalog-filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: var(--transition);
-}
-
-.filter-btn:hover {
-  border-color: var(--color-text-muted);
-  color: var(--color-text);
-}
-
-.filter-btn.active {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-text);
-}
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1399,14 +1377,6 @@ button {
 
 .product-info {
   padding: 20px;
-}
-
-.product-genre {
-  font-size: 10px;
-  color: var(--color-accent);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 600;
 }
 
 .product-title {
@@ -1590,13 +1560,7 @@ button {
   color: var(--color-text-muted);
 }
 
-.calendar-event .event-genre {
-  display: block;
-  font-size: 10px;
-  color: var(--color-text-muted);
-  margin-top: 5px;
-  font-style: italic;
-}
+
 
 .calendar-legend {
   max-width: 1400px;
@@ -2809,13 +2773,6 @@ button {
     align-items: flex-start;
   }
 
-  .catalog-filters {
-    width: 100%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 10px;
-  }
-
   .product-grid {
     grid-template-columns: 1fr;
   }
@@ -3094,14 +3051,7 @@ body.checkout-open {
   text-overflow: ellipsis;
 }
 
-.lineup-card-genre {
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.35);
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 
 @media (max-width: 768px) {
   .dj-lineup {
@@ -4371,24 +4321,8 @@ a.blog-card-image:hover {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
 }
-.day-event-genres {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  margin-bottom: 0.65rem;
-}
-.genre-pill {
-  display: inline-block;
-  padding: 0.15rem 0.55rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
+
+
 .day-event-djs {
   display: flex;
   flex-wrap: wrap;
