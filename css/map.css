@@ -33,20 +33,74 @@
   padding: 0;
 }
 
-.map-layout {
+.map-cities {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 1fr;
   height: calc(100vh - 169px);
-  min-height: 560px;
+  min-height: 640px;
 }
 
-.map-container {
+.city-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--m-card);
+}
+
+.city-panel + .city-panel {
+  border-left: 1px solid var(--m-line);
+}
+
+.city-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--m-line);
+  background: var(--m-card);
+}
+
+.city-panel-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--m-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.city-panel-name::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--m-primary);
+  box-shadow: 0 0 10px rgba(255, 77, 0, 0.7);
+}
+
+.city-panel-meta {
+  font-family: var(--m-mono);
+  font-size: 0.7rem;
+  color: var(--m-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.city-map {
   position: relative;
+  flex: 1;
+  min-height: 0;
   background: var(--m-bg);
-  border-right: 1px solid var(--m-line);
 }
 
-#venueMap {
+#venueMap-barcelona,
+#venueMap-mexico-city {
   width: 100%;
   height: 100%;
   background: var(--m-bg);
@@ -365,88 +419,18 @@
   color: var(--m-primary) !important;
 }
 
-/* ===== Sidebar rail ===== */
-
-.map-sidebar {
-  background: var(--m-card);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.sidebar-header {
-  padding: 1.25rem 1.25rem 1rem;
-  border-bottom: 1px solid var(--m-line);
-}
-
-.sidebar-title {
-  font-family: var(--m-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--m-text-faint);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin: 0 0 0.8rem;
-}
-
-.city-tabs {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.city-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--m-line);
-  color: var(--m-text-dim);
-  padding: 0.42rem 0.8rem;
-  border-radius: 999px;
-  font-family: var(--m-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.tab-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: background 0.2s;
-}
-
-.city-tab:hover {
-  background: var(--m-primary-dim);
-  border-color: rgba(255, 77, 0, 0.35);
-  color: var(--m-primary);
-}
-
-.city-tab:hover .tab-dot {
-  background: var(--m-primary);
-}
-
-.city-tab.active {
-  background: var(--m-primary);
-  border-color: var(--m-primary);
-  color: #0a0a0a;
-}
-
-.city-tab.active .tab-dot {
-  background: #0a0a0a;
-}
+/* ===== Per-city venue rail ===== */
 
 .venue-list {
-  flex: 1;
+  flex: 0 1 auto;
+  max-height: 30vh;
   overflow-y: auto;
   padding: 0.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  border-top: 1px solid var(--m-line);
+  background: var(--m-card);
 }
 
 .venue-list::-webkit-scrollbar {
@@ -607,43 +591,34 @@
 /* ===== Responsive ===== */
 
 @media (max-width: 1024px) {
-  .map-layout {
+  .map-cities {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    min-height: auto;
+    height: auto;
   }
 
-  .map-sidebar {
-    max-height: 40vh;
-    border-right: none;
+  .city-panel + .city-panel {
+    border-left: none;
     border-top: 1px solid var(--m-line);
   }
 
-  .map-container {
-    border-right: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .map-layout {
-    min-height: 500px;
+  .city-map {
+    height: 42vh;
+    min-height: 320px;
+    flex: none;
   }
 
-  .map-sidebar {
-    max-height: 36vh;
+  .venue-list {
+    max-height: 32vh;
   }
 }
 
 @media (max-width: 600px) {
-  .city-tabs {
-    justify-content: center;
+  .city-map {
+    height: 40vh;
+    min-height: 300px;
   }
 
-  .map-layout {
-    grid-template-rows: 50vh 1fr;
-  }
-
-  #venueMap {
-    min-height: 50vh;
+  .venue-list {
+    max-height: 30vh;
   }
 }

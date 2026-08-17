@@ -186,20 +186,30 @@
     <main data-swup>
       <!-- Map Section -->
       <section class="map-section">
-        <div class="map-layout">
-          <!-- Map -->
-          <div class="map-container">
-            <div id="venueMap"></div>
+        <div class="map-cities">
+          <!-- Barcelona panel -->
+          <div class="city-panel" data-city="Barcelona">
+            <div class="city-panel-head">
+              <span class="city-panel-name">Barcelona</span>
+              <span class="city-panel-meta" id="cityMeta-barcelona">—</span>
+            </div>
+            <div class="city-map">
+              <div id="venueMap-barcelona"></div>
+            </div>
+            <div class="venue-list" id="venueList-barcelona"></div>
           </div>
 
-          <!-- Sidebar -->
-          <aside class="map-sidebar">
-            <div class="sidebar-header">
-              <div class="sidebar-title">Clubes</div>
-              <div class="city-tabs" id="cityTabs"></div>
+          <!-- Mexico City panel -->
+          <div class="city-panel" data-city="Mexico City">
+            <div class="city-panel-head">
+              <span class="city-panel-name">México</span>
+              <span class="city-panel-meta" id="cityMeta-mexico-city">—</span>
             </div>
-            <div class="venue-list" id="venueList"></div>
-          </aside>
+            <div class="city-map">
+              <div id="venueMap-mexico-city"></div>
+            </div>
+            <div class="venue-list" id="venueList-mexico-city"></div>
+          </div>
         </div>
       </section>
 

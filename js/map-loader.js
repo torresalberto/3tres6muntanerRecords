@@ -1,27 +1,24 @@
 /**
- * Map Loader — renders the interactive venue map dynamically from JSON data.
- * Leaflet 1.9.4 + OpenFreeMap "dark" vector tiles via maplibre-gl-leaflet
- * (keyless, no account). Falls back to CartoDB Dark Matter if the GL layer
- * or library is unavailable.
+ * Map Loader — renders one interactive Leaflet map per curated city
+ * (Barcelona, Mexico City) from data/venues/index.json. Each map shows only
+ * its own city's venues on an OpenFreeMap "dark" vector basemap via
+ * maplibre-gl-leaflet (keyless, no account). Falls back to CartoDB Dark
+ * Matter if the GL layer or library is unavailable.
  *
  * Features: venue markers with pulse pins, rich popups (channel links + the
- * DJ Library network: "DJs que tocaron aquí" / "Sets en este club"), city
- * filter chips, sidebar rail with catalog numbers, fly-to navigation and
- * deep links (mapa.html#venue:<id>).
+ * DJ Library network: "DJs que tocaron aquí" / "Sets en este club"),
+ * a per-city club list beneath each map, fly-to navigation and deep links
+ * (mapa.html#venue:<id>) that route to the venue's own city map.
  *
  * Top-level const (not on window) — guard with `typeof`, never `window.X`.
  */
 const VenueMap = {
-  map: null,
-  markerLayer: null,
-  markers: [],
-  activeCity: 'all',
-  venues: [],
   cities: [],
+  venues: [],
+  maps: {},
 
   networks: {},
   djNames: {},
-  _containerEl: null,
   _networksPending: false,
 
   // Tokens that never make a venue "distinctive" for network matching.
@@ -59,31 +56,18 @@ const VenueMap = {
   init() {
     if (this._active) return this._active;
     this._active = (async () => {
-      // Teardown a previous map instance (swup re-entry / re-init).
-      if (this.map) {
-        this.map.remove();
-        this.map = null;
-        this.markerLayer = null;
-        this.markers = [];
-      }
+      // Teardown previous map instances (swup re-entry / re-init).
+      Object.values(this.maps).forEach((rec) => {
+        if (rec.map) rec.map.remove();
+      });
+      this.maps = {};
 
       await this.loadData();
       this.loadNetworks();
-
-      const container = document.getElementById('venueMap');
-      if (!container) return;
-      this._containerEl = container;
-
-      this.renderMap();
-      this.renderCityTabs();
-      this.renderVenueList();
+      this.renderPanels();
       this.wireHash();
 
-      setTimeout(() => this.fitAll(), 300);
-      setTimeout(() => {
-        if (this.map) this.map.invalidateSize();
-        this.openHash();
-      }, 420);
+      setTimeout(() => this.openHash(), 500);
     })();
     return this._active;
   },
@@ -127,35 +111,63 @@ const VenueMap = {
         });
       }
       // If a popup is already open, refresh it with the network rows.
-      const open = this.markers.find((m) => this.map && m.getPopup && m.getPopup().isOpen());
-      if (open) this._renderPopup(open);
+      Object.values(this.maps).forEach((rec) => {
+        const open = rec.markers.find((m) => m.getPopup && m.getPopup().isOpen());
+        if (open) this._renderPopup(open);
+      });
     });
   },
 
-  // ---------------------------------------------------------------- map
+  // ---------------------------------------------------------------- panels
 
-  renderMap() {
-    const container = document.getElementById('venueMap');
-    if (!container) return;
-    if (!this.map) {
-      this.map = L.map('venueMap', {
-        center: [41.3851, 2.1734],
-        zoom: 12,
-        zoomControl: false,
-        attributionControl: true,
-        scrollWheelZoom: true,
-        doubleClickZoom: true,
-        boxZoom: true,
-        keyboard: true,
-        dragging: true,
-        touchZoom: true,
-      });
+  renderPanels() {
+    this.cities.forEach((city) => {
+      const slug = this._citySlug(city.name);
+      const mapEl = document.getElementById(`venueMap-${slug}`);
+      if (!mapEl) return;
 
-      L.control.zoom({ position: 'bottomright' }).addTo(this.map);
-    }
+      const venues = this.venues.filter((v) => v.city === city.name);
+      const metaEl = document.getElementById(`cityMeta-${slug}`);
+      if (metaEl) {
+        metaEl.textContent = `${venues.length} clubes · ${this._cityLabel(city.country)}`;
+      }
+
+      const rec = { city, map: null, markerLayer: null, markers: [], elId: `venueMap-${slug}` };
+      this.maps[city.name] = rec;
+      this.createCityMap(rec, venues);
+
+      const listEl = document.getElementById(`venueList-${slug}`);
+      if (listEl) this.renderVenueList(listEl, venues);
+    });
+  },
+
+  _citySlug(name) {
+    return String(name || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-');
+  },
+
+  _cityLabel(country) {
+    return country === 'Spain' ? 'España' : country === 'Mexico' ? 'México' : country || '';
+  },
+
+  createCityMap(rec, venues) {
+    const map = L.map(rec.elId, {
+      center: [rec.city.center.lat, rec.city.center.lng],
+      zoom: rec.city.zoom,
+      zoomControl: false,
+      attributionControl: true,
+      scrollWheelZoom: true,
+      doubleClickZoom: true,
+      boxZoom: true,
+      keyboard: true,
+      dragging: true,
+      touchZoom: true,
+    });
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
 
     const basemap = this.createBasemap();
-    basemap.addTo(this.map);
+    basemap.addTo(map);
     // Surface MapLibre runtime errors (tile fetch failures, style issues) so
     // a blank basemap is never silent.
     if (typeof basemap.getMaplibreMap === 'function') {
@@ -167,8 +179,50 @@ const VenueMap = {
         /* noop */
       }
     }
-    this.markerLayer = L.layerGroup().addTo(this.map);
-    this.addMarkers();
+
+    const markerLayer = L.layerGroup().addTo(map);
+    rec.map = map;
+    rec.markerLayer = markerLayer;
+
+    const icon = this.createMarkerIcon();
+    const globalIndex = this.venues.findIndex((v) => v.id === (venues[0] && venues[0].id));
+
+    rec.markers = venues.map((venue, i) => {
+      const marker = L.marker([venue.coordinates.lat, venue.coordinates.lng], {
+        icon,
+        riseOnHover: true,
+      });
+      marker.venueData = venue;
+      marker._index = globalIndex === -1 ? i : globalIndex + i;
+      marker.venueData._cat = marker._index + 1;
+      marker.bindPopup('<div class="venue-popup loading">Cargando…</div>', {
+        maxWidth: 320,
+        minWidth: 260,
+        className: 'venue-popup-wrapper',
+      });
+      marker.on('popupopen', () => this._renderPopup(marker));
+      marker.on('click', () => this._syncHash(venue.id));
+
+      markerLayer.addLayer(marker);
+      return marker;
+    });
+
+    this.fitCity(rec);
+    setTimeout(() => map.invalidateSize(), 350);
+  },
+
+  fitCity(rec) {
+    if (!rec || !rec.map) return;
+    if (rec.markers.length === 1) {
+      rec.map.setView([rec.markers[0].getLatLng().lat, rec.markers[0].getLatLng().lng], 15);
+      return;
+    }
+    if (rec.markers.length > 1) {
+      const group = L.featureGroup(rec.markers);
+      rec.map.fitBounds(group.getBounds().pad(0.2));
+      return;
+    }
+    rec.map.setView([rec.city.center.lat, rec.city.center.lng], rec.city.zoom || 12);
   },
 
   // OpenFreeMap "dark" (keyless community tiles); CartoDB as a fallback.
@@ -215,33 +269,6 @@ const VenueMap = {
       iconSize: [32, 42],
       iconAnchor: [16, 42],
       popupAnchor: [0, -44],
-    });
-  },
-
-  addMarkers() {
-    if (this.markerLayer) this.markerLayer.clearLayers();
-    this.markers = [];
-
-    const icon = this.createMarkerIcon();
-
-    this.venues.forEach((venue, index) => {
-      const marker = L.marker([venue.coordinates.lat, venue.coordinates.lng], {
-        icon,
-        riseOnHover: true,
-      });
-
-      marker.venueData = venue;
-      marker._index = index;
-      marker.bindPopup('<div class="venue-popup loading">Cargando…</div>', {
-        maxWidth: 320,
-        minWidth: 260,
-        className: 'venue-popup-wrapper',
-      });
-      marker.on('popupopen', () => this._renderPopup(marker));
-      marker.on('click', () => this._syncHash(venue.id));
-
-      this.markers.push(marker);
-      this.markerLayer.addLayer(marker);
     });
   },
 
@@ -330,7 +357,7 @@ const VenueMap = {
     let best = null;
     for (const [key, net] of Object.entries(this.networks)) {
       const kk = this.normalKey(key);
-      const shared = tokens.filter((t) => kk.split(/[^a-z0-9]+/).indexOf(t) !== -1).length;
+      const shared = tokens.filter((t) => kk.split(/[^a-z0-9]+/).includes(t)).length;
       if (shared > 0 && (!best || shared > best.shared)) {
         best = { shared, net, key };
       }
@@ -356,42 +383,15 @@ const VenueMap = {
 
   // ---------------------------------------------------------------- rail
 
-  renderCityTabs() {
-    const container = document.getElementById('cityTabs');
-    if (!container) return;
+  renderVenueList(el, venues) {
+    const startIndex = this.venues.findIndex((v) => v.id === (venues[0] && venues[0].id));
 
-    const allTab = `<button class="city-tab active" data-city="all">
-      <span class="tab-dot"></span> Todas
-    </button>`;
-    const cityTabs = this.cities
-      .map(
-        (city) =>
-          `<button class="city-tab" data-city="${city.name}">
-            <span class="tab-dot"></span> ${city.name}
-          </button>`
-      )
-      .join('');
-
-    container.innerHTML = allTab + cityTabs;
-
-    container.querySelectorAll('.city-tab').forEach((tab) => {
-      tab.addEventListener('click', () => {
-        container.querySelectorAll('.city-tab').forEach((t) => t.classList.remove('active'));
-        tab.classList.add('active');
-        this.filterByCity(tab.dataset.city);
-      });
-    });
-  },
-
-  renderVenueList() {
-    const container = document.getElementById('venueList');
-    if (!container) return;
-
-    container.innerHTML = this.venues
-      .map(
-        (v, i) => `
+    el.innerHTML = venues
+      .map((v, i) => {
+        const cat = startIndex === -1 ? i : startIndex + i;
+        return `
       <div class="venue-card" data-venue-id="${v.id}" data-city="${v.city}">
-        <div class="venue-index">Nº ${String(i + 1).padStart(3, '0')}</div>
+        <div class="venue-index">Nº ${String(cat + 1).padStart(3, '0')}</div>
         <div class="venue-card-body">
           <div class="venue-card-header">
             <h3 class="venue-card-name">${v.name}</h3>
@@ -401,11 +401,11 @@ const VenueMap = {
           ${v.soundsystem ? `<div class="venue-card-chip">${v.soundsystem}</div>` : ''}
         </div>
       </div>
-    `
-      )
+    `;
+      })
       .join('');
 
-    container.querySelectorAll('.venue-card').forEach((card) => {
+    el.querySelectorAll('.venue-card').forEach((card) => {
       card.addEventListener('click', () => {
         const venueId = card.dataset.venueId;
         this.goToVenue(venueId);
@@ -415,7 +415,8 @@ const VenueMap = {
 
   // ---------------------------------------------------------------- navigation
 
-  // Deep-link support: mapa.html#venue:<id> flies to + opens a venue.
+  // Deep-link support: mapa.html#venue:<id> flies to + opens the venue on its
+  // own city map.
   wireHash() {
     window.addEventListener('hashchange', () => this.openHash());
   },
@@ -423,33 +424,32 @@ const VenueMap = {
   openHash() {
     const m = window.location.hash.match(/^#venue:(.+)$/);
     if (!m) return;
-    const venueId = decodeURIComponent(m[1]);
-    const index = this.venues.findIndex((v) => v.id === venueId);
-    if (index === -1 || !this.map) return;
-
-    if (this.activeCity !== 'all') {
-      const tab = document.querySelector(`.city-tab[data-city="${this.venues[index].city}"]`);
-      if (tab) tab.click();
-    }
-    this.goToVenue(venueId);
+    this.goToVenue(decodeURIComponent(m[1]));
   },
 
   goToVenue(venueId) {
-    const marker = this.markers.find((m) => m.venueData.id === venueId);
-    if (!marker || !this.map) return;
+    const venue = this.venues.find((v) => v.id === venueId);
+    if (!venue) return;
+    const rec = this.maps[venue.city];
+    if (!rec || !rec.map) return;
+    const marker = rec.markers.find((m) => m.venueData.id === venueId);
+    if (!marker) return;
 
-    this.map.flyTo(marker.getLatLng(), 16, {
+    rec.map.flyTo(marker.getLatLng(), 16, {
       duration: 1.5,
       easeLinearity: 0.25,
     });
 
     setTimeout(() => marker.openPopup(), 600);
 
+    const listEl = document.getElementById(`venueList-${this._citySlug(venue.city)}`);
     document.querySelectorAll('.venue-card').forEach((c) => c.classList.remove('active'));
-    const card = document.querySelector(`.venue-card[data-venue-id="${venueId}"]`);
-    if (card) {
-      card.classList.add('active');
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (listEl) {
+      const card = listEl.querySelector(`.venue-card[data-venue-id="${venueId}"]`);
+      if (card) {
+        card.classList.add('active');
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     }
 
     this._syncHash(venueId);
@@ -463,45 +463,6 @@ const VenueMap = {
         /* noop */
       }
     }
-  },
-
-  filterByCity(city) {
-    document.querySelectorAll('.venue-card').forEach((card) => {
-      const show = city === 'all' || card.dataset.city === city;
-      card.style.display = show ? '' : 'none';
-    });
-
-    this.markerLayer.clearLayers();
-
-    if (city === 'all') {
-      this.markers.forEach((m) => this.markerLayer.addLayer(m));
-      this.fitAll();
-    } else {
-      const filtered = this.markers.filter((m) => m.venueData.city === city);
-      filtered.forEach((m) => this.markerLayer.addLayer(m));
-
-      const cityData = this.cities.find((c) => c.name === city);
-      if (cityData) {
-        this.map.flyTo([cityData.center.lat, cityData.center.lng], cityData.zoom, {
-          duration: 1.5,
-        });
-      }
-    }
-
-    this.activeCity = city;
-  },
-
-  fitAll() {
-    if (!this.map || this.markers.length === 0) return;
-    this.markers.forEach((m) => this.markerLayer.addLayer(m));
-
-    if (this.markers.length === 1) {
-      this.map.setView([this.markers[0].getLatLng().lat, this.markers[0].getLatLng().lng], 15);
-      return;
-    }
-
-    const group = L.featureGroup(this.markers);
-    this.map.fitBounds(group.getBounds().pad(0.15), { duration: 1 });
   },
 };
 

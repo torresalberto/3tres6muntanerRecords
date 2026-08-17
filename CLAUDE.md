@@ -20,9 +20,12 @@ not scraped automatically.
   MapLibre GL JS (`maplibre-gl@5.24.0`) + `@maplibre/maplibre-gl-leaflet`
   (`L.maplibreGL`). **Keyless — no account, no API key** (house rule: no Google).
   Falls back to CartoDB Dark Matter if the GL layer fails to init.
-- **Renderer:** `js/map-loader.js` (`VenueMap`) — reads JSON, draws markers, popups,
-  city-filter tabs, sidebar rail and fly-to navigation. Deep links:
-  `mapa.html#venue:<id>` (fly-to + open + highlight rail card).
+- **Renderer:** `js/map-loader.js` (`VenueMap`) — reads JSON, draws one map per
+  city (`mapa.html#venueMap-<city>` / `#venueList-<city>`), markers, popups and
+  fly-to navigation. Each city renders only its own venues (6 pins yet), with a
+  venue rail beneath the map (catalog Nº continues across cities: 001–012).
+  Deep links: `mapa.html#venue:<id>` route to the venue's own city map
+  (fly-to + open popup + highlight its rail card).
   No build step: edits to the JSON go live on next deploy.
 - **Data source (source of truth):** `data/venues/index.json` — `venues[]` + `cities[]`.
 
@@ -45,7 +48,8 @@ Edit `data/venues/index.json` following the existing schema:
 }
 ```
 
-- `city` must match an entry in `cities[]` (that drives the filter tab + center/zoom).
+- `city` must match an entry in `cities[]` (that creates the city's map panel
+  + drives the fit center/zoom).
 - Verify addresses/coordinates (OpenStreetMap Nominatim is the usual source) — approximate pins
   are worse than no pin. Update `cities[].center/zoom` when a city's spread grows.
 - Keep notes in Spanish, brief, and describe the sound, not the business.
