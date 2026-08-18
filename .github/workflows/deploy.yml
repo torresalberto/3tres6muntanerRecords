@@ -101,5 +101,5 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete --exclude '.git' --exclude 'node_modules' --exclude 'backend/node_modules' \
+          rsync -avz --delete --exclude '.git' --exclude 'node_modules' --exclude 'backend/node_modules' --exclude 'data/events/live' \
             ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}

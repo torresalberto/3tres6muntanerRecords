@@ -29,6 +29,32 @@ not scraped automatically.
   No build step: edits to the JSON go live on next deploy.
 - **Data source (source of truth):** `data/venues/index.json` — `venues[]` + `cities[]`.
 
+### Community events layer (calendario vivo)
+Aside from the curated pins, the map renders a **live events overlay** from the same feed the
+homepage calendar uses — the "comunidad" feature:
+
+- **API:** `api/events.php` (deployed to both hosts; only the store host runs PHP).
+  `GET ?live=1` = merged feed (static `data/events/events.json` + community).
+  `POST` = self-service submit (only Barcelona / Ciudad de México; honeypot +
+  per-IP rate limit, 1 publish/min, 3/day; dedupe on title+date+venue+city).
+  `DELETE ?id&key` = admin yank.
+- **Store (not in git):** `data/events/live/` — `events.json`, `ratelimit.json`,
+  `admin.key`, `.htaccess` (deny). Self-bootstrapped on first write. Excluded from
+  rsync (`--exclude 'data/events/live'` in `.github/workflows/deploy.yml`) and
+  gitignored, so redeploys never wipe it and it's never served.
+- **Geocoding** (server-side, keyless): if the venue matches a curated pin
+  (token matching, `venue_tokens`) it reuses those coordinates; otherwise
+  Nominatim with a city bounding-box check; failure → event still publishes with
+  `coords: null` ("Sin ubicación" on the map).
+- **Frontend:** `js/map-loader.js` `loadEvents()` + `renderEventLayer()` — pulsing
+  yellow event pins distinct from the orange curated pins, event popups,
+  per-city `📅 N` badges, toolbar toggle, `#event:<id>` deep links. Recurring
+  events (e.g. Sunday Sunday) are included; past ones auto-expire.
+- **Linking:** day modal on the calendar links `mapa.html#event:<id>`; map popups
+  link back to `/#calendario` (`data-no-swup`).
+- **Admin:** `scripts/events-admin.sh list|delete <id>` (key = `data/events/live/admin.key`
+  on the store host). Create the key: SSH in and `cat <docroot>/data/events/live/admin.key`.
+
 ### Adding a venue
 Edit `data/venues/index.json` following the existing schema:
 

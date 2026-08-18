@@ -48,3 +48,6 @@ toolhub/backend/downloads/
 toolhub/backend/archived/
 toolhub/backend/cookies.txt
 __pycache__
+
+# Community events store (live feed, admin key) — never commit
+/data/events/live/
