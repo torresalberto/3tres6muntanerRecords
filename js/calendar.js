@@ -4,11 +4,24 @@ const EventCalendar = {
   monthlyEvents: [],
 
   MONTHS: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
-  MONTHS_FULL: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+  MONTHS_FULL: [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
+  ],
   DAYS: ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB', 'DOM'],
   WEEKDAY_EN: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 
-  init: async function() {
+  init: async function () {
     await this.fetchEvents();
     this.currentYear = new Date().getFullYear();
     this.currentMonth = new Date().getMonth();
@@ -18,22 +31,56 @@ const EventCalendar = {
     this.bindNavButtons();
   },
 
-  fetchEvents: async function() {
-    // Load events from local JSON manifest (populated by scripts/scrape-events.js)
+  apiBase: function () {
+    // GH Pages mirror is static — the live feed is read from the store host
+    // (community events + markers). Falls back silently to events.json otherwise.
+    return window.location.hostname.endsWith('github.io')
+      ? 'https://3tres6records.albto.me'
+      : window.location.origin;
+  },
+
+  fetchLive: async function () {
     try {
-      const res = await fetch('data/events/events.json?_=' + Date.now());
+      const res = await fetch(`${this.apiBase()}/api/events.php?live=1&_=${Date.now()}`);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
-      this.events = Array.isArray(data) ? data.filter(e => e.status === 'approved') : [];
+      return Array.isArray(data && data.events)
+        ? data.events.filter((e) => e.status === 'approved')
+        : [];
     } catch (e) {
-      console.warn('[EventCalendar] Could not load events.json:', e.message);
-      this.events = [];
+      console.warn('[EventCalendar] Live feed unavailable:', e.message);
+      return [];
     }
   },
 
+  fetchEvents: async function () {
+    const merged = [];
+    try {
+      const res = await fetch('data/events/events.json?_=' + Date.now());
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data)) merged.push(...data.filter((e) => e.status === 'approved'));
+      }
+    } catch (e) {
+      console.warn('[EventCalendar] Could not load events.json:', e.message);
+    }
+
+    const live = await this.fetchLive();
+    const seen = new Set(merged.map((e) => e.id));
+    live.forEach((e) => {
+      // The live feed merges static + community; keep community rows not already present.
+      if (e.community && e.id && !seen.has(e.id)) {
+        merged.push(e);
+        seen.add(e.id);
+      }
+    });
+
+    this.events = merged;
+  },
+
   // Return all events that fall on a specific date string (YYYY-MM-DD) in the current month
-  getEventsForDate: function(dateStr) {
-    return this.events.filter(e => {
+  getEventsForDate: function (dateStr) {
+    return this.events.filter((e) => {
       if (e.recurring) {
         if (Array.isArray(e.recurringDays) && e.recurringDays.length) {
           const d = new Date(dateStr + 'T00:00:00');
@@ -46,7 +93,7 @@ const EventCalendar = {
     });
   },
 
-  renderCalendar: function() {
+  renderCalendar: function () {
     const container = document.getElementById('dynamicCalendar');
     if (!container) return;
 
@@ -58,7 +105,7 @@ const EventCalendar = {
 
     const header = `
       <div class="calendar-header-row">
-        ${this.DAYS.map(d => `<div class="calendar-day-header">${d}</div>`).join('')}
+        ${this.DAYS.map((d) => `<div class="calendar-day-header">${d}</div>`).join('')}
       </div>
     `;
 
@@ -70,23 +117,27 @@ const EventCalendar = {
       const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
       const dayEvents = this.getEventsForDate(dateStr);
       const hasEvents = dayEvents.length > 0;
-      const isToday = day === now.getDate() && month === now.getMonth() && year === now.getFullYear();
+      const isToday =
+        day === now.getDate() && month === now.getMonth() && year === now.getFullYear();
       const todayClass = isToday ? 'today' : '';
       const eventClass = hasEvents ? 'has-events' : '';
       const clickable = hasEvents ? 'clickable' : '';
 
       let eventHtml = '';
       if (hasEvents) {
-        eventHtml = dayEvents.slice(0, 2).map(e => {
-          const type = e.genres && e.genres.length > 0 ? e.genres[0].toLowerCase() : 'house';
-          const platformClass = e.source === 'submission' ? 'submission-tag' : `${type}-tag`;
-          return `
-            <div class="calendar-event ${type}-event" title="${e.title}">
-              <span class="event-platform ${platformClass}">${e.recurring ? '🔄 C/DOM' : type}</span>
+        eventHtml = dayEvents
+          .slice(0, 2)
+          .map((e) => {
+            const isCom = e.source === 'submission';
+            const label = isCom ? 'COMUNIDAD' : e.recurring ? 'RECURRENTE' : '';
+            return `
+            <div class="calendar-event" title="${e.title}">
+              ${label ? `<span class="event-platform ${isCom ? 'submission-tag' : 'event-tag'}">${label}</span>` : ''}
               <span class="event-name">${e.title.length > 20 ? e.title.slice(0, 18) + '...' : e.title}</span>
             </div>
           `;
-        }).join('');
+          })
+          .join('');
         if (dayEvents.length > 2) {
           eventHtml += `<div class="calendar-more-events">+${dayEvents.length - 2} más</div>`;
         }
@@ -100,14 +151,24 @@ const EventCalendar = {
       `;
     }
 
-    // Count BCN events in this view for the subtitle
-    const bcnCount = this.events.filter(e => {
-      if (!e.country || e.country !== 'ES') return false;
-      if (e.recurring) return false; // recurring is CDMX
-      if (!e.date) return false;
-      const d = new Date(e.date);
-      return d.getFullYear() === year && d.getMonth() === month;
-    }).length;
+    // Count events per city in this view for the subtitle.
+    const countCity = (country) =>
+      this.events.filter((e) => {
+        if (!e.country || e.country !== country) return false;
+        if (e.recurring) return false; // recurring is the weekend staple
+        if (!e.date) return false;
+        const d = new Date(e.date);
+        return d.getFullYear() === year && d.getMonth() === month;
+      }).length;
+    const bcnCount = countCity('ES');
+    const mxCount = countCity('MX');
+
+    const countLine =
+      bcnCount + mxCount === 0
+        ? 'Aún no hay eventos este mes'
+        : `${bcnCount + mxCount} ${bcnCount + mxCount === 1 ? 'evento' : 'eventos'} este mes` +
+          (bcnCount ? ` · ${bcnCount} BCN` : '') +
+          (mxCount ? ` · ${mxCount} CDMX` : '');
 
     container.innerHTML = `
       <div class="calendar-month-header">
@@ -115,13 +176,13 @@ const EventCalendar = {
         <span class="cal-month-label">${this.MONTHS_FULL[month].toUpperCase()} ${year}</span>
         <button class="cal-nav cal-nav-next" id="calNextMonth" aria-label="Mes siguiente">›</button>
       </div>
-      <div class="cal-event-count">${bcnCount} ${bcnCount === 1 ? 'evento BCN' : 'eventos BCN'} este mes</div>
+      <div class="cal-event-count">${countLine}</div>
       ${header}
       <div class="calendar-body">${cells}</div>
     `;
   },
 
-  bindNavButtons: function() {
+  bindNavButtons: function () {
     const container = document.getElementById('dynamicCalendar');
     if (!container) return;
     // Use event delegation so nav buttons work after every re-render
@@ -131,7 +192,7 @@ const EventCalendar = {
     });
   },
 
-  navigateMonth: function(delta) {
+  navigateMonth: function (delta) {
     this.currentMonth += delta;
     if (this.currentMonth < 0) {
       this.currentMonth = 11;
@@ -143,7 +204,7 @@ const EventCalendar = {
     this.renderCalendar();
   },
 
-  bindDayClicks: function() {
+  bindDayClicks: function () {
     const container = document.getElementById('dynamicCalendar');
     if (!container) return;
     container.addEventListener('click', (ev) => {
@@ -154,7 +215,7 @@ const EventCalendar = {
     });
   },
 
-  openDayModal: function(dateStr) {
+  openDayModal: function (dateStr) {
     const modal = document.getElementById('dayEventsModal');
     const titleEl = document.getElementById('dayEventsTitle');
     const listEl = document.getElementById('dayEventsList');
@@ -165,37 +226,49 @@ const EventCalendar = {
 
     // Format date: "Lunes 16 de Junio, 2026"
     const d = new Date(dateStr + 'T00:00:00');
-    const wd = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'][d.getDay()];
+    const wd = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'][
+      d.getDay()
+    ];
     const pretty = `${wd} ${d.getDate()} de ${this.MONTHS_FULL[d.getMonth()]}, ${d.getFullYear()}`;
     titleEl.textContent = pretty;
 
-    listEl.innerHTML = events.map(e => this.renderEventCard(e)).join('');
+    listEl.innerHTML = events.map((e) => this.renderEventCard(e)).join('');
 
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   },
 
-  renderEventCard: function(e) {
-    const djList = e.djs && e.djs.length > 0
-      ? e.djs.map(d => `<span class="dj-pill">${d}</span>`).join('')
-      : '<span class="dj-pill dj-pill-tba">TBA</span>';
+  renderEventCard: function (e) {
+    const djList =
+      e.djs && e.djs.length > 0
+        ? e.djs.map((d) => `<span class="dj-pill">${d}</span>`).join('')
+        : '<span class="dj-pill dj-pill-tba">TBA</span>';
 
     const timeStr = e.time
       ? `<span>⏱ ${e.time}${e.endTime && e.endTime !== 'late' ? ' – ' + e.endTime : ''}</span>`
       : '';
 
-    const genresStr = e.genres && e.genres.length > 0
-      ? e.genres.map(g => `<span class="genre-pill">${g}</span>`).join(' ')
-      : '';
-
-    const priceStr = e.price && e.price.toLowerCase().includes('free')
-      ? '<span class="price-tag free-tag">GRATIS</span>'
-      : e.price && e.price !== 'TBA' ? `<span class="price-tag paid-tag">${e.price}</span>` : '';
+    const priceStr =
+      e.price && e.price.toLowerCase().includes('free')
+        ? '<span class="price-tag free-tag">GRATIS</span>'
+        : e.price && e.price !== 'TBA'
+          ? `<span class="price-tag paid-tag">${e.price}</span>`
+          : '';
 
     const recurringTag = e.recurring
       ? '<span class="recurring-tag">🔄 Evento recurrente</span>'
       : '';
+
+    const communityTag =
+      e.source === 'submission'
+        ? '<span class="community-tag">Agregado por la comunidad</span>'
+        : '';
+
+    const onMap =
+      e.coords && e.coords.lat && e.coords.lng
+        ? `<a class="event-link-map" data-no-swup href="mapa.html#event:${encodeURIComponent(e.id)}">📍 Ver en el mapa →</a>`
+        : '';
 
     return `
       <article class="day-event-card">
@@ -209,16 +282,17 @@ const EventCalendar = {
           ${timeStr}
           ${recurringTag}
         </div>
-        ${genresStr ? `<div class="day-event-genres">${genresStr}</div>` : ''}
         ${djList ? `<div class="day-event-djs"><span class="djs-label">🎧 Lineup:</span> ${djList}</div>` : ''}
+        ${communityTag}
         <div class="day-event-actions">
           ${e.url ? `<a href="${e.url}" target="_blank" rel="noopener" class="event-link-primary">Info / Tickets →</a>` : '<span class="no-link-msg">Sin link público</span>'}
+          ${onMap}
         </div>
       </article>
     `;
   },
 
-  closeDayModal: function() {
+  closeDayModal: function () {
     const modal = document.getElementById('dayEventsModal');
     if (!modal) return;
     modal.classList.remove('active');
@@ -226,7 +300,7 @@ const EventCalendar = {
     document.body.style.overflow = '';
   },
 
-  bindModalClose: function() {
+  bindModalClose: function () {
     const modal = document.getElementById('dayEventsModal');
     const closeBtn = document.getElementById('closeDayEvents');
     if (!modal) return;
@@ -237,7 +311,7 @@ const EventCalendar = {
     document.addEventListener('keydown', (ev) => {
       if (ev.key === 'Escape') this.closeDayModal();
     });
-  }
+  },
 };
 
 document.addEventListener('DOMContentLoaded', () => EventCalendar.init());

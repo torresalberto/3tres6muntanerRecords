@@ -1560,8 +1560,6 @@ button {
   color: var(--color-text-muted);
 }
 
-
-
 .calendar-legend {
   max-width: 1400px;
   margin: 20px auto 0;
@@ -3051,8 +3049,6 @@ body.checkout-open {
   text-overflow: ellipsis;
 }
 
-
-
 @media (max-width: 768px) {
   .dj-lineup {
     padding: 30px 20px;
@@ -3374,6 +3370,48 @@ body.checkout-open {
   padding: 2px 8px;
   border-radius: 50px;
   margin-bottom: 4px;
+}
+
+.event-tag {
+  background: rgba(105, 201, 208, 0.15);
+  color: #69c9d0;
+  border: 1px solid rgba(105, 201, 208, 0.3);
+}
+
+.submission-tag {
+  background: rgba(255, 200, 0, 0.15);
+  color: #ffc800;
+  border: 1px solid rgba(255, 200, 0, 0.32);
+}
+
+.community-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffc800;
+  background: rgba(255, 200, 0, 0.08);
+  border: 1px solid rgba(255, 200, 0, 0.25);
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-top: 6px;
+}
+
+.event-link-map {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #69c9d0;
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid rgba(105, 201, 208, 0.35);
+  border-radius: 999px;
+  margin-top: 6px;
+}
+
+.event-link-map:hover {
+  background: rgba(105, 201, 208, 0.12);
 }
 
 .tiktok-tag {
@@ -4321,7 +4359,6 @@ a.blog-card-image:hover {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
 }
-
 
 .day-event-djs {
   display: flex;

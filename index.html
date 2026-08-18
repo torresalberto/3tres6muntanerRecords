@@ -1270,14 +1270,11 @@
               />
             </div>
             <div class="form-group">
-              <label for="sub-city">Ciudad</label>
-              <input
-                type="text"
-                id="sub-city"
-                name="city"
-                class="submit-input"
-                placeholder="Barcelona, CDMX..."
-              />
+              <label for="sub-city">Ciudad *</label>
+              <select id="sub-city" name="city" class="submit-input" required>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Ciudad de México">Ciudad de México</option>
+              </select>
             </div>
           </div>
 
@@ -1345,6 +1342,18 @@
             />
           </div>
 
+          <div class="form-group" aria-hidden="true" hidden>
+            <label for="sub-website">Website</label>
+            <input
+              type="text"
+              id="sub-website"
+              name="website"
+              class="submit-input"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
           <div class="form-group">
             <label for="sub-desc">Descripci\u00f3n</label>
             <textarea
@@ -1366,8 +1375,8 @@
           </button>
 
           <p class="submit-footer-note">
-            Recibimos tu propuesta, la revisamos y si todo est\u00e1 bien la publicamos en el
-            calendario. F\u00e1cil.
+            Solo aceptamos eventos en Barcelona y Ciudad de México. Se publica al instante en el
+            calendario y en el mapa. Fácil.
           </p>
         </form>
       </div>

@@ -172,12 +172,26 @@
     <main data-swup>
       <!-- Map Section -->
       <section class="map-section">
+        <div class="map-toolbar">
+          <span class="map-toolbar-label">Nuestro Territorio + Calendario vivo</span>
+          <button
+            class="map-events-toggle active"
+            id="btnToggleEvents"
+            type="button"
+            aria-pressed="true"
+          >
+            📅 Eventos<span id="eventsCountTotal"></span>
+          </button>
+        </div>
         <div class="map-cities">
           <!-- Barcelona panel -->
           <div class="city-panel" data-city="Barcelona">
             <div class="city-panel-head">
               <span class="city-panel-name">Barcelona</span>
-              <span class="city-panel-meta" id="cityMeta-barcelona">—</span>
+              <div class="city-panel-badges">
+                <span class="city-panel-meta" id="cityMeta-barcelona">—</span>
+                <span class="city-panel-events" id="cityEvents-barcelona"></span>
+              </div>
             </div>
             <div class="city-map">
               <div id="venueMap-barcelona"></div>
@@ -189,7 +203,10 @@
           <div class="city-panel" data-city="Mexico City">
             <div class="city-panel-head">
               <span class="city-panel-name">México</span>
-              <span class="city-panel-meta" id="cityMeta-mexico-city">—</span>
+              <div class="city-panel-badges">
+                <span class="city-panel-meta" id="cityMeta-mexico-city">—</span>
+                <span class="city-panel-events" id="cityEvents-mexico-city"></span>
+              </div>
             </div>
             <div class="city-map">
               <div id="venueMap-mexico-city"></div>
@@ -213,6 +230,22 @@
             rel="noopener"
             class="map-cta-btn"
             >Sugerir un club →</a
+          >
+        </div>
+      </section>
+
+      <section class="map-cta">
+        <div class="map-cta-content">
+          <h2 class="map-cta-title">¿Suena tu fiesta aquí?</h2>
+          <p class="map-cta-text">
+            Publica tu party al instante en el calendario y aparecerá en el mapa. Solo Barcelona y
+            Ciudad de México.
+          </p>
+          <a
+            href="/3tres6muntanerRecords/#calendario"
+            class="map-cta-btn map-cta-btn-alt"
+            data-no-swup
+            >Promociona tu evento →</a
           >
         </div>
       </section>

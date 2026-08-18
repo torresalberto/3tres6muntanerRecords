@@ -21,6 +21,10 @@ const VenueMap = {
   djNames: {},
   _networksPending: false,
 
+  // Community events (live feed) rendered as an overlay layer per city.
+  events: [],
+  _showEvents: true,
+
   // Tokens that never make a venue "distinctive" for network matching.
   _stop: new Set([
     'studio',
@@ -64,6 +68,7 @@ const VenueMap = {
 
       await this.loadData();
       this.loadNetworks();
+      await this.loadEvents();
       this.renderPanels();
       this.wireHash();
 
@@ -85,6 +90,44 @@ const VenueMap = {
       console.error('Venue map load error:', e);
       this.venues = [];
       this.cities = [];
+    }
+  },
+
+  apiBase() {
+    // GH Pages mirror is static — the live feed is read from the store host.
+    return window.location.hostname.endsWith('github.io')
+      ? 'https://3tres6records.albto.me'
+      : window.location.origin;
+  },
+
+  cityKey(name) {
+    const n = this.normalKey(name);
+    if (n.startsWith('ciudad de mexico') || /^mexico/.test(n)) return 'Mexico City';
+    return n.startsWith('barcelona') ? 'Barcelona' : name;
+  },
+
+  async loadEvents() {
+    this.events = [];
+    try {
+      const res = await fetch(`${this.apiBase()}/api/events.php?live=1&_=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const list = data && Array.isArray(data.events) ? data.events : [];
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      this.events = list.filter((e) => {
+        if (!e.community || !e.id) return false;
+        if (!(e.coords && e.coords.lat && e.coords.lng)) return false;
+        if (!this.cities.some((c) => c.name === this.cityKey(e.city))) return false;
+        if (e.recurring) return true;
+        if (!e.date) return false;
+        const d = new Date(e.date + 'T00:00:00');
+        if (Number.isNaN(d.getTime())) return false;
+        return d >= today;
+      });
+    } catch (e) {
+      console.warn('[VenueMap] No live events feed:', e.message);
+      this.events = [];
     }
   },
 
@@ -132,13 +175,24 @@ const VenueMap = {
         metaEl.textContent = `${venues.length} clubes · ${this._cityLabel(city.country)}`;
       }
 
-      const rec = { city, map: null, markerLayer: null, markers: [], elId: `venueMap-${slug}` };
+      const rec = {
+        city,
+        map: null,
+        markerLayer: null,
+        eventLayer: null,
+        markers: [],
+        eventMarkers: [],
+        elId: `venueMap-${slug}`,
+      };
       this.maps[city.name] = rec;
       this.createCityMap(rec, venues);
 
       const listEl = document.getElementById(`venueList-${slug}`);
       if (listEl) this.renderVenueList(listEl, venues);
+
+      this.renderEventLayer(rec, city);
     });
+    this.bindEventsToggle();
   },
 
   _citySlug(name) {
@@ -183,6 +237,7 @@ const VenueMap = {
     const markerLayer = L.layerGroup().addTo(map);
     rec.map = map;
     rec.markerLayer = markerLayer;
+    rec.eventLayer = L.layerGroup().addTo(map);
 
     const icon = this.createMarkerIcon();
     const globalIndex = this.venues.findIndex((v) => v.id === (venues[0] && venues[0].id));
@@ -413,6 +468,144 @@ const VenueMap = {
     });
   },
 
+  // ---------------------------------------------------------------- events layer
+
+  // Overlay markers for community events (live feed). Curated club pins are
+  // untouched; this layer is the "calendario vivo" on top of the territorio.
+  renderEventLayer(rec, city) {
+    const slug = this._citySlug(city.name);
+    const cityEvents = this.events.filter((e) => this.cityKey(e.city) === city.name);
+    rec.eventMarkers = cityEvents.map((ev) => this._makeEventMarker(rec, ev));
+
+    const badgeEl = document.getElementById(`cityEvents-${slug}`);
+    if (badgeEl) badgeEl.textContent = cityEvents.length > 0 ? `📅 ${cityEvents.length}` : '';
+    this.updateToggleCount();
+  },
+
+  _makeEventMarker(rec, ev) {
+    const marker = L.marker([ev.coords.lat, ev.coords.lng], {
+      icon: this.createEventMarkerIcon(),
+      riseOnHover: true,
+    });
+    marker.eventData = ev;
+    marker.bindPopup(this._renderEventPopupHTML(ev), {
+      maxWidth: 320,
+      minWidth: 260,
+      className: 'event-popup-wrapper',
+    });
+    marker.on('click', () => this._syncEventHash(ev.id));
+    if (this._showEvents) rec.eventLayer.addLayer(marker);
+    return marker;
+  },
+
+  createEventMarkerIcon() {
+    return L.divIcon({
+      className: 'event-marker-icon',
+      html: `
+        <div class="event-marker-pulse"></div>
+        <div class="event-marker-pin">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+      `,
+      iconSize: [32, 42],
+      iconAnchor: [16, 42],
+      popupAnchor: [0, -44],
+    });
+  },
+
+  bindEventsToggle() {
+    const btn = document.getElementById('btnToggleEvents');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      this._showEvents = !this._showEvents;
+      this.applyEventsVisibility();
+    });
+    btn.classList.toggle('active', this._showEvents);
+    this.updateToggleCount();
+  },
+
+  applyEventsVisibility() {
+    Object.values(this.maps).forEach((rec) => {
+      (rec.eventMarkers || []).forEach((m) => {
+        if (this._showEvents && !rec.eventLayer.hasLayer(m)) rec.eventLayer.addLayer(m);
+        else if (!this._showEvents && rec.eventLayer.hasLayer(m)) rec.eventLayer.removeLayer(m);
+      });
+    });
+    const btn = document.getElementById('btnToggleEvents');
+    if (btn) btn.classList.toggle('active', this._showEvents);
+  },
+
+  updateToggleCount() {
+    const total = this.events.length;
+    const el = document.getElementById('eventsCountTotal');
+    if (el) el.textContent = ` ${total} ${total === 1 ? 'evento' : 'eventos'} próximos`;
+  },
+
+  _renderEventPopupHTML(ev) {
+    const esc = (s) => this._esc(s);
+    const djs =
+      ev.djs && ev.djs.length
+        ? ev.djs.map((d) => `<span class="event-popup-dj">${esc(d)}</span>`).join('')
+        : '<span class="event-popup-dj event-popup-dj-tba">TBA</span>';
+    const price =
+      ev.price && ev.price !== 'TBA'
+        ? `<span class="event-popup-price">${esc(ev.price)}</span>`
+        : '';
+    const time = ev.time && ev.time !== 'TBA' ? ` · ${esc(ev.time)}` : '';
+    const desc = ev.description ? `<p class="event-popup-desc">${esc(ev.description)}</p>` : '';
+    return `
+      <div class="event-popup">
+        <div class="event-popup-head">
+          <div class="event-popup-badge">COMUNIDAD</div>
+          <h3 class="event-popup-name">${esc(ev.title)}</h3>
+          ${price}
+        </div>
+        <p class="event-popup-meta">📅 ${this.esDate(ev.date)}${time}</p>
+        <p class="event-popup-venue">📍 ${esc(ev.venue)}${ev.address ? ` · ${esc(ev.address)}` : ''}</p>
+        <div class="event-popup-djs"><span class="event-popup-djs-label">🎧</span> ${djs}</div>
+        ${desc}
+        <div class="event-popup-actions">
+          ${ev.url ? `<a href="${esc(ev.url)}" target="_blank" rel="noopener" class="popup-link">Info / Tickets →</a>` : ''}
+          <a href="/3tres6muntanerRecords/#calendario" data-no-swup class="popup-link">Ver en el calendario →</a>
+        </div>
+      </div>
+    `;
+  },
+
+  _esc(str) {
+    return String(str === null || str === undefined ? '' : str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  },
+
+  esDate(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    if (Number.isNaN(d.getTime())) return dateStr;
+    const months = [
+      'Enero',
+      'Febrero',
+      'Marzo',
+      'Abril',
+      'Mayo',
+      'Junio',
+      'Julio',
+      'Agosto',
+      'Septiembre',
+      'Octubre',
+      'Noviembre',
+      'Diciembre',
+    ];
+    return `${d.getDate()} de ${months[d.getMonth()]} ${d.getFullYear()}`;
+  },
+
   // ---------------------------------------------------------------- navigation
 
   // Deep-link support: mapa.html#venue:<id> flies to + opens the venue on its
@@ -422,9 +615,40 @@ const VenueMap = {
   },
 
   openHash() {
+    const em = window.location.hash.match(/^#event:(.+)$/);
+    if (em) {
+      this.goToEvent(decodeURIComponent(em[1]));
+      return;
+    }
     const m = window.location.hash.match(/^#venue:(.+)$/);
-    if (!m) return;
-    this.goToVenue(decodeURIComponent(m[1]));
+    if (m) this.goToVenue(decodeURIComponent(m[1]));
+  },
+
+  goToEvent(eventId) {
+    const ev = this.events.find((e) => e.id === eventId);
+    if (!ev) return;
+    const rec = this.maps[this.cityKey(ev.city)];
+    if (!rec || !rec.map) return;
+    if (!this._showEvents) {
+      this._showEvents = true;
+      this.applyEventsVisibility();
+    }
+    const marker = (rec.eventMarkers || []).find((m) => m.eventData.id === eventId);
+    if (!marker) return;
+
+    rec.map.flyTo(marker.getLatLng(), 16, { duration: 1.5, easeLinearity: 0.25 });
+    setTimeout(() => marker.openPopup(), 600);
+    this._syncEventHash(eventId);
+  },
+
+  _syncEventHash(hashId) {
+    if (window.location.hash !== `#event:${hashId}`) {
+      try {
+        history.replaceState(null, '', `#event:${hashId}`);
+      } catch (e) {
+        /* noop */
+      }
+    }
   },
 
   goToVenue(venueId) {
