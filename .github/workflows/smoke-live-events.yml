@@ -1,0 +1,50 @@
+# Live events API smoke — POST → GET → DELETE on the shared host.
+# Trigger manually (workflow_dispatch). Self-cleaning: the test event is
+# deleted at the end via the store's admin.key, so nothing lingers publicly.
+
+name: Live Events Smoke
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: Events API live smoke
+    runs-on: ubuntu-latest
+    if: vars.SSH_ENABLED == 'true'
+    steps:
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: POST → GET → DELETE on the live API
+        run: |
+          set -euo pipefail
+          API="https://3tres6records.albto.me/api/events.php"
+          TAG="smoke-$(date +%s)"
+          TITLE="TEST smoke $TAG"
+          DATE=$(date -d "+14 days" +%Y-%m-%d)
+
+          POST=$(curl -s -X POST "$API" \
+            -H 'Content-Type: application/json' \
+            -d "{\"title\":\"$TITLE\",\"date\":\"$DATE\",\"time\":\"23:00\",\"venue\":\"Moog Club\",\"city\":\"Barcelona\",\"website\":\"\"}")
+          echo "POST -> $POST"
+          ID=$(echo "$POST" | python3 -c "import sys,json;print(json.load(sys.stdin)['event']['id'])")
+          GEO=$(echo "$POST" | python3 -c "import sys,json;print(json.load(sys.stdin)['event']['geo_source'])")
+          if [ "$GEO" != "curated" ]; then
+            echo "FAIL: expected geo_source=curated (token match on Moog Club), got $GEO"
+            exit 1
+          fi
+          echo "POST OK: $ID ($GEO)"
+
+          curl -s "$API?live=1" | python3 -c "import sys,json;d=json.load(sys.stdin);assert any(e['id']=='$ID' for e in d['events']), 'event missing from feed'; print('GET contains', '$ID', '-> OK')"
+
+          KEY=$(ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cat ${{ secrets.SSH_PATH }}/data/events/live/admin.key")
+          echo "DELETE:"
+          curl -s -w " [%{http_code}]\n" -X DELETE "$API?id=$ID&key=$KEY"
+
+          curl -s "$API?live=1" | python3 -c "import sys,json;d=json.load(sys.stdin);assert not any(e['id']=='$ID' for e in d['events']), 'event still present after DELETE'; print('removed from feed -> OK')"
+          echo "LIVE EVENTS SMOKE PASSED"
