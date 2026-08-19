@@ -10,7 +10,6 @@
         "lng": 2.17368
       },
       "address": "Carrer de Guàrdia 3, 08002 Barcelona",
-      "genres": ["House", "Techno", "Disco"],
       "curated_by": "3tres6 crew",
       "notes": "Intimate club in the heart of El Raval. Known for underground electronic music.",
       "links": {
@@ -27,11 +26,10 @@
       "city": "Barcelona",
       "country": "Spain",
       "coordinates": {
-        "lat": 41.38880,
+        "lat": 41.3888,
         "lng": 2.16622
       },
       "address": "Rambla de Catalunya 23, 08007 Barcelona",
-      "genres": ["House", "Techno", "Ambient"],
       "curated_by": "3tres6 crew",
       "notes": "Audiophile social club and listening room in the Eixample. Hi-Fi sound system, vinyl turntables, rotary mixers and terraces.",
       "links": {
@@ -51,7 +49,6 @@
         "lng": 2.14848
       },
       "address": "Av. de Francesc Ferrer i Guàrdia 13, 08038 Barcelona · Poble Espanyol",
-      "genres": ["House", "Techno", "Disco"],
       "curated_by": "3tres6 crew",
       "notes": "High-fidelity dance club inside Poble Espanyol. Funktion-One sound and immersive visuals, focused on headsy house and techno.",
       "links": {
@@ -71,7 +68,6 @@
         "lng": 2.16804
       },
       "address": "Carrer Nou de la Rambla 113, 08004 Barcelona",
-      "genres": ["Techno", "House", "Electro", "Disco"],
       "curated_by": "3tres6 crew",
       "notes": "Temple of electronic music inside Sala Apolo since 1996. Raw, sweaty atmosphere with legendary international bookings.",
       "links": {
@@ -91,7 +87,6 @@
         "lng": 2.17508
       },
       "address": "Carrer de l'Arc del Teatre 3, 08001 Barcelona",
-      "genres": ["Techno", "House"],
       "curated_by": "3tres6 crew",
       "notes": "Iconic Raval club open since 1996 in the former Villa Rosa tablao. Resident DJs keep the essence of local techno and house alive.",
       "links": {
@@ -107,11 +102,10 @@
       "city": "Barcelona",
       "country": "Spain",
       "coordinates": {
-        "lat": 41.35440,
+        "lat": 41.3544,
         "lng": 2.10723
       },
       "address": "Passatge Can Polític 13, 08907 L'Hospitalet de Llobregat",
-      "genres": ["Techno", "Experimental"],
       "curated_by": "3tres6 crew",
       "notes": "Warehouse-turned-club by The Bass Valley academy. One of the best sounding dance floors in the greater Barcelona area.",
       "links": {
@@ -119,6 +113,119 @@
       },
       "capacity": 300,
       "soundsystem": "Pioneer Pro Audio XY-3B"
+    },
+    {
+      "id": "razzmatazz",
+      "name": "Razzmatazz",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.39759,
+        "lng": 2.19125
+      },
+      "address": "Carrer dels Almogàvers 122, 08018 Barcelona · Poblenou",
+      "curated_by": "3tres6 crew",
+      "notes": "Barcelona's cathedral of nightlife since 1995, inside two former factories in Poblenou. RazzClub, Human and Torax nights spin house, techno, acid and electro for a proudly mixed crowd.",
+      "links": {
+        "ra": "https://ra.co/clubs/1792",
+        "instagram": "https://www.instagram.com/razzmatazzbcn/",
+        "website": "https://www.salarazzmatazz.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "jamboree",
+      "name": "Jamboree",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.37967,
+        "lng": 2.17524
+      },
+      "address": "Plaça Reial 17, 08002 Barcelona · El Gòtic",
+      "curated_by": "3tres6 crew",
+      "notes": "Historic jazz hall since 1960 that turns into a cellar dancefloor at night — vinyl-true funk, afro, soul and disco under Plaça Reial. Jazz and jam sessions before midnight.",
+      "links": {
+        "ra": "https://ra.co/clubs/198817",
+        "instagram": "https://www.instagram.com/jamboreebarcelona/",
+        "website": "https://jamboreejazz.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "marula-cafe",
+      "name": "Marula Café",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.38015,
+        "lng": 2.17685
+      },
+      "address": "Carrer dels Escudellers 49, 08002 Barcelona · El Gòtic",
+      "curated_by": "3tres6 crew",
+      "notes": "The temple of groove in the Gòtic — vinyl DJs spinning funk, disco, soul, afrobeat and Latin sounds to a dancefloor that never sits still. Jam sessions midweek, club nights at the weekend.",
+      "links": {
+        "ra": "https://ra.co/clubs/19039",
+        "website": "https://marulacafe.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "terrrazza",
+      "name": "La Terrrazza",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.3692,
+        "lng": 2.1479
+      },
+      "address": "Av. Francesc Ferrer i Guàrdia 13, 08038 Barcelona · Poble Espanyol",
+      "curated_by": "3tres6 crew",
+      "notes": "Open-air electronic club inside Poble Espanyol since 1995, running May to November. House, trance and progressive under the stars on a Balearic-style terrace.",
+      "links": {
+        "website": "https://laterrrazza.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "sala-upload",
+      "name": "Sala Upload",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.3683,
+        "lng": 2.149
+      },
+      "address": "Av. Francesc Ferrer i Guàrdia 13, 08038 Barcelona · Poble Espanyol",
+      "curated_by": "3tres6 crew",
+      "notes": "Sala Upload hosts the Barcelona Underground parties and the Picnic Beat cycle inside Poble Espanyol — a platform for local and international electronic talent.",
+      "links": {
+        "website": "https://www.salaupload.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "boris",
+      "name": "BORIS",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "lat": 41.39305,
+        "lng": 2.13926
+      },
+      "address": "Carrer de Bori i Fontestà 25, 08021 Barcelona · Sarrià-Sant Gervasi",
+      "curated_by": "3tres6 crew",
+      "notes": "Discreet uptown club in Sarrià-Sant Gervasi, hidden in plain sight. Exclusive electronic nights with a polished, intimate atmosphere.",
+      "links": {
+        "website": "https://borisbcn.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
     },
     {
       "id": "yuyu",
@@ -130,7 +237,6 @@
         "lng": -99.15283
       },
       "address": "Dr. Carmona y Valle 135, Col. Doctores, Cuauhtémoc, CDMX",
-      "genres": ["House", "Techno", "Minimal"],
       "curated_by": "3tres6 crew",
       "notes": "Iconic underground club, reborn in September 2025 in an ex-casino in the Doctores. Now includes a cinema, bar and Martin Audio sound.",
       "links": {
@@ -145,11 +251,10 @@
       "city": "Mexico City",
       "country": "Mexico",
       "coordinates": {
-        "lat": 19.41020,
-        "lng": -99.16750
+        "lat": 19.4102,
+        "lng": -99.1675
       },
       "address": "Av. Insurgentes Sur 377, Hipódromo Condesa, CDMX",
-      "genres": ["House", "Nu-Disco", "Funk"],
       "curated_by": "3tres6 crew",
       "notes": "Basement dance club on the edge of Roma and Hipódromo, focused on acoustic fidelity. Vinyl selectors and Funktion One sound.",
       "links": {
@@ -166,11 +271,10 @@
       "city": "Mexico City",
       "country": "Mexico",
       "coordinates": {
-        "lat": 19.41460,
-        "lng": -99.16140
+        "lat": 19.4146,
+        "lng": -99.1614
       },
       "address": "Querétaro 188, Roma Norte, CDMX",
-      "genres": ["House", "Techno", "Disco", "Ambient"],
       "curated_by": "3tres6 crew",
       "notes": "Multifaceted space born in 2023: independent radio, bar, cinema, record store and café in one. A community hub for music.",
       "links": {
@@ -190,7 +294,6 @@
         "lng": -99.16221
       },
       "address": "Av. Álvaro Obregón 154 (primer piso), Roma Norte, CDMX",
-      "genres": ["Techno", "House", "Disco"],
       "curated_by": "3tres6 crew",
       "notes": "Multi-level Roma Norte space with a sprawling terrace. Rotating floors mixing techno, disco and funk in an intimate setting.",
       "links": {
@@ -209,7 +312,6 @@
         "lng": -99.16737
       },
       "address": "Londres 195, Col. Juárez, CDMX",
-      "genres": ["Deep House", "Techno", "Tech-House"],
       "curated_by": "3tres6 crew",
       "notes": "Hidden behind a neutral Juárez facade. The 'Studio' room is all LED panels and riffs on deep house and techno with high-profile guests.",
       "links": {
@@ -224,11 +326,10 @@
       "city": "Mexico City",
       "country": "Mexico",
       "coordinates": {
-        "lat": 19.43350,
-        "lng": -99.14700
+        "lat": 19.4335,
+        "lng": -99.147
       },
       "address": "Tabaqueros 16, Centro Histórico, CDMX",
-      "genres": ["House", "Electro", "Techno"],
       "curated_by": "3tres6 crew",
       "notes": "Multi-level Centro venue with a speakeasy area and a rooftop overlooking the city. Sunday house sessions with an international crowd.",
       "links": {
@@ -236,6 +337,111 @@
       },
       "capacity": null,
       "soundsystem": null
+    },
+    {
+      "id": "bar-oriente",
+      "name": "Bar Oriente",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.42025,
+        "lng": -99.1653
+      },
+      "address": "Calle Durango 181, Roma Norte, 06700 CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Three-room club in Roma with a heavy system that hits right — techno all week long, a small sweaty dancefloor and a smoking courtyard out back.",
+      "links": {
+        "ra": "https://ra.co/clubs/165188"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "phonique",
+      "name": "Phonique",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.41065,
+        "lng": -99.22962
+      },
+      "address": "Av. Paseo de las Palmas 555, Lomas de Chapultepec, CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Exclusive house club in Lomas de Chapultepec dedicated to afro house, latin house, nu disco and disco — upscale, polished and dance-first.",
+      "links": {
+        "website": "https://www.phoniquegroup.mx/phonique"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "musak",
+      "name": "Musak",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.41965,
+        "lng": -99.16303
+      },
+      "address": "Calle Tonalá 171, Roma Norte, CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Multi-level Hi-Fi listening bar in Roma — audiophiles nursing mezcal cocktails while vinyl spins on museum-quality equipment. The music programming turns serious after 9pm.",
+      "links": {},
+      "capacity": null,
+      "soundsystem": "Hi-Fi"
+    },
+    {
+      "id": "kinshasa",
+      "name": "Kinshasa",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.41412,
+        "lng": -99.16459
+      },
+      "address": "Av. Querétaro 225, Roma Norte, CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Rooftop named after Congo's capital where afro house meets mezcalitas. A Mediterranean-African dinner spot that turns into a dancefloor once the sun goes down.",
+      "links": {},
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "balmori",
+      "name": "Balmori Roofbar",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.4157,
+        "lng": -99.16076
+      },
+      "address": "Calle Zacatecas 139 (2º piso), Roma Norte, 06700 CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Rooftop in Roma with a retractable roof and unrivalled views over the tree-lined streets. DJ sets Wednesday to Friday, disco ball after dark.",
+      "links": {
+        "instagram": "https://www.instagram.com/balmorirooftop/",
+        "website": "http://www.balmoriroma.com/"
+      },
+      "capacity": null,
+      "soundsystem": null
+    },
+    {
+      "id": "japan-cdmx",
+      "name": "Japan",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.42082,
+        "lng": -99.16441
+      },
+      "address": "Calle Uruapan 20, Roma Norte, 06700 CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Multi-room club in Roma Norte with a high-fidelity, acoustically treated main room and an underground European-and-Japanese aesthetic. Dries no Coca-Cola — only Boing, and famously tiered entry pricing.",
+      "links": {
+        "instagram": "https://www.instagram.com/japan_cdmx/"
+      },
+      "capacity": null,
+      "soundsystem": "Hi-Fi"
     }
   ],
   "cities": [
@@ -243,19 +449,19 @@
       "name": "Barcelona",
       "country": "Spain",
       "center": {
-        "lat": 41.3780,
-        "lng": 2.1680
+        "lat": 41.383,
+        "lng": 2.16
       },
-      "zoom": 14
+      "zoom": 13
     },
     {
       "name": "Mexico City",
       "country": "Mexico",
       "center": {
-        "lat": 19.4180,
-        "lng": -99.1550
+        "lat": 19.418,
+        "lng": -99.165
       },
-      "zoom": 14
+      "zoom": 12
     }
   ]
 }
