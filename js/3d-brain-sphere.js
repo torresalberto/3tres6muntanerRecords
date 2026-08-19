@@ -40,6 +40,8 @@
   var dragStartY = 0;
   var dragStartRotX = 0;
   var dragStartRotY = 0;
+  // Rotation per dragged pixel — lower = less sensitive (little wobble on drag).
+  var ROTATE_SENSITIVITY = 0.002;
 
   var RADIUS = 280;
   var COS = Math.cos;
@@ -580,8 +582,8 @@
       if (!isDragging) return;
       var dx = e.clientX - dragStartX;
       var dy = e.clientY - dragStartY;
-      targetRotY = dragStartRotY + dx * 0.005;
-      targetRotX = Math.max(-1.2, Math.min(1.2, dragStartRotX + dy * 0.005));
+      targetRotY = dragStartRotY + dx * ROTATE_SENSITIVITY;
+      targetRotX = Math.max(-1.2, Math.min(1.2, dragStartRotX + dy * ROTATE_SENSITIVITY));
     });
 
     window.addEventListener('mouseup', function() {
@@ -607,8 +609,8 @@
       if (!isDragging || e.touches.length !== 1) return;
       var dx = e.touches[0].clientX - dragStartX;
       var dy = e.touches[0].clientY - dragStartY;
-      targetRotY = dragStartRotY + dx * 0.005;
-      targetRotX = Math.max(-1.2, Math.min(1.2, dragStartRotX + dy * 0.005));
+      targetRotY = dragStartRotY + dx * ROTATE_SENSITIVITY;
+      targetRotX = Math.max(-1.2, Math.min(1.2, dragStartRotX + dy * ROTATE_SENSITIVITY));
     }, { passive: true });
 
     svg.addEventListener('touchend', function() {
