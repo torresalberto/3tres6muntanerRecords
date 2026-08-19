@@ -4155,22 +4155,35 @@ a.blog-card-image:hover {
 .submit-event-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.25rem;
-  background: rgba(255, 77, 0, 0.1);
-  border: 1px solid rgba(255, 77, 0, 0.3);
+  gap: 0.55rem;
+  padding: 0.8rem 1.5rem;
+  background: #ff4d00;
+  border: 1px solid #ff4d00;
   border-radius: 50px;
-  color: #ff4d00;
-  font-size: 0.85rem;
-  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
   font-family: var(--font);
+  box-shadow: 0 6px 24px rgba(255, 77, 0, 0.28);
 }
 
 .submit-event-btn:hover {
-  background: #ff4d00;
+  background: #e64500;
+  border-color: #e64500;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(255, 77, 0, 0.38);
   color: #fff;
+}
+
+.submit-event-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(255, 77, 0, 0.25);
+}
+
+.submit-event-btn svg {
+  flex-shrink: 0;
 }
 
 .upcoming-events {

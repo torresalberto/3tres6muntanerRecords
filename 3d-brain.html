@@ -92,102 +92,6 @@
         cursor: pointer;
       }
 
-      /* ========================================
-         Welcome Screen (Audio Entry Gate)
-         ======================================== */
-
-      .welcome-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--color-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 99999;
-        transition:
-          opacity 0.5s ease,
-          visibility 0.5s ease;
-      }
-
-      .welcome-screen.hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-      }
-
-      .welcome-content {
-        text-align: center;
-        padding: 40px;
-      }
-
-      .welcome-logo {
-        font-size: 48px;
-        font-weight: 700;
-        letter-spacing: 4px;
-        margin-bottom: 15px;
-        background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .welcome-tagline {
-        font-size: 18px;
-        color: var(--color-text-muted);
-        margin-bottom: 5px;
-      }
-
-      .welcome-sub {
-        font-size: 14px;
-        color: var(--color-text-muted);
-        letter-spacing: 3px;
-        margin-bottom: 50px;
-      }
-
-      .welcome-enter-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        background: var(--color-accent);
-        color: white;
-        border: none;
-        padding: 20px 50px;
-        border-radius: var(--radius-md);
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        cursor: pointer;
-        transition: var(--transition);
-        margin: 0 auto 20px;
-      }
-
-      .welcome-enter-btn:hover {
-        background: var(--color-accent-hover);
-        transform: scale(1.05);
-      }
-
-      .welcome-enter-btn .play-icon {
-        font-size: 20px;
-      }
-
-      .welcome-skip-btn {
-        background: none;
-        border: none;
-        color: var(--color-text-muted);
-        font-size: 13px;
-        cursor: pointer;
-        text-decoration: underline;
-        transition: var(--transition);
-      }
-
-      .welcome-skip-btn:hover {
-        color: var(--color-text);
-      }
-
       .help-modal {
         position: fixed;
         top: 0;
@@ -5008,6 +4912,31 @@
         color: #ff4d00;
       }
 
+      /* HELP BUTTON (floating, replaces the old splash "Ver ayuda" trigger) */
+      .viz-help {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 15;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        font-size: 1.05rem;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.2s;
+        backdrop-filter: blur(8px);
+      }
+      .viz-help:hover {
+        background: rgba(255, 77, 0, 0.15);
+        border-color: #ff4d00;
+        color: #ff4d00;
+      }
+
       /* CANVAS */
       #network-container {
         position: relative;
@@ -5394,26 +5323,6 @@
     <link rel="stylesheet" href="css/nav.css" />
   </head>
   <body>
-    <!-- Welcome Screen -->
-    <div class="welcome-screen" id="welcomeScreen">
-      <div class="welcome-content">
-        <button class="welcome-dismiss" id="welcomeDismiss" aria-label="Saltar">×</button>
-        <div class="welcome-logo">3TRES6</div>
-        <div class="welcome-tagline">DJ Connection Neural Network</div>
-        <div class="welcome-sub">Explore connections between DJs via shared tracks</div>
-        <div class="welcome-stats">
-          <span class="welcome-stat"><strong>48</strong> DJs</span>
-          <span class="welcome-stat"><strong>305</strong> Tracks</span>
-          <span class="welcome-stat"><strong>16</strong> Conexiones</span>
-        </div>
-        <button class="welcome-enter-btn" id="welcomeEnterBtn">
-          <span class="play-icon">▶</span>
-          Explorar
-        </button>
-        <button class="welcome-help-btn" id="welcomeHelpBtn">¿Qué es esto? → Ver ayuda</button>
-      </div>
-    </div>
-
     <!-- Help Modal for Curious Explorers -->
     <div
       class="help-modal"
@@ -5455,11 +5364,6 @@
           <li>Arrastra para rotar la vista 3D</li>
           <li>Usa la rueda del mouse para hacer zoom</li>
         </ul>
-        <div class="help-actions">
-          <button class="help-btn primary" id="helpEnterBtn">
-            <span class="play-icon">▶</span> Explorar
-          </button>
-        </div>
       </div>
     </div>
 
@@ -5557,10 +5461,11 @@
       </h1>
 
       <!-- CANVAS -->
-      <div id="network-container" class="hidden">
+      <div id="network-container">
         <div class="bg-grid"></div>
 
         <button class="viz-reset" id="resetViewBtn">⟲ Reset</button>
+        <button class="viz-help" id="welcomeHelpBtn" aria-label="Qué es esto">?</button>
 
         <svg id="sphere-svg"></svg>
       </div>

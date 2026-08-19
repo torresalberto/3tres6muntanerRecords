@@ -74,6 +74,9 @@ Edit `data/venues/index.json` following the existing schema:
 }
 ```
 
+- `soundsystem` and `capacity` are informational only — **not rendered** on the map
+  anymore (the 🔊 soundsystem row and rail chip were removed). Keep them for curation context.
+
 - `city` must match an entry in `cities[]` (that creates the city's map panel
   + drives the fit center/zoom).
 - Verify addresses/coordinates (OpenStreetMap Nominatim is the usual source) — approximate pins

@@ -18,40 +18,55 @@ const EventSubmission = {
     const addDjBtn = document.getElementById('addDjField');
     const djContainer = document.getElementById('djFields');
 
-    if (openBtn) {
+    if (openBtn && !openBtn.dataset.bound) {
+      openBtn.dataset.bound = '1';
       openBtn.addEventListener('click', () => {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
       });
     }
 
-    if (closeBtn) {
+    if (closeBtn && !closeBtn.dataset.bound) {
+      closeBtn.dataset.bound = '1';
       closeBtn.addEventListener('click', () => this.closeModal());
     }
 
-    if (modal) {
+    if (modal && !modal.dataset.bound) {
+      modal.dataset.bound = '1';
       modal.addEventListener('click', (e) => {
         if (e.target === modal) this.closeModal();
       });
     }
 
-    if (addDjBtn && djContainer) {
+    if (addDjBtn && djContainer && !addDjBtn.dataset.bound) {
+      addDjBtn.dataset.bound = '1';
       addDjBtn.addEventListener('click', () => {
         const input = document.createElement('input');
         input.type = 'text';
         input.className = 'submit-input dj-input';
-        input.placeholder = 'DJ name...';
+        input.placeholder = 'Nombre del DJ...';
         djContainer.appendChild(input);
       });
     }
 
-    if (form) {
+    if (form && !form.dataset.bound) {
+      form.dataset.bound = '1';
       form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+      const dateInput = form.querySelector('#sub-date');
+      if (dateInput && !dateInput.min) {
+        const now = new Date();
+        const pad = (n) => String(n).padStart(2, '0');
+        dateInput.min = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+      }
     }
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') this.closeModal();
-    });
+    if (!this._keyBound) {
+      this._keyBound = true;
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') this.closeModal();
+      });
+    }
   },
 
   closeModal: function () {
@@ -141,3 +156,7 @@ const EventSubmission = {
 };
 
 document.addEventListener('DOMContentLoaded', () => EventSubmission.init());
+if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
+  // Re-bind after swup page transitions (open button lives inside the swapped main).
+  window.Muntaner336.onPageView(() => EventSubmission.init());
+}

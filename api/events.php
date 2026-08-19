@@ -492,6 +492,11 @@ function serve_feed(): void
         static fn($e) => (($e['status'] ?? '') === 'approved')
             && isset($e['title'], $e['date'], $e['venue'])
     );
+    // Submitter emails must never reach the public feed (stored for admin use only).
+    $events = array_map(static function ($e) {
+        unset($e['email']);
+        return $e;
+    }, $events);
     usort($events, static fn($a, $b) => strcmp($a['date'], $b['date']));
     send_json(200, ['success' => true, 'count' => count($events), 'events' => array_values($events)]);
 }

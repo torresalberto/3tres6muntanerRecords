@@ -317,19 +317,6 @@
   border-bottom: 1px solid var(--m-line);
 }
 
-.popup-sound {
-  font-size: 0.8rem;
-  color: var(--m-text-dim);
-  margin: 0 0 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.sound-icon {
-  font-size: 0.9rem;
-}
-
 /* DJ Library network rows */
 .popup-net {
   display: flex;
@@ -389,23 +376,26 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0.2rem;
 }
 
 .popup-link {
   color: var(--m-primary) !important;
   text-decoration: none !important;
   font-family: var(--m-mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.32rem 0.7rem;
-  border: 1px solid rgba(255, 77, 0, 0.35);
+  padding: 0.5rem 0.95rem;
+  border: 1px solid rgba(255, 77, 0, 0.4);
   border-radius: 999px;
+  background: rgba(255, 77, 0, 0.06);
   transition: all 0.2s;
 }
 
 .popup-link:hover {
   background: var(--m-primary);
   color: #0a0a0a !important;
+  border-color: var(--m-primary);
 }
 
 .popup-link-set {
@@ -515,16 +505,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.venue-card-chip {
-  display: inline-block;
-  font-family: var(--m-mono);
-  font-size: 0.64rem;
-  color: var(--m-success);
-  border: 1px solid rgba(0, 255, 136, 0.25);
-  border-radius: 999px;
-  padding: 0.18rem 0.55rem;
 }
 
 /* ===== CTA ===== */

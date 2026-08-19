@@ -384,7 +384,6 @@ const VenueMap = {
         </div>
         ${venue.address ? `<p class="popup-address">${venue.address}</p>` : ''}
         ${venue.notes ? `<p class="popup-notes">${venue.notes}</p>` : ''}
-        ${venue.soundsystem ? `<div class="popup-sound"><span class="sound-icon">🔊</span> ${venue.soundsystem}</div>` : ''}
         ${netHtml}
         ${links.length ? `<div class="popup-links">${links.join('')}</div>` : ''}
       </div>`;
@@ -453,7 +452,6 @@ const VenueMap = {
             <span class="venue-card-city">${v.city}</span>
           </div>
           <p class="venue-card-address">${v.address}</p>
-          ${v.soundsystem ? `<div class="venue-card-chip">${v.soundsystem}</div>` : ''}
         </div>
       </div>
     `;

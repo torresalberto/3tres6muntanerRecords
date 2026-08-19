@@ -843,6 +843,35 @@
 
   window.Muntaner336.init3DBrain = init;
 
+  // ─── Help modal (¿Qué es esto?) ───────────────────────────────────────────
+  // No splash gate: the visualization renders immediately. The "?" button opens
+  // the help overlay; Esc or clicking outside closes it.
+  function bindHelpModal() {
+    var helpBtn = document.getElementById('welcomeHelpBtn');
+    var modal = document.getElementById('helpModal');
+    if (!helpBtn || !modal) return;
+    var closeBtn = document.getElementById('helpClose');
+    var close = function () {
+      modal.classList.remove('active');
+    };
+    helpBtn.addEventListener('click', function () {
+      modal.classList.add('active');
+    });
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindHelpModal);
+  } else {
+    bindHelpModal();
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
