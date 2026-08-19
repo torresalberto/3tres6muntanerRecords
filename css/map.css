@@ -507,6 +507,30 @@
   text-overflow: ellipsis;
 }
 
+/* Direct link button on each venue rail card (website / RA / Instagram) */
+.venue-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--m-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--m-primary) !important;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 77, 0, 0.4);
+  background: rgba(255, 77, 0, 0.06);
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.venue-card-btn:hover {
+  background: var(--m-primary);
+  color: #0a0a0a !important;
+  border-color: var(--m-primary);
+}
+
 /* ===== CTA ===== */
 
 .map-cta {

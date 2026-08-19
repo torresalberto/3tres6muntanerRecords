@@ -437,12 +437,22 @@ const VenueMap = {
 
   // ---------------------------------------------------------------- rail
 
+  // Primary reachable link for a venue: website > RA > Instagram. Returns null
+  // when the venue has no outward link.
+  _venuePrimaryLink(venue) {
+    if (venue.links?.website) return { href: venue.links.website, label: 'Sitio web' };
+    if (venue.links?.ra) return { href: venue.links.ra, label: 'Resident Advisor' };
+    if (venue.links?.instagram) return { href: venue.links.instagram, label: 'Instagram' };
+    return null;
+  },
+
   renderVenueList(el, venues) {
     const startIndex = this.venues.findIndex((v) => v.id === (venues[0] && venues[0].id));
 
     el.innerHTML = venues
       .map((v, i) => {
         const cat = startIndex === -1 ? i : startIndex + i;
+        const link = this._venuePrimaryLink(v);
         return `
       <div class="venue-card" data-venue-id="${v.id}" data-city="${v.city}">
         <div class="venue-index">Nº ${String(cat + 1).padStart(3, '0')}</div>
@@ -452,6 +462,11 @@ const VenueMap = {
             <span class="venue-card-city">${v.city}</span>
           </div>
           <p class="venue-card-address">${v.address}</p>
+          ${
+            link
+              ? `<a class="venue-card-btn" href="${link.href}" target="_blank" rel="noopener" data-no-swup>${link.label} ↗</a>`
+              : ''
+          }
         </div>
       </div>
     `;
@@ -463,6 +478,10 @@ const VenueMap = {
         const venueId = card.dataset.venueId;
         this.goToVenue(venueId);
       });
+      const anchor = card.querySelector('.venue-card-btn');
+      if (anchor) {
+        anchor.addEventListener('click', (e) => e.stopPropagation());
+      }
     });
   },
 
