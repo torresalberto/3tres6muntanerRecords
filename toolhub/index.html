@@ -6,7 +6,7 @@
     <title>3TRES6 Tools | Herramientas para DJ</title>
     <meta
       name="description"
-      content="Herramientas gratuitas para DJs: USB Export Guide, Sets del Archivo, Camelot Wheel, música gratuita y software DJ: Rekordbox, Serato, Traktor, Mixxx."
+      content="Herramientas gratuitas para DJs: USB Export Guide, Camelot Wheel, música gratuita y software DJ: Rekordbox, Serato, Traktor, Mixxx."
     />
 
     <link rel="canonical" href="https://3tres6records.albto.me/toolhub/" />
@@ -130,18 +130,14 @@
             <span class="editorial-kicker">Archivo de herramientas · Barcelona → México</span>
             <h1 class="hero-title">EL TALLER</h1>
             <p class="hero-lede">
-              La banca de pruebas del crew. Configura tu USB, bucea por los sets del archivo,
-              consulta el Camelot Wheel y descubre música y software libres. Todo verificado
-              pinchando en vinilo.
+              La banca de pruebas del crew. Configura tu USB, consulta el Camelot Wheel y descubre
+              música y software libres. Los sets con tracklist verificada viven en la Discoteca.
+              Todo verificado pinchando en vinilo.
             </p>
             <div class="hero-stats">
               <div class="stat-pill">
                 <span class="stat-num" id="statModules">—</span>
                 <span class="stat-label">Módulos</span>
-              </div>
-              <div class="stat-pill">
-                <span class="stat-num" id="statSets">—</span>
-                <span class="stat-label">Sets del archivo</span>
               </div>
               <div class="stat-pill">
                 <span class="stat-num" id="statTracks">—</span>
@@ -165,25 +161,20 @@
             <span class="tab-label">USB Export</span>
             <span class="tab-mod">MOD 01</span>
           </button>
-          <button class="tool-tab" data-tool="sets" role="tab">
-            <span class="tab-icon">💿</span>
-            <span class="tab-label">Sets</span>
-            <span class="tab-mod">MOD 02</span>
-          </button>
           <button class="tool-tab" data-tool="music" role="tab">
             <span class="tab-icon">🎵</span>
             <span class="tab-label">Música gratis</span>
-            <span class="tab-mod">MOD 03</span>
+            <span class="tab-mod">MOD 02</span>
           </button>
           <button class="tool-tab" data-tool="wheel" role="tab">
             <span class="tab-icon">🎡</span>
             <span class="tab-label">Camelot</span>
-            <span class="tab-mod">MOD 04</span>
+            <span class="tab-mod">MOD 03</span>
           </button>
           <button class="tool-tab" data-tool="software" role="tab">
             <span class="tab-icon">💻</span>
             <span class="tab-label">Software</span>
-            <span class="tab-mod">MOD 05</span>
+            <span class="tab-mod">MOD 04</span>
           </button>
         </div>
       </section>
@@ -273,36 +264,10 @@
         </div>
       </div>
 
-      <!-- MOD 02 · Sets del Archivo -->
-      <section class="tool-section sets-tool" id="setsSection" style="display: none">
-        <div class="sheet-header">
-          <span class="sheet-code">MOD.02</span>
-          <div class="sheet-titles">
-            <h2>Sets del Archivo</h2>
-            <p>Busca entre los sets con tracklist verificada y ábrelos en la Discoteca</p>
-          </div>
-        </div>
-
-        <div class="sets-filters">
-          <div class="search-wrapper">
-            <input
-              type="text"
-              id="setsSearch"
-              class="sets-search"
-              placeholder="Buscar DJ, set o venue... (ej: Boiler Room, Dekmantel, Carl Cox)"
-            />
-          </div>
-        </div>
-
-        <div class="sets-count"><span id="setsCount">0</span> sets encontrados</div>
-
-        <div class="sets-grid" id="setsGrid"></div>
-      </section>
-
-      <!-- MOD 03 · Free Music Directory -->
+      <!-- MOD 02 · Free Music Directory -->
       <section class="tool-section music-directory" id="musicSection" style="display: none">
         <div class="sheet-header">
-          <span class="sheet-code">MOD.03</span>
+          <span class="sheet-code">MOD.02</span>
           <div class="sheet-titles">
             <h2>Música gratis</h2>
             <p>Fuentes legales para descargar música electrónica gratis</p>
@@ -327,10 +292,10 @@
         <div class="music-grid" id="musicGrid"></div>
       </section>
 
-      <!-- MOD 04 · Camelot Wheel -->
+      <!-- MOD 03 · Camelot Wheel -->
       <section class="tool-section camelot-wheel-section" id="wheelSection" style="display: none">
         <div class="sheet-header">
-          <span class="sheet-code">MOD.04</span>
+          <span class="sheet-code">MOD.03</span>
           <div class="sheet-titles">
             <h2>Camelot Wheel</h2>
             <p>Mejora tus transiciones con mixing armónico</p>
@@ -369,10 +334,10 @@
         </div>
       </section>
 
-      <!-- MOD 05 · Software -->
+      <!-- MOD 04 · Software -->
       <section class="tool-section software-directory" id="softwareSection" style="display: none">
         <div class="sheet-header">
-          <span class="sheet-code">MOD.05</span>
+          <span class="sheet-code">MOD.04</span>
           <div class="sheet-titles">
             <h2>Software para DJ</h2>
             <p>
@@ -541,13 +506,10 @@
     <script src="js/software-db.js"></script>
     <script src="js/software-directory.js"></script>
     <script src="js/dj-sets-db.js"></script>
-    <script src="js/dj-sets-directory.js"></script>
-    <script src="../data/tracklists/tracklists.js"></script>
     <script>
       // Hero counters (filled once the data globals exist)
       function fillHeroCounters() {
         var modules = typeof HardwareDB !== 'undefined' ? HardwareDB.devices.length : 0;
-        var sets = typeof DJ_SETS !== 'undefined' ? DJ_SETS.length : 0;
         var tracks =
           typeof DJ_SETS !== 'undefined'
             ? DJ_SETS.reduce(function (n, s) {
@@ -558,7 +520,6 @@
           return document.getElementById(id);
         };
         if (el('statModules')) el('statModules').textContent = modules;
-        if (el('statSets')) el('statSets').textContent = sets;
         if (el('statTracks')) el('statTracks').textContent = tracks;
       }
       fillHeroCounters();
@@ -572,7 +533,6 @@
         const toolTabs = document.querySelectorAll('.tool-tab');
         const sections = {
           hardware: document.getElementById('hardwareSection'),
-          sets: document.getElementById('setsSection'),
           music: document.getElementById('musicSection'),
           wheel: document.getElementById('wheelSection'),
           software: document.getElementById('softwareSection'),
@@ -611,7 +571,6 @@
             else if (tool === 'wheel' && !document.getElementById('wheelSvg')) CamelotWheel.init();
             else if (tool === 'software' && !SoftwareDirectory.state.resources.length)
               SoftwareDirectory.init();
-            else if (tool === 'sets' && !SetsDirectory.state.sets.length) SetsDirectory.init();
 
             if (window.ScrollTrigger) ScrollTrigger.refresh();
           });
@@ -633,11 +592,7 @@
         var hash = window.location.hash.replace('#', '');
         if (
           hash &&
-          (hash === 'hardware' ||
-            hash === 'sets' ||
-            hash === 'music' ||
-            hash === 'wheel' ||
-            hash === 'software')
+          (hash === 'hardware' || hash === 'music' || hash === 'wheel' || hash === 'software')
         ) {
           var btn = document.querySelector('.tool-tab[data-tool="' + hash + '"]');
           if (btn) {

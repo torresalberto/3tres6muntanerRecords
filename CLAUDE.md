@@ -125,7 +125,8 @@ the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
 - Data is build-generated: `node scripts/build-dj-data.js` (index, stats,
   cross-references, tracklists, track-registry). Never hand-edit generated files.
 - Section redesign roadmap (one per pass): ✅ Taller (toolhub — editorial hero,
-  MOD rail, Sets tool that deep-links to the Discoteca; see `DESIGN_SYSTEM.md`
+  MOD rail; the Sets module was removed — redundant with the Discoteca;
+  see `DESIGN_SYSTEM.md`
   "Known gaps") · ✅ Mapa (hero removed — map-first layout, Discoteca-style
   rail, keyless dark basemap, `#venue:` deep links + popup↔Discoteca
   cross-links) · 🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested before the next.
