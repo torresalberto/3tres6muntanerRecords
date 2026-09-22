@@ -18,11 +18,11 @@
     <meta name="robots" content="index, follow" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://3tres6records.com/blog" />
+    <link rel="canonical" href="/blog.html" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content="https://3tres6records.com/blog" />
+    <meta property="og:url" content="/blog.html" />
     <meta property="og:title" content="Blog 3TRES6 Records – Educación Vinyl" />
     <meta
       property="og:description"
@@ -558,6 +558,15 @@
           <span class="ticker-item">🔍 Crate Digging: encuentra joyas ocultas</span>
           <span class="ticker-separator">•</span>
         </div>
+        <script>
+          (function () {
+            const c = document.querySelector('.ticker-content');
+            const w = document.querySelector('.ticker-wrapper');
+            if (!c || !w) return;
+            const orig = c.innerHTML;
+            while (c.scrollWidth < w.clientWidth * 2) c.innerHTML += orig;
+          })();
+        </script>
       </div>
     </div>
 
