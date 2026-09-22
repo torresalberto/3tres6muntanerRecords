@@ -30,13 +30,22 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data', 'djs');
 const OUT_DIR = path.join(ROOT, 'dj-library');
-const PER_PAGE = (process.argv.find(a => a.startsWith('--per=')) || '--per=12').split('=')[1] | 0 || 12;
+const PER_PAGE =
+  (process.argv.find((a) => a.startsWith('--per=')) || '--per=12').split('=')[1] | 0 || 12;
 
 // HTML escape
 function esc(s) {
-  return String(s ?? '').replace(/[&<>"']/g, c => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[c]);
+  return String(s ?? '').replace(
+    /[&<>"']/g,
+    (c) =>
+      ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+      })[c]
+  );
 }
 
 // YouTube lazy thumbnail (click-to-play)
@@ -52,37 +61,47 @@ function youtubeEmbed(videoId, title) {
 }
 
 function tracklistRows(tracks) {
-  if (!tracks || !tracks.length) return '<tr><td colspan="5" style="text-align:center;opacity:0.4;padding:1rem">Tracklist being sourced…</td></tr>';
-  return tracks.map((t, i) => `<tr>
+  if (!tracks || !tracks.length)
+    return '<tr><td colspan="5" style="text-align:center;opacity:0.4;padding:1rem">Tracklist being sourced…</td></tr>';
+  return tracks
+    .map(
+      (t, i) => `<tr>
     <td>${t.position || i + 1}</td>
     <td><span class="track-time">${esc(t.timestamp || '--:--')}</span></td>
     <td>${esc(t.artist)}</td>
     <td>${esc(t.title)}</td>
     <td><span class="track-status status-${t.status || 'unidentified'}">${t.status === 'confirmed' ? '✓ confirmed' : '? unidentified'}</span></td>
-  </tr>`).join('');
+  </tr>`
+    )
+    .join('');
 }
 
 function factsGrid(facts) {
   if (!facts || !Object.keys(facts).length) return '';
   return `<div class="facts-grid">${Object.entries(facts)
-    .map(([k, v]) => `<div class="fact-card"><div class="fact-number">${esc(v)}</div><div class="fact-label">${esc(k.replace(/_/g, ' '))}</div></div>`)
+    .map(
+      ([k, v]) =>
+        `<div class="fact-card"><div class="fact-number">${esc(v)}</div><div class="fact-label">${esc(k.replace(/_/g, ' '))}</div></div>`
+    )
     .join('')}</div>`;
 }
 
 function renderDJSection(dj, sets) {
   const setCount = sets.length;
   const totalTracks = sets.reduce((sum, s) => sum + (s.tracklist || []).length, 0);
-  const setsHTML = sets.map(set => `
+  const setsHTML = sets
+    .map(
+      (set) => `
     <div class="set-player-section">
       <div class="set-info-header">
         <div>
           <div class="section-label">▶ Set</div>
           <h3 class="set-title">${esc(set.title)}</h3>
           <div class="set-meta">
-            ${set.venue ? `<span>📍 ${esc(set.venue)}</span>` : ''}
-            ${set.date ? `<span>📅 ${esc(set.date)}</span>` : ''}
-            <span>⏱️ ${esc(set.duration_formatted || (set.duration_minutes + ' min'))}</span>
-            ${set.view_count ? `<span>👁️ ${(set.view_count / 1000).toFixed(1)}K views</span>` : ''}
+            ${set.venue ? `<span>${esc(set.venue)}</span>` : ''}
+            ${set.date ? `<span>${esc(set.date)}</span>` : ''}
+            <span>⏱️ ${esc(set.duration_formatted || set.duration_minutes + ' min')}</span>
+            ${set.view_count ? `<span>${(set.view_count / 1000).toFixed(1)}K views</span>` : ''}
           </div>
         </div>
         <a href="dj/${esc(dj.id)}.html" class="set-permalink">View profile →</a>
@@ -90,11 +109,13 @@ function renderDJSection(dj, sets) {
       ${youtubeEmbed(set.youtube_embed_id, set.title)}
     </div>
     <div class="tracklist-section">
-      <div class="section-label">🎵 Tracklist (${(set.tracklist || []).length} tracks)</div>
+      <div class="section-label">Tracklist (${(set.tracklist || []).length} tracks)</div>
       ${(set.tracklist || []).length ? `<table class="tracklist-table"><thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead><tbody>${tracklistRows(set.tracklist)}</tbody></table>` : ''}
     </div>
-    ${set.curious_facts && Object.keys(set.curious_facts).length ? `<div class="facts-section"><div class="section-label">📊 Datos</div>${factsGrid(set.curious_facts)}</div>` : ''}
-  `).join('');
+    ${set.curious_facts && Object.keys(set.curious_facts).length ? `<div class="facts-section"><div class="section-label">Datos</div>${factsGrid(set.curious_facts)}</div>` : ''}
+  `
+    )
+    .join('');
 
   return `
     <section class="dj-profile-section" id="dj-${esc(dj.id)}">
@@ -120,22 +141,29 @@ function renderDJSection(dj, sets) {
 function pageHTML(djs, sets, pageNum, totalPages) {
   const start = (pageNum - 1) * PER_PAGE;
   const pageDJs = djs.slice(start, start + PER_PAGE);
-  const sections = pageDJs.map(dj => {
-    const djSets = (dj.sets || []).map(id => sets[id]).filter(Boolean);
-    return renderDJSection(dj, djSets);
-  }).join('');
+  const sections = pageDJs
+    .map((dj) => {
+      const djSets = (dj.sets || []).map((id) => sets[id]).filter(Boolean);
+      return renderDJSection(dj, djSets);
+    })
+    .join('');
 
-  const pagination = totalPages > 1 ? `
+  const pagination =
+    totalPages > 1
+      ? `
     <nav class="library-pagination" aria-label="Paginación DJ Library">
       ${pageNum > 1 ? `<a href="${pageNum === 2 ? 'index.html' : `page-${pageNum - 1}.html`}" class="page-link">← Anterior</a>` : '<span class="page-link disabled">← Anterior</span>'}
-      ${Array.from({ length: totalPages }, (_, i) => i + 1).map(n => {
-        const href = n === 1 ? 'index.html' : `page-${n}.html`;
-        return n === pageNum
-          ? `<span class="page-link active" aria-current="page">${n}</span>`
-          : `<a href="${href}" class="page-link">${n}</a>`;
-      }).join('')}
+      ${Array.from({ length: totalPages }, (_, i) => i + 1)
+        .map((n) => {
+          const href = n === 1 ? 'index.html' : `page-${n}.html`;
+          return n === pageNum
+            ? `<span class="page-link active" aria-current="page">${n}</span>`
+            : `<a href="${href}" class="page-link">${n}</a>`;
+        })
+        .join('')}
       ${pageNum < totalPages ? `<a href="page-${pageNum + 1}.html" class="page-link">Siguiente →</a>` : '<span class="page-link disabled">Siguiente →</span>'}
-    </nav>` : '';
+    </nav>`
+      : '';
 
   return `<!DOCTYPE html>
 <html lang="es">

@@ -138,7 +138,7 @@
     const reqs = set.most_requested_ids || [];
     if (!reqs.length) return '';
     return `<section class="set-req">
-      <h4 class="set-req-title">🔥 IDs más solicitados</h4>
+      <h4 class="set-req-title">IDs más solicitados</h4>
       ${reqs
         .map(
           (r) => `

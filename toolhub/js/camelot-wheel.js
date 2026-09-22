@@ -270,7 +270,7 @@ const CamelotWheel = {
         </div>
         <div class="selected-key-meta">
           <span class="key-type">${key.letter === 'A' ? 'Minor (Energetic)' : 'Major (Atmospheric)'}</span>
-          <span class="key-energy" style="color: ${energyData.color}">${energyData.icon} ${energyData.label}</span>
+          <span class="key-energy" style="color: ${energyData.color}">${energyData.label}</span>
         </div>
         <div class="selected-key-bpm">
           <span class="bpm-label">BPM:</span>

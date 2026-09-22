@@ -123,7 +123,7 @@
       stats.push(`<span class="feat-stat"><strong>${f.label_count}</strong> labels</span>`);
     if (f.requested_ids)
       stats.push(
-        `<span class="feat-stat is-hot"><strong>🔥 ${f.requested_ids}</strong> IDs pedidos</span>`
+        `<span class="feat-stat is-hot"><strong>${f.requested_ids}</strong> IDs pedidos</span>`
       );
 
     box.innerHTML = `
