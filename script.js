@@ -1958,9 +1958,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function initHomepage() {
     // Re-init handlers that bind event listeners. Calling them again
-    // after a Swup navigation rebinds listeners on the
-    new // Each init() should be idempotent (use ?., look up elements at call time).
-    DOM.Cart.init();
+    // after a Swup navigation rebinds listeners on the homepage.
+    // Each init() should be idempotent (use ?., look up elements at call time).
+    Cart.init();
     Checkout.init();
     QuickView.init();
     HeroPlaylist.init();

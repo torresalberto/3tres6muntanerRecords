@@ -115,12 +115,12 @@
         if (info) {
           const t = title || '3TRES6 Radio';
           const truncated = t.length > 25 ? t.substring(0, 22) + '...' : t;
-          info.textContent = muted ? `🔇 ${truncated}` : `🎵 ${truncated}`;
+          info.textContent = muted ? `Muted · ${truncated}` : truncated;
         }
       } else {
         toggle?.classList.remove('playing');
         controls?.classList.remove('playing');
-        if (info) info.textContent = '🎵 3TRES6 Radio';
+        if (info) info.textContent = '3TRES6 Radio';
       }
     },
   };
