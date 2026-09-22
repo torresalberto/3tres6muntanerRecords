@@ -695,13 +695,13 @@
 
 .map-events-toggle:hover {
   color: #fff;
-  border-color: rgba(245, 197, 24, 0.5);
+  border-color: rgba(255, 77, 0, 0.5);
 }
 
 .map-events-toggle.active {
   color: #0a0a0a;
-  background: var(--m-yellow);
-  border-color: var(--m-yellow);
+  background: var(--m-primary, #ff4d00);
+  border-color: var(--m-primary, #ff4d00);
 }
 
 .events-count {

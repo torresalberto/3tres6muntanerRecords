@@ -9,7 +9,6 @@ const CREW_MEMBERS = [
       instagram: 'https://instagram.com/carlcox',
       soundcloud: 'https://soundcloud.com/carlcox',
     },
-    genre: 'Techno',
     location: 'Barcelona',
   },
   {
@@ -22,7 +21,6 @@ const CREW_MEMBERS = [
       instagram: 'https://instagram.com/richiehawtin',
       soundcloud: 'https://soundcloud.com/richiehawtin',
     },
-    genre: 'Minimal Techno',
     location: 'Barcelona',
   },
   {
@@ -35,7 +33,6 @@ const CREW_MEMBERS = [
       instagram: 'https://instagram.com/laurentgarnier',
       soundcloud: 'https://soundcloud.com/laurentgarnier',
     },
-    genre: 'House',
     location: 'Barcelona',
   },
   {
@@ -48,7 +45,6 @@ const CREW_MEMBERS = [
       instagram: 'https://instagram.com/honeydijon',
       soundcloud: 'https://soundcloud.com/honeydijon',
     },
-    genre: 'House',
     location: 'Mexico City',
   },
   {
@@ -62,7 +58,6 @@ const CREW_MEMBERS = [
       instagram: 'https://instagram.com/d.mfrutis',
       soundcloud: 'https://soundcloud.com/d_frutis',
     },
-    genre: 'Underground',
     location: 'Barcelona',
     isPilot: true,
     crewPage: 'https://3tres6records.albto.me/crew/d-mfrutis/',
@@ -80,10 +75,7 @@ function renderCrewGrid() {
     searchInput.addEventListener('input', function () {
       const query = this.value.toLowerCase().trim();
       filteredMembers = CREW_MEMBERS.filter(
-        (m) =>
-          m.name.toLowerCase().includes(query) ||
-          m.role.toLowerCase().includes(query) ||
-          m.genre.toLowerCase().includes(query)
+        (m) => m.name.toLowerCase().includes(query) || m.role.toLowerCase().includes(query)
       );
       renderCrewGrid();
     });
@@ -110,8 +102,7 @@ function renderCrewGrid() {
           <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin:0 0 0.75rem;">${member.role}</p>
           <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;line-height:1.5;margin:0 0 1rem;">${member.bio}</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-            <span style="font-size:0.8rem;color:#ff4d00;background:rgba(255,77,0,0.1);padding:4px 8px;border-radius:4px;">${member.genre}</span>
-            <span style="font-size:0.8rem;color:#888;background:rgba(255,255,255,0.05);padding:4px 8px;border-radius:4px;">📍 ${member.location}</span>
+            <span style="font-size:0.8rem;color:#888;background:rgba(255,255,255,0.05);padding:4px 8px;border-radius:4px;">${member.location}</span>
           </div>
           <div style="display:flex;gap:1rem;margin-top:1rem;">
             <a href="${member.crewPage || '../dj/' + member.id + '.html'}" class="subnav-tab" style="display:inline-block;">Ver página →</a>

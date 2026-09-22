@@ -29,7 +29,7 @@ const INDEX = path.join(DATA, 'index.json');
 const CROSS = path.join(DATA, 'cross-references.json');
 
 const PLACEHOLDER_IMG =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='55' text-anchor='middle' font-size='40'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E";
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='62' text-anchor='middle' font-size='34' font-family='monospace' font-weight='700'%3E3T6%3C/text%3E%3C/svg%3E";
 
 function jsId(s) {
   return String(s ?? '').replace(/[^A-Za-z0-9_]/g, '_');
@@ -96,10 +96,13 @@ function renderSetCard(set) {
     <div class="set-header">
       <h3>${esc(set.title)}</h3>
       <div class="set-meta">
-        ${set.venue ? `<span>📍 ${esc(set.venue)}</span>` : ''}
-        ${set.date ? `<span>📅 ${esc(set.date)}</span>` : ''}
-        ${set.duration_formatted ? `<span>⏱️ ${esc(set.duration_formatted)}</span>` : ''}
-        <span>🎵 ${tracks.length} tracks</span>
+        ${set.venue ? `<span>${esc(set.venue)}</span>` : ''}
+        ${set.venue && set.date ? `<span>·</span>` : ''}
+        ${set.date ? `<span>${esc(set.date)}</span>` : ''}
+        ${set.date && set.duration_formatted ? `<span>·</span>` : ''}
+        ${set.duration_formatted ? `<span>${esc(set.duration_formatted)}</span>` : ''}
+        ${set.duration_formatted || set.date || set.venue ? `<span>·</span>` : ''}
+        <span>${tracks.length} tracks</span>
       </div>
     </div>
     ${videoBlock}
@@ -120,7 +123,6 @@ function renderPage(dj, sets) {
   const completion = trackCount ? Math.round((knownCount / trackCount) * 100) : 0;
 
   const heroImg = dj.image || PLACEHOLDER_IMG;
-  const genres = (dj.genres || []).map((g) => `<span class="genre-tag">${esc(g)}</span>`).join('');
 
   const pageUrl = `https://3tres6records.albto.me/dj/${dj.id}.html`;
   const title = `${dj.name} | DJ Library — 3TRES6 Records`;
@@ -171,12 +173,6 @@ function renderPage(dj, sets) {
     .dj-page-info h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; }
     .dj-page-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
     .dj-page-meta strong { color: #ff9100; font-weight: 600; }
-    .dj-page-genres { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-    .genre-tag {
-      display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
-      background: rgba(255,77,0,0.1); border: 1px solid rgba(255,77,0,0.3);
-      color: #ff9100; font-size: 0.8rem; font-weight: 500;
-    }
     .dj-page-bio { color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 600px; }
     .sets-section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
     .sets-section h2 {
@@ -237,7 +233,6 @@ function renderPage(dj, sets) {
       .dj-page-avatar { width: 120px; height: 120px; }
       .dj-page-info h1 { font-size: 2rem; }
       .dj-page-meta { justify-content: center; }
-      .dj-page-genres { justify-content: center; }
     }
   </style>
 </head>
@@ -259,10 +254,12 @@ function renderPage(dj, sets) {
         </div>
         <div class="nav-separator"></div>
         <div class="nav-group nav-group-content">
-          <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">DJ Hub</a>
-          <a href="/3tres6muntanerRecords/crew.html" class="nav-item">Crew</a>
+          <a href="/3tres6muntanerRecords/dj-library.html" class="nav-item">Discoteca</a>
+          <a href="/3tres6muntanerRecords/3d-brain.html" class="nav-item">Neural</a>
           <a href="/3tres6muntanerRecords/mapa.html" class="nav-item">Mapa</a>
+          <a href="/3tres6muntanerRecords/crew.html" class="nav-item">Crew</a>
           <a href="/3tres6muntanerRecords/toolhub/" class="nav-item">Herramientas</a>
+          <a href="/3tres6muntanerRecords/blog.html" class="nav-item">Blog</a>
         </div>
       </nav>
       <div class="header-actions">
@@ -283,10 +280,12 @@ function renderPage(dj, sets) {
       <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
       <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
       <div class="mobile-nav-group-label">Contenido</div>
-      <a href="/3tres6muntanerRecords/3d-brain.html">DJ Hub</a>
-      <a href="/3tres6muntanerRecords/crew.html">Crew</a>
+      <a href="/3tres6muntanerRecords/dj-library.html">Discoteca</a>
+      <a href="/3tres6muntanerRecords/3d-brain.html">Neural</a>
       <a href="/3tres6muntanerRecords/mapa.html">Mapa</a>
+      <a href="/3tres6muntanerRecords/crew.html">Crew</a>
       <a href="/3tres6muntanerRecords/toolhub/">Herramientas</a>
+      <a href="/3tres6muntanerRecords/blog.html">Blog</a>
       <div class="mobile-nav-group-label">Redes</div>
       <a href="/3tres6muntanerRecords/#instagram">Instagram</a>
       <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
@@ -301,11 +300,7 @@ function renderPage(dj, sets) {
       </a>
       <div class="subnav-divider"></div>
       <div class="subnav-tabs">
-        <a href="../blog.html" class="subnav-tab">Blog</a>
         <a href="../dj-library.html" class="subnav-tab active" aria-current="page">DJ Library</a>
-        <a href="../3d-brain.html" class="subnav-tab">Neural</a>
-        <a href="../toolhub/" class="subnav-tab">Herramientas</a>
-        <a href="../toolhub/#hardware" class="subnav-tab">Equipo DJ</a>
       </div>
     </div>
   </nav>
@@ -318,13 +313,16 @@ function renderPage(dj, sets) {
         <div class="dj-page-info">
           <h1>${esc(dj.name)}</h1>
           <div class="dj-page-meta">
-            ${dj.origin ? `<span>📍 ${esc(dj.origin)}</span>` : ''}
-            ${dj.active_since ? `<span>•</span><span>Activo desde ${esc(dj.active_since)}</span>` : ''}
-            <span>•</span><span><strong>${setCount}</strong> set${setCount !== 1 ? 's' : ''}</span>
+            ${dj.origin ? `<span>${esc(dj.origin)}</span>` : ''}
+            ${dj.origin && dj.active_since ? `<span>·</span>` : ''}
+            ${dj.active_since ? `<span>Activo desde ${esc(dj.active_since)}</span>` : ''}
+            ${dj.origin || dj.active_since ? `<span>·</span>` : ''}
+            <span><strong>${setCount}</strong> set${setCount !== 1 ? 's' : ''}</span>
+            <span>·</span>
             <span><strong>${trackCount}</strong> tracks</span>
+            <span>·</span>
             <span><strong>${knownCount}</strong> identificados (${completion}%)</span>
           </div>
-          ${genres ? `<div class="dj-page-genres">${genres}</div>` : ''}
           ${dj.bio ? `<p class="dj-page-bio">${esc(dj.bio)}</p>` : ''}
         </div>
       </div>
@@ -344,14 +342,35 @@ function renderPage(dj, sets) {
   </main>
 
   <footer class="footer">
-    <div class="footer-content">
-      <p>3TRES6 Records — Barcelona → México</p>
-      <nav class="footer-nav">
-        <a href="/">Catálogo</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../3d-brain.html">Neural</a>
-        <a href="../dj-library.html">DJ Library</a>
-      </nav>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">3TRES6 RECORDS</span>
+        <p>Vinilos europeos de segunda mano<br />Barcelona → México</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Tienda</h4>
+          <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
+          <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
+          <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contenido</h4>
+          <a href="../dj-library.html">Discoteca</a>
+          <a href="../3d-brain.html">Neural</a>
+          <a href="../mapa.html">Mapa</a>
+          <a href="../blog.html">Blog</a>
+        </div>
+        <div class="footer-column">
+          <h4>Síguenos</h4>
+          <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener">Discogs</a>
+          <a href="https://youtube.com/@3tres6records" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 3TRES6 Records. Hecho con música en CDMX.</p>
     </div>
   </footer>
 
@@ -378,8 +397,8 @@ function renderPage(dj, sets) {
               const img = d.image || '';
               return '<a href="' + id + '.html" class="dj-card">'
                 + '<div class="dj-card-image">' + (img
-                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\\'<div class=&#92;&#92;\\&#39;dj-card-placeholder&#92;&#92;\\&#39;>🎧</div>\\'"/>'
-                    : '<div class="dj-card-placeholder">🎧</div>')
+                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\\'<div class=&#92;&#92;\\&#39;dj-card-placeholder&#92;&#92;\\&#39;>3T6</div>\\'"/>'
+                    : '<div class="dj-card-placeholder">3T6</div>')
                 + '</div>'
                 + '<div class="dj-card-body"><h3>' + d.name + '</h3>'
                 + '<div class="dj-card-meta"><span>' + (d.stats?.sets || 0) + ' sets</span> <span>' + (d.stats?.completion_rate || 0) + '% ID</span></div>'

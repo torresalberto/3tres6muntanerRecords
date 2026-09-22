@@ -210,9 +210,36 @@
 
       /* Full Article Styles */
       .blog-article-full {
+        display: none;
         max-width: 800px;
         margin: 0 auto;
         padding: 60px 40px;
+      }
+      .blog-article-full.is-open {
+        display: block;
+      }
+      .blog-full-close {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 24px;
+        padding: 10px 20px;
+        border: 1px solid var(--color-border);
+        border-radius: 50px;
+        background: none;
+        color: var(--color-text-muted);
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+        font-family: var(--font-main);
+      }
+      .blog-full-close:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+      }
+      .article-divider {
+        display: none;
       }
 
       .article-header {
@@ -332,8 +359,8 @@
       }
 
       .article-divider {
+        display: none;
         border: none;
-        border-top: 1px solid var(--color-border);
         margin: 60px 0;
       }
 
@@ -541,21 +568,21 @@
     <div class="top-banner">
       <div class="ticker-wrapper">
         <div class="ticker-content">
-          <span class="ticker-item">🎵 Blog de Educación Vinyl</span>
+          <span class="ticker-item"> Blog de Educación Vinyl</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">📚 Aprende a usar tu tornamesa</span>
+          <span class="ticker-item">Aprende a usar tu tornamesa</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🎧 Técnicas de DJ para principiantes</span>
+          <span class="ticker-item"> Técnicas de DJ para principiantes</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🔍 Crate Digging: encuentra joyas ocultas</span>
+          <span class="ticker-item"> Crate Digging: encuentra joyas ocultas</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🎵 Blog de Educación Vinyl</span>
+          <span class="ticker-item"> Blog de Educación Vinyl</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">📚 Aprende a usar tu tornamesa</span>
+          <span class="ticker-item">Aprende a usar tu tornamesa</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🎧 Técnicas de DJ para principiantes</span>
+          <span class="ticker-item"> Técnicas de DJ para principiantes</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🔍 Crate Digging: encuentra joyas ocultas</span>
+          <span class="ticker-item"> Crate Digging: encuentra joyas ocultas</span>
           <span class="ticker-separator">•</span>
         </div>
         <script>
@@ -674,13 +701,12 @@
         <article class="blog-article" id="guia-vinilos" data-cat="guia">
           <div class="blog-article-image">
             <span class="blog-article-cat">Guía Básica</span>
-            🎵
           </div>
           <div class="blog-article-body">
             <div class="blog-article-meta">
-              <span>📅 Febrero 2026</span>
-              <span>⏱️ 8 min lectura</span>
-              <span>👁️ 1.2k vistas</span>
+              <span>Febrero 2026</span>
+              <span>8 min lectura</span>
+              <span>1.2k vistas</span>
             </div>
             <h2>
               <a href="#guia-vinilos-full"
@@ -699,13 +725,12 @@
         <article class="blog-article" id="tipos-controladores" data-cat="equipo">
           <div class="blog-article-image">
             <span class="blog-article-cat">Equipo</span>
-            🎛️
           </div>
           <div class="blog-article-body">
             <div class="blog-article-meta">
-              <span>📅 Febrero 2026</span>
-              <span>⏱️ 6 min lectura</span>
-              <span>👁️ 890 vistas</span>
+              <span>Febrero 2026</span>
+              <span>6 min lectura</span>
+              <span>890 vistas</span>
             </div>
             <h2>
               <a href="#controladores-full"
@@ -729,9 +754,9 @@
           <span class="article-category">Guía Básica</span>
           <h2>Guía Completa para Principiantes: Cómo Empezar con los Vinilos</h2>
           <div class="article-meta">
-            <span>📅 Febrero 2026</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 8 min lectura</span>
+            <span>Febrero 2026</span>
+            <span>3TRES6 Records</span>
+            <span>8 min lectura</span>
           </div>
         </div>
 
@@ -744,7 +769,7 @@
 
           <div class="highlight-box">
             <p>
-              💡 <strong>¿Por qué vinilo?</strong> El vinilo ofrece una calidez y profundidad sonora
+              <strong>¿Por qué vinilo?</strong> El vinilo ofrece una calidez y profundidad sonora
               que los formatos digitales no pueden replicar. Además, es una experiencia táctil y
               visual única: el ritual de sacar el disco, limpiar la aguja y escuchar el crujido
               antes de que empiece la música es incomparable.
@@ -787,7 +812,7 @@
           </ul>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">🎵</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>¿Buscas vinilos para tu nueva tornamesa?</h4>
               <p>
@@ -872,7 +897,7 @@
 
           <div class="highlight-box">
             <p>
-              🎯 <strong>Consejo de 3TRES6:</strong> En nuestra tienda solo vendemos vinilos en
+              <strong>Consejo de 3TRES6:</strong> En nuestra tienda solo vendemos vinilos en
               condición VG+ o Mint. Cada disco es inspeccionado y limpiado antes de ser listado.
               Siempre incluimos la condición tanto del vinilo como de la funda.
             </p>
@@ -902,7 +927,7 @@
           </ul>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">📦</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>Envíos a todo México</h4>
               <p>
@@ -923,9 +948,9 @@
           <span class="article-category">Equipo</span>
           <h2>Tipos de Controladores y Tornamesas: Guía Completa 2026</h2>
           <div class="article-meta">
-            <span>📅 Febrero 2026</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 6 min lectura</span>
+            <span>Febrero 2026</span>
+            <span>3TRES6 Records</span>
+            <span>6 min lectura</span>
           </div>
         </div>
 
@@ -1024,7 +1049,7 @@
 
           <div class="highlight-box">
             <p>
-              🎯 <strong>Nuestra recomendación:</strong> Si quieres aprender a mezclar con vinilo de
+              <strong>Nuestra recomendación:</strong> Si quieres aprender a mezclar con vinilo de
               verdad, empieza con dos tornamesas de tracción directa (Pioneer PLX-500 o
               Audio-Technica AT-LP120) y una mezcladora básica (Pioneer DJM-250MK2). Es la
               configuración más auténtica y te enseñará las bases del DJing.
@@ -1032,7 +1057,7 @@
           </div>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">🎵</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>¿Ya tienes tu setup? Ahora necesitas los discos</h4>
               <p>
@@ -1054,12 +1079,11 @@
           <article class="blog-article-small" id="crate-digging" data-cat="crate">
             <div class="blog-article-image">
               <span class="blog-article-cat">Crate Digging</span>
-              🔍
             </div>
             <div class="blog-article-body">
               <div class="blog-article-meta">
-                <span>📅 Ene 2026</span>
-                <span>⏱️ 5 min</span>
+                <span>Ene 2026</span>
+                <span>5 min</span>
               </div>
               <h3>
                 <a href="#crate-digging-full"
@@ -1077,12 +1101,11 @@
           <article class="blog-article-small" id="historia-house" data-cat="historia">
             <div class="blog-article-image">
               <span class="blog-article-cat">Historia</span>
-              🏛️
             </div>
             <div class="blog-article-body">
               <div class="blog-article-meta">
-                <span>📅 Ene 2026</span>
-                <span>⏱️ 7 min</span>
+                <span>Ene 2026</span>
+                <span>7 min</span>
               </div>
               <h3>
                 <a href="#historia-house-full">La Historia del House Music: De Chicago al Mundo</a>
@@ -1098,12 +1121,11 @@
           <article class="blog-article-small" id="tecnicas-dj" data-cat="tecnica">
             <div class="blog-article-image">
               <span class="blog-article-cat">Técnica DJ</span>
-              🎚️
             </div>
             <div class="blog-article-body">
               <div class="blog-article-meta">
-                <span>📅 Ene 2026</span>
-                <span>⏱️ 6 min</span>
+                <span>Ene 2026</span>
+                <span>6 min</span>
               </div>
               <h3>
                 <a href="#tecnicas-dj-full"
@@ -1121,12 +1143,11 @@
           <article class="blog-article-small" id="limpiar-vinilos" data-cat="guia">
             <div class="blog-article-image">
               <span class="blog-article-cat">Guía Básica</span>
-              🧹
             </div>
             <div class="blog-article-body">
               <div class="blog-article-meta">
-                <span>📅 Dic 2025</span>
-                <span>⏱️ 4 min</span>
+                <span>Dic 2025</span>
+                <span>4 min</span>
               </div>
               <h3>
                 <a href="#limpiar-vinilos-full">Cómo Limpiar tus Vinilos: Guía Paso a Paso</a>
@@ -1142,12 +1163,11 @@
           <article class="blog-article-small" id="historia-techno" data-cat="historia">
             <div class="blog-article-image">
               <span class="blog-article-cat">Historia</span>
-              🤖
             </div>
             <div class="blog-article-body">
               <div class="blog-article-meta">
-                <span>📅 Dic 2025</span>
-                <span>⏱️ 8 min</span>
+                <span>Dic 2025</span>
+                <span>8 min</span>
               </div>
               <h3>
                 <a href="#historia-techno-full"
@@ -1165,12 +1185,11 @@
           <article class="blog-article-small" id="discogs-guia" data-cat="guia">
             <div class="blog-article-image">
               <span class="blog-article-cat">Guía Básica</span>
-              💻
             </div>
             <div class="blog-article-body">
               <div class="blog-article-meta">
-                <span>📅 Nov 2025</span>
-                <span>⏱️ 5 min</span>
+                <span>Nov 2025</span>
+                <span>5 min</span>
               </div>
               <h3>
                 <a href="#discogs-guia-full"
@@ -1193,9 +1212,9 @@
           <span class="article-category">Crate Digging</span>
           <h2>El Arte del Crate Digging: Cómo Encontrar Joyas Ocultas</h2>
           <div class="article-meta">
-            <span>📅 Enero 2026</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 5 min lectura</span>
+            <span>Enero 2026</span>
+            <span>3TRES6 Records</span>
+            <span>5 min lectura</span>
           </div>
         </div>
 
@@ -1262,14 +1281,14 @@
 
           <div class="highlight-box">
             <p>
-              🌍 <strong>Crate Digging en Barcelona:</strong> En 3TRES6 Records hacemos crate
-              digging profesional en las mejores tiendas de Barcelona: Discos Paradiso, Way Out
-              Records, Ultra-Local Records. Seleccionamos solo lo mejor y lo traemos a México.
+              <strong>Crate Digging en Barcelona:</strong> En 3TRES6 Records hacemos crate digging
+              profesional en las mejores tiendas de Barcelona: Discos Paradiso, Way Out Records,
+              Ultra-Local Records. Seleccionamos solo lo mejor y lo traemos a México.
             </p>
           </div>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">🇪🇸</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>Vinilos seleccionados en Barcelona</h4>
               <p>
@@ -1290,9 +1309,9 @@
           <span class="article-category">Técnica DJ</span>
           <h2>Técnicas Básicas de DJ: Beatmatching, Mixing y Scratching</h2>
           <div class="article-meta">
-            <span>📅 Enero 2026</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 6 min lectura</span>
+            <span>Enero 2026</span>
+            <span>3TRES6 Records</span>
+            <span>6 min lectura</span>
           </div>
         </div>
 
@@ -1331,7 +1350,7 @@
 
           <div class="highlight-box">
             <p>
-              ⏱️ <strong>Tiempo de práctica:</strong> El beatmatching manual toma tiempo. No te
+              <strong>Tiempo de práctica:</strong> El beatmatching manual toma tiempo. No te
               desesperes si al principio no te sale. Con 30 minutos de práctica diaria, en 2-3
               semanas empezarás a sentirte cómodo.
             </p>
@@ -1378,7 +1397,7 @@
           </ul>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">🎚️</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>Practica con los mejores vinilos</h4>
               <p>
@@ -1399,9 +1418,9 @@
           <span class="article-category">Historia</span>
           <h2>La Historia del House Music: De Chicago al Mundo</h2>
           <div class="article-meta">
-            <span>📅 Enero 2026</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 7 min lectura</span>
+            <span>Enero 2026</span>
+            <span>3TRES6 Records</span>
+            <span>7 min lectura</span>
           </div>
         </div>
         <div class="article-content">
@@ -1421,7 +1440,7 @@
 
           <div class="highlight-box">
             <p>
-              🎵 <strong>Dato curioso:</strong> El nombre "House Music" viene de los carteles que
+              <strong>Dato curioso:</strong> El nombre "House Music" viene de los carteles que
               ponían en las tiendas de discos de Chicago: "As Played at The Warehouse" (Como se toca
               en The Warehouse).
             </p>
@@ -1464,7 +1483,7 @@
           </p>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">🎵</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>House clásico en nuestra tienda</h4>
               <p>
@@ -1485,9 +1504,9 @@
           <span class="article-category">Guía Básica</span>
           <h2>Cómo Limpiar tus Vinilos: Guía Paso a Paso</h2>
           <div class="article-meta">
-            <span>📅 Diciembre 2025</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 4 min lectura</span>
+            <span>Diciembre 2025</span>
+            <span>3TRES6 Records</span>
+            <span>4 min lectura</span>
           </div>
         </div>
         <div class="article-content">
@@ -1508,9 +1527,9 @@
 
           <div class="highlight-box">
             <p>
-              💡 <strong>Recomendación:</strong> El cepillo antiestático de carbono de
-              Audio-Technica (AT6013A) es el estándar de la industria. Cuesta alrededor de $300-500
-              MXN y dura años.
+              <strong>Recomendación:</strong> El cepillo antiestático de carbono de Audio-Technica
+              (AT6013A) es el estándar de la industria. Cuesta alrededor de $300-500 MXN y dura
+              años.
             </p>
           </div>
 
@@ -1548,7 +1567,7 @@
           </ul>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">📀</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>Vinilos limpios y en perfecto estado</h4>
               <p>
@@ -1568,9 +1587,9 @@
           <span class="article-category">Historia</span>
           <h2>Techno de Detroit: La Música del Futuro que Nació en el Pasado</h2>
           <div class="article-meta">
-            <span>📅 Diciembre 2025</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 8 min lectura</span>
+            <span>Diciembre 2025</span>
+            <span>3TRES6 Records</span>
+            <span>8 min lectura</span>
           </div>
         </div>
         <div class="article-content">
@@ -1591,10 +1610,10 @@
 
           <div class="highlight-box">
             <p>
-              🤖 <strong>La influencia de Kraftwerk:</strong> Los tres fundadores del Techno
-              crecieron escuchando a Kraftwerk, el grupo alemán de música electrónica. Juan Atkins
-              dijo: "Kraftwerk sonaba como si viniera del futuro. Nosotros queríamos hacer lo mismo
-              pero desde Detroit."
+              <strong>La influencia de Kraftwerk:</strong> Los tres fundadores del Techno crecieron
+              escuchando a Kraftwerk, el grupo alemán de música electrónica. Juan Atkins dijo:
+              "Kraftwerk sonaba como si viniera del futuro. Nosotros queríamos hacer lo mismo pero
+              desde Detroit."
             </p>
           </div>
 
@@ -1629,7 +1648,7 @@
           </p>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">🤖</span>
+            <span class="rec-emoji"></span>
             <div>
               <h4>Techno de Detroit en nuestra colección</h4>
               <p>
@@ -1650,9 +1669,9 @@
           <span class="article-category">Guía Básica</span>
           <h2>Cómo Usar Discogs: La Biblia del Coleccionista de Vinilos</h2>
           <div class="article-meta">
-            <span>📅 Noviembre 2025</span>
-            <span>✍️ 3TRES6 Records</span>
-            <span>⏱️ 5 min lectura</span>
+            <span>Noviembre 2025</span>
+            <span>3TRES6 Records</span>
+            <span>5 min lectura</span>
           </div>
         </div>
         <div class="article-content">
@@ -1701,9 +1720,9 @@
 
           <div class="highlight-box">
             <p>
-              💡 <strong>Consejo:</strong> Siempre revisa el perfil del vendedor antes de comprar.
-              Un vendedor con 100+ ventas y calificación 99%+ es muy confiable. Lee los comentarios
-              de otros compradores.
+              <strong>Consejo:</strong> Siempre revisa el perfil del vendedor antes de comprar. Un
+              vendedor con 100+ ventas y calificación 99%+ es muy confiable. Lee los comentarios de
+              otros compradores.
             </p>
           </div>
 
@@ -1720,7 +1739,7 @@
           </ol>
 
           <div class="product-recommendation">
-            <span class="rec-emoji">💻</span>
+            <span class="rec-emoji">3T6</span>
             <div>
               <h4>Encuéntranos en Discogs</h4>
               <p>
@@ -1788,7 +1807,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 3TRES6 Records. Hecho con 🎵 en CDMX.</p>
+        <p>© 2026 3TRES6 Records. Hecho con música en CDMX.</p>
       </div>
     </footer>
 
@@ -1833,12 +1852,59 @@
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
               e.preventDefault();
+              if (targetElement.classList.contains('blog-article-full')) {
+                targetElement.classList.add('is-open');
+                ensureFullCloseButtons();
+              }
               const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
               const targetPosition = targetElement.offsetTop - headerHeight - 20;
               window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
           });
         });
+
+        function openFromHash() {
+          const hash = window.location.hash;
+          if (!hash || hash.length < 2) return;
+          const el = document.querySelector(hash);
+          if (el && el.classList.contains('blog-article-full')) {
+            el.classList.add('is-open');
+            ensureFullCloseButtons();
+            const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+            window.scrollTo({ top: el.offsetTop - headerHeight - 20, behavior: 'smooth' });
+          }
+        }
+        if (!window._blogHashBound) {
+          window._blogHashBound = true;
+          window.addEventListener('hashchange', openFromHash);
+        }
+        openFromHash();
+
+        function ensureFullCloseButtons() {
+          document.querySelectorAll('.blog-article-full.is-open').forEach((full) => {
+            if (full.querySelector('.blog-full-close')) return;
+            const card = document.querySelector('.blog-article-read-more[href="#' + full.id + '"]');
+            const cardId = card ? card.closest('.blog-article')?.id : null;
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'blog-full-close';
+            btn.textContent = 'Cerrar artículo';
+            btn.addEventListener('click', function () {
+              full.classList.remove('is-open');
+              if (cardId) {
+                const back = document.getElementById(cardId);
+                if (back) {
+                  const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+                  window.scrollTo({ top: back.offsetTop - headerHeight - 20, behavior: 'smooth' });
+                }
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            });
+            full.appendChild(btn);
+          });
+        }
+        window._ensureFullCloseButtons = ensureFullCloseButtons;
       }
       initBlogPage();
       if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {

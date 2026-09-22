@@ -1,6 +1,5 @@
 /* ========================================
-   MUNTANER336 - Complete Stylesheet v3
-   With Ticker, Cart, Checkout, Audio Preview
+   MUNTANER336 - Complete Stylesheet v3 With Ticker, Cart, Checkout, Audio Preview
    ======================================== */
 
 :root {
@@ -232,8 +231,7 @@ button {
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
-/* Flow spacer replacing the former DJ Hub sub-nav: keeps content clear of the
-   fixed header (top 40px + 80px height = 121px) on content pages. */
+/* Flow spacer replacing the former DJ Hub sub-nav: keeps content clear of the fixed header (top 40px + 80px height = 121px) on content pages. */
 .header-spacer {
   height: 121px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -464,6 +462,7 @@ button {
 }
 
 .cart-count {
+  display: none;
   position: absolute;
   top: -6px;
   right: -8px;
@@ -474,7 +473,6 @@ button {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -5249,4 +5247,159 @@ a.blog-card-image:hover {
 
 #networkInfo #infoList::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-hover);
+}
+
+/* Instagram link-out card */
+.instagram-linkout {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.instagram-linkout-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+}
+.ig-linkout-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4d00, #ff9100);
+  color: #0a0a0a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.instagram-linkout-body {
+  flex: 1;
+  min-width: 200px;
+}
+.instagram-linkout-body strong {
+  display: block;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+.instagram-linkout-body p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .audio-controls {
+    left: auto;
+    right: 14px;
+    bottom: 14px;
+    justify-content: flex-end;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .audio-controls .now-playing-bar {
+    display: none;
+  }
+  .audio-toggle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--color-accent, #ff4d00);
+    color: #0a0a0a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===== Compact calendar list (homepage) ===== */
+.calendar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--color-border, #2a2a2a);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg-card, #111);
+}
+.calendar-list-row {
+  display: grid;
+  grid-template-columns: 72px 1fr auto auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border, #2a2a2a);
+  font-size: 0.92rem;
+  color: var(--color-text, #eee);
+  cursor: default;
+}
+.calendar-list-row:last-child {
+  border-bottom: none;
+}
+.calendar-list-row.clickable {
+  cursor: pointer;
+}
+.calendar-list-row.clickable:hover,
+.calendar-list-row.clickable:focus-visible {
+  background: rgba(255, 77, 0, 0.08);
+  outline: none;
+}
+.calendar-list-when {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent, #ff4d00);
+  white-space: nowrap;
+}
+.calendar-list-title {
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.calendar-list-venue {
+  color: var(--color-text-muted, #888);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 28ch;
+}
+.calendar-list-time {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #888);
+  white-space: nowrap;
+}
+.calendar-list-empty {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--color-text-muted, #888);
+  font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+  .calendar-list-row {
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .calendar-list-venue,
+  .calendar-list-time,
+  .calendar-list-row .price-tag,
+  .calendar-list-row .event-platform {
+    grid-column: 2;
+  }
+  .calendar-list-venue {
+    max-width: none;
+    white-space: normal;
+  }
 }

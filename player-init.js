@@ -1,5 +1,5 @@
 // Inject persistent audio player controls into any page
-(function() {
+(function () {
   if (document.getElementById('audioToggle')) return;
 
   const html = `
@@ -14,7 +14,7 @@
       </button>
       <div class="now-playing-bar">
         <span class="pulse"></span>
-        <span class="track-info" id="trackInfo">🎵 3TRES6 Radio</span>
+        <span class="track-info" id="trackInfo">3TRES6 Radio</span>
       </div>
     </div>
     <div id="youtubeAudioContainer" class="youtube-mini-player"></div>
@@ -25,7 +25,10 @@
   if (!window.AudioPlayer) {
     const s = document.createElement('script');
     // Detect if we're in a subdirectory (dj/ or toolhub/)
-    const isSubdir = window.location.pathname.includes('/dj/') || window.location.pathname.includes('/toolhub/') || window.location.pathname.includes('/dj-library/');
+    const isSubdir =
+      window.location.pathname.includes('/dj/') ||
+      window.location.pathname.includes('/toolhub/') ||
+      window.location.pathname.includes('/dj-library/');
     s.src = isSubdir ? '../audio.js' : 'audio.js';
     document.body.appendChild(s);
   }

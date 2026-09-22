@@ -5,7 +5,7 @@ const HardwareGuide = {
     selectedForCompare: [],
     expandedCard: null,
     activeBrandFilter: 'all',
-    activeTypeFilter: 'all'
+    activeTypeFilter: 'all',
   },
 
   init() {
@@ -24,12 +24,12 @@ const HardwareGuide = {
     }
 
     // Brand filters
-    document.querySelectorAll('.brand-filter-btn').forEach(btn => {
+    document.querySelectorAll('.brand-filter-btn').forEach((btn) => {
       btn.addEventListener('click', () => this.filterByBrand(btn.dataset.brand));
     });
 
     // Type filters
-    document.querySelectorAll('.type-filter-btn').forEach(btn => {
+    document.querySelectorAll('.type-filter-btn').forEach((btn) => {
       btn.addEventListener('click', () => this.filterByType(btn.dataset.type));
     });
 
@@ -60,9 +60,9 @@ const HardwareGuide = {
 
   filterByBrand(brand) {
     this.state.activeBrandFilter = brand;
-    
+
     // Update active button
-    document.querySelectorAll('.brand-filter-btn').forEach(btn => {
+    document.querySelectorAll('.brand-filter-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.brand === brand);
     });
 
@@ -72,7 +72,7 @@ const HardwareGuide = {
   filterByType(type) {
     this.state.activeTypeFilter = type;
 
-    document.querySelectorAll('.type-filter-btn').forEach(btn => {
+    document.querySelectorAll('.type-filter-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.type === type);
     });
 
@@ -92,12 +92,12 @@ const HardwareGuide = {
 
     // Apply brand filter
     if (this.state.activeBrandFilter !== 'all') {
-      devices = devices.filter(d => d.brandSlug === this.state.activeBrandFilter);
+      devices = devices.filter((d) => d.brandSlug === this.state.activeBrandFilter);
     }
 
     // Apply type filter
     if (this.state.activeTypeFilter !== 'all') {
-      devices = devices.filter(d => d.type === this.state.activeTypeFilter);
+      devices = devices.filter((d) => d.type === this.state.activeTypeFilter);
     }
 
     this.state.filteredDevices = devices;
@@ -111,7 +111,7 @@ const HardwareGuide = {
     if (this.state.filteredDevices.length === 0) {
       grid.innerHTML = `
         <div class="no-results">
-          <span class="no-results-icon">🔍</span>
+          <span class="no-results-icon"></span>
           <h3>No se encontraron dispositivos</h3>
           <p>Intenta con otros filtros o términos de búsqueda</p>
         </div>
@@ -119,7 +119,7 @@ const HardwareGuide = {
       return;
     }
 
-    grid.innerHTML = this.state.filteredDevices.map(device => this.renderCard(device)).join('');
+    grid.innerHTML = this.state.filteredDevices.map((device) => this.renderCard(device)).join('');
 
     // Bind card events
     this.bindCardEvents();
@@ -130,9 +130,9 @@ const HardwareGuide = {
     const isSelected = this.state.selectedForCompare.includes(device.id);
     const canCompare = this.state.selectedForCompare.length < 2 || isSelected;
 
-    const usbBadge = device.usb.format 
-      ? `<span class="badge badge-usb">💾 ${device.usb.format}</span>`
-      : `<span class="badge badge-analog">⚡ Analógico</span>`;
+    const usbBadge = device.usb.format
+      ? `<span class="badge badge-usb">${device.usb.format}</span>`
+      : `<span class="badge badge-analog">Analógico</span>`;
 
     const typeIcon = this.getTypeIcon(device.type);
 
@@ -157,7 +157,9 @@ const HardwareGuide = {
 
         ${isExpanded ? this.renderExpandedContent(device) : ''}
 
-        ${isExpanded ? `
+        ${
+          isExpanded
+            ? `
           <div class="card-actions">
             <button class="btn-compare ${!canCompare ? 'disabled' : ''}" 
               onclick="event.stopPropagation(); HardwareGuide.toggleCompare('${device.id}')"
@@ -165,7 +167,9 @@ const HardwareGuide = {
               ${isSelected ? '✓ Comparando' : '+ Comparar'}
             </button>
           </div>
-        ` : ''}
+        `
+            : ''
+        }
       </div>
     `;
   },
@@ -174,9 +178,11 @@ const HardwareGuide = {
     return `
       <div class="card-content">
         <!-- USB Settings -->
-        ${device.usb.format ? `
+        ${
+          device.usb.format
+            ? `
           <div class="detail-section">
-            <h4 class="section-title">💾 USB Settings</h4>
+            <h4 class="section-title">USB Settings</h4>
             <div class="detail-grid">
               <div class="detail-item">
                 <span class="detail-label">Format</span>
@@ -191,27 +197,35 @@ const HardwareGuide = {
                 <span class="detail-value">${device.usb.maxFiles?.toLocaleString() || 'N/A'}</span>
               </div>
             </div>
-            ${device.usb.recommendedDrives?.length ? `
+            ${
+              device.usb.recommendedDrives?.length
+                ? `
               <div class="detail-item full-width">
                 <span class="detail-label">Recommended Drives</span>
                 <div class="drive-list">
-                  ${device.usb.recommendedDrives.map(d => `<span class="drive-tag">${d}</span>`).join('')}
+                  ${device.usb.recommendedDrives.map((d) => `<span class="drive-tag">${d}</span>`).join('')}
                 </div>
               </div>
-            ` : ''}
+            `
+                : ''
+            }
             <p class="detail-tip">${device.usb.tips}</p>
           </div>
-        ` : `
+        `
+            : `
           <div class="detail-section no-usb">
-            <h4 class="section-title">⚠️ No USB Export</h4>
+            <h4 class="section-title">No USB Export</h4>
             <p class="detail-tip">${device.usb.tips}</p>
           </div>
-        `}
+        `
+        }
 
         <!-- Software -->
-        ${device.software.name ? `
+        ${
+          device.software.name
+            ? `
           <div class="detail-section">
-            <h4 class="section-title">🖥️ Software</h4>
+            <h4 class="section-title">Software</h4>
             <div class="detail-grid">
               <div class="detail-item">
                 <span class="detail-label">Software</span>
@@ -226,93 +240,127 @@ const HardwareGuide = {
                 <span class="detail-value">${device.software.exportMode}</span>
               </div>
             </div>
-            ${device.software.versionWarning ? `
-              <p class="detail-warning">⚠️ ${device.software.versionWarning}</p>
-            ` : ''}
-            ${device.software.downloadUrl ? `
+            ${
+              device.software.versionWarning
+                ? `
+              <p class="detail-warning">${device.software.versionWarning}</p>
+            `
+                : ''
+            }
+            ${
+              device.software.downloadUrl
+                ? `
               <a href="${device.software.downloadUrl}" target="_blank" rel="noopener" class="download-link-btn">
-                ⬇️ Download ${device.software.downloadNote || device.software.name}
+                Download ${device.software.downloadNote || device.software.name}
               </a>
-            ` : ''}
+            `
+                : ''
+            }
           </div>
-        ` : ''}
+        `
+            : ''
+        }
 
         <!-- Export Steps -->
         <div class="detail-section">
-          <h4 class="section-title">📋 Export Steps</h4>
+          <h4 class="section-title">Export Steps</h4>
           <ol class="export-steps">
             ${device.exportSteps.map((step, i) => `<li>${step}</li>`).join('')}
           </ol>
         </div>
 
         <!-- Pro Tips -->
-        ${device.proTips?.length ? `
+        ${
+          device.proTips?.length
+            ? `
           <div class="detail-section">
-            <h4 class="section-title">⭐ Pro Tips</h4>
+            <h4 class="section-title">Pro Tips</h4>
             <div class="tips-list">
-              ${device.proTips.map(tip => `
+              ${device.proTips
+                .map(
+                  (tip) => `
                 <div class="tip-item badge-${tip.badge}">
                   ${this.getBadgeLabel(tip.badge)} ${tip.text}
                 </div>
-              `).join('')}
+              `
+                )
+                .join('')}
             </div>
           </div>
-        ` : ''}
+        `
+            : ''
+        }
 
         <!-- Known Issues -->
-        ${device.knownIssues?.length ? `
+        ${
+          device.knownIssues?.length
+            ? `
           <div class="detail-section">
-            <h4 class="section-title">⚠️ Known Issues</h4>
+            <h4 class="section-title">Known Issues</h4>
             <div class="issues-list">
-              ${device.knownIssues.map(issue => `
+              ${device.knownIssues
+                .map(
+                  (issue) => `
                 <div class="issue-item severity-${issue.severity}">
                   ${issue.text}
                 </div>
-              `).join('')}
+              `
+                )
+                .join('')}
             </div>
           </div>
-        ` : ''}
+        `
+            : ''
+        }
 
         <!-- Specifications -->
-        ${device.specifications ? `
+        ${
+          device.specifications
+            ? `
           <div class="detail-section">
-            <h4 class="section-title">📊 Specifications</h4>
+            <h4 class="section-title">Specifications</h4>
             <div class="detail-grid">
-              ${Object.entries(device.specifications).map(([key, value]) => `
+              ${Object.entries(device.specifications)
+                .map(
+                  ([key, value]) => `
                 <div class="detail-item">
                   <span class="detail-label">${this.formatLabel(key)}</span>
                   <span class="detail-value">${value}</span>
                 </div>
-              `).join('')}
+              `
+                )
+                .join('')}
             </div>
           </div>
-        ` : ''}
+        `
+            : ''
+        }
       </div>
     `;
   },
 
   getTypeIcon(type) {
     const icons = {
-      'cdj': '🎧',
-      'controller': '🎛️',
-      'all-in-one': '🎚️',
-      'turntable': '📀'
+      cdj: 'CDJ',
+      controller: 'HW',
+      'all-in-one': '',
+      turntable: 'TT',
     };
-    return icons[type] || '🎵';
+    return icons[type] || 'AUD';
   },
 
   getBadgeLabel(badge) {
     const labels = {
-      'essential': '🔴 Essential',
-      'pro': '🟡 Pro Tip',
-      'warning': '🟠 Warning',
-      'tip': '🟢 Tip'
+      essential: 'Essential',
+      pro: 'Pro Tip',
+      warning: 'Warning',
+      tip: 'Tip',
     };
     return labels[badge] || '';
   },
 
   formatLabel(key) {
-    return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+    return key.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase());
   },
 
   bindCardEvents() {
@@ -330,7 +378,7 @@ const HardwareGuide = {
 
   toggleCompare(id) {
     const index = this.state.selectedForCompare.indexOf(id);
-    
+
     if (index > -1) {
       // Remove
       this.state.selectedForCompare.splice(index, 1);
@@ -354,11 +402,11 @@ const HardwareGuide = {
     if (count > 0) {
       bar.style.display = 'flex';
       document.getElementById('compareCount').textContent = count;
-      
+
       const deviceNames = this.state.selectedForCompare
-        .map(id => HardwareDB.getById(id)?.name)
+        .map((id) => HardwareDB.getById(id)?.name)
         .join(' vs ');
-      
+
       document.getElementById('compareText').textContent = deviceNames;
     } else {
       bar.style.display = 'none';
@@ -388,13 +436,14 @@ const HardwareGuide = {
       { key: 'usb', subKey: 'maxFiles', label: 'Max Files', format: 'number' },
       { key: 'software', subKey: 'name', label: 'Software' },
       { key: 'software', subKey: 'version', label: 'Software Version' },
-      { key: 'releaseYear', label: 'Release Year' }
+      { key: 'releaseYear', label: 'Release Year' },
     ];
 
     let tableRows = '';
 
-    comparisonFields.forEach(field => {
-      let val1 = '', val2 = '';
+    comparisonFields.forEach((field) => {
+      let val1 = '',
+        val2 = '';
 
       if (field.subKey) {
         val1 = device1[field.key]?.[field.subKey] || '—';
@@ -410,7 +459,7 @@ const HardwareGuide = {
       }
 
       const match = val1 === val2;
-      
+
       tableRows += `
         <tr class="${match ? 'match' : ''}">
           <td>${field.label}</td>
@@ -441,7 +490,7 @@ const HardwareGuide = {
 
   closeCompareModal() {
     document.getElementById('compareModal').style.display = 'none';
-  }
+  },
 };
 
 // Initialize when DOM is ready

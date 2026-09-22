@@ -362,7 +362,7 @@ const VenueMap = {
                   .map((id) =>
                     this._popupLink(
                       `/3tres6muntanerRecords/dj-library.html#set:${encodeURIComponent(id)}`,
-                      '↳ ' + id,
+                      '' + id,
                       'set'
                     )
                   )
@@ -464,7 +464,7 @@ const VenueMap = {
           <p class="venue-card-address">${v.address}</p>
           ${
             link
-              ? `<a class="venue-card-btn" href="${link.href}" target="_blank" rel="noopener" data-no-swup>${link.label} ↗</a>`
+              ? `<a class="venue-card-btn" href="${link.href}" target="_blank" rel="noopener" data-no-swup>${link.label} </a>`
               : ''
           }
         </div>
@@ -495,7 +495,7 @@ const VenueMap = {
     rec.eventMarkers = cityEvents.map((ev) => this._makeEventMarker(rec, ev));
 
     const badgeEl = document.getElementById(`cityEvents-${slug}`);
-    if (badgeEl) badgeEl.textContent = cityEvents.length > 0 ? `📅 ${cityEvents.length}` : '';
+    if (badgeEl) badgeEl.textContent = cityEvents.length > 0 ? `${cityEvents.length}` : '';
     this.updateToggleCount();
   },
 
@@ -560,7 +560,12 @@ const VenueMap = {
   updateToggleCount() {
     const total = this.events.length;
     const el = document.getElementById('eventsCountTotal');
-    if (el) el.textContent = ` ${total} ${total === 1 ? 'evento' : 'eventos'} próximos`;
+    if (el) {
+      el.textContent =
+        total > 0
+          ? ` (${total} ${total === 1 ? 'evento' : 'eventos'})`
+          : ' (sin eventos por ahora)';
+    }
   },
 
   _renderEventPopupHTML(ev) {
@@ -582,9 +587,9 @@ const VenueMap = {
           <h3 class="event-popup-name">${esc(ev.title)}</h3>
           ${price}
         </div>
-        <p class="event-popup-meta">📅 ${this.esDate(ev.date)}${time}</p>
-        <p class="event-popup-venue">📍 ${esc(ev.venue)}${ev.address ? ` · ${esc(ev.address)}` : ''}</p>
-        <div class="event-popup-djs"><span class="event-popup-djs-label">🎧</span> ${djs}</div>
+        <p class="event-popup-meta">${this.esDate(ev.date)}${time}</p>
+        <p class="event-popup-venue">${esc(ev.venue)}${ev.address ? ` · ${esc(ev.address)}` : ''}</p>
+        <div class="event-popup-djs"><span class="event-popup-djs-label">Lineup</span> ${djs}</div>
         ${desc}
         <div class="event-popup-actions">
           ${ev.url ? `<a href="${esc(ev.url)}" target="_blank" rel="noopener" class="popup-link">Info / Tickets →</a>` : ''}

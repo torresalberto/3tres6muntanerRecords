@@ -5,10 +5,10 @@ const SoftwareDirectory = {
     activeCategory: 'all',
     activePricing: 'all',
     activePlatform: 'all',
-    searchQuery: ''
+    searchQuery: '',
   },
 
-  init: function() {
+  init: function () {
     this.state.resources = SoftwareDB.resources;
     this.state.filteredResources = [...this.state.resources];
     this.renderCategoryFilters();
@@ -16,7 +16,7 @@ const SoftwareDirectory = {
     this.bindEvents();
   },
 
-  bindEvents: function() {
+  bindEvents: function () {
     const searchInput = document.getElementById('softwareSearch');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
@@ -25,27 +25,33 @@ const SoftwareDirectory = {
       });
     }
 
-    document.querySelectorAll('.software-category-btn').forEach(btn => {
+    document.querySelectorAll('.software-category-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.software-category-btn').forEach(b => b.classList.remove('active'));
+        document
+          .querySelectorAll('.software-category-btn')
+          .forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
         this.state.activeCategory = btn.dataset.category;
         this.filterResources();
       });
     });
 
-    document.querySelectorAll('.pricing-filter-btn').forEach(btn => {
+    document.querySelectorAll('.pricing-filter-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.pricing-filter-btn').forEach(b => b.classList.remove('active'));
+        document
+          .querySelectorAll('.pricing-filter-btn')
+          .forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
         this.state.activePricing = btn.dataset.pricing;
         this.filterResources();
       });
     });
 
-    document.querySelectorAll('.platform-filter-btn').forEach(btn => {
+    document.querySelectorAll('.platform-filter-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.platform-filter-btn').forEach(b => b.classList.remove('active'));
+        document
+          .querySelectorAll('.platform-filter-btn')
+          .forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
         this.state.activePlatform = btn.dataset.platform;
         this.filterResources();
@@ -53,44 +59,49 @@ const SoftwareDirectory = {
     });
   },
 
-  renderCategoryFilters: function() {
+  renderCategoryFilters: function () {
     const container = document.getElementById('softwareCategoryFilters');
     if (!container) return;
 
     const categories = SoftwareDB.getCategories();
     container.innerHTML = `
       <button class="software-category-btn active" data-category="all">Todos</button>
-      ${categories.map(cat => `
+      ${categories
+        .map(
+          (cat) => `
         <button class="software-category-btn" data-category="${cat}">
           ${SoftwareDB.getCategoryLabel(cat)}
         </button>
-      `).join('')}
+      `
+        )
+        .join('')}
     `;
   },
 
-  filterResources: function() {
+  filterResources: function () {
     let filtered = [...this.state.resources];
 
     if (this.state.activeCategory !== 'all') {
-      filtered = filtered.filter(r => r.category === this.state.activeCategory);
+      filtered = filtered.filter((r) => r.category === this.state.activeCategory);
     }
 
     if (this.state.activePricing !== 'all') {
-      filtered = filtered.filter(r => r.pricing === this.state.activePricing);
+      filtered = filtered.filter((r) => r.pricing === this.state.activePricing);
     }
 
     if (this.state.activePlatform !== 'all') {
-      filtered = filtered.filter(r => r.platforms.includes(this.state.activePlatform));
+      filtered = filtered.filter((r) => r.platforms.includes(this.state.activePlatform));
     }
 
     if (this.state.searchQuery) {
       const q = this.state.searchQuery.toLowerCase();
-      filtered = filtered.filter(r =>
-        r.name.toLowerCase().includes(q) ||
-        r.developer.toLowerCase().includes(q) ||
-        r.tags.some(t => t.toLowerCase().includes(q)) ||
-        r.description.es.toLowerCase().includes(q) ||
-        r.description.en.toLowerCase().includes(q)
+      filtered = filtered.filter(
+        (r) =>
+          r.name.toLowerCase().includes(q) ||
+          r.developer.toLowerCase().includes(q) ||
+          r.tags.some((t) => t.toLowerCase().includes(q)) ||
+          r.description.es.toLowerCase().includes(q) ||
+          r.description.en.toLowerCase().includes(q)
       );
     }
 
@@ -99,21 +110,21 @@ const SoftwareDirectory = {
     this.updateCount();
   },
 
-  updateCount: function() {
+  updateCount: function () {
     const countEl = document.getElementById('softwareCount');
     if (countEl) {
       countEl.textContent = this.state.filteredResources.length;
     }
   },
 
-  renderResources: function() {
+  renderResources: function () {
     const grid = document.getElementById('softwareGrid');
     if (!grid) return;
 
     if (this.state.filteredResources.length === 0) {
       grid.innerHTML = `
         <div class="no-results">
-          <span class="no-results-icon">🔍</span>
+          <span class="no-results-icon"></span>
           <h3>No se encontraron recursos</h3>
           <p>Intenta con otros filtros o términos de búsqueda</p>
         </div>
@@ -121,17 +132,18 @@ const SoftwareDirectory = {
       return;
     }
 
-    grid.innerHTML = this.state.filteredResources.map(r => {
-      const pricing = SoftwareDB.getPricingBadge(r.pricing);
-      const platformIcons = r.platforms.map(p => SoftwareDB.getPlatformIcon(p)).join(' ');
-      const links = r.links || [];
-      const mainLink = links[0] || {};
-      const secondaryLinks = links.slice(1, 4) || [];
+    grid.innerHTML = this.state.filteredResources
+      .map((r) => {
+        const pricing = SoftwareDB.getPricingBadge(r.pricing);
+        const platformIcons = r.platforms.map((p) => SoftwareDB.getPlatformIcon(p)).join(' ');
+        const links = r.links || [];
+        const mainLink = links[0] || {};
+        const secondaryLinks = links.slice(1, 4) || [];
 
-      return `
+        return `
         <div class="software-card">
           <div class="software-card-header">
-            <span class="software-icon">${r.icon || '📦'}</span>
+            <span class="software-icon">${r.icon || 'SW'}</span>
             <div class="software-title-group">
               <h3 class="software-name">${r.name}</h3>
               <span class="software-developer">${r.developer}</span>
@@ -142,7 +154,7 @@ const SoftwareDirectory = {
             <span class="pricing-badge" style="background: ${pricing.color}22; color: ${pricing.color}; border-color: ${pricing.color}44;">
               ${pricing.text}
             </span>
-            ${r.hasFreeTier ? `<span class="free-tier-badge" title="Tiene versión gratuita">✅ Free Tier</span>` : ''}
+            ${r.hasFreeTier ? `<span class="free-tier-badge" title="Tiene versión gratuita">Free Tier</span>` : ''}
           </div>
 
           <div class="software-description">
@@ -154,28 +166,44 @@ const SoftwareDirectory = {
             <span class="platform-icons">${platformIcons}</span>
           </div>
 
-          ${r.recommendation ? `
+          ${
+            r.recommendation
+              ? `
             <div class="software-recommendation">
-              💡 ${r.recommendation}
+              ${r.recommendation}
             </div>
-          ` : ''}
+          `
+              : ''
+          }
 
           <div class="software-links">
-            ${mainLink.label ? `<a href="${mainLink.url}" target="_blank" rel="noopener" class="software-btn primary">
+            ${
+              mainLink.label
+                ? `<a href="${mainLink.url}" target="_blank" rel="noopener" class="software-btn primary">
               ${mainLink.label}
-            </a>` : ''}
-            ${secondaryLinks.map(link => `
+            </a>`
+                : ''
+            }
+            ${secondaryLinks
+              .map(
+                (link) => `
               <a href="${link.url}" target="_blank" rel="noopener" class="software-btn secondary" title="${link.label}">
-                ${link.type === 'source' ? '📝' : link.type === 'alternative' ? '🆓' : link.type === 'tutorial' ? '📺' : link.type === 'trial' ? '🎁' : link.type === 'info' ? 'ℹ️' : link.type === 'buy' ? '🛒' : link.type === 'guide' ? '📖' : link.type === 'webapp' ? '🌐' : '🔗'}
+                ${link.type === 'source' ? 'Fuente' : link.type === 'alternative' ? 'Alternativa' : link.type === 'tutorial' ? 'Tutorial' : link.type === 'trial' ? 'Trial' : link.type === 'info' ? 'Info' : link.type === 'buy' ? 'Comprar' : link.type === 'guide' ? 'Guía' : link.type === 'webapp' ? 'Web' : 'Link'}
               </a>
-            `).join('')}
+            `
+              )
+              .join('')}
           </div>
 
           <div class="software-tags">
-            ${r.tags.slice(0, 4).map(tag => `<span class="software-tag">#${tag}</span>`).join('')}
+            ${r.tags
+              .slice(0, 4)
+              .map((tag) => `<span class="software-tag">#${tag}</span>`)
+              .join('')}
           </div>
         </div>
       `;
-    }).join('');
-  }
+      })
+      .join('');
+  },
 };

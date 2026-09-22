@@ -78,8 +78,8 @@ const EventCalendar = {
     this.events = merged;
   },
 
-  // Return all events that fall on a specific date string (YYYY-MM-DD) in the current month
-  getEventsForDate: function (dateStr) {
+  // Return all events that fall on a specific date string (YYYY-MM-DD)
+  getEventsForDate(dateStr) {
     return this.events.filter((e) => {
       if (e.recurring) {
         if (Array.isArray(e.recurringDays) && e.recurringDays.length) {
@@ -99,76 +99,94 @@ const EventCalendar = {
 
     const year = this.currentYear;
     const month = this.currentMonth;
-    const now = new Date();
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    const header = `
-      <div class="calendar-header-row">
-        ${this.DAYS.map((d) => `<div class="calendar-day-header">${d}</div>`).join('')}
-      </div>
-    `;
-
-    let cells = '';
-    for (let i = 0; i < firstDay; i++) {
-      cells += '<div class="calendar-day empty"></div>';
-    }
-    for (let day = 1; day <= daysInMonth; day++) {
+    // Compact event list for the month (plus recurring hits on any day).
+    const isToday = new Date();
+    const list = [];
+    const seen = new Set();
+    for (let day = 1; day <= new Date(year, month + 1, 0).getDate(); day++) {
       const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      const dayEvents = this.getEventsForDate(dateStr);
-      const hasEvents = dayEvents.length > 0;
-      const isToday =
-        day === now.getDate() && month === now.getMonth() && year === now.getFullYear();
-      const todayClass = isToday ? 'today' : '';
-      const eventClass = hasEvents ? 'has-events' : '';
-      const clickable = hasEvents ? 'clickable' : '';
-
-      let eventHtml = '';
-      if (hasEvents) {
-        eventHtml = dayEvents
-          .slice(0, 2)
-          .map((e) => {
-            const isCom = e.source === 'submission';
-            const label = isCom ? 'COMUNIDAD' : e.recurring ? 'RECURRENTE' : '';
-            return `
-            <div class="calendar-event" title="${e.title}">
-              ${label ? `<span class="event-platform ${isCom ? 'submission-tag' : 'event-tag'}">${label}</span>` : ''}
-              <span class="event-name">${e.title.length > 20 ? e.title.slice(0, 18) + '...' : e.title}</span>
-            </div>
-          `;
-          })
-          .join('');
-        if (dayEvents.length > 2) {
-          eventHtml += `<div class="calendar-more-events">+${dayEvents.length - 2} más</div>`;
-        }
+      for (const e of this.getEventsForDate(dateStr)) {
+        const key = e.id || `${e.title}|${e.date || e.recurring}|${e.venue}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        list.push({ e, dateStr, day });
       }
-
-      cells += `
-        <div class="calendar-day ${todayClass} ${eventClass} ${clickable}" data-date="${dateStr}">
-          <span class="day-number">${day}</span>
-          ${eventHtml}
-        </div>
-      `;
     }
+    // Recurring events without a matching weekday still in this month's window
+    for (const e of this.events) {
+      if (!e.recurring) continue;
+      const key = e.id || `${e.title}|recurring|${e.venue}`;
+      if (seen.has(key)) continue;
+      // include all recurring staples for the month header count
+      seen.add(key);
+      list.push({ e, dateStr: null, day: null });
+    }
+    list.sort((a, b) => {
+      const da = a.dateStr || '9999-99-99';
+      const db = b.dateStr || '9999-99-99';
+      if (da !== db) return da < db ? -1 : 1;
+      return (a.e.time || '') < (b.e.time || '') ? -1 : 1;
+    });
 
-    // Count events per city in this view for the subtitle.
     const countCity = (country) =>
       this.events.filter((e) => {
         if (!e.country || e.country !== country) return false;
-        if (e.recurring) return false; // recurring is the weekend staple
+        if (e.recurring) return false;
         if (!e.date) return false;
         const d = new Date(e.date);
         return d.getFullYear() === year && d.getMonth() === month;
       }).length;
     const bcnCount = countCity('ES');
     const mxCount = countCity('MX');
+    const recurringCount = this.events.filter((e) => e.recurring).length;
+    const total = bcnCount + mxCount + recurringCount;
 
     const countLine =
-      bcnCount + mxCount === 0
+      total === 0
         ? 'Aún no hay eventos este mes'
-        : `${bcnCount + mxCount} ${bcnCount + mxCount === 1 ? 'evento' : 'eventos'} este mes` +
+        : `${total} ${total === 1 ? 'evento' : 'eventos'}` +
           (bcnCount ? ` · ${bcnCount} BCN` : '') +
-          (mxCount ? ` · ${mxCount} CDMX` : '');
+          (mxCount ? ` · ${mxCount} CDMX` : '') +
+          (recurringCount ? ` · ${recurringCount} recurrentes` : '');
+
+    const rows = list.length
+      ? list
+          .map(({ e, dateStr, day }) => {
+            const isCom = e.source === 'submission';
+            const badge = isCom
+              ? '<span class="event-platform submission-tag">COMUNIDAD</span>'
+              : e.recurring
+                ? '<span class="event-platform event-tag">RECURRENTE</span>'
+                : '';
+            const when =
+              dateStr && day ? `${day} ${this.MONTHS[month]}` : e.recurring ? 'Cada semana' : '';
+            const time = e.time
+              ? e.time + (e.endTime && e.endTime !== 'late' ? '–' + e.endTime : '')
+              : '';
+            const price =
+              e.price && e.price.toLowerCase().includes('free')
+                ? '<span class="price-tag free-tag">GRATIS</span>'
+                : e.price && e.price !== 'TBA'
+                  ? `<span class="price-tag paid-tag">${e.price}</span>`
+                  : '';
+            const openable = dateStr ? ' clickable' : '';
+            return `
+              <div class="calendar-list-row${openable}"${
+                dateStr ? ` data-date="${dateStr}" role="button" tabindex="0"` : ''
+              }>
+                <span class="calendar-list-when">${when}</span>
+                <span class="calendar-list-title">${e.title}</span>
+                <span class="calendar-list-venue">${e.venue || ''}${
+                  e.city ? (e.venue ? ' · ' : '') + e.city : ''
+                }</span>
+                ${time ? `<span class="calendar-list-time">${time}</span>` : ''}
+                ${price}
+                ${badge}
+              </div>`;
+          })
+          .join('')
+      : '<div class="calendar-list-empty">Sin eventos publicados todavía.</div>';
 
     container.innerHTML = `
       <div class="calendar-month-header">
@@ -177,8 +195,9 @@ const EventCalendar = {
         <button class="cal-nav cal-nav-next" id="calNextMonth" aria-label="Mes siguiente">›</button>
       </div>
       <div class="cal-event-count">${countLine}</div>
-      ${header}
-      <div class="calendar-body">${cells}</div>
+      <div class="calendar-list" role="list">
+        ${rows}
+      </div>
     `;
   },
 
@@ -208,10 +227,16 @@ const EventCalendar = {
     const container = document.getElementById('dynamicCalendar');
     if (!container) return;
     container.addEventListener('click', (ev) => {
-      const day = ev.target.closest('.calendar-day.clickable');
-      if (!day) return;
-      const dateStr = day.getAttribute('data-date');
-      this.openDayModal(dateStr);
+      const row = ev.target.closest('.calendar-list-row.clickable');
+      if (!row) return;
+      this.openDayModal(row.getAttribute('data-date'));
+    });
+    container.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter' && ev.key !== ' ') return;
+      const row = ev.target.closest('.calendar-list-row.clickable');
+      if (!row) return;
+      ev.preventDefault();
+      this.openDayModal(row.getAttribute('data-date'));
     });
   },
 
@@ -246,7 +271,7 @@ const EventCalendar = {
         : '<span class="dj-pill dj-pill-tba">TBA</span>';
 
     const timeStr = e.time
-      ? `<span>⏱ ${e.time}${e.endTime && e.endTime !== 'late' ? ' – ' + e.endTime : ''}</span>`
+      ? `<span>${e.time}${e.endTime && e.endTime !== 'late' ? ' – ' + e.endTime : ''}</span>`
       : '';
 
     const priceStr =
@@ -256,9 +281,7 @@ const EventCalendar = {
           ? `<span class="price-tag paid-tag">${e.price}</span>`
           : '';
 
-    const recurringTag = e.recurring
-      ? '<span class="recurring-tag">🔄 Evento recurrente</span>'
-      : '';
+    const recurringTag = e.recurring ? '<span class="recurring-tag">Evento recurrente</span>' : '';
 
     const communityTag =
       e.source === 'submission'
@@ -267,7 +290,7 @@ const EventCalendar = {
 
     const onMap =
       e.coords && e.coords.lat && e.coords.lng
-        ? `<a class="event-link-map" data-no-swup href="mapa.html#event:${encodeURIComponent(e.id)}">📍 Ver en el mapa →</a>`
+        ? `<a class="event-link-map" data-no-swup href="mapa.html#event:${encodeURIComponent(e.id)}">Ver en el mapa →</a>`
         : '';
 
     return `
@@ -277,12 +300,12 @@ const EventCalendar = {
           ${priceStr}
         </div>
         <div class="day-event-meta">
-          <span>📍 <strong>${e.venue}</strong>${e.address ? `, ${e.address}` : ''}</span>
-          <span>🏙 ${e.city}${e.country ? ', ' + e.country : ''}</span>
+          <span><strong>${e.venue}</strong>${e.address ? `, ${e.address}` : ''}</span>
+          <span>${e.city}${e.country ? ', ' + e.country : ''}</span>
           ${timeStr}
           ${recurringTag}
         </div>
-        ${djList ? `<div class="day-event-djs"><span class="djs-label">🎧 Lineup:</span> ${djList}</div>` : ''}
+        ${djList ? `<div class="day-event-djs"><span class="djs-label">Lineup:</span> ${djList}</div>` : ''}
         ${communityTag}
         <div class="day-event-actions">
           ${e.url ? `<a href="${e.url}" target="_blank" rel="noopener" class="event-link-primary">Info / Tickets →</a>` : '<span class="no-link-msg">Sin link público</span>'}

@@ -30,6 +30,107 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/dj-library.css?v=3" />
 
+    <style>
+      /* Crew hero — align with dj-page-hero orange/black language */
+      .crew-hero {
+        position: relative;
+        padding: 6.5rem 2rem 3.5rem;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0a 55%, #0f0f0f 100%);
+        overflow: hidden;
+        text-align: center;
+      }
+      .crew-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #ff4d00, transparent);
+      }
+      .crew-badge {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+        background: rgba(255, 77, 0, 0.12);
+        border: 1px solid rgba(255, 77, 0, 0.35);
+        color: #ff9100;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+      }
+      .crew-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+      }
+      .crew-subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-size: 1.05rem;
+      }
+
+      /* Search input — dark field with orange focus ring */
+      #crewSearch {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+        display: block;
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        color: #fff;
+        font: inherit;
+        font-size: 1rem;
+        padding: 0.9rem 1.15rem;
+        outline: none;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      #crewSearch::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      #crewSearch:focus {
+        border-color: #ff4d00;
+        box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.22);
+      }
+
+      /* Neural promo card — drop emoji icon, use styled glyph */
+      .neural-glyph {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: rgba(255, 77, 0, 0.1);
+        border: 1px solid rgba(255, 77, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff9100;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+
+      .section-heading {
+        color: #fff;
+        margin-bottom: 0.75rem;
+        font-size: 1.6rem;
+      }
+      .section-lede {
+        color: rgba(255, 255, 255, 0.55);
+        max-width: 520px;
+        margin: 0 auto 1.5rem;
+        line-height: 1.6;
+      }
+    </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -47,29 +148,29 @@
     <div class="top-banner">
       <div class="ticker-wrapper">
         <div class="ticker-content">
-          <span class="ticker-item">🎵 Barcelona → México</span>
+          <span class="ticker-item">Barcelona → México</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">👥 El Crew que cura los vinilos</span>
+          <span class="ticker-item">El Crew que cura los vinilos</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🧠 Conexiones entre DJs</span>
+          <span class="ticker-item">Conexiones entre DJs</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">📦 Envíos a toda la península</span>
+          <span class="ticker-item">Envíos a todo México</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🎧 Escucha antes de comprar</span>
+          <span class="ticker-item">Escucha antes de comprar</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">✨ Vinilos underground seleccionados</span>
+          <span class="ticker-item">Vinilos underground seleccionados</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🎵 Barcelona → México</span>
+          <span class="ticker-item">Barcelona → México</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">👥 El Crew que cura los vinilos</span>
+          <span class="ticker-item">El Crew que cura los vinilos</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🧠 Conexiones entre DJs</span>
+          <span class="ticker-item">Conexiones entre DJs</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">📦 Envíos a toda la península</span>
+          <span class="ticker-item">Envíos a todo México</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">🎧 Escucha antes de comprar</span>
+          <span class="ticker-item">Escucha antes de comprar</span>
           <span class="ticker-separator">•</span>
-          <span class="ticker-item">✨ Vinilos underground seleccionados</span>
+          <span class="ticker-item">Vinilos underground seleccionados</span>
         </div>
       </div>
     </div>
@@ -153,19 +254,11 @@
     <div class="header-spacer" aria-hidden="true"></div>
 
     <main data-swup>
-      <section
-        class="dj-library-hero"
-        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)"
-      >
+      <section class="crew-hero">
         <div class="hero-content-wrapper">
-          <div
-            class="dj-library-badge"
-            style="background: rgba(255, 77, 0, 0.1); border: 1px solid rgba(255, 77, 0, 0.3)"
-          >
-            👥 Crew
-          </div>
-          <h1 class="dj-library-title">El Crew de 3TRES6</h1>
-          <p class="dj-library-subtitle">
+          <span class="crew-badge">Crew</span>
+          <h1 class="crew-title">El Crew de 3TRES6</h1>
+          <p class="crew-subtitle">
             Conectamos la escena underground desde Barcelona hasta México. Descubre quiénes están
             detrás de los vinilos que encontrarás aquí.
           </p>
@@ -195,17 +288,12 @@
       </section>
 
       <section style="padding: 3rem 2rem 2rem; text-align: center">
-        <h2 style="color: #fff; margin-bottom: 1rem">🔗 Conexiones Neurales</h2>
-        <p style="color: rgba(255, 255, 255, 0.6); margin-bottom: 1.5rem">
+        <h2 class="section-heading">Conexiones Neurales</h2>
+        <p class="section-lede">
           Ver cómo los miembros del crew se conectan entre sí a través de tracks compartidos
         </p>
         <a href="3d-brain.html" class="dj-hub-card" style="display: inline-block; margin: 0 auto">
-          <div
-            class="dj-hub-card-icon"
-            style="background: rgba(255, 77, 0, 0.1); border: 1px solid rgba(255, 77, 0, 0.3)"
-          >
-            🧠
-          </div>
+          <div class="neural-glyph" aria-hidden="true">N</div>
           <h3 style="margin: 0.5rem 0 0">Ver Red Neural</h3>
           <p style="opacity: 0.7; font-size: 0.9rem; margin: 0.5rem 0 0">
             Explorar conexiones entre DJs
@@ -214,16 +302,41 @@
       </section>
 
       <footer class="footer">
-        <div class="footer-content">
-          <p>3TRES6 Records — Barcelona → México</p>
-          <nav class="footer-nav">
-            <a href="/3tres6muntanerRecords/">Catálogo</a>
-            <a href="blog.html">Blog</a>
-            <a href="dj-library.html">DJ Library</a>
-            <a href="crew.html">Crew</a>
-            <a href="mapa.html">Mapa</a>
-            <a href="toolhub/">Herramientas</a>
-          </nav>
+        <div class="footer-container">
+          <div class="footer-brand">
+            <span class="footer-logo">3TRES6 RECORDS</span>
+            <p>Vinilos europeos de segunda mano<br />Barcelona → México</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Tienda</h4>
+              <a href="/3tres6muntanerRecords/#catalogo">Catálogo</a>
+              <a href="/3tres6muntanerRecords/#calendario">Calendario</a>
+              <a href="/3tres6muntanerRecords/#nosotros">Nosotros</a>
+            </div>
+            <div class="footer-column">
+              <h4>Contenido</h4>
+              <a href="dj-library.html">Discoteca</a>
+              <a href="3d-brain.html">Neural</a>
+              <a href="mapa.html">Mapa</a>
+              <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-column">
+              <h4>Síguenos</h4>
+              <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener"
+                >Instagram</a
+              >
+              <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
+                >Discogs</a
+              >
+              <a href="https://youtube.com/@3tres6records" target="_blank" rel="noopener"
+                >YouTube</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 3TRES6 Records. Hecho con música en CDMX.</p>
         </div>
       </footer>
     </main>

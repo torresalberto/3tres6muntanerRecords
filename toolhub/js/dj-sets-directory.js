@@ -63,7 +63,7 @@ const SetsDirectory = {
     if (!this.state.filtered.length) {
       grid.innerHTML = `
         <div class="no-results">
-          <span class="no-results-icon">🔍</span>
+          <span class="no-results-icon"></span>
           <h3>No se encontraron sets</h3>
           <p>Intenta con otro DJ, set o venue</p>
         </div>

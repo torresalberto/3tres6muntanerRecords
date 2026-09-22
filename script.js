@@ -1,6 +1,5 @@
 /* ========================================
-   MUNTANER336 - Complete JavaScript v3
-   Discogs API, Cart, Checkout, Audio Preview
+   MUNTANER336 - Complete JavaScript v3 Discogs API, Cart, Checkout, Audio Preview
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -194,15 +193,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const data = await response.json();
 
-        // Debug log to see actual API response structure
-        console.log('Discogs API Response:', data);
+        // Debug log to see actual API response structure console.log('Discogs API Response:', data);
         if (data.listings && data.listings[0]) {
           console.log('First listing structure:', data.listings[0]);
           console.log('Release structure:', data.listings[0].release);
         }
 
-        // Cache the result
-        localStorage.setItem('discogs_inventory', JSON.stringify(data.listings));
+        // Cache the result localStorage.setItem('discogs_inventory', JSON.stringify(data.listings));
         localStorage.setItem('discogs_inventory_time', Date.now().toString());
 
         state.products = data.listings;
@@ -232,8 +229,6 @@ document.addEventListener('DOMContentLoaded', function () {
       gridEl.innerHTML = listings
         .map((listing, index) => {
           const release = listing.release || {};
-          const genres = release.genres || ['Electronic'];
-          const genre = genres[0]?.toLowerCase() || 'electronic';
           const images = release.images || [];
           const imageUrl = images[0]?.uri || release.thumbnail || this.getPlaceholderImage();
           const condition = listing.condition || 'VG+';
@@ -257,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const audioUrl = listing.audio_url || release.videos?.[0]?.uri || '';
 
           return `
-                    <article class="product-card" data-genre="${genre}" data-product-id="${listing.id}" data-release-id="${release.id || ''}">
+                    <article class="product-card" data-product-id="${listing.id}" data-release-id="${release.id || ''}">
                         <div class="product-image">
                             <img src="${imageUrl}" 
                                  alt="${artistName} – ${title}"
@@ -271,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <button class="quick-view-btn" 
                                         data-product="${listing.id}"
                                         data-title="${artistName} – ${title}"
-                                        data-genre="${genres[0] || 'Electronic'}"
                                         data-label="${labels[0]?.name || ''} · ${year}"
                                         data-price="${price}"
                                         data-condition="${condition}"
@@ -283,7 +277,6 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                         </div>
                         <div class="product-info">
-                            <span class="product-genre">${genres[0] || 'Electronic'}</span>
                             <h3 class="product-title">${artistName} – ${title}</h3>
                             <p class="product-label">${labels[0]?.name || ''} · ${year}</p>
                             <div class="product-footer">
@@ -390,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Kerri Chandler',
           label: 'Madhouse Records',
           year: 1996,
-          genre: 'Deep House',
           price: 550,
           condition: 'VG+',
           image:
@@ -403,7 +395,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Robert Hood',
           label: 'M-Plant',
           year: 1994,
-          genre: 'Techno',
           price: 850,
           condition: 'M',
           image:
@@ -416,7 +407,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Theo Parrish',
           label: 'Sound Signature',
           year: 2001,
-          genre: 'House',
           price: 720,
           condition: 'VG+',
           image:
@@ -429,7 +419,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Ricardo Villalobos',
           label: 'Playhouse',
           year: 2003,
-          genre: 'Minimal',
           price: 680,
           condition: 'VG',
           image:
@@ -442,7 +431,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Donna Summer',
           label: 'Casablanca',
           year: 1977,
-          genre: 'Disco',
           price: 480,
           condition: 'VG+',
           image:
@@ -455,7 +443,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Drexciya',
           label: 'Tresor',
           year: 1999,
-          genre: 'Electro',
           price: 1200,
           condition: 'M',
           image:
@@ -468,7 +455,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Larry Heard',
           label: 'Alleviated Records',
           year: 1991,
-          genre: 'Deep House',
           price: 950,
           condition: 'VG+',
           image:
@@ -481,7 +467,6 @@ document.addEventListener('DOMContentLoaded', function () {
           artist: 'Jeff Mills',
           label: 'Tresor',
           year: 1992,
-          genre: 'Techno',
           price: 780,
           condition: 'VG',
           image:
@@ -496,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function () {
       gridEl.innerHTML = fallbackProducts
         .map(
           (product) => `
-                <article class="product-card" data-genre="${product.genre.toLowerCase()}" data-product-id="${product.id}">
+                <article class="product-card" data-product-id="${product.id}">
                     <div class="product-image">
                         <img src="${product.image || this.getPlaceholderImage()}" alt="${product.artist} – ${product.title}" loading="lazy">
                         <div class="product-badges">
@@ -507,7 +492,6 @@ document.addEventListener('DOMContentLoaded', function () {
                             <button class="quick-view-btn"
                                     data-product="${product.id}"
                                     data-title="${product.artist} – ${product.title}"
-                                    data-genre="${product.genre}"
                                     data-label="${product.label} · ${product.year}"
                                     data-price="${product.price}"
                                     data-condition="${product.condition}"
@@ -518,7 +502,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="product-genre">${product.genre}</span>
                         <h3 class="product-title">${product.artist} – ${product.title}</h3>
                         <p class="product-label">${product.label} · ${product.year}</p>
                         <div class="product-footer">
@@ -559,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     getPlaceholderImage() {
-      return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23111' width='300' height='300'/%3E%3Ctext fill='%23444' x='150' y='150' text-anchor='middle' font-size='50'%3E🎵%3C/text%3E%3C/svg%3E";
+      return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23111' width='300' height='300'/%3E%3Ctext fill='%23444' x='150' y='150' text-anchor='middle' font-size='50'%3E%3C/text%3E%3C/svg%3E";
     },
 
     attachProductListeners() {
@@ -583,7 +566,6 @@ document.addEventListener('DOMContentLoaded', function () {
           QuickView.open({
             id: this.dataset.product,
             title: this.dataset.title,
-            genre: this.dataset.genre,
             label: this.dataset.label,
             price: this.dataset.price,
             condition: this.dataset.condition,
@@ -944,8 +926,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       // In production, call backend to create a PaymentIntent
-      // For now, show instructions
-      Cart.showNotification('Stripe: Configura tu clave pública en CONFIG.stripePublicKey');
+      // For now, show instructions Cart.showNotification('Stripe: Configura tu clave pública en CONFIG.stripePublicKey');
 
       /* Production implementation:
             try {
@@ -955,8 +936,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        amount: total * 100, // Stripe uses cents
-                        currency: 'mxn',
+                        amount: total * 100, // Stripe uses cents currency: 'mxn',
                         items: state.cart,
                         customer: this.customerData
                     })
@@ -977,7 +957,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (result.error) {
                     Cart.showNotification('Error: ' + result.error.message);
                 } else {
-                    Cart.showNotification('¡Pago exitoso! 🎉');
+                    Cart.showNotification('¡Pago exitoso! ');
                     state.cart = [];
                     Cart.save();
                     Cart.updateCount();
@@ -1029,7 +1009,6 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       document.getElementById('quickViewTitle').textContent = product.title;
-      document.getElementById('quickViewGenre').textContent = product.genre;
       document.getElementById('quickViewLabel').textContent = product.label;
       document.getElementById('quickViewPrice').textContent = `$${product.price} MXN`;
       document.getElementById('quickViewCondition').textContent = product.condition;
@@ -1079,13 +1058,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const videoId = this.extractYouTubeId(audioUrl);
         if (videoId) {
           embedEl.innerHTML = `
-                        <iframe
-                            src="https://www.youtube.com/embed/${videoId}?autoplay=0&modestbranding=1&rel=0&playsinline=1"
+                        <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=0&modestbranding=1&rel=0&playsinline=1"
                             width="100%"
                             height="200"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            frameborder="0">
+                            allowfullscreen frameborder="0">
                         </iframe>
                     `;
           return;
@@ -1095,8 +1072,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // SoundCloud
       if (audioUrl.includes('soundcloud.com')) {
         embedEl.innerHTML = `
-                    <iframe 
-                        src="https://w.soundcloud.com/player/?url=${encodeURIComponent(audioUrl)}&color=%23ff4d00&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+                    <iframe src="https://w.soundcloud.com/player/?url=${encodeURIComponent(audioUrl)}&color=%23ff4d00&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
                         scrolling="no" frameborder="no" allow="autoplay">
                     </iframe>
                 `;
@@ -1107,8 +1083,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (audioUrl.includes('spotify.com')) {
         const spotifyId = audioUrl.split('/').pop().split('?')[0];
         embedEl.innerHTML = `
-                    <iframe 
-                        src="https://open.spotify.com/embed/track/${spotifyId}" 
+                    <iframe src="https://open.spotify.com/embed/track/${spotifyId}" 
                         allow="encrypted-media">
                     </iframe>
                 `;
@@ -1128,7 +1103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Unknown format - show message (no external redirect)
       embedEl.innerHTML = `
-                <p class="no-preview">🎧 Preview no disponible para este formato</p>
+                <p class="no-preview">Preview no disponible para este formato</p>
             `;
     },
 
@@ -1176,7 +1151,6 @@ document.addEventListener('DOMContentLoaded', function () {
     init() {
       const audioToggle = document.getElementById('audioToggle');
       if (!audioToggle) return; // No player on this page
-
       audioToggle.addEventListener('click', () => {
         if (this.isMuted) {
           this.unmute();
@@ -1189,7 +1163,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const saved = this.loadState();
       const savedAge = saved ? Date.now() - saved.timestamp : Infinity;
       const isRecent = savedAge < 5000; // Within 5 seconds = user just navigated
-
       if (saved && isRecent && saved.videoId) {
         // Resume from previous page (muted for autoplay policy)
         this.startMusic(saved.videoId, saved.title, true);
@@ -1235,14 +1208,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const iframeSrc = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=${muteParam}&loop=1&playlist=${vid}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin || 'https://3tres6records.com')}`;
 
       youtubeContainer.innerHTML = `
-                <iframe
-                    id="ytPlayer"
+                <iframe id="ytPlayer"
                     width="0"
                     height="0"
                     src="${iframeSrc}"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    frameborder="0"
+                    allowfullscreen frameborder="0"
                     style="position:absolute;width:0;height:0;min-width:0;min-height:0;opacity:0;pointer-events:none;">
                 </iframe>
             `;
@@ -1262,8 +1233,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mute() {
       const iframe = document.getElementById('ytPlayer');
       if (iframe) {
-        // Use postMessage only — modifying iframe.src would restart the video
-        iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
+        // Use postMessage only — modifying iframe.src would restart the video iframe.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
       }
       this.isMuted = true;
       this.updateUI(true, this.currentTitle, true);
@@ -1272,8 +1242,7 @@ document.addEventListener('DOMContentLoaded', function () {
     unmute() {
       const iframe = document.getElementById('ytPlayer');
       if (iframe) {
-        // Use postMessage only — modifying iframe.src would restart the video
-        iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+        // Use postMessage only — modifying iframe.src would restart the video iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
       }
       this.isMuted = false;
       this.updateUI(true, this.currentTitle, false);
@@ -1284,22 +1253,19 @@ document.addEventListener('DOMContentLoaded', function () {
       const youtubeContainer = document.getElementById('youtubeAudioContainer');
       if (!youtubeContainer) return;
 
-      // Make sure the container is visible
-      youtubeContainer.style.display = '';
+      // Make sure the container is visible youtubeContainer.style.display = '';
 
       this.currentTitle = title || '3TRES6 Radio';
       this.isPlaying = true;
       state.isPlaying = true;
 
       youtubeContainer.innerHTML = `
-                <iframe
-                    id="ytPlayer"
+                <iframe id="ytPlayer"
                     width="0"
                     height="0"
                     src="${searchSrc}"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    frameborder="0"
+                    allowfullscreen frameborder="0"
                     style="position:absolute;width:0;height:0;min-width:0;min-height:0;opacity:0;pointer-events:none;">
                 </iframe>
             `;
@@ -1333,12 +1299,12 @@ document.addEventListener('DOMContentLoaded', function () {
           const displayTitle = title || '3TRES6 Radio';
           const truncated =
             displayTitle.length > 25 ? displayTitle.substring(0, 22) + '...' : displayTitle;
-          trackInfo.textContent = muted ? `🔇 ${truncated}` : `🎵 ${truncated}`;
+          trackInfo.textContent = muted ? `${truncated}` : `${truncated}`;
         }
       } else {
         audioToggle?.classList.remove('playing');
         audioControls?.classList.remove('playing');
-        if (trackInfo) trackInfo.textContent = '🎵 3TRES6 Radio';
+        if (trackInfo) trackInfo.textContent = '3TRES6 Radio';
       }
     },
   };
@@ -1348,8 +1314,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ========================================
 
   const HeroPlaylist = {
-    currentIndex: -1, // -1 means playing default radio
-    isPlaying: false,
+    currentIndex: -1, // -1 means playing default radio isPlaying: false,
 
     init() {
       // Play/Pause button
@@ -1610,7 +1575,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (trackInfo) {
         // Truncate if too long
         const displayTitle = title.length > 30 ? title.substring(0, 27) + '...' : title;
-        trackInfo.textContent = `🎵 ${displayTitle}`;
+        trackInfo.textContent = `${displayTitle}`;
       }
     },
 
@@ -1618,7 +1583,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const coverArt = document.getElementById('playlistCoverArt');
       if (coverArt && imageUrl) {
         // Replace emoji with actual image
-        coverArt.innerHTML = `<img src="${imageUrl}" alt="Album cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" onerror="this.parentElement.innerHTML='<span>🔥</span>'">`;
+        coverArt.innerHTML = `<img src="${imageUrl}" alt="Album cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" onerror="
+        this.parentElement.innerHTML='<span></span>'">`;
       }
     },
 
@@ -1640,6 +1606,8 @@ document.addEventListener('DOMContentLoaded', function () {
     autoPlayInterval: null,
 
     init() {
+      const carouselRoot = document.getElementById('instagramCarousel');
+      if (!carouselRoot) return;
       const prevBtn = document.getElementById('instagramPrev');
       const nextBtn = document.getElementById('instagramNext');
       const dots = document.querySelectorAll('.carousel-dot');
@@ -1814,35 +1782,6 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // ========================================
-  // Catalog Filters
-  // ========================================
-
-  const CatalogFilters = {
-    init() {
-      document.querySelectorAll('.filter-btn').forEach((btn) => {
-        btn.addEventListener('click', function () {
-          document.querySelectorAll('.filter-btn').forEach((b) => {
-            b.classList.remove('active');
-            b.setAttribute('aria-selected', 'false');
-          });
-          this.classList.add('active');
-          this.setAttribute('aria-selected', 'true');
-
-          const filter = this.dataset.filter;
-
-          document.querySelectorAll('.product-card').forEach((card) => {
-            const genre = card.dataset.genre?.toLowerCase();
-            const shouldShow = filter === 'all' || genre === filter || genre?.includes(filter);
-            card.style.display = shouldShow ? 'block' : 'none';
-          });
-
-          trackEvent('filter_used', { filter_type: 'genre', filter_value: filter });
-        });
-      });
-    },
-  };
-
-  // ========================================
   // Mobile Navigation
   // ========================================
 
@@ -1954,21 +1893,19 @@ document.addEventListener('DOMContentLoaded', function () {
       if (popup) {
         popup.querySelector('.exit-popup-body').innerHTML = `
                     <div style="text-align:center;">
-                        <h2>¡Listo! 🎉</h2>
+                        <h2>¡Listo! </h2>
                         <p style="color:#888;margin:15px 0;">Tu código de 10% es:</p>
                         <div style="background:#ff4d00;padding:15px 30px;border-radius:8px;font-size:24px;font-weight:bold;letter-spacing:2px;display:inline-block;margin:15px 0;">${CONFIG.exitIntent.discountCode}</div>
                         <p style="color:#888;margin:15px 0;">También te lo enviamos por email.</p>
                         <a href="#catalogo" style="display:inline-block;margin-top:20px;color:#ff4d00;font-weight:600;" onclick="document.getElementById('exitPopup').classList.remove('active');">
-                            Explorar catálogo →
-                        </a>
+                            Explorar catálogo →</a>
                     </div>
                 `;
       }
 
       this.setCookie();
 
-      // Send to email service in production
-      console.log('Exit intent signup:', email);
+      // Send to email service in production console.log('Exit intent signup:', email);
     },
   };
 
@@ -2021,13 +1958,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function initHomepage() {
     // Re-init handlers that bind event listeners. Calling them again
-    // after a Swup navigation rebinds listeners on the new DOM.
-    // Each init() should be idempotent (use ?., look up elements at call time).
-    Cart.init();
+    // after a Swup navigation rebinds listeners on the
+    new // Each init() should be idempotent (use ?., look up elements at call time).
+    DOM.Cart.init();
     Checkout.init();
     QuickView.init();
     HeroPlaylist.init();
-    CatalogFilters.init();
     ExitIntent.init();
     InstagramCarousel.init();
     CalendarLiveTabs.init();
@@ -2071,7 +2007,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Console Branding
   // ========================================
 
-  console.log('%c🎵 3TRES6 RECORDS', 'font-size: 24px; font-weight: bold; color: #ff4d00;');
+  console.log('%c 3TRES6 RECORDS', 'font-size: 24px; font-weight: bold; color: #ff4d00;');
   console.log('%cBarcelona → México', 'font-size: 14px; color: #888;');
 });
 
