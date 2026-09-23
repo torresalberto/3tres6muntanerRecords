@@ -1,0 +1,148 @@
+{
+  "shops": [
+    {
+      "id": "discos-paradiso",
+      "name": "Discos Paradiso",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": { "lat": 41.38463, "lng": 2.16421 },
+      "address": "C/ dels Cardenal Casañas 15, 08002 Barcelona",
+      "curated_by": "3tres6 crew",
+      "notes": "Tienda de referencia para house/techno en el Gotico. Crate serio y rotación constante.",
+      "links": {
+        "website": "https://www.discosparadiso.com/",
+        "instagram": "https://www.instagram.com/discosparadiso/"
+      },
+      "type": "store"
+    },
+    {
+      "id": "way-out",
+      "name": "Way Out",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": { "lat": 41.40755, "lng": 2.15948 },
+      "address": "Carrer de Pamplona 96, 08018 Barcelona",
+      "curated_by": "3tres6 crew",
+      "notes": "Selección amplia y oído para electrónica de baile; parada habitual de crate diggers.",
+      "links": {
+        "instagram": "https://www.instagram.com/wayoutrecords/"
+      },
+      "type": "store"
+    },
+    {
+      "id": "ultra-local-records",
+      "name": "Ultra-Local Records",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": { "lat": 41.40162, "lng": 2.15748 },
+      "address": "Carrer del Rosselló 177, 08036 Barcelona",
+      "curated_by": "3tres6 crew",
+      "notes": "Enfoque local + electrónica; buen sitio para ediciones independientes.",
+      "links": {},
+      "type": "store"
+    },
+    {
+      "id": "drama-radio-store",
+      "name": "Drama Radio",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": { "lat": 41.39742, "lng": 2.15448 },
+      "address": "C/ de la Riera Baixa 22, 08001 Barcelona",
+      "curated_by": "3tres6 crew",
+      "notes": "Café + record store (también figura como club en venues). Doble vida cultural.",
+      "links": {
+        "instagram": "https://www.instagram.com/dramaradio/"
+      },
+      "type": "store"
+    },
+    {
+      "id": "wah-wah-records",
+      "name": "Wah Wah Records",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.41898, "lng": -99.16214 },
+      "address": "Dr. Olvera 16, Centro Histórico, CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Clásico del centro para electrónica y reissues; parada obligatoria en CDMX.",
+      "links": {
+        "instagram": "https://www.instagram.com/wahwahdiscos/"
+      },
+      "type": "store"
+    },
+    {
+      "id": "tianguis-del-chopo",
+      "name": "Tianguis del Chopo",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.43464, "lng": -99.14872 },
+      "address": "Av. Dr. Ignacio M. Rodríguez 50, Chopo, CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Mercado del sábado: rock, electrónica y vinilo de segunda mano. Cazuela viva.",
+      "links": {},
+      "type": "store"
+    },
+    {
+      "id": "mercado-lagunilla",
+      "name": "Mercado de Lagunilla (domingo)",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.43591, "lng": -99.14491 },
+      "address": "Jr. San Pablo 44, Centro, CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Domingo de crate: puestos de vinilo clásico y econ junto a Lagunilla.",
+      "links": {},
+      "type": "store"
+    },
+    {
+      "id": "mercado-medellin",
+      "name": "Mercado de Medellín",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.40445, "lng": -99.15661 },
+      "address": "Av. Coyoacán 18, Roma Nte., CDMX",
+      "curated_by": "3tres6 crew",
+      "notes": "Mercado con puestos de vinilo; buena cacería entre comida y puestos locales.",
+      "links": {},
+      "type": "store"
+    },
+    {
+      "id": "futura-discos",
+      "name": "Futura (disquería)",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.41955, "lng": -99.16148 },
+      "address": "Centro, CDMX (aprox. — verificar pin)",
+      "curated_by": "3tres6 crew",
+      "notes": "Disquería con presencia de electrónica/indie. Pin a confirmar con visita antes de feature.",
+      "links": {},
+      "type": "store"
+    },
+    {
+      "id": "independent-crate-shops-placeholder",
+      "name": "Más tiendas (en investigación)",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "coordinates": { "lat": 19.43, "lng": -99.13 },
+      "address": "—",
+      "curated_by": "3tres6 crew",
+      "notes": "Placeholder suave para abrir la capa; se elimina al completar crawl de tiendas CDMX.",
+      "links": {},
+      "type": "store",
+      "draft": true
+    }
+  ],
+  "cities": [
+    {
+      "name": "Barcelona",
+      "country": "Spain",
+      "center": { "lat": 41.383, "lng": 2.16 },
+      "zoom": 13
+    },
+    {
+      "name": "Mexico City",
+      "country": "Mexico",
+      "center": { "lat": 19.418, "lng": -99.165 },
+      "zoom": 12
+    }
+  ]
+}

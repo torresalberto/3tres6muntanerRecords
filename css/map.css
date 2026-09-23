@@ -704,6 +704,64 @@
   border-color: var(--m-primary, #ff4d00);
 }
 
+.map-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.map-modality {
+  display: inline-flex;
+  border: 1px solid var(--m-line);
+  border-radius: 999px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.map-modality-btn {
+  font-family: var(--m-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--m-text-dim);
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--m-line);
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.map-modality-btn:last-child {
+  border-right: 0;
+}
+
+.map-modality-btn:hover {
+  color: #fff;
+}
+
+.map-modality-btn.active {
+  color: #0a0a0a;
+  background: var(--m-primary, #ff4d00);
+}
+
+.store-marker-icon .marker-pin {
+  background: #00c2ff;
+  box-shadow: 0 4px 14px rgba(0, 194, 255, 0.45);
+}
+
+.store-marker-icon .marker-pulse {
+  background: rgba(0, 194, 255, 0.32);
+}
+
+.store-marker-icon:hover .marker-pin {
+  box-shadow: 0 6px 22px rgba(0, 194, 255, 0.65);
+}
+
 .events-count {
   font-family: var(--m-mono);
   font-size: 0.72rem;

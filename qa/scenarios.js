@@ -359,29 +359,32 @@ s('s07', 'Tools: each toolhub tab loads without errors', DESKTOP, async (t) => {
   }
 });
 
-s('s08', 'Blog: articles render and read-more targets resolve', DESKTOP, async (t) => {
+s('s08', 'Blog: three pillar tabs render and switch', DESKTOP, async (t) => {
   await t.goto(t.base + '/blog.html', 2500);
-  const arts = await t.page.locator('.blog-article-small, article').count();
-  t.check(arts > 0, 'Blog articles render', `articles = ${arts}`);
+  const tabs = await t.page.locator('.blog-cat-btn').count();
+  const panels = await t.page.locator('.blog-pillar').count();
+  t.check(
+    tabs === 3 && panels === 3,
+    'Three pillar tabs + panels render',
+    `tabs=${tabs} panels=${panels}`
+  );
 
-  const rm = t.page.locator('.blog-article-read-more').first();
-  if ((await rm.count()) > 0) {
-    const href = await rm.getAttribute('href');
-    t.warn('blog.readMore', `read-more href = ${href}`);
-    try {
-      const r = await t.page.evaluate(async (u) => {
-        const res = await fetch(u, { method: 'HEAD', redirect: 'follow' });
-        return { status: res.status, final: res.url };
-      }, href);
-      t.check(
-        r.status < 400,
-        'First article read-more resolves',
-        `status=${r.status} → ${r.final}`
-      );
-    } catch {
-      t.warn('blog.readMore', `could not HEAD ${href}`);
-    }
-  }
+  const active = await t.page.locator('.blog-pillar.is-active').getAttribute('data-pillar');
+  t.check(active === 'atlas', 'Default pillar is atlas', `active=${active}`);
+
+  await t.page.locator('.blog-cat-btn[data-pillar="emerging"]').click();
+  await t.page.waitForTimeout(200);
+  const after = await t.page.locator('.blog-pillar.is-active').getAttribute('data-pillar');
+  t.check(after === 'emerging', 'Tab click switches pillar', `active=${after}`);
+
+  const hash = await t.page.evaluate(() => window.location.hash);
+  t.check(hash === '#pillar-emerging', 'Hash updates to #pillar-emerging', `hash=${hash}`);
+
+  // Old article anchors must be gone (content reset)
+  const olds = await t.page
+    .locator('#guia-vinilos, #crate-digging-full, .blog-article-full')
+    .count();
+  t.check(olds === 0, 'Legacy articles removed', `legacy_nodes=${olds}`);
 });
 
 /* ------------------------------------------------------------------ */

@@ -6,7 +6,7 @@
     <title>Mapa — 3TRES6 Records</title>
     <meta
       name="description"
-      content="Mapa interactivo de clubes y espacios que programan la música que define a 3TRES6 Records. Barcelona y Ciudad de México."
+      content="Mapa interactivo de clubes y tiendas de vinilo de Barcelona y Ciudad de México. Alterna entre territorio de clubes y tiendas del crate."
     />
     <link rel="canonical" href="https://3tres6records.albto.me/mapa.html" />
 
@@ -174,16 +174,43 @@
       <section class="map-section">
         <div class="map-toolbar">
           <span class="map-toolbar-label">Nuestro Territorio + Calendario vivo</span>
-          <button
-            class="map-events-toggle active"
-            id="btnToggleEvents"
-            type="button"
-            aria-pressed="true"
-          >
-            <span class="map-events-toggle-label">Eventos</span><span id="eventsCountTotal"></span>
-          </button>
+          <div class="map-toolbar-actions">
+            <div class="map-modality" role="tablist" aria-label="Capa del mapa">
+              <button
+                class="map-modality-btn active"
+                type="button"
+                role="tab"
+                id="btnModalityClub"
+                aria-selected="true"
+                aria-controls="mapaCities"
+                data-modality="club"
+              >
+                Clubes
+              </button>
+              <button
+                class="map-modality-btn"
+                type="button"
+                role="tab"
+                id="btnModalityStore"
+                aria-selected="false"
+                aria-controls="mapaCities"
+                data-modality="store"
+              >
+                Tiendas
+              </button>
+            </div>
+            <button
+              class="map-events-toggle active"
+              id="btnToggleEvents"
+              type="button"
+              aria-pressed="true"
+            >
+              <span class="map-events-toggle-label">Eventos</span
+              ><span id="eventsCountTotal"></span>
+            </button>
+          </div>
         </div>
-        <div class="map-cities">
+        <div class="map-cities" id="mapaCities">
           <!-- Barcelona panel -->
           <div class="city-panel" data-city="Barcelona">
             <div class="city-panel-head">
@@ -219,17 +246,17 @@
       <!-- CTA Section -->
       <section class="map-cta">
         <div class="map-cta-content">
-          <h2 class="map-cta-title">¿Conoces un club que debería estar aquí?</h2>
+          <h2 class="map-cta-title">¿Conoces un club o tienda que debería estar aquí?</h2>
           <p class="map-cta-text">
-            Si en tu ciudad hay un espacio que programa la música que nos define, háznos saber. La
-            curación es nuestra esencia.
+            Si en tu ciudad hay un espacio —o una disquería— que programa o vende la música que nos
+            define, háznos saber. La curación es nuestra esencia.
           </p>
           <a
             href="https://www.instagram.com/3tres6records/"
             target="_blank"
             rel="noopener"
             class="map-cta-btn"
-            >Sugerir un club →</a
+            >Sugerir un spot →</a
           >
         </div>
       </section>

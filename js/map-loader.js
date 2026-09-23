@@ -15,7 +15,11 @@
 const VenueMap = {
   cities: [],
   venues: [],
+  shops: [],
   maps: {},
+
+  // Mutually exclusive modality: clubs (default) | vinyl stores.
+  _modality: 'club',
 
   networks: {},
   djNames: {},
@@ -91,6 +95,19 @@ const VenueMap = {
       this.venues = [];
       this.cities = [];
     }
+    try {
+      const res = await fetch('data/shops/index.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      this.shops = (data.shops || []).filter((s) => !s.draft);
+    } catch (e) {
+      console.warn('[VenueMap] No shops feed:', e.message);
+      this.shops = [];
+    }
+  },
+
+  activeList() {
+    return this._modality === 'store' ? this.shops : this.venues;
   },
 
   apiBase() {
@@ -169,12 +186,6 @@ const VenueMap = {
       const mapEl = document.getElementById(`venueMap-${slug}`);
       if (!mapEl) return;
 
-      const venues = this.venues.filter((v) => v.city === city.name);
-      const metaEl = document.getElementById(`cityMeta-${slug}`);
-      if (metaEl) {
-        metaEl.textContent = `${venues.length} clubes · ${this._cityLabel(city.country)}`;
-      }
-
       const rec = {
         city,
         map: null,
@@ -185,14 +196,13 @@ const VenueMap = {
         elId: `venueMap-${slug}`,
       };
       this.maps[city.name] = rec;
-      this.createCityMap(rec, venues);
-
-      const listEl = document.getElementById(`venueList-${slug}`);
-      if (listEl) this.renderVenueList(listEl, venues);
+      this.createCityMap(rec);
 
       this.renderEventLayer(rec, city);
     });
+    this.applyModality({ initial: true });
     this.bindEventsToggle();
+    this.bindModalityToggle();
   },
 
   _citySlug(name) {
@@ -205,7 +215,7 @@ const VenueMap = {
     return country === 'Spain' ? 'España' : country === 'Mexico' ? 'México' : country || '';
   },
 
-  createCityMap(rec, venues) {
+  createCityMap(rec) {
     const map = L.map(rec.elId, {
       center: [rec.city.center.lat, rec.city.center.lng],
       zoom: rec.city.zoom,
@@ -238,31 +248,8 @@ const VenueMap = {
     rec.map = map;
     rec.markerLayer = markerLayer;
     rec.eventLayer = L.layerGroup().addTo(map);
+    rec.markers = [];
 
-    const icon = this.createMarkerIcon();
-    const globalIndex = this.venues.findIndex((v) => v.id === (venues[0] && venues[0].id));
-
-    rec.markers = venues.map((venue, i) => {
-      const marker = L.marker([venue.coordinates.lat, venue.coordinates.lng], {
-        icon,
-        riseOnHover: true,
-      });
-      marker.venueData = venue;
-      marker._index = globalIndex === -1 ? i : globalIndex + i;
-      marker.venueData._cat = marker._index + 1;
-      marker.bindPopup('<div class="venue-popup loading">Cargando…</div>', {
-        maxWidth: 320,
-        minWidth: 260,
-        className: 'venue-popup-wrapper',
-      });
-      marker.on('popupopen', () => this._renderPopup(marker));
-      marker.on('click', () => this._syncHash(venue.id));
-
-      markerLayer.addLayer(marker);
-      return marker;
-    });
-
-    this.fitCity(rec);
     setTimeout(() => map.invalidateSize(), 350);
   },
 
@@ -309,6 +296,24 @@ const VenueMap = {
   // ---------------------------------------------------------------- markers
 
   createMarkerIcon() {
+    const isStore = this._modality === 'store';
+    if (isStore) {
+      return L.divIcon({
+        className: 'venue-marker-icon store-marker-icon',
+        html: `
+        <div class="marker-pulse"></div>
+        <div class="marker-pin">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+      `,
+        iconSize: [32, 42],
+        iconAnchor: [16, 42],
+        popupAnchor: [0, -44],
+      });
+    }
     return L.divIcon({
       className: 'venue-marker-icon',
       html: `
@@ -325,6 +330,100 @@ const VenueMap = {
       iconAnchor: [16, 42],
       popupAnchor: [0, -44],
     });
+  },
+
+  bindModalityToggle() {
+    document.querySelectorAll('.map-modality-btn:not([data-bound])').forEach((btn) => {
+      btn.dataset.bound = '1';
+      btn.addEventListener('click', () => {
+        const mode = btn.dataset.modality;
+        if (mode !== 'club' && mode !== 'store') return;
+        if (mode === this._modality) return;
+        this._modality = mode;
+        this.applyModality();
+      });
+    });
+    this.syncModalityButtons();
+  },
+
+  syncModalityButtons() {
+    document.querySelectorAll('.map-modality-btn').forEach((btn) => {
+      const on = btn.dataset.modality === this._modality;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  },
+
+  /**
+   * Rebuild markers + rails for the active modality (mutually exclusive).
+   * Events overlay stays independent on top.
+   */
+  applyModality(opts) {
+    const initial = opts && opts.initial;
+    const list = this.activeList();
+    const noun = this._modality === 'store' ? 'tiendas' : 'clubes';
+
+    this.cities.forEach((city) => {
+      const slug = this._citySlug(city.name);
+      const rec = this.maps[city.name];
+      if (!rec) return;
+
+      const cityItems = list.filter((v) => v.city === city.name);
+      const metaEl = document.getElementById(`cityMeta-${slug}`);
+      if (metaEl) {
+        metaEl.textContent = `${cityItems.length} ${noun} · ${this._cityLabel(city.country)}`;
+      }
+
+      // Clear previous modality markers (events layer untouched).
+      if (rec.markerLayer) rec.markerLayer.clearLayers();
+      rec.markers = [];
+
+      const icon = this.createMarkerIcon();
+      const globalIndex = list.findIndex((v) => v.id === (cityItems[0] && cityItems[0].id));
+
+      rec.markers = cityItems.map((venue, i) => {
+        const marker = L.marker([venue.coordinates.lat, venue.coordinates.lng], {
+          icon,
+          riseOnHover: true,
+        });
+        marker.venueData = venue;
+        marker._index = globalIndex === -1 ? i : globalIndex + i;
+        marker.venueData._cat = marker._index + 1;
+        marker.bindPopup('<div class="venue-popup loading">Cargando…</div>', {
+          maxWidth: 320,
+          minWidth: 260,
+          className: 'venue-popup-wrapper',
+        });
+        marker.on('popupopen', () => this._renderPopup(marker));
+        marker.on('click', () => this._syncHash(venue.id));
+        rec.markerLayer.addLayer(marker);
+        return marker;
+      });
+
+      const listEl = document.getElementById(`venueList-${slug}`);
+      if (listEl) this.renderVenueList(listEl, cityItems);
+
+      if (!initial) this.fitCity(rec);
+    });
+
+    this.syncModalityButtons();
+
+    // Deep-link into a store while on club mode (or vice versa) — resolve after rebuild.
+    const vm = window.location.hash.match(/^#venue:(.+)$/);
+    if (vm && !initial) {
+      const id = decodeURIComponent(vm[1]);
+      const inActive = list.some((v) => v.id === id);
+      const inClubs = this.venues.some((v) => v.id === id);
+      const inStores = this.shops.some((v) => v.id === id);
+      if (!inActive && inClubs) {
+        this._modality = 'club';
+        this.applyModality();
+      } else if (!inActive && inStores) {
+        this._modality = 'store';
+        this.applyModality();
+      }
+      this.goToVenue(id);
+    }
   },
 
   _renderPopup(marker) {
@@ -447,7 +546,8 @@ const VenueMap = {
   },
 
   renderVenueList(el, venues) {
-    const startIndex = this.venues.findIndex((v) => v.id === (venues[0] && venues[0].id));
+    const pool = this.activeList();
+    const startIndex = pool.findIndex((v) => v.id === (venues[0] && venues[0].id));
 
     el.innerHTML = venues
       .map((v, i) => {
@@ -674,7 +774,21 @@ const VenueMap = {
   },
 
   goToVenue(venueId) {
-    const venue = this.venues.find((v) => v.id === venueId);
+    let venue = this.activeList().find((v) => v.id === venueId);
+    if (!venue) {
+      // Flip modality if the deep-linked id lives on the other layer.
+      const inClubs = this.venues.find((v) => v.id === venueId);
+      const inStores = this.shops.find((v) => v.id === venueId);
+      if (inClubs && this._modality !== 'club') {
+        this._modality = 'club';
+        this.applyModality();
+        venue = inClubs;
+      } else if (inStores && this._modality !== 'store') {
+        this._modality = 'store';
+        this.applyModality();
+        venue = inStores;
+      }
+    }
     if (!venue) return;
     const rec = this.maps[venue.city];
     if (!rec || !rec.map) return;
