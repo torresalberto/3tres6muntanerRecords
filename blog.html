@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -95,37 +95,34 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   </head>
-  <body>
+  <body class="blog-document">
+    <a class="skip-link" href="#contenido-blog">Saltar al contenido</a>
+
     <!-- Top Banner -->
     <div class="top-banner">
       <div class="ticker-wrapper">
         <div class="ticker-content">
-          <span class="ticker-item">Atlas Vinilo — datos y visualizaciones</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">DJs Emergentes — radar de talento</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Cultura DJ — vida entre discos</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Red de Voces — personajes y sellos</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Atlas Vinilo — datos y visualizaciones</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">DJs Emergentes — radar de talento</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Cultura DJ — vida entre discos</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Red de Voces — personajes y sellos</span>
-          <span class="ticker-separator">•</span>
+          <div class="ticker-set">
+            <span class="ticker-item">Atlas Vinilo — datos y visualizaciones</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">DJs Emergentes — radar de talento</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">Cultura DJ — vida entre discos</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">Red de Voces — personajes y sellos</span>
+            <span class="ticker-separator">•</span>
+          </div>
+          <div class="ticker-set" aria-hidden="true">
+            <span class="ticker-item">Atlas Vinilo — datos y visualizaciones</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">DJs Emergentes — radar de talento</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">Cultura DJ — vida entre discos</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">Red de Voces — personajes y sellos</span>
+            <span class="ticker-separator">•</span>
+          </div>
         </div>
-        <script>
-          (function () {
-            const c = document.querySelector('.ticker-content');
-            const w = document.querySelector('.ticker-wrapper');
-            if (!c || !w) return;
-            const orig = c.innerHTML;
-            while (c.scrollWidth < w.clientWidth * 2) c.innerHTML += orig;
-          })();
-        </script>
       </div>
     </div>
 
@@ -208,179 +205,273 @@
     <!-- DJ Hub Sub-Nav -->
     <div class="header-spacer" aria-hidden="true"></div>
 
-    <!-- Everything below swaps with swup (hero tabs + pillars) -->
-    <main data-swup>
-    <div class="blog-hero">
-      <h1>Blog 3TRES6 — Cuatro Pilares</h1>
-      <p>
-        Investigación con datos reales: dónde vive el vinilo, quiénes vienen, cómo suena la vida
-        detrás de la cabina y quién sostiene la red — fundadores, sellos y nodos de la escena.
-      </p>
+    <main class="blog-page" data-swup>
+      <section class="blog-hero" aria-labelledby="blog-title">
+        <div class="blog-hero__inner">
+          <div class="blog-hero__copy">
+            <p class="blog-eyebrow">Archivo 3TRES6 · Barcelona → México</p>
+            <h1 id="blog-title">La cultura del vinilo, leída con contexto.</h1>
+            <p class="blog-lede">
+              Datos, escenas y voces para entender qué se está pinchando, quién lo está moviendo y
+              de dónde viene cada disco. Sin relleno: cada ficha abre con sus fuentes.
+            </p>
+          </div>
 
-      <div class="blog-categories" role="tablist" aria-label="Pilares de contenido">
-        <button
-          class="blog-cat-btn active"
-          role="tab"
-          id="tab-atlas"
-          aria-selected="true"
-          aria-controls="pillar-atlas"
-          data-pillar="atlas"
-        >
-          Atlas Vinilo
-        </button>
-        <button
-          class="blog-cat-btn"
-          role="tab"
-          id="tab-emerging"
-          aria-selected="false"
-          aria-controls="pillar-emerging"
-          data-pillar="emerging"
-        >
-          DJs Emergentes
-        </button>
-        <button
-          class="blog-cat-btn"
-          role="tab"
-          id="tab-culture"
-          aria-selected="false"
-          aria-controls="pillar-culture"
-          data-pillar="culture"
-        >
-          Cultura DJ
-        </button>
-        <button
-          class="blog-cat-btn"
-          role="tab"
-          id="tab-voices"
-          aria-selected="false"
-          aria-controls="pillar-voices"
-          data-pillar="voices"
-        >
-          Red de Voces
-        </button>
-      </div>
-    </div>
+          <aside class="blog-hero__issue" aria-label="Edición actual">
+            <span>Edición digital</span>
+            <strong>01</strong>
+            <p>Investigación abierta<br />Barcelona / CDMX</p>
+          </aside>
 
-      <div class="blog-main">
-      <!-- Pillar: Atlas Vinilo -->
-      <section
-        class="blog-pillar is-active"
-        id="pillar-atlas"
-        role="tabpanel"
-        aria-labelledby="tab-atlas"
-        data-pillar="atlas"
-      >
-        <header class="pillar-header">
-          <span class="pillar-kicker">Pilar 01</span>
-          <h2>Atlas Vinilo</h2>
-          <p>
-            Estadísticas y visualizaciones de las zonas del mundo donde más se pincha vinilo, el
-            precio real del mismo DJ por ciudad y las referencias de mejor ambiente entre el
-            público.
-          </p>
-        </header>
-        <div class="pillar-empty" data-empty-state>
-          <p class="pillar-empty-label">En investigación</p>
-          <p>
-            Estamos cruzando fuentes públicas (ticketing, clubes, encuestas y mapas) para publicar
-            el primer mapa de datos. Vuelve pronto.
-          </p>
+          <dl class="blog-hero__stats" aria-label="Resumen del archivo">
+            <div>
+              <dt>Pilares</dt>
+              <dd>04</dd>
+            </div>
+            <div>
+              <dt>Fichas</dt>
+              <dd data-blog-total>15</dd>
+            </div>
+            <div>
+              <dt>Fuentes</dt>
+              <dd>Citadas</dd>
+            </div>
+          </dl>
         </div>
-        <div class="pillar-grid" data-pillar-list aria-live="polite"></div>
       </section>
 
-      <!-- Pillar: DJs Emergentes -->
+      <nav class="pillar-rail" aria-label="Explorar pilares del blog">
+        <div class="pillar-rail__inner">
+          <span class="pillar-rail__label">Explorar el archivo</span>
+          <div class="blog-categories" role="tablist" aria-label="Pilares de contenido">
+            <button
+              class="blog-cat-btn active"
+              role="tab"
+              id="tab-atlas"
+              aria-selected="true"
+              aria-controls="pillar-atlas"
+              data-pillar="atlas"
+              tabindex="0"
+            >
+              <span class="blog-cat-index">01</span>
+              <span class="blog-cat-label">Atlas Vinilo</span>
+              <span class="blog-cat-count" data-tab-count>4</span>
+            </button>
+            <button
+              class="blog-cat-btn"
+              role="tab"
+              id="tab-emerging"
+              aria-selected="false"
+              aria-controls="pillar-emerging"
+              data-pillar="emerging"
+              tabindex="-1"
+            >
+              <span class="blog-cat-index">02</span>
+              <span class="blog-cat-label">DJs Emergentes</span>
+              <span class="blog-cat-count" data-tab-count>4</span>
+            </button>
+            <button
+              class="blog-cat-btn"
+              role="tab"
+              id="tab-culture"
+              aria-selected="false"
+              aria-controls="pillar-culture"
+              data-pillar="culture"
+              tabindex="-1"
+            >
+              <span class="blog-cat-index">03</span>
+              <span class="blog-cat-label">Cultura DJ</span>
+              <span class="blog-cat-count" data-tab-count>4</span>
+            </button>
+            <button
+              class="blog-cat-btn"
+              role="tab"
+              id="tab-voices"
+              aria-selected="false"
+              aria-controls="pillar-voices"
+              data-pillar="voices"
+              tabindex="-1"
+            >
+              <span class="blog-cat-index">04</span>
+              <span class="blog-cat-label">Red de Voces</span>
+              <span class="blog-cat-count" data-tab-count>3</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <p class="sr-only" data-blog-status aria-live="polite"></p>
+
+      <div class="blog-index-shell" id="contenido-blog">
+        <div class="blog-main">
+          <section
+            class="blog-pillar is-active"
+            id="pillar-atlas"
+            role="tabpanel"
+            aria-labelledby="tab-atlas"
+            data-pillar="atlas"
+          >
+            <header class="pillar-header">
+              <div class="pillar-header__title">
+                <span class="pillar-kicker">Pilar 01</span>
+                <h2>Atlas Vinilo</h2>
+              </div>
+              <p>
+                Estadísticas y visualizaciones de las zonas del mundo donde más se pincha vinilo, el
+                precio real de la misma noche por ciudad y las referencias de mejor ambiente entre
+                el público.
+              </p>
+            </header>
+            <div class="pillar-empty" data-empty-state>
+              <p class="pillar-empty-label">En investigación</p>
+              <p>El primer mapa de datos llegará con fuentes públicas y metodología visible.</p>
+            </div>
+            <div class="pillar-grid" data-pillar-list></div>
+          </section>
+
+          <section
+            class="blog-pillar"
+            id="pillar-emerging"
+            role="tabpanel"
+            aria-labelledby="tab-emerging"
+            data-pillar="emerging"
+            hidden
+          >
+            <header class="pillar-header">
+              <div class="pillar-header__title">
+                <span class="pillar-kicker">Pilar 02</span>
+                <h2>DJs Emergentes</h2>
+              </div>
+              <p>
+                Radar de talento nuevo: perfiles de artistas como E.Lina, Thomas Kick o Alo antes de
+                que lleguen a todas las carteleras.
+              </p>
+            </header>
+            <div class="pillar-empty" data-empty-state>
+              <p class="pillar-empty-label">En investigación</p>
+              <p>Cada perfil llegará con sets, fechas y fuentes verificables.</p>
+            </div>
+            <div class="pillar-grid" data-pillar-list></div>
+          </section>
+
+          <section
+            class="blog-pillar"
+            id="pillar-culture"
+            role="tabpanel"
+            aria-labelledby="tab-culture"
+            data-pillar="culture"
+            hidden
+          >
+            <header class="pillar-header">
+              <div class="pillar-header__title">
+                <span class="pillar-kicker">Pilar 03</span>
+                <h2>Cultura DJ</h2>
+              </div>
+              <p>
+                Dónde compran su música los DJs, datos aleatorios de la escena y la vida íntima
+                entre sets — incluida la famosa última pista de la noche.
+              </p>
+            </header>
+            <div class="pillar-empty" data-empty-state>
+              <p class="pillar-empty-label">En investigación</p>
+              <p>Recopilando encuestas, entrevistas y folklore de cabina.</p>
+            </div>
+            <div class="pillar-grid" data-pillar-list></div>
+          </section>
+
+          <section
+            class="blog-pillar"
+            id="pillar-voices"
+            role="tabpanel"
+            aria-labelledby="tab-voices"
+            data-pillar="voices"
+            hidden
+          >
+            <header class="pillar-header">
+              <div class="pillar-header__title">
+                <span class="pillar-kicker">Pilar 04</span>
+                <h2>Red de Voces</h2>
+              </div>
+              <p>
+                Documentación de personajes y nodos que sostienen el ecosistema: el origen de 3TRES6
+                y su crew fundador, colectivos como Vinilos Viajeros y sellos como Boyanza Records —
+                con fuentes públicas, sin invención.
+              </p>
+            </header>
+            <div class="pillar-empty" data-empty-state>
+              <p class="pillar-empty-label">En investigación</p>
+              <p>Perfiles en curso con entrevistas, eventos y fichas de sello verificables.</p>
+            </div>
+            <div class="pillar-grid" data-pillar-list></div>
+          </section>
+        </div>
+
+        <aside class="blog-store-cta">
+          <div>
+            <span class="blog-store-cta__kicker">Del archivo a tu colección</span>
+            <h3>Vinilos seleccionados en Barcelona, enviados a todo México.</h3>
+          </div>
+          <a href="/3tres6muntanerRecords/#catalogo" class="cta-button">Explorar catálogo</a>
+        </aside>
+      </div>
+
       <section
-        class="blog-pillar"
-        id="pillar-emerging"
-        role="tabpanel"
-        aria-labelledby="tab-emerging"
-        data-pillar="emerging"
+        class="blog-reader"
+        id="blog-reader"
+        aria-labelledby="blog-reader-title"
+        tabindex="-1"
         hidden
       >
-        <header class="pillar-header">
-          <span class="pillar-kicker">Pilar 02</span>
-          <h2>DJs Emergentes</h2>
-          <p>
-            Radar de talento nuevo: perfiles de artistas como E.Lina, Thomas Kick o Alo antes de que
-            lleguen a todas las carteleras.
-          </p>
-        </header>
-        <div class="pillar-empty" data-empty-state>
-          <p class="pillar-empty-label">En investigación</p>
-          <p>
-            Scouting en curso — Europa y México. Cada perfil llegará con fuentes, lanzamientos y por
-            qué vale la pena seguirlo.
-          </p>
+        <div class="blog-reader__progress-wrap">
+          <div
+            class="blog-reader__progress"
+            role="progressbar"
+            aria-label="Progreso de lectura"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <span data-reader-progress></span>
+          </div>
         </div>
-        <div class="pillar-grid" data-pillar-list aria-live="polite"></div>
-      </section>
 
-      <!-- Pillar: Cultura DJ -->
-      <section
-        class="blog-pillar"
-        id="pillar-culture"
-        role="tabpanel"
-        aria-labelledby="tab-culture"
-        data-pillar="culture"
-        hidden
-      >
-        <header class="pillar-header">
-          <span class="pillar-kicker">Pilar 03</span>
-          <h2>Cultura DJ</h2>
-          <p>
-            Dónde compran su música los DJs, datos aleatorios de la escena y la vida íntima entre
-            sets — incluida la famosa última pista de la noche.
-          </p>
-        </header>
-        <div class="pillar-empty" data-empty-state>
-          <p class="pillar-empty-label">En investigación</p>
-          <p>
-            Recopilando encuestas, entrevistas y folklore de cabina. El primer reporte llegará con
-            fuentes citadas.
-          </p>
+        <div class="blog-reader__bar">
+          <a href="#pillar-atlas" data-reader-close>Volver al archivo</a>
+          <span data-reader-location>Archivo 3TRES6</span>
         </div>
-        <div class="pillar-grid" data-pillar-list aria-live="polite"></div>
-      </section>
 
-      <!-- Pillar: Red de Voces -->
-      <section
-        class="blog-pillar"
-        id="pillar-voices"
-        role="tabpanel"
-        aria-labelledby="tab-voices"
-        data-pillar="voices"
-        hidden
-      >
-        <header class="pillar-header">
-          <span class="pillar-kicker">Pilar 04</span>
-          <h2>Red de Voces</h2>
-          <p>
-            Documentación de personajes y nodos que sostienen el ecosistema: el origen de 3TRES6 y
-            su crew fundador, colectivos como Vinilos Viajeros y sellos como Boyanza Records — con
-            fuentes públicas, sin invención.
-          </p>
-        </header>
-        <div class="pillar-empty" data-empty-state>
-          <p class="pillar-empty-label">En investigación</p>
-          <p>
-            Perfiles en curso. Cada ficha llega con entrevistas, eventos y fichas de sello
-            verificables.
-          </p>
-        </div>
-        <div class="pillar-grid" data-pillar-list aria-live="polite"></div>
-      </section>
+        <article class="blog-reader__sheet">
+          <header class="blog-reader__header">
+            <p class="blog-reader__kicker" data-reader-pillar>Ficha</p>
+            <h2 id="blog-reader-title" data-reader-title>Título</h2>
+            <p class="blog-reader__excerpt" data-reader-excerpt></p>
+            <div class="blog-reader__meta" data-reader-meta></div>
+          </header>
 
-      <!-- Store CTA -->
-      <div class="blog-store-cta">
-        <h3>¿Listo para empezar tu colección?</h3>
-        <p>
-          Tenemos vinilos de House, Techno, Minimal y Disco seleccionados en Barcelona. Envíos a
-          todo México.
-        </p>
-        <a href="/3tres6muntanerRecords/#catalogo" class="cta-button">Explorar Catálogo →</a>
-      </div>
-      </div>
+          <div class="blog-reader__layout">
+            <div class="blog-reader__prose" data-reader-body></div>
+            <aside class="blog-reader__rail" aria-label="Datos y fuentes de la ficha">
+              <section data-reader-stats-wrap>
+                <h3>En breve</h3>
+                <div data-reader-stats></div>
+              </section>
+              <section data-reader-chart-wrap hidden>
+                <h3>Visualización</h3>
+                <div data-reader-chart></div>
+              </section>
+              <section data-reader-sources-wrap>
+                <h3>Fuentes verificables</h3>
+                <div data-reader-sources></div>
+              </section>
+            </aside>
+          </div>
+
+          <footer class="blog-reader__footer">
+            <p>Fin de la ficha · fuentes enlazadas y fecha de investigación visible.</p>
+            <a href="#pillar-atlas" data-reader-close>Volver al archivo</a>
+          </footer>
+        </article>
+      </section>
     </main>
 
     <!-- Footer -->

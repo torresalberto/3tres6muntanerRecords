@@ -73,7 +73,13 @@ const KEY = {
   '/crew.html': { elems: { '#crewGrid .dj-card': 1 } },
   '/mapa.html': { elems: { '.leaflet-marker-icon': 1 } },
   '/blog.html': {
-    elems: { '.blog-pillar': 4, '.blog-cat-btn': 4, '#pillar-voices .pillar-card': 3 },
+    elems: {
+      '.blog-pillar': 4,
+      '.blog-cat-btn': 4,
+      '#pillar-voices .pillar-card': 3,
+      '#pillar-voices .pillar-card__read': 3,
+      '#blog-reader': 1,
+    },
   },
   '/dj-library.html': { elems: { '.dj-card': 1 } },
   '/product.html': { elems: { '.product-detail, .product-info': 1 } },

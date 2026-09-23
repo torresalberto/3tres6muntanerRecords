@@ -17,6 +17,7 @@ Herramientas (Taller), Mapa, Crew, Neural.
 | `--text-faint` | `rgba(255,255,255,.32)`   | tertiary text                              |
 | `--line`       | `rgba(255,255,255,.08)`   | hairlines, borders                         |
 | Font UI        | Space Grotesk             | body, titles                               |
+| Font reading   | Newsreader                | long-form article body and editorial display |
 | Font mono      | Space Mono                | catalog numbers, timestamps, labels, specs |
 | Radius         | 8–14px cards, 999px chips |                                            |
 
@@ -39,6 +40,9 @@ Herramientas (Taller), Mapa, Crew, Neural.
   (Cabina archived); player + seekable timeline rows with status dots and label
   pills.
 - **Toolbar / rail** — search + chips + sort; mono labels on rail blocks.
+- **Editorial reading sheet** — Blog index previews on graphite; each ficha opens
+  on a light paper surface with an orange spine, 18px serif prose, a 72ch measure,
+  a facts rail and a cited-source rail.
 - **El Hilo graph** — D3 force layout (`js/dj-library-core.js →
 DJCore.initGraph`): nodes sized by connections, links weighted by shared
   tracks/artists, genre filters, tooltips.
@@ -93,6 +97,20 @@ _¿qué hay aquí?_ (Exploración), _¿qué hago?_ (Acción), _¿cómo vuelvo?_
    pages offset with `.header-spacer` (121px); full-viewport sections compute
    from the real flow start (see Mapa: `calc(100vh - 161px)`).
 
+## Long-form reading and motion
+
+- Index cards are previews, not the article body: title, excerpt, key facts and a
+  clear `Leer ficha` action. The complete text opens in `.blog-reader`.
+- Reader body copy is Newsreader 18px with 1.6–1.75 leading and a 65–75ch
+  measure. Space Grotesk remains UI chrome; Space Mono is metadata only.
+- The reader uses a light paper surface rather than extending the dark index.
+  This is a functional reading mode, not a decorative theme toggle.
+- Tabs support Arrow keys, Home/End, visible focus and deep-link hashes. Sticky
+  chrome reserves its real height so focused headings are never obscured.
+- Motion is limited to one page-load reveal, tab continuity, reader open/close
+  and reading progress. `prefers-reduced-motion` disables all non-essential
+  movement and smooth scrolling.
+
 ## Internal-linking conventions
 
 | Entity                | Canonical home                                                       | Linked from                                                   |
@@ -130,6 +148,8 @@ Rules:
   `mapa.html#venue:<id>` deep links that route to the venue's own city map,
   popup "DJs que tocaron aquí / Sets en este club" + reciprocal set-sheet
   venue chip)
+- ✅ Blog — redone in this system (editorial index + light long-form reader,
+  keyboard tabs, deep links, progress and reduced-motion support)
 - 🚧 Crew — next
 - 🚧 Neural — next
 

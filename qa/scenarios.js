@@ -385,6 +385,63 @@ s('s08', 'Blog: four pillar tabs render and switch', DESKTOP, async (t) => {
   const voices = await t.page.locator('#pillar-voices .pillar-card').count();
   t.check(voices === 3, 'Red de Voces renders three cards', `cards=${voices}`);
 
+  await t.page.locator('#pillar-voices .pillar-card__title').first().click();
+  await t.page.locator('#blog-reader.is-open').waitFor({ state: 'visible' });
+  const reader = await t.page.locator('.blog-reader__prose').evaluate((element) => {
+    const style = getComputedStyle(element);
+    const sheet = getComputedStyle(element.closest('.blog-reader__sheet'));
+    return {
+      fontSize: parseFloat(style.fontSize),
+      lineHeight: parseFloat(style.lineHeight),
+      background: sheet.backgroundColor,
+      paragraphs: element.querySelectorAll('p').length,
+    };
+  });
+  t.check(
+    reader.fontSize >= 17 && reader.lineHeight >= reader.fontSize * 1.6,
+    'Reader uses long-form typography',
+    `font=${reader.fontSize}px leading=${reader.lineHeight}px`
+  );
+  t.check(
+    reader.paragraphs >= 3,
+    'Reader renders full article body',
+    `paragraphs=${reader.paragraphs}`
+  );
+  t.check(
+    !reader.background.startsWith('rgb(10,') && !reader.background.startsWith('rgb(13,'),
+    'Reader uses light paper surface',
+    `background=${reader.background}`
+  );
+  t.check(
+    (await t.page.locator('[data-reader-sources] a').count()) >= 3,
+    'Reader exposes cited sources'
+  );
+  t.check(
+    (await t.page.evaluate(() => window.location.hash)) === '#article-origen-3tres6',
+    'Article URL is shareable'
+  );
+
+  await t.page.locator('.blog-reader__bar [data-reader-close]').click();
+  await t.page.locator('#blog-reader').waitFor({ state: 'hidden' });
+  t.check(
+    (await t.page.evaluate(() => window.location.hash)) === '#pillar-voices',
+    'Reader closes back to its pillar'
+  );
+
+  await t.page.locator('.blog-cat-btn[data-pillar="voices"]').focus();
+  await t.page.keyboard.press('ArrowRight');
+  t.check(
+    (await t.page.locator('.blog-cat-btn[data-pillar="atlas"]').getAttribute('aria-selected')) ===
+      'true',
+    'Arrow keys move between pillar tabs'
+  );
+
+  await t.goto(t.base + '/blog.html#article-boyanza-records', 1200);
+  t.check(
+    (await t.page.locator('#blog-reader.is-open').count()) === 1,
+    'Article deep link opens directly'
+  );
+
   // Old article anchors must be gone (content reset)
   const olds = await t.page
     .locator('#guia-vinilos, #crate-digging-full, .blog-article-full')
