@@ -147,6 +147,7 @@ function renderPage(dj, sets) {
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../css/dj-library.css" />
   <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
   <style>
     .dj-page-hero {
       position: relative;
@@ -417,6 +418,7 @@ function renderPage(dj, sets) {
   <!-- Swup: seamless page transitions so the audio player never cuts off -->
   <script src="../js/vendor/swup.umd.js" defer></script>
   <script src="../js/swup-init.js" defer></script>
+  <script src="../js/blog.js" defer></script>
   <script src="../js/nav.js" defer></script>
   <script src="../player-init.js" defer></script>
 </body>

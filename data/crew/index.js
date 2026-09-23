@@ -1,53 +1,5 @@
 const CREW_MEMBERS = [
   {
-    id: 'carl-cox',
-    name: 'Carl Cox',
-    role: 'Co-fundador & Resident',
-    bio: 'Pionero del techno y house, con más de 30 años girando vinilos en las mejores pistas del mundo.',
-    image: 'https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg',
-    social: {
-      instagram: 'https://instagram.com/carlcox',
-      soundcloud: 'https://soundcloud.com/carlcox',
-    },
-    location: 'Barcelona',
-  },
-  {
-    id: 'richie-hawtin',
-    name: 'Richie Hawtin',
-    role: 'Co-fundador & Productor',
-    bio: 'Maestro del minimal techno y fundador de plastik Recordings. Su curaduría define la voz underground.',
-    image: 'https://i.ytimg.com/vi/n0tVk3q9zNo/hqdefault.jpg',
-    social: {
-      instagram: 'https://instagram.com/richiehawtin',
-      soundcloud: 'https://soundcloud.com/richiehawtin',
-    },
-    location: 'Barcelona',
-  },
-  {
-    id: 'laurent-garnier',
-    name: 'Laurent Garnier',
-    role: 'Co-fundador & DJ',
-    bio: 'Conductor de sets épicos desde Berlín hasta Ciudad de México. Su playlist selection es impecable.',
-    image: 'https://i.ytimg.com/vi/WG35-7LpIAc/hqdefault.jpg',
-    social: {
-      instagram: 'https://instagram.com/laurentgarnier',
-      soundcloud: 'https://soundcloud.com/laurentgarnier',
-    },
-    location: 'Barcelona',
-  },
-  {
-    id: 'honey-dijon',
-    name: 'Honey Dijon',
-    role: 'Co-fundador & DJ',
-    bio: 'Conexión directa entre la escena Detroit y la comunidad mexicana. Sets que elevan la energía.',
-    image: 'https://i.ytimg.com/vi/t5KwF_VsM50/hqdefault.jpg',
-    social: {
-      instagram: 'https://instagram.com/honeydijon',
-      soundcloud: 'https://soundcloud.com/honeydijon',
-    },
-    location: 'Mexico City',
-  },
-  {
     id: 'd-mfrutis',
     name: 'd.mfrutis',
     role: 'Piloto & Fundador',
@@ -94,7 +46,7 @@ function renderCrewGrid() {
       <div style="display:flex;gap:1.5rem;align-items:flex-start;">
         <div style="width:120px;height:120px;border-radius:12px;overflow:hidden;background:#111;position:relative;">
           <img src="${member.image}" alt="${member.name}" style="width:100%;height:100%;object-fit:cover;" 
-               onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20fill=%27%23111%27%20width=%27100%27%20height=%27100%27/%3E%3Ctext%20fill=%27%23ff4d00%27%20x=%2750%27%20y=%2755%27%20text-anchor=%27middle%27%20font-size=%2740%27%3E%F0%9F%91%A4%3C/text%3E%3C/svg%3E'"/>
+               onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20fill=%27%23111%27%20width=%27100%27%20height=%27100%27/%3E%3Ctext%20fill=%27%23ff4d00%27%20x=%2750%27%20y=%2760%27%20text-anchor=%27middle%27%20font-size=%2736%27%20font-family=%27Arial%27%20font-weight=%27700%27%3Ed.%3C/text%3E%3C/svg%3E'"/>
           ${member.isPilot ? '<span style="position:absolute;top:8px;right:8px;background:#ff4d00;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600;">Piloto</span>' : ''}
         </div>
         <div style="flex:1;">

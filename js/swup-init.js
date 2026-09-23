@@ -57,7 +57,81 @@
     }
   };
 
+  // Site root derived from this file's URL (js/swup-init.js → site root).
+  // Used to inject blog assets when arriving via swup (head/body scripts
+  // outside <main data-swup> never run on client-side navigation).
+  var SITE_BASE = (function () {
+    var s = document.currentScript && document.currentScript.src;
+    if (s) return s.replace(/js\/swup-init\.js(?:\?.*)?$/, '');
+    return '/';
+  })();
+
+  function isBlogPath(path) {
+    return /\/blog\.html$/.test(path) || path === '/blog/' || /\/blog$/.test(path);
+  }
+
+  function ensureAsset(href, tag) {
+    // Match any equivalent href (relative vs absolute SITE_BASE).
+    var existing =
+      tag === 'link'
+        ? document.querySelector('link[href*="css/blog.css"]')
+        : document.querySelector('script[src*="js/blog.js"]');
+    if (existing) return true;
+    var el = document.createElement(tag);
+    if (tag === 'link') {
+      el.rel = 'stylesheet';
+      el.href = href;
+      document.head.appendChild(el);
+    } else {
+      el.src = href;
+      el.defer = true;
+      document.head.appendChild(el);
+    }
+    return false;
+  }
+
+  function ensureBlogCss() {
+    ensureAsset(SITE_BASE + 'css/blog.css', 'link');
+  }
+
+  function ensureBlogJs(cb) {
+    if (window.Muntaner336 && typeof window.Muntaner336.initBlogPage === 'function') {
+      if (cb) cb();
+      return;
+    }
+    if (document.querySelector('script[src*="js/blog.js"]')) {
+      // Already present (loading or loaded) — poll briefly for initBlogPage.
+      var tries = 0;
+      var t = setInterval(function () {
+        tries += 1;
+        if (window.Muntaner336 && typeof window.Muntaner336.initBlogPage === 'function') {
+          clearInterval(t);
+          if (cb) cb();
+        } else if (tries > 40) {
+          clearInterval(t);
+          if (cb) cb();
+        }
+      }, 50);
+      return;
+    }
+    var s = document.createElement('script');
+    s.src = SITE_BASE + 'js/blog.js';
+    s.defer = true;
+    s.onload = function () {
+      if (cb) cb();
+    };
+    s.onerror = function () {
+      if (cb) cb();
+    };
+    document.head.appendChild(s);
+  }
+
   function runViewHandlers() {
+    // Blog page: pull in shared CSS/JS that other pages may not have loaded.
+    if (isBlogPath(window.location.pathname)) {
+      ensureBlogCss();
+      ensureBlogJs();
+    }
     viewHandlers.forEach(function (handler) {
       try {
         handler(document);
@@ -70,6 +144,15 @@
     // page. Without this, clicking "Blog" on dj-library leaves "DJ Library"
     // highlighted on the new page.
     updateSubnavActive();
+  }
+
+  // Inject blog CSS before the content swap so the first paint is styled.
+  // Swup 4.9 hooks: visit:start / content:replace / page:view (not page:visit).
+  if (swup.hooks && typeof swup.hooks.on === 'function') {
+    swup.hooks.on('visit:start', function (visit) {
+      var url = visit && visit.to && visit.to.url ? visit.to.url : '';
+      if (url && isBlogPath(String(url).split('?')[0])) ensureBlogCss();
+    });
   }
 
   /**

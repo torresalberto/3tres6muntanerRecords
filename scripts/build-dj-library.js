@@ -175,6 +175,7 @@ function pageHTML(djs, sets, pageNum, totalPages) {
   <link rel="canonical" href="https://3tres6records.albto.me/dj-library/${pageNum > 1 ? `page-${pageNum}.html` : ''}" />
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/dj-library.css">
+  <link rel="stylesheet" href="../css/blog.css">
   <link rel="preconnect" href="https://i.ytimg.com">
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
 </head>
@@ -210,6 +211,7 @@ function pageHTML(djs, sets, pageNum, totalPages) {
 
   <script src="../js/vendor/swup.umd.js" defer></script>
   <script src="../js/swup-init.js" defer></script>
+  <script src="../js/blog.js" defer></script>
   <script src="../js/yt-lazy.js" defer></script>
   <script src="../player-init.js" defer></script>
   <script src="../audio.js" defer></script>
