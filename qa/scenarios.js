@@ -359,13 +359,13 @@ s('s07', 'Tools: each toolhub tab loads without errors', DESKTOP, async (t) => {
   }
 });
 
-s('s08', 'Blog: three pillar tabs render and switch', DESKTOP, async (t) => {
+s('s08', 'Blog: four pillar tabs render and switch', DESKTOP, async (t) => {
   await t.goto(t.base + '/blog.html', 2500);
   const tabs = await t.page.locator('.blog-cat-btn').count();
   const panels = await t.page.locator('.blog-pillar').count();
   t.check(
-    tabs === 3 && panels === 3,
-    'Three pillar tabs + panels render',
+    tabs === 4 && panels === 4,
+    'Four pillar tabs + panels render',
     `tabs=${tabs} panels=${panels}`
   );
 
@@ -379,6 +379,11 @@ s('s08', 'Blog: three pillar tabs render and switch', DESKTOP, async (t) => {
 
   const hash = await t.page.evaluate(() => window.location.hash);
   t.check(hash === '#pillar-emerging', 'Hash updates to #pillar-emerging', `hash=${hash}`);
+
+  await t.page.locator('.blog-cat-btn[data-pillar="voices"]').click();
+  await t.page.waitForTimeout(200);
+  const voices = await t.page.locator('#pillar-voices .pillar-card').count();
+  t.check(voices === 3, 'Red de Voces renders three cards', `cards=${voices}`);
 
   // Old article anchors must be gone (content reset)
   const olds = await t.page

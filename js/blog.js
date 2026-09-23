@@ -40,7 +40,7 @@
 
       // Blog page initializer (Swup-compatible) — pillar tabs + hash routing
       function initBlogPage() {
-        const PILLARS = ['atlas', 'emerging', 'culture'];
+        const PILLARS = ['atlas', 'emerging', 'culture', 'voices'];
 
         function escapeHtml(s) {
           return String(s)
@@ -188,7 +188,7 @@
           if (pushHash) {
             const hash = '#pillar-' + key;
             if (window.location.hash !== hash) {
-              history.replaceState(null, '', hash);
+              history.replaceState(history.state, '', hash);
             }
           }
         }

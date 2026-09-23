@@ -177,6 +177,7 @@ window.BLOG_PILLARS = {
       body: [
         'El señalador más limpio: el podcast Slow Life Friends 028 (deep house, vibes after-hours) + aparición como artista relacionado en el grafo de Zip (Perlon). Poca cobertura editorial = exactamente el tipo de perfil que quiere este pilar.',
         'Metodología: no inventar biografía. Se publica lo verificable (set listas, conexiones RA, fechas). Cuando aparezca ficha RA completa o sello, se actualiza el card con la fuente.',
+        'Cruce Red de Voces: co-billing público con Vinilos Viajeros en BCN (Salvadiscos 2023) documentado en el pilar Red de Voces sin afirmar propiedad del colectivo.',
         'Siguiente crawl objetivo: SoundCloud del artista, RA artist URL canónica, Discogs artist page, chart de Beatport/Traxsource con su catálogo.',
       ],
     },
@@ -369,6 +370,103 @@ window.BLOG_PILLARS = {
         'Con Beatport en $1.49–2.49, 10 tracks ≈ $15–25. Ese presupuesto compra un LP usado decente en Discogs — o dos si hay suerte con el grading.',
         'El digital gana en volumen y velocidad de descubrimiento; el wax gana en finite focus, arte y reventa (secundario Discogs). El “mejor” depende del rol: preps de set vs colección de cabina.',
         'Esta cuenta es heurística de uso, no recomendación de inversión. Tipos de cambio y envío (MX 100/30 MXN en operativa 3TRES6) cambian el resultado real.',
+      ],
+    },
+  ],
+
+  voices: [
+    {
+      id: 'origen-3tres6',
+      title: 'Origen 3TRES6: Albert y Frutis en una sola historia',
+      excerpt:
+        'La historia pública de la marca —selección manual en Barcelona y envío a México— junto a Frutis, identificado en el crew como Piloto & Fundador. Albert y Frutis quedan aquí en una sola ficha, sin datos internos.',
+      meta: ['Barcelona → México', 'Fundador', 'Solo fuentes públicas'],
+      sources: [
+        { label: '3TRES6 — Nosotros (en vivo)', href: 'https://3tres6records.albto.me/#nosotros' },
+        { label: '3TRES6 — Crew: d.mfrutis', href: 'https://3tres6records.albto.me/crew.html' },
+        {
+          label: 'Time Out — best record shops Barcelona',
+          href: 'https://www.timeout.com/barcelona/music/best-record-shops-in-barcelona',
+        },
+        {
+          label: 'Discogs — Discos Paradiso (venue)',
+          href: 'https://www.discogs.com/venue/474677-discos-paradiso/',
+        },
+      ],
+      stats: [
+        { label: 'Ruta', value: 'BCN → MX' },
+        { label: 'Fundador', value: 'd.mfrutis' },
+        { label: 'Base', value: 'Barcelona' },
+        { label: 'Modelo', value: 'curaduría / usado' },
+      ],
+      body: [
+        '3TRES6 Records define su origen en dos gestos públicos: seleccionar a mano en tiendas de Barcelona como Discos Paradiso, Way Out y Ultra-Local Records, y llevar ese underground europeo a coleccionistas en México. La página de Nosotros lo resume como “De Barcelona para México. Del underground a tu tornamesa”.',
+        'El crew identifica a Frutis como “Piloto & Fundador” en Barcelona y como primer miembro, especialista en selections underground y vinilos de alta calidad. Albert y Frutis aparecen aquí en una sola ficha: la marca y su fundador público, sin atribuir cargos, fechas o una biografía que el sitio no publique.',
+        'Metodología Red de Voces: solo fuentes públicas enlazadas. Sin datos operativos, correos ni tarifas internas. Cuando haya prensa, entrevista o una ficha pública nueva, se actualiza la tarjeta con la cita.',
+      ],
+    },
+    {
+      id: 'thomas-kick-vinilos-viajeros',
+      title: 'Thomas Kick y Vinilos Viajeros: dos nodos de la red BCN',
+      excerpt:
+        'Co-billing verificado (Salvadiscos 2023) une al selector de deep (Slow Life 028) con Vinilos Viajeros, listado como expositor en Gran Price Vinyl Fest 2024 — sin inventar quién es dueño de quién.',
+      meta: ['Barcelona', 'Deep house', 'Colectivo / tienda'],
+      sources: [
+        {
+          label: 'Salvadiscos — Vinilos Viajeros × Canela En Surco feat. Thomas Kick (2023)',
+          href: 'https://www.salvadiscos.com/evento/vinilos-viajeros-meets-canela-en-surco-deep-latin-spiritual-house-feat-breixo-martinez-damian-botigue-thomas-kick/',
+        },
+        {
+          label: 'set79 — Slow Life Friends 028 (Thomas Kick)',
+          href: 'https://set79.com/tracklist/soundcloud.com/slow-life/slow-life-friends-podcast-028-thomas-kick',
+        },
+        {
+          label: 'Gran Price Vinyl Fest 2024 — Vinilos Viajeros',
+          href: 'https://granpricevinyl.com/edicion-2024',
+        },
+      ],
+      stats: [
+        { label: 'Sabor TK', value: 'Deep / after' },
+        { label: 'VV perfil', value: 'Feria 2024' },
+        { label: 'Co-bill', value: 'BCN 10 nov 2023' },
+        { label: 'Estado', value: 'Verificado' },
+      ],
+      body: [
+        'El vínculo más limpio en las fuentes es el cartel “Vinilos Viajeros meets Canela En Surco (deep, latin, spiritual house)” en Espai Salvadiscos: viernes 10 de noviembre de 2023, de 21:00 a 03:00. El lineup incluye a Thomas Kick, Breixo Martínez y Damián Botigue. Es co-billing de una noche; no prueba la propiedad del sello o de la tienda.',
+        'Gran Price Vinyl Fest 2024 listó a Los Vinilos Viajeros como expositor de Barcelona, con electrónica, rock y world music. La página de la feria no atribuye a Thomas Kick la propiedad ni la dirección del colectivo: la ficha mantiene esos perfiles separados y documenta únicamente la colaboración verificable.',
+        'Thomas Kick aparece además en Slow Life Friends Podcast 028, descrito como deep house after-hours. Su perfil de DJs Emergentes y esta ficha usan la misma regla: sets, fechas y conexiones documentadas; biografía solo cuando existe una fuente pública.',
+      ],
+    },
+    {
+      id: 'boyanza-records',
+      title: 'Boyanza Records: del loft de CDMX a CDMX×Miami',
+      excerpt:
+        'Sello y colectivo fundado en CDMX en 2019 por Rafatel (Rafael Tena), con Gaude (Patricio Gaudelli) a cargo de las operaciones en Miami. La entrevista de febrero de 2025 registraba 32 releases y un vinilo con más de 300 copias vendidas.',
+      meta: ['CDMX / Miami', 'Label / events', 'Desde 2019'],
+      sources: [
+        {
+          label: 'Music is 4 Lovers — Turn One interview (2021)',
+          href: 'https://www.musicis4lovers.com/boyanza-records-turn-one-with-compilation-release-interview/',
+        },
+        {
+          label: 'The Club Map — Label Interview: Boyanza (2025)',
+          href: 'https://www.theclubmap.com/2025/02/02/label-interview-boyanza/',
+        },
+        { label: 'RA — Boyanza label', href: 'https://ra.co/labels/20571' },
+        { label: 'Bandcamp — Boyanza Records', href: 'https://boyanzarecords.bandcamp.com/' },
+        { label: 'Insomniac — Rafatel', href: 'https://www.insomniac.com/music/artists/rafatel/' },
+      ],
+      stats: [
+        { label: 'Fundación', value: 'Nov 2019' },
+        { label: '1er release', value: 'Ene 2020' },
+        { label: 'Releases', value: '32 (2025)' },
+        { label: 'Vinilo', value: '1 · >300 cop.' },
+      ],
+      body: [
+        'Boyanza arrancó como una serie de fiestas en un loft del centro de Ciudad de México, alrededor de noviembre de 2019. Cuando el curador Rafael Tena (Rafatel) tuvo tracks listos y se frustró con el proceso de buscar sello, el colectivo decidió lanzar Boyanza Records: su primer release oficial fue en enero de 2020. Después Rafatel incorporó a Gaude (Patricio Gaudelli), amigo y productor de Miami, quien quedó a cargo de las operaciones allí.',
+        'La entrevista de The Club Map del 2 de febrero de 2025 registró 32 releases disponibles en Bandcamp o SoundCloud y un único vinilo prensado, Get Paid de Playa Baghdad, casi agotado tras superar 300 copias vendidas en el mundo. El sello también sumaba más de 500 mil reproducciones y 3500 compras en tiendas online; son cifras declaradas por Boyanza, no una medición independiente.',
+        'The Club Map sitúa al colectivo entre el sello, la producción de eventos y la curaduría, con apariciones junto a DJ Harvey, Cerrone y Zombies in Miami, además de participaciones en Trópico, Bahidora y Bravo. Insomniac describe a Rafatel como head honcho de Boyanza, mientras RA lo ubica entre Ciudad de México y Miami.',
+        'La conexión editorial con 3TRES6 es ese circuito independiente: fiestas, sello y una tirada limitada de vinilo entre México y Miami. La ficha conserva las cifras con fecha y no atribuye al colectivo artistas, roles comerciales ni datos que las fuentes no publiquen.',
       ],
     },
   ],

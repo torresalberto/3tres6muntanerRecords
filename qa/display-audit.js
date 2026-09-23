@@ -72,7 +72,9 @@ const KEY = {
   '/3d-brain.html': { elems: { '#sphere-svg circle': 1 } },
   '/crew.html': { elems: { '#crewGrid .dj-card': 1 } },
   '/mapa.html': { elems: { '.leaflet-marker-icon': 1 } },
-  '/blog.html': { elems: { '.blog-pillar': 3, '.blog-cat-btn': 3 } },
+  '/blog.html': {
+    elems: { '.blog-pillar': 4, '.blog-cat-btn': 4, '#pillar-voices .pillar-card': 3 },
+  },
   '/dj-library.html': { elems: { '.dj-card': 1 } },
   '/product.html': { elems: { '.product-detail, .product-info': 1 } },
   '/toolhub/': { elems: { '#camelot-wheel, .camelot-wheel, [id*="camelot"]': 1 } },

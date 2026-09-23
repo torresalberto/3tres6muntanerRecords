@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
     <!-- Primary SEO Meta Tags -->
-    <title>Blog | 3TRES6 Records – Atlas Vinilo, DJs Emergentes y Cultura DJ</title>
+    <title>Blog | 3TRES6 Records – Atlas Vinilo, DJs Emergentes, Cultura DJ y Red de Voces</title>
     <meta
       name="description"
-      content="Tres pilares de contenido de 3TRES6 Records: Atlas Vinilo (datos y visualizaciones), DJs Emergentes y Cultura DJ. Investigación con fuentes verificables."
+      content="Cuatro pilares de contenido de 3TRES6 Records: Atlas Vinilo (datos y visualizaciones), DJs Emergentes, Cultura DJ y Red de Voces (documentación de personajes y sellos). Investigación con fuentes verificables."
     />
     <meta
       name="keywords"
-      content="vinilos, vinyl, dj, house, techno, djs emergentes, cultura dj, crate digging, discografías, atlas vinilo"
+      content="vinilos, vinyl, dj, house, techno, djs emergentes, cultura dj, red de voces, crate digging, discografías, atlas vinilo"
     />
     <meta name="author" content="3TRES6 Records" />
     <meta name="robots" content="index, follow" />
@@ -23,10 +23,10 @@
     <!-- Open Graph -->
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="/blog.html" />
-    <meta property="og:title" content="Blog 3TRES6 Records – Tres pilares de cultura vinilo" />
+    <meta property="og:title" content="Blog 3TRES6 Records – Cuatro pilares de cultura vinilo" />
     <meta
       property="og:description"
-      content="Atlas Vinilo, DJs Emergentes y Cultura DJ. Datos, scouting y la vida íntima detrás de la cabina."
+      content="Atlas Vinilo, DJs Emergentes, Cultura DJ y Red de Voces. Datos, scouting, cabina y documentación de la red."
     />
     <meta property="og:image" content="https://3tres6records.albto.me/images/blog-og.jpg" />
     <meta property="og:locale" content="es_MX" />
@@ -63,7 +63,7 @@
         "@context": "https://schema.org",
         "@type": "Blog",
         "name": "3TRES6 Records Blog",
-        "description": "Tres pilares: Atlas Vinilo (estadísticas y visualizaciones), DJs Emergentes y Cultura DJ",
+        "description": "Cuatro pilares: Atlas Vinilo (estadísticas y visualizaciones), DJs Emergentes, Cultura DJ y Red de Voces",
         "url": "https://3tres6records.albto.me/blog.html",
         "publisher": {
           "@type": "Organization",
@@ -106,11 +106,15 @@
           <span class="ticker-separator">•</span>
           <span class="ticker-item">Cultura DJ — vida entre discos</span>
           <span class="ticker-separator">•</span>
+          <span class="ticker-item">Red de Voces — personajes y sellos</span>
+          <span class="ticker-separator">•</span>
           <span class="ticker-item">Atlas Vinilo — datos y visualizaciones</span>
           <span class="ticker-separator">•</span>
           <span class="ticker-item">DJs Emergentes — radar de talento</span>
           <span class="ticker-separator">•</span>
           <span class="ticker-item">Cultura DJ — vida entre discos</span>
+          <span class="ticker-separator">•</span>
+          <span class="ticker-item">Red de Voces — personajes y sellos</span>
           <span class="ticker-separator">•</span>
         </div>
         <script>
@@ -207,10 +211,10 @@
     <!-- Everything below swaps with swup (hero tabs + pillars) -->
     <main data-swup>
     <div class="blog-hero">
-      <h1>Blog 3TRES6 — Tres Pilares</h1>
+      <h1>Blog 3TRES6 — Cuatro Pilares</h1>
       <p>
-        Investigación con datos reales: dónde vive el vinilo, quiénes vienen y cómo suena la vida
-        detrás de la cabina.
+        Investigación con datos reales: dónde vive el vinilo, quiénes vienen, cómo suena la vida
+        detrás de la cabina y quién sostiene la red — fundadores, sellos y nodos de la escena.
       </p>
 
       <div class="blog-categories" role="tablist" aria-label="Pilares de contenido">
@@ -243,6 +247,16 @@
           data-pillar="culture"
         >
           Cultura DJ
+        </button>
+        <button
+          class="blog-cat-btn"
+          role="tab"
+          id="tab-voices"
+          aria-selected="false"
+          aria-controls="pillar-voices"
+          data-pillar="voices"
+        >
+          Red de Voces
         </button>
       </div>
     </div>
@@ -322,8 +336,36 @@
         <div class="pillar-empty" data-empty-state>
           <p class="pillar-empty-label">En investigación</p>
           <p>
-            Recopilando encuestas, entrevistas y folklore de cabina. El primer reporte llega con
+            Recopilando encuestas, entrevistas y folklore de cabina. El primer reporte llegará con
             fuentes citadas.
+          </p>
+        </div>
+        <div class="pillar-grid" data-pillar-list aria-live="polite"></div>
+      </section>
+
+      <!-- Pillar: Red de Voces -->
+      <section
+        class="blog-pillar"
+        id="pillar-voices"
+        role="tabpanel"
+        aria-labelledby="tab-voices"
+        data-pillar="voices"
+        hidden
+      >
+        <header class="pillar-header">
+          <span class="pillar-kicker">Pilar 04</span>
+          <h2>Red de Voces</h2>
+          <p>
+            Documentación de personajes y nodos que sostienen el ecosistema: el origen de 3TRES6 y
+            su crew fundador, colectivos como Vinilos Viajeros y sellos como Boyanza Records — con
+            fuentes públicas, sin invención.
+          </p>
+        </header>
+        <div class="pillar-empty" data-empty-state>
+          <p class="pillar-empty-label">En investigación</p>
+          <p>
+            Perfiles en curso. Cada ficha llega con entrevistas, eventos y fichas de sello
+            verificables.
           </p>
         </div>
         <div class="pillar-grid" data-pillar-list aria-live="polite"></div>
@@ -361,6 +403,7 @@
             <a href="#pillar-atlas">Atlas Vinilo</a>
             <a href="#pillar-emerging">DJs Emergentes</a>
             <a href="#pillar-culture">Cultura DJ</a>
+            <a href="#pillar-voices">Red de Voces</a>
           </div>
           <div class="footer-column">
             <h4>Síguenos</h4>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batched crawl4ai research for the three blog content pillars.
+"""Batched crawl4ai research for the blog content pillars.
 
 Mandatory stack: Docker crawl4ai (container) + local crawl4ai library.
 One process, one batch per pillar — no polling loops.
@@ -7,6 +7,7 @@ One process, one batch per pillar — no polling loops.
 Usage:
   python3 scripts/research-pillars.py                 # all pillars
   python3 scripts/research-pillars.py atlas           # one pillar
+  python3 scripts/research-pillars.py voices          # Red de Voces
   python3 scripts/research-pillars.py emerging --limit 3
 """
 
@@ -80,6 +81,23 @@ PILLARS: dict[str, list[str]] = {
         "https://www.cratediggers.com/",
         "https://www.discogs.com/",
     ],
+    "voices": [
+        "https://www.discogs.com/venue/474677-discos-paradiso/",
+        "https://www.timeout.com/barcelona/music/best-record-shops-in-barcelona",
+        "https://www.salvadiscos.com/evento/vinilos-viajeros-meets-canela-en-surco-deep-latin-spiritual-house-feat-breixo-martinez-damian-botigue-thomas-kick/",
+        "https://sesh.sx/e/516625",
+        "https://set79.com/tracklist/soundcloud.com/slow-life/slow-life-friends-podcast-028-thomas-kick",
+        "https://mixmag.es/read/yoyaku-atterriza-en-barcelona-este-offbcn-con-un-pop-up-en-bridge48-news",
+        "https://granpricevinyl.com/edicion-2024",
+        "https://www.musicis4lovers.com/boyanza-records-turn-one-with-compilation-release-interview/",
+        "https://www.theclubmap.com/2025/02/02/label-interview-boyanza/",
+        "https://ra.co/labels/20571",
+        "https://boyanzarecords.bandcamp.com/",
+        "https://boyanzarecords.bandcamp.com/music",
+        "https://www.beatport.com/label/boyanza-records/88570",
+        "https://www.insomniac.com/music/artists/rafatel/",
+        "https://soundcloud.com/boyanza_records",
+    ],
 }
 
 
@@ -133,6 +151,16 @@ async def _crawl_docker(urls: list[str], out_dir: Path, limit: int) -> list[dict
             md_text = md.get("raw") or md.get("content") or ""
         else:
             md_text = str(md or "")
+        if not md_text:
+            md_text = (
+                item.get("cleaned_html")
+                or item.get("html")
+                or item.get("fit_markdown")
+                or ""
+            )
+            if isinstance(md_text, dict):
+                md_text = md_text.get("raw") or md_text.get("content") or ""
+            md_text = str(md_text or "")
         success = bool(item.get("success", True))
         err = item.get("error") or (None if success else item.get("status") or "failed")
         if not md_text and not success:
@@ -283,7 +311,12 @@ def docker_health() -> bool:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("pillar", nargs="?", choices=["atlas", "emerging", "culture", "all"], default="all")
+    ap.add_argument(
+        "pillar",
+        nargs="?",
+        choices=["atlas", "emerging", "culture", "voices", "all"],
+        default="all",
+    )
     ap.add_argument("--limit", type=int, default=None, help="Max URLs per pillar")
     ap.add_argument(
         "--prefer",
