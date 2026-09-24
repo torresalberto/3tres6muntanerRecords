@@ -41,37 +41,67 @@
     handleDeepLink();
   }
 
-  // Deep-link support: dj-library.html#set:<setId> opens a specific set sheet
-  // (used by the Taller / Sets tool and Mapa popups). #dj:<id> opens that
-  // DJ's first set sheet. Falls back silently if the set/dj is unknown.
+  function parseDeepLink() {
+    const match = window.location.hash.match(/^#(set|dj):(.+)$/);
+    if (!match) return null;
+    const parts = match[2].split('&');
+    const target = parts.shift();
+    const params = new URLSearchParams(parts.join('&'));
+    return {
+      kind: match[1],
+      id: decodeURIComponent(target),
+      trackId: params.get('track'),
+      time: params.get('t'),
+    };
+  }
+
+  function routeTimeToTimestamp(value) {
+    if (!value || !/^\d+$/.test(value)) return value;
+    return Core.hhmm(Number(value));
+  }
+
+  function focusLinkedTrack(trackId, time) {
+    const rows = Array.from(document.querySelectorAll('#setTracklist [data-track-id]'));
+    let row = trackId ? rows.find((item) => item.dataset.trackId === trackId) : null;
+    if (!row && time) {
+      const seconds = Core.tsToSec(time);
+      row = rows.find((item) => Math.abs(Core.tsToSec(item.dataset.seek) - seconds) <= 8) || null;
+    }
+    if (!row) return;
+    rows.forEach((item) => item.classList.remove('is-linked'));
+    row.classList.add('is-linked');
+    row.scrollIntoView({ behavior: 'auto', block: 'center' });
+    row.focus({ preventScroll: true });
+  }
+
   async function handleDeepLink() {
-    const m = window.location.hash.match(/^#(set|dj):(.+)$/);
-    if (!m) return;
-    const [kind, raw] = [m[1], decodeURIComponent(m[2])];
-    if (kind === 'dj') {
-      const dj = Core.djById(raw);
+    const route = parseDeepLink();
+    if (!route) return;
+    if (route.kind === 'dj') {
+      const dj = Core.djById(route.id);
       if (!dj) return;
       const sets = await Core.setsOf(dj);
       if (!sets.length) return;
       const sleeve = document.querySelector(`.sleeve[data-dj="${CSS.escape(dj.id)}"]`);
       if (sleeve) sleeve.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      openSheet(dj.id, sets[0].id);
+      await openSheet(dj.id, sets[0].id);
       return;
     }
-    const setId = raw;
     try {
-      const set = await Core.fetchSet(setId);
+      const set = await Core.fetchSet(route.id);
       if (!set || !set.dj_id) return;
       const dj =
         Core.djById(set.dj_id) ||
-        (Core.index && Core.index.djs.find((d) => (d.sets || []).includes(setId))) ||
-        (Core.index && Core.index.djs.find((d) => d.id === setId));
+        (Core.index && Core.index.djs.find((d) => (d.sets || []).includes(route.id))) ||
+        (Core.index && Core.index.djs.find((d) => d.id === route.id));
       if (!dj) return;
       const sleeve = document.querySelector(`.sleeve[data-dj="${CSS.escape(dj.id)}"]`);
       if (sleeve) sleeve.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      openSheet(dj.id, setId);
+      const time = routeTimeToTimestamp(route.time);
+      await openSheet(dj.id, route.id, { time });
+      window.requestAnimationFrame(() => focusLinkedTrack(route.trackId, time));
     } catch (e) {
-      console.warn('Deep-link set not found:', setId);
+      console.warn('Deep-link set not found:', route.id);
     }
   }
 
@@ -247,17 +277,21 @@
     });
   }
 
-  function seekHandler(e) {
+  async function seekHandler(e) {
     const row = e.target.closest('[data-seek]');
     if (!row || !openSetId) return;
     e.preventDefault();
     const set = Core.setCache[openSetId];
     if (!set) return;
-    $('#setPlayer').innerHTML =
-      `<iframe src="${Core.seekSrc(set, row.dataset.seek)}" title="Reproductor YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    document.querySelectorAll('#setTracklist .tl-row.is-linked').forEach((item) => {
+      item.classList.remove('is-linked');
+    });
+    row.classList.add('is-linked');
+    await Core.renderPlayer(set, row.dataset.seek, true);
   }
 
-  async function openSheet(djId, preferredSetId) {
+  async function openSheet(djId, preferredSetId, options) {
+    const settings = options || {};
     const dj = Core.djById(djId);
     if (!dj) return;
     const sets = await Core.setsOf(dj);
@@ -286,10 +320,11 @@
       .querySelectorAll('.set-tab')
       .forEach((btn) => btn.addEventListener('click', () => openSheet(djId, btn.dataset.set)));
 
-    renderSetBody(activeId);
+    renderSetBody(activeId, settings);
   }
 
-  function renderSetBody(setId) {
+  function renderSetBody(setId, options) {
+    const settings = options || {};
     const set = Core.setCache[setId];
     if (!set) return;
     const total = (set.tracklist || []).length;
@@ -299,8 +334,12 @@
     $('#setMeta').innerHTML =
       Core.buildMetaChips(set) +
       (total ? `<span class="set-chip"><strong>${known}/${total}</strong> confirmados</span>` : '');
-    $('#setPlayer').innerHTML =
-      `<iframe src="${Core.seekSrc(set, (set.tracklist && set.tracklist[0] && (set.tracklist[0].timestamp || set.tracklist[0].time)) || '')}" title="Reproductor YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    const firstTime =
+      (set.tracklist &&
+        set.tracklist[0] &&
+        (set.tracklist[0].timestamp || set.tracklist[0].time)) ||
+      '';
+    Core.renderPlayer(set, settings.time || firstTime, Boolean(settings.time));
     $('#setTracklistTitle').innerHTML = `Tracklist <span>${total} tracks</span>`;
     $('#setTracklist').innerHTML = Core.buildTracklist(set);
     $('#setExtras').innerHTML = Core.buildRequested(set) + Core.buildFacts(set);
@@ -359,5 +398,6 @@
       .forEach((n, i) => n.setAttribute('data-dj', result.nodes[i].id));
   }
 
+  window.addEventListener('hashchange', handleDeepLink);
   document.addEventListener('DOMContentLoaded', init);
 })();

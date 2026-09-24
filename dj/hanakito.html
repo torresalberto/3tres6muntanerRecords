@@ -1,161 +1,16 @@
-#!/usr/bin/env node
-/**
- * build-dj-static-pages.js — Generates a full standalone /dj/<id>.html page
- * for every DJ in data/djs/index.json. Each page is pre-rendered so the grid
- * in /dj-library.html can link directly to it (faster first paint, SEO,
- * sharable URLs, and the music player keeps playing thanks to Swup).
- *
- * Why two profile file trees?
- *   - data/djs/profiles/<id>.html  : HTML FRAGMENT for inline expand (lazy)
- *   - dj/<id>.html                  : FULL STANDALONE PAGE (this script)
- *   Both share the same source data (data/djs/sets/*.json + data/djs/index.json)
- *   so the fragment is the source of truth for content; this script just wraps
- *   it in a complete <html> document with header, hero, footer, and a
- *   "related DJs" loader.
- *
- * Usage:
- *   node scripts/build-dj-static-pages.js                # build all
- *   node scripts/build-dj-static-pages.js --watch        # rebuild on changes
- */
-
-const fs = require('fs');
-const path = require('path');
-
-const ROOT = path.join(__dirname, '..');
-const DATA = path.join(ROOT, 'data', 'djs');
-const SETS = path.join(DATA, 'sets');
-const OUT = path.join(ROOT, 'dj');
-const INDEX = path.join(DATA, 'index.json');
-const CROSS = path.join(DATA, 'cross-references.json');
-
-const PLACEHOLDER_IMG =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='62' text-anchor='middle' font-size='34' font-family='monospace' font-weight='700'%3E3T6%3C/text%3E%3C/svg%3E";
-
-function jsId(s) {
-  return String(s ?? '').replace(/[^A-Za-z0-9_]/g, '_');
-}
-
-function esc(s) {
-  return String(s ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function fmtTime(ts) {
-  if (!ts) return '--:--';
-  // Accept "HH:MM:SS" or "MM:SS" or numeric seconds
-  if (/^\d+$/.test(ts)) {
-    const total = parseInt(ts, 10);
-    const h = Math.floor(total / 3600);
-    const m = Math.floor((total % 3600) / 60);
-    const s = total % 60;
-    return h
-      ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
-      : `${m}:${String(s).padStart(2, '0')}`;
-  }
-  return ts;
-}
-
-function statusBadge(status) {
-  if (status === 'confirmed') return '<span class="track-status confirmed">✓</span>';
-  if (status === 'id' || status === 'unidentified')
-    return '<span class="track-status id">ID</span>';
-  return `<span class="track-status">${esc(status || '?')}</span>`;
-}
-
-function soundcloudEmbed(audioUrl, title) {
-  if (!audioUrl) return '';
-  const params = new URLSearchParams({
-    url: audioUrl,
-    color: 'ff4d00',
-    auto_play: 'false',
-    hide_related: 'true',
-    show_comments: 'false',
-    show_user: 'true',
-    show_reposts: 'false',
-    show_teaser: 'false',
-  });
-  return `<div class="video-wrapper" style="padding-bottom:0;height:166px"><iframe src="https://w.soundcloud.com/player/?${params.toString()}" title="${esc(title)}" allow="autoplay" loading="lazy"></iframe></div>`;
-}
-
-function renderSetCard(set) {
-  const yt = set.youtube_embed_id || '';
-  const tracks = set.tracklist || [];
-  const videoBlock = yt
-    ? `<div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/${esc(yt)}" title="${esc(set.title)}"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
-      </div>`
-    : soundcloudEmbed(set.audio_provider === 'soundcloud' ? set.audio_url : '', set.title);
-  const tracklistBlock = tracks.length
-    ? `<table class="tracklist-table">
-        <thead><tr><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>
-        <tbody>${tracks
-          .map(
-            (t) => `<tr>
-              <td><span class="track-time">${esc(fmtTime(t.timestamp))}</span></td>
-              <td>${esc(t.artist || '')}</td>
-              <td>${esc(t.title || '')}</td>
-              <td>${statusBadge(t.status)}</td>
-            </tr>`
-          )
-          .join('')}</tbody>
-      </table>`
-    : '<p class="no-tracks">Tracklist being sourced...</p>';
-
-  return `<div class="set-card">
-    <div class="set-header">
-      <h3>${esc(set.title)}</h3>
-      <div class="set-meta">
-        ${set.venue ? `<span>${esc(set.venue)}</span>` : ''}
-        ${set.venue && set.date ? `<span>·</span>` : ''}
-        ${set.date ? `<span>${esc(set.date)}</span>` : ''}
-        ${set.date && set.duration_formatted ? `<span>·</span>` : ''}
-        ${set.duration_formatted ? `<span>${esc(set.duration_formatted)}</span>` : ''}
-        ${set.duration_formatted || set.date || set.venue ? `<span>·</span>` : ''}
-        <span>${tracks.length} tracks</span>
-      </div>
-    </div>
-    ${videoBlock}
-    <div class="tracklist-section">
-      <div class="section-label">Tracklist</div>
-      ${tracklistBlock}
-    </div>
-  </div>`;
-}
-
-function renderPage(dj, sets) {
-  const setCount = sets.length;
-  const trackCount = sets.reduce((s, x) => s + (x.tracklist || []).length, 0);
-  const knownCount = sets.reduce(
-    (s, x) => s + (x.tracklist || []).filter((t) => t.status === 'confirmed').length,
-    0
-  );
-  const completion = trackCount ? Math.round((knownCount / trackCount) * 100) : 0;
-
-  const heroImg = dj.image || PLACEHOLDER_IMG;
-
-  const pageUrl = `https://3tres6records.albto.me/dj/${dj.id}.html`;
-  const title = `${dj.name} | DJ Library — 3TRES6 Records`;
-  const description = `Sets completos de ${dj.name} con tracklists, IDs y datos curiosos. ${setCount} sets, ${trackCount} tracks.`;
-
-  return `<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${esc(title)}</title>
-  <meta name="description" content="${esc(description)}" />
-  <link rel="canonical" href="${esc(pageUrl)}" />
-  <meta property="og:title" content="${esc(title)}" />
-  <meta property="og:description" content="${esc(description)}" />
-  <meta property="og:url" content="${esc(pageUrl)}" />
+  <title>Hanakito | DJ Library — 3TRES6 Records</title>
+  <meta name="description" content="Sets completos de Hanakito con tracklists, IDs y datos curiosos. 1 sets, 0 tracks." />
+  <link rel="canonical" href="https://3tres6records.albto.me/dj/hanakito.html" />
+  <meta property="og:title" content="Hanakito | DJ Library — 3TRES6 Records" />
+  <meta property="og:description" content="Sets completos de Hanakito con tracklists, IDs y datos curiosos. 1 sets, 0 tracks." />
+  <meta property="og:url" content="https://3tres6records.albto.me/dj/hanakito.html" />
   <meta property="og:type" content="profile" />
-  ${heroImg && heroImg.startsWith('http') ? `<meta property="og:image" content="${esc(heroImg)}" />` : ''}<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
@@ -323,32 +178,44 @@ function renderPage(dj, sets) {
   <main data-swup>
     <section class="dj-page-hero">
       <div class="dj-page-header">
-        <img src="${esc(heroImg)}" alt="${esc(dj.name)}" class="dj-page-avatar"
-          onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'" />
+        <img src="data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;%3E%3Crect fill=&#39;%23111&#39; width=&#39;100&#39; height=&#39;100&#39;/%3E%3Ctext fill=&#39;%23ff4d00&#39; x=&#39;50&#39; y=&#39;62&#39; text-anchor=&#39;middle&#39; font-size=&#39;34&#39; font-family=&#39;monospace&#39; font-weight=&#39;700&#39;%3E3T6%3C/text%3E%3C/svg%3E" alt="Hanakito" class="dj-page-avatar"
+          onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='62' text-anchor='middle' font-size='34' font-family='monospace' font-weight='700'%3E3T6%3C/text%3E%3C/svg%3E'" />
         <div class="dj-page-info">
-          <h1>${esc(dj.name)}</h1>
+          <h1>Hanakito</h1>
           <div class="dj-page-meta">
-            ${[
-              dj.origin ? `<span>${esc(dj.origin)}</span>` : '',
-              dj.origin && dj.active_since ? `<span>·</span>` : '',
-              dj.active_since ? `<span>Activo desde ${esc(dj.active_since)}</span>` : '',
-              dj.origin || dj.active_since ? `<span>·</span>` : '',
-            ]
-              .filter(Boolean)
-              .join('\n            ')}
-            <span><strong>${setCount}</strong> set${setCount !== 1 ? 's' : ''}</span>
+            <span>Tokyo / Barcelona</span>
             <span>·</span>
-            <span><strong>${trackCount}</strong> tracks</span>
+            <span><strong>1</strong> set</span>
             <span>·</span>
-            <span><strong>${knownCount}</strong> identificados (${completion}%)</span>
+            <span><strong>0</strong> tracks</span>
+            <span>·</span>
+            <span><strong>0</strong> identificados (0%)</span>
           </div>
-          ${dj.bio ? `<p class="dj-page-bio">${esc(dj.bio)}</p>` : ''}</div>
+          </div>
       </div>
     </section>
 
     <section class="sets-section">
       <h2>▶ Sets</h2>
-      ${sets.length ? sets.map(renderSetCard).join('\n') : '<p class="no-tracks">No sets indexed yet.</p>'}
+      <div class="set-card">
+    <div class="set-header">
+      <h3>shoes-off — elliephunk &amp; Hanakito</h3>
+      <div class="set-meta">
+        <span>Refuge Worldwide Radio, Berlin</span>
+        <span>·</span>
+        <span>2026-09-12</span>
+        <span>·</span>
+        <span>59:21</span>
+        <span>·</span>
+        <span>0 tracks</span>
+      </div>
+    </div>
+    <div class="video-wrapper" style="padding-bottom:0;height:166px"><iframe src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Frefugeworldwide%2Fshoes-off-elliephunk-hanakito-12&color=ff4d00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" title="shoes-off — elliephunk &amp; Hanakito" allow="autoplay" loading="lazy"></iframe></div>
+    <div class="tracklist-section">
+      <div class="section-label">Tracklist</div>
+      <p class="no-tracks">Tracklist being sourced...</p>
+    </div>
+  </div>
     </section>
 
     <section class="related-djs">
@@ -394,18 +261,18 @@ function renderPage(dj, sets) {
 
   <script>
     // Related DJs loader — fetches cross-references and renders up to 4
-    function initRelated_${jsId(dj.id)}() {
+    function initRelated_hanakito() {
       const grid = document.getElementById('relatedGrid');
       if (!grid) return;
       fetch('../data/djs/cross-references.json')
         .then(r => r.ok ? r.json() : null)
         .then(cr => {
           if (!cr) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
-          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('${esc(dj.id)}'));
-          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('${esc(dj.id)}'));
+          const arts = (cr.shared_artists || []).filter(a => (a.djs || []).includes('hanakito'));
+          const trks = (cr.shared_tracks || []).filter(t => (t.djs || []).includes('hanakito'));
           const relatedIds = new Set();
-          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== '${esc(dj.id)}') relatedIds.add(id); }));
-          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== '${esc(dj.id)}') relatedIds.add(id); }));
+          arts.forEach(a => (a.djs || []).forEach(id => { if (id !== 'hanakito') relatedIds.add(id); }));
+          trks.forEach(t => (t.djs || []).forEach(id => { if (id !== 'hanakito') relatedIds.add(id); }));
           const ids = Array.from(relatedIds).slice(0, 6);
           if (!ids.length) { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; return; }
           return fetch('../data/djs/index.json').then(r => r.json()).then(idx => {
@@ -415,7 +282,7 @@ function renderPage(dj, sets) {
               const img = d.image || '';
               return '<a href="' + id + '.html" class="dj-card">'
                 + '<div class="dj-card-image">' + (img
-                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\\'<div class=&#92;&#92;\\&#39;dj-card-placeholder&#92;&#92;\\&#39;>3T6</div>\\'"/>'
+                    ? '<img src="' + img + '" alt="' + d.name + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=&#92;&#92;\&#39;dj-card-placeholder&#92;&#92;\&#39;>3T6</div>\'"/>'
                     : '<div class="dj-card-placeholder">3T6</div>')
                 + '</div>'
                 + '<div class="dj-card-body"><h3>' + d.name + '</h3>'
@@ -427,9 +294,9 @@ function renderPage(dj, sets) {
         })
         .catch(() => { grid.innerHTML = '<p style="color:rgba(255,255,255,0.2)">No hay conexiones documentadas aún.</p>'; });
     }
-    initRelated_${jsId(dj.id)}();
+    initRelated_hanakito();
     if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
-      window.Muntaner336.onPageView(function () { initRelated_${jsId(dj.id)}(); });
+      window.Muntaner336.onPageView(function () { initRelated_hanakito(); });
     }
   </script>
   <!-- Swup: seamless page transitions so the audio player never cuts off -->
@@ -440,62 +307,3 @@ function renderPage(dj, sets) {
   <script src="../player-init.js" defer></script>
 </body>
 </html>
-`;
-}
-
-function build() {
-  if (!fs.existsSync(INDEX)) {
-    console.error(`Missing ${INDEX}. Run scripts/build-dj-data.js first.`);
-    process.exit(1);
-  }
-  const idx = JSON.parse(fs.readFileSync(INDEX, 'utf-8'));
-  const djs = idx.djs || [];
-  if (!fs.existsSync(OUT)) fs.mkdirSync(OUT, { recursive: true });
-
-  let built = 0;
-  let skipped = 0;
-  for (const dj of djs) {
-    const sets = [];
-    for (const setId of dj.sets || []) {
-      const p = path.join(SETS, `${setId}.json`);
-      if (fs.existsSync(p)) {
-        try {
-          sets.push(JSON.parse(fs.readFileSync(p, 'utf-8')));
-        } catch (e) {
-          console.warn(`  ! ${setId}.json: ${e.message}`);
-        }
-      }
-    }
-    const html = renderPage(dj, sets);
-    const outPath = path.join(OUT, `${dj.id}.html`);
-    fs.writeFileSync(outPath, html, 'utf-8');
-    built++;
-  }
-  console.log(`Built ${built} static page(s) in ${path.relative(ROOT, OUT)}/ (${skipped} skipped)`);
-}
-
-function watch() {
-  build();
-  let debounce = null;
-  const trigger = () => {
-    clearTimeout(debounce);
-    debounce = setTimeout(() => {
-      console.log('Change detected, rebuilding...');
-      try {
-        build();
-      } catch (e) {
-        console.error('Build failed:', e.message);
-      }
-    }, 300);
-  };
-  fs.watch(DATA, { recursive: true }, (event, filename) => {
-    if (filename && !filename.includes('profiles/')) {
-      console.log(`  ${event} ${filename}`);
-      trigger();
-    }
-  });
-}
-
-const args = process.argv.slice(2);
-if (args.includes('--watch')) watch();
-else build();

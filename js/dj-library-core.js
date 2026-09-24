@@ -122,7 +122,8 @@
         const ts = t.timestamp || t.time || '';
         const label = t.label ? `<span class="tl-label">${S.esc(t.label)}</span>` : '';
         const statusClass = st === STATUS_CONFIRMED ? 'is-confirmed' : 'is-unknown';
-        return `<li class="tl-row ${statusClass}" data-seek="${S.esc(ts)}" tabindex="0" role="button" aria-label="Salta al minuto ${S.esc(ts)}: ${S.esc(t.artist)} - ${S.esc(t.title)}">
+        const trackId = t.track_id || t.id || String(t.position || i + 1);
+        return `<li class="tl-row ${statusClass}" data-seek="${S.esc(ts)}" data-track-id="${S.esc(trackId)}" tabindex="0" role="button" aria-label="Salta al minuto ${S.esc(ts)}: ${S.esc(t.artist)} - ${S.esc(t.title)}">
           <span class="tl-pos">${S.esc(t.position || i + 1)}</span>
           ${S.statusDot(st)}
           <span class="tl-artist">${S.esc(t.artist)}</span>
@@ -224,10 +225,85 @@
       .join('');
   };
 
-  S.seekSrc = function (set, ts) {
-    const sec = S.tsToSec(ts);
-    const base = `https://www.youtube-nocookie.com/embed/${set.youtube_embed_id}`;
-    return sec ? `${base}?start=${sec}&autoplay=1&rel=0` : base;
+  S.mediaProvider = function (set) {
+    if (set && set.youtube_embed_id) return 'youtube';
+    if (set && set.audio_provider === 'soundcloud' && set.audio_url) return 'soundcloud';
+    return '';
+  };
+
+  S.mediaSrc = function (set, ts, autoplay) {
+    const provider = S.mediaProvider(set);
+    if (provider === 'youtube') {
+      const sec = S.tsToSec(ts);
+      const base = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(set.youtube_embed_id)}`;
+      const params = new URLSearchParams({ rel: '0' });
+      if (sec) params.set('start', String(sec));
+      if (autoplay && sec) params.set('autoplay', '1');
+      return `${base}?${params.toString()}`;
+    }
+    if (provider === 'soundcloud') {
+      const params = new URLSearchParams({
+        url: set.audio_url,
+        color: 'ff4d00',
+        auto_play: 'false',
+        hide_related: 'true',
+        show_comments: 'false',
+        show_user: 'true',
+        show_reposts: 'false',
+        show_teaser: 'false',
+      });
+      return `https://w.soundcloud.com/player/?${params.toString()}`;
+    }
+    return '';
+  };
+
+  S.loadSoundCloudApi = function () {
+    if (window.SC && window.SC.Widget) return Promise.resolve();
+    if (S.soundCloudApiPromise) return S.soundCloudApiPromise;
+    S.soundCloudApiPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://w.soundcloud.com/player/api.js';
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    return S.soundCloudApiPromise;
+  };
+
+  S.renderPlayer = function (set, ts, autoplay) {
+    const box = document.getElementById('setPlayer');
+    if (!box) return Promise.resolve();
+    const provider = S.mediaProvider(set);
+    const src = S.mediaSrc(set, ts, autoplay);
+    if (!src) {
+      const link = document.createElement('a');
+      link.className = 'set-media-fallback';
+      link.href = (set && (set.audio_url || set.youtube_url)) || '#';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Abrir el set en su fuente';
+      box.replaceChildren(link);
+      return Promise.resolve();
+    }
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = provider === 'youtube' ? 'Reproductor YouTube' : 'Reproductor SoundCloud';
+    iframe.allow =
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    box.replaceChildren(iframe);
+    if (provider !== 'soundcloud' || !ts) return Promise.resolve();
+    return S.loadSoundCloudApi()
+      .then(() => {
+        const widget = window.SC.Widget(iframe);
+        const seek = () => {
+          widget.seekTo(S.tsToSec(ts) * 1000);
+          if (autoplay) widget.play();
+        };
+        widget.bind(window.SC.Widget.Events.READY, seek);
+      })
+      .catch(() => undefined);
   };
 
   // ---------------------------------------------------------------- toolbar

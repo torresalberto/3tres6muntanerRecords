@@ -76,8 +76,8 @@ const KEY = {
     elems: {
       '.blog-pillar': 4,
       '.blog-cat-btn': 4,
-      '#pillar-voices .pillar-card': 3,
-      '#pillar-voices .pillar-card__read': 3,
+      '#pillar-voices .pillar-card': 7,
+      '#pillar-voices .pillar-card__read': 7,
       '#blog-reader': 1,
     },
   },

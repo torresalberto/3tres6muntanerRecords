@@ -275,6 +275,37 @@ s('s05', 'DJ directions: library→card→profile→brain→crew→member', DESK
   }
 });
 
+s('s05b', 'Discoteca: timestamped track and SoundCloud deep-links', DESKTOP, async (t) => {
+  await t.goto(
+    t.base +
+      '/dj-library.html#set:e-lina-audiodise-park-bcn-2026-05-24&track=msvts-fex-remix&t=1292',
+    5000
+  );
+  await t.page.locator('#setSheet:not([hidden])').waitFor({ state: 'visible' });
+  const youtube = await t.page.locator('#setPlayer iframe').getAttribute('src');
+  const linked = await t.page
+    .locator('#setTracklist [data-track-id="msvts-fex-remix"].is-linked')
+    .count();
+  t.check(
+    (youtube || '').includes('start=1292'),
+    'E.Lina deep-link seeks YouTube cue',
+    youtube || ''
+  );
+  t.check(linked === 1, 'E.Lina track row receives linked highlight', `rows=${linked}`);
+
+  await t.goto(
+    t.base + '/dj-library.html#set:hanakito-elliephunk-shoes-off-refuge-2026-09-12',
+    5000
+  );
+  await t.page.locator('#setSheet:not([hidden])').waitFor({ state: 'visible' });
+  const soundcloud = await t.page.locator('#setPlayer iframe').getAttribute('src');
+  t.check(
+    (soundcloud || '').includes('w.soundcloud.com/player'),
+    'Hanakito set renders SoundCloud player',
+    soundcloud || ''
+  );
+});
+
 s('s06', 'Map directions: filters → popup → flyTo', DESKTOP, async (t) => {
   await t.goto(t.base + '/mapa.html', 4000);
   const markers = await t.page.locator('.leaflet-marker-icon').count();
@@ -383,7 +414,7 @@ s('s08', 'Blog: four pillar tabs render and switch', DESKTOP, async (t) => {
   await t.page.locator('.blog-cat-btn[data-pillar="voices"]').click();
   await t.page.waitForTimeout(200);
   const voices = await t.page.locator('#pillar-voices .pillar-card').count();
-  t.check(voices === 3, 'Red de Voces renders three cards', `cards=${voices}`);
+  t.check(voices === 7, 'Red de Voces renders seven cards', `cards=${voices}`);
 
   await t.page.locator('#pillar-voices .pillar-card__title').first().click();
   await t.page.locator('#blog-reader.is-open').waitFor({ state: 'visible' });
@@ -447,6 +478,64 @@ s('s08', 'Blog: four pillar tabs render and switch', DESKTOP, async (t) => {
     .locator('#guia-vinilos, #crate-digging-full, .blog-article-full')
     .count();
   t.check(olds === 0, 'Legacy articles removed', `legacy_nodes=${olds}`);
+});
+
+s('s08b', 'Blog: Red de Voces dossier media and cross-links', DESKTOP, async (t) => {
+  await t.goto(t.base + '/blog.html#pillar-voices', 2500);
+  const voices = await t.page.locator('#pillar-voices .pillar-card').count();
+  t.check(voices === 7, 'Red de Voces renders seven dossier cards', `cards=${voices}`);
+
+  const target = t.page
+    .locator('#pillar-voices .pillar-card')
+    .filter({ hasText: 'AUDIODISE' })
+    .first();
+  await target.locator('.pillar-card__title').click();
+  await t.page.locator('#blog-reader.is-open').waitFor({ state: 'visible' });
+  const details = await t.page.evaluate(() => ({
+    image: document.querySelector('[data-reader-media] img')?.naturalWidth > 0,
+    credit: (document.querySelector('.blog-reader__media figcaption')?.textContent || '').includes(
+      'Foto:'
+    ),
+    source: Boolean(document.querySelector('.blog-reader__media figcaption a')),
+    heading: Boolean(document.querySelector('.blog-reader__section-heading')),
+    quote: Boolean(document.querySelector('.blog-reader__quote')),
+    listen: document.querySelectorAll('[data-reader-listen] .reader-listen__link').length,
+    related: document.querySelectorAll('[data-reader-related] .reader-related__link').length,
+    hash: window.location.hash,
+  }));
+  t.check(details.image, 'Dossier renders its credited local image');
+  t.check(details.credit && details.source, 'Dossier image exposes credit and source link');
+  t.check(details.heading && details.quote, 'Dossier renders structured editorial blocks');
+  t.check(details.listen >= 2, 'Dossier exposes listening links', `links=${details.listen}`);
+  t.check(details.related >= 1, 'Dossier exposes related articles', `links=${details.related}`);
+  t.check(details.hash === '#article-audiodise-paraiso-audio', 'Dossier URL is shareable');
+
+  const elina = t.page.locator('[data-reader-related] [data-article-link="e-lina"]');
+  await elina.click();
+  await t.page.locator('#blog-reader.is-open').waitFor({ state: 'visible' });
+  const title = await t.page.locator('[data-reader-title]').textContent();
+  t.check(
+    (title || '').includes('E.Lina'),
+    'Related article opens without a full reload',
+    title || ''
+  );
+});
+
+s('s08c', 'Blog: dossier layout remains usable on mobile', MOBILE, async (t) => {
+  await t.goto(t.base + '/blog.html#pillar-voices', 2500);
+  const target = t.page
+    .locator('#pillar-voices .pillar-card')
+    .filter({ hasText: 'OBLICUOHIFI' })
+    .first();
+  await target.locator('.pillar-card__title').click();
+  await t.page.locator('#blog-reader.is-open').waitFor({ state: 'visible' });
+  const metrics = await t.page.evaluate(() => ({
+    overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2,
+    image: document.querySelector('[data-reader-media] img')?.naturalWidth > 0,
+    listen: document.querySelectorAll('[data-reader-listen] .reader-listen__link').length,
+  }));
+  t.check(!metrics.overflow, 'Dossier reader has no horizontal overflow');
+  t.check(metrics.image && metrics.listen >= 2, 'Mobile dossier media and links render');
 });
 
 /* ------------------------------------------------------------------ */

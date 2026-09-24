@@ -716,7 +716,10 @@ function main() {
   // Group sets by DJ
   const djSets = {};
   for (const [fileId, setData] of Object.entries(allSets)) {
-    const djId = resolveDJId(fileId, knownDJs);
+    const resolvedDjId = resolveDJId(fileId, knownDJs);
+    const djId = knownDJs.some((dj) => dj.id === resolvedDjId)
+      ? resolvedDjId
+      : setData.dj_id || resolvedDjId;
     if (!djSets[djId]) djSets[djId] = [];
     // Ensure set data has an ID
     if (!setData.id) setData.id = fileId;

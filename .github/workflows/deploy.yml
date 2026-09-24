@@ -4,7 +4,7 @@ name: Deploy Website
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -33,13 +33,6 @@ jobs:
           if ! node scripts/curate-events.js refresh 2>&1; then
             echo "::warning::curate-events refresh failed — continuing deploy with existing calendar"
           fi
-      - name: Build static DJ Library
-        # Pre-renders dj-library/index.html + page-2..N.html with inlined data
-        # and lazy YouTube embeds. Replaces the slow dynamic loader.
-        run: |
-          if ! node scripts/build-dj-library.js 2>&1; then
-            echo "::warning::build-dj-library failed — continuing deploy with old library page"
-          fi
       - name: Build DJ Brain data
         # Regenerates data/tracklists/tracklists.js, data/djs/cross-references.json,
         # data/djs/tracks/track-registry.json, data/djs/index.json from the
@@ -48,6 +41,13 @@ jobs:
         run: |
           if ! node scripts/build-dj-data.js 2>&1; then
             echo "::warning::build-dj-data failed — continuing deploy with existing compiled data"
+          fi
+      - name: Build static DJ Library
+        # Pre-renders dj-library/index.html + page-2..N.html with inlined data
+        # and lazy YouTube embeds. Replaces the slow dynamic loader.
+        run: |
+          if ! node scripts/build-dj-library.js 2>&1; then
+            echo "::warning::build-dj-library failed — continuing deploy with old library page"
           fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -77,15 +77,15 @@ jobs:
           if ! node scripts/curate-events.js refresh 2>&1; then
             echo "::warning::curate-events refresh failed — continuing deploy with existing calendar"
           fi
-      - name: Build static DJ Library
-        run: |
-          if ! node scripts/build-dj-library.js 2>&1; then
-            echo "::warning::build-dj-library failed — continuing deploy with old library page"
-          fi
       - name: Build DJ Brain data
         run: |
           if ! node scripts/build-dj-data.js 2>&1; then
             echo "::warning::build-dj-data failed — continuing deploy with existing compiled data"
+          fi
+      - name: Build static DJ Library
+        run: |
+          if ! node scripts/build-dj-library.js 2>&1; then
+            echo "::warning::build-dj-library failed — continuing deploy with old library page"
           fi
 
       - name: Install SSH key

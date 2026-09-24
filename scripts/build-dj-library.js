@@ -32,6 +32,8 @@ const DATA_DIR = path.join(ROOT, 'data', 'djs');
 const OUT_DIR = path.join(ROOT, 'dj-library');
 const PER_PAGE =
   (process.argv.find((a) => a.startsWith('--per=')) || '--per=12').split('=')[1] | 0 || 12;
+const PLACEHOLDER_IMG =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23111' width='100' height='100'/%3E%3Ctext fill='%23ff4d00' x='50' y='62' text-anchor='middle' font-family='monospace' font-weight='700'%3E3T6%3C/text%3E%3C/svg%3E";
 
 // HTML escape
 function esc(s) {
@@ -53,11 +55,32 @@ function youtubeEmbed(videoId, title) {
   if (!videoId) return '';
   const safe = esc(title);
   const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-  // Use srcdoc trick: thumbnail with play button overlay
   return `<div class="yt-lazy" data-vid="${esc(videoId)}" role="button" tabindex="0" aria-label="Play ${safe}">
     <img src="${thumb}" alt="${safe}" loading="lazy" decoding="async" />
     <div class="yt-play-btn">▶</div>
   </div>`;
+}
+
+function soundcloudEmbed(audioUrl, title) {
+  if (!audioUrl) return '';
+  const params = new URLSearchParams({
+    url: audioUrl,
+    color: 'ff4d00',
+    auto_play: 'false',
+    hide_related: 'true',
+    show_comments: 'false',
+    show_user: 'true',
+    show_reposts: 'false',
+    show_teaser: 'false',
+  });
+  return `<div style="padding:16px;background:#111"><iframe src="https://w.soundcloud.com/player/?${params.toString()}" title="${esc(title)}" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" loading="lazy"></iframe></div>`;
+}
+
+function mediaEmbed(set) {
+  return (
+    youtubeEmbed(set.youtube_embed_id, set.title) ||
+    soundcloudEmbed(set.audio_provider === 'soundcloud' ? set.audio_url : '', set.title)
+  );
 }
 
 function tracklistRows(tracks) {
@@ -106,7 +129,7 @@ function renderDJSection(dj, sets) {
         </div>
         <a href="dj/${esc(dj.id)}.html" class="set-permalink">View profile →</a>
       </div>
-      ${youtubeEmbed(set.youtube_embed_id, set.title)}
+      ${mediaEmbed(set)}
     </div>
     <div class="tracklist-section">
       <div class="section-label">Tracklist (${(set.tracklist || []).length} tracks)</div>
@@ -121,7 +144,7 @@ function renderDJSection(dj, sets) {
     <section class="dj-profile-section" id="dj-${esc(dj.id)}">
       <div class="dj-profile-card">
         <div class="dj-profile-header">
-          <img src="${esc(dj.image || '')}" alt="${esc(dj.name)}" class="dj-avatar" loading="lazy" decoding="async" onerror="this.style.opacity=0.3" />
+          <img src="${esc(dj.image || PLACEHOLDER_IMG)}" alt="${esc(dj.name)}" class="dj-avatar" loading="lazy" decoding="async" onerror="this.style.opacity=0.3" />
           <div class="dj-info">
             <h2>${esc(dj.name)}</h2>
             <div class="dj-meta">

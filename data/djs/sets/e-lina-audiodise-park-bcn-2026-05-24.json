@@ -1,0 +1,100 @@
+{
+  "id": "e-lina-audiodise-park-bcn-2026-05-24",
+  "dj_id": "e-lina",
+  "title": "E.LINA | AUDIODISE PARK (BCN)",
+  "venue": "Audiodise Park, Montjuïc, Barcelona",
+  "date": "2026-05-24",
+  "youtube_url": "https://www.youtube.com/watch?v=zs0a6DhPRtM",
+  "youtube_embed_id": "zs0a6DhPRtM",
+  "duration_minutes": 115,
+  "duration_formatted": "1:55:32",
+  "view_count": 0,
+  "channel": "AUDIODISE",
+  "genres": [
+    "House",
+    "Deep House"
+  ],
+  "tracks_identified": 1,
+  "tracks_total": 1,
+  "tracklist": [
+    {
+      "position": 1,
+      "track_id": "msvts-fex-remix",
+      "timestamp": "19:50",
+      "time": "19:50",
+      "artist": "Mike Dunn, Victor Simonelli & Luis Radio",
+      "title": "Nothing Stays the Same (F.E.X. Remix)",
+      "label": "Systematic Recordings",
+      "status": "confirmed",
+      "notes": "ID confirmado por fingerprint de audio a las 21:32 y 24:00; crossover corroborado con Shazam, Beatport y Discogs. Cue aproximado."
+    }
+  ],
+  "most_requested_ids": [
+    {
+      "timestamp": "27:27",
+      "request_count": 1,
+      "sample_comments": [
+        "27:27 🔥🔥"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "31:00",
+      "request_count": 1,
+      "sample_comments": [
+        "ahhhhh delicious ID min 31 someone?"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "38:00",
+      "request_count": 1,
+      "sample_comments": [
+        "What is the track playing at 38 minutes into the mix please?"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:03:00",
+      "request_count": 1,
+      "sample_comments": [
+        "1:03:00",
+        "Candidato de comunidad: Snoozin' B — My Speaking Voice"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:13:13",
+      "request_count": 1,
+      "sample_comments": [
+        "What is the record playing at 1:13:13 into the mix please?"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "1:50:50",
+      "request_count": 1,
+      "sample_comments": [
+        "What is the last track? I beg please.",
+        "Candidato de comunidad: Seuil — Late Call"
+      ],
+      "status": "unidentified"
+    },
+    {
+      "timestamp": "00:00",
+      "request_count": 1,
+      "sample_comments": [
+        "What is the opening tune?"
+      ],
+      "status": "unidentified"
+    }
+  ],
+  "recheck_after": "2026-10-07",
+  "curious_facts": {
+    "total_comments": 25,
+    "confirmed_tracks": 1,
+    "unidentified_tracks": 7,
+    "tracklist_source": "Shazam fingerprint + public comments",
+    "audio_upload_note": "AUDIODISE warns that uploads have low audio and are not made for club use."
+  }
+}

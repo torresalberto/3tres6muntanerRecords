@@ -33,6 +33,21 @@ function esc(s) {
     .replace(/'/g, '&#39;');
 }
 
+function soundcloudEmbed(audioUrl, title) {
+  if (!audioUrl) return '';
+  const params = new URLSearchParams({
+    url: audioUrl,
+    color: 'ff4d00',
+    auto_play: 'false',
+    hide_related: 'true',
+    show_comments: 'false',
+    show_user: 'true',
+    show_reposts: 'false',
+    show_teaser: 'false',
+  });
+  return `<div class="set-audio"><iframe src="https://w.soundcloud.com/player/?${params.toString()}" title="${esc(title)}" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" loading="lazy"></iframe></div>`;
+}
+
 function renderSetBlock(set) {
   const tracks = set.tracklist || [];
   const ytId = set.youtube_embed_id || '';
@@ -40,10 +55,10 @@ function renderSetBlock(set) {
     ? `<div class="set-video" data-yt-id="${esc(ytId)}" data-yt-title="${esc(set.title)}">
          <img src="${YT_THUMB(ytId)}" alt="${esc(set.title)}" loading="lazy" />
          <button type="button" class="yt-play-btn" aria-label="Play ${esc(set.title)}">
-           <svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74a8 8 0 0 0-5.64-5.66C55.85.7 34 .7 34 .7S12.15.7 7.12 2.08A8 8 0 0 0 1.48 7.74 80 80 0 0 0 0 24a80 80 0 0 0 1.48 16.26 8 8 0 0 0 5.64 5.66C12.15 47.3 34 47.3 34 47.3s21.85 0 26.88-1.38a8 8 0 0 0 5.64-5.66A80 80 0 0 0 68 24a80 80 0 0 0-1.48-16.26z" fill="#f00"/><path d="M27 34V14l18 10z" fill="#fff"/></svg>
+           <svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74a8 8 0 0 0-5.64-5.66C55.85.7 34 .7 34 .7S12.15.7 7.12 2.08A8 8 0 0 0 1.48 7.74 80 80 0 0 0 0 24a8 8 0 0 0 1.48 16.26 8 8 0 0 0 5.64 5.66C12.15 47.3 34 47.3 34 47.3s21.85 0 26.88-1.38a8 8 0 0 0 5.64-5.66A80 80 0 0 0 68 24a8 8 0 0 0-1.48-16.26z" fill="#f00"/><path d="M27 34V14l18 10z" fill="#fff"/></svg>
          </button>
        </div>`
-    : '';
+    : soundcloudEmbed(set.audio_provider === 'soundcloud' ? set.audio_url : '', set.title);
   const tracklistBlock = tracks.length
     ? `<table class="tracklist-table">
          <thead><tr><th>#</th><th>Time</th><th>Artist</th><th>Title</th><th>Status</th></tr></thead>

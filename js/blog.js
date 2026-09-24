@@ -68,6 +68,13 @@
     let readerHideTimer = 0;
     let panelAnimationTimer = 0;
 
+    reader.addEventListener('click', (event) => {
+      const link = event.target.closest('a[data-article-link]');
+      if (!link || !reader.contains(link)) return;
+      event.preventDefault();
+      openReader(link.dataset.articleLink, { trigger: link });
+    });
+
     const reducedMotion = () =>
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -143,6 +150,116 @@
       );
     }
 
+    function renderCardMedia(post) {
+      if (!post.image || !post.image.src) return '';
+      return (
+        '<figure class="pillar-card__media"><img src="' +
+        escapeHtml(post.image.src) +
+        '" alt="' +
+        escapeHtml(post.image.alt || '') +
+        '" width="' +
+        escapeHtml(post.image.width || '') +
+        '" height="' +
+        escapeHtml(post.image.height || '') +
+        '" loading="lazy" decoding="async" /></figure>'
+      );
+    }
+
+    function renderReaderMedia(post) {
+      if (!post.image || !post.image.src) return '';
+      const source = post.image.source || {};
+      const sourceLink = source.href
+        ? '<a href="' +
+          escapeHtml(source.href) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(source.label || 'Ver fuente') +
+          '<span aria-hidden="true">↗</span></a>'
+        : '';
+      return (
+        '<figure class="blog-reader__media"><img src="' +
+        escapeHtml(post.image.src) +
+        '" alt="' +
+        escapeHtml(post.image.alt || '') +
+        '" width="' +
+        escapeHtml(post.image.width || '') +
+        '" height="' +
+        escapeHtml(post.image.height || '') +
+        '" loading="eager" decoding="async" /><figcaption><span>' +
+        escapeHtml(post.image.credit ? 'Foto: ' + post.image.credit : '') +
+        '</span>' +
+        sourceLink +
+        '</figcaption></figure>'
+      );
+    }
+
+    function renderBodyBlock(block) {
+      if (typeof block === 'string') return '<p>' + escapeHtml(block) + '</p>';
+      if (!block || typeof block !== 'object') return '';
+      if (block.type === 'heading') {
+        return '<h3 class="blog-reader__section-heading">' + escapeHtml(block.text || '') + '</h3>';
+      }
+      if (block.type === 'quote') {
+        return (
+          '<blockquote class="blog-reader__quote"><p>' +
+          escapeHtml(block.text || '') +
+          '</p>' +
+          (block.cite ? '<cite>' + escapeHtml(block.cite) + '</cite>' : '') +
+          '</blockquote>'
+        );
+      }
+      if (block.type === 'paragraph') return '<p>' + escapeHtml(block.text || '') + '</p>';
+      return '';
+    }
+
+    function renderListen(post) {
+      const items = post.listen || [];
+      if (!items.length) return '';
+      return (
+        '<section class="reader-listen"><h3>Escucha y cruza</h3><div class="reader-listen__list">' +
+        items
+          .map((item) => {
+            const external = item.kind === 'external' || /^https?:/i.test(item.href || '');
+            const attrs = external ? 'target="_blank" rel="noopener noreferrer"' : 'data-no-swup';
+            return (
+              '<a class="reader-listen__link" href="' +
+              escapeHtml(item.href || '#') +
+              '" ' +
+              attrs +
+              '><span class="reader-listen__label">' +
+              escapeHtml(item.label || '') +
+              '</span><span class="reader-listen__note">' +
+              escapeHtml(item.note || '') +
+              '</span><span class="reader-listen__arrow" aria-hidden="true">↗</span></a>'
+            );
+          })
+          .join('') +
+        '</div></section>'
+      );
+    }
+
+    function renderRelated(post) {
+      const items = (post.related || []).map((id) => findArticle(id)).filter(Boolean);
+      if (!items.length) return '';
+      return (
+        '<section class="reader-related"><h3>Seguir la red</h3><div class="reader-related__grid">' +
+        items
+          .map(
+            (item) =>
+              '<a class="reader-related__link" href="#article-' +
+              encodeURIComponent(item.post.id) +
+              '" data-article-link="' +
+              escapeHtml(item.post.id) +
+              '"><span>' +
+              escapeHtml(item.post.title) +
+              '</span><small>' +
+              escapeHtml(PILLAR_LABELS[item.pillar]) +
+              '</small></a>'
+          )
+          .join('') +
+        '</div></section>'
+      );
+    }
+
     function renderIndexCard(post, index) {
       const sourceCount = post.sources ? post.sources.length : 0;
       const articleHash = '#article-' + encodeURIComponent(post.id);
@@ -169,6 +286,7 @@
         '</p>' +
         '</div>' +
         '<div class="pillar-card__aside">' +
+        renderCardMedia(post) +
         renderStats(post.stats, 'pillar-card__stats') +
         '<div class="pillar-card__footer"><span>' +
         sourceCount +
@@ -297,8 +415,13 @@
         String(PILLARS.indexOf(result.pillar) + 1).padStart(2, '0') +
         ' / ' +
         pillarLabel;
+      const media = reader.querySelector('[data-reader-media]');
+      if (media) {
+        media.innerHTML = renderReaderMedia(post);
+        media.hidden = !post.image;
+      }
       reader.querySelector('[data-reader-body]').innerHTML = (post.body || [])
-        .map((paragraph) => '<p>' + escapeHtml(paragraph) + '</p>')
+        .map(renderBodyBlock)
         .join('');
       reader.querySelector('[data-reader-stats]').innerHTML = renderStats(
         post.stats,
@@ -321,6 +444,16 @@
         .join('');
       const sourcesWrap = reader.querySelector('[data-reader-sources-wrap]');
       if (sourcesWrap) sourcesWrap.hidden = !post.sources || !post.sources.length;
+      const listen = reader.querySelector('[data-reader-listen]');
+      if (listen) {
+        listen.innerHTML = renderListen(post);
+        listen.hidden = !post.listen || !post.listen.length;
+      }
+      const related = reader.querySelector('[data-reader-related]');
+      if (related) {
+        related.innerHTML = renderRelated(post);
+        related.hidden = !post.related || !post.related.length;
+      }
       page.querySelectorAll('[data-reader-close]').forEach((link) => {
         link.href = '#pillar-' + result.pillar;
       });

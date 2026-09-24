@@ -726,6 +726,19 @@ a.set-chip-link:hover {
 .tl-row:hover {
   transform: translateX(3px);
 }
+.tl-row.is-linked {
+  background: var(--d-primary-dim);
+  box-shadow: inset 3px 0 0 var(--d-primary);
+}
+.set-media-fallback {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--d-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
 .tl-pos {
   font-family: var(--d-mono);
   font-size: 0.72rem;
