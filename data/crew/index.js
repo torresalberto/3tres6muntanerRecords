@@ -148,7 +148,7 @@ function renderCrewWall() {
     return `
     <figure class="${crewTileClass(ig)}" style="aspect-ratio:${ig.w} / ${ig.h}">
       <span class="crew-tile-idx">${idx}</span>
-      <img src="${crewImageSrc(CREW_MEMBERS[0], ig)}" alt="${ig.alt}" width="${ig.w}" height="${ig.h}" loading="lazy" decoding="async" />
+      <img src="${crewImageSrc(CREW_MEMBERS[0], ig)}" alt="${ig.alt}" width="${ig.w}" height="${ig.h}" decoding="async" />
     </figure>`;
   }).join('');
 }
