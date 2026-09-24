@@ -306,6 +306,107 @@ s('s05b', 'Discoteca: timestamped track and SoundCloud deep-links', DESKTOP, asy
   );
 });
 
+s('s05c', 'Crew redesign: kinetic hero, wall archive and grain', DESKTOP, async (t) => {
+  await t.goto(t.base + '/crew.html', 3400);
+
+  const hero = await t.page.evaluate(() => {
+    const l1 = document.querySelector('.crew-title-l1');
+    const cs = l1 ? getComputedStyle(l1) : null;
+    return {
+      visible: !!cs && parseFloat(cs.opacity) > 0.9,
+      chars: document.querySelectorAll('.crew-title .char').length,
+      boot: document.documentElement.classList.contains('crew-boot'),
+    };
+  });
+  t.check(hero.visible && !hero.boot, 'Hero reveals after intro', `boot=${hero.boot}`);
+  t.check(hero.chars >= 5, 'SplitText splits the giant title', `chars=${hero.chars}`);
+
+  const grid = await t.page.evaluate(() => {
+    const g = document.getElementById('crewGrid');
+    const first = g && g.firstElementChild;
+    const a = first && first.querySelector('a[href]');
+    return {
+      kids: g ? g.children.length : 0,
+      card: !!(first && first.classList.contains('dj-card')),
+      href: a ? a.getAttribute('href') : '',
+    };
+  });
+  t.check(
+    grid.kids > 0 && grid.card && /^crew\/d-mfrutis\/?/.test(grid.href),
+    'Dossier renders in #crewGrid with member link',
+    `kids=${grid.kids} card=${grid.card} href=${grid.href}`
+  );
+
+  const wall = await t.page.evaluate(() => document.querySelectorAll('#crewWall img').length);
+  t.check(wall === 21, 'The Wall renders all 21 archive photos', `imgs=${wall}`);
+
+  const grain = await t.page.evaluate(() => {
+    const c = document.getElementById('crewGrain');
+    if (!c) return { present: false, ok: false };
+    let gl = null;
+    try {
+      gl = c.getContext('webgl');
+    } catch (e) {
+      gl = null;
+    }
+    return {
+      present: true,
+      ok: !!gl || document.body.classList.contains('crew-no-webgl'),
+      fallback: document.body.classList.contains('crew-no-webgl'),
+    };
+  });
+  t.check(
+    grain.present && grain.ok,
+    'Grain overlay active (WebGL or CSS fallback)',
+    `fallback=${grain.fallback}`
+  );
+
+  const counters = await t.page.evaluate(() =>
+    Array.from(document.querySelectorAll('[data-count]')).map((e) => e.textContent)
+  );
+  t.check(
+    counters.join(',') === '21,3,10',
+    'Stat counters settle on final values',
+    counters.join(',')
+  );
+
+  await t.page.evaluate(() => {
+    const el = document.querySelector('.crew-signals');
+    if (el) el.scrollIntoView({ block: 'start' });
+  });
+  await t.page.waitForTimeout(1600);
+
+  const picks = await t.page.evaluate(() => document.querySelectorAll('.crew-pick').length);
+  t.check(picks >= 10, 'Vinyl picks render from inventory data', `picks=${picks}`);
+
+  const slots = await t.page.evaluate(() => document.querySelectorAll('.crew-slot').length);
+  t.check(slots === 2, 'Growth slots render', `slots=${slots}`);
+
+  const motion = await t.page.evaluate(() => ({
+    triggers: typeof ScrollTrigger !== 'undefined' ? ScrollTrigger.getAll().length : -1,
+    gsap: typeof gsap !== 'undefined',
+  }));
+  t.check(
+    motion.gsap && motion.triggers > 0,
+    'ScrollTrigger choreography is active',
+    `gsap=${motion.gsap} triggers=${motion.triggers}`
+  );
+
+  const badConsole = t.cap.console.filter((m) =>
+    /crew|gsap|SplitText|WebGL|shader/i.test(String(m))
+  );
+  t.check(
+    t.cap.pageErrors.length === 0,
+    'No uncaught page errors',
+    t.cap.pageErrors.join('; ') || 'none'
+  );
+  t.check(
+    badConsole.length === 0,
+    'No crew/GSAP/WebGL console errors',
+    badConsole.slice(0, 3).join('; ') || 'none'
+  );
+});
+
 s('s06', 'Map directions: filters → popup → flyTo', DESKTOP, async (t) => {
   await t.goto(t.base + '/mapa.html', 4000);
   const markers = await t.page.locator('.leaflet-marker-icon').count();

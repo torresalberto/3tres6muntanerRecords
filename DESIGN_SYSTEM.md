@@ -6,20 +6,20 @@ Herramientas (Taller), Mapa, Crew, Neural.
 
 ## Tokens
 
-| Token          | Value                     | Use                                        |
-| -------------- | ------------------------- | ------------------------------------------ |
-| `--primary`    | `#ff4d00`                 | accent, active states, catalog numbers     |
-| `--bg`         | `#0a0a0a`                 | page background                            |
-| `--surface`    | `#111` / `#141414`        | cards, panels, rails                       |
-| `--success`    | `#00ff88`                 | ✓ confirmed / verified / "probado"         |
-| `--yellow`     | `#f5c518`                 | 🔥 crowd-requested / picks / alerts        |
-| `--text-dim`   | `rgba(255,255,255,.55)`   | secondary text                             |
-| `--text-faint` | `rgba(255,255,255,.32)`   | tertiary text                              |
-| `--line`       | `rgba(255,255,255,.08)`   | hairlines, borders                         |
-| Font UI        | Space Grotesk             | body, titles                               |
+| Token          | Value                     | Use                                          |
+| -------------- | ------------------------- | -------------------------------------------- |
+| `--primary`    | `#ff4d00`                 | accent, active states, catalog numbers       |
+| `--bg`         | `#0a0a0a`                 | page background                              |
+| `--surface`    | `#111` / `#141414`        | cards, panels, rails                         |
+| `--success`    | `#00ff88`                 | ✓ confirmed / verified / "probado"           |
+| `--yellow`     | `#f5c518`                 | 🔥 crowd-requested / picks / alerts          |
+| `--text-dim`   | `rgba(255,255,255,.55)`   | secondary text                               |
+| `--text-faint` | `rgba(255,255,255,.32)`   | tertiary text                                |
+| `--line`       | `rgba(255,255,255,.08)`   | hairlines, borders                           |
+| Font UI        | Space Grotesk             | body, titles                                 |
 | Font reading   | Newsreader                | long-form article body and editorial display |
-| Font mono      | Space Mono                | catalog numbers, timestamps, labels, specs |
-| Radius         | 8–14px cards, 999px chips |                                            |
+| Font mono      | Space Mono                | catalog numbers, timestamps, labels, specs   |
+| Radius         | 8–14px cards, 999px chips |                                              |
 
 ## Signature components
 
@@ -46,6 +46,16 @@ Herramientas (Taller), Mapa, Crew, Neural.
 - **El Hilo graph** — D3 force layout (`js/dj-library-core.js →
 DJCore.initGraph`): nodes sized by connections, links weighted by shared
   tracks/artists, genre filters, tooltips.
+- **Crew kinetic hero** — mono kicker scramble, giant split-title
+  (`EL` solid / `CREW` stroked), cursor-reactive chars, stat counters,
+  boot-hide with a 2.5s safety reveal.
+- **The Wall** — pinned horizontal ScrollTrigger scrub over the crew's photo
+  archive (native snap-scroll ≤768px); mono index chips per tile.
+- **WebGL grain** — one raw-WebGL canvas (`#crewGrain`) driven by time + scroll
+  velocity; SVG-noise CSS fallback via `.crew-no-webgl`; static under
+  `prefers-reduced-motion`.
+- **Dossier card / growth slots** — editorial member spread inside `#crewGrid`
+  (QA contract) and dashed "slot" ghost cards for future members.
 
 ## Page chrome
 
@@ -150,18 +160,24 @@ Rules:
   venue chip)
 - ✅ Blog — redone in this system (editorial index + light long-form reader,
   keyboard tabs, deep links, progress and reduced-motion support)
-- 🚧 Crew — next
+- ✅ Crew — redone in this system (kinetic brutalist hero + SplitText/cursor
+  type, founder dossier in `#crewGrid`, 21-photo Wall scrub, WebGL grain with
+  CSS fallback, growth slots, `s05c` QA coverage; swup arrivals inject
+  `css/crew.css` + GSAP + `data/crew/index.js` + `js/crew.js` via
+  `js/swup-init.js`)
 - 🚧 Neural — next
 
 ## Known gaps / learnings (from past passes)
 
 - **swup page-init gap:** only `blog.html`, `index.html`, `product.html` and
   `toolhub/` load `swup-init.js`. Navigations _into_ `dj-library.html`,
-  `crew.html`, `mapa.html`, `3d-brain.html` from a swup page swap the content
-  without re-running those pages' scripts. Until those sections register
-  `window.Muntaner336.onPageView` re-inits, links that MUST fully initialize a
-  target section add `data-no-swup` (the Taller Sets tool does this for its
-  deep links). Revisit in the Mapa/Crew/Neural passes.
+  `mapa.html`, `3d-brain.html` from a swup page swap the content without
+  re-running those pages' scripts — those links still need `data-no-swup`
+  until they register a re-init. **Crew is fixed:** `js/swup-init.js` injects
+  `css/crew.css` (on `visit:start`) + GSAP/ScrollTrigger/SplitText +
+  `data/crew/index.js` + `js/crew.js` on crew arrivals, and both crew scripts
+  register `window.Muntaner336.onPageView` so every later arrival re-renders
+  and re-animates idempotently (`gsap.context().revert()` on teardown).
 - **Top-level `const` data files** (`HardwareDB`, `MusicDB`, `DJ_SETS`, …) are
   NOT on `window`. Check with `typeof X === 'undefined'`, never
   `window.X`. (Bite that cost two fixes in the Taller pass.)

@@ -5,6 +5,7 @@ Vinyl resale business website. Pure HTML/CSS/JS. Barcelona-sourced records → M
 **Parent project context:** See `../CLAUDE.md` for business rules, pricing, and strategy.
 
 ## Active Skills
+
 - `frontend-design` — UI improvements and layout
 - `ui-ux-pro-max` — UX and design decisions
 - `gsap-skills` — scroll animations and transitions
@@ -30,6 +31,7 @@ not scraped automatically.
 - **Data source (source of truth):** `data/venues/index.json` — `venues[]` + `cities[]`.
 
 ### Community events layer (calendario vivo)
+
 Aside from the curated pins, the map renders a **live events overlay** from the same feed the
 homepage calendar uses — the "comunidad" feature:
 
@@ -56,6 +58,7 @@ homepage calendar uses — the "comunidad" feature:
   on the store host). Create the key: SSH in and `cat <docroot>/data/events/live/admin.key`.
 
 ### Adding a venue
+
 Edit `data/venues/index.json` following the existing schema:
 
 ```json
@@ -78,12 +81,13 @@ Edit `data/venues/index.json` following the existing schema:
   anymore (the 🔊 soundsystem row and rail chip were removed). Keep them for curation context.
 
 - `city` must match an entry in `cities[]` (that creates the city's map panel
-  + drives the fit center/zoom).
+  - drives the fit center/zoom).
 - Verify addresses/coordinates (OpenStreetMap Nominatim is the usual source) — approximate pins
   are worse than no pin. Update `cities[].center/zoom` when a city's spread grows.
 - Keep notes in Spanish, brief, and describe the sound, not the business.
 
 ### Cross-links with the Discoteca (DJ Library)
+
 - **Mapa popup → Discoteca:** popups render "DJs que tocaron aquí" + "Sets en este club →"
   by matching the curated venue name against `venue_networks` in
   `data/djs/cross-references.json` (distinctive-token matching; generic words like
@@ -95,10 +99,11 @@ Edit `data/venues/index.json` following the existing schema:
   adding a curated venue (key = normalized set venue string).
 
 ### Gotchas
+
 - The Leaflet CSS/JS `<link>`/`<script>` on `mapa.html` have strict SRI `integrity`
   hashes — same for the MapLibre GL + `@maplibre/maplibre-gl-leaflet` includes. If you
   bump any version, recompute all hashes (a wrong hash silently blocks the asset).
-- **No swup on mapa.html** on purpose: it is a full-load section. Links *into* it from
+- **No swup on mapa.html** on purpose: it is a full-load section. Links _into_ it from
   swup-enabled pages (index, blog, product, toolhub) carry `data-no-swup` so its scripts
   always run.
 - Venue links (Instagram / RA / website) are rendered conditionally — a venue with no links is fine.
@@ -110,15 +115,15 @@ Edit `data/venues/index.json` following the existing schema:
 To extract the tracklist of a DJ set into `data/djs/sets/*.json`, follow the
 `dj-tracklist-extraction` skill (`.agents/skills/dj-tracklist-extraction/SKILL.md`),
 the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
-  `scripts/extract-tracklists-v2.py`. Covers all comment formats (timestamped,
-  numbered, ID requests), descriptions, owner/pinned boosts, external cross-checks,
-  and honest incomplete-set handling (`recheck_after`).
+`scripts/extract-tracklists-v2.py`. Covers all comment formats (timestamped,
+numbered, ID requests), descriptions, owner/pinned boosts, external cross-checks,
+and honest incomplete-set handling (`recheck_after`).
 
 ## DJ Library / Discoteca (canonical) + house design system
 
 - **Winner of the A/B:** "Discoteca 3TRES6" (`dj-library.html` + `css/dj-library.css`
-  + `js/dj-library-core.js` + `js/dj-library.js`). The runner-up "Cabina" is
-  archived (not linked) at `experiments/`.
+  - `js/dj-library-core.js` + `js/dj-library.js`). The runner-up "Cabina" is
+    archived (not linked) at `experiments/`.
 - **`DESIGN_SYSTEM.md`** is the house style for all content sections (tokens,
   signature components, internal-linking conventions). Read it before touching
   any section.
@@ -129,7 +134,7 @@ the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
   see `DESIGN_SYSTEM.md`
   "Known gaps") · ✅ Mapa (hero removed — map-first layout, Discoteca-style
   rail, keyless dark basemap, `#venue:` deep links + popup↔Discoteca
-  cross-links) · 🚧 Crew · 🚧 Neural. Each deploys + is smoke-tested before the next.
+  cross-links) · ✅ Crew · 🚧 Neural. Each deploys + is smoke-tested before the next.
 
 <!-- autoskills:start -->
 

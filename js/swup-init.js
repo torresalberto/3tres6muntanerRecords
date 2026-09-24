@@ -67,7 +67,74 @@
   })();
 
   function isBlogPath(path) {
-    return /\/blog\.html$/.test(path) || path === '/blog/' || /\/blog$/.test(path);
+    return /\/blog\.html$/.test(path) || path === '/blog/' || path === '/blog';
+  }
+
+  function isCrewPath(path) {
+    return /\/crew\.html$/.test(path) || path === '/crew/' || path === '/crew';
+  }
+
+  function hasScript(part) {
+    return !!document.querySelector('script[src*="' + part + '"]');
+  }
+
+  function hasStylesheet(part) {
+    return !!document.querySelector('link[href*="' + part + '"]');
+  }
+
+  function ensureStylesheet(href, part) {
+    if (hasStylesheet(part)) return;
+    var el = document.createElement('link');
+    el.rel = 'stylesheet';
+    el.href = href;
+    document.head.appendChild(el);
+  }
+
+  function ensureScriptSequence(urls, i) {
+    if (i >= urls.length) return;
+    if (hasScript(urls[i].part)) {
+      ensureScriptSequence(urls, i + 1);
+      return;
+    }
+    var s = document.createElement('script');
+    s.src = SITE_BASE + urls[i].src;
+    s.defer = true;
+    s.onload = function () {
+      ensureScriptSequence(urls, i + 1);
+    };
+    s.onerror = function () {
+      ensureScriptSequence(urls, i + 1);
+    };
+    document.head.appendChild(s);
+  }
+
+  var crewAssetsLoading = false;
+
+  function ensureCrewAssets() {
+    ensureStylesheet(SITE_BASE + 'css/crew.css?v=1', 'css/crew.css');
+    if (crewAssetsLoading) return;
+    var seq = [
+      { src: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js', part: '/gsap@' },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
+        part: '/ScrollTrigger.min.js',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js',
+        part: '/SplitText.min.js',
+      },
+      { src: 'data/crew/index.js', part: 'data/crew/index.js' },
+      { src: 'js/crew.js', part: 'js/crew.js' },
+    ];
+    if (
+      seq.every(function (u) {
+        return hasScript(u.part);
+      })
+    ) {
+      return;
+    }
+    crewAssetsLoading = true;
+    ensureScriptSequence(seq, 0);
   }
 
   function ensureAsset(href, tag) {
@@ -132,6 +199,10 @@
       ensureBlogCss();
       ensureBlogJs();
     }
+    // Crew page: pull in crew CSS + GSAP stack + data + motion layer.
+    if (isCrewPath(window.location.pathname)) {
+      ensureCrewAssets();
+    }
     viewHandlers.forEach(function (handler) {
       try {
         handler(document);
@@ -151,7 +222,10 @@
   if (swup.hooks && typeof swup.hooks.on === 'function') {
     swup.hooks.on('visit:start', function (visit) {
       var url = visit && visit.to && visit.to.url ? visit.to.url : '';
-      if (url && isBlogPath(String(url).split('?')[0])) ensureBlogCss();
+      if (!url) return;
+      var path = String(url).split('?')[0].split('#')[0];
+      if (isBlogPath(path)) ensureBlogCss();
+      if (isCrewPath(path)) ensureStylesheet(SITE_BASE + 'css/crew.css?v=1', 'css/crew.css');
     });
   }
 

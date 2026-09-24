@@ -10,19 +10,26 @@
     />
     <link rel="canonical" href="https://3tres6records.albto.me/crew.html" />
 
+    <script>
+      document.documentElement.classList.add('crew-boot');
+      setTimeout(function () {
+        document.documentElement.classList.remove('crew-boot');
+      }, 2500);
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
       onload="this.rel = 'stylesheet'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
       />
     </noscript>
 
@@ -30,107 +37,27 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/blog.css" />
     <link rel="stylesheet" href="css/dj-library.css?v=3" />
+    <link rel="stylesheet" href="css/crew.css?v=1" />
 
-    <style>
-      /* Crew hero — align with dj-page-hero orange/black language */
-      .crew-hero {
-        position: relative;
-        padding: 6.5rem 2rem 3.5rem;
-        background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0a 55%, #0f0f0f 100%);
-        overflow: hidden;
-        text-align: center;
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "d.mfrutis",
+        "alternateName": "Frutis",
+        "jobTitle": "Piloto & Fundador",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "3TRES6 Records"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Barcelona",
+          "addressCountry": "ES"
+        },
+        "sameAs": ["https://instagram.com/d.mfrutis", "https://soundcloud.com/d_frutis"]
       }
-      .crew-hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, transparent, #ff4d00, transparent);
-      }
-      .crew-badge {
-        display: inline-block;
-        padding: 0.4rem 1rem;
-        border-radius: 999px;
-        background: rgba(255, 77, 0, 0.12);
-        border: 1px solid rgba(255, 77, 0, 0.35);
-        color: #ff9100;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        margin-bottom: 1.25rem;
-      }
-      .crew-title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 1rem;
-        line-height: 1.1;
-      }
-      .crew-subtitle {
-        color: rgba(255, 255, 255, 0.6);
-        max-width: 640px;
-        margin: 0 auto;
-        line-height: 1.7;
-        font-size: 1.05rem;
-      }
-
-      /* Search input — dark field with orange focus ring */
-      #crewSearch {
-        width: 100%;
-        max-width: 520px;
-        margin: 0 auto;
-        display: block;
-        background: #111;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 10px;
-        color: #fff;
-        font: inherit;
-        font-size: 1rem;
-        padding: 0.9rem 1.15rem;
-        outline: none;
-        transition:
-          border-color 0.2s,
-          box-shadow 0.2s;
-      }
-      #crewSearch::placeholder {
-        color: rgba(255, 255, 255, 0.35);
-      }
-      #crewSearch:focus {
-        border-color: #ff4d00;
-        box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.22);
-      }
-
-      /* Neural promo card — drop emoji icon, use styled glyph */
-      .neural-glyph {
-        width: 56px;
-        height: 56px;
-        border-radius: 14px;
-        background: rgba(255, 77, 0, 0.1);
-        border: 1px solid rgba(255, 77, 0, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ff9100;
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: -0.04em;
-      }
-
-      .section-heading {
-        color: #fff;
-        margin-bottom: 0.75rem;
-        font-size: 1.6rem;
-      }
-      .section-lede {
-        color: rgba(255, 255, 255, 0.55);
-        max-width: 520px;
-        margin: 0 auto 1.5rem;
-        line-height: 1.6;
-      }
-    </style>
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
     <script>
@@ -255,51 +182,153 @@
     <div class="header-spacer" aria-hidden="true"></div>
 
     <main data-swup>
+      <canvas id="crewGrain" aria-hidden="true"></canvas>
+
       <section class="crew-hero">
-        <div class="hero-content-wrapper">
-          <span class="crew-badge">Crew</span>
-          <h1 class="crew-title">El Crew de 3TRES6</h1>
-          <p class="crew-subtitle">
-            Conectamos la escena underground desde Barcelona hasta México. Conocé a Frutis, el
-            fundador detrás de los vinilos que encontrarás aquí.
-          </p>
+        <div class="crew-hero-grid" aria-hidden="true"></div>
+        <div class="crew-hero-rule" aria-hidden="true"></div>
+        <div class="crew-hero-inner">
+          <div class="crew-kicker crew-mono">CREW · MIEMBRO Nº 001 · BARCELONA → CDMX</div>
+
+          <div class="crew-hero-text">
+            <h1 class="crew-title" aria-label="El Crew de 3TRES6">
+              <span class="crew-title-l1" aria-hidden="true">EL</span>
+              <span class="crew-title-l2" aria-hidden="true">CREW</span>
+            </h1>
+            <p class="crew-title-tag">3TRES6 RECORDS · FILOSOFÍA: SELECCIONAR ANTES DE VENDER</p>
+            <p class="crew-lede">
+              Conectamos la escena underground desde Barcelona hasta México. Acá empieza el crew
+              detrás de los vinilos que encontrarás en el catálogo — empezando por su fundador:
+              Frutis, piloto, selector y coleccionista.
+            </p>
+
+            <div class="crew-stats">
+              <div class="crew-stat">
+                <b data-count="21">21</b>
+                <span>Fotos de archivo</span>
+              </div>
+              <div class="crew-stat">
+                <b data-count="3">3</b>
+                <span>Sets en SoundCloud</span>
+              </div>
+              <div class="crew-stat">
+                <b data-count="10">10</b>
+                <span>Vinyl picks</span>
+              </div>
+            </div>
+          </div>
+
+          <figure class="crew-hero-figure">
+            <span class="ghost-num" aria-hidden="true">001</span>
+            <div class="crew-figure-frame">
+              <img
+                src="crew/d-mfrutis/assets/ig/016.jpg"
+                alt="Vinilo girando bajo un haz de luz roja"
+                width="720"
+                height="900"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="crew-figure-cap">Archivo · 016 / 021</figcaption>
+          </figure>
+        </div>
+
+        <div class="crew-scroll-cue" aria-hidden="true">Scroll — el dossier</div>
+      </section>
+
+      <section class="crew-section crew-dossier" id="crewGridSection">
+        <div class="crew-shead">
+          <span class="crew-shead-idx">001 / Dossier</span>
+          <h2>El Piloto</h2>
+          <span class="crew-shead-note">Fundador · Barcelona</span>
+        </div>
+        <div id="crewSearchSlot"></div>
+        <div id="crewGrid">
+          <div class="crew-empty">Cargando el crew…</div>
         </div>
       </section>
 
-      <section class="dj-search-section" style="padding: 2rem 0">
-        <div class="dj-search-container" style="max-width: 600px; margin: 0 auto">
-          <input
-            type="text"
-            id="crewSearch"
-            class="dj-search-input"
-            placeholder="Buscar en el crew..."
-            autocomplete="off"
-            aria-label="Buscar en el crew"
-          />
+      <section class="crew-wall">
+        <div class="crew-shead">
+          <span class="crew-shead-idx">002 / The Wall</span>
+          <h2>Archivo visual</h2>
+          <span class="crew-shead-note">21 fotos · cabina, flyers, viajes</span>
+        </div>
+        <div class="crew-wall-viewport">
+          <div class="crew-wall-track" id="crewWall"></div>
+        </div>
+        <p class="crew-wall-mobile-hint">Deslizá → para recorrer el archivo</p>
+      </section>
+
+      <section class="crew-section crew-signals">
+        <div class="crew-shead">
+          <span class="crew-shead-idx">003 / Señales</span>
+          <h2>Suena, compra, conectá</h2>
+          <span class="crew-shead-note">Picks &amp; red neural</span>
+        </div>
+
+        <div class="crew-signals-grid">
+          <div data-signal>
+            <div class="crew-tracks-title">Picks del crew — en el catálogo</div>
+            <div class="crew-picks" id="crewPicks"></div>
+          </div>
+
+          <a class="crew-neural" href="3d-brain.html">
+            <div class="crew-neural-glyph" aria-hidden="true">
+              <svg viewBox="0 0 34 34" fill="none" stroke="#ff4d00" stroke-width="1.4">
+                <circle cx="17" cy="7" r="3.4" />
+                <circle cx="7" cy="25" r="3.4" />
+                <circle cx="27" cy="25" r="3.4" />
+                <path d="M17 10.4 8.4 22M17 10.4 25.6 22M10.4 25h13.2" />
+              </svg>
+            </div>
+            <h3>Conexiones Neurales</h3>
+            <p>
+              Ver cómo Frutis se conecta con la red de DJs a través de tracks compartidos, géneros y
+              sellos en común.
+            </p>
+            <span class="crew-neural-cta">Explorar la red →</span>
+          </a>
         </div>
       </section>
 
-      <section class="dj-grid-section" id="crewGridSection">
-        <div class="dj-grid" id="crewGrid">
-          <div class="dj-grid-loading">
-            <div class="loading-spinner"></div>
-            <span>Cargando el crew...</span>
+      <section class="crew-section crew-next">
+        <div class="crew-shead">
+          <span class="crew-shead-idx">004 / Próximos</span>
+          <h2>El crew crece</h2>
+          <span class="crew-shead-note">Slots abiertos</span>
+        </div>
+
+        <div class="crew-slots">
+          <div class="crew-slot">
+            <span class="crew-slot-num">Slot 002 — reservado</span>
+            <div>
+              <h3>Próximamente</h3>
+              <p>
+                El segundo miembro del crew está en preparación. Dossier, archivo y picks, con el
+                mismo formato que este.
+              </p>
+            </div>
+          </div>
+
+          <div class="crew-slot">
+            <span class="crew-slot-num">Slot 003 — abierto</span>
+            <div>
+              <h3>¿Sos crew?</h3>
+              <p>
+                Si pinchás, curás o coleccionás desde Barcelona o CDMX, escribinos. El crew se arma
+                por criterio, no por cantidad.
+              </p>
+            </div>
+            <a
+              class="crew-slot-cta"
+              href="https://instagram.com/3tres6records"
+              target="_blank"
+              rel="noopener"
+              >Escribinos por IG ↗</a
+            >
           </div>
         </div>
-      </section>
-
-      <section style="padding: 3rem 2rem 2rem; text-align: center">
-        <h2 class="section-heading">Conexiones Neurales</h2>
-        <p class="section-lede">
-          Ver cómo Frutis se conecta con la red de DJs a través de tracks compartidos
-        </p>
-        <a href="3d-brain.html" class="dj-hub-card" style="display: inline-block; margin: 0 auto">
-          <div class="neural-glyph" aria-hidden="true">N</div>
-          <h3 style="margin: 0.5rem 0 0">Ver Red Neural</h3>
-          <p style="opacity: 0.7; font-size: 0.9rem; margin: 0.5rem 0 0">
-            Explorar conexiones entre DJs
-          </p>
-        </a>
       </section>
 
       <footer class="footer">
@@ -342,15 +371,13 @@
       </footer>
     </main>
 
-    <script>
-      window.addEventListener('scroll', function () {
-        document.querySelector('.header')?.classList.toggle('scrolled', window.pageYOffset > 50);
-      });
-    </script>
-
     <script src="data/crew/index.js" defer></script>
     <script src="../player-init.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/blog.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+    <script src="js/crew.js" defer></script>
   </body>
 </html>
