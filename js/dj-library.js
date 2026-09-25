@@ -327,7 +327,7 @@
     const settings = options || {};
     const set = Core.setCache[setId];
     if (!set) return;
-    const total = (set.tracklist || []).length;
+    const total = set.tracks_total || (set.tracklist || []).length;
     const known = set.tracks_identified != null ? set.tracks_identified : total;
 
     $('#setTitle').textContent = set.title || setId;
