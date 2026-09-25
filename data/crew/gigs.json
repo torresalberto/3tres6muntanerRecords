@@ -1,0 +1,81 @@
+{
+  "gigs": [
+    {
+      "id": "alddara-la-orquesta",
+      "date": "2025-05-10",
+      "dateLabel": "sáb 10 may 2025",
+      "event": "Alddara — acoustic session",
+      "venue": "La Orquesta Club",
+      "address": "Carrer d'Ausiàs Marc 140, L'Eixample",
+      "city": "Barcelona",
+      "coords": [41.397608, 2.1841657],
+      "series": "MNCRM",
+      "lineup": ["Frutis"],
+      "role": "DJ set de cierre",
+      "flyer": "010",
+      "flyerAlt": "Flyer Alddara con Frutis"
+    },
+    {
+      "id": "nuna-cor-la-orquesta",
+      "date": "2025-07-19",
+      "dateLabel": "sáb 19 jul 2025",
+      "event": "Nuna Cor — acoustic session",
+      "venue": "La Orquesta Club",
+      "address": "Carrer d'Ausiàs Marc 140, L'Eixample",
+      "city": "Barcelona",
+      "coords": [41.397608, 2.1841657],
+      "series": "MNCRM + Spitmind",
+      "lineup": ["Frutis b2b Felipe O"],
+      "role": "DJ set",
+      "flyer": "008",
+      "flyerAlt": "Flyer Nuna Cor — Frutis b2b Felipe O"
+    },
+    {
+      "id": "veridis-quo-bruc",
+      "date": "2025-10-10",
+      "dateLabel": "vie 10 oct 2025",
+      "event": "Veridis Quo",
+      "venue": "Veridis Quo Coffee Bar & Records",
+      "address": "Carrer del Bruc 80, Dreta de l'Eixample",
+      "city": "Barcelona",
+      "coords": [41.3939947, 2.1701249],
+      "series": "",
+      "lineup": ["Bastard Love", "Diesco", "Frutis"],
+      "role": "",
+      "flyer": "005",
+      "flyerAlt": "Flyer Veridis Quo, viernes 10.10, con Frutis"
+    },
+    {
+      "id": "sauvage-pla-real",
+      "date": "",
+      "dateLabel": "14 nov · 00:00–05:00",
+      "event": "Club Sauvage by Undertone",
+      "venue": "Club Sauvage",
+      "address": "Pl. Reial 7, Ciutat Vella",
+      "city": "Barcelona",
+      "coords": [41.3800985, 2.1752608],
+      "series": "Undertone · LOST · Sonata",
+      "lineup": ["Diesco", "Frutis b2b M.S.R.", "Atmen", "Nannii Lopez"],
+      "role": "b2b con M.S.R.",
+      "flyer": "013",
+      "flyerAlt": "Flyer Club Sauvage con Diesco, Frutis b2b M.S.R., Atmen y Nannii Lopez",
+      "tbd": true
+    },
+    {
+      "id": "regal-carmine",
+      "date": "",
+      "dateLabel": "dom 15.02 — s/f",
+      "event": "Rëgal Showcase",
+      "venue": "Carmine House Society",
+      "address": "Members only — ubicación no pública",
+      "city": "Barcelona",
+      "coords": null,
+      "series": "Carmine House Society",
+      "lineup": ["Landeep", "Victor Hugo", "Frutis"],
+      "role": "",
+      "flyer": "004",
+      "flyerAlt": "Flyer RËGAL Showcase con Landeep, Victor Hugo y Frutis",
+      "tbd": true
+    }
+  ]
+}

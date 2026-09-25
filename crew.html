@@ -19,6 +19,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://tiles.openfreemap.org" />
 
     <link
       rel="preload"
@@ -37,7 +39,19 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/blog.css" />
     <link rel="stylesheet" href="css/dj-library.css?v=3" />
-    <link rel="stylesheet" href="css/crew.css?v=1" />
+    <link rel="stylesheet" href="css/crew.css?v=2" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"
+      integrity="sha256-qx5w1Z7EBGW65+cDDaLzzPKBM/1QLmK9WY7vut/XpzI="
+      crossorigin=""
+    />
 
     <script type="application/ld+json">
       {
@@ -208,12 +222,12 @@
                 <span>Fotos de archivo</span>
               </div>
               <div class="crew-stat">
-                <b data-count="3">3</b>
-                <span>Sets en SoundCloud</span>
+                <b data-count="5">5</b>
+                <span>Fechas en cartel</span>
               </div>
               <div class="crew-stat">
-                <b data-count="10">10</b>
-                <span>Vinyl picks</span>
+                <b data-count="2">2</b>
+                <span>Sesiones en video</span>
               </div>
             </div>
           </div>
@@ -260,41 +274,86 @@
         <p class="crew-wall-mobile-hint">Deslizá → para recorrer el archivo</p>
       </section>
 
-      <section class="crew-section crew-signals">
+      <section class="crew-section crew-gigs" id="crewGigsSection">
         <div class="crew-shead">
-          <span class="crew-shead-idx">003 / Señales</span>
-          <h2>Suena, compra, conectá</h2>
-          <span class="crew-shead-note">Picks &amp; red neural</span>
+          <span class="crew-shead-idx">003 / Dónde tocó</span>
+          <h2>Mapa de gigs</h2>
+          <span class="crew-shead-note">Flyers del archivo · Barcelona</span>
         </div>
 
-        <div class="crew-signals-grid">
-          <div data-signal>
-            <div class="crew-tracks-title">Picks del crew — en el catálogo</div>
-            <div class="crew-picks" id="crewPicks"></div>
-          </div>
+        <div class="crew-gigs-grid">
+          <div
+            class="crew-gigs-map"
+            id="crewGigsMap"
+            aria-label="Mapa de lugares donde tocó Frutis"
+          ></div>
+          <ol class="crew-gigs-rail" id="crewGigsRail">
+            <li class="crew-empty">Cargando fechas…</li>
+          </ol>
+        </div>
+      </section>
 
-          <a class="crew-neural" href="3d-brain.html">
-            <div class="crew-neural-glyph" aria-hidden="true">
-              <svg viewBox="0 0 34 34" fill="none" stroke="#ff4d00" stroke-width="1.4">
-                <circle cx="17" cy="7" r="3.4" />
-                <circle cx="7" cy="25" r="3.4" />
-                <circle cx="27" cy="25" r="3.4" />
-                <path d="M17 10.4 8.4 22M17 10.4 25.6 22M10.4 25h13.2" />
-              </svg>
-            </div>
-            <h3>Conexiones Neurales</h3>
-            <p>
-              Ver cómo Frutis se conecta con la red de DJs a través de tracks compartidos, géneros y
-              sellos en común.
-            </p>
-            <span class="crew-neural-cta">Explorar la red →</span>
+      <section class="crew-section crew-sessions" id="crewSessionsSection">
+        <div class="crew-shead">
+          <span class="crew-shead-idx">004 / Sesiones</span>
+          <h2>UNREC Open Source</h2>
+          <span class="crew-shead-note">2 sesiones en video</span>
+        </div>
+
+        <div class="crew-sessions-grid">
+          <a
+            class="crew-session"
+            href="https://www.youtube.com/watch?v=OINo_TTLfzo"
+            data-video="OINo_TTLfzo"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="crew-session-thumb">
+              <img
+                src="https://i.ytimg.com/vi/OINo_TTLfzo/hqdefault.jpg"
+                alt="Frutis b2b Stevie Toth — UNREC Open Source Sessions"
+                width="480"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="crew-session-play" aria-hidden="true">▶</span>
+            </span>
+            <span class="crew-session-meta">
+              <span class="crew-session-kicker">UNREC · Open Source Sessions</span>
+              <span class="crew-session-title">Frutis b2b Stevie Toth</span>
+            </span>
+          </a>
+
+          <a
+            class="crew-session"
+            href="https://www.youtube.com/watch?v=qfF19hUzLo0"
+            data-video="qfF19hUzLo0"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="crew-session-thumb">
+              <img
+                src="https://i.ytimg.com/vi/qfF19hUzLo0/hqdefault.jpg"
+                alt="Frutis — UNREC Open Source Sessions"
+                width="480"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="crew-session-play" aria-hidden="true">▶</span>
+            </span>
+            <span class="crew-session-meta">
+              <span class="crew-session-kicker">UNREC · Open Source Sessions</span>
+              <span class="crew-session-title">Frutis</span>
+            </span>
           </a>
         </div>
       </section>
 
       <section class="crew-section crew-next">
         <div class="crew-shead">
-          <span class="crew-shead-idx">004 / Próximos</span>
+          <span class="crew-shead-idx">005 / Próximos</span>
           <h2>El crew crece</h2>
           <span class="crew-shead-note">Slots abiertos</span>
         </div>
@@ -378,6 +437,24 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"
+      integrity="sha256-RamwepGJzlYFTGIKlHzPQeKR5YyV6bYVM7dAqqZe5cs="
+      crossorigin=""
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"
+      integrity="sha256-Hmz4yz61/ZCYeaob82o4P7UGyaWy27+rq85lopTdH8s="
+      crossorigin=""
+      defer
+    ></script>
     <script src="js/crew.js" defer></script>
   </body>
 </html>

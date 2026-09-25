@@ -4,6 +4,9 @@ RewriteEngine On
 # /crew → /crew.html   /crew/ → /crew.html
 RewriteRule ^crew/?$ crew.html [R=301,L]
 
+# Old member page → crew.html (page redesigned into the Frutis monument)
+RewriteRule ^crew/d-mfrutis/?$ crew.html [R=301,L]
+
 # /mapa → /mapa.html   /mapa/ → /mapa.html
 RewriteRule ^mapa/?$ mapa.html [R=301,L]
 

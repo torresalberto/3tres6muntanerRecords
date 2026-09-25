@@ -1,5 +1,8 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 /**
  * Journey scenarios. Each scenario exposes { id, name, viewport, run(t) }.
  *   t.check(ok, step, detail)  -> assertion
@@ -257,20 +260,23 @@ s('s05', 'DJ directions: library→card→profile→brain→crew→member', DESK
   t.check(crewCards > 0, 'Crew grid renders', `crew members = ${crewCards}`);
 
   if (crewCards > 0) {
-    await t.measureNav(async () => {
-      await t.page
-        .locator('#crewGrid > * .dj-card, #crewGrid > * a[href]')
-        .first()
-        .click()
-        .catch(() => {});
-    });
-    const memberOk = await t.page.evaluate(
-      () => !/404|no se encontr/i.test(document.body.innerText)
-    );
+    await t.goto(t.base + '/crew/d-mfrutis/', 3500);
+    const landed = t.page.url();
+    const redirected = /crew\.html/.test(landed);
+    // Local static servers ignore .htaccess — accept the rewrite rule itself.
+    const isLocal = /localhost|127\.0\.0\.1/.test(t.base);
+    let ruleOk = false;
+    if (!redirected && isLocal) {
+      ruleOk = /RewriteRule \^crew\/d-mfrutis/.test(
+        fs.readFileSync(path.join(__dirname, '..', '.htaccess'), 'utf8')
+      );
+    }
     t.check(
-      memberOk,
-      'Crew member page loads',
-      `url=${t.page.url().split('/').slice(-2).join('/')}`
+      redirected || ruleOk,
+      redirected
+        ? 'Old member URL 301-redirects to crew.html'
+        : 'htaccess 301 rule present (local server skips rewrites)',
+      `url=${landed.split('/').slice(-2).join('/')} redirected=${redirected} rule=${ruleOk}`
     );
   }
 });
@@ -332,8 +338,8 @@ s('s05c', 'Crew redesign: kinetic hero, wall archive and grain', DESKTOP, async 
     };
   });
   t.check(
-    grid.kids > 0 && grid.card && /^crew\/d-mfrutis\/?/.test(grid.href),
-    'Dossier renders in #crewGrid with member link',
+    grid.kids > 0 && grid.card && /^https?:\/\//.test(grid.href) && !/d-mfrutis/.test(grid.href),
+    'Dossier renders in #crewGrid with social link (no member page)',
     `kids=${grid.kids} card=${grid.card} href=${grid.href}`
   );
 
@@ -365,19 +371,32 @@ s('s05c', 'Crew redesign: kinetic hero, wall archive and grain', DESKTOP, async 
     Array.from(document.querySelectorAll('[data-count]')).map((e) => e.textContent)
   );
   t.check(
-    counters.join(',') === '21,3,10',
+    counters.join(',') === '21,5,2',
     'Stat counters settle on final values',
     counters.join(',')
   );
 
   await t.page.evaluate(() => {
-    const el = document.querySelector('.crew-signals');
+    const el = document.querySelector('.crew-gigs');
     if (el) el.scrollIntoView({ block: 'start' });
   });
   await t.page.waitForTimeout(1600);
 
-  const picks = await t.page.evaluate(() => document.querySelectorAll('.crew-pick').length);
-  t.check(picks >= 10, 'Vinyl picks render from inventory data', `picks=${picks}`);
+  const gigs = await t.page.evaluate(() => ({
+    list: document.querySelectorAll('.crew-gig').length,
+    pins: document.querySelectorAll('.crew-gigs-map .leaflet-marker-icon').length,
+    mapReady: (document.getElementById('crewGigsMap') || {}).dataset
+      ? document.getElementById('crewGigsMap').dataset.mapReady
+      : '',
+  }));
+  t.check(
+    gigs.list === 5 && gigs.pins === 4 && gigs.mapReady,
+    'Gigs map renders 5 fechas + 4 pins (flyer-verified BCN)',
+    `list=${gigs.list} pins=${gigs.pins} mapReady=${gigs.mapReady}`
+  );
+
+  const sessions = await t.page.evaluate(() => document.querySelectorAll('.crew-session').length);
+  t.check(sessions === 2, 'UNREC sessions render', `sessions=${sessions}`);
 
   const slots = await t.page.evaluate(() => document.querySelectorAll('.crew-slot').length);
   t.check(slots === 2, 'Growth slots render', `slots=${slots}`);

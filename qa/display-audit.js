@@ -46,7 +46,6 @@ const MAIN = [
   { path: '/toolhub/', label: 'toolhub' },
   { path: '/dj-library/', label: 'dj-library-static' },
   { path: '/dj-library/page-2.html', label: 'dj-library-static-p2' },
-  { path: '/crew/d-mfrutis/', label: 'crew-d-mfrutis' },
 ];
 
 function djPages() {

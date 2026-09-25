@@ -396,10 +396,119 @@
     return mm;
   }
 
+  /* ---------------- gigs map + sessions ---------------- */
+
+  function initGigsMap(gigs) {
+    var box = document.getElementById('crewGigsMap');
+    if (!box || typeof L === 'undefined' || box.dataset.mapReady) return;
+    var pinned = (gigs || []).filter(function (g) {
+      return g.coords && g.coords.length === 2;
+    });
+    if (!pinned.length) return;
+
+    try {
+      var map = L.map(box, { scrollWheelZoom: false }).setView([41.3985, 2.175], 13);
+      if (typeof L.maplibreGL === 'function') {
+        L.maplibreGL({ style: 'https://tiles.openfreemap.org/styles/dark' }).addTo(map);
+      } else {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          subdomains: 'abcd',
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap &copy; CARTO',
+        }).addTo(map);
+      }
+
+      var markers = {};
+      pinned.forEach(function (g) {
+        var m = L.marker(g.coords).addTo(map);
+        m.bindPopup(
+          '<div class="crew-gig-pop"><b>' +
+            g.event +
+            '</b><span>' +
+            (g.dateLabel || '') +
+            '</span><span>' +
+            g.venue +
+            '</span><span class="crew-gig-pop-lineup">' +
+            (g.lineup || []).join(' · ') +
+            '</span></div>'
+        );
+        markers[g.id] = m;
+      });
+      var group = L.featureGroup(
+        pinned.map(function (g) {
+          return markers[g.id];
+        })
+      );
+      map.fitBounds(group.getBounds().pad(0.4));
+      box.dataset.mapReady = '1';
+
+      var rail = document.getElementById('crewGigsRail');
+      var onClick = function (e) {
+        var li = e.target.closest('.crew-gig');
+        if (!li) return;
+        var m = markers[li.getAttribute('data-gig')];
+        if (m) {
+          m.openPopup();
+          map.panTo(m.getLatLng());
+        }
+      };
+      if (rail) rail.addEventListener('click', onClick);
+
+      if (page) {
+        page.stops.push(function () {
+          if (rail) rail.removeEventListener('click', onClick);
+          try {
+            map.remove();
+          } catch (err) {
+            // map already detached
+          }
+          box.dataset.mapReady = '';
+        });
+      }
+    } catch (err) {
+      // basemap unavailable — rail list still renders the gigs
+    }
+  }
+
+  function initGigs() {
+    var hub = window.Muntaner336 && window.Muntaner336.crew;
+    if (!hub) return;
+    hub.onGigsReady = initGigsMap;
+    if (hub.gigs && hub.gigs.length) initGigsMap(hub.gigs);
+  }
+
+  function initSessions() {
+    var cards = document.querySelectorAll('.crew-session');
+    cards.forEach(function (card) {
+      if (card.dataset.bound) return;
+      card.dataset.bound = '1';
+      card.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        var id = card.getAttribute('data-video');
+        if (!id) return;
+        e.preventDefault();
+        var thumb = card.querySelector('.crew-session-thumb');
+        if (!thumb || thumb.querySelector('iframe')) return;
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        f.title =
+          'UNREC Open Source Sessions — ' +
+          (card.querySelector('.crew-session-title') || {}).textContent;
+        f.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        f.allowFullscreen = true;
+        thumb.appendChild(f);
+        card.classList.add('is-playing');
+      });
+    });
+  }
+
   /* ---------------- section reveals ---------------- */
 
   function initReveals() {
-    var els = gsap.utils.toArray('.crew-shead, .crew-dossier-card, .crew-neural, .crew-slot');
+    var els = gsap.utils.toArray(
+      '.crew-shead, .crew-dossier-card, .crew-gigs-map, .crew-gigs-rail, .crew-session, .crew-slot'
+    );
     els.forEach(function (el, i) {
       gsap.fromTo(
         el,
@@ -427,15 +536,18 @@
 
     document.documentElement.classList.remove('crew-boot');
 
+    page = { ctx: null, mm: null, stops: [] };
+
+    initSessions();
+    initGigs();
+
     if (typeof gsap === 'undefined') {
       document.body.classList.add('crew-no-motion');
       return;
     }
 
     if (reducedMotion()) {
-      var staticStops = [];
-      staticStops.push(initGrain());
-      page = { ctx: null, mm: null, stops: staticStops };
+      page.stops.push(initGrain());
       return;
     }
 
@@ -444,9 +556,9 @@
 
     document.body.classList.add('crew-motion');
 
-    var stops = [];
+    var stops = page.stops;
     var wallMM = null;
-    var ctx = gsap.context(function () {
+    page.ctx = gsap.context(function () {
       stops.push(initGrain());
       initHero(stops);
       wallMM = initWall();
@@ -461,8 +573,7 @@
         });
       }
     });
-
-    page = { ctx: ctx, mm: wallMM, stops: stops };
+    page.mm = wallMM;
   }
 
   window.Muntaner336 = window.Muntaner336 || {};

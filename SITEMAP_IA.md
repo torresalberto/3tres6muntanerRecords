@@ -19,8 +19,7 @@
 │   └── /dj/<dj-id>.html       56 individual DJ profile pages
 ├── Descubrir
 │   ├── /mapa                  Curated club map (Leaflet)
-│   ├── /crew                  The crew
-│   └── /crew/d-mfrutis/       Crew member profile (example)
+│   └── /crew                  The crew (kinetic page + gigs map)
 ├── Recursos
 │   ├── /toolhub/              DJ tools hub (Camelot wheel, USB, etc.)
 │   └── /blog.html             Blog / editorial
@@ -45,7 +44,7 @@
 | `/crew` | 301 → `crew.html` | `/crew` (clean) |
 | `/sitemap` | 301 → `sitemap.html` | `/sitemap` (clean) |
 | `/dj/<id>.html` | `dj/<id>.html` | `/dj/<id>.html` |
-| `/crew/d-mfrutis/` | `crew/d-mfrutis/index.html` | `/crew/d-mfrutis/` |
+| `/crew/d-mfrutis/` | 301 → `crew.html` | (retired) |
 
 Clean-URL rewrites live in `.htaccess` (`/crew`, `/mapa`, and the new `/sitemap`).
 `dj-library.html`, `blog.html`, `3d-brain.html`, `product.html` have no clean rewrite and
@@ -61,7 +60,6 @@ are listed by their real filename.
 - **0.7 — `/toolhub/`, `/3d-brain.html`, `/mapa`, `/crew`**: evergreen hub pages.
 - **0.6 — 56 × `/dj/<id>.html`**: individual profiles, equal weight.
 - **0.5 — `/product.html`**: template/detail view.
-- **0.4 — `/crew/d-mfrutis/`**: single sub-profile, low update rate.
 
 ---
 

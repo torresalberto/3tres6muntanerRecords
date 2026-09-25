@@ -86,7 +86,6 @@ async function seed() {
     '/dj-library/page-3.html',
     '/dj-library/page-4.html',
     '/dj-library/page-5.html',
-    '/crew/d-mfrutis/index.html',
   ];
   for (const p of seeds) queue.push(p);
 }

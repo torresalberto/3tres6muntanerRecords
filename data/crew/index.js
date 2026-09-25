@@ -42,8 +42,7 @@ const CREW_MEMBERS = [
     },
     location: 'Barcelona',
     isPilot: true,
-    crewPage: 'crew/d-mfrutis/',
-    stats: { photos: CREW_IG.length, tracks: 3, picks: 10 },
+    stats: { photos: CREW_IG.length, gigs: 5, videos: 2 },
   },
 ];
 
@@ -96,9 +95,6 @@ function renderCrewGrid() {
       const num = String(i + 1).padStart(3, '0');
       const ig = CREW_IG[11];
       const links = [];
-      if (member.crewPage) {
-        links.push(`<a class="crew-link" href="${member.crewPage}" data-no-swup>Ver página →</a>`);
-      }
       if (member.social && member.social.instagram) {
         links.push(
           `<a class="crew-link is-ghost" href="${member.social.instagram}" target="_blank" rel="noopener">Instagram ↗</a>`
@@ -172,31 +168,7 @@ function renderCrewTracks(tracks) {
       .join('');
 }
 
-function renderCrewPicks(items) {
-  const box = document.getElementById('crewPicks');
-  if (!box) return;
-  if (!items || !items.length) {
-    box.closest('[data-signal]')?.setAttribute('hidden', '');
-    return;
-  }
-  box.innerHTML = items
-    .map((item, i) => {
-      const idx = String(i + 1).padStart(2, '0');
-      const meta = [item.year, item.genre]
-        .filter(Boolean)
-        .concat(item.grade ? ['<span class="grade">' + item.grade + '</span>'] : [])
-        .concat(item.price ? ['<span class="price">' + item.price + '</span>'] : []);
-      return `
-      <div class="crew-pick">
-        <span class="crew-pick-idx">${idx}</span>
-        <span class="crew-pick-title"><b>${item.title}</b><span>${item.artist || ''}</span></span>
-        <span class="crew-pick-meta">${meta.join(' · ')}</span>
-      </div>`;
-    })
-    .join('');
-}
-
-function loadCrewSignals() {
+function loadCrewTracks() {
   fetch('crew/d-mfrutis/data/tracks.json')
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
     .then((d) => renderCrewTracks(d.tracks))
@@ -204,13 +176,48 @@ function loadCrewSignals() {
       const box = document.getElementById('crewTracks');
       if (box) box.hidden = true;
     });
+}
 
-  fetch('crew/d-mfrutis/data/inventory.json')
+function renderCrewGigs(gigs) {
+  const rail = document.getElementById('crewGigsRail');
+  if (!rail) return;
+  if (!gigs || !gigs.length) {
+    rail.innerHTML = '<li class="crew-empty">Sin fechas documentadas todavía.</li>';
+    return;
+  }
+  rail.innerHTML = gigs
+    .map((g, i) => {
+      const idx = String(i + 1).padStart(2, '0');
+      const lineup = (g.lineup || []).join(' · ');
+      const flyerSrc = 'crew/d-mfrutis/assets/ig/' + g.flyer + '.jpg';
+      return `
+      <li class="crew-gig${g.tbd ? ' is-tbd' : ''}" data-gig="${g.id}">
+        <span class="crew-gig-idx">${idx}</span>
+        <span class="crew-gig-body">
+          <span class="crew-gig-date">${g.dateLabel || ''}</span>
+          <b class="crew-gig-event">${g.event}</b>
+          <span class="crew-gig-venue">${g.venue} — ${g.address}</span>
+          ${lineup ? `<span class="crew-gig-lineup">${lineup}</span>` : ''}
+        </span>
+        <img class="crew-gig-flyer" src="${flyerSrc}" alt="${g.flyerAlt || g.event}" width="56" height="70" loading="lazy" decoding="async" />
+      </li>`;
+    })
+    .join('');
+}
+
+function loadCrewGigs() {
+  fetch('data/crew/gigs.json')
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-    .then((d) => renderCrewPicks(d.items))
+    .then((d) => {
+      const gigs = (d && d.gigs) || [];
+      renderCrewGigs(gigs);
+      const hub = window.Muntaner336.crew;
+      hub.gigs = gigs;
+      if (typeof hub.onGigsReady === 'function') hub.onGigsReady(gigs);
+    })
     .catch(() => {
-      const box = document.getElementById('crewPicks');
-      if (box && box.closest('[data-signal]')) box.closest('[data-signal]').hidden = true;
+      const rail = document.getElementById('crewGigsRail');
+      if (rail) rail.innerHTML = '<li class="crew-empty">No se pudieron cargar las fechas.</li>';
     });
 }
 
@@ -218,7 +225,8 @@ function initCrewData() {
   if (!document.getElementById('crewGrid')) return;
   renderCrewGrid();
   renderCrewWall();
-  loadCrewSignals();
+  loadCrewTracks();
+  loadCrewGigs();
 }
 
 window.Muntaner336 = window.Muntaner336 || {};
