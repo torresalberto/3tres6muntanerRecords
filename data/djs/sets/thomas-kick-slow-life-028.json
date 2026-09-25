@@ -1,0 +1,60 @@
+{
+  "id": "thomas-kick-slow-life-028",
+  "dj_id": "thomas-kick",
+  "title": "Slow Life Friends Podcast - 028 - THOMAS KICK",
+  "venue": "Radio/Podcast",
+  "date": "2025-05-15",
+  "audio_provider": "soundcloud",
+  "audio_url": "https://soundcloud.com/slow-life/slow-life-friends-podcast-028-thomas-kick",
+  "duration_minutes": 60,
+  "duration_formatted": "1:00:16",
+  "view_count": 10177,
+  "channel": "Slow Life",
+  "genres": ["Deep House"],
+  "tracks_identified": 3,
+  "tracks_total": 9,
+  "tracklist": [
+    {
+      "position": 7,
+      "time": "41:00",
+      "timestamp": "41:00",
+      "artist": "Window Smashers",
+      "title": "Free To Be",
+      "label": "",
+      "status": "confirmed",
+      "notes": "set79 @00:41:00 (formato 'título - artista'); verificado en Strut/Richard Sen 'This Ain't Chicago' — UK house 1987-91."
+    },
+    {
+      "position": 8,
+      "time": "51:12",
+      "timestamp": "51:12",
+      "artist": "H&R Project",
+      "title": "House Riddm",
+      "label": "",
+      "status": "confirmed",
+      "notes": "set79 @00:51:12; 2019, 115 BPM — aparece en The Lab (Mixmag/brizm) y Orixa FM."
+    },
+    {
+      "position": 9,
+      "time": "52:36",
+      "timestamp": "52:36",
+      "artist": "Le Duc",
+      "title": "Runas",
+      "label": "Pschent",
+      "status": "confirmed",
+      "notes": "set79 @00:52:36 ('Rünas - Le Duc'); verificado: 'Runas' es tema de Le Duc del álbum Célébration (Pschent/Nettwerk, 2001)."
+    }
+  ],
+  "most_requested_ids": [],
+  "curious_facts": {
+    "total_comments": 57,
+    "confirmed_tracks": 3,
+    "unidentified_tracks": 6,
+    "tracklist_source": "set79 (set79.com/tracklist/soundcloud.com/slow-life/slow-life-friends-podcast-028-thomas-kick) — 9 segmentos, 3 identificados",
+    "tracklist_format": "Filas con timestamp en set79 ('Título - Artista' + start time); descripción SoundCloud solo '@thomaskickmusic'; sin tracklist en comentarios (4 pedidos de ID sin timestamp) ni en 1001tracklists.",
+    "recheck_after": "2026-10-09",
+    "recheck_note": "6 pistas sin ID — re-ejecutar el extractor y ampliar set79 en ~2 semanas.",
+    "context": "Slow Life Friends Podcast #028 (deep house hipnótico, after-hours según descripción del sello)."
+  },
+  "source": "https://set79.com/tracklist/soundcloud.com/slow-life/slow-life-friends-podcast-028-thomas-kick"
+}

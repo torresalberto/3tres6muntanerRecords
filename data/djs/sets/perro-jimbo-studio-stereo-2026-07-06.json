@@ -1,0 +1,29 @@
+{
+  "id": "perro-jimbo-studio-stereo-2026-07-06",
+  "dj_id": "perro-jimbo",
+  "title": "Perro Jimbo | Studio Stereo's Dancing Room",
+  "venue": "Studio Stereo, Barcelona, Spain",
+  "date": "2026-07-06",
+  "audio_provider": "soundcloud",
+  "audio_url": "https://soundcloud.com/audiodise/perro-jimbo-6six7",
+  "duration_minutes": 110,
+  "duration_formatted": "1:50:32",
+  "view_count": 94,
+  "channel": "AUDIODISE",
+  "genres": [],
+  "tracks_identified": 0,
+  "tracks_total": 0,
+  "tracklist": [],
+  "most_requested_ids": [],
+  "curious_facts": {
+    "total_comments": 0,
+    "confirmed_tracks": 0,
+    "unidentified_tracks": 0,
+    "tracklist_source": "none",
+    "recheck_after": "2026-10-09",
+    "recheck_note": "Sin comentarios y sin tracklist en la descripción; 1001tracklists sin resultados. Re-ejecutar en ~2 semanas.",
+    "date_note": "date = fecha de subida a SoundCloud (2026-07-06); la grabación es 'una noche de jueves' previa (Dancing Room, noche de jueves de Studio Stereo).",
+    "context": "Cierre de la Dancing Room en Studio Stereo (BCN), publicado por AUDIODISE — el sello que ya hospeda el set de E.Lina en esta biblioteca."
+  },
+  "source": "https://soundcloud.com/audiodise/perro-jimbo-6six7"
+}

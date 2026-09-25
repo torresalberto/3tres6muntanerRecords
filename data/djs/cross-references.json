@@ -1995,6 +1995,16 @@
         "kerri-chandler-br-nyc-2022"
       ]
     },
+    "Radio/Podcast": {
+      "djs": [
+        "folamour",
+        "thomas-kick"
+      ],
+      "sets": [
+        "folamour-complex-sessions-074-2023",
+        "thomas-kick-slow-life-028"
+      ]
+    },
     "Boiler Room, London": {
       "djs": [
         "four-tet",
@@ -2043,81 +2053,6 @@
           "djId": "kerri-chandler",
           "setId": "kerri-chandler-br-nyc-136"
         }
-      ]
-    }
-  },
-  "genre_bridges": {
-    "Techno": {
-      "djs": [
-        "david-august",
-        "floorplan",
-        "helena-hauff",
-        "mall-grab",
-        "peggy-gou"
-      ],
-      "sets": [
-        "david-august-br-berlin-2014",
-        "floorplan-weather-paris-2015",
-        "helena-hauff-br-dekmantel-2017",
-        "mall-grab-br-melbourne-2022",
-        "peggy-gou-cercle-lille-2024"
-      ]
-    },
-    "Deep House": {
-      "djs": [
-        "david-august",
-        "kerri-chandler"
-      ],
-      "sets": [
-        "david-august-br-berlin-2014",
-        "kerri-chandler-br-nyc-136"
-      ]
-    },
-    "House": {
-      "djs": [
-        "folamour",
-        "hunee",
-        "mall-grab",
-        "peggy-gou"
-      ],
-      "sets": [
-        "folamour-bbc-radio1-residency-2022",
-        "folamour-br-fly-edinburgh-2019",
-        "folamour-br-sugar-mountain-2024",
-        "folamour-cercle-geneva-2023",
-        "folamour-complex-sessions-074-2023",
-        "folamour-lost-paradise-2022",
-        "folamour-polaris-verbier-2020",
-        "folamour-yuma-coachella-2024",
-        "hunee-br-dekmantel-2015",
-        "mall-grab-br-melbourne-2022",
-        "peggy-gou-cercle-lille-2024"
-      ]
-    },
-    "Disco": {
-      "djs": [
-        "folamour",
-        "hunee"
-      ],
-      "sets": [
-        "folamour-bbc-radio1-residency-2022",
-        "folamour-br-fly-edinburgh-2019",
-        "folamour-cercle-geneva-2023",
-        "folamour-dj-mag-hq-2019",
-        "folamour-lost-paradise-2022",
-        "folamour-polaris-verbier-2020",
-        "folamour-yuma-coachella-2024",
-        "hunee-br-dekmantel-2015"
-      ]
-    },
-    "Electro": {
-      "djs": [
-        "helena-hauff",
-        "peggy-gou"
-      ],
-      "sets": [
-        "helena-hauff-br-dekmantel-2017",
-        "peggy-gou-cercle-lille-2024"
       ]
     }
   },
@@ -2642,5 +2577,5 @@
   "total_shared_tracks": 38,
   "total_shared_artists": 60,
   "total_connections": 98,
-  "generated_at": "2026-08-12T04:15:05.133Z"
+  "generated_at": "2026-09-25T06:41:12.005Z"
 }

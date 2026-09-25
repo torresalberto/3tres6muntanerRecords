@@ -5,12 +5,6 @@
       "name": "Alex Do Clr 305",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "Dub Techno",
-        "Hypnotic Techno",
-        "Ambient"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
       "sets": [
@@ -28,12 +22,6 @@
       "name": "Ame",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "Techno",
-        "Melodic House",
-        "Innervisions"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/yANX378KYkQ/hqdefault.jpg",
       "sets": [
@@ -51,12 +39,6 @@
       "name": "Apollonia",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "Tech House",
-        "Minimal",
-        "French Touch"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/oBFgjTi9ZTk/hqdefault.jpg",
       "sets": [
@@ -74,12 +56,6 @@
       "name": "Avalon Emerson",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Techno",
-        "Electro",
-        "Breaks"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/s14IS_wXrEQ/hqdefault.jpg",
       "sets": [
@@ -97,12 +73,6 @@
       "name": "Ben Ufo",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Techno",
-        "Breaks",
-        "UK Bass"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/FvtjyRHN-hk/hqdefault.jpg",
       "sets": [
@@ -120,11 +90,6 @@
       "name": "Blessed Madonna",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Deep House",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/_IyMTaEeHTM/hqdefault.jpg",
       "sets": [
@@ -142,12 +107,6 @@
       "name": "Call Super",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Techno",
-        "Breaks",
-        "Electro"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/erAR5S0mBsU/hqdefault.jpg",
       "sets": [
@@ -165,12 +124,6 @@
       "name": "Carl Cox",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "House",
-        "Tech House",
-        "Classic House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg",
       "sets": [
@@ -188,10 +141,6 @@
       "name": "Carl Craig",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "Detroit Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/ETn1ZyMB4L4/hqdefault.jpg",
       "sets": [
@@ -209,11 +158,6 @@
       "name": "Cassius",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "French Touch",
-        "Nu Disco"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/kv92f5__3UQ/hqdefault.jpg",
       "sets": [
@@ -231,11 +175,6 @@
       "name": "Chaos In The CBD",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Afro House",
-        "Acid House",
-        "Deep House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/gArS5VA3Vxk/hqdefault.jpg",
       "sets": [
@@ -253,15 +192,27 @@
       }
     },
     {
+      "id": "crisalide",
+      "name": "Crisalide",
+      "origin": "",
+      "active_since": "",
+      "bio": "",
+      "image": "",
+      "sets": [
+        "crisalide-side-radio-019"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 0,
+        "known": 0,
+        "completion_rate": 100
+      }
+    },
+    {
       "id": "david-august",
       "name": "David August",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "Melodic House",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/mRfwdJx0NDE/hqdefault.jpg",
       "sets": [
@@ -279,12 +230,6 @@
       "name": "Dixon",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "House",
-        "Melodic Techno",
-        "Innervisions"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/JX4MiubWdRU/hqdefault.jpg",
       "sets": [
@@ -302,10 +247,6 @@
       "name": "Dj Koze Various",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Electronica"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/o2RnxfYedbw/hqdefault.jpg",
       "sets": [
@@ -323,11 +264,6 @@
       "name": "Dj Pierre",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Acid House",
-        "Chicago House",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/NsR7kVgxFLs/hqdefault.jpg",
       "sets": [
@@ -345,12 +281,6 @@
       "name": "Donato Dozzy",
       "origin": "Rome, Italy",
       "active_since": "2002",
-      "genres": [
-        "Ambient",
-        "Deep Techno",
-        "Minimal",
-        "Dub Techno"
-      ],
       "bio": "Italian producer and DJ, co-founder of Voices from the Lake with Neel. Releases on Tresor, Spectrum Spools, and his own Spazio Disponibile label. Master of hypnotic, immersive ambient-techno journeys.",
       "image": "https://i.ytimg.com/vi/Dhzp6esYfeY/hqdefault.jpg",
       "sets": [
@@ -364,16 +294,27 @@
       }
     },
     {
+      "id": "e-lina",
+      "name": "E.Lina",
+      "origin": "Berlin",
+      "active_since": "",
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/zs0a6DhPRtM/hqdefault.jpg",
+      "sets": [
+        "e-lina-audiodise-park-bcn-2026-05-24"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 1,
+        "known": 1,
+        "completion_rate": 100
+      }
+    },
+    {
       "id": "etapp-kyle",
       "name": "Etapp Kyle",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "Electro",
-        "Ambient",
-        "Hypnotic Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/TBuJtKSgkN8/hqdefault.jpg",
       "sets": [
@@ -392,12 +333,6 @@
       "name": "Floating Points",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Techno",
-        "Electronic",
-        "Jazz"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/kiy05zewUpg/hqdefault.jpg",
       "sets": [
@@ -415,11 +350,6 @@
       "name": "Floorplan",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Gospel House",
-        "Detroit Techno",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/Ow530rJ9W9w/hqdefault.jpg",
       "sets": [
@@ -437,12 +367,6 @@
       "name": "Folamour",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Disco",
-        "Tech House",
-        "Nu Disco"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/YDJEo-rQrfw/hqdefault.jpg",
       "sets": [
@@ -469,12 +393,6 @@
       "name": "Four Tet",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Electronic",
-        "House",
-        "Experimental",
-        "UK Bass"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/Ca6pjR2TLns/hqdefault.jpg",
       "sets": [
@@ -492,12 +410,6 @@
       "name": "Frankie Knuckles",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Soulful House",
-        "Classic House",
-        "Disco"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/644UU55eyzk/hqdefault.jpg",
       "sets": [
@@ -512,15 +424,45 @@
       }
     },
     {
+      "id": "frutis",
+      "name": "Frutis",
+      "origin": "Barcelona",
+      "active_since": "",
+      "bio": "",
+      "image": "https://i.ytimg.com/vi/OINo_TTLfzo/hqdefault.jpg",
+      "sets": [
+        "frutis-stevie-toth-unrec-olgod-2026-03-28",
+        "frutis-unrec-olgod-2025-10-04"
+      ],
+      "stats": {
+        "sets": 2,
+        "tracks": 0,
+        "known": 0,
+        "completion_rate": 100
+      }
+    },
+    {
+      "id": "hanakito",
+      "name": "Hanakito",
+      "origin": "Tokyo / Barcelona",
+      "active_since": "",
+      "bio": "",
+      "image": "",
+      "sets": [
+        "hanakito-elliephunk-shoes-off-refuge-2026-09-12"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 0,
+        "known": 0,
+        "completion_rate": 100
+      }
+    },
+    {
       "id": "helena-hauff",
       "name": "Helena Hauff",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Electro",
-        "Acid",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/OdJy_g1G7Ho/hqdefault.jpg",
       "sets": [
@@ -538,12 +480,6 @@
       "name": "Honey Dijon",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Techno",
-        "Soulful House",
-        "Disco"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/t5KwF_VsM50/hqdefault.jpg",
       "sets": [
@@ -561,12 +497,6 @@
       "name": "Hunee",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Disco",
-        "Funk",
-        "Boogie"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/0RIU0cy6L1I/hqdefault.jpg",
       "sets": [
@@ -585,12 +515,6 @@
       "name": "Ian Pooley Hor",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Deep House",
-        "Disco",
-        "Tech House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/QltgvSxi924/hqdefault.jpg",
       "sets": [
@@ -608,12 +532,6 @@
       "name": "Ian Pooley Paloma",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Deep House",
-        "Disco",
-        "Chicago House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/QltgvSxi924/hqdefault.jpg",
       "sets": [
@@ -631,11 +549,6 @@
       "name": "Job Jobse Dekmantel",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Tech House",
-        "Deep House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/IxhYDVRqdYY/hqdefault.jpg",
       "sets": [
@@ -653,12 +566,6 @@
       "name": "Joe Claussell",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Soulful House",
-        "Disco",
-        "Latin"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/keb3u2g87J8/hqdefault.jpg",
       "sets": [
@@ -676,11 +583,6 @@
       "name": "Joy Orbison Various",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "UKG",
-        "Garage",
-        "House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/kyzJamk5mNE/hqdefault.jpg",
       "sets": [
@@ -698,11 +600,6 @@
       "name": "Kerri Chandler",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Soulful House",
-        "Deep House",
-        "Garage"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/K6XiDub2Wc4/hqdefault.jpg",
       "sets": [
@@ -721,12 +618,6 @@
       "name": "KETTAMA",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Bass",
-        "UKG",
-        "House",
-        "Garage"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/JUDUC87VuPU/hqdefault.jpg",
       "sets": [
@@ -744,10 +635,6 @@
       "name": "Kink",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Tech House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/osS2zsW8mLk/hqdefault.jpg",
       "sets": [
@@ -765,12 +652,6 @@
       "name": "Larry Heard Mr Fingers",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Deep House",
-        "Soul",
-        "Garage"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/nexIxpuSMGw/hqdefault.jpg",
       "sets": [
@@ -788,12 +669,6 @@
       "name": "Laurent Garnier",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "House",
-        "Deep House",
-        "French Touch"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/WG35-7LpIAc/hqdefault.jpg",
       "sets": [
@@ -811,12 +686,6 @@
       "name": "Maceo Plex",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Tech House",
-        "Techno",
-        "Electro",
-        "Melodic Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/5vHRUsP20dQ/hqdefault.jpg",
       "sets": [
@@ -834,12 +703,6 @@
       "name": "Mall Grab",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Breaks",
-        "House",
-        "Rave",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/ddeAyYF_uwg/hqdefault.jpg",
       "sets": [
@@ -858,12 +721,6 @@
       "name": "Marcel Dettmann",
       "origin": "Berlin, Germany",
       "active_since": "2003",
-      "genres": [
-        "Techno",
-        "Deep Techno",
-        "Electro",
-        "Industrial"
-      ],
       "bio": "Berghain resident and MDR label boss. One of the defining figures of modern Berlin techno, known for deep, dubby, and industrial-edged sets that bridge classic Detroit and contemporary European techno.",
       "image": "https://i.ytimg.com/vi/ic7P_qWkdE8/hqdefault.jpg",
       "sets": [
@@ -881,10 +738,6 @@
       "name": "Mark Broom",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/YNPGycZY8TI/hqdefault.jpg",
       "sets": [
@@ -902,12 +755,6 @@
       "name": "Masters At Work",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Soulful House",
-        "Disco",
-        "Garage"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/tfRJhmC-G1Y/hqdefault.jpg",
       "sets": [
@@ -925,13 +772,6 @@
       "name": "Moodymann",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "Disco",
-        "Funk",
-        "Soul",
-        "Detroit"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/9buMWTbg9ko/hqdefault.jpg",
       "sets": [
@@ -949,13 +789,6 @@
       "name": "Motor City Drum Ensemble",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "House",
-        "Disco",
-        "Balearic",
-        "Soul"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/p6ozF0Y-PzU/hqdefault.jpg",
       "sets": [
@@ -973,10 +806,6 @@
       "name": "Objekt Various",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "Experimental"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/vrtNe0XNX1M/hqdefault.jpg",
       "sets": [
@@ -994,13 +823,6 @@
       "name": "Palms Trax",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "House",
-        "Disco",
-        "Techno",
-        "Breakbeat"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/fVlVZTHmkaw/hqdefault.jpg",
       "sets": [
@@ -1019,11 +841,6 @@
       "name": "Pangaea",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "UK Bass",
-        "Dubstep"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/n1WrLfY-3s8/hqdefault.jpg",
       "sets": [
@@ -1041,11 +858,6 @@
       "name": "Peggy Gou",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Electro",
-        "House",
-        "Techno"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/-UOMvxh4MYU/hqdefault.jpg",
       "sets": [
@@ -1060,15 +872,27 @@
       }
     },
     {
+      "id": "perro-jimbo",
+      "name": "Perro Jimbo",
+      "origin": "Barcelona",
+      "active_since": "",
+      "bio": "",
+      "image": "",
+      "sets": [
+        "perro-jimbo-studio-stereo-2026-07-06"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 0,
+        "known": 0,
+        "completion_rate": 100
+      }
+    },
+    {
       "id": "quest",
       "name": "Quest",
       "origin": "Rome, Italy",
       "active_since": "2015",
-      "genres": [
-        "Deep Dub Techno",
-        "Ambient",
-        "Dub Techno"
-      ],
       "bio": "Italian deep dub techno producer from Rome. Releases on SVBONY, Kynant, and Blackest Ever Black. Known for immersive, hypnotic deep techno and ambient sets that blur the line between club and meditation.",
       "image": "https://i.ytimg.com/vi/pXvHkSLxCoA/hqdefault.jpg",
       "sets": [
@@ -1087,12 +911,6 @@
       "name": "Recondite",
       "origin": "Lower Bavaria, Germany",
       "active_since": "2011",
-      "genres": [
-        "Deep House",
-        "Melodic Techno",
-        "Minimal",
-        "Techno"
-      ],
       "bio": "German producer Lorenz Brunner, releases on Innervisions, Plangent, and his own label. Known for atmospheric, melancholic deep house and techno, often performed live in stunning natural settings.",
       "image": "https://i.ytimg.com/vi/q4ic2xA8pys/hqdefault.jpg",
       "sets": [
@@ -1110,11 +928,6 @@
       "name": "Rey Colino Br",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Deep House",
-        "Tech House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/GcWjJyuWyig/hqdefault.jpg",
       "sets": [
@@ -1132,12 +945,6 @@
       "name": "Richie Hawtin",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Minimal Techno",
-        "Techno",
-        "Acid",
-        "Experimental"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/n0tVk3q9zNo/hqdefault.jpg",
       "sets": [
@@ -1155,12 +962,6 @@
       "name": "Seth Troxler",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Tech House",
-        "Chicago House",
-        "Minimal"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/QbeD_Q3l0ts/hqdefault.jpg",
       "sets": [
@@ -1178,11 +979,6 @@
       "name": "Shonky B2b Dan Ghenacia",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Deep House",
-        "House",
-        "Tech House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/raWcqoNaCXk/hqdefault.jpg",
       "sets": [
@@ -1200,12 +996,6 @@
       "name": "Stephan Bodzin",
       "origin": "Bremen, Germany",
       "active_since": "2002",
-      "genres": [
-        "Melodic Techno",
-        "Deep Techno",
-        "Live",
-        "Electronica"
-      ],
       "bio": "German producer and live performer, founder of herzblut Recordings. Pioneer of melodic, emotive techno performed live with hardware. Famous for Cercle sets in iconic natural locations.",
       "image": "https://i.ytimg.com/vi/xF_QkfZI1mM/hqdefault.jpg",
       "sets": [
@@ -1219,15 +1009,27 @@
       }
     },
     {
+      "id": "thomas-kick",
+      "name": "Thomas Kick",
+      "origin": "",
+      "active_since": "",
+      "bio": "",
+      "image": "",
+      "sets": [
+        "thomas-kick-slow-life-028"
+      ],
+      "stats": {
+        "sets": 1,
+        "tracks": 9,
+        "known": 3,
+        "completion_rate": 33
+      }
+    },
+    {
       "id": "tiger-woods",
       "name": "Tiger Woods",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Disco",
-        "Tech House"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/zmqlJOb9yNc/hqdefault.jpg",
       "sets": [
@@ -1245,11 +1047,6 @@
       "name": "Vtss",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "Techno",
-        "Industrial",
-        "Acid"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/I1mhJjxtJx4/hqdefault.jpg",
       "sets": [
@@ -1267,12 +1064,6 @@
       "name": "Young Marco",
       "origin": "",
       "active_since": "",
-      "genres": [
-        "House",
-        "Disco",
-        "Balearic",
-        "Ambient"
-      ],
       "bio": "",
       "image": "https://i.ytimg.com/vi/4z2bO7WizIg/hqdefault.jpg",
       "sets": [

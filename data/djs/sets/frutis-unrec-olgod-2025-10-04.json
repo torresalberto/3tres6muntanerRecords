@@ -1,0 +1,29 @@
+{
+  "id": "frutis-unrec-olgod-2025-10-04",
+  "dj_id": "frutis",
+  "title": "Frutis | UNREC Open Source Sessions",
+  "venue": "Ølgod Brewpub, Barcelona, Spain",
+  "date": "2025-10-04",
+  "youtube_url": "https://www.youtube.com/watch?v=qfF19hUzLo0",
+  "youtube_embed_id": "qfF19hUzLo0",
+  "duration_minutes": 73,
+  "duration_formatted": "1:13:06",
+  "view_count": 324,
+  "channel": "UNREC",
+  "genres": [],
+  "tracks_identified": 0,
+  "tracks_total": 0,
+  "tracklist": [],
+  "most_requested_ids": [],
+  "curious_facts": {
+    "total_comments": 1,
+    "confirmed_tracks": 0,
+    "unidentified_tracks": 0,
+    "tracklist_source": "none",
+    "recheck_after": "2026-10-09",
+    "recheck_note": "Descripción sin tracklist (solo 'Broadcasting from Ølgod Brewpub, Barcelona'); un comentario pide tracklist sin IDs. Re-ejecutar el extractor en ~2 semanas.",
+    "date_note": "date = fecha de subida a YouTube (2025-10-04); fecha de grabación no publicada.",
+    "context": "Sesión del formato UNREC Open Source Sessions (canal de streaming de BCN, residencia en Ølgod Brewpub)."
+  },
+  "source": "https://www.youtube.com/watch?v=qfF19hUzLo0"
+}

@@ -1325,6 +1325,26 @@ const TRACKLISTS = {
       }
     ]
   },
+  "crisalide": {
+    "artist": "Crisalide",
+    "artist_id": "crisalide",
+    "sets": [
+      {
+        "id": "crisalide-side-radio-019",
+        "title": "Side Radio 019 - Crisalide Guest Mix",
+        "venue": "Bridge 48, Barcelona, Spain",
+        "date": "",
+        "duration": "",
+        "youtube": "",
+        "views": 32,
+        "genre": [],
+        "tracks_identified": 0,
+        "tracks_total": 0,
+        "source": "https://soundcloud.com/side-566175776/side-radio-019-crisalide-guest",
+        "tracklist": []
+      }
+    ]
+  },
   "david-august": {
     "artist": "David August",
     "artist_id": "david-august",
@@ -1608,6 +1628,33 @@ const TRACKLISTS = {
             "time": "",
             "artist": "Levon Vincent",
             "title": "Double Joint (Part 2)"
+          }
+        ]
+      }
+    ]
+  },
+  "e-lina": {
+    "artist": "E.Lina",
+    "artist_id": "e-lina",
+    "sets": [
+      {
+        "id": "e-lina-audiodise-park-bcn-2026-05-24",
+        "title": "E.LINA | AUDIODISE PARK (BCN)",
+        "venue": "Audiodise Park, Montjuïc, Barcelona",
+        "date": "2026-05-24",
+        "duration": "",
+        "youtube": "zs0a6DhPRtM",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 1,
+        "tracks_total": 1,
+        "source": "Compiled from DJ Library",
+        "tracklist": [
+          {
+            "time": "19:50",
+            "artist": "Mike Dunn, Victor Simonelli & Luis Radio",
+            "title": "Nothing Stays the Same (F.E.X. Remix)",
+            "label": "Systematic Recordings"
           }
         ]
       }
@@ -3223,6 +3270,60 @@ const TRACKLISTS = {
         "tracks_identified": 0,
         "tracks_total": 0,
         "source": "Compiled from DJ Library",
+        "tracklist": []
+      }
+    ]
+  },
+  "frutis": {
+    "artist": "Frutis",
+    "artist_id": "frutis",
+    "sets": [
+      {
+        "id": "frutis-stevie-toth-unrec-olgod-2026-03-28",
+        "title": "Frutis B2B Stevie Toth | UNREC Open Source Sessions",
+        "venue": "Ølgod Brewpub, Barcelona, Spain",
+        "date": "2026-03-28",
+        "duration": "",
+        "youtube": "OINo_TTLfzo",
+        "views": 340,
+        "genre": [],
+        "tracks_identified": 0,
+        "tracks_total": 0,
+        "source": "https://www.youtube.com/watch?v=OINo_TTLfzo",
+        "tracklist": []
+      },
+      {
+        "id": "frutis-unrec-olgod-2025-10-04",
+        "title": "Frutis | UNREC Open Source Sessions",
+        "venue": "Ølgod Brewpub, Barcelona, Spain",
+        "date": "2025-10-04",
+        "duration": "",
+        "youtube": "qfF19hUzLo0",
+        "views": 324,
+        "genre": [],
+        "tracks_identified": 0,
+        "tracks_total": 0,
+        "source": "https://www.youtube.com/watch?v=qfF19hUzLo0",
+        "tracklist": []
+      }
+    ]
+  },
+  "hanakito": {
+    "artist": "Hanakito",
+    "artist_id": "hanakito",
+    "sets": [
+      {
+        "id": "hanakito-elliephunk-shoes-off-refuge-2026-09-12",
+        "title": "shoes-off — elliephunk & Hanakito",
+        "venue": "Refuge Worldwide Radio, Berlin",
+        "date": "2026-09-12",
+        "duration": "",
+        "youtube": "",
+        "views": 0,
+        "genre": [],
+        "tracks_identified": 0,
+        "tracks_total": 0,
+        "source": "https://refugeworldwide.com/radio/shoes-off-elliephunk-and-hanakito-12-sep-2026",
         "tracklist": []
       }
     ]
@@ -5673,6 +5774,26 @@ const TRACKLISTS = {
       }
     ]
   },
+  "perro-jimbo": {
+    "artist": "Perro Jimbo",
+    "artist_id": "perro-jimbo",
+    "sets": [
+      {
+        "id": "perro-jimbo-studio-stereo-2026-07-06",
+        "title": "Perro Jimbo | Studio Stereo's Dancing Room",
+        "venue": "Studio Stereo, Barcelona, Spain",
+        "date": "2026-07-06",
+        "duration": "",
+        "youtube": "",
+        "views": 94,
+        "genre": [],
+        "tracks_identified": 0,
+        "tracks_total": 0,
+        "source": "https://soundcloud.com/audiodise/perro-jimbo-6six7",
+        "tracklist": []
+      }
+    ]
+  },
   "quest": {
     "artist": "Quest",
     "artist_id": "quest",
@@ -6113,6 +6234,43 @@ const TRACKLISTS = {
             "time": "",
             "artist": "Red Axes",
             "title": "Too Late To Samba"
+          }
+        ]
+      }
+    ]
+  },
+  "thomas-kick": {
+    "artist": "Thomas Kick",
+    "artist_id": "thomas-kick",
+    "sets": [
+      {
+        "id": "thomas-kick-slow-life-028",
+        "title": "Slow Life Friends Podcast - 028 - THOMAS KICK",
+        "venue": "Radio/Podcast",
+        "date": "2025-05-15",
+        "duration": "",
+        "youtube": "",
+        "views": 10177,
+        "genre": [],
+        "tracks_identified": 3,
+        "tracks_total": 9,
+        "source": "https://set79.com/tracklist/soundcloud.com/slow-life/slow-life-friends-podcast-028-thomas-kick",
+        "tracklist": [
+          {
+            "time": "41:00",
+            "artist": "Window Smashers",
+            "title": "Free To Be"
+          },
+          {
+            "time": "51:12",
+            "artist": "H&R Project",
+            "title": "House Riddm"
+          },
+          {
+            "time": "52:36",
+            "artist": "Le Duc",
+            "title": "Runas",
+            "label": "Pschent"
           }
         ]
       }

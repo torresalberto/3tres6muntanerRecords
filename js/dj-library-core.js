@@ -186,6 +186,7 @@
   // chip stays a plain text chip (no dead link).
   var CURATED_MAP_VENUES = {
     'nitsa, barcelona, spain': { id: 'nitsa', name: 'Nitsa (Sala Apolo)' },
+    'studio stereo, barcelona, spain': { id: 'studio-stereo', name: 'Studio Stereo' },
   };
 
   S.buildMetaChips = function (set) {
