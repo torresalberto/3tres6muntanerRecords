@@ -54,8 +54,9 @@ DJCore.initGraph`): nodes sized by connections, links weighted by shared
 - **WebGL grain** — one raw-WebGL canvas (`#crewGrain`) driven by time + scroll
   velocity; SVG-noise CSS fallback via `.crew-no-webgl`; static under
   `prefers-reduced-motion`.
-- **Dossier card / growth slots** — editorial member spread inside `#crewGrid`
-  (QA contract) and dashed "slot" ghost cards for future members.
+- **Dossier card** — editorial member spread inside `#crewGrid` (QA contract).
+  No growth/access slots: the crew page is music-first (store copy and "únete"
+  CTAs stay out — see "Crew page scope" below).
 - **Gigs map (`003 / Dónde tocó`)** — flyer-verified Barcelona venues only:
   Leaflet 1.9.4 + MapLibre GL dark vector (exact SRI stack shared with Mapa,
   OpenFreeMap style + CartoDB fallback), marker ↔ rail click sync, teardown
@@ -172,10 +173,13 @@ Rules:
   M.S.R, Atmen, Nannii Lopez, Stevie Tóth, Perro Jimbo, Pa'volar, Crisalide)
 - ✅ Crew — redone in this system (kinetic brutalist hero + SplitText/cursor
   type, founder dossier in `#crewGrid`, 21-photo Wall scrub, WebGL grain with
-  CSS fallback, growth slots, gigs map + UNREC sessions (`s05`/`s05c` QA
-  coverage, `crew.css?v=2`); swup arrivals inject
+  CSS fallback, gigs map + UNREC sessions (`s05`/`s05c` QA
+  coverage, `crew.css?v=3`); swup arrivals inject
   `css/crew.css` + GSAP + `data/crew/index.js` + `js/crew.js` via
   `js/swup-init.js`)
+  - **Crew page scope:** music/vibe only — no store copy in page content
+    (ticker/lede/bio stay concert-focused), no growth/"solicitar acceso"
+    slots. Global chrome (nav/footer) untouched.
 - 🚧 Neural — next
 
 ## Known gaps / learnings (from past passes)

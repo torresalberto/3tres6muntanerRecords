@@ -507,7 +507,7 @@
 
   function initReveals() {
     var els = gsap.utils.toArray(
-      '.crew-shead, .crew-dossier-card, .crew-gigs-map, .crew-gigs-rail, .crew-session, .crew-slot'
+      '.crew-shead, .crew-dossier-card, .crew-gigs-map, .crew-gigs-rail, .crew-session'
     );
     els.forEach(function (el, i) {
       gsap.fromTo(

@@ -32,7 +32,7 @@ const CREW_MEMBERS = [
     id: 'd-mfrutis',
     name: 'd.mfrutis',
     role: 'Piloto & Fundador',
-    bio: 'Primer miembro del crew. Especialista en selections underground y vinilos de alta calidad. Elige, viaja, pincha y documenta: cada vinilo que llega a México pasó antes por sus manos en Barcelona.',
+    bio: 'Primer miembro del crew. Elige, viaja, pincha y documenta: sesiones underground y noches de cabina que conectan Barcelona con CDMX.',
     image: 'crew/d-mfrutis/assets/ig/012.jpg',
     imageCaption: 'Archivo personal · duotono',
     portrait: 'crew/d-mfrutis/assets/ig/017.jpg',

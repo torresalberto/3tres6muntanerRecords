@@ -399,7 +399,7 @@ s('s05c', 'Crew redesign: kinetic hero, wall archive and grain', DESKTOP, async 
   t.check(sessions === 2, 'UNREC sessions render', `sessions=${sessions}`);
 
   const slots = await t.page.evaluate(() => document.querySelectorAll('.crew-slot').length);
-  t.check(slots === 2, 'Growth slots render', `slots=${slots}`);
+  t.check(slots === 0, 'Growth/access slots removed (music-only crew page)', `slots=${slots}`);
 
   const motion = await t.page.evaluate(() => ({
     triggers: typeof ScrollTrigger !== 'undefined' ? ScrollTrigger.getAll().length : -1,
