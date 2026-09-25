@@ -179,7 +179,7 @@ window.BLOG_PILLARS = {
         'El señalador más limpio: el podcast Slow Life Friends 028 (deep house, vibes after-hours) + aparición como artista relacionado en el grafo de Zip (Perlon). Poca cobertura editorial = exactamente el tipo de perfil que quiere este pilar.',
         'Metodología: no inventar biografía. Se publica lo verificable (set listas, conexiones RA, fechas). Cuando aparezca ficha RA completa o sello, se actualiza el card con la fuente.',
         'Cruce Red de Voces: co-billing público con Vinilos Viajeros en BCN (Salvadiscos 2023) documentado en el pilar Red de Voces sin afirmar propiedad del colectivo.',
-        'Siguiente crawl objetivo: SoundCloud del artista, RA artist URL canónica, Discogs artist page, chart de Beatport/Traxsource con su catálogo.',
+        'Estado de extracción (fase neural): SoundCloud localizado (@thomaskickmusic) y el set ya vive en la Discoteca — 3 de 9 pistas confirmadas vía set79 (Window Smashers “Free To Be” a las 41:00, H&R Project “House Riddm” a las 51:12 y Le Duc “Runas” a las 52:36); 6 pistas abiertas con recheck programado. Siguiente: RA artist URL canónica, Discogs y charts de Beatport/Traxsource.',
       ],
     },
     {
@@ -236,6 +236,348 @@ window.BLOG_PILLARS = {
         'Alby Esc (Reynosa/McAllen → CDMX): Sisyphos, Pacha, Nitsa; con Charli XCX, Chris Stussy, Gerd Janson en cartel. EP “God’s Luv” acid house 2026 (Billboard AR).',
         'CLSTR (CDMX): techno hipnótico + house clásico + nu-disco; 4 meses de residencias locales (Leonor, Bardo, Skatepark Fest CUU). Perfil de “selector obsesivo” — candidato a Disco/Mix de 3TRES6.',
         'OBL1V!ØN (CDMX hard techno) y Alsoes (GDL, Fideles support, #55 Hype melodic) cierran el abanico: México no es un solo sound en 2026 — es un mapa multi-pilar como Europa.',
+      ],
+    },
+    {
+      id: 'landeep',
+      title: 'Landeep — afro-house de La Habana en el showcase Rëgal',
+      excerpt:
+        'Funk, afro, tropical y latín sobre electrónica; proyecto El Trópico, Proton Radio y Half Lemon. Cartel verificado: Rëgal Showcase en Carmine House Society (BCN) con Frutis.',
+      meta: ['La Habana', 'Afro / House', 'Flyer BCN'],
+      sources: [
+        { label: 'SoundCloud — djlandeep', href: 'https://soundcloud.com/djlandeep' },
+        {
+          label: 'Soundcharts — Landeep (🇨🇺)',
+          href: 'https://soundcharts.com/en/artist/1db1bbac-fa1b-11e8-aa6d-549f35141000',
+        },
+        {
+          label: 'Proton Radio — Landeep',
+          href: 'https://www.protonradio.com/artists/51185/landeep/tracks',
+        },
+        { label: 'Beatport — Landeep', href: 'https://www.beatport.com/artist/landeep/606228' },
+      ],
+      stats: [
+        { label: 'Base', value: 'La Habana' },
+        { label: 'Proyecto', value: 'El Trópico' },
+        { label: 'Radio', value: 'Proton (2017–)' },
+        { label: 'Cartel', value: 'Rëgal 15.02' },
+      ],
+      related: ['victor-hugo'],
+      body: [
+        'La biografía pública de su SoundCloud resume el proyecto: “fusión de géneros — funk, afro, tropical y latín con música electrónica”. Soundcharts lo sitúa en La Habana (🇨🇺) y lo describe como creador de El Trópico, un concepto “mestizo, sensorial y contemporáneo” cuyos sets transitan entre afro house, amapiano, deep house y ritmos latinos.',
+        'Presencia en catálogo y radio: ficha de artista en Beatport y catálogo en Proton Radio (activo desde 2017, con conexiones a Turntables on the Hudson y Half Lemon Records), incluida la pieza “Canario Samba” con Pulo NDJ. La bandera del flyer del showcase es cubana y coincide con su perfil público — homónimos tipo Sandeep (NL, deep house) quedan descartados.',
+        'La fecha que nos cruza: el cartel RËGAL SHOWCASE (domingo 15.02, 19:00–00:00, members only +21, Carmine House Society) lista LANDEEP 🇨🇺 / VICTOR HUGO / FRUTIS. Es el eslabón de archivo que conecta al dígner habanero con la cabina de Frutis en Barcelona; sin ficha RA conocida, el perfil se mantiene en fuentes directas (SoundCloud, Proton, Beatport).',
+      ],
+    },
+    {
+      id: 'victor-hugo',
+      title: 'Victor Hugo — el homónimo del showcase Rëgal',
+      excerpt:
+        'El cartel de Carmine House Society lista “VICTOR HUGO” sin red ni ficha. El único nombre homónimo con perfil RA es VHOOR (real name Victor Hugo, Brasil), que sí toca en BCN — identidad sin confirmar.',
+      meta: ['Homónimos', 'BCN / Brasil', 'Flyer BCN'],
+      sources: [
+        { label: 'RA — VHOOR', href: 'https://ra.co/dj/vhoor' },
+        { label: 'Crew — archivo de flyers', href: 'crew.html' },
+      ],
+      stats: [
+        { label: 'Cartel', value: 'Rëgal 15.02' },
+        { label: 'Candidato', value: 'VHOOR (RA)' },
+        { label: 'Evidencia', value: 'BCN ✓' },
+        { label: 'Estado', value: 'Sin confirmar' },
+      ],
+      related: ['landeep'],
+      body: [
+        'Lo verificable entra primero: el flyer RËGAL SHOWCASE de Carmine House Society (domingo 15.02, members only +21) anuncia LANDEEP 🇨🇺 / VICTOR HUGO / FRUTIS. El nombre llega solo — sin apellido, sin enlace, sin ficha pública localizable. La regla de este pilar prohíbe rellenar ese hueco con una biografía inventada.',
+        'El candidato documentado es VHOOR: RA lista su nombre real como Victor Hugo, base Brasil, con regiones más tocadas que incluyen São Paulo, Lisboa y Barcelona; en la agenda de Nitsa (Latineo, 808 Studios) figura con nombre real en el mismo circuito queer/club de BCN. Coincidencia fuerte de nombre + presencia en la ciudad — pero coincidencia no es identidad.',
+        'Tarea de crawl abierta: Instagram del cartel y el IG de Carmine House Society para el handle exacto; si aparece ficha RA o SoundCloud, la tarjeta se actualiza con la fuente. Mientras tanto vive como pregunta abierta junto a Landeep, el otro nombre de ese showcase, cuya identidad sí cerró con fuentes directas.',
+      ],
+    },
+    {
+      id: 'bastard-love',
+      title: 'Bastard Love — la cadena México → BCN que une a Frutis con Perro Jimbo',
+      excerpt:
+        'RA: Donovan, Ciudad de México; “hybrid house and techno”. El puente es real: 303 Audiophile Bar y el calendario Perros comparten cartel con Perro Jimbo; Veridis Quo lo pone con Frutis.',
+      meta: ['CDMX ↔ BCN', 'House / Techno', 'Cadena neural'],
+      sources: [
+        { label: 'RA — Bastard Love', href: 'https://ra.co/dj/bastardlove' },
+        { label: 'Beatport — bio', href: 'https://www.beatport.com/artist/bastard-love/230729' },
+        {
+          label: 'A38 Ship — Fine Selection #127',
+          href: 'https://www.a38.hu/en/program/fine-selection-hu-23475',
+        },
+        { label: 'Calendario 3TRES6', href: 'index.html#calendario' },
+      ],
+      stats: [
+        { label: 'Nombre', value: 'Donovan (MX)' },
+        { label: 'Ejes', value: 'CDMX ↔ BCN' },
+        { label: 'Sello', value: 'Diynamic · MFR' },
+        { label: 'Cadena', value: '303 ↔ Perros' },
+      ],
+      related: ['perro-jimbo', 'diesco'],
+      body: [
+        'Ficha RA completa (rareza en este pilar): real name Donovan, base México, alias único; “Bastard Love is just a feeling, an hybrid between house and techno”. El nombre lo explica él mismo en Music is 4 Lovers: “Love is house, Bastard is techno”. Como promotor de Difficult People trajo a Art Department, Soul Clap y Lee Foss a CDMX; produce para Diynamic, My Favorite Robot y Hot Waves, con colaboraciones de Alex Arnout, Balcazar & Sordo, Climbers, Miguel Puente y Métrika.',
+        'El puente con la red de Perros está documentado dos veces: la agenda de RA muestra un cartel en 303 Audiophile Bar (Barcelona) con DAWIDU / BASTARD LOVE / PERRO JIMBO, y el calendario local lo confirma en SolaReflect III (10.07.26, L’amagatall de Cal Tonedor) y Perros BCN — Summer Closing (19.09.26, Village Underground). Co-billing verificado, no inferencia.',
+        'Y el lado Frutis: el flyer VERIDIS QUO (viernes 10.10.25, Carrer del Bruc 80) lista BASTARD LOVE / DIESCO / FRUTIS. Queda así la cadena completa que buscaba este pilar: flyers de Frutis → Bastard Love → Perro Jimbo (303 / Perros) → Thomas Kick en la órbita RA. Cada eslabón con fuente propia; la red se sostiene sin saltos.',
+      ],
+    },
+    {
+      id: 'diesco',
+      title: 'Diego García (Diesco) — el puente CDMX ↔ Barcelona',
+      excerpt:
+        'RA: nacido en México, viviendo en España; lo más tocado es BCN, CDMX, Puerto Escondido, Tulum e Ibiza. Studio Stereo, El Molino y dos flyers compartidos con Frutis.',
+      meta: ['MX → BCN', 'House / Electro', 'Studio Stereo'],
+      sources: [
+        { label: 'RA — Diesco', href: 'https://ra.co/dj/diesco' },
+        {
+          label: 'TechnoBeatsCloud — agenda',
+          href: 'https://technobeatscloud.com/escena/deejays/diesco',
+        },
+        {
+          label: 'El Molino — Disco Marisco',
+          href: 'https://www.elmolinobarcelona.com/en/artista/disco-marisco-vince-void-diesco-i-beniso/',
+        },
+        { label: 'Mood — Sunseabar', href: 'https://events.musicofourdesire.com/artist/diesco' },
+      ],
+      stats: [
+        { label: 'Nombre', value: 'Diego García' },
+        { label: 'Ejes', value: 'BCN · CDMX · Tulum' },
+        { label: 'Casa', value: 'Studio Stereo' },
+        { label: 'Flyers', value: 'Veridis Quo · Sauvage' },
+      ],
+      related: ['bastard-love', 'atmen', 'nannii-lopez'],
+      body: [
+        'Ficha RA con doble nacionalidad escénica: real name Diego García, nacido en México, viviendo en España; regiones más tocadas — Barcelona, Ciudad de México, Puerto Escondido, Tulum e Ibiza. Es exactamente el perfil de este ecosistema: raíces mexicanas, práctica clubera europea.',
+        'Huella BCN verificable: fechas en Studio Stereo (pl. Catalunya) con 24Seven, Cupula Recordings y Bizarre Trax, incluidas ventanas OFF; Disco Marisco en El Molino (08.02.25) junto a Vince Void y Beniso (DROP Dance Society); Sunday Sunday CDMX (22.03.25) y Sunseabar en la agenda. Su constante en carteleras: Vince Void, la otra mitad de ese circuito house/electro.',
+        'Los dos puentes con Frutis están en el archivo: VERIDIS QUO (10.10.25, Bruc 80) con Bastard Love y Frutis, y CLUB SAUVAGE by Undertone (Pl. Reial 7, 14 nov, 00:00–05:00) con FRUTIS b2b M.S.R., ATMEN y NANNII LOPEZ. El segundo cartel es oro para la red: reúne a cuatro nodos de este pilar en una sola noche.',
+      ],
+    },
+    {
+      id: 'felipe-o',
+      title: 'Felipe O — deep house de catálogo, b2b en La Orquesta',
+      excerpt:
+        'Poco ruido público, una pieza clara: “Laffitte” en Deep Clicks (27.06.25, deep house). El cartel Nuna Cor lo pone b2b con Frutis en La Orquesta Club — perfil fino, sin biografía inventada.',
+      meta: ['Deep house', 'Flyer BCN', 'Perfil fino'],
+      sources: [
+        {
+          label: 'Proton — Laffitte by Felipe O',
+          href: 'https://go.protonradio.com/r/rl5rRPozLoyUE',
+        },
+        {
+          label: 'Traxsource — catálogo Deep Clicks',
+          href: 'https://www.traxsource.com/title/2513186/melenated-beings',
+        },
+      ],
+      stats: [
+        { label: 'Sello', value: 'Deep Clicks' },
+        { label: 'Tema', value: 'Laffitte (2025)' },
+        { label: 'Género', value: 'Deep house' },
+        { label: 'Cartel', value: 'Nuna Cor 19.07' },
+      ],
+      related: ['msr', 'thomas-kick'],
+      body: [
+        'La huella pública más nítida es una sola pieza: “Laffitte” de Felipe O, publicada el 27 de junio de 2025 en Deep Clicks (sello de deep house, presente en Beatport/Traxsource con “Melenated Beings” de Deep Owen y Giffaro Hamisi en la misma ventana), con salida en Proton Radio y disponibilidad en Beatport, Spotify y Apple Music. Es un disco, no una biografía — y con eso basta para publicar.',
+        'El cruce de archivo: el flyer de la sesión acústica NUNA COR (sábado 19 jul 2025, La Orquesta Club, Ausias Marc 140, Eixample; MNCRM + Spitmind) anuncia NUNA COR × FRUTIS b2b FELIPE O. El b2b con Frutis es el vínculo que lo trae a este pilar; la sesión vive además en el mapa de gigs de la página Crew.',
+        'Metodología: sin RA localizado ni Discogs confirmado, no se afirma base, nacionalidad ni sello propio. Siguiente crawl: SoundCloud/Instagram con handle exacto, ficha RA si existe, y Discogs artist page — cuando aparezca, la tarjeta se amplía con la fuente; el estilo del b2b (deep, compatible con Deep Clicks) queda documentado solo como contexto de sello.',
+      ],
+    },
+    {
+      id: 'msr',
+      title: 'M.S.R — de Bogotá a Barcelona, órbita Freres Col',
+      excerpt:
+        'Bandcamp: “DJ/Producer from Bogotá, based in Barcelona”, bookings vía Freres Col. El cartel Club Sauvage lo pone b2b con Frutis — monograma gemelo M5R en el mismo colectivo, identidad por confirmar.',
+      meta: ['Bogotá → BCN', 'Groove / Techno', 'Flyer BCN'],
+      sources: [
+        { label: 'Bandcamp — MSR', href: 'https://msrmusic3.bandcamp.com/' },
+        { label: 'SoundCloud — M5R (colectivo Freres)', href: 'https://soundcloud.com/m5r_19' },
+        { label: 'Crew — archivo de flyers', href: 'crew.html' },
+      ],
+      stats: [
+        { label: 'Base', value: 'Bogotá → BCN' },
+        { label: 'Crew', value: 'Freres Col' },
+        { label: 'Cartel', value: 'Sauvage b2b' },
+        { label: 'Estado', value: 'Por confirmar' },
+      ],
+      related: ['felipe-o', 'atmen'],
+      body: [
+        'El MSR de su Bandcamp (msrmusic3) se presenta así: “DJ/Producer from Bogotá, based in Barcelona, SP”, con reservas vía frerescol.com. Es el único DJ electrónico de monograma MSR con base en Barcelona que aparece en fuentes públicas — y por eso es el candidato natural para el cartel.',
+        'La advertencia de homónimo: existe además M5R (SoundCloud m5r_19), también de Bogotá y también de Barcelona, cofundador del colectivo FRERES COL, con clubs en ambas ciudades (Radioberlin, Aftermood / M7, Pacha, Garage 442, City Hall) y referencias de groove de Ben Sims, Oscar Mulero y Richie Hawtin, debutando “Distortion Reality” en Freres Recordings. Mismo colectivo, mismo trayecto, monograma distinto — no confirmamos que sea la misma persona, y el artículo no lo da por hecho.',
+        'El vínculo con la red es el flyer CLUB SAUVAGE (Pl. Reial 7, Ciutat Vella; 14 nov, 00:00–05:00): DIESCO / FRUTIS b2b M.S.R. / ATMEN / NANNII LOPEZ, con logos de LOST y Sonata. Un b2b con Frutis como declaración de escena; la confirmación de identidad queda como siguiente crawl (Discogs, RA, Instagram exacto).',
+      ],
+    },
+    {
+      id: 'atmen',
+      title: 'ATMEN — Oscar Castellanos: de Guadalajara al LOST de Barcelona',
+      excerpt:
+        'RA lo nombra: Oscar Castellanos, +7 años en BCN, cofundador de LOST Barcelona y Studio 79; house, indie dance, electro, acid y techno. El logo LOST aparece en su propio cartel con Frutis.',
+      meta: ['Guadalajara → BCN', 'House / Acid', 'LOST · Studio 79'],
+      sources: [
+        { label: 'RA — ATMEN', href: 'https://ra.co/dj/atmen' },
+        {
+          label: 'ADE — bio',
+          href: 'https://www.amsterdam-dance-event.nl/en/artists-speakers/atmen/2521853/',
+        },
+        { label: 'Instagram — @atmenmusic', href: 'https://www.instagram.com/atmenmusic/' },
+      ],
+      stats: [
+        { label: 'Nombre', value: 'Oscar Castellanos' },
+        { label: 'Base', value: 'BCN (7+ años)' },
+        { label: 'Crew', value: 'LOST · Studio 79' },
+        { label: 'Origen', value: 'Guadalajara, MX' },
+      ],
+      related: ['diesco', 'nannii-lopez', 'msr'],
+      body: [
+        'Ficha RA con nombre real: Oscar Castellanos, “DJ and producer based in Barcelona for over 7 years” y creador del colectivo LOST; la bio de ADE completa el origen — Guadalajara, Jalisco, México — y el sonido: “House, Indie Dance, Electro, Acid & Techno”. Residencias y salas: Pacha, La Terrazza, CityHall, Amnesia Rabat, ToyRoom, Bar Américas, entre otras en América, Europa y África.',
+        'Su infraestructura en BCN es doble: LOST (colectivo, @lost.bcn) y Studio 79 (@studio79.bcn, academia/estudio), más Sunseabar Beach Club en su bio de Instagram. Ahí se cruza con Diesco — ambos en carteles de Sunseabar y Studio Stereo — cerrando el circuito house/electro que comparte este pilar.',
+        'La prueba de identidad con el archivo: el flyer CLUB SAUVAGE by Undertone (Pl. Reial 7, 14 nov) lista DIESCO / FRUTIS b2b M.S.R. / ATMEN / NANNII LOPEZ y lleva abajo el logo de LOST. El mismo colectivo que RA le atribuye a Atmen firma su cartel — la cadena cartel ↔ perfil ↔ colectivo cierra sin suposiciones.',
+      ],
+    },
+    {
+      id: 'nannii-lopez',
+      title: 'Nannii Lopez — el hilo minimal entre Bogotá, Madrid y Barcelona',
+      excerpt:
+        'Beatport desde 2016; colaboraciones estables con Dannx (Kommando, HardCutz) y presencia en Endless Off Week 2023. El cartel Club Sauvage lo pone en la misma noche que Frutis, Diesco y Atmen.',
+      meta: ['LatAm ↔ BCN', 'Minimal / Deep', 'Kommando'],
+      sources: [
+        {
+          label: 'Beatport — Nannii Lopez',
+          href: 'https://www.beatport.com/artist/nannii-lopez/551717',
+        },
+        {
+          label: 'Bandcamp — The Power Of Rising (Kommando)',
+          href: 'https://kommandoreal.bandcamp.com/track/the-power-of-rising',
+        },
+        {
+          label: 'Electronic Groove — Endless Off Week',
+          href: 'https://electronicgroove.com/endless-off-week-ender-friday-saturday/',
+        },
+      ],
+      stats: [
+        { label: 'Beatport', value: 'Desde 2016' },
+        { label: 'Collabs', value: 'Dannx · Beghelli' },
+        { label: 'Sellos', value: 'Kommando · HardCutz' },
+        { label: 'Cartel', value: 'Sauvage 14 nov' },
+      ],
+      related: ['atmen', 'diesco', 'msr'],
+      body: [
+        'Ficha de artista en Beatport con histórico desde 2016 y un puñado de publicaciones por colaboración: “Five Dimension” con Dannx (HardCutz Records, 2021) y “The Power Of Rising” con Beghelli y Dannx (Battalion Vol.1, Kommando, 2024). Su nombre vive casi siempre acompañado — la firma de su trabajo es el b2b y el colectivo.',
+        'El acompañante habitual es Dannx: DJ de Bogotá afincado en Barcelona, cofundador de PRISSMA, con pasos por Razzmatazz, City Hall o Cafe del Mar en BCN y Estéreo Picnic en Colombia (ficha Beatport). A eso se suma la compilación de Endless Off Week/Ender 2023 en Barcelona, que lista a Nannii Lopez entre los colaboradores, y un guestmix para la serie de Concept101.',
+        'El cruce con nuestro archivo: CLUB SAUVAGE (Pl. Reial 7, 14 nov, 00:00–05:00) — DIESCO / FRUTIS b2b M.S.R. / ATMEN / NANNII LOPEZ. Comparte cartel con tres nodos de este pilar en una noche de Ciutat Vella; el vínculo exacto con Frutis (b2b o set adyacente) queda abierto a la fuente del organizador.',
+      ],
+    },
+    {
+      id: 'stevie-toth',
+      title: 'Stevie Tóth — la sesión b2b con Frutis en UNREC',
+      excerpt:
+        'El título del video es la fuente: “Frutis B2B Stevie Toth | UNREC Open Source Sessions”. SoundCloud propio con ese acento (Tóth) y el contexto completo del formato de jueves en BCN.',
+      meta: ['UNREC', 'b2b con Frutis', 'Perfil fino'],
+      sources: [
+        {
+          label: 'YouTube — Frutis B2B Stevie Toth',
+          href: 'https://www.youtube.com/watch?v=OINo_TTLfzo',
+        },
+        { label: 'SoundCloud — Stevie Tóth', href: 'https://soundcloud.com/stevietoth' },
+        {
+          label: 'whoisinbcn — UNREC Open Source Sessions',
+          href: 'https://whoisinbcn.com/every-thursday-unrec-open-source-sessions-are-a-new-format-that-rede/',
+        },
+      ],
+      stats: [
+        { label: 'Sesión', value: 'b2b con Frutis' },
+        { label: 'Formato', value: 'Open Source Sessions' },
+        { label: 'Muestra', value: 'SoundCloud' },
+        { label: 'Estado', value: 'Perfil fino' },
+      ],
+      related: ['thomas-kick', 'perro-jimbo'],
+      body: [
+        'La evidencia principal es el propio video: “Frutis B2B Stevie Toth | UNREC Open Source Sessions” en el canal de YouTube de UNREC — una de las dos sesiones de Frutis que ahora viven en la página Crew. A eso se suma su SoundCloud público bajo la grafía con acento, Stevie Tóth (comentador activo en pistas de sellos como Permanent Vacation), y la foto de cabina del archivo del crew (Frutis vs Stevie Toth en club).',
+        'Contexto del formato: whoisinbcn describe las UNREC Open Source Sessions como una cita de jueves emitida en YouTube “desde los lugares más emblemáticos de la ciudad”, con sesiones de Hanakito, Deeplomacy o Akainu, y MixID documenta una entrega de UNREC Sessions con The Hacker en Freedonia (27.03.25). No es un canal cualquiera: es la cinta de la escena que aquí interesa.',
+        'Perfil deliberadamente fino: sin RA ni prensa localizable, no se le asigna base ni nacionalidad. Lo que sí queda publicado —set compartido con Frutis, plataforma y grafía— es lo verificable hoy. Siguiente crawl: Instagram con handle exacto, RA y set79 sobre la sesión del video para abrir su tracklist en la red neural.',
+      ],
+    },
+    {
+      id: 'perro-jimbo',
+      title: 'Perro Jimbo — la residencia Perros/303 y el calendario BCN',
+      excerpt:
+        'Fijo en Perros Mediterráneos (Poble Sec) y en 303 Audiophile Bar (Sant Antoni); siete fechas 2026 en nuestro calendario, incluida la NYE 3TRES6. El puente con Bastard Love está en RA.',
+      meta: ['Barcelona', 'Residente 303 / Perros', 'Cadena neural'],
+      sources: [
+        { label: 'Miniguide — Perros 4 Years', href: 'https://miniguide.co/event/perros-4-years' },
+        {
+          label: 'Outhere — Perro Jimbo',
+          href: 'https://www.outhere.guide/artist/perro-jimbo-f491',
+        },
+        {
+          label: 'Jambase — Family Matters (Village Underground)',
+          href: 'https://www.jambase.com/show/family-matters-village-underground-barcelona-20260530',
+        },
+        { label: 'Calendario 3TRES6', href: 'index.html#calendario' },
+      ],
+      stats: [
+        { label: 'Casas', value: '303 · Perros' },
+        { label: 'Ciudad', value: 'Barcelona' },
+        { label: 'Calendario', value: '7 fechas 2026' },
+        { label: 'Cadena', value: '↔ Bastard Love' },
+      ],
+      related: ['bastard-love', 'thomas-kick'],
+      body: [
+        'El apoyo institucional de la escena está por doquier. Miniguide lo nombra entre los “Perros fixtures” del cuarto aniversario de Perros Mediterráneos —el “infamous cultural bar and record store” de Poble Sec— junto a Lumiere, Demofather, Fatal, sakali y Sergi, con sonidos Rostro y Pequod Acoustics; y en otra fecha lo describe como “resident at the much-loved Sant Antoni audiophile bar”, el 303. Outhere recoge su agenda (Waxplace Vinyl APP Launch, Kumquat x Perros) y Jambase su presencia en Family Matters @ Village Underground (30.05.26, con Zonzo).',
+        'Nuestro calendario lo da por siete fechas en 2026: Chez Perros 5 Years (02.05, Village Underground), Waxplace (30.05), Kumquat x Perros OFF (21.06), SolaReflect III (10.07), Perros Summer Closing (19.09), Winter Series (05.12) y la NYE 2027 — 3TRES6 All Night Long (31.12). Ese último cartel lo sienta dentro de la órbita propia del sello.',
+        'El eslabón neural que buscaba este pilar: la agenda de RA de Bastard Love lista 303 Audiophile Bar con DAWIDU / BASTARD LOVE / PERRO JIMBO, y el calendario confirma los co-bills de ambos en SolaReflect III y Perros Summer Closing. Frutis ↔ (flyer Veridis Quo) ↔ Bastard Love ↔ Perro Jimbo — tres fuentes, cero inferencias. Y el primer set ya está en la Discoteca: “Studio Stereo’s Dancing Room” (1:50, publicado por AUDIODISE, el sello de E.Lina en esta misma biblioteca) — cierre de jueves en Studio Stereo, con los IDs en recheck.',
+      ],
+    },
+    {
+      id: 'pavolar',
+      title: 'Pa’volar — el sello-colectivo que nace con Subwax',
+      excerpt:
+        '“Record label & DJ collective from Barcelona, distributed by Subwax”. Catálogo PAV001–005 en 12” (Neoser, Baffa, Soul Travels) y vitrina en Yoyaku — el tipo de sello que este ecosistema necesita de cerca.',
+      meta: ['Barcelona', 'Sello / colectivo', 'Vinilo 12”'],
+      sources: [
+        { label: "Bandcamp — Pa'volar", href: 'https://pavolar.bandcamp.com/' },
+        { label: 'Subwax — Pa’volar', href: 'https://subwax.es/brands/pavolar/' },
+        { label: 'Yoyaku — Pa’volar', href: 'https://yoyaku.io/label/pavolar/' },
+      ],
+      stats: [
+        { label: 'Base', value: 'Barcelona' },
+        { label: 'Distribución', value: 'Subwax' },
+        { label: 'Catálogo', value: 'PAV001–005' },
+        { label: 'Formato', value: '12” + digital' },
+      ],
+      related: ['donde-compran-djs', 'bastard-love'],
+      body: [
+        'La auto-descripción es la mejor posible: “Record label & DJ collective from Barcelona. Distributed by Subwax” (Bandcamp), con demos por enlace a pavolar.records@gmail.com. Es decir: sello y colectivo a la vez, física primero, y con la distribución de Subwax — la tienda sello que todo vinilo BCN conoce — detrás de cada referencia.',
+        'Catálogo trazable de PAV001 a PAV005, todo en 12”: Open Senses (Neoser, PAV001), Mental Nature (Baffa / Neoser, PAV002), Inner Glow (Neoser, PAV004, master de Nordik Studio) y las compilaciones Soul Travels 01 y 02 — la 02 (2025) compilada por Sebastián Cádiz con artwork de Francesc Bustins, cerrando un arco de breaks, house, deep y downtempo según la ficha de Yoyaku.',
+        'Por qué lo subimos a este pilar: es el eslabón industria del mapa —BCN, vinilo, distribución real, artistas propios— y funciona como escaparate para cualquier dígner que quiera dar el salto físico (como ya hizo Neoser tres veces). Vitrina confirmada en Subwax y Yoyaku; el siguiente paso de red es cruzar sus artistas con sets extraíbles y con los colectivos vecinos (LOST, PRISSMA, Perros).',
+      ],
+    },
+    {
+      id: 'crisalide',
+      title: 'Crisalide — objetivo de extracción en la red neural',
+      excerpt:
+        'Fichas SESH e Innerload (Italia) más el guest mix de SIDE SESSIONS en Bridge 48 (Barcelona, feb 2026) — ya en la Discoteca. Identidad canónica abierta, homónimos documentados.',
+      meta: ['Identidad abierta', 'Italia ↔ BCN', 'Extracción'],
+      sources: [
+        { label: 'SESH — artist/Crisalide', href: 'https://sesh.sx/artists/crisalide' },
+        {
+          label: 'Innerload — AGAIN Release Party (guest)',
+          href: 'https://innerload.com/js_events/again-release-party-innerload-crisalide-perpetual-fate/',
+        },
+        {
+          label: 'SIDE MUSIC — Side Radio 019',
+          href: 'https://soundcloud.com/side-566175776/side-radio-019-crisalide-guest',
+        },
+        { label: 'SoundCloud — candidato', href: 'https://soundcloud.com/crisalide1994' },
+      ],
+      stats: [
+        { label: 'Índice', value: 'SESH.sx' },
+        { label: 'Ancla', value: 'Bridge 48, BCN' },
+        { label: 'Set', value: 'Side Radio 019' },
+        { label: 'Estado', value: 'Identidad abierta' },
+      ],
+      related: ['thomas-kick', 'perro-jimbo'],
+      body: [
+        'Lo documentado cabe en dos fuentes: la ficha de artista en SESH.sx (índice de raves y club nights) donde Crisalide aparece con carteles junto a Erico Rampas y Anikha — nombres de la órbita italiana —, y una aparición como “Special Guest” en la release party de Again de Innerload (26.10.19, Krach Club, Monastier di Treviso). Eso prueba un acto electrónico real con historial; no prueba todavía cuál de los perfiles es el canónico.',
+        'Pero la ancla acaba de aparecer: SIDE MUSIC publicó “Side Radio 019 - Crisalide Guest Mix” con la descripción “SIDE SESSIONS: Crisalide — Bridge 48, February, 2026, Bcn”. Barcelona, febrero de 2026 — el guest mix ya está en la Discoteca de esta web como set con audio completo (1:12), y es la primera fuente que ata el nombre a la ciudad. La mezcla sigue siendo un set de IDs abiertos: sin tracklist publicada, con recheck programado.',
+        'El campo de homónimos sigue siendo hostil y por eso se documenta: una banda de metal italiana Crisalide (30 años de trayectoria), una cantante de jazz/blues italiana, un sello de Luxemburgo, el estudio de radio Crisàlide de Barcelona, y decenas de temas titulados “Crisalide”. Publicar una biografía ahora sería inventar — pero la cadena identidad ↔ escena ↔ set por fin tiene tres eslabones.',
       ],
     },
   ],
