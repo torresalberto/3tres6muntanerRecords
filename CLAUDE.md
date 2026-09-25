@@ -119,6 +119,23 @@ the full protocol in `scripts/TRACK_ID_EXTRACTION_PROTOCOL.md`, and the runner
 numbered, ID requests), descriptions, owner/pinned boosts, external cross-checks,
 and honest incomplete-set handling (`recheck_after`).
 
+SoundCloud sets use `audio_provider: "soundcloud"` + `audio_url` (the
+`youtube_*` fields stay empty — `js/dj-library-core.js → mediaProvider`
+switches the player). Empty `date` is allowed when only the month is known —
+document the reasoning in `curious_facts.date_note`.
+
+## Crew — gigs map data
+
+- **Source of truth:** `data/crew/gigs.json` — flyer-verified shows only
+  (archive `crew/d-mfrutis/assets/ig/0xx.jpg`). One entry per gig:
+  `date/dateLabel/event/venue/address/city/coords/lineup/flyer/tbd`.
+- `coords: null` = rail-only entry (never guess a pin — private/unconfirmed
+  locations like Carmine House Society stay unpinned).
+- Rendered by `data/crew/index.js → renderCrewGigs/loadCrewGigs` + map hub in
+  `js/crew.js → initGigsMap` (Leaflet + MapLibre, same SRI stack as `mapa.html`).
+- The old `/crew/d-mfrutis/` page is retired behind a 301 to `/crew.html`
+  (`.htaccess`) — keep sitemaps/IA in sync if it ever moves.
+
 ## DJ Library / Discoteca (canonical) + house design system
 
 - **Winner of the A/B:** "Discoteca 3TRES6" (`dj-library.html` + `css/dj-library.css`

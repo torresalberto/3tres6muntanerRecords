@@ -56,6 +56,13 @@ DJCore.initGraph`): nodes sized by connections, links weighted by shared
   `prefers-reduced-motion`.
 - **Dossier card / growth slots** — editorial member spread inside `#crewGrid`
   (QA contract) and dashed "slot" ghost cards for future members.
+- **Gigs map (`003 / Dónde tocó`)** — flyer-verified Barcelona venues only:
+  Leaflet 1.9.4 + MapLibre GL dark vector (exact SRI stack shared with Mapa,
+  OpenFreeMap style + CartoDB fallback), marker ↔ rail click sync, teardown
+  via `page.stops`. Data: `data/crew/gigs.json` (unpinned entries render in the
+  rail but not on the map).
+- **Sessions (`004 / Sesiones`)** — Frutis's two UNREC YouTube sets as facade
+  cards (`data-video` id → click-to-embed iframe; no autoplay).
 
 ## Page chrome
 
@@ -145,7 +152,7 @@ Rules:
 - `data/djs/index.json`, `data/djs/stats.json`, `data/djs/sets/*.json`,
   `data/djs/cross-references.json` — DJ Library / shared graph.
 - `data/venues/index.json` — Mapa.
-- `data/crew/index.js` — Crew.
+- `data/crew/index.js`, `data/crew/gigs.json` — Crew (+ gigs map).
 - `toolhub/js/*-db.js` — Taller catalogs.
 
 ## Status
@@ -159,10 +166,14 @@ Rules:
   popup "DJs que tocaron aquí / Sets en este club" + reciprocal set-sheet
   venue chip)
 - ✅ Blog — redone in this system (editorial index + light long-form reader,
-  keyboard tabs, deep links, progress and reduced-motion support)
+  keyboard tabs, deep links, progress and reduced-motion support). Four
+  pillars; the `emerging` pillar holds the flyer-DJ dossiers (12 new articles
+  in the crew-gigs pass: Landeep, Victor Hugo, Bastard Love, Diesco, Felipe O,
+  M.S.R, Atmen, Nannii Lopez, Stevie Tóth, Perro Jimbo, Pa'volar, Crisalide)
 - ✅ Crew — redone in this system (kinetic brutalist hero + SplitText/cursor
   type, founder dossier in `#crewGrid`, 21-photo Wall scrub, WebGL grain with
-  CSS fallback, growth slots, `s05c` QA coverage; swup arrivals inject
+  CSS fallback, growth slots, gigs map + UNREC sessions (`s05`/`s05c` QA
+  coverage, `crew.css?v=2`); swup arrivals inject
   `css/crew.css` + GSAP + `data/crew/index.js` + `js/crew.js` via
   `js/swup-init.js`)
 - 🚧 Neural — next
