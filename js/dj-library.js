@@ -340,7 +340,8 @@
         (set.tracklist[0].timestamp || set.tracklist[0].time)) ||
       '';
     Core.renderPlayer(set, settings.time || firstTime, Boolean(settings.time));
-    $('#setTracklistTitle').innerHTML = `Tracklist <span>${total} tracks</span>`;
+    const shown = known !== total ? `${known}/${total}` : String(total);
+    $('#setTracklistTitle').innerHTML = `Tracklist <span>${shown} tracks</span>`;
     $('#setTracklist').innerHTML = Core.buildTracklist(set);
     $('#setExtras').innerHTML = Core.buildRequested(set) + Core.buildFacts(set);
   }
