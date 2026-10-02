@@ -97,7 +97,8 @@
       return;
     }
     var s = document.createElement('script');
-    s.src = SITE_BASE + urls[i].src;
+    // Absolute URLs (CDN) must not get the site origin prefixed.
+    s.src = /^https?:\/\//.test(urls[i].src) ? urls[i].src : SITE_BASE + urls[i].src;
     s.defer = true;
     s.onload = function () {
       ensureScriptSequence(urls, i + 1);
@@ -215,6 +216,141 @@
     // page. Without this, clicking "Blog" on dj-library leaves "DJ Library"
     // highlighted on the new page.
     updateSubnavActive();
+    // Same problem for the main header nav (lives in <header>, outside
+    // the swup container): the previous page's .active/aria-current sticks.
+    updateMainNavActive();
+    // And for <body> classes: crew/blog/ticker styles are scoped to body
+    // classes set in static HTML, which swup never swaps. Sync them here.
+    syncBodyClass();
+    // The top-banner lives outside the swup container too — swap its
+    // items (per-page sets) so the arriving page's ticker shows.
+    syncTicker();
+  }
+
+  // Keep in sync with the .ticker-content items in each page's static HTML.
+  var TICKER_SETS = {
+    crew: [
+      'Barcelona → México',
+      'El crew que suena en cabina',
+      'Sesiones UNREC · Open Source',
+      'Conexiones entre DJs',
+      'Archivo de cabina y flyers',
+      'Dónde tocó · Mapa de gigs',
+    ],
+    blog: [
+      'Atlas Vinilo — datos y visualizaciones',
+      'DJs Emergentes — radar de talento',
+      'Cultura DJ — vida entre discos',
+      'Red de Voces — promotoras, salas y colectivos',
+    ],
+    library: [
+      'Sets y tracklists de DJs underground',
+      'Vinilos seleccionados en Barcelona',
+      'Envíos a México',
+      'Nuevas llegadas cada semana',
+      'IDs identificados con precisión',
+    ],
+    store: [
+      'Vinilos europeos directo de Barcelona',
+      'Envíos a todo México',
+      'Paga con Mercado Pago',
+      'Escucha antes de comprar',
+      'Nuevas llegadas cada semana',
+    ],
+  };
+
+  function tickerSpecFor(path) {
+    if (isCrewPath(path)) return { type: 'items', set: 'crew' };
+    if (isBlogPath(path)) return { type: 'items', set: 'blog' };
+    if (/\/dj-library(?:\.html|\/)/.test(path)) return { type: 'items', set: 'library' };
+    if (/\/toolhub\//.test(path) || /\/dj\//.test(path)) return { type: 'none' };
+    if (/product\.html$/.test(path)) return { type: 'plain' };
+    return { type: 'items', set: 'store' };
+  }
+
+  function escTicker(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function syncTicker() {
+    var spec = tickerSpecFor(window.location.pathname);
+    var banner = document.querySelector('.top-banner');
+    if (!banner) {
+      if (spec.type === 'none') return;
+      banner = document.createElement('div');
+      banner.className = 'top-banner';
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+    if (spec.type === 'none') {
+      banner.style.display = 'none';
+      return;
+    }
+    banner.style.display = '';
+    if (spec.type === 'plain') {
+      if (!banner.querySelector('p'))
+        banner.innerHTML = '<p>Vinilos europeos directo de Barcelona · Envíos a todo México</p>';
+      return;
+    }
+    var content = banner.querySelector('.ticker-content');
+    if (!content) {
+      banner.innerHTML = '<div class="ticker-wrapper"><div class="ticker-content"></div></div>';
+      content = banner.querySelector('.ticker-content');
+    }
+    var items = TICKER_SETS[spec.set];
+    var half = items
+      .map(function (t) {
+        return '<span class="ticker-item">' + escTicker(t) + '</span>';
+      })
+      .join('<span class="ticker-separator">•</span>');
+    // translateX(-50%) marquee: content must be exactly two identical halves.
+    content.innerHTML = half + '<span class="ticker-separator">•</span>' + half;
+  }
+
+  var BODY_CLASS_BY_PATH = [
+    { re: /\/dj-library(?:\.html|\/)/, cls: 'dj-library-page' },
+    { re: /\/toolhub\//, cls: 'downloads-page' },
+  ];
+  var MANAGED_BODY_CLASSES = ['crew-page', 'blog-document']
+    .concat(
+      BODY_CLASS_BY_PATH.map(function (m) {
+        return m.cls;
+      })
+    )
+    .filter(function (v, i, a) {
+      return a.indexOf(v) === i;
+    });
+
+  function syncBodyClass() {
+    var path = window.location.pathname;
+    var want = '';
+    if (isCrewPath(path)) want = 'crew-page';
+    else if (isBlogPath(path)) want = 'blog-document';
+    else {
+      for (var i = 0; i < BODY_CLASS_BY_PATH.length; i++) {
+        if (BODY_CLASS_BY_PATH[i].re.test(path)) {
+          want = BODY_CLASS_BY_PATH[i].cls;
+          break;
+        }
+      }
+    }
+    MANAGED_BODY_CLASSES.forEach(function (cls) {
+      document.body.classList.toggle(cls, cls === want);
+    });
+  }
+
+  function updateMainNavActive() {
+    var path = window.location.pathname.replace(/\/+$/, '');
+    var current = path.split('/').pop() || '';
+    if (!current) return;
+    var items = document.querySelectorAll('.main-nav .nav-item');
+    items.forEach(function (item) {
+      var href = (item.getAttribute('href') || '').split('#')[0].split('?')[0];
+      var base = href.replace(/\/+$/, '').split('/').pop();
+      var isCurrent = !!base && base === current;
+      item.classList.toggle('active', isCurrent);
+      if (isCurrent) item.setAttribute('aria-current', 'page');
+      else item.removeAttribute('aria-current');
+    });
   }
 
   // Inject blog CSS before the content swap so the first paint is styled.
