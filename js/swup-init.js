@@ -26,6 +26,31 @@
     containers: ['[data-swup]'],
     // Cache the new page so back/forward is instant.
     cache: true,
+    // Full-load sections (same call as mapa). Each of these owns stylesheets and/or
+    // scripts outside <main data-swup> that self-init on DOMContentLoaded, which has
+    // already fired by the time an SPA arrival swaps the container — arriving via swup
+    // rendered them unstyled and/or inert:
+    //   /toolhub/      stylesheet + 11 data scripts + inline tab/init code
+    //   /dj-library    d3 + dj-library-core.js + dj-library.js + css/dj-library.css
+    //   /3d-brain      page CSS is inlined in its own <head> (never fetched on arrival)
+    //   /              homepage calendar/cart/newsletter scripts live after </main>
+    ignoreVisit: function (url, opts) {
+      // Preserve swup's default opt-out.
+      var el = opts && opts.el;
+      if (el && el.closest && el.closest('[data-no-swup]')) return true;
+      var path;
+      try {
+        path = new URL(String(url || ''), window.location.href).pathname;
+      } catch (e) {
+        path = String(url || '').split('#')[0];
+      }
+      return (
+        /^\/toolhub\/?$/.test(path) ||
+        /^\/dj-library(\.html)?\/?$/.test(path) ||
+        /^\/3d-brain\.html$/.test(path) ||
+        path === '/'
+      );
+    },
     // Respect <a target="_blank">, rel="external", downloads, mailto:, tel:
     linkSelector:
       'a[href]:not([data-no-swup]):not([target="_blank"])' +
@@ -199,6 +224,12 @@
     if (isBlogPath(window.location.pathname)) {
       ensureBlogCss();
       ensureBlogJs();
+    }
+    // DJ profile pages (/dj/<id>.html) are static markup but are styled by
+    // css/dj-library.css, which only pages of that family load in their <head>.
+    // Head links are not swapped on SPA arrival, so inject it here.
+    if (/\/dj\/[^/]+\.html$/.test(window.location.pathname)) {
+      ensureStylesheet(SITE_BASE + 'css/dj-library.css', 'css/dj-library.css');
     }
     // Crew page: pull in crew CSS + GSAP stack + data + motion layer.
     if (isCrewPath(window.location.pathname)) {
