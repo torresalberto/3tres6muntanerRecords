@@ -36,18 +36,46 @@ const CREW_MEMBERS = [
     image: 'crew/d-mfrutis/assets/ig/012.jpg',
     imageCaption: 'Archivo personal · duotono',
     portrait: 'crew/d-mfrutis/assets/ig/017.jpg',
+    assetsDir: 'crew/d-mfrutis/assets/ig/',
     social: {
       instagram: 'https://instagram.com/d.mfrutis',
       soundcloud: 'https://soundcloud.com/d_frutis',
     },
     location: 'Barcelona',
     isPilot: true,
+    neural: true,
     stats: { photos: CREW_IG.length, gigs: 5, videos: 2 },
+  },
+  {
+    id: 'alberto',
+    name: 'alb',
+    role: 'Archivo visual & Sesiones',
+    bio: 'Segundo miembro del crew. Fotografía analógica de noche y de viaje, y la sesión de octubre en Mixcloud: 63 minutos de selección.',
+    image: 'crew/alberto/assets/ig/007.jpg',
+    imageCaption: 'Archivo personal · película',
+    portrait: 'crew/alberto/assets/ig/007.jpg',
+    assetsDir: 'crew/alberto/assets/ig/',
+    portraitIdx: '007',
+    portraitW: 512,
+    portraitH: 640,
+    portraitAlt: 'Shinjuku de noche en blanco y negro — archivo de alb',
+    photoTotal: 12,
+    page: 'crew/alberto.html',
+    social: {
+      instagram: 'https://www.instagram.com/bet.up_/',
+      mixcloud: 'https://www.mixcloud.com/albtome/',
+    },
+    location: 'Barcelona',
+    isPilot: false,
+    neural: false,
+    stats: { photos: 12, gigs: 0, videos: 0 },
   },
 ];
 
 function crewImageSrc(member, ig) {
-  return 'crew/d-mfrutis/assets/ig/' + ig.f + '.jpg';
+  return (
+    (member && member.assetsDir ? member.assetsDir : 'crew/d-mfrutis/assets/ig/') + ig.f + '.jpg'
+  );
 }
 
 function crewTileClass(ig) {
@@ -92,20 +120,32 @@ function renderCrewGrid() {
 
   container.innerHTML = filtered
     .map((member, i) => {
-      const num = String(i + 1).padStart(3, '0');
-      const ig = CREW_IG[11];
+      const num = String(CREW_MEMBERS.indexOf(member) + 1).padStart(3, '0');
+      const ig = member.isPilot
+        ? CREW_IG[11]
+        : {
+            f: member.portraitIdx || '001',
+            w: member.portraitW || 640,
+            h: member.portraitH || 640,
+          };
+      const total = member.photoTotal || CREW_IG.length;
       const links = [];
-      if (member.social && member.social.instagram) {
-        links.push(
-          `<a class="crew-link is-ghost" href="${member.social.instagram}" target="_blank" rel="noopener">Instagram ↗</a>`
-        );
+      const socialOrder = ['instagram', 'soundcloud', 'mixcloud'];
+      socialOrder.forEach((key) => {
+        if (member.social && member.social[key]) {
+          const label = { instagram: 'Instagram', soundcloud: 'SoundCloud', mixcloud: 'Mixcloud' }[
+            key
+          ];
+          links.push(
+            `<a class="crew-link is-ghost" href="${member.social[key]}" target="_blank" rel="noopener">${label} ↗</a>`
+          );
+        }
+      });
+      if (member.page) {
+        links.push(`<a class="crew-link is-ghost" href="${member.page}">Ver su página →</a>`);
+      } else if (member.neural !== false) {
+        links.push('<a class="crew-link is-ghost" href="3d-brain.html">Ver en Neural →</a>');
       }
-      if (member.social && member.social.soundcloud) {
-        links.push(
-          `<a class="crew-link is-ghost" href="${member.social.soundcloud}" target="_blank" rel="noopener">SoundCloud ↗</a>`
-        );
-      }
-      links.push('<a class="crew-link is-ghost" href="3d-brain.html">Ver en Neural →</a>');
 
       const chips = [
         member.isPilot ? '<span class="crew-chip is-pilot">Piloto</span>' : '',
@@ -113,22 +153,27 @@ function renderCrewGrid() {
         `<span class="crew-chip">Miembro Nº ${num}</span>`,
       ].join('');
 
+      const tracks =
+        member.social && member.social.soundcloud
+          ? `<div class="crew-tracks" data-member="${member.id}" hidden>
+            <div class="crew-tracks-title">Señal · SoundCloud</div>
+          </div>`
+          : '';
+
       return `
       <article class="dj-card crew-dossier-card" data-member="${member.id}">
         <figure class="crew-portrait">
-          <img src="${member.portrait || member.image}" alt="Retrato de ${member.name}" width="${ig.w}" height="${ig.h}" loading="lazy" decoding="async" />
-          <figcaption><span>${member.location}</span><span>${ig.f}/21</span></figcaption>
+          <img src="${member.portrait || member.image}" alt="${member.portraitAlt || `Retrato de ${member.name}`}" width="${ig.w}" height="${ig.h}" loading="lazy" decoding="async" />
+          <figcaption><span>${member.location}</span><span>${ig.f}/${total}</span></figcaption>
         </figure>
         <div class="crew-card-body">
-          <span class="crew-card-num">Dossier · Nº ${num} — Fundador</span>
+          <span class="crew-card-num">Dossier · Nº ${num}${member.isPilot ? ' — Fundador' : ''}</span>
           <h3 class="crew-name">${member.name}</h3>
           <p class="crew-role">${member.role}</p>
           <p class="crew-bio">${member.bio}</p>
           <div class="crew-chips">${chips}</div>
           <div class="crew-links">${links.join('')}</div>
-          <div class="crew-tracks" id="crewTracks" hidden>
-            <div class="crew-tracks-title">Señal · SoundCloud</div>
-          </div>
+          ${tracks}
         </div>
       </article>`;
     })
@@ -149,8 +194,12 @@ function renderCrewWall() {
   }).join('');
 }
 
+function crewTracksBox() {
+  return document.querySelector('.crew-tracks[data-member="d-mfrutis"]');
+}
+
 function renderCrewTracks(tracks) {
-  const box = document.getElementById('crewTracks');
+  const box = crewTracksBox();
   if (!box || !tracks || !tracks.length) return;
   box.hidden = false;
   box.innerHTML =
@@ -173,7 +222,7 @@ function loadCrewTracks() {
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
     .then((d) => renderCrewTracks(d.tracks))
     .catch(() => {
-      const box = document.getElementById('crewTracks');
+      const box = crewTracksBox();
       if (box) box.hidden = true;
     });
 }

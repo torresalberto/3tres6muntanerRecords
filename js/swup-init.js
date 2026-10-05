@@ -34,6 +34,7 @@
     //   /dj-library    d3 + dj-library-core.js + dj-library.js + css/dj-library.css
     //   /3d-brain      page CSS is inlined in its own <head> (never fetched on arrival)
     //   /              homepage calendar/cart/newsletter scripts live after </main>
+    //   /crew/alberto  own <head> stylesheet (css/alberto.css) + lazy facade scripts
     ignoreVisit: function (url, opts) {
       // Preserve swup's default opt-out.
       var el = opts && opts.el;
@@ -48,6 +49,7 @@
         /^\/toolhub\/?$/.test(path) ||
         /^\/dj-library(\.html)?\/?$/.test(path) ||
         /^\/3d-brain\.html$/.test(path) ||
+        /^\/crew\/alberto\.html$/.test(path) ||
         path === '/'
       );
     },

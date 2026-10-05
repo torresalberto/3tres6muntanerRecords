@@ -19,7 +19,8 @@
 │   └── /dj/<dj-id>.html       62 individual DJ profile pages
 ├── Descubrir
 │   ├── /mapa                  Curated club map (Leaflet)
-│   └── /crew                  The crew (kinetic page + gigs map)
+│   ├── /crew                  The crew (kinetic page + gigs map)
+│   └── /crew/alberto.html     alb — member Nº 002 (mix + photo archive)
 ├── Recursos
 │   ├── /toolhub/              DJ tools hub (Camelot wheel, USB, etc.)
 │   └── /blog.html             Blog / editorial
@@ -44,6 +45,7 @@
 | `/crew` | 301 → `crew.html` | `/crew` (clean) |
 | `/sitemap` | 301 → `sitemap.html` | `/sitemap` (clean) |
 | `/dj/<id>.html` | `dj/<id>.html` | `/dj/<id>.html` |
+| `/crew/alberto.html` | `crew/alberto.html` | `/crew/alberto.html` |
 | `/crew/d-mfrutis/` | 301 → `crew.html` | (retired) |
 
 Clean-URL rewrites live in `.htaccess` (`/crew`, `/mapa`, and the new `/sitemap`).
@@ -65,6 +67,7 @@ name). The other sitemap entries are hand-maintained — there is no generator f
 - **0.8 — `/blog.html`**: editorial, freshness-driven.
 - **0.7 — `/toolhub/`, `/3d-brain.html`, `/mapa`, `/crew`**: evergreen hub pages.
 - **0.6 — 62 × `/dj/<id>.html`**: individual profiles, equal weight.
+- **0.6 — `/crew/alberto.html`**: member page (hub-level content, linked from `/crew`).
 - **0.5 — `/product.html`**: template/detail view.
 
 ---

@@ -64,6 +64,13 @@ DJCore.initGraph`): nodes sized by connections, links weighted by shared
   rail but not on the map).
 - **Sessions (`004 / Sesiones`)** — Frutis's two UNREC YouTube sets as facade
   cards (`data-video` id → click-to-embed iframe; no autoplay).
+- **Blue-hour film member page** — `crew/alberto.html` (alb, Nº 002): deliberately
+  different from the kinetic brutalist `crew.html` — Newsreader serif display on
+  blue-black `#06090f`, orange as micro-accent only, Mixcloud facade
+  (`js/alberto.js` click-to-iframe), 12-photo **contact sheet** with a
+  CSS-only lightbox (Esc/←/→, body lock) and IntersectionObserver reveals gated
+  behind the `ab-js` marker (JS-less = fully visible). Own `css/alberto.css?v=1`
+  + `js/alberto.js`; full-load section in swup (`ignoreVisit`).
 
 ## Page chrome
 
@@ -138,7 +145,7 @@ _¿qué hay aquí?_ (Exploración), _¿qué hago?_ (Acción), _¿cómo vuelvo?_
 | Set                   | Discoteca set sheet (`#set:<id>` via sheet)                          | Mapa venue popup, Taller DJ-sets search, Neural info panel    |
 | Venue                 | Mapa pin (`mapa.html#venue:<id>`)                                    | Discoteca set-sheet venue chip, Crew residency                |
 | Genre / Label / Track | Discoteca editorial + El Hilo filters                                | Neural bridges, Taller filters                                |
-| Crew member           | `crew.html` card                                                     | Discoteca sleeve (members = DJs), Neural node, Mapa residency |
+| Crew member           | `crew.html` card (+ own page: `crew/alberto.html` for alb)         | Discoteca sleeve (members = DJs), Neural node, Mapa residency |
 | Tool                  | `toolhub/#hardware\|wheel\|music\|software`                          | Música nav group                                              |
 
 Rules:
@@ -181,6 +188,11 @@ Rules:
   - **Crew page scope:** music/vibe only — no store copy in page content
     (ticker/lede/bio stay concert-focused), no growth/"solicitar acceso"
     slots. Global chrome (nav/footer) untouched.
+- ✅ Crew member pages — `crew/alberto.html` (alb, Nº 002): Mixcloud session on
+  top, contact-sheet photo archive (12 photos pulled from his IG, video posts
+  excluded), signal links. Card on `crew.html` renders from
+  `data/crew/index.js` (`portrait`/`portraitIdx`/`portraitW/H`/`portraitAlt`,
+  `page` link); QA `s05c` still pins Frutis first and `CREW_IG` = 21.
 - 🚧 Neural — next
 
 ## Known gaps / learnings (from past passes)

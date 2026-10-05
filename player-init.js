@@ -24,11 +24,12 @@
   // Load audio player script if not already loaded
   if (!window.AudioPlayer) {
     const s = document.createElement('script');
-    // Detect if we're in a subdirectory (dj/ or toolhub/)
+    // Detect if we're in a subdirectory (dj/, toolhub/, crew/<member>)
     const isSubdir =
       window.location.pathname.includes('/dj/') ||
       window.location.pathname.includes('/toolhub/') ||
-      window.location.pathname.includes('/dj-library/');
+      window.location.pathname.includes('/dj-library/') ||
+      window.location.pathname.includes('/crew/');
     s.src = isSubdir ? '../audio.js' : 'audio.js';
     document.body.appendChild(s);
   }

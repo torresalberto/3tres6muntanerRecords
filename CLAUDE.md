@@ -136,6 +136,21 @@ document the reasoning in `curious_facts.date_note`.
 - The old `/crew/d-mfrutis/` page is retired behind a 301 to `/crew.html`
   (`.htaccess`) — keep sitemaps/IA in sync if it ever moves.
 
+### Crew member pages
+
+- `crew/alberto.html` = alb (Nº 002) — **blue-hour film** design, deliberately
+  different from `crew.html`: `css/alberto.css?v=1` + `js/alberto.js`
+  (Mixcloud facade, contact-sheet lightbox, `ab-js`-gated reveals), listed in
+  `sitemap.xml` (71 URLs). The page is in `js/swup-init.js` `ignoreVisit`
+  (full-load section); `player-init.js` `isSubdir` includes `/crew/`.
+- Cards on `crew.html` render from `data/crew/index.js` (`CREW_MEMBERS`:
+  portrait path + `portraitIdx/W/H/Alt`, `photoTotal`, `page`, social links).
+  **QA contracts:** `s05c` requires Frutis to stay the first card with an
+  absolute http link, and `CREW_IG` to stay 21 (The Wall) — never reorder.
+- Alb's archive: `crew/alberto/assets/ig/001–012.jpg` (12 photos from
+  `@bet.up_`; **video posts excluded** — IG bakes the play button into
+  `og:image`). Harvest sources/protocol notes live in the session, not here.
+
 ## DJ Library / Discoteca (canonical) + house design system
 
 - **Winner of the A/B:** "Discoteca 3TRES6" (`dj-library.html` + `css/dj-library.css`
