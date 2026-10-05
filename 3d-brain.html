@@ -29,6 +29,11 @@
          ======================================== */
 
       :root {
+        /* Fixed site header geometry — mirror of the tokens in styles.css :root.
+           This page inlines a snapshot of styles.css, so keep both in sync. */
+        --header-top: 40px;
+        --header-height: 81px;
+        --header-bottom: 121px;
         --color-bg: #0a0a0a;
         --color-bg-light: #111111;
         --color-bg-card: #161616;
@@ -348,7 +353,7 @@
 
       .header {
         position: fixed;
-        top: 40px;
+        top: var(--header-top, 40px);
         left: 0;
         right: 0;
         z-index: 1000;
@@ -361,10 +366,18 @@
         border-bottom-color: rgba(255, 255, 255, 0.06);
       }
 
-      /* Flow spacer replacing the former DJ Hub sub-nav (keeps content clear of the fixed header: top 40px + 80px height = 121px). */
+      /* Flow spacer replacing the former DJ Hub sub-nav (keeps content clear of the fixed header). */
       .header-spacer {
-        height: 121px;
+        height: var(--header-bottom, 121px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      /* This page has no ticker band, so the header sits at the very top instead of
+         leaving a permanent empty 40px strip that scrolled content shows through. */
+      body.no-ticker,
+      body:not(:has(.top-banner)) {
+        --header-top: 0px;
+        --header-bottom: var(--header-height);
       }
 
       .header-container {

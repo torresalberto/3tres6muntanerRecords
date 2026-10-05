@@ -173,7 +173,10 @@
 
 .tool-tabs-section {
   position: sticky;
-  top: 0;
+  /* Clears the fixed site header (top: 40px + 81px height = 121px) — same offset as
+     .pillar-rail / .blog-reader__progress-wrap. At top:0 it slid above the header and
+     clipped the content scrolling underneath. */
+  top: var(--header-bottom, 121px);
   z-index: 30;
   background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(12px);

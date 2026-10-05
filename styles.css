@@ -3,6 +3,13 @@
    ======================================== */
 
 :root {
+  /* Fixed site header geometry. The header is fixed at --header-top (below the ticker
+     band) and measures --header-height tall, so every sticky bar must sit at
+     --header-bottom or it slides underneath / above the header. Keep these in sync with
+     .header padding instead of re-hardcoding 121px per component. */
+  --header-top: 40px;
+  --header-height: 81px;
+  --header-bottom: 121px;
   --color-bg: #0a0a0a;
   --color-bg-light: #111111;
   --color-bg-card: #161616;
@@ -218,7 +225,7 @@ button {
 
 .header {
   position: fixed;
-  top: 40px;
+  top: var(--header-top);
   left: 0;
   right: 0;
   z-index: 1000;
@@ -231,10 +238,20 @@ button {
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
-/* Flow spacer replacing the former DJ Hub sub-nav: keeps content clear of the fixed header (top 40px + 80px height = 121px) on content pages. */
+/* Flow spacer replacing the former DJ Hub sub-nav: keeps content clear of the fixed header (--header-bottom) on content pages. */
 .header-spacer {
-  height: 121px;
+  height: var(--header-bottom);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Pages with no ticker band (toolhub, /dj/*, 3d-brain): the header moves to the very top.
+   Otherwise the 40px reserved for the ticker stays empty and scrolled content shows
+   through the gap above the header. The `no-ticker` class covers swup arrivals, where the
+   banner still exists in the DOM but is hidden, so :has() alone would not react. */
+body.no-ticker,
+body:not(:has(.top-banner)) {
+  --header-top: 0px;
+  --header-bottom: var(--header-height);
 }
 
 .header-container {
@@ -577,8 +594,8 @@ button {
 
 .dj-hub-subnav {
   position: sticky;
-  top: 121px;
-  margin-top: 121px;
+  top: var(--header-bottom);
+  margin-top: var(--header-bottom);
   z-index: 999;
   background: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -762,7 +779,7 @@ button {
 /* Mobile Sub-Nav */
 @media (max-width: 768px) {
   .dj-hub-subnav {
-    top: 64px;
+    top: var(--header-bottom);
   }
 
   .subnav-container {

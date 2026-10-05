@@ -275,6 +275,7 @@
   function syncTicker() {
     var spec = tickerSpecFor(window.location.pathname);
     var banner = document.querySelector('.top-banner');
+    document.body.classList.toggle('no-ticker', spec.type === 'none');
     if (!banner) {
       if (spec.type === 'none') return;
       banner = document.createElement('div');

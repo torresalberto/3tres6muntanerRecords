@@ -30,7 +30,7 @@
 
       .product-gallery {
         position: sticky;
-        top: 100px;
+        top: var(--header-bottom, 121px);
       }
 
       .product-main-image {
@@ -403,6 +403,8 @@
         >
       </nav>
     </header>
+
+    <div class="header-spacer" aria-hidden="true"></div>
 
     <!-- Product Page -->
     <main data-swup class="product-page">
