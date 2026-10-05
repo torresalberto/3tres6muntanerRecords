@@ -16,7 +16,7 @@
 ├── DJ Library
 │   ├── /dj-library.html       All DJs + tracklists (primary)
 │   ├── /3d-brain.html         Neural graph — DJ connections (D3)
-│   └── /dj/<dj-id>.html       56 individual DJ profile pages
+│   └── /dj/<dj-id>.html       62 individual DJ profile pages
 ├── Descubrir
 │   ├── /mapa                  Curated club map (Leaflet)
 │   └── /crew                  The crew (kinetic page + gigs map)
@@ -50,6 +50,12 @@ Clean-URL rewrites live in `.htaccess` (`/crew`, `/mapa`, and the new `/sitemap`
 `dj-library.html`, `blog.html`, `3d-brain.html`, `product.html` have no clean rewrite and
 are listed by their real filename.
 
+**Maintenance:** `dj/<id>.html` profile pages are generated from `data/djs/index.json` +
+`data/djs/sets/*.json` by `scripts/build-dj-static-pages.js` (run `npx prettier --write
+"dj/*.html"` after). Adding a DJ = regenerate, then add the `<url>` block to `sitemap.xml`
+(dj entries alphabetical by id) and the `<li>` to `sitemap.html` (DJs A–Z list, by display
+name). The other sitemap entries are hand-maintained — there is no generator for them.
+
 ---
 
 ## 3. Priority & change-frequency rationale (sitemap.xml)
@@ -58,7 +64,7 @@ are listed by their real filename.
 - **0.9 — `/dj-library.html`**: flagship content pillar, updated weekly.
 - **0.8 — `/blog.html`**: editorial, freshness-driven.
 - **0.7 — `/toolhub/`, `/3d-brain.html`, `/mapa`, `/crew`**: evergreen hub pages.
-- **0.6 — 56 × `/dj/<id>.html`**: individual profiles, equal weight.
+- **0.6 — 62 × `/dj/<id>.html`**: individual profiles, equal weight.
 - **0.5 — `/product.html`**: template/detail view.
 
 ---
@@ -81,7 +87,7 @@ main DJ Library page.
 ## 5. Footer link
 
 A "Sitemap" link is injected into every page footer:
-- Via `player-init.js` for pages using `.footer-nav` (covers all 56 DJ pages + library/3d-brain/blog/crew/mapa/product/toolhub).
+- Via `player-init.js` for pages using `.footer-nav` (covers all 62 DJ pages + library/3d-brain/blog/crew/mapa/product/toolhub).
 - Added directly to `index.html` (`.footer-container` structure, does not load `player-init.js`).
 
 ---
