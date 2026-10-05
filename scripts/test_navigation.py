@@ -36,7 +36,7 @@ def test_page(page, name, path, expected):
     logo = page.query_selector("a.logo")
     if logo:
         href = logo.get_attribute("href")
-        check(href == "/3tres6muntanerRecords/", f"{name}: Logo href is '{href}', expected '/3tres6muntanerRecords/'")
+        check(href == "/", f"{name}: Logo href is '{href}', expected '/'")
 
     # Main nav exists
     main_nav = page.query_selector("nav.main-nav")

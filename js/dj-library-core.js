@@ -203,7 +203,7 @@
         chips.push({
           icon: '◎',
           text: curated.name,
-          href: `/3tres6muntanerRecords/mapa.html#venue:${curated.id}`,
+          href: `/mapa.html#venue:${curated.id}`,
           noSwup: true,
         });
       } else {

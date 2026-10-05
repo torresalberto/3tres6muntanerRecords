@@ -17,9 +17,9 @@ All three target pages were never created, but the links were hardcoded into the
 
 ```html
 <!-- BEFORE -->
-<a href="/3tres6muntanerRecords/condiciones">Condición de Vinilos</a>
-<a href="/3tres6muntanerRecords/envios">Envíos</a>
-<a href="/3tres6muntanerRecords/contacto">Contacto</a>
+<a href="/condiciones">Condición de Vinilos</a>
+<a href="/envios">Envíos</a>
+<a href="/contacto">Contacto</a>
 
 <!-- AFTER -->
 <a href="https://wa.me/5255879475564?text=Hola%2C%20tengo%20una%20duda%20sobre%20un%20vinilo" target="_blank" rel="noopener">Contacto</a>

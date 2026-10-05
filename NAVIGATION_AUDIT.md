@@ -69,8 +69,8 @@ The `subnav-back` (← Tienda) link only exists on:
 
 | Page group | Logo href | Expected |
 |---|---|---|
-| index, blog, product, 3d-brain, toolhub | `/3tres6muntanerRecords/` | ✅ |
-| dj-library, all dj/*.html | `/` | ❌ should be `/3tres6muntanerRecords/` |
+| index, blog, product, 3d-brain, toolhub | `/` | ✅ |
+| dj-library, all dj/*.html | `/` | ❌ should be `/` |
 
 **Impact:** Clicking the logo takes users to different destinations depending on which page they're on.
 
@@ -86,9 +86,9 @@ Missing from: index, dj-library, 3d-brain, toolhub, all 10 dj/*.html
 ### 🟡 HIGH — Dead Footer Links (index.html)
 
 Index footer "Info" column links to non-existent pages:
-- `/3tres6muntanerRecords/condiciones` → 404
-- `/3tres6muntanerRecords/envios` → 404
-- `/3tres6muntanerRecords/contacto` → 404
+- `/condiciones` → 404
+- `/envios` → 404
+- `/contacto` → 404
 
 ### 🟡 HIGH — 3d-brain.html Missing Footer
 
@@ -120,9 +120,9 @@ Missing from: dj-library, all 10 dj/*.html
 | Page group | Catálogo link | Calendario link |
 |---|---|---|
 | index.html | `#catalogo` | `#calendario` |
-| blog, product, dj-library | `/3tres6muntanerRecords/#catalogo` | `/3tres6muntanerRecords/#calendario` |
-| 3d-brain | `/3tres6muntanerRecords/` | `/3tres6muntanerRecords/#calendario` |
-| toolhub | `/3tres6muntanerRecords/` | `/3tres6muntanerRecords/#calendario` |
+| blog, product, dj-library | `/#catalogo` | `/#calendario` |
+| 3d-brain | `/` | `/#calendario` |
+| toolhub | `/` | `/#calendario` |
 | dj/*.html | `/` | `/#calendario` |
 
 ---
@@ -181,10 +181,10 @@ Component-level: header, sub-nav, footer captures.
 Copy the `<button class="mobile-menu-btn">` and `<nav class="mobile-nav">` from blog.html into all 11 pages. Include links to store sections + DJ Hub.
 
 ### 2. Add subnav-back link to dj-library.html and all dj/*.html
-Add `<a href="/3tres6muntanerRecords/" class="subnav-back">← Tienda</a>` to the sub-nav on all 11 pages.
+Add `<a href="/" class="subnav-back">← Tienda</a>` to the sub-nav on all 11 pages.
 
-### 3. Standardize logo href to `/3tres6muntanerRecords/`
-Change dj-library.html and all dj/*.html logo href from `/` to `/3tres6muntanerRecords/`.
+### 3. Standardize logo href to `/`
+Change dj-library.html and all dj/*.html logo href from `/` to `/`.
 
 ### 4. Add `<main>` landmark to all pages missing it
 Wrap primary content in `<main>` on: index, dj-library, 3d-brain, toolhub, all dj/*.html.

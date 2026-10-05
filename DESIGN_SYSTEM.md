@@ -106,8 +106,9 @@ _¿qué hay aquí?_ (Exploración), _¿qué hago?_ (Acción), _¿cómo vuelvo?_
    `dj-hub-subnav` duplicated Tienda + Música and is gone).
 2. Organize by task/goal, not department; two groups max (Tienda / Música).
 3. Labels must match the page's visible title (Discoteca is canonical for the
-   DJ Library; `3d-brain.html` is THE Neural page — `3d-brain-v3.html` "Órbita"
-   stays internal-only).
+   DJ Library; `3d-brain.html` is THE Neural page — the earlier "Órbita" and
+   fix/redesign prototypes were retired to `research/archive-neural-prototypes/`,
+   which is never deployed).
 4. Every nav destination must be reachable from the mobile drawer too.
 5. Deep links never change: `mapa.html#venue:<id>`, `dj-library.html#dj:<id>`,
    `dj-library.html#set:<id>`.

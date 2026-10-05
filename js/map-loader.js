@@ -460,7 +460,7 @@ const VenueMap = {
                 <div class="popup-net-sets">${net.sets
                   .map((id) =>
                     this._popupLink(
-                      `/3tres6muntanerRecords/dj-library.html#set:${encodeURIComponent(id)}`,
+                      `/dj-library.html#set:${encodeURIComponent(id)}`,
                       '' + id,
                       'set'
                     )
@@ -497,7 +497,7 @@ const VenueMap = {
 
   _djLink(djId) {
     const name = this.djNames[djId] || djId;
-    return `<a class="popup-dj" data-no-swup href="/3tres6muntanerRecords/dj-library.html#dj:${encodeURIComponent(djId)}">${name}</a>`;
+    return `<a class="popup-dj" data-no-swup href="/dj-library.html#dj:${encodeURIComponent(djId)}">${name}</a>`;
   },
 
   // Match a curated venue name against venue_networks keys using distinctive
@@ -693,7 +693,7 @@ const VenueMap = {
         ${desc}
         <div class="event-popup-actions">
           ${ev.url ? `<a href="${esc(ev.url)}" target="_blank" rel="noopener" class="popup-link">Info / Tickets →</a>` : ''}
-          <a href="/3tres6muntanerRecords/#calendario" data-no-swup class="popup-link">Ver en el calendario →</a>
+          <a href="/#calendario" data-no-swup class="popup-link">Ver en el calendario →</a>
         </div>
       </div>
     `;

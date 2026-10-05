@@ -23,7 +23,7 @@
 | 7 | ⚪ LOW | **Stale dead files in `data/tracklists/`** (10 JSON + README + extract script, all unused) | **FIXED** |
 | 8 | ⚪ LOW | **`dj-library.html` redirect stub missing `<main>` landmark** | **FIXED** |
 | 9 | 🟠 INFO | **`muntaner336.com` production URL unreachable** from test environment (DNS failure) | Reported separately |
-| 10 | 🟠 INFO | Hardcoded `/3tres6muntanerRecords/` paths in 90+ places | Per design — `sed` transform handles prod |
+| 10 | 🟠 INFO | Hardcoded `/` paths in 90+ places | Per design — `sed` transform handles prod |
 | 11 | 🟠 INFO | `data/djs/profiles/*.html` are fragments — direct access is broken (no `<meta charset>`) | Prior audit (Jun 11) flagged; pre-existing |
 | 12 | 🟠 INFO | 41 DJs missing genre data, 2 orphaned set files | Prior `DEBUG_REPORT` flagged; pre-existing |
 | 13 | 🟠 INFO | DJ data parity: `DJ_DATA` (56) vs `TRACKLISTS` keys (56) — match, but the inline array is the source of truth in 3d-brain, not the compiled file | Working as designed |
@@ -193,7 +193,7 @@ This is **not** the cause of the user's reported bug (the live data was in sync 
 
 ## ℹ️ Info items (no action needed now)
 
-### Hardcoded `/3tres6muntanerRecords/` paths
+### Hardcoded `/` paths
 
 90+ occurrences across all 16 HTML files. These are intentional — the `deploy.yml` `sed` step strips them for the shared-hosting target. The `git ls-files | wc -l` count of 27 was just for `3d-brain.html`; the total across all pages is 90+.
 

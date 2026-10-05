@@ -8,12 +8,12 @@
   "theme_color": "#ff6b35",
   "icons": [
     {
-      "src": "/3tres6muntanerRecords/favicon-32x32.png",
+      "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/3tres6muntanerRecords/apple-touch-icon.png",
+      "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }
