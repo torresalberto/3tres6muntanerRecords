@@ -86,9 +86,12 @@ main DJ Library page.
 
 ## 5. Footer link
 
-A "Sitemap" link is injected into every page footer:
-- Via `player-init.js` for pages using `.footer-nav` (covers all 62 DJ pages + library/3d-brain/blog/crew/mapa/product/toolhub).
-- Added directly to `index.html` (`.footer-container` structure, does not load `player-init.js`).
+A "Sitemap" link reaches the footers of:
+- Pages using `.footer-nav` — injected by `player-init.js` (library, 3d-brain, blog, mapa, toolhub, product).
+- `index.html` — added directly (`.footer-container` structure, does not load `player-init.js`).
+- **Not** the 62 `/dj/<id>.html` profile pages: their template uses `.footer > .footer-container`
+  without `.footer-nav`, so the injection no-ops there. Add the link to
+  `scripts/build-dj-static-pages.js` if profiles should carry it.
 
 ---
 
