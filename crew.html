@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/blog.css" />
     <link rel="stylesheet" href="css/dj-library.css?v=3" />
-    <link rel="stylesheet" href="css/crew.css?v=3" />
+    <link rel="stylesheet" href="css/crew.css?v=4" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -87,35 +87,9 @@
     </script>
   </head>
   <body class="crew-page">
-    <div class="top-banner">
-      <div class="ticker-wrapper">
-        <div class="ticker-content">
-          <span class="ticker-item">Barcelona → México</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">El crew que suena en cabina</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Sesiones UNREC · Open Source</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Conexiones entre DJs</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Archivo de cabina y flyers</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Dónde tocó · Mapa de gigs</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Barcelona → México</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">El crew que suena en cabina</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Sesiones UNREC · Open Source</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Conexiones entre DJs</span>
-          <span class="ticker-separator">•</span>
-          <span class="ticker-item">Archivo de cabina y flyers</span>
-        </div>
-      </div>
-    </div>
-
-    <header class="header" id="mainHeader" role="banner">
+    <!-- Crew chrome: no ribbon (the crew is not the store). The header pins to
+         top:0 via the existing no-ticker rule and tucks on scroll down. -->
+    <header class="header" id="mainHeader" role="banner" data-smart-header>
       <div class="header-container">
         <a href="/" class="logo" aria-label="3TRES6 Records Home">
           <span class="logo-text">3TRES6</span>
@@ -129,12 +103,6 @@
         </button>
 
         <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
-          <div class="nav-group nav-group-store">
-            <a href="/" class="nav-item">Catálogo</a>
-            <a href="/#calendario" class="nav-item">Calendario</a>
-            <a href="/#nosotros" class="nav-item">Nosotros</a>
-          </div>
-          <div class="nav-separator"></div>
           <div class="nav-group nav-group-content">
             <a href="dj-library.html" class="nav-item">Discoteca</a>
             <a href="3d-brain.html" class="nav-item">Neural</a>
@@ -144,40 +112,11 @@
             <a href="blog.html" class="nav-item">Blog</a>
           </div>
         </nav>
-
-        <div class="header-actions">
-          <a
-            href="https://www.discogs.com/seller/3tres6records"
-            target="_blank"
-            rel="noopener"
-            class="discogs-link"
-            >Discogs</a
-          >
-          <a href="/" class="cart-icon" aria-label="Carrito">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="cart-count" id="cartCount">0</span>
-          </a>
-        </div>
       </div>
     </header>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
-      <div class="mobile-nav-group-label">Tienda</div>
-      <a href="/">Catálogo</a>
-      <a href="/#calendario">Calendario</a>
-      <a href="/#nosotros">Nosotros</a>
-      <div class="mobile-nav-group-label">Contenido</div>
+      <div class="mobile-nav-group-label">Archivo</div>
       <a href="dj-library.html">Discoteca</a>
       <a href="3d-brain.html">Neural</a>
       <a href="mapa.html">Mapa</a>
@@ -186,9 +125,6 @@
       <a href="blog.html">Blog</a>
       <div class="mobile-nav-group-label">Redes</div>
       <a href="https://instagram.com/3tres6records">Instagram</a>
-      <a href="https://www.discogs.com/seller/3tres6records" target="_blank" rel="noopener"
-        >Discogs</a
-      >
     </nav>
 
     <div class="header-spacer" aria-hidden="true"></div>
@@ -352,17 +288,19 @@
         <div class="footer-container">
           <div class="footer-brand">
             <span class="footer-logo">3TRES6 RECORDS</span>
-            <p>Vinilos europeos de segunda mano<br />Barcelona → México</p>
+            <p>El crew que suena en cabina<br />Barcelona → México</p>
           </div>
           <div class="footer-links">
             <div class="footer-column">
-              <h4>Tienda</h4>
-              <a href="/#catalogo">Catálogo</a>
-              <a href="/#calendario">Calendario</a>
-              <a href="/#nosotros">Nosotros</a>
+              <h4>Crew</h4>
+              <a href="crew.html">El crew</a>
+              <a href="crew/alberto.html">Alb</a>
+              <a href="https://www.instagram.com/d.mfrutis/" target="_blank" rel="noopener"
+                >d.mfrutis</a
+              >
             </div>
             <div class="footer-column">
-              <h4>Contenido</h4>
+              <h4>Archivo</h4>
               <a href="dj-library.html">Discoteca</a>
               <a href="3d-brain.html">Neural</a>
               <a href="mapa.html">Mapa</a>
@@ -391,6 +329,7 @@
     <script src="data/crew/index.js" defer></script>
     <script src="../player-init.js" defer></script>
     <script src="js/nav.js" defer></script>
+    <script src="js/smart-header.js" defer></script>
     <script src="js/blog.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>

@@ -579,11 +579,39 @@
   window.Muntaner336 = window.Muntaner336 || {};
   window.Muntaner336.initCrewPage = initCrewPage;
 
+  // crew.html is a full-load section: the deferred CDN stack (GSAP, ScrollTrigger,
+  // SplitText, Leaflet, MapLibre) is not guaranteed to have executed when this
+  // file runs, and the page degrades permanently if the hero, the wall or the
+  // gigs map init before their libraries exist. Wait for the window load event
+  // when GSAP is missing and re-run; on swup arrivals GSAP is already present
+  // and this stays a single init.
+  function initWhenReady() {
+    if (typeof gsap !== 'undefined') {
+      initCrewPage();
+      return;
+    }
+    var settled = false;
+    var retry = function () {
+      if (settled) return;
+      settled = true;
+      initCrewPage();
+    };
+    window.addEventListener('load', retry, { once: true });
+    // Belt and braces for a CDN that never answers: give up degrading gracefully.
+    setTimeout(retry, 4000);
+  }
+
   if (window.Muntaner336 && typeof window.Muntaner336.onPageView === 'function') {
     window.Muntaner336.onPageView(initCrewPage);
   } else if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCrewPage, { once: true });
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+        initWhenReady();
+      },
+      { once: true }
+    );
   } else {
-    initCrewPage();
+    initWhenReady();
   }
 })();

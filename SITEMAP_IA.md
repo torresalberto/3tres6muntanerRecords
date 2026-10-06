@@ -20,7 +20,7 @@
 ├── Descubrir
 │   ├── /mapa                  Curated club map (Leaflet)
 │   ├── /crew                  The crew (kinetic page + gigs map)
-│   └── /crew/alberto.html     alb — member Nº 002 (mix + photo archive)
+│   └── /crew/alberto.html     Alb — member Nº 002 (session + photo gallery)
 ├── Recursos
 │   ├── /toolhub/              DJ tools hub (Camelot wheel, USB, etc.)
 │   └── /blog.html             Blog / editorial

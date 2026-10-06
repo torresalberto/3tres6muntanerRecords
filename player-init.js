@@ -1,5 +1,9 @@
 // Inject persistent audio player controls into any page
 (function () {
+  // Opt out for pages that own their sound (crew member pages play a Mixcloud
+  // session in-page): a fixed radio pill would overlap the gallery and put two
+  // players on the same page. Mark it with <html class="no-radio">.
+  if (document.documentElement.classList.contains('no-radio')) return;
   if (document.getElementById('audioToggle')) return;
 
   const html = `

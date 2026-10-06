@@ -35,6 +35,9 @@
     //   /3d-brain      page CSS is inlined in its own <head> (never fetched on arrival)
     //   /              homepage calendar/cart/newsletter scripts live after </main>
     //   /crew/alberto  own <head> stylesheet (css/alberto.css) + lazy facade scripts
+    //   /crew.html     store-free crew chrome (no ribbon, tucked header) lives in its
+    //                  own markup, and swup only swaps [data-swup] — an arrival would
+    //                  keep the previous page's store header and 40px band.
     ignoreVisit: function (url, opts) {
       // Preserve swup's default opt-out.
       var el = opts && opts.el;
@@ -49,7 +52,8 @@
         /^\/toolhub\/?$/.test(path) ||
         /^\/dj-library(\.html)?\/?$/.test(path) ||
         /^\/3d-brain\.html$/.test(path) ||
-        /^\/crew\/alberto\.html$/.test(path) ||
+        /^\/crew\/alberto(-b)?\.html$/.test(path) ||
+        /^\/crew(\.html)?\/?$/.test(path) ||
         path === '/'
       );
     },
@@ -138,8 +142,12 @@
 
   var crewAssetsLoading = false;
 
+  // Legacy path: crew pages used to be swup targets, so arrivals had to pull in
+  // the crew stylesheet, GSAP and data layer by hand. crew.html is now a
+  // full-load section (see ignoreVisit) and loads all of it from its own markup,
+  // so this only runs if a crew page ever rejoins swup.
   function ensureCrewAssets() {
-    ensureStylesheet(SITE_BASE + 'css/crew.css?v=3', 'css/crew.css');
+    ensureStylesheet(SITE_BASE + 'css/crew.css?v=4', 'css/crew.css');
     if (crewAssetsLoading) return;
     var seq = [
       { src: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js', part: '/gsap@' },
@@ -293,7 +301,9 @@
   };
 
   function tickerSpecFor(path) {
-    if (isCrewPath(path)) return { type: 'items', set: 'crew' };
+    // Crew pages ship without the ribbon: it is store copy, and leaving a band
+    // above the fixed header is what made the sticky menu look broken on scroll.
+    if (isCrewPath(path) || /^\/crew\/alberto(-b)?\.html$/.test(path)) return { type: 'none' };
     if (isBlogPath(path)) return { type: 'items', set: 'blog' };
     if (/\/dj-library(?:\.html|\/)/.test(path)) return { type: 'items', set: 'library' };
     if (/\/toolhub\//.test(path) || /\/dj\//.test(path)) return { type: 'none' };
@@ -395,7 +405,7 @@
       if (!url) return;
       var path = String(url).split('?')[0].split('#')[0];
       if (isBlogPath(path)) ensureBlogCss();
-      if (isCrewPath(path)) ensureStylesheet(SITE_BASE + 'css/crew.css?v=3', 'css/crew.css');
+      if (isCrewPath(path)) ensureStylesheet(SITE_BASE + 'css/crew.css?v=4', 'css/crew.css');
     });
   }
 

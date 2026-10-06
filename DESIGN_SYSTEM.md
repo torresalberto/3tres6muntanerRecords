@@ -64,18 +64,35 @@ DJCore.initGraph`): nodes sized by connections, links weighted by shared
   rail but not on the map).
 - **Sessions (`004 / Sesiones`)** — Frutis's two UNREC YouTube sets as facade
   cards (`data-video` id → click-to-embed iframe; no autoplay).
-- **Blue-hour film member page** — `crew/alberto.html` (alb, Nº 002): deliberately
-  different from the kinetic brutalist `crew.html` — Newsreader serif display on
-  blue-black `#06090f`, orange as micro-accent only, Mixcloud facade
-  (`js/alberto.js` click-to-iframe), 12-photo **contact sheet** with a
-  CSS-only lightbox (Esc/←/→, body lock) and IntersectionObserver reveals gated
-  behind the `ab-js` marker (JS-less = fully visible). Own `css/alberto.css?v=1`
-  + `js/alberto.js`; full-load section in swup (`ignoreVisit`).
+- **ARCHIVO member page** — `crew/alberto.html` (Alb, Nº 002): the opposite of
+  the kinetic brutalist `crew.html` — a gallery hung on **paper**. Bone stock
+  `#eae5da`, ink `#14120f`, Newsreader roman display with a stroked surname,
+  orange only for index marks; the header wears a light skin so it doesn't
+  punch a dark hole in the page. Signature moves: mounted prints with
+  number-only wall labels, an asymmetric 7/5 museum hang, and one black object
+  in the middle of the paper — the **listening room** with the Mixcloud facade
+  (`js/alberto.js` click-to-iframe). Viewer overlay (Esc/←/→, body lock) +
+  IntersectionObserver fades gated behind the `ar-js` marker (JS-less = fully
+  visible). Own `css/alberto.css?v=2` + `js/alberto.js`; full-load section in
+  swup (`ignoreVisit`).
+- **Photos ship undecorated** — prints carry a number plate, never a sentence.
+  Descriptive alt text stays in the markup for screen readers and SEO.
+- **Crew chrome (no ribbon)** — the crew section drops the ticker and every
+  store element (store nav group, cart, Discogs, footer's "Tienda" column);
+  music-only nav + a Crew/Archivo footer. With no ticker the header pins to
+  `top: 0` (the `no-ticker` rule), which is what removes the band that content
+  used to scrub through. `js/smart-header.js` then tucks the header on
+  scroll-down and reveals it on scroll-up (transform only, so the spacer never
+  reflows). Crew pages are full-load sections so each renders its own chrome.
+- **One player per page** — a page that plays its own audio marks
+  `<html class="no-radio">`; `player-init.js` then skips the global radio pill
+  (and `audio.js`) instead of floating it over the content.
 
 ## Page chrome
 
 Ticker (top-banner) → header (logo, two nav groups, cart) → `header-spacer`
-(content pages only) → `main[data-swup]` → footer.
+(content pages only) → `main[data-swup]` → footer. The crew section runs the
+same chrome **without** the ticker and store elements (see above).
 
 One nav bar only (single-bar rule, see UX Playbook):
 
@@ -188,9 +205,10 @@ Rules:
   - **Crew page scope:** music/vibe only — no store copy in page content
     (ticker/lede/bio stay concert-focused), no growth/"solicitar acceso"
     slots. Global chrome (nav/footer) untouched.
-- ✅ Crew member pages — `crew/alberto.html` (alb, Nº 002): Mixcloud session on
-  top, contact-sheet photo archive (12 photos pulled from his IG, video posts
-  excluded), signal links. Card on `crew.html` renders from
+- ✅ Crew member pages — `crew/alberto.html` (**Alb**, Nº 002): ARCHIVO gallery
+  — listening room with the Mixcloud session, 12 mounted prints (from his IG,
+  video posts excluded) with number-only labels, signal rows; no radio pill.
+  Card on `crew.html` renders from
   `data/crew/index.js` (`portrait`/`portraitIdx`/`portraitW/H`/`portraitAlt`,
   `page` link); QA `s05c` still pins Frutis first and `CREW_IG` = 21.
 - 🚧 Neural — next

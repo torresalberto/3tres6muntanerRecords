@@ -138,18 +138,33 @@ document the reasoning in `curious_facts.date_note`.
 
 ### Crew member pages
 
-- `crew/alberto.html` = alb (Nº 002) — **blue-hour film** design, deliberately
-  different from `crew.html`: `css/alberto.css?v=1` + `js/alberto.js`
-  (Mixcloud facade, contact-sheet lightbox, `ab-js`-gated reveals), listed in
-  `sitemap.xml` (71 URLs). The page is in `js/swup-init.js` `ignoreVisit`
-  (full-load section); `player-init.js` `isSubdir` includes `/crew/`.
+- `crew/alberto.html` = **Alb** (Nº 002) — **ARCHIVO** design: a gallery hung on
+  paper (bone stock, ink Newsreader, light header skin, mounted prints with
+  number-only wall labels) with one black object in the middle — the listening
+  room that plays his Mixcloud session. Class prefix is `ar-` (ARCHIVO) even
+  though the files are `css/alberto.css?v=2` + `js/alberto.js`. Deliberately the
+  opposite of the `crew.html` monument. Listed in `sitemap.xml` (71 URLs).
+- **Crew chrome** (crew.html + member pages): no ribbon, no store nav/cart/Discogs,
+  music-only nav, and `js/smart-header.js` tucks the header on scroll-down /
+  reveals on scroll-up (`<header data-smart-header>`, CSS in `css/crew.css?v=4`).
+  crew.html + member pages are full-load sections (`ignoreVisit` in
+  `js/swup-init.js`) so each page renders its own chrome; `tickerSpecFor` returns
+  `none` for them. **Never define `Muntaner336.onPageView` outside
+  `swup-init.js`** — pages that self-init through that registry (crew.js) go
+  silent if a stub appears first.
+- **One player per page:** the member page marks `<html class="no-radio">`, so
+  `player-init.js` skips the global 3TRES6 Radio pill (and never loads
+  `audio.js`) — the page owns its sound. Add that class to any page with an
+  in-page player; keep the pill elsewhere for site-wide continuity.
 - Cards on `crew.html` render from `data/crew/index.js` (`CREW_MEMBERS`:
   portrait path + `portraitIdx/W/H/Alt`, `photoTotal`, `page`, social links).
   **QA contracts:** `s05c` requires Frutis to stay the first card with an
   absolute http link, and `CREW_IG` to stay 21 (The Wall) — never reorder.
 - Alb's archive: `crew/alberto/assets/ig/001–012.jpg` (12 photos from
   `@bet.up_`; **video posts excluded** — IG bakes the play button into
-  `og:image`). Harvest sources/protocol notes live in the session, not here.
+  `og:image`). Photos are shown undecorated: captions were removed on purpose,
+  the alt attributes stay for screen readers. Harvest protocol notes live in the
+  session, not here.
 
 ## DJ Library / Discoteca (canonical) + house design system
 
