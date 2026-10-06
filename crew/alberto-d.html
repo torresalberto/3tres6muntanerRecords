@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preview proposal — not for indexing; promoted over crew/alberto.html on approval. -->
+    <meta name="robots" content="noindex" />
+    <title>ALB — Cine · 3TRES6 Records</title>
+    <meta
+      name="description"
+      content="ALB, miembro Nº 002 del crew de 3TRES6: progressive house, downtempo y Detroit house. La sesión Minimix OCT2, ya en pista, y sus fotografías en pantalla grande."
+    />
+
+    <script>
+      // `no-radio`: the hero embeds ALB's own Mixcloud set, so the global
+      // 3TRES6 Radio pill is not injected here (see player-init.js).
+      document.documentElement.classList.add('cn-js', 'no-radio');
+    </script>
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="3TRES6 Records" />
+    <meta property="og:title" content="ALB — Cine · 3TRES6 Records" />
+    <meta
+      property="og:description"
+      content="Minimix OCT2 en pista y los fotogramas de ALB: progressive house, downtempo y Detroit house."
+    />
+    <meta
+      property="og:image"
+      content="https://3tres6records.albto.me/crew/alberto/assets/mix/minimix-oct2.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://player-widget.mixcloud.com" />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      />
+    </noscript>
+
+    <link rel="stylesheet" href="/styles.css?v=1" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/alberto-d.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "ALB",
+        "alternateName": ["Alberto Torres"],
+        "jobTitle": "Miembro del crew",
+        "worksFor": { "@type": "Organization", "name": "3TRES6 Records" },
+        "sameAs": ["https://www.instagram.com/bet.up_/", "https://www.mixcloud.com/albtome/"]
+      }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G042PFG6TG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-G042PFG6TG', {
+        cookie_flags: 'SameSite=None;Secure',
+        send_page_view: true,
+      });
+    </script>
+  </head>
+  <body class="cn-page">
+    <!-- Crew chrome: no ribbon, music-only nav, header tucks on scroll down. -->
+    <header class="header" id="mainHeader" role="banner" data-smart-header>
+      <div class="header-container">
+        <a href="/crew.html" class="logo" aria-label="3TRES6 Records · El Crew">
+          <span class="logo-text">3TRES6</span>
+          <span class="logo-subtitle">RECORDS</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+          <div class="nav-group nav-group-content">
+            <a href="/dj-library.html" class="nav-item">Discoteca</a>
+            <a href="/3d-brain.html" class="nav-item">Neural</a>
+            <a href="/mapa.html" class="nav-item">Mapa</a>
+            <a href="/crew.html" class="nav-item active" aria-current="page">Crew</a>
+            <a href="/toolhub/" class="nav-item">Herramientas</a>
+            <a href="/blog.html" class="nav-item">Blog</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <div class="mobile-nav-group-label">Archivo</div>
+      <a href="/dj-library.html">Discoteca</a>
+      <a href="/3d-brain.html">Neural</a>
+      <a href="/mapa.html">Mapa</a>
+      <a href="/crew.html">Crew</a>
+      <a href="/toolhub/">Herramientas</a>
+      <a href="/blog.html">Blog</a>
+      <div class="mobile-nav-group-label">Redes</div>
+      <a href="https://instagram.com/3tres6records">Instagram</a>
+    </nav>
+
+    <div class="header-spacer" aria-hidden="true"></div>
+
+    <!-- film progress + HUD (scroll-driven, vanilla) -->
+    <div class="cn-progress" aria-hidden="true"><span id="cnBar"></span></div>
+    <p class="cn-tc" aria-hidden="true"><span id="cnTc">00:00:00:00</span> / 01:03:07</p>
+
+    <main>
+      <!-- ================================================== letterbox intro -->
+      <div class="cn-intro" id="cnIntro" aria-hidden="true">
+        <div class="cn-intro-bar cn-intro-t"></div>
+        <div class="cn-intro-bar cn-intro-b"></div>
+        <div class="cn-intro-card">
+          <p class="cn-intro-presents">3TRES6 RECORDS PRESENTA</p>
+          <p class="cn-intro-name">ALB</p>
+        </div>
+      </div>
+
+      <!-- ============================================================= hero -->
+      <section class="cn-hero" aria-labelledby="cnName">
+        <div class="cn-hero-bg" aria-hidden="true">
+          <img
+            src="/crew/alberto/assets/mix/minimix-oct2.jpg"
+            alt=""
+            width="1200"
+            height="1200"
+            decoding="async"
+          />
+        </div>
+        <div class="cn-hero-grade" aria-hidden="true"></div>
+
+        <div class="cn-hero-inner">
+          <p class="cn-hero-kicker">MIEMBRO Nº 002 DEL CREW</p>
+          <h1 class="cn-name" id="cnName">ALB</h1>
+          <p class="cn-hero-sub">PROGRESSIVE HOUSE · DOWNTEMPO · DETROIT HOUSE</p>
+
+          <div class="cn-stage" data-cine>
+            <p class="cn-stage-label">
+              <span class="cn-dot" aria-hidden="true"></span>AHORA EN PISTA — MINIMIX OCT2
+            </p>
+            <div class="cn-stage-screen">
+              <iframe
+                src="https://player-widget.mixcloud.com/widget/iframe/?feed=%2Falbtome%2Foctubre-02%2F&hide_cover=0&light=0&autoplay=0"
+                title="Minimix OCT2 — ALB en Mixcloud"
+                width="100%"
+                height="400"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <dl class="cn-credits">
+              <div>
+                <dt>FECHA</dt>
+                <dd>02.10.2026</dd>
+              </div>
+              <div>
+                <dt>DURACIÓN</dt>
+                <dd>1:03:07</dd>
+              </div>
+              <div>
+                <dt>REPRODUCCIONES</dt>
+                <dd>7</dd>
+              </div>
+              <div>
+                <dt>AUTOR</dt>
+                <dd>ALB</dd>
+              </div>
+            </dl>
+
+            <a
+              class="cn-stage-open"
+              href="https://www.mixcloud.com/albtome/octubre-02/"
+              target="_blank"
+              rel="noopener"
+              >Abrir en Mixcloud ↗</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================= 01 fotos -->
+      <section class="cn-sec" id="fotos" aria-labelledby="cnFotosH">
+        <header class="cn-sec-head" data-cine>
+          <span class="cn-idx">01 — FOTOGRAMAS</span>
+          <h2 class="cn-sec-h" id="cnFotosH">La cámara</h2>
+        </header>
+
+        <div class="cn-grid" id="cnGrid">
+          <figure class="cn-frame cn-frame--feature" data-idx="0">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 01 en grande">
+              <img
+                src="/crew/alberto/assets/ig/001.jpg"
+                alt="Paloma y una figura caminando sobre un suelo oscuro, en blanco y negro"
+                width="640"
+                height="426"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 001</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="1">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 02 en grande">
+              <img
+                src="/crew/alberto/assets/ig/003.jpg"
+                alt="Paso subterráneo revestido de azulejos amarillos, con dos personas al fondo"
+                width="512"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 002</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="2">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 03 en grande">
+              <img
+                src="/crew/alberto/assets/ig/004.jpg"
+                alt="Multitud en la pista, movida y velada de azul, bajo las líneas de luz del club"
+                width="512"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 003</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame cn-frame--wide" data-idx="3">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 04 en grande">
+              <img
+                src="/crew/alberto/assets/ig/005.jpg"
+                alt="Letrero de neón rojo de Amoeba Music contra la noche"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 004</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="4">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 05 en grande">
+              <img
+                src="/crew/alberto/assets/ig/007.jpg"
+                alt="Shinjuku de noche en blanco y negro, con el Godzilla del Hotel Gracery entre carteles"
+                width="512"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 005</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="5">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 06 en grande">
+              <img
+                src="/crew/alberto/assets/ig/008.jpg"
+                alt="La tienda Prada Marfa en mitad del desierto bajo cielo azul"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 006</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame cn-frame--feature" data-idx="6">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 07 en grande">
+              <img
+                src="/crew/alberto/assets/ig/010.jpg"
+                alt="Skater en el aire con la tabla roja sobre el bowl, con público y cámaras alrededor"
+                width="640"
+                height="432"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 007</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="7">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 08 en grande">
+              <img
+                src="/crew/alberto/assets/ig/009.jpg"
+                alt="Paloma blanca parada sobre un suelo oscuro, en blanco y negro"
+                width="480"
+                height="479"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 008</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="8">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 09 en grande">
+              <img
+                src="/crew/alberto/assets/ig/011.jpg"
+                alt="Atardecer sobre el mar con el sol ya tocando el horizonte"
+                width="640"
+                height="480"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 009</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame cn-frame--wide" data-idx="9">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 10 en grande">
+              <img
+                src="/crew/alberto/assets/ig/012.jpg"
+                alt="Atardecer rojo visto desde dentro, a través de las persianas de una ventana"
+                width="640"
+                height="427"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 010</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="10">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 11 en grande">
+              <img
+                src="/crew/alberto/assets/ig/002.jpg"
+                alt="Calle al sol con peatones y bicicletas frente a edificios de ladrillo"
+                width="640"
+                height="422"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 011</span></figcaption>
+          </figure>
+
+          <figure class="cn-frame" data-idx="11">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 12 en grande">
+              <img
+                src="/crew/alberto/assets/ig/006.jpg"
+                alt="Playa al atardecer con el sol ya en el horizonte y siluetas en la orilla"
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="cn-plate"><span>Nº 012</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===================================================== 02 señales -->
+      <section class="cn-sec" id="senales" aria-labelledby="cnSigH">
+        <header class="cn-sec-head" data-cine>
+          <span class="cn-idx">02 — SEÑALES</span>
+          <h2 class="cn-sec-h" id="cnSigH">Dónde encontrarlo</h2>
+        </header>
+
+        <ul class="cn-rows" data-cine>
+          <li>
+            <a
+              class="cn-row"
+              href="https://www.instagram.com/bet.up_/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="cn-row-nr">01</span>
+              <span class="cn-row-name">Instagram</span>
+              <span class="cn-row-val">@bet.up_</span>
+              <span class="cn-row-go" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="cn-row"
+              href="https://www.mixcloud.com/albtome/octubre-02/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="cn-row-nr">02</span>
+              <span class="cn-row-name">Mixcloud</span>
+              <span class="cn-row-val">Minimix OCT2</span>
+              <span class="cn-row-go" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a class="cn-row" href="/crew.html">
+              <span class="cn-row-nr">03</span>
+              <span class="cn-row-name">El Crew</span>
+              <span class="cn-row-val">Nº 002 · junto a Frutis</span>
+              <span class="cn-row-go" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <span class="footer-logo">3TRES6 RECORDS</span>
+            <p>El crew que suena en cabina<br />Barcelona → México</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Crew</h4>
+              <a href="/crew.html">El crew</a>
+              <a href="/crew/alberto.html">ALB</a>
+              <a href="https://www.instagram.com/d.mfrutis/" target="_blank" rel="noopener"
+                >d.mfrutis</a
+              >
+            </div>
+            <div class="footer-column">
+              <h4>Archivo</h4>
+              <a href="/dj-library.html">Discoteca</a>
+              <a href="/3d-brain.html">Neural</a>
+              <a href="/mapa.html">Mapa</a>
+              <a href="/blog.html">Blog</a>
+            </div>
+            <div class="footer-column">
+              <h4>Síguenos</h4>
+              <a href="https://instagram.com/3tres6records" target="_blank" rel="noopener"
+                >Instagram</a
+              >
+              <a href="https://youtube.com/@3tres6records" target="_blank" rel="noopener"
+                >YouTube</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 3TRES6 Records. Hecho con música en CDMX.</p>
+        </div>
+      </footer>
+    </main>
+
+    <div class="cn-grain" aria-hidden="true"></div>
+
+    <script src="/player-init.js" defer></script>
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/smart-header.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+    <script src="/js/alberto-d.js" defer></script>
+  </body>
+</html>
