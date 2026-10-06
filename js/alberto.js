@@ -147,9 +147,7 @@
   /* ------------------------------------------------------------- reveals */
 
   function initReveal() {
-    var fade = document.querySelectorAll(
-      '.fc-sec-head, .fc-set-card, .fc-lede, .fc-ticket, .fc-frontis, .fc-index, .fc-rows, .fc-mq'
-    );
+    var fade = document.querySelectorAll('.fc-sec-head, .fc-set-card, .fc-rows, .fc-mq');
     var fadeO = document.querySelectorAll('.fc-cut');
 
     var reduced =

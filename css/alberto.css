@@ -96,8 +96,7 @@ button.fc-ink {
   background: var(--fc-yellow);
 }
 
-.fc-cut:hover .fc-ink img,
-.fc-frontis:hover .fc-ink img {
+.fc-cut:hover .fc-ink img {
   filter: none;
   mix-blend-mode: normal;
   transform: scale(1.02);
@@ -157,6 +156,10 @@ button.fc-ink {
   max-width: var(--fc-max);
   margin: 0 auto;
   padding: clamp(3.5rem, 8vw, 6.5rem) var(--fc-pad) clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.fc-set .fc-sec-head {
+  padding-top: clamp(1.5rem, 3.5vw, 3rem);
 }
 
 .fc-sec-h {
@@ -253,7 +256,7 @@ button.fc-ink {
   background: var(--fc-pink);
   color: #000;
   transform: rotate(-1.6deg);
-  margin: clamp(2rem, 5vw, 3.5rem) 0;
+  margin: clamp(2rem, 5vw, 3.5rem) 0 clamp(1rem, 2.5vw, 1.75rem);
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
   overflow: hidden;
@@ -282,103 +285,6 @@ button.fc-ink {
   to {
     transform: translateX(-50%);
   }
-}
-
-.fc-hero-grid {
-  max-width: var(--fc-max);
-  margin: 0 auto;
-  padding: clamp(1.5rem, 4vw, 3rem) var(--fc-pad) clamp(2rem, 5vw, 4rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
-  text-align: left;
-}
-
-.fc-lede {
-  font-family: var(--fc-ui);
-  font-weight: 500;
-  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
-  line-height: 1.4;
-  max-width: 32ch;
-  margin: 0 0 clamp(1.4rem, 3vw, 2rem);
-  padding-left: 1rem;
-  border-left: 6px solid var(--fc-pink);
-}
-
-.fc-ticket {
-  border: 3px solid var(--fc-paper);
-  padding: 0.3rem 1.1rem;
-  max-width: 420px;
-  transform: rotate(-0.7deg);
-  margin: 0;
-}
-
-.fc-ticket-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.58rem 0;
-  border-bottom: 1px dashed rgba(244, 239, 227, 0.4);
-  font-family: var(--fc-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.fc-ticket-row:last-child {
-  border-bottom: 0;
-}
-
-.fc-ticket-row dt {
-  opacity: 0.65;
-  margin: 0;
-}
-
-.fc-ticket-row dd {
-  margin: 0;
-  font-weight: 700;
-  color: var(--fc-yellow);
-}
-
-.fc-index {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin: clamp(1.4rem, 3vw, 2rem) 0 0;
-  padding: 0;
-}
-
-.fc-index a {
-  font-family: var(--fc-mono);
-  font-weight: 700;
-  font-size: 0.74rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--fc-paper);
-  border: 2px solid var(--fc-paper);
-  padding: 0.5rem 0.8rem;
-  text-decoration: none;
-  transition:
-    background 0.15s ease,
-    border-color 0.15s ease,
-    color 0.15s ease;
-}
-
-.fc-index a:hover {
-  background: var(--fc-pink);
-  border-color: var(--fc-pink);
-  color: #000;
-}
-
-.fc-frontis {
-  position: relative;
-  margin: 0;
-  transform: rotate(1.6deg);
-}
-
-.fc-frontis .fc-stamp {
-  bottom: 16px;
 }
 
 /* ============================================================ 01 sesión */
@@ -797,15 +703,6 @@ button.fc-ink {
 @media (max-width: 860px) {
   .fc-name {
     font-size: clamp(6.5rem, 40vw, 14rem);
-  }
-
-  .fc-hero-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .fc-frontis {
-    max-width: 340px;
-    justify-self: center;
   }
 
   .fc-set-card {
