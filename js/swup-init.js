@@ -52,7 +52,7 @@
         /^\/toolhub\/?$/.test(path) ||
         /^\/dj-library(\.html)?\/?$/.test(path) ||
         /^\/3d-brain\.html$/.test(path) ||
-        /^\/crew\/alberto(-b)?\.html$/.test(path) ||
+        /^\/crew\/alberto(-[cde])?\.html$/.test(path) ||
         /^\/crew(\.html)?\/?$/.test(path) ||
         path === '/'
       );
@@ -303,7 +303,7 @@
   function tickerSpecFor(path) {
     // Crew pages ship without the ribbon: it is store copy, and leaving a band
     // above the fixed header is what made the sticky menu look broken on scroll.
-    if (isCrewPath(path) || /^\/crew\/alberto(-b)?\.html$/.test(path)) return { type: 'none' };
+    if (isCrewPath(path) || /^\/crew\/alberto(-[cde])?\.html$/.test(path)) return { type: 'none' };
     if (isBlogPath(path)) return { type: 'items', set: 'blog' };
     if (/\/dj-library(?:\.html|\/)/.test(path)) return { type: 'items', set: 'library' };
     if (/\/toolhub\//.test(path) || /\/dj\//.test(path)) return { type: 'none' };

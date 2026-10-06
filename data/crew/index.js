@@ -48,9 +48,9 @@ const CREW_MEMBERS = [
   },
   {
     id: 'alberto',
-    name: 'alb',
-    role: 'Archivo visual & Sesiones',
-    bio: 'Segundo miembro del crew. Fotografía analógica de noche y de viaje, y la sesión de octubre en Mixcloud: 63 minutos de selección.',
+    name: 'ALB',
+    role: 'Fotografía & Sesiones',
+    bio: 'Segundo miembro del crew. Fotografía de noche, de calle y de viaje; en cabina, progressive house, downtempo y Detroit house.',
     image: 'crew/alberto/assets/ig/007.jpg',
     imageCaption: 'Archivo personal · película',
     portrait: 'crew/alberto/assets/ig/007.jpg',

@@ -138,16 +138,20 @@ document the reasoning in `curious_facts.date_note`.
 
 ### Crew member pages
 
-- `crew/alberto.html` = **Alb** (Nº 002) — **ARCHIVO** design: a gallery hung on
-  paper (bone stock, ink Newsreader, light header skin, mounted prints with
-  number-only wall labels) with one black object in the middle — the listening
-  room that plays his Mixcloud session. Class prefix is `ar-` (ARCHIVO) even
-  though the files are `css/alberto.css?v=2` + `js/alberto.js`. Deliberately the
-  opposite of the `crew.html` monument. Listed in `sitemap.xml` (71 URLs).
+- `crew/alberto.html` = **ALB** (Nº 002) — **FOLLETO** design: a riso club flyer
+  on a black wall — fluorescent pink + yellow overprint, giant ALB with
+  misregistered ghost layers, tilted marquee band, a paper session card taped
+  onto the page, and a pink-duotone photo wall on tape with number-only `Nº`
+  stamps. Class prefix `fc-` (FOLLETO) in `css/alberto.css?v=3` + `js/alberto.js`.
+  Copy carries his genres (progressive house, downtempo, Detroit house) and
+  never counts the photos; the display name is ALB — no `albtome` anywhere in
+  text (URLs/handles excepted). Listed in `sitemap.xml` (71 URLs).
 - **Crew chrome** (crew.html + member pages): no ribbon, no store nav/cart/Discogs,
   music-only nav, and `js/smart-header.js` tucks the header on scroll-down /
-  reveals on scroll-up (`<header data-smart-header>`, CSS in `css/crew.css?v=4`).
-  crew.html + member pages are full-load sections (`ignoreVisit` in
+  reveals on scroll-up (`<header data-smart-header>`; transform CSS in
+  `css/crew.css?v=4` for crew.html — **member pages do not load crew.css**, so
+  each member stylesheet must ship its own `.header[data-smart-header].is-tucked`
+  rule). crew.html + member pages are full-load sections (`ignoreVisit` in
   `js/swup-init.js`) so each page renders its own chrome; `tickerSpecFor` returns
   `none` for them. **Never define `Muntaner336.onPageView` outside
   `swup-init.js`** — pages that self-init through that registry (crew.js) go

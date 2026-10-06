@@ -1,11 +1,11 @@
 /*
- * alberto.js — "ARCHIVO" (crew member Nº 002).
+ * alberto.js — "FOLLETO" (crew member ALB, Nº 002).
  *
- * Same three jobs as the dark pass, different furniture:
  *   1. Mixcloud facade — nothing loads until the reader presses play
- *   2. The gallery viewer — paper-light overlay, Esc / ← / →, body lock
- *   3. Quiet IntersectionObserver fades, gated behind the `ar-js` marker so a
- *      JS-less visit still sees every print
+ *   2. The wall viewer — Esc / ← / →, body lock, number-only label
+ *   3. Scroll reveals, gated behind the `fc-js` marker so a JS-less visit
+ *      still sees every photo (cuts reveal on opacity only — their rotation
+ *      lives in CSS transforms that a translate would clobber)
  */
 (function () {
   'use strict';
@@ -16,10 +16,10 @@
   /* ------------------------------------------------------------ mix facade */
 
   function initMix() {
-    var button = document.getElementById('arPlay');
-    var embed = document.getElementById('arEmbed');
-    var deck = document.getElementById('arDeck');
-    if (!button || !embed || !deck || button.dataset.ready === '1') return;
+    var button = document.getElementById('fcPlay');
+    var embed = document.getElementById('fcEmbed');
+    var card = document.getElementById('fcSet');
+    if (!button || !embed || !card || button.dataset.ready === '1') return;
     button.dataset.ready = '1';
 
     button.addEventListener('click', function () {
@@ -27,7 +27,7 @@
       if (!feed) return;
       var iframe = document.createElement('iframe');
       iframe.src = MIXCLOUD_WIDGET.replace('__FEED__', encodeURIComponent(feed));
-      iframe.title = 'Minimix OCT2 — albtome en Mixcloud';
+      iframe.title = 'Minimix OCT2 — ALB en Mixcloud';
       iframe.width = '100%';
       iframe.height = '400';
       iframe.style.border = '0';
@@ -36,25 +36,25 @@
       iframe.loading = 'lazy';
       embed.hidden = false;
       embed.appendChild(iframe);
-      deck.classList.add('is-playing');
+      card.classList.add('is-playing');
       button.hidden = true;
       iframe.focus();
     });
   }
 
-  /* ----------------------------------------------------------- the viewer */
+  /* --------------------------------------------------------- the viewer */
 
   function initViewer() {
-    var hang = document.getElementById('arHang');
-    if (!hang || hang.dataset.ready === '1') return;
-    hang.dataset.ready = '1';
+    var wall = document.getElementById('fcWall');
+    if (!wall || wall.dataset.ready === '1') return;
+    wall.dataset.ready = '1';
 
-    var works = Array.prototype.slice.call(hang.querySelectorAll('.ar-work'));
-    if (!works.length) return;
+    var cuts = Array.prototype.slice.call(wall.querySelectorAll('.fc-cut'));
+    if (!cuts.length) return;
 
-    var plates = works.map(function (work) {
-      var img = work.querySelector('img');
-      var nr = work.querySelector('.ar-plate-nr');
+    var plates = cuts.map(function (cut) {
+      var img = cut.querySelector('img');
+      var nr = cut.querySelector('.fc-stamp');
       return {
         src: img.getAttribute('src'),
         w: parseInt(img.getAttribute('width'), 10) || 640,
@@ -65,26 +65,29 @@
     });
 
     var box = document.createElement('div');
-    box.className = 'ar-viewer';
+    box.className = 'fc-viewer';
     box.setAttribute('role', 'dialog');
     box.setAttribute('aria-modal', 'true');
-    box.setAttribute('aria-label', 'Pieza a pantalla completa');
+    box.setAttribute('aria-label', 'Foto a pantalla completa');
     box.innerHTML =
-      '<button type="button" class="ar-v-btn ar-v-close" aria-label="Cerrar">Cerrar ✕</button>' +
-      '<button type="button" class="ar-v-btn ar-v-prev" aria-label="Pieza anterior">‹</button>' +
-      '<button type="button" class="ar-v-btn ar-v-next" aria-label="Pieza siguiente">›</button>' +
-      '<figure><span class="ar-mat"><img alt="" /></span><figcaption class="ar-plate">' +
-      '<span class="ar-plate-nr"></span></figcaption></figure>';
+      '<button type="button" class="fc-v-btn fc-v-close" aria-label="Cerrar">Cerrar ✕</button>' +
+      '<button type="button" class="fc-v-btn fc-v-prev" aria-label="Foto anterior">‹</button>' +
+      '<button type="button" class="fc-v-btn fc-v-next" aria-label="Foto siguiente">›</button>' +
+      '<figure><span class="fc-v-mat"><img alt="" /></span>' +
+      '<figcaption class="fc-stamp"></figcaption></figure>';
     document.body.appendChild(box);
 
     var img = box.querySelector('img');
-    var nr = box.querySelector('.ar-plate-nr');
+    var nr = box.querySelector('figcaption');
     var current = 0;
     var lastFocus = null;
 
-    // Seed with the first print so the overlay never holds an empty image.
     img.src = plates[0].src;
     img.alt = plates[0].alt;
+
+    function pad(n) {
+      return String(n).padStart(2, '0');
+    }
 
     function show(i) {
       current = (i + plates.length) % plates.length;
@@ -99,16 +102,12 @@
       nr.textContent = plate.nr + ' · ' + pad(current + 1) + ' / ' + pad(plates.length);
     }
 
-    function pad(n) {
-      return String(n).padStart(2, '0');
-    }
-
     function open(i) {
       lastFocus = document.activeElement;
       show(i);
       box.classList.add('is-open');
       document.body.style.overflow = 'hidden';
-      box.querySelector('.ar-v-close').focus();
+      box.querySelector('.fc-v-close').focus();
     }
 
     function close() {
@@ -117,19 +116,20 @@
       if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
 
-    works.forEach(function (work, i) {
-      var btn = work.querySelector('.ar-mount');
-      if (!btn) return;
-      btn.addEventListener('click', function () {
-        open(i);
-      });
+    cuts.forEach(function (cut, i) {
+      var btn = cut.querySelector('.fc-ink');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          open(i);
+        });
+      }
     });
 
-    box.querySelector('.ar-v-close').addEventListener('click', close);
-    box.querySelector('.ar-v-prev').addEventListener('click', function () {
+    box.querySelector('.fc-v-close').addEventListener('click', close);
+    box.querySelector('.fc-v-prev').addEventListener('click', function () {
       show(current - 1);
     });
-    box.querySelector('.ar-v-next').addEventListener('click', function () {
+    box.querySelector('.fc-v-next').addEventListener('click', function () {
       show(current + 1);
     });
     box.addEventListener('click', function (e) {
@@ -144,13 +144,13 @@
     });
   }
 
-  /* --------------------------------------------------------------- reveals */
+  /* ------------------------------------------------------------- reveals */
 
   function initReveal() {
-    var targets = document.querySelectorAll(
-      '.ar-room-head, .ar-deck, .ar-hall-head, .ar-work, .ar-log-head, .ar-rows, .ar-frontis, .ar-index, .ar-lede, .ar-ledger'
+    var fade = document.querySelectorAll(
+      '.fc-sec-head, .fc-set-card, .fc-lede, .fc-ticket, .fc-frontis, .fc-index, .fc-rows, .fc-mq'
     );
-    if (!targets.length) return;
+    var fadeO = document.querySelectorAll('.fc-cut');
 
     var reduced =
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -167,11 +167,13 @@
       { rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
     );
 
-    Array.prototype.forEach.call(targets, function (el, i) {
-      el.classList.add('ar-fade');
-      if (el.classList.contains('ar-work')) {
-        el.style.transitionDelay = (i % 3) * 70 + 'ms';
-      }
+    Array.prototype.forEach.call(fade, function (el) {
+      el.classList.add('fc-fade');
+      observer.observe(el);
+    });
+    Array.prototype.forEach.call(fadeO, function (el, i) {
+      el.classList.add('fc-fade-o');
+      el.style.transitionDelay = (i % 3) * 60 + 'ms';
       observer.observe(el);
     });
   }

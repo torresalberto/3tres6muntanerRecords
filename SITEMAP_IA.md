@@ -67,7 +67,7 @@ name). The other sitemap entries are hand-maintained — there is no generator f
 - **0.8 — `/blog.html`**: editorial, freshness-driven.
 - **0.7 — `/toolhub/`, `/3d-brain.html`, `/mapa`, `/crew`**: evergreen hub pages.
 - **0.6 — 62 × `/dj/<id>.html`**: individual profiles, equal weight.
-- **0.6 — `/crew/alberto.html`**: member page (hub-level content, linked from `/crew`).
+- **0.6 — `/crew/alberto.html`**: ALB member page (hub-level content, linked from `/crew`).
 - **0.5 — `/product.html`**: template/detail view.
 
 ---

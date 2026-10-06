@@ -64,17 +64,22 @@ DJCore.initGraph`): nodes sized by connections, links weighted by shared
   rail but not on the map).
 - **Sessions (`004 / Sesiones`)** — Frutis's two UNREC YouTube sets as facade
   cards (`data-video` id → click-to-embed iframe; no autoplay).
-- **ARCHIVO member page** — `crew/alberto.html` (Alb, Nº 002): the opposite of
-  the kinetic brutalist `crew.html` — a gallery hung on **paper**. Bone stock
-  `#eae5da`, ink `#14120f`, Newsreader roman display with a stroked surname,
-  orange only for index marks; the header wears a light skin so it doesn't
-  punch a dark hole in the page. Signature moves: mounted prints with
-  number-only wall labels, an asymmetric 7/5 museum hang, and one black object
-  in the middle of the paper — the **listening room** with the Mixcloud facade
-  (`js/alberto.js` click-to-iframe). Viewer overlay (Esc/←/→, body lock) +
-  IntersectionObserver fades gated behind the `ar-js` marker (JS-less = fully
-  visible). Own `css/alberto.css?v=2` + `js/alberto.js`; full-load section in
-  swup (`ignoreVisit`).
+- **FOLLETO member page** — `crew/alberto.html` (**ALB**, Nº 002): a riso club
+  flyer pasted on a black wall. Ink black `#0b0b0b` stock, fluorescent pink
+  `#ff3d9a` + yellow `#ffe600` overprint, Anton poster caps with deliberate
+  misregistration on the giant ALB (screen-blend ghost layers), Space Mono for
+  stamps/tickets. Signature moves: tilted pink marquee band (page copy, not the
+  site ribbon), a **paper session card** taped onto the black page (yellow
+  duotone cover, pink `63:07` sticker, ticket-stub specs), and the photo wall —
+  pink riso duotone + halftone dots, yellow tape, pasted at slight rotations,
+  number-only `Nº` stamps; hover snaps the ink back to full color. Copy carries
+  his genres (progressive house, downtempo, Detroit house) and never counts the
+  photos. Session = Mixcloud facade (`js/alberto.js` click-to-iframe), viewer
+  overlay (Esc/←/→, body lock) + IntersectionObserver reveals gated behind the
+  `fc-js` marker (JS-less = fully visible). Own `css/alberto.css?v=3` +
+  `js/alberto.js`; full-load section in swup (`ignoreVisit`). Class prefix
+  `fc-` (FOLLETO); member pages ship the tucked-header transform in their own
+  stylesheet (crew.css is not loaded here).
 - **Photos ship undecorated** — prints carry a number plate, never a sentence.
   Descriptive alt text stays in the markup for screen readers and SEO.
 - **Crew chrome (no ribbon)** — the crew section drops the ticker and every
@@ -162,7 +167,7 @@ _¿qué hay aquí?_ (Exploración), _¿qué hago?_ (Acción), _¿cómo vuelvo?_
 | Set                   | Discoteca set sheet (`#set:<id>` via sheet)                          | Mapa venue popup, Taller DJ-sets search, Neural info panel    |
 | Venue                 | Mapa pin (`mapa.html#venue:<id>`)                                    | Discoteca set-sheet venue chip, Crew residency                |
 | Genre / Label / Track | Discoteca editorial + El Hilo filters                                | Neural bridges, Taller filters                                |
-| Crew member           | `crew.html` card (+ own page: `crew/alberto.html` for alb)         | Discoteca sleeve (members = DJs), Neural node, Mapa residency |
+| Crew member           | `crew.html` card (+ own page: `crew/alberto.html` for alb)           | Discoteca sleeve (members = DJs), Neural node, Mapa residency |
 | Tool                  | `toolhub/#hardware\|wheel\|music\|software`                          | Música nav group                                              |
 
 Rules:
@@ -205,9 +210,10 @@ Rules:
   - **Crew page scope:** music/vibe only — no store copy in page content
     (ticker/lede/bio stay concert-focused), no growth/"solicitar acceso"
     slots. Global chrome (nav/footer) untouched.
-- ✅ Crew member pages — `crew/alberto.html` (**Alb**, Nº 002): ARCHIVO gallery
-  — listening room with the Mixcloud session, 12 mounted prints (from his IG,
-  video posts excluded) with number-only labels, signal rows; no radio pill.
+- ✅ Crew member pages — `crew/alberto.html` (**ALB**, Nº 002): FOLLETO flyer —
+  misregistered ALB wordmark, genres in the copy, paper session card with the
+  Mixcloud facade, riso-duotone photo wall (from his IG, video posts excluded)
+  with number-only stamps, signal rows; no radio pill.
   Card on `crew.html` renders from
   `data/crew/index.js` (`portrait`/`portraitIdx`/`portraitW/H`/`portraitAlt`,
   `page` link); QA `s05c` still pins Frutis first and `CREW_IG` = 21.
