@@ -1,6 +1,4 @@
 const CREW_IG = [
-  { f: '001', w: 640, h: 640, alt: 'Vista al mar desde un mirador entre árboles' },
-  { f: '003', w: 640, h: 853, alt: 'Camino de campo con una furgoneta al atardecer' },
   { f: '004', w: 640, h: 800, alt: 'Flyer RËGAL Showcase con Landeep, Victor Hugo y Frutis' },
   { f: '005', w: 640, h: 853, alt: 'Flyer Veridis Oug, viernes 10.10, con Frutis' },
   { f: '007', w: 640, h: 640, alt: 'Figura sentada en una plaza, blanco y negro' },

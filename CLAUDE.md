@@ -171,8 +171,8 @@ document the reasoning in `curious_facts.date_note`.
   no Neural card button — `neural: false`): the roster currently holds
   only his entry, so the card search stays hidden (`CREW_MEMBERS.length > 1`
   gate). **QA contracts:** `s05c` requires Frutis to stay the first card with
-  an absolute http link, and `CREW_IG` to stay 19 (The Wall — the 16:9
-  YouTube-still frames 002/006 were cut on purpose; files stay on disk) —
+  an absolute http link, and `CREW_IG` to stay 17 (The Wall — the 16:9
+  YouTube-still frames 002/006 and the first two travel shots 001/003 were cut on purpose; files stay on disk) —
   never reorder.
 - Alb's archive: `crew/alberto/assets/ig/001–012.jpg` (12 photos from
   `@bet.up_`; **video posts excluded** — IG bakes the play button into
