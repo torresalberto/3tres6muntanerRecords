@@ -211,7 +211,7 @@ Rules:
   type — title now just `FRUTIS`, Frutis-only monument, house & balnearic,
   de México vive en Barcelona —, founder
   dossier in `#crewGrid` (single card while roster = 1, no Neural button),
-  21-photo Wall scrub,
+  19-photo Wall scrub (YT video stills 002/006 off-page), WebGL grain with
   WebGL grain with CSS fallback, gigs map + UNREC sessions (`s05`/`s05c` QA
   coverage, `crew.css?v=5`); swup arrivals inject
   `css/crew.css` + GSAP + `data/crew/index.js` + `js/crew.js` via

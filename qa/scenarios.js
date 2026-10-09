@@ -344,7 +344,7 @@ s('s05c', 'Crew redesign: kinetic hero, wall archive and grain', DESKTOP, async 
   );
 
   const wall = await t.page.evaluate(() => document.querySelectorAll('#crewWall img').length);
-  t.check(wall === 21, 'The Wall renders all 21 archive photos', `imgs=${wall}`);
+  t.check(wall === 19, 'The Wall renders the 19 archive photos (YT stills cut)', `imgs=${wall}`);
 
   const grain = await t.page.evaluate(() => {
     const c = document.getElementById('crewGrain');
@@ -371,7 +371,7 @@ s('s05c', 'Crew redesign: kinetic hero, wall archive and grain', DESKTOP, async 
     Array.from(document.querySelectorAll('[data-count]')).map((e) => e.textContent)
   );
   t.check(
-    counters.join(',') === '21,5,2',
+    counters.join(',') === '19,5,2',
     'Stat counters settle on final values',
     counters.join(',')
   );

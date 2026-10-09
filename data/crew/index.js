@@ -1,10 +1,8 @@
 const CREW_IG = [
   { f: '001', w: 640, h: 640, alt: 'Vista al mar desde un mirador entre árboles' },
-  { f: '002', w: 640, h: 360, alt: 'Cabina: Frutis vs Stevie Toth en un club' },
   { f: '003', w: 640, h: 853, alt: 'Camino de campo con una furgoneta al atardecer' },
   { f: '004', w: 640, h: 800, alt: 'Flyer RËGAL Showcase con Landeep, Victor Hugo y Frutis' },
   { f: '005', w: 640, h: 853, alt: 'Flyer Veridis Oug, viernes 10.10, con Frutis' },
-  { f: '006', w: 640, h: 360, alt: 'Cabina de un club con luces rosas' },
   { f: '007', w: 640, h: 640, alt: 'Figura sentada en una plaza, blanco y negro' },
   { f: '008', w: 640, h: 1136, alt: 'Flyer Nuna Cor — Frutis b2b Felipe O' },
   {
@@ -122,11 +120,7 @@ function renderCrewGrid() {
         links.push('<a class="crew-link is-ghost" href="3d-brain.html">Ver en Neural →</a>');
       }
 
-      const chips = [
-        member.isPilot ? '<span class="crew-chip is-pilot">Piloto</span>' : '',
-        `<span class="crew-chip">${member.location}</span>`,
-        `<span class="crew-chip">Miembro Nº ${num}</span>`,
-      ].join('');
+      const chips = [`<span class="crew-chip">${member.location}</span>`].join('');
 
       const tracks =
         member.social && member.social.soundcloud
