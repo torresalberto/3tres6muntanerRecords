@@ -147,7 +147,7 @@
   // full-load section (see ignoreVisit) and loads all of it from its own markup,
   // so this only runs if a crew page ever rejoins swup.
   function ensureCrewAssets() {
-    ensureStylesheet(SITE_BASE + 'css/crew.css?v=4', 'css/crew.css');
+    ensureStylesheet(SITE_BASE + 'css/crew.css?v=5', 'css/crew.css');
     if (crewAssetsLoading) return;
     var seq = [
       { src: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js', part: '/gsap@' },
@@ -405,7 +405,7 @@
       if (!url) return;
       var path = String(url).split('?')[0].split('#')[0];
       if (isBlogPath(path)) ensureBlogCss();
-      if (isCrewPath(path)) ensureStylesheet(SITE_BASE + 'css/crew.css?v=4', 'css/crew.css');
+      if (isCrewPath(path)) ensureStylesheet(SITE_BASE + 'css/crew.css?v=5', 'css/crew.css');
     });
   }
 

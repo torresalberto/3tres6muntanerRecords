@@ -47,8 +47,11 @@ Herramientas (Taller), Mapa, Crew, Neural.
 DJCore.initGraph`): nodes sized by connections, links weighted by shared
   tracks/artists, genre filters, tooltips.
 - **Crew kinetic hero** — mono kicker scramble, giant split-title
-  (`EL` solid / `CREW` stroked), cursor-reactive chars, stat counters,
-  boot-hide with a 2.5s safety reveal.
+  (`FRUTIS` solid / `PILOTO` stroked), cursor-reactive chars, stat counters,
+  boot-hide with a 2.5s safety reveal. **crew.html is Frutis's monument** (his
+  dossier, wall, gigs and sessions — almost all of the page is him); the lede
+  links to ALB's own page and the roster card grid renders only Frutis (search
+  stays hidden while `CREW_MEMBERS.length <= 1`).
 - **The Wall** — pinned horizontal ScrollTrigger scrub over the crew's photo
   archive (native snap-scroll ≤768px); mono index chips per tile.
 - **WebGL grain** — one raw-WebGL canvas (`#crewGrain`) driven by time + scroll
@@ -64,22 +67,24 @@ DJCore.initGraph`): nodes sized by connections, links weighted by shared
   rail but not on the map).
 - **Sessions (`004 / Sesiones`)** — Frutis's two UNREC YouTube sets as facade
   cards (`data-video` id → click-to-embed iframe; no autoplay).
-- **FOLLETO member page** — `crew/alberto.html` (**ALB**, Nº 002): a riso club
-  flyer pasted on a black wall. Ink black `#0b0b0b` stock, fluorescent pink
-  `#ff3d9a` + yellow `#ffe600` overprint, Anton poster caps with deliberate
-  misregistration on the giant ALB (screen-blend ghost layers), Space Mono for
-  stamps/tickets. Signature moves: tilted pink marquee band (page copy, not the
-  site ribbon), a **paper session card** taped onto the black page (yellow
-  duotone cover, pink `63:07` sticker, ticket-stub specs), and the photo wall —
-  pink riso duotone + halftone dots, yellow tape, pasted at slight rotations,
-  number-only `Nº` stamps; hover snaps the ink back to full color. Copy carries
-  his genres (progressive house, downtempo, Detroit house) and never counts the
-  photos. Session = Mixcloud facade (`js/alberto.js` click-to-iframe), viewer
-  overlay (Esc/←/→, body lock) + IntersectionObserver reveals gated behind the
-  `fc-js` marker (JS-less = fully visible). Own `css/alberto.css?v=3` +
-  `js/alberto.js`; full-load section in swup (`ignoreVisit`). Class prefix
-  `fc-` (FOLLETO); member pages ship the tucked-header transform in their own
-  stylesheet (crew.css is not loaded here).
+- **CINE member page** — `crew/alberto.html` (**ALB**, Nº 002): a cinematic
+  screening on `#060606` with projector amber `#ffb000`, Space Grotesk caps +
+  Space Mono HUD. Signature moves: a **letterbox intro** (3TRES6 PRESENTA →
+  ALB → bars split, click to skip), the Mixcloud Minimix OCT2 **embedded live
+  in the hero** inside an amber-bracketed screen + credits strip (fecha /
+  duración / reproducciones / autor), a scroll film-progress bar + fixed
+  timecode HUD mapped to the set's 63:07 @24fps, film grain, gate-wipe +
+  Ken-Burns reveals with parallax drift on the framed fotogramas (number-only
+  `Nº` plates, viewer overlay Esc/←/→ with body lock), and signal rows with an
+  amber wipe hover. Copy carries his genres (progressive house, downtempo,
+  Detroit house) and never counts the photos — the viewer counter computes
+  itself. Motion = GSAP 3.13 + ScrollTrigger + SplitText (CDN, same pattern as
+  crew.html) gated behind the `cn-js` marker: no gsap or
+  `prefers-reduced-motion` strips the marker and the page ships static (JS-less
+  = fully visible). Own `css/alberto.css?v=4` + `js/alberto.js`; full-load
+  section in swup (`ignoreVisit`). Class prefix `cn-`; member pages ship the
+  tucked-header transform in their own stylesheet (crew.css is not loaded
+  here).
 - **Photos ship undecorated** — prints carry a number plate, never a sentence.
   Descriptive alt text stays in the markup for screen readers and SEO.
 - **Crew chrome (no ribbon)** — the crew section drops the ticker and every
@@ -202,18 +207,19 @@ Rules:
   in the crew-gigs pass: Landeep, Victor Hugo, Bastard Love, Diesco, Felipe O,
   M.S.R, Atmen, Nannii Lopez, Stevie Tóth, Perro Jimbo, Pa'volar, Crisalide)
 - ✅ Crew — redone in this system (kinetic brutalist hero + SplitText/cursor
-  type, founder dossier in `#crewGrid`, 21-photo Wall scrub, WebGL grain with
-  CSS fallback, gigs map + UNREC sessions (`s05`/`s05c` QA
-  coverage, `crew.css?v=3`); swup arrivals inject
+  type — split title now `FRUTIS`/`PILOTO`, Frutis-only monument —, founder
+  dossier in `#crewGrid` (single card while roster = 1), 21-photo Wall scrub,
+  WebGL grain with CSS fallback, gigs map + UNREC sessions (`s05`/`s05c` QA
+  coverage, `crew.css?v=5`); swup arrivals inject
   `css/crew.css` + GSAP + `data/crew/index.js` + `js/crew.js` via
   `js/swup-init.js`)
   - **Crew page scope:** music/vibe only — no store copy in page content
     (ticker/lede/bio stay concert-focused), no growth/"solicitar acceso"
     slots. Global chrome (nav/footer) untouched.
-- ✅ Crew member pages — `crew/alberto.html` (**ALB**, Nº 002): FOLLETO flyer —
-  misregistered ALB wordmark, genres in the copy, paper session card with the
-  Mixcloud facade, riso-duotone photo wall (from his IG, video posts excluded)
-  with number-only stamps, signal rows; no radio pill.
+- ✅ Crew member pages — `crew/alberto.html` (**ALB**, Nº 002): CINE — letterbox
+  intro, Mixcloud set embedded live in the hero, timecode HUD + film grain,
+  gate-wiped fotogramas with number-only stamps (8 on the page after user cut),
+  signal rows; no radio pill.
   Card on `crew.html` renders from
   `data/crew/index.js` (`portrait`/`portraitIdx`/`portraitW/H`/`portraitAlt`,
   `page` link); QA `s05c` still pins Frutis first and `CREW_IG` = 21.

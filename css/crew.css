@@ -214,7 +214,15 @@
   max-width: 54ch;
   color: var(--crew-dim);
   font-size: clamp(1rem, 1.4vw, 1.12rem);
-  line-height: 1.65;
+}
+.crew-lede a {
+  color: var(--crew-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--crew-orange);
+  transition: color 0.2s;
+}
+.crew-lede a:hover {
+  color: var(--crew-orange);
 }
 
 .crew-stats {

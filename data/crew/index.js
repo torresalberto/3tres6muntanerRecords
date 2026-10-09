@@ -46,30 +46,6 @@ const CREW_MEMBERS = [
     neural: true,
     stats: { photos: CREW_IG.length, gigs: 5, videos: 2 },
   },
-  {
-    id: 'alberto',
-    name: 'ALB',
-    role: 'Fotografía & Sesiones',
-    bio: 'Segundo miembro del crew. Fotografía de noche, de calle y de viaje; en cabina, progressive house, downtempo y Detroit house.',
-    image: 'crew/alberto/assets/ig/007.jpg',
-    imageCaption: 'Archivo personal · película',
-    portrait: 'crew/alberto/assets/ig/007.jpg',
-    assetsDir: 'crew/alberto/assets/ig/',
-    portraitIdx: '007',
-    portraitW: 512,
-    portraitH: 640,
-    portraitAlt: 'Shinjuku de noche en blanco y negro — archivo de alb',
-    photoTotal: 12,
-    page: 'crew/alberto.html',
-    social: {
-      instagram: 'https://www.instagram.com/bet.up_/',
-      mixcloud: 'https://www.mixcloud.com/albtome/',
-    },
-    location: 'Barcelona',
-    isPilot: false,
-    neural: false,
-    stats: { photos: 12, gigs: 0, videos: 0 },
-  },
 ];
 
 function crewImageSrc(member, ig) {

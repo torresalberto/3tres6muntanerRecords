@@ -138,18 +138,22 @@ document the reasoning in `curious_facts.date_note`.
 
 ### Crew member pages
 
-- `crew/alberto.html` = **ALB** (Nº 002) — **FOLLETO** design: a riso club flyer
-  on a black wall — fluorescent pink + yellow overprint, giant ALB with
-  misregistered ghost layers, tilted marquee band, a paper session card taped
-  onto the page, and a pink-duotone photo wall on tape with number-only `Nº`
-  stamps. Class prefix `fc-` (FOLLETO) in `css/alberto.css?v=3` + `js/alberto.js`.
-  Copy carries his genres (progressive house, downtempo, Detroit house) and
-  never counts the photos; the display name is ALB — no `albtome` anywhere in
-  text (URLs/handles excepted). Listed in `sitemap.xml` (71 URLs).
+- `crew/alberto.html` = **ALB** (Nº 002) — **CINE** design: a cinematic
+  screening on `#060606` with projector amber — letterbox intro (presenta →
+  ALB → bars split, click to skip), the Mixcloud Minimix OCT2 **embedded live
+  in the hero** (amber-bracketed screen + credits strip), scroll film-progress
+  bar + timecode HUD mapped to 63:07, grain, gate-wiped framed fotogramas with
+  parallax, amber-wipe signal rows, full-screen viewer (Esc/←/→). Class prefix
+  `cn-` in `css/alberto.css?v=4` + `js/alberto.js`; motion is GSAP 3.13 +
+  ScrollTrigger + SplitText (CDN) gated behind `html.cn-js` — no gsap or
+  reduced-motion ships it static. Copy carries his genres (progressive house,
+  downtempo, Detroit house) and never counts the photos; the display name is
+  ALB — no `albtome` anywhere in text (URLs/handles excepted). Listed in
+  `sitemap.xml` (71 URLs).
 - **Crew chrome** (crew.html + member pages): no ribbon, no store nav/cart/Discogs,
   music-only nav, and `js/smart-header.js` tucks the header on scroll-down /
   reveals on scroll-up (`<header data-smart-header>`; transform CSS in
-  `css/crew.css?v=4` for crew.html — **member pages do not load crew.css**, so
+  `css/crew.css?v=5` for crew.html — **member pages do not load crew.css**, so
   each member stylesheet must ship its own `.header[data-smart-header].is-tucked`
   rule). crew.html + member pages are full-load sections (`ignoreVisit` in
   `js/swup-init.js`) so each page renders its own chrome; `tickerSpecFor` returns
@@ -162,13 +166,17 @@ document the reasoning in `curious_facts.date_note`.
   in-page player; keep the pill elsewhere for site-wide continuity.
 - Cards on `crew.html` render from `data/crew/index.js` (`CREW_MEMBERS`:
   portrait path + `portraitIdx/W/H/Alt`, `photoTotal`, `page`, social links).
-  **QA contracts:** `s05c` requires Frutis to stay the first card with an
-  absolute http link, and `CREW_IG` to stay 21 (The Wall) — never reorder.
+  **crew.html is Frutis's page** (Nº 001 — split title `FRUTIS`/`PILOTO`,
+  house & acid copy, lede links to ALB's page): the roster currently holds
+  only his entry, so the card search stays hidden (`CREW_MEMBERS.length > 1`
+  gate). **QA contracts:** `s05c` requires Frutis to stay the first card with
+  an absolute http link, and `CREW_IG` to stay 21 (The Wall) — never reorder.
 - Alb's archive: `crew/alberto/assets/ig/001–012.jpg` (12 photos from
   `@bet.up_`; **video posts excluded** — IG bakes the play button into
-  `og:image`). Photos are shown undecorated: captions were removed on purpose,
-  the alt attributes stay for screen readers. Harvest protocol notes live in the
-  session, not here.
+  `og:image`). The CINE page shows 8 of them (plates `Nº 001–008`; files
+  006/007/011/012 are off-page after user cut). Photos are shown
+  undecorated: captions were removed on purpose, the alt attributes stay for
+  screen readers. Harvest protocol notes live in the session, not here.
 
 ## DJ Library / Discoteca (canonical) + house design system
 
