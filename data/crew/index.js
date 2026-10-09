@@ -31,8 +31,8 @@ const CREW_MEMBERS = [
   {
     id: 'd-mfrutis',
     name: 'd.mfrutis',
-    role: 'Piloto & Fundador',
-    bio: 'Primer miembro del crew. Elige, viaja, pincha y documenta: sesiones underground y noches de cabina que conectan Barcelona con CDMX.',
+    role: 'Fundador',
+    bio: 'Primer miembro del crew. De México, radicado en Barcelona. Elige, viaja, pincha y documenta: sesiones underground y noches de cabina.',
     image: 'crew/d-mfrutis/assets/ig/012.jpg',
     imageCaption: 'Archivo personal · duotono',
     portrait: 'crew/d-mfrutis/assets/ig/017.jpg',
@@ -42,8 +42,7 @@ const CREW_MEMBERS = [
       soundcloud: 'https://soundcloud.com/d_frutis',
     },
     location: 'Barcelona',
-    isPilot: true,
-    neural: true,
+    neural: false,
     stats: { photos: CREW_IG.length, gigs: 5, videos: 2 },
   },
 ];

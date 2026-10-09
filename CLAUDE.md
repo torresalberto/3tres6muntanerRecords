@@ -166,8 +166,9 @@ document the reasoning in `curious_facts.date_note`.
   in-page player; keep the pill elsewhere for site-wide continuity.
 - Cards on `crew.html` render from `data/crew/index.js` (`CREW_MEMBERS`:
   portrait path + `portraitIdx/W/H/Alt`, `photoTotal`, `page`, social links).
-  **crew.html is Frutis's page** (Nº 001 — split title `FRUTIS`/`PILOTO`,
-  house & acid copy, lede links to ALB's page): the roster currently holds
+  **crew.html is Frutis's page** (Nº 001 — single-line `FRUTIS` title, house &
+  balnearic copy, de México vive en Barcelona; **never mention ALB there** and
+  no Neural card button — `neural: false`): the roster currently holds
   only his entry, so the card search stays hidden (`CREW_MEMBERS.length > 1`
   gate). **QA contracts:** `s05c` requires Frutis to stay the first card with
   an absolute http link, and `CREW_IG` to stay 21 (The Wall) — never reorder.

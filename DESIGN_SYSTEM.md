@@ -47,11 +47,12 @@ Herramientas (Taller), Mapa, Crew, Neural.
 DJCore.initGraph`): nodes sized by connections, links weighted by shared
   tracks/artists, genre filters, tooltips.
 - **Crew kinetic hero** — mono kicker scramble, giant split-title
-  (`FRUTIS` solid / `PILOTO` stroked), cursor-reactive chars, stat counters,
-  boot-hide with a 2.5s safety reveal. **crew.html is Frutis's monument** (his
-  dossier, wall, gigs and sessions — almost all of the page is him); the lede
-  links to ALB's own page and the roster card grid renders only Frutis (search
-  stays hidden while `CREW_MEMBERS.length <= 1`).
+  (`FRUTIS` solid; stroked second line kept as a design option), cursor-reactive
+  chars, stat counters, boot-hide with a 2.5s safety reveal. **crew.html is
+  Frutis's monument** (his dossier, wall, gigs and sessions — almost all of the
+  page is him): de México, vive en Barcelona; genres house & balnearic; no
+  ALB mentions and no Neural card button. The roster card grid renders only
+  Frutis (search stays hidden while `CREW_MEMBERS.length <= 1`).
 - **The Wall** — pinned horizontal ScrollTrigger scrub over the crew's photo
   archive (native snap-scroll ≤768px); mono index chips per tile.
 - **WebGL grain** — one raw-WebGL canvas (`#crewGrain`) driven by time + scroll
@@ -207,8 +208,10 @@ Rules:
   in the crew-gigs pass: Landeep, Victor Hugo, Bastard Love, Diesco, Felipe O,
   M.S.R, Atmen, Nannii Lopez, Stevie Tóth, Perro Jimbo, Pa'volar, Crisalide)
 - ✅ Crew — redone in this system (kinetic brutalist hero + SplitText/cursor
-  type — split title now `FRUTIS`/`PILOTO`, Frutis-only monument —, founder
-  dossier in `#crewGrid` (single card while roster = 1), 21-photo Wall scrub,
+  type — title now just `FRUTIS`, Frutis-only monument, house & balnearic,
+  de México vive en Barcelona —, founder
+  dossier in `#crewGrid` (single card while roster = 1, no Neural button),
+  21-photo Wall scrub,
   WebGL grain with CSS fallback, gigs map + UNREC sessions (`s05`/`s05c` QA
   coverage, `crew.css?v=5`); swup arrivals inject
   `css/crew.css` + GSAP + `data/crew/index.js` + `js/crew.js` via
