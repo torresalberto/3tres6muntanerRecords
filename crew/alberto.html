@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://3tres6records.albto.me/crew/alberto.html" />
-    <title>ALB — Folleto · 3TRES6 Records</title>
+    <title>ALB — Cine · 3TRES6 Records</title>
     <meta
       name="description"
-      content="Folleto digital de ALB, miembro Nº 002 del crew de 3TRES6: progressive house, downtempo y Detroit house, y la sesión Minimix OCT2. Barcelona → México."
+      content="ALB, miembro Nº 002 del crew de 3TRES6: progressive house, downtempo y Detroit house. La sesión Minimix OCT2, ya en pista, y sus fotografías en pantalla grande."
     />
 
     <script>
-      // `no-radio`: this page plays ALB's own Mixcloud session, so the global
+      // `no-radio`: the hero embeds ALB's own Mixcloud set, so the global
       // 3TRES6 Radio pill is not injected here (see player-init.js).
-      document.documentElement.classList.add('fc-js', 'no-radio');
+      document.documentElement.classList.add('cn-js', 'no-radio');
     </script>
 
     <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="3TRES6 Records" />
-    <meta property="og:title" content="ALB — Folleto · 3TRES6 Records" />
+    <meta property="og:title" content="ALB — Cine · 3TRES6 Records" />
     <meta
       property="og:description"
-      content="Minimix OCT2 y el muro de ALB: progressive house, downtempo y Detroit house."
+      content="Minimix OCT2 en pista y los fotogramas de ALB: progressive house, downtempo y Detroit house."
     />
     <meta property="og:url" content="https://3tres6records.albto.me/crew/alberto.html" />
     <meta
@@ -36,19 +37,19 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
       onload="this.rel = 'stylesheet'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
       />
     </noscript>
 
     <link rel="stylesheet" href="/styles.css?v=1" />
     <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/alberto.css?v=3" />
+    <link rel="stylesheet" href="/css/alberto.css?v=4" />
 
     <script type="application/ld+json">
       {
@@ -75,7 +76,7 @@
       });
     </script>
   </head>
-  <body class="fc-page">
+  <body class="cn-page">
     <!-- Crew chrome: no ribbon, music-only nav, header tucks on scroll down. -->
     <header class="header" id="mainHeader" role="banner" data-smart-header>
       <div class="header-container">
@@ -117,116 +118,94 @@
 
     <div class="header-spacer" aria-hidden="true"></div>
 
+    <!-- film progress + HUD (scroll-driven, vanilla) -->
+    <div class="cn-progress" aria-hidden="true"><span id="cnBar"></span></div>
+    <p class="cn-tc" aria-hidden="true"><span id="cnTc">00:00:00:00</span> / 01:03:07</p>
+
     <main>
-      <!-- ========================================================= hero -->
-      <section class="fc-hero" aria-labelledby="fcName">
-        <p class="fc-folio">FOLLETO Nº 002 · 3TRES6 RECORDS · BCN → CDMX</p>
-
-        <h1 class="fc-name" id="fcName">
-          <span class="fc-name-layer fc-name-y" aria-hidden="true">ALB</span>
-          <span class="fc-name-layer fc-name-p" aria-hidden="true">ALB</span>
-          <span class="fc-name-a">ALB</span>
-        </h1>
-
-        <p class="fc-sub">
-          MIEMBRO Nº 002 DEL CREW · @bet.up_ · PROGRESSIVE HOUSE · DOWNTEMPO · DETROIT HOUSE
-        </p>
-
-        <div class="fc-mq" aria-hidden="true">
-          <div class="fc-mq-track">
-            <span
-              >ALB — Nº 002 — MINIMIX OCT2 — 63:07 — PROGRESSIVE HOUSE — DOWNTEMPO — DETROIT HOUSE —
-              3TRES6 RECORDS —&nbsp;</span
-            ><span
-              >ALB — Nº 002 — MINIMIX OCT2 — 63:07 — PROGRESSIVE HOUSE — DOWNTEMPO — DETROIT HOUSE —
-              3TRES6 RECORDS —&nbsp;</span
-            >
-          </div>
+      <!-- ================================================== letterbox intro -->
+      <div class="cn-intro" id="cnIntro" aria-hidden="true">
+        <div class="cn-intro-bar cn-intro-t"></div>
+        <div class="cn-intro-bar cn-intro-b"></div>
+        <div class="cn-intro-card">
+          <p class="cn-intro-presents">3TRES6 RECORDS PRESENTA</p>
+          <p class="cn-intro-name">ALB</p>
         </div>
-      </section>
+      </div>
 
-      <!-- ==================================================== 01 sesión -->
-      <section class="fc-set" id="sesion" aria-labelledby="fcSetH">
-        <header class="fc-sec-head">
-          <span class="fc-idx">01 — LA SESIÓN</span>
-          <h2 class="fc-sec-h" id="fcSetH">Minimix OCT2</h2>
-        </header>
+      <!-- ============================================================= hero -->
+      <section class="cn-hero" aria-labelledby="cnName">
+        <div class="cn-hero-bg" aria-hidden="true">
+          <img
+            src="/crew/alberto/assets/mix/minimix-oct2.jpg"
+            alt=""
+            width="1200"
+            height="1200"
+            decoding="async"
+          />
+        </div>
+        <div class="cn-hero-grade" aria-hidden="true"></div>
 
-        <div class="fc-set-card" id="fcSet">
-          <span class="fc-tape fc-tape-a" aria-hidden="true"></span>
-          <span class="fc-tape fc-tape-b" aria-hidden="true"></span>
+        <div class="cn-hero-inner">
+          <p class="cn-hero-kicker">MIEMBRO Nº 002 DEL CREW</p>
+          <h1 class="cn-name" id="cnName">ALB</h1>
+          <p class="cn-hero-sub">PROGRESSIVE HOUSE · DOWNTEMPO · DETROIT HOUSE</p>
 
-          <figure class="fc-set-cover">
-            <span class="fc-ink is-y">
-              <img
-                src="/crew/alberto/assets/mix/minimix-oct2.jpg"
-                alt="Portada de Minimix OCT2: una silueta en la escalera con el reloj iluminado del Empire State al fondo"
-                width="1200"
-                height="1200"
-                decoding="async"
-              />
-            </span>
-            <span class="fc-badge" aria-hidden="true">
-              <b>63:07</b>
-              <i>DURACIÓN</i>
-            </span>
-          </figure>
+          <div class="cn-stage" data-cine>
+            <p class="cn-stage-label">
+              <span class="cn-dot" aria-hidden="true"></span>AHORA EN PISTA — MINIMIX OCT2
+            </p>
+            <div class="cn-stage-screen">
+              <iframe
+                src="https://player-widget.mixcloud.com/widget/iframe/?feed=%2Falbtome%2Foctubre-02%2F&hide_cover=0&light=0&autoplay=0"
+                title="Minimix OCT2 — ALB en Mixcloud"
+                width="100%"
+                height="400"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-          <div class="fc-set-body">
-            <p class="fc-set-kicker">SESIÓN PUBLICADA · 02.10.2026</p>
-            <h3 class="fc-set-title">Minimix OCT2</h3>
-
-            <button type="button" class="fc-play" id="fcPlay" data-feed="/albtome/octubre-02/">
-              <span class="fc-play-tri" aria-hidden="true"></span>
-              <span>Escuchar la sesión</span>
-            </button>
-
-            <dl class="fc-specs">
+            <dl class="cn-credits">
               <div>
-                <dt>Autor</dt>
-                <dd>ALB</dd>
-              </div>
-              <div>
-                <dt>Fecha</dt>
+                <dt>FECHA</dt>
                 <dd>02.10.2026</dd>
               </div>
               <div>
-                <dt>Duración</dt>
+                <dt>DURACIÓN</dt>
                 <dd>1:03:07</dd>
               </div>
               <div>
-                <dt>Reproducciones</dt>
+                <dt>REPRODUCCIONES</dt>
                 <dd>7</dd>
+              </div>
+              <div>
+                <dt>AUTOR</dt>
+                <dd>ALB</dd>
               </div>
             </dl>
 
-            <p class="fc-set-note">
-              Progressive house, downtempo y Detroit house, con los cortes largos primero.
-            </p>
-
             <a
-              class="fc-open"
+              class="cn-stage-open"
               href="https://www.mixcloud.com/albtome/octubre-02/"
               target="_blank"
               rel="noopener"
               >Abrir en Mixcloud ↗</a
             >
           </div>
-
-          <div class="fc-set-embed" id="fcEmbed" hidden></div>
         </div>
       </section>
 
-      <!-- ======================================================= 02 muro -->
-      <section class="fc-wall-sec" id="muro" aria-labelledby="fcWallH">
-        <header class="fc-sec-head">
-          <span class="fc-idx">02 — EL MURO</span>
-          <h2 class="fc-sec-h" id="fcWallH">Fotos pegadas</h2>
+      <!-- ======================================================= 01 fotos -->
+      <section class="cn-sec" id="fotos" aria-labelledby="cnFotosH">
+        <header class="cn-sec-head" data-cine>
+          <span class="cn-idx">01 — FOTOGRAMAS</span>
+          <h2 class="cn-sec-h" id="cnFotosH">La cámara</h2>
         </header>
 
-        <div class="fc-wall" id="fcWall">
-          <figure class="fc-cut" data-idx="0">
-            <button type="button" class="fc-ink" aria-label="Ver foto 01 en grande">
+        <div class="cn-grid" id="cnGrid">
+          <figure class="cn-frame cn-frame--feature" data-idx="0">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 01 en grande">
               <img
                 src="/crew/alberto/assets/ig/001.jpg"
                 alt="Paloma y una figura caminando sobre un suelo oscuro, en blanco y negro"
@@ -236,11 +215,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 001</figcaption>
+            <figcaption class="cn-plate"><span>Nº 001</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="1">
-            <button type="button" class="fc-ink" aria-label="Ver foto 02 en grande">
+          <figure class="cn-frame" data-idx="1">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 02 en grande">
               <img
                 src="/crew/alberto/assets/ig/003.jpg"
                 alt="Paso subterráneo revestido de azulejos amarillos, con dos personas al fondo"
@@ -250,11 +229,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 002</figcaption>
+            <figcaption class="cn-plate"><span>Nº 002</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="2">
-            <button type="button" class="fc-ink" aria-label="Ver foto 03 en grande">
+          <figure class="cn-frame" data-idx="2">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 03 en grande">
               <img
                 src="/crew/alberto/assets/ig/004.jpg"
                 alt="Multitud en la pista, movida y velada de azul, bajo las líneas de luz del club"
@@ -264,11 +243,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 003</figcaption>
+            <figcaption class="cn-plate"><span>Nº 003</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="3">
-            <button type="button" class="fc-ink" aria-label="Ver foto 04 en grande">
+          <figure class="cn-frame cn-frame--wide" data-idx="3">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 04 en grande">
               <img
                 src="/crew/alberto/assets/ig/005.jpg"
                 alt="Letrero de neón rojo de Amoeba Music contra la noche"
@@ -278,25 +257,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 004</figcaption>
+            <figcaption class="cn-plate"><span>Nº 004</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="4">
-            <button type="button" class="fc-ink" aria-label="Ver foto 05 en grande">
-              <img
-                src="/crew/alberto/assets/ig/007.jpg"
-                alt="Shinjuku de noche en blanco y negro, con el Godzilla del Hotel Gracery entre carteles"
-                width="512"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-            </button>
-            <figcaption class="fc-stamp">Nº 005</figcaption>
-          </figure>
-
-          <figure class="fc-cut" data-idx="5">
-            <button type="button" class="fc-ink" aria-label="Ver foto 06 en grande">
+          <figure class="cn-frame" data-idx="4">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 05 en grande">
               <img
                 src="/crew/alberto/assets/ig/008.jpg"
                 alt="La tienda Prada Marfa en mitad del desierto bajo cielo azul"
@@ -306,11 +271,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 006</figcaption>
+            <figcaption class="cn-plate"><span>Nº 005</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="6">
-            <button type="button" class="fc-ink" aria-label="Ver foto 07 en grande">
+          <figure class="cn-frame cn-frame--feature" data-idx="5">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 06 en grande">
               <img
                 src="/crew/alberto/assets/ig/010.jpg"
                 alt="Skater en el aire con la tabla roja sobre el bowl, con público y cámaras alrededor"
@@ -320,11 +285,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 007</figcaption>
+            <figcaption class="cn-plate"><span>Nº 006</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="7">
-            <button type="button" class="fc-ink" aria-label="Ver foto 08 en grande">
+          <figure class="cn-frame" data-idx="6">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 07 en grande">
               <img
                 src="/crew/alberto/assets/ig/009.jpg"
                 alt="Paloma blanca parada sobre un suelo oscuro, en blanco y negro"
@@ -334,39 +299,11 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 008</figcaption>
+            <figcaption class="cn-plate"><span>Nº 007</span></figcaption>
           </figure>
 
-          <figure class="fc-cut" data-idx="8">
-            <button type="button" class="fc-ink" aria-label="Ver foto 09 en grande">
-              <img
-                src="/crew/alberto/assets/ig/011.jpg"
-                alt="Atardecer sobre el mar con el sol ya tocando el horizonte"
-                width="640"
-                height="480"
-                loading="lazy"
-                decoding="async"
-              />
-            </button>
-            <figcaption class="fc-stamp">Nº 009</figcaption>
-          </figure>
-
-          <figure class="fc-cut" data-idx="9">
-            <button type="button" class="fc-ink" aria-label="Ver foto 10 en grande">
-              <img
-                src="/crew/alberto/assets/ig/012.jpg"
-                alt="Atardecer rojo visto desde dentro, a través de las persianas de una ventana"
-                width="640"
-                height="427"
-                loading="lazy"
-                decoding="async"
-              />
-            </button>
-            <figcaption class="fc-stamp">Nº 010</figcaption>
-          </figure>
-
-          <figure class="fc-cut" data-idx="10">
-            <button type="button" class="fc-ink" aria-label="Ver foto 11 en grande">
+          <figure class="cn-frame" data-idx="7">
+            <button type="button" class="cn-shot" aria-label="Ver fotograma 08 en grande">
               <img
                 src="/crew/alberto/assets/ig/002.jpg"
                 alt="Calle al sol con peatones y bicicletas frente a edificios de ladrillo"
@@ -376,65 +313,51 @@
                 decoding="async"
               />
             </button>
-            <figcaption class="fc-stamp">Nº 011</figcaption>
-          </figure>
-
-          <figure class="fc-cut" data-idx="11">
-            <button type="button" class="fc-ink" aria-label="Ver foto 12 en grande">
-              <img
-                src="/crew/alberto/assets/ig/006.jpg"
-                alt="Playa al atardecer con el sol ya en el horizonte y siluetas en la orilla"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-            </button>
-            <figcaption class="fc-stamp">Nº 012</figcaption>
+            <figcaption class="cn-plate"><span>Nº 008</span></figcaption>
           </figure>
         </div>
       </section>
 
-      <!-- ==================================================== 03 señales -->
-      <section class="fc-signals" id="senales" aria-labelledby="fcSigH">
-        <header class="fc-sec-head">
-          <span class="fc-idx">03 — SEÑALES</span>
-          <h2 class="fc-sec-h" id="fcSigH">Dónde encontrarlo</h2>
+      <!-- ===================================================== 02 señales -->
+      <section class="cn-sec" id="senales" aria-labelledby="cnSigH">
+        <header class="cn-sec-head" data-cine>
+          <span class="cn-idx">02 — SEÑALES</span>
+          <h2 class="cn-sec-h" id="cnSigH">Dónde encontrarlo</h2>
         </header>
 
-        <ul class="fc-rows">
+        <ul class="cn-rows" data-cine>
           <li>
             <a
-              class="fc-row"
+              class="cn-row"
               href="https://www.instagram.com/bet.up_/"
               target="_blank"
               rel="noopener"
             >
-              <span class="fc-row-nr">01</span>
-              <span class="fc-row-name">Instagram</span>
-              <span class="fc-row-val">@bet.up_</span>
-              <span class="fc-row-go" aria-hidden="true">↗</span>
+              <span class="cn-row-nr">01</span>
+              <span class="cn-row-name">Instagram</span>
+              <span class="cn-row-val">@bet.up_</span>
+              <span class="cn-row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li>
             <a
-              class="fc-row"
+              class="cn-row"
               href="https://www.mixcloud.com/albtome/octubre-02/"
               target="_blank"
               rel="noopener"
             >
-              <span class="fc-row-nr">02</span>
-              <span class="fc-row-name">Mixcloud</span>
-              <span class="fc-row-val">Minimix OCT2</span>
-              <span class="fc-row-go" aria-hidden="true">↗</span>
+              <span class="cn-row-nr">02</span>
+              <span class="cn-row-name">Mixcloud</span>
+              <span class="cn-row-val">Minimix OCT2</span>
+              <span class="cn-row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li>
-            <a class="fc-row" href="/crew.html">
-              <span class="fc-row-nr">03</span>
-              <span class="fc-row-name">El Crew</span>
-              <span class="fc-row-val">Nº 002 · junto a Frutis</span>
-              <span class="fc-row-go" aria-hidden="true">→</span>
+            <a class="cn-row" href="/crew.html">
+              <span class="cn-row-nr">03</span>
+              <span class="cn-row-name">El Crew</span>
+              <span class="cn-row-val">Nº 002 · junto a Frutis</span>
+              <span class="cn-row-go" aria-hidden="true">→</span>
             </a>
           </li>
         </ul>
@@ -479,9 +402,14 @@
       </footer>
     </main>
 
+    <div class="cn-grain" aria-hidden="true"></div>
+
     <script src="/player-init.js" defer></script>
     <script src="/js/nav.js" defer></script>
     <script src="/js/smart-header.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
     <script src="/js/alberto.js" defer></script>
   </body>
 </html>
