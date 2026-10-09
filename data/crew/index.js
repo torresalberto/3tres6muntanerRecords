@@ -31,8 +31,8 @@ const CREW_MEMBERS = [
   {
     id: 'd-mfrutis',
     name: 'd.mfrutis',
-    role: 'Fundador',
-    bio: 'Primer miembro del crew. De México, radicado en Barcelona. Elige, viaja, pincha y documenta: sesiones underground y noches de cabina.',
+    role: 'DJ',
+    bio: 'De México, radicado en Barcelona. Elige, viaja, pincha y documenta: sesiones underground y noches de cabina.',
     image: 'crew/d-mfrutis/assets/ig/012.jpg',
     imageCaption: 'Archivo personal · duotono',
     portrait: 'crew/d-mfrutis/assets/ig/017.jpg',
@@ -142,7 +142,7 @@ function renderCrewGrid() {
           <figcaption><span>${member.location}</span><span>${ig.f}/${total}</span></figcaption>
         </figure>
         <div class="crew-card-body">
-          <span class="crew-card-num">Dossier · Nº ${num}${member.isPilot ? ' — Fundador' : ''}</span>
+          <span class="crew-card-num">Dossier · Nº ${num}</span>
           <h3 class="crew-name">${member.name}</h3>
           <p class="crew-role">${member.role}</p>
           <p class="crew-bio">${member.bio}</p>
